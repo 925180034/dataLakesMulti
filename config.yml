@@ -1,0 +1,85 @@
+# 数据湖多智能体系统配置文件
+
+# 基础配置
+project:
+  name: "DataLakes Multi-Agent System"
+  version: "1.0.0"
+  debug: false
+
+# 路径配置
+paths:
+  data_dir: "./data"
+  cache_dir: "./cache"
+  log_dir: "./logs"
+  prompt_templates_dir: "./src/config/prompts"
+
+# LLM配置
+llm:
+  provider: "openai"  # openai, anthropic
+  model_name: "gpt-3.5-turbo"
+  temperature: 0.1
+  max_tokens: 2000
+  timeout: 30
+  # API密钥通过环境变量设置: OPENAI_API_KEY 或 ANTHROPIC_API_KEY
+
+# 向量数据库配置
+vector_db:
+  provider: "faiss"  # faiss, chromadb, pinecone
+  dimension: 1536
+  index_type: "IVFFlat"
+  db_path: "./data/vector_db"
+  collection_name: "data_lakes_vectors"
+
+# 倒排索引配置
+index:
+  provider: "whoosh"
+  index_path: "./data/index_db"
+  schema_fields:
+    - "table_name"
+    - "column_name"
+    - "values"
+
+# 阈值配置
+thresholds:
+  # 匹配阈值
+  semantic_similarity_threshold: 0.7
+  value_overlap_threshold: 0.3
+  column_match_confidence_threshold: 0.6
+  
+  # 搜索参数
+  max_candidates: 50
+  top_k_results: 10
+  
+  # 表评分权重
+  column_count_weight: 0.3
+  confidence_weight: 0.5
+  key_column_bonus: 0.2
+
+# 缓存配置
+cache:
+  enabled: true
+  cache_dir: "./cache"
+  ttl_seconds: 3600  # 1小时
+  max_size_mb: 1024  # 1GB
+
+# 日志配置
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file_rotation: true
+  max_file_size_mb: 10
+  backup_count: 5
+
+# 性能配置
+performance:
+  max_concurrent_requests: 10
+  request_timeout: 30
+  retry_attempts: 3
+  batch_size: 100
+
+# 安全配置
+security:
+  enable_api_key_validation: true
+  rate_limit_per_minute: 60
+  allowed_file_types: [".csv", ".json", ".parquet"]
+  max_file_size_mb: 100
