@@ -1,0 +1,11 @@
+Clearing,Globex,Floor,ClearPort,Product Name,Product Group,Sub Group,Category,Sub-Category,Cleared As,Exchange,Volume,Open Interest
+B6,B6L,-,B6,PJM Northern Illinois Hub Real-Time Off-Peak Calendar-Month 5 MW Futures,Energy,Electricity,PJM,Monthly Off-Peak,Futures,NYMEX,"93,600","646,333"
+L3,L3L,-,L3,PJM Northern Illinois Hub Day-Ahead Off-Peak Calendar-Month 5 MW Futures,Energy,Electricity,PJM,Monthly Off-Peak,Futures,NYMEX,"27,530","143,780"
+D9,AD9,-,D9,PJM ComEd Zone 5 MW Off-Peak Calendar-Month Day-Ahead LMP Futures,Energy,Electricity,PJM,Monthly Off-Peak,Futures,NYMEX,"27,530","94,443"
+B3,AB3,-,B3,PJM Northern Illinois Hub 5 MW Peak Calendar-Month Real-Time LMP Futures,Energy,Electricity,PJM,Monthly Peak,Futures,NYMEX,"7,640","29,226"
+N3,N3L,-,N3,PJM Northern Illinois Hub Day-Ahead LMP Peak Calendar-Month 5 MW Futures,Energy,Electricity,PJM,Monthly Peak,Futures,NYMEX,"1,490","8,665"
+D8,AD8,-,D8,PJM ComEd Zone 5 MW Peak Calendar-Month Day-Ahead LMP Futures,Energy,Electricity,PJM,Monthly Peak,Futures,NYMEX,"1,490","5,144"
+L1,AL1,-,L1,PJM Western Hub Peak Calendar-Month Real-Time LMP Futures,Energy,Electricity,PJM,Monthly Peak,Futures,NYMEX,"1,285","131,445"
+H3,AH3,-,H3,MISO Indiana Hub (formerly Cinergy Hub) 5 Month Peak Calendar-Month Real-Time Futures,Energy,Electricity,MISO,Monthly Peak,Futures,NYMEX,"1,285","16,969"
+JM,JML,-,JM,PJM Western Hub Real-Time Peak Calendar-Month 2.5 MW Futures,Energy,Electricity,PJM,Monthly Peak,Futures,NYMEX,20,"13,548"
+N9,N9L,-,N9,PJM Western Hub Real-Time Off-Peak Calendar-Month 5 MW Futures,Energy,Electricity,PJM,Monthly Off-Peak,Futures,NYMEX,0,"2,891,201"

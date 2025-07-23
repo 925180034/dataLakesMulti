@@ -1,0 +1,23 @@
+Name,Country,sex,tour,sl,tr,ju,yob,class,round,div,date,place,site id
+ , , , , , , , , , , , , , 
+COGNE tancredi,SUI,M,11ITA020,0.0,370.0,0.0,2001.0,L,1.0,-10M,07/24/2011,1.0,ITA07001
+ , , , , , , , , , , , , , 
+COGNE tancredi,SUI,M,11ITA020,0.0,100.0,0.0,2001.0,L,2.0,-10M,07/24/2011,1.0,ITA07001
+ , , , , , , , , , , , , , 
+COGNE tancredi,SUI,M,11ITA013,0.0,620.0,0.0,2001.0,L,1.0,-10M,09/11/2011,3.0,ITAFISN1
+ , , , , , , , , , , , , , 
+COGNE tancredi,SUI,M,11ITA013,0.0,620.0,0.0,2001.0,L,1.0,-10M,09/11/2011,3.0,ITAFISN1
+ , , , , , , , , , , , , , 
+COGNE tancredi,SUI,M,11ITA013,0.0,370.0,0.0,2001.0,L,2.0,-10M,09/11/2011,3.0,ITAFISN1
+ , , , , , , , , , , , , , 
+COGNE tancredi,SUI,M,11ITA013,0.0,370.0,0.0,2001.0,L,2.0,-10M,09/11/2011,3.0,ITAFISN1
+ , , , , , , , , , , , , , 
+COGNE tancredi,SUI,M,11ITA013,0.0,740.0,0.0,2001.0,L,3.0,-10M,09/11/2011,3.0,ITAFISN1
+ , , , , , , , , , , , , , 
+COGNE tancredi,SUI,M,11ITA013,0.0,740.0,0.0,2001.0,L,3.0,-10M,09/11/2011,3.0,ITAFISN1
+ , , , , , , , , , , , , , 
+COGNE tancredi,SUI,M,11SUI004,0.0,250.0,0.0,2001.0,L,1.0,-14M,07/10/2011,2.0,SUIEURO
+ , , , , , , , , , , , , , 
+COGNE tancredi,SUI,M,11SUI004,0.0,410.0,0.0,2001.0,L,2.0,-14M,07/10/2011,2.0,SUIEURO
+ , , , , , , , , , , , , , 
+COGNE tancredi,SUI,M,11SUI005,0.0,670.0,0.0,2001.0,L,1.0,-14M,09/24/2011,2.0,SUIEURO

@@ -1,0 +1,641 @@
+Part#,Resolution,Throughput Rate,Number of Channels,Circuit Architecture,INL in LSBs (max),SNR (typ),Power Dissipation (typ),Operating Temp Range,Analog Input Type,DNL (max),Vin Single Pin (max),US Price 1000 to 4999
+AD7172-4,24,31.25 kSPS,8,Sigma-Delta,-,-,11 mW,-,"Differential, Pseudo Diff, Single-Ended",-,-,$7.85
+AD7916,16,500 kSPS,1,SAR,-,-,3.7 mW,-40 to +125,Differential,0.9,5 V,$8.10
+AD7915,16,1 MSPS,1,SAR,-,-,7 mW,-40 to +125,Differential,0.9,5 V,$12.50
+AD7177-2,32,10 kSPS,4,Sigma-Delta,-,-,52 mW,-,"Differential, Pseudo Diff, Single-Ended",-,-,-
+AD9690,14,500 MSPS,1,Pipelined,-,-,1.5 W,-40 to 85°C,Differential,0.7,-,$136.00
+AD9655,16,125 MSPS,2,Pipelined,-,-,299 mW,-40 to 85°C,Differential,0.7,-,$143.48
+AD7981,16,600 kSPS,1,SAR,2,-,-,-55 to 175 C,"Diff-Uni, Pseudo Diff",0.9,5.1 V,$90.00
+AD7405,16,-,1,Sigma-Delta Modulator,12,-,208 mW,-40 to +125,-,0.99,320 mV,$3.35
+AD7172-2,24,31.25 kSPS,4,Sigma-Delta,-,-,11 mW,-,"Differential, Pseudo Diff, Single-Ended",-,-,$7.45
+AD5593R,-,-,8,-,-,-,-,-,-,-,-,$3.25
+AD5592R,-,-,8,-,-,-,-,-,-,-,-,$3.25
+ADAS1131,24,-,256,-,-,-,-,-,-,-,-,-
+AD9234,12,1 GSPS,2,-,1.4,-,3 W,-40 to +85,Diff-Uni,0.3,-,$238.00
+AD7903,16,1 MSPS,2,-,2,-,12 mW,-40 to +125,Diff-Uni,1,-,$15.00
+AD7175-2,24,250 kSPS,4,Sigma-Delta,-,-,52 mW,-,"Differential, Pseudo Diff, Single-Ended",-,5.05 V,$11.85
+AD9993,-,-,-,Pipelined,-,-,-,-40 to +85,-,-,-,$148.70
+AD9680-1.0,14,1 GSPS,2,Pipelined,-,-,3.3 W,-40 to +85,Differential,0.8,-,$584.38
+AD9652,16,310 MSPS,2,Pipelined,-,-,2.16 W,-40 to +85,Diff-Uni,1.1,-,$231.25
+ad9625-2.0,12,2 GSPS,1,Pipelined,-,-,3.48 W,-40 to +85,Differential,0.7,1.1 V,$624.75
+AD7902,16,1 MSPS,2,SAR,1,-,12 mW,-40 to +125,Pseudo Diff,0.5,-,$15.00
+AD7403,16,-,1,Sigma-Delta Modulator,12,-,231 mW,-40 to +125,Diff-Uni,0.99,-,$3.15
+AD9656,16,125 MSPS,4,Pipelined,-,-,771 mW,-40 to +85,Diff-Uni,2.54,-,$258.27
+AD7989-5,18,500 kSPS,1,SAR,2,-,2.5 mW,-40 to +85,"Diff-Uni, Pseudo Diff",1.5,-,$11.95
+AD7989-1,18,100 kSPS,1,SAR,2,-,700 µW,-40 to +85,"Diff-Uni, Pseudo Diff",1.5,-,$8.55
+AD7656A-1,16,250 kSPS,6,SAR,3,-,140 mW,-40 to +85,SE-Bip,-,-,$12.45
+AD7656A,16,250 kSPS,6,-,3,-,140 mW,-40 to +85,SE-Bip,-,-,$12.45
+AD7091R-8,12,1 MSPS,8,-,1,-,3.4 mW,-40 to +125,-,0.9,-,$3.36
+AD7091R-4,12,1 MSPS,4,-,1,-,3.4 mW,-40 to +125,-,0.9,-,$2.67
+AD7091R-2,12,1 MSPS,2,-,1,-,2.8 mW,-40 to +125,-,0.9,-,$2.47
+ADE7913,24,-,3,Sigma-Delta,-,-,-,-40 to +85,Pseudo Diff,-,-,$5.71
+ADE7912,24,-,2,Sigma-Delta,-,-,-,-40 to +85,Pseudo Diff,-,-,$5.42
+AD9681,14,125 MSPS,8,Pipelined,-,-,988 mW,-40 to +85,Diff-Uni,0.8,-,$197.20
+AD9675,14,-,8,-,-,75,-,-,-,-,-,$68.00
+AD9671,14,-,8,-,-,75,-,-,-,-,-,$75.00
+AD9249,14,-,16,Pipelined,-,-,995 mW,-40 to +85,-,0.6,-,$113.86
+AD7173-8,24,31.25 kSPS,16,Sigma-Delta,-,-,10 mW,-40 to +105,"Differential, Pseudo Diff, Single-Ended",-,-,$8.30
+AD7961,16,5 MSPS,1,SAR,0.2,-,64.5 mW,-40 to +85,"Diff-Bip, Diff-Uni",0.14,-,$21.00
+AD7960,18,5 MSPS,1,SAR,0.8,-,21 mW,-40 to +85,"Diff-Bip, Diff-Uni",0.5,-,$31.00
+AD7294-2,-,-,4,-,-,-,-,-,-,-,-,-
+ADAS3023,16,125 kSPS,8,-,-,-,-,-40 to +85,-,1.25,-,$15.95
+ADAS1256,16,-,256,-,-,-,-,-,-,-,-,-
+AD9683,-,-,-,-,-,-,-,-,-,0.5,-,-
+AD9674,14,-,8,-,-,75,-,-,-,-,-,$62.00
+ADAU1977,24,-,-,-,-,-,-,-,-,-,-,$5.06
+ADAS1000-1,19,-,5,-,-,100,-,-,-,-,-,$15.20
+AD9670,14,-,8,-,-,75,-,-,-,-,-,$69.00
+ADAS3022,16,1 MSPS,8,SAR,-,-,-,-40 to +85,-,1,-,$14.95
+ADAS1000-4,19,-,3,-,-,100,-,-,-,-,-,$11.40
+ADAS1000-3,19,-,3,-,-,100,-,-,-,-,-,$10.83
+ADAS1000-2,19,-,5,-,-,100,-,-,-,-,-,$10.83
+AD9250,14,250 MSPS,2,Pipelined,-,-,607 mW,-40 to +85,Diff-Uni,0.25,-,$72.49
+AD7292,10,-,8,-,0.5,-,-,-,"Diff-Uni, SE-Uni",0.99,-,$3.92
+AD7176-2,24,250 kSPS,4,Sigma-Delta,117,-,45 mW,-40 to +105,"Differential, Pseudo Diff, Single-Ended",-,-,$10.25
+AD7091,12,1 MSPS,1,SAR,0.6,-,142 µW,-40 to +125,-,0.3,-,$1.60
+AD6673,11,250 MSPS,2,-,-,-,-,-,-,-,-,$74.80
+ADAS1000,24,-,5,-,-,100,-,-,-,-,-,$18.24
+AD9635,12,-,-,-,0.7,-,-,-,-,0.2,-,$18.69
+AD7091R,12,1 MSPS,1,SAR,0.8,-,1 mW,-40 to +125,SE-Uni,0.3,-,$2.15
+AD9653,16,125 MSPS,4,Pipelined,-,-,673 mW,-40 to +85,-,0.8,-,$250.00
+AD7988-5,16,500 kSPS,1,SAR,1.25,-,3.5 mW,-40 to +125,Diff-Uni,0.9,-,$7.55
+AD7988-1,16,100 kSPS,1,-,1.25,-,0.7 mW,-40 to +125,Diff-Uni,0.9,-,$6.50
+AD9637-40,12,40 MSPS,8,Pipelined,-,-,347 mW,-40 to +125,Diff-Uni,-,-,$40.46
+AD9633-105,12,105 MSPS,4,Pipelined,-,-,385 mW,-40 to +85,Diff-Uni,-,-,$57.80
+AD9257-40,14,40 MSPS,8,-,-,-,360 mW,-40 to +85,Diff-Uni,-,-,$46.67
+AD9253-105,14,105 MSPS,4,Pipelined,-,-,405 mW,-40 to +85,Diff-Uni,-,-,$99.45
+AD6657A,11,200 MSPS,4,Pipelined,-,-,-,-40 to +85,-,-,-,$111.35
+AD9648-105,14,105 MSPS,2,Pipelined,-,-,220.5 mW,-40 to +85,Diff-Uni,-,-,$42.29
+AD9642-170,14,170 MSPS,1,Pipelined,-,-,311 mW,-40 to +85,"Diff-Bip, Diff-Uni",-,-,$38.40
+AD9634-170,12,170 MSPS,1,Pipelined,-,-,311 mW,-40 to +85,Diff-Uni,-,-,$20.35
+AD9628-105,12,105 MSPS,2,Pipelined,-,-,243 mW,-40 to +85,"Diff-Bip, SE-Uni",-,-,$27.57
+AD9608-105,10,125 MSPS,2,Pipelined,-,-,165 mW,-40 to +85,Diff-Uni,-,-,$11.25
+AD7609,18,200 kSPS,8,SAR,3,-,100 mW,-40 to +85,Diff-Bip,0.75,-,$22.40
+AD6672,11,250 MSPS,1,Pipelined,-,-,423 mW,-40 to +85,Diff-Uni,-,-,$44.20
+AD9643-170,14,170 MSPS,2,Pipelined,-,-,614 mW,-40 to +85,Diff-Bip,-,-,$109.74
+AD9613-170,12,170 MSPS,2,Pipelined,-,-,670 mW,-40 to +85,Diff-Bip,-,-,$38.50
+AD9484,8,500 MSPS,1,Pipelined,-,-,670 mW,-,Diff-Bip,0.13,-,$36.00
+AD9434-370,12,370 MSPS,1,Pipelined,-,-,595 mW,-40 to +85,Diff-Bip,-,-,$85.00
+AD7608,18,200 kSPS,8,SAR,2.5,-,100 mW,-40 to +85,Diff-Uni,0.75,-,$20.50
+AD6649,14,250 MSPS,2,Pipelined,-,-,1.16 W,-40 to +85,Diff-Uni,-,-,$83.30
+AD6643-200,11,200 MSPS,2,Pipelined,-,-,765 mW,-40 to +85,Diff-Uni,-,-,$63.92
+AD6641-500,12,500 MSPS,1,-,-,-,695 mW,-40 to +85,Diff-Bip,-,-,-
+AD9286,8,500 MSPS,1,Pipelined,-,-,315 mW,-40 to +85,"Diff-Bip, Diff-Uni",0.1,-,$36.00
+AD9284,8,250 MSPS,2,Pipelined,-,-,314 mW,-40 to +85,"Diff-Bip, SE-Uni",0.1,-,$25.00
+AD7291,12,22.2 kSPS,9,SAR,0.5,-,12.6 mW,-40 to +125,SE-Uni,0.5,-,$3.90
+AD9467-200,16,200 MSPS,1,Pipelined,-,-,1.24 W,-40 to +85,"Diff-Uni, SE-Uni",-,-,$100.30
+AD9279,12,-,8,-,-,67,-,-,-,-,-,$58.00
+AD9278,12,-,8,-,-,65,-,-,-,-,-,$48.00
+AD7298-1,10,1 MSPS,8,SAR,0.3,-,23 mW,-40 to +125,SE-Uni,0.25,-,$2.55
+AD7298,12,1 MSPS,9,SAR,0.5,-,22.7 mW,-40 to +125,SE-Uni,0.5,-,$3.90
+AD9963,12,100 MSPS,2,Pipelined,-,-,425 mW,-40 to +85,"Diff-Bip, Diff-Uni",-,-,$29.50
+AD9961,10,100 MSPS,2,Pipelined,-,-,342 mW,-,"Diff-Bip, Diff-Uni, SE-Bip, SE-Uni",-,-,$25.75
+AD9650-105,16,105 MSPS,2,Pipelined,-,-,778 mW,-40 to +85,Diff-Bip,-,-,$135.15
+AD9644-155,14,155 MSPS,2,Pipelined,-,-,567 mW,-40 to +85,Diff-Bip,-,-,-
+AD7607,14,200 kSPS,8,SAR,0.25,-,-,-40 to +85,Diff-Uni,0.25,-,$12.96
+AD7606-6,16,200 kSPS,6,SAR,0.5,-,100 mW,-40 to +85,Diff-Uni,0.5,-,$12.65
+AD7606-4,16,200 kSPS,4,SAR,0.5,-,75 mW,-40 to +85,SE-Bip,0.5,-,$10.20
+AD7606,16,200 kSPS,8,SAR,0.5,-,100 mW,-40 to +85,Diff-Uni,0.5,-,$15.70
+ADAS1127,24,-,64,-,-,-,-,-,-,-,-,-
+ADAS1126,24,-,32,-,-,-,-,-,-,-,-,-
+AD9266-20,16,20 MSPS,1,Pipelined,-,-,66 mW,-40 to +85,Diff-Uni,-,-,$28.00
+AD9261-10,16,160 MSPS,1,Sigma-Delta,-,-,465 mW,-40 to +85,Diff-Uni,-,-,$28.00
+AD9269-20,16,20 MSPS,2,Pipelined,-,-,165.7 mW,-40 to +85,Diff-Uni,-,-,$49.00
+AD9262,16,160 MSPS,2,Sigma-Delta,-,-,578 mW,-40 to +85,Diff-Uni,-,-,-
+AD7195,24,4.8 kSPS,4,Sigma-Delta,33.55,-,35.5 mW,-40 to +105,"Diff-Bip, Diff-Uni, SE-Bip, SE-Uni",33.55,-,$6.90
+AD9649-20,14,20 MSPS,1,Pipelined,-,-,54.9 mW,-40 to +85,Diff-Uni,-,-,$12.00
+AD9629-20,12,20 MSPS,1,Pipelined,-,-,53.7 mW,-40 to +85,Diff-Uni,-,-,$5.25
+AD9609,-,-,-,-,-,-,-,-,-,0.25,-,-
+AD9265-105,16,105 MSPS,1,Pipelined,-,-,391 mW,-40 to +85,Diff-Uni,-,-,$56.67
+AD9255-105,14,105 MSPS,1,Pipelined,-,-,332 mW,-40 to +85,Diff-Uni,-,-,$45.00
+AD9231-20,12,20 MSPS,2,Pipelined,-,-,83.7 mW,-40 to +85,Diff-Uni,-,-,$10.00
+AD7985,16,2.5 MSPS,1,SAR,1.5,-,28 mW,-40 to +85,SE-Uni,0.99,-,$18.50
+AD7944,14,2.5 MSPS,1,SAR,0.25,-,28 mW,-40 to +85,Pseudo Diff,0.25,-,$9.99
+AD7626,16,10 MSPS,1,SAR,0.45,-,150 mW,-40 to +85,Diff-Uni,0.35,-,$34.95
+AD7194,24,4.8 kSPS,8,Sigma-Delta,33.55,-,29 mW,-40 to +105,Diff-Uni,33.55,-,$6.40
+AD7171,16,125 SPS,1,Sigma-Delta,-,-,675 µW,-40 to +105,"Diff-Bip, Diff-Uni",-,-,$1.15
+AD7170,12,125 SPS,1,Sigma-Delta,-,-,675 µW,-40 to +105,"Diff-Bip, Diff-Uni",-,-,$0.95
+AD6657,11,200 MSPS,4,Pipelined,-,-,1.3 W,-40 to +85,Diff-Uni,-,-,$129.71
+AD6642,11,200 MSPS,2,Pipelined,-,-,620 mW,-40 to +85,Diff-Uni,-,-,$73.64
+ADAS1128,24,-,128,-,-,-,-,-,-,-,-,-
+AD9277,14,-,8,-,-,-,-,-,-,-,-,$58.00
+AD9276,12,80 MSPS,8,-,-,-,1.78 W,-40 to +85,SE-Uni,-,-,$56.00
+AD9267,16,-,2,Sigma-Delta Modulator,-,-,503 mW,-40 to +85,Diff-Uni,-,-,$40.80
+AD9251-20,14,20 MSPS,2,Pipelined,-,-,124 mW,-40 to +85,Diff-Uni,-,-,$18.50
+AD9204-20,10,20 MSPS,2,Pipelined,-,-,76.7 mW,-40 to +85,"Diff-Uni, SE-Uni",-,-,$5.00
+AD7193,24,4.8 kSPS,4,Sigma-Delta,-,-,17.5 mW,-40 to +105,"Diff-Uni, SE-Uni, Usr-Defined Range/Offset",33.55,-,$5.40
+AD9268-105,16,105 MSPS,2,Pipelined,-,-,685 mW,-40 to +85,Diff-Uni,-,-,$119.00
+AD9258-105,14,105 MSPS,2,Pipelined,-,-,590 mW,-40 to +85,Diff-Bip,-,-,$76.50
+AD7986,18,2 MSPS,1,SAR,1,-,29 mW,-40 to +85,Diff-Uni,0.6,-,$29.95
+AD7889,12,105 kSPS,6,SAR,-,-,2.3 mW,-40 to +85,SE-Uni,-,-,$1.69
+AD7781,20,16.7 SPS,1,Sigma-Delta,-,-,2.1 mW,-40 to +105,Diff-Bip,-,-,$4.20
+AD7780,24,16.7 SPS,1,Sigma-Delta,-,-,2.1 mW,-40 to +105,Diff-Uni,-,-,$3.95
+AD7357,14,4.25 MSPS,2,SAR,2,-,36 mW,-40 to +125,"Diff-Bip, Diff-Uni, Usr-Defined Range/Offset",0.51,-,$10.81
+AD7192,24,4.8 kSPS,4,Sigma-Delta,33.55,-,27.5 mW,-40 to +105,"Diff-Bip, Diff-Uni, SE-Bip, SE-Uni",0.0596,-,$4.90
+AD7191,24,120 SPS,3,Sigma-Delta,33.55,-,22.5 mW,-40 to +105,Diff-Uni,-,-,$3.80
+AD7625,16,6 MSPS,1,SAR,0.45,-,145 mW,-40 to +85,Diff-Uni,0.3,-,$29.95
+AD7147A,16,111 SPS,12,Sigma-Delta,-,-,3.6 mW,-40 to +85,Capacitive,-,-,$1.25
+AD9273-25,12,25 MSPS,8,Pipelined,-,-,819 mW,-40 to +85,SE-Bip,-,-,$43.00
+AD9272-40,12,40 MSPS,8,Pipelined,-,-,1.56 W,-40 to +85,SE-Uni,-,-,$46.00
+AD9239-170,12,170 MSPS,4,Pipelined,-,-,1.139 W,-40 to +85,"Diff-Uni, SE-Uni",-,-,$101.15
+AD7879,12,105 kSPS,6,SAR,-,-,2.3 mW,-40 to +85,SE-Uni,-,-,$1.69
+AD7699,16,500 kSPS,8,SAR,0.5,-,32 mW,-40 to +85,"Diff-Uni, SE-Bip, SE-Uni",0.25,-,$7.99
+AD7356,12,5 MSPS,2,SAR,0.5,-,59 mW,-40 to +125,Diff-Uni,0.5,-,$7.89
+AD7352,12,3 MSPS,2,SAR,0.4,-,45 mW,-40 to +125,Diff-Uni,0.5,-,$5.50
+AD7190,24,4.8 kSPS,4,Sigma-Delta,83.89,-,36.8 mW,-40 to +105,Diff-Uni,-,-,$5.90
+AD7156,12,100 SPS,2,-,-,-,252 µW,-40 to +85,Capacitive,-,-,$1.25
+AD5590,12,1 MSPS,16,SAR,-,-,25 mW,-40 to +85,SE-Uni,-,-,$19.50
+AD7949,14,250 kSPS,8,SAR,0.5,-,13.5 mW,-40 to +85,"Diff-Uni, SE-Uni",0.25,-,$4.04
+AD7689,16,250 kSPS,8,SAR,0.5,-,19.2 mW,-40 to +85,"Diff-Uni, SE-Bip, SE-Uni",0.25,-,$5.99
+AD7682,16,250 kSPS,4,SAR,0.5,-,19.2 mW,-40 to +85,"Diff-Uni, SE-Bip, SE-Uni",0.25,-,$6.01
+AD7658-1,12,250 kSPS,6,SAR,0.5,-,140 mW,-40 to +125,SE-Bip,0.7,-,$8.37
+AD7657-1,14,250 kSPS,6,SAR,1,-,140 mW,-40 to +125,SE-Bip,-,-,$10.29
+AD7656-1,16,250 kSPS,6,SAR,0.98,-,140 mW,-40 to +125,SE-Bip,-,-,$12.45
+AD7401A,16,20 MSPS,1,Sigma-Delta Modulator,7,-,105 mW,-40 to +125,Diff-Uni,-,-,$3.15
+AD7262,12,1 MSPS,2,SAR,-,-,120 mW,-40 to +105,Diff-Uni,-,-,-
+AD9230-11,11,200 MSPS,1,Pipelined,-,-,373 mW,-40 to +85,Diff-Uni,0.15,-,$36.43
+AD7400A,16,10 MSPS,1,Sigma-Delta Modulator,12,-,95 mW,-40 to +125,Diff-Uni,0.9,-,$3.05
+AD7264,14,1 MSPS,2,SAR,-,-,175 mW,-40 to +105,Diff-Uni,-,-,$6.50
+AD7153,12,200 SPS,1,Sigma-Delta,-,-,432 µW,-40 to +85,Capacitive,-,-,$1.77
+AD7152,12,200 SPS,2,Sigma-Delta,-,-,432 µW,-40 to +85,Capacitive,-,-,$1.97
+AD7999,8,140 kSPS,4,SAR,0.1,-,4.7 mW,-40 to +125,SE-Uni,0.1,-,$1.35
+AD7995,10,140 kSPS,4,SAR,0.4,-,4.4 mW,-40 to +125,SE-Uni,0.4,-,$1.80
+AD7991,12,140 kSPS,4,SAR,1,-,4.68 mW,-40 to +125,SE-Uni,0.9,-,$3.22
+AD7294,12,200 kSPS,4,SAR,-,-,-,-,"Diff-Uni, SE-Uni",-,-,$9.83
+AD7148,16,4 SPS,8,Sigma-Delta,-,-,3.3 mW,-40 to +85,SE-Uni,-,-,$1.21
+AD9627-105,12,105 MSPS,2,Pipelined,-,-,890 mW,-40 to +85,Diff-Uni,-,-,$34.91
+AD9626-170,12,170 MSPS,1,Pipelined,-,-,272 mW,-40 to +85,Diff-Uni,-,-,$34.91
+AD9601-200,10,200 MSPS,1,Pipelined,-,-,344 mW,-40 to +85,Diff-Uni,-,-,$32.38
+AD9600,-,-,-,-,-,-,-,-,-,0.1,-,-
+AD7984,18,1.33 MSPS,1,SAR,2.25,-,14 mW,-40 to +85,Diff-Uni,1.49,-,$28.29
+AD7983,16,1.33 MSPS,1,SAR,0.6,-,12 mW,-40 to +85,Diff-Uni,0.4,-,$17.00
+AD7151,12,100 SPS,1,Sigma-Delta,-,-,0.3 mW,-40 to +85,Diff-Uni,-,-,$1.37
+AD7150,12,200 SPS,2,Sigma-Delta,-,-,0.43 mW,-40 to +85,SE-Uni,-,-,$1.37
+AD7147,16,111 SPS,12,Sigma-Delta,-,-,3.6 mW,-40 to +85,SE-Uni,-,-,$1.28
+AD6655-105,14,105 MSPS,2,Pipelined,-,-,-,-40 to +85,-,-,-,-
+AD9869,12,80 MSPS,1,Pipelined,-,-,342 mW,-40 to +85,Diff-Uni,-,-,-
+AD9640-105,14,105 MSPS,2,Pipelined,-,-,730 mW,-40 to +85,Diff-Uni,-,-,$62.24
+AD9271-25,12,25 MSPS,8,Pipelined,-,-,1.1 W,-40 to +85,SE-Uni,-,-,-
+AD7980,16,1 MSPS,1,SAR,0.6,-,10 mW,-55 to +125,Diff-Uni,0.4,-,$10.09
+AD7767,24,128 kSPS,1,SAR,-,-,18 mW,-40 to +105,Diff-Uni,-,-,$8.60
+AD7766,24,128 kSPS,1,SAR,-,-,18 mW,-40 to +105,Diff-Uni,-,-,$6.02
+AD7765,24,156 kSPS,1,Sigma-Delta,-,-,371 mW,-40 to +85,Diff-Uni,-,-,$8.56
+AD7764,24,312 kSPS,1,Sigma-Delta,-,-,371 mW,-40 to +85,Diff-Uni,-,-,$10.10
+AD7367-5,14,500 kSPS,2,SAR,2,-,54.5 mW,-40 to +85,"Diff-Bip, Diff-Uni",0.5,-,$4.74
+AD7367,14,1 MSPS,4,SAR,2,-,88.7 mW,-40 to +85,"Diff-Bip, Diff-Uni, SE-Bip, SE-Uni",0.5,-,$5.27
+AD7366-5,12,500 kSPS,2,SAR,0.5,-,54.5 mW,-40 to +85,"Diff-Bip, Diff-Uni",0.25,-,$4.51
+AD7366,12,1 MSPS,4,SAR,0.5,-,88.8 mW,-40 to +85,"SE-Bip, SE-Uni",0.25,-,$5.02
+AD9868,10,80 MSPS,1,Pipelined,-,-,1.57 W,-40 to +85,Diff-Uni,-,-,-
+AD9211-200,10,200 MSPS,1,Pipelined,-,-,333 mW,-40 to +85,Diff-Uni,-,-,$32.38
+AD7982,18,1 MSPS,1,SAR,1,-,8.6 mW,-40 to +85,Diff-Uni,0.5,-,$23.28
+AD7785,20,470 SPS,3,Sigma-Delta,-,-,2.5 mW,-40 to +105,Diff-Uni,-,-,$4.25
+AD9230-170,12,170 MSPS,1,Pipelined,-,-,349 mW,-40 to +85,Diff-Uni,-,-,$35.42
+AD7952,14,1 MSPS,1,SAR,0.29,-,260 mW,-40 to +85,"Diff-Bip, Diff-Uni",1,-,$10.99
+AD7747,24,45.5 SPS,1,Sigma-Delta,-,-,4.25 mW,-55 to +125,"Diff-Uni, SE-Uni",-,-,$4.66
+AD7693,16,500 kSPS,1,SAR,0.26,-,21.5 mW,-40 to +85,Diff-Uni,0.26,-,$18.22
+AD7634,18,670 kSPS,1,SAR,1.49,-,225 mW,-40 to +85,"Diff-Bip, Diff-Uni",2.49,-,$31.83
+AD7631,18,250 kSPS,1,SAR,1.49,-,120 mW,-40 to +85,"Diff-Bip, Usr-Defined Range/Offset",1,-,$29.80
+AD7143,16,43.5 SPS,8,Sigma-Delta,-,-,3.6 mW,-40 to +85,-,-,-,$1.25
+AD9254,14,150 MSPS,1,Pipelined,-,-,470 mW,-40 to +85,Diff-Uni,0.39,-,$55.66
+AD9252,14,50 MSPS,8,Pipelined,-,-,748 mW,-40 to +85,Diff-Uni,0.39,-,$54.65
+AD9222-40,12,40 MSPS,8,Pipelined,-,-,700 mW,-40 to +85,Diff-Uni,-,-,$40.48
+AD9212-40,10,40 MSPS,8,Pipelined,-,-,542 mW,-40 to +85,Diff-Uni,-,-,$28.34
+AD7951,14,1 MSPS,1,SAR,0.29,-,260 mW,-40 to +85,"Diff-Bip, Diff-Uni",1,-,$11.12
+AD7612,16,750 kSPS,1,SAR,0.75,-,230 mW,-40 to +85,"Diff-Bip, SE-Bip, SE-Uni",1.5,-,$29.45
+AD7610,16,250 kSPS,1,SAR,0.72,-,110 mW,-40 to +85,"SE-Bip, SE-Uni",1.51,-,$13.05
+AD9969,12,29 MSPS,3,Pipelined,-,-,-,0 to +70,Diff-Uni,-,-,$14.42
+AD9460-105,16,105 MSPS,1,Pipelined,-,-,2.2 W,-40 to +85,Diff-Uni,-,-,$57.35
+AD9287,8,100 MSPS,4,Pipelined,-,-,562 mW,-40 to +85,Diff-Uni,0.2,-,$14.17
+AD9259,14,50 MSPS,4,Pipelined,-,-,392 mW,-40 to +85,Diff-Uni,0.5,-,$45.54
+AD7829-1,8,2 MSPS,8,Flash,0.75,-,36 mW,-40 to +85,SE-Uni,0.75,-,$3.74
+AD7797,24,123 SPS,1,Sigma-Delta,-,-,1.6 mW,-40 to +85,"Diff-Bip, Diff-Uni",-,-,$3.39
+AD7796,16,123 SPS,1,Sigma-Delta,0.66,-,1.6 mW,-40 to +85,"Diff-Bip, Diff-Uni",-,-,$2.78
+AD7795,16,470 SPS,6,Sigma-Delta,0.98,-,2.5 mW,-40 to +125,Diff-Uni,0.06,-,$4.45
+AD7691,18,250 kSPS,1,SAR,0.76,-,-,-40 to +85,Diff-Uni,0.5,-,$14.67
+AD7622,16,2 MSPS,1,SAR,0.5,-,85 mW,-40 to +85,Diff-Uni,1.5,-,$21.95
+AD7142,16,27.8 SPS,14,Sigma-Delta,-,-,3.6 mW,-40 to +85,Diff-Uni,-,-,$1.37
+AD9461,16,130 MSPS,1,Pipelined,-,-,2.4 W,-40 to +85,Diff-Uni,0.6,-,$65.78
+AD9246-105,14,105 MSPS,1,Pipelined,-,-,350 mW,-40 to +85,"Diff-Uni, SE-Uni",-,-,$40.43
+AD9233-105,12,105 MSPS,1,Pipelined,-,-,350 mW,-40 to +85,Diff-Bip,-,-,$23.02
+AD9228-40,12,40 MSPS,4,Pipelined,-,-,510 mW,-40 to +85,"Diff-Uni, SE-Uni",-,-,$20.24
+AD9219-40,10,40 MSPS,4,Pipelined,-,-,295 mW,-40 to +85,Diff-Uni,-,-,$14.17
+AD7690,18,400 kSPS,1,SAR,0.76,-,20 mW,-40 to +85,Diff-Uni,0.5,-,$19.73
+AD7658,12,250 kSPS,6,SAR,1,-,143 mW,-40 to +85,SE-Bip,0.7,-,$8.37
+AD7657,14,250 kSPS,6,SAR,1,-,143 mW,-40 to +125,SE-Bip,-,-,$10.29
+AD7656,16,250 kSPS,6,SAR,1,-,143 mW,-40 to +125,SE-Bip,-,-,$12.45
+AD7643,18,1.25 MSPS,1,SAR,1.49,-,80 mW,-40 to +85,Diff-Uni,1,-,$19.50
+AD7401,16,20 MSPS,1,Sigma-Delta Modulator,15,-,100 mW,-40 to +105,Diff-Uni,0.9,-,$3.25
+AD7329,13,1 MSPS,8,SAR,1.2,-,30 mW,-40 to +85,"Diff-Bip, Diff-Uni, SE-Uni",1,-,$6.33
+AD7641,18,2 MSPS,1,SAR,1.99,-,92 mW,-40 to +85,Diff-Bip,0.52,-,$29.33
+AD7400,16,10 MSPS,1,Sigma-Delta Modulator,15,-,90 mW,-40 to +105,Diff-Uni,0.9,-,$3.15
+AD7327,13,500 kSPS,8,SAR,1,-,17 mW,-40 to +85,"Diff-Uni, SE-Uni",0.9,-,$3.99
+AD7324,13,1 MSPS,4,SAR,1,-,30 mW,-40 to +85,"Diff-Bip, Diff-Uni, SE-Uni",0.9,-,$5.82
+AD7323,13,500 kSPS,4,SAR,1,-,17 mW,-40 to +85,"Diff-Uni, SE-Uni",0.9,-,$3.66
+AD7322,13,1 MSPS,2,SAR,1,-,30 mW,-40 to +85,"Diff-Bip, Diff-Uni, SE-Uni",0.9,-,$4.81
+AD7321,13,500 kSPS,2,SAR,1,-,17 mW,-40 to +85,"Diff-Uni, SE-Uni",0.9,-,$3.04
+AD9446-100,16,100 MSPS,1,Pipelined,-,-,2.8 W,-40 to +85,Diff-Uni,-,-,$57.35
+AD9445-105,14,105 MSPS,1,Pipelined,-,-,2.6 W,-40 to +85,Diff-Uni,-,-,$41.49
+AD9237-20,12,20 MSPS,1,Pipelined,-,-,120 mW,-40 to +85,Diff-Uni,-,-,-
+AD7763,24,625 kSPS,1,Sigma-Delta,-,-,956 mW,-40 to +85,Diff-Bip,-,-,$18.42
+AD7762,24,625 kSPS,1,Sigma-Delta,-,-,958 mW,-40 to +85,Diff-Uni,0.06,-,$18.42
+AD7328,13,1 MSPS,8,SAR,1.2,-,29 mW,-40 to +85,"Diff-Bip, Diff-Uni, SE-Uni",1,-,$6.33
+AD7274,12,3 MSPS,1,SAR,1,-,-,-40 to +85,SE-Uni,1,-,$4.27
+AD7273,10,3 MSPS,1,SAR,1,-,-,-40 to +85,SE-Uni,1,-,$3.80
+AD7946,14,500 kSPS,1,SAR,0.39,-,19 mW,-40 to +85,Diff-Uni,0.29,-,$7.46
+AD7760,24,2.5 MSPS,1,Sigma-Delta,-,-,958 mW,-40 to +85,Diff-Uni,0.06,-,$30.38
+AD7623,16,1.33 MSPS,1,SAR,1,-,55 mW,-40 to +85,Diff-Uni,2.01,-,$24.34
+AD7621,16,3 MSPS,1,SAR,1,-,86 mW,-40 to +85,Diff-Uni,2.01,-,$36.98
+AD7278,8,3 MSPS,1,SAR,0.2,-,19.8 mW,-40 to +85,SE-Uni,0.3,-,$2.01
+AD7277,10,3 MSPS,1,SAR,0.5,-,19.8 mW,-40 to +125,SE-Uni,0.5,-,$2.14
+AD7276,12,3 MSPS,1,SAR,1,-,19.8 mW,-40 to +125,SE-Uni,1.2,-,$1.85
+AD9229-50,12,50 MSPS,4,Pipelined,-,-,1.083 W,-40 to +85,Diff-Uni,-,-,$34.41
+AD7942,14,250 kSPS,1,SAR,0.39,-,12.5 mW,-40 to +85,Diff-Uni,0.29,-,$5.87
+AD7746,24,90 SPS,2,Sigma-Delta,-,-,4.25 mW,-40 to +125,"Diff-Uni, SE-Uni",-,-,$6.11
+AD7745,24,90 SPS,1,Sigma-Delta,-,-,4.25 mW,-40 to +125,"Diff-Uni, SE-Uni",-,-,$4.66
+AD7688,16,500 kSPS,1,SAR,0.4,-,21.5 mW,-40 to +85,Diff-Uni,0.4,-,$18.46
+AD7687,16,250 kSPS,1,SAR,0.39,-,12.5 mW,-40 to +85,Diff-Uni,0.39,-,$11.05
+AD7686,16,500 kSPS,1,SAR,2,-,21.5 mW,-40 to +85,Diff-Uni,1.5,-,$12.14
+AD7266,12,2 MSPS,12,SAR,0.5,-,33.6 mW,-40 to +125,"Diff-Uni, SE-Uni",0.95,-,$4.31
+AD7265,12,1 MSPS,12,SAR,1,-,21 mW,-40 to +125,"Diff-Uni, SE-Uni",0.99,-,$3.86
+AD6654,14,-,1,Subranging,-,-,2.5 W,-25 to +85,Diff-Uni,-,-,$78.75
+AD9248-20,14,20 MSPS,2,Pipelined,-,-,217 mW,-40 to +85,"Diff-Uni, SE-Uni",-,-,$18.98
+AD7992,12,79 kSPS,2,SAR,1,-,-,-40 to +85,SE-Uni,1.5,-,$3.04
+AD7934-6,12,625 kSPS,4,SAR,1,-,-,-40 to +85,"Diff-Uni, SE-Uni",0.95,-,$4.66
+AD7934,12,1.5 MSPS,4,SAR,1,-,16 mW,-40 to +85,"Diff-Uni, SE-Uni",0.95,-,$7.19
+AD7933,10,1.5 MSPS,4,SAR,0.5,-,16 mW,-40 to +85,"Diff-Uni, SE-Uni",0.5,-,$3.54
+AD7799,24,470 SPS,3,Sigma-Delta,-,-,2.5 mW,-40 to +105,Diff-Uni,-,-,$4.40
+AD7798,16,470 SPS,3,Sigma-Delta,0.98,-,2 mW,-40 to +105,Diff-Uni,-,-,$3.85
+AD6650,16,1 MSPS,2,Pipelined,-,-,2.1 W,-25 to +85,Diff-Uni,-,-,$21.67
+AD9481,8,250 MSPS,1,Pipelined,-,-,618.8 mW,-40 to +85,Diff-Uni,0.35,-,$16.19
+AD9444,14,80 MSPS,1,Pipelined,-,-,1.4 W,-40 to +85,Diff-Uni,0.4,-,$32.69
+AD9289,8,65 MSPS,4,Pipelined,-,-,550 mW,-40 to +85,Diff-Uni,0.25,-,$11.05
+AD9216-105,10,105 MSPS,2,Pipelined,-,-,330 mW,-40 to +85,Diff-Uni,-,-,$11.39
+AD7998,12,79 kSPS,8,SAR,0.6,-,-,-40 to +85,SE-Uni,0.75,-,$4.32
+AD7997,10,79 kSPS,8,SAR,1,-,7 mW,-40 to +85,SE-Uni,0.9,-,$2.13
+AD7994,12,188 kSPS,4,SAR,0.2,-,6 mW,-40 to +85,SE-Uni,0.2,-,$4.01
+AD7993,10,188 kSPS,4,SAR,0.5,-,6 mW,-40 to +85,SE-Uni,0.5,-,$2.33
+AD7939,10,1.5 MSPS,8,SAR,0.5,-,16 mW,-40 to +85,"Diff-Uni, SE-Uni",0.5,-,$4.64
+AD7938-6,12,625 kSPS,8,SAR,1,-,-,-40 to +85,"Diff-Uni, SE-Uni",0.95,-,$5.99
+AD7938,12,1.5 MSPS,8,SAR,1,-,16 mW,-40 to +85,"Diff-Uni, SE-Uni",0.95,-,$9.08
+AD7877,12,125 kSPS,9,SAR,-,-,3.2 mW,-40 to +85,SE-Uni,-,-,$2.15
+AD7794,24,470 SPS,6,Sigma-Delta,-,-,2.5 mW,-40 to +125,Diff-Uni,0.06,-,$5.87
+AD7793,24,470 SPS,3,Sigma-Delta,-,-,2.5 mW,-40 to +105,Diff-Uni,251.66,-,$5.16
+AD7792,16,470 SPS,3,Sigma-Delta,0.98,-,2.5 mW,-40 to +105,Diff-Uni,0.98,-,$4.04
+AD7694,16,250 kSPS,1,SAR,4,-,6.3 mW,-40 to +85,Diff-Uni,-,-,$7.41
+AD7684,16,100 kSPS,1,SAR,3.01,-,6 mW,-40 to +85,Diff-Uni,-,-,$6.58
+AD7683,16,100 kSPS,1,SAR,0.98,-,6 mW,-40 to +85,Diff-Uni,0.98,-,$5.82
+AD9480,8,250 MSPS,1,Pipelined,-,-,698 mW,-40 to +85,Diff-Uni,0.28,-,$18.20
+AD7940,14,100 kSPS,1,SAR,1.51,-,-,-40 to +85,SE-Uni,0.9,-,$5.06
+AD7685,16,250 kSPS,1,SAR,0.6,-,-,-40 to +85,Diff-Uni,0.5,-,$6.58
+AD7922,12,1 MSPS,2,SAR,1.5,-,15 mW,-40 to +85,SE-Uni,1.5,-,$5.25
+AD7921,12,250 kSPS,2,SAR,1.5,-,20 mW,-40 to +85,SE-Uni,1.5,-,$2.33
+AD7912,10,1 MSPS,2,SAR,0.5,-,15 mW,-40 to +85,SE-Uni,0.5,-,$3.39
+AD7911,10,250 kSPS,2,SAR,0.5,-,20 mW,-40 to +85,SE-Uni,0.5,-,$2.02
+AD7787,24,120 SPS,2,Sigma-Delta,-,-,800 µW,-40 to +105,"Diff-Uni, SE-Bip, SE-Uni",0.06,-,$4.88
+AD7680,16,100 kSPS,1,SAR,4,-,-,-40 to +85,SE-Uni,-,-,$6.21
+AD7667,16,1 MSPS,1,SAR,2,-,145 mW,-40 to +85,Diff-Uni,1.5,-,$12.88
+AD7666,16,500 kSPS,1,SAR,2,-,90 mW,-40 to +85,Diff-Uni,1.5,-,$10.53
+AD9866,12,80 MSPS,1,Pipelined,-,-,1.66 W,-40 to +85,Diff-Uni,-,-,$18.77
+AD9865,10,80 MSPS,1,Pipelined,-,-,475 mW,-40 to +85,Diff-Uni,-,-,$10.07
+AD9863,12,50 MSPS,2,Pipelined,-,-,-,-40 to +85,Diff-Uni,-,-,$21.68
+AD9861-50,10,50 MSPS,2,Pipelined,-,-,-,-40 to +85,Diff-Uni,-,-,$10.84
+AD7661,16,100 kSPS,1,SAR,2.49,-,45 mW,-40 to +85,Diff-Uni,1.51,-,$7.97
+AD7652,16,500 kSPS,1,SAR,6.03,-,90 mW,-40 to +85,Diff-Uni,2.49,-,$9.52
+AD7651,16,100 kSPS,1,SAR,6.03,-,45 mW,-40 to +85,Diff-Uni,3.01,-,$7.54
+AD7457,12,100 kSPS,1,SAR,1,-,3 mW,-40 to +85,Diff-Uni,0.95,-,$2.26
+AD7453,12,555 kSPS,1,SAR,1,-,7.25 mW,-40 to +85,Diff-Uni,0.95,-,$3.50
+AD7452,12,555 kSPS,1,SAR,1,-,7.25 mW,-40 to +85,Diff-Uni,0.95,-,$3.50
+AD7451,12,1 MSPS,1,SAR,1,-,9.25 mW,-40 to +85,Diff-Uni,0.95,-,$5.03
+AD7450A,12,1 MSPS,1,SAR,1,-,9 mW,-40 to +85,Diff-Uni,1,-,$5.37
+AD7441,10,1 MSPS,1,SAR,0.5,-,9.3 mW,-40 to +85,SE-Uni,0.5,-,$2.96
+AD7440,10,1 MSPS,1,SAR,0.5,-,9 mW,-40 to +85,Diff-Uni,0.5,-,$2.53
+AD9864,24,375 kSPS,1,Sigma-Delta,-,-,-,-40 to +85,"Diff-Uni, SE-Uni",-,-,$10.07
+AD7791,24,120 SPS,1,Sigma-Delta,-,-,800 µW,-40 to +105,Diff-Uni,-,-,$3.88
+AD7790,16,120 SPS,1,Sigma-Delta,0.98,-,800 µW,-40 to +105,Diff-Uni,-,-,$2.99
+AD7789,24,16.6 SPS,1,Sigma-Delta,-,-,400 µW,-40 to +105,Diff-Uni,-,-,$2.99
+AD7788,16,16.6 SPS,1,Sigma-Delta,0.98,-,400 µW,-40 to +105,Diff-Uni,-,-,$2.01
+AD7679,18,570 kSPS,1,SAR,2.49,-,103 mW,-40 to +85,Diff-Uni,1,-,$19.50
+AD7678,18,100 kSPS,1,SAR,2.49,-,26 mW,-40 to +85,Diff-Uni,1.76,-,$22.73
+AD7674,18,800 kSPS,1,SAR,2.62,-,138 mW,-40 to +85,Diff-Uni,1.31,-,$33.10
+AD7653,16,1 MSPS,1,SAR,6.03,-,145 mW,-40 to +85,Diff-Uni,2.49,-,$13.62
+AD9236,12,80 MSPS,1,Pipelined,-,-,411 mW,-40 to +85,"Diff-Uni, SE-Uni",0.4,-,$16.70
+AD9215-105,10,105 MSPS,1,Pipelined,-,-,145 mW,-40 to +85,Diff-Uni,-,-,$7.59
+AD80066,16,24 MSPS,4,-,-,-,490 mW,0 to +70,SE-Bip,0.5,-,$6.13
+AD7739,24,15.1 kSPS,8,Sigma-Delta,-,-,100 mW,-40 to +105,"Diff-Bip, Diff-Uni, SE-Bip, SE-Uni",-,-,$7.74
+AD7468,8,200 kSPS,1,SAR,0.2,-,0.57 mW,-40 to +85,SE-Uni,0.2,-,$1.36
+AD7467,10,200 kSPS,1,SAR,0.5,-,0.63 mW,-40 to +85,SE-Uni,0.5,-,$1.92
+AD7466,12,200 kSPS,1,SAR,1.5,-,0.9 mW,-40 to +85,SE-Uni,1.5,-,$2.78
+AD9244-40,14,40 MSPS,1,Pipelined,-,-,370 mW,-40 to +85,Diff-Uni,-,-,$18.86
+AD9238-20,12,20 MSPS,2,Pipelined,-,-,212 mW,-40 to +85,"Diff-Uni, SE-Uni",-,-,$11.13
+AD7928,12,1 MSPS,8,SAR,1,-,13.5 mW,-40 to +85,SE-Uni,1.2,-,$4.81
+AD7927,12,200 kSPS,8,SAR,1,-,7.5 mW,-40 to +85,SE-Uni,1.2,-,$2.83
+AD7920,12,250 kSPS,1,SAR,0.75,-,15 mW,-40 to +85,SE-Uni,1.2,-,$2.42
+AD7918,10,1 MSPS,8,SAR,0.5,-,13.5 mW,-40 to +85,SE-Uni,0.5,-,$3.29
+AD7910,10,250 kSPS,1,SAR,0.5,-,15 mW,-40 to +85,SE-Uni,0.5,-,$1.77
+AD7908,8,1 MSPS,8,SAR,0.2,-,13.5 mW,-40 to +85,SE-Uni,0.2,-,$1.87
+AD7734,24,15.4 kSPS,4,Sigma-Delta,-,-,100 mW,-40 to +105,"SE-Bip, SE-Uni",-,-,$10.49
+AD7732,24,15.4 kSPS,2,Sigma-Delta,-,-,100 mW,-40 to +105,"Diff-Bip, Diff-Uni",-,-,$8.60
+AD7655,16,1 MSPS,4,SAR,6.03,-,135 mW,-40 to +85,SE-Uni,-,-,$9.56
+AD7924,12,1 MSPS,4,SAR,1,-,13.5 mW,-40 to +85,SE-Uni,1.2,-,$4.55
+AD7923,12,200 kSPS,4,SAR,1,-,7.5 mW,-40 to +85,SE-Uni,1.2,-,$2.58
+AD7914,10,1 MSPS,4,SAR,0.5,-,13.5 mW,-40 to +85,SE-Uni,0.5,-,$3.52
+AD7904,8,1 MSPS,4,SAR,0.2,-,13.5 mW,-40 to +85,SE-Uni,0.2,-,$1.68
+AD7738,24,15.4 kSPS,8,Sigma-Delta,-,-,100 mW,-40 to +105,"Diff-Bip, Diff-Uni, SE-Uni",-,-,$7.86
+AD7654,16,500 kSPS,4,SAR,3.5,-,135 mW,-40 to +85,SE-Uni,-,-,$18.26
+AD7485,14,1 MSPS,1,SAR,0.51,-,80 mW,-40 to +85,SE-Uni,0.25,-,$11.11
+AD7484,14,3 MSPS,1,SAR,0.5,-,90 mW,-40 to +85,SE-Uni,0.29,-,$14.81
+AD7482,12,3 MSPS,1,SAR,0.25,-,90 mW,-40 to +85,SE-Uni,0.25,-,$10.30
+AD7478A,8,1.2 MSPS,1,SAR,0.3,-,17.5 mW,-40 to +85,SE-Uni,0.3,-,$1.12
+AD7477A,10,1 MSPS,1,SAR,0.5,-,17.5 mW,-40 to +85,SE-Uni,0.5,-,$2.53
+AD7476A,12,1 MSPS,1,SAR,1.5,-,17.5 mW,-55 to +125,SE-Uni,1.5,-,$4.05
+AD9430-170,12,170 MSPS,1,Pipelined,-,-,1.43 W,-40 to +85,Diff-Uni,-,-,$39.97
+AD7450,12,1 MSPS,1,SAR,1,-,9 mW,-40 to +85,Diff-Uni,1,-,$4.74
+AD7866,12,1 MSPS,4,SAR,1,-,24 mW,-40 to +85,SE-Uni,0.9,-,$6.02
+AD7677,16,1 MSPS,1,SAR,1,-,130 mW,-40 to +85,Diff-Uni,1,-,$40.69
+AD7650,16,570 kSPS,1,SAR,6.03,-,115 mW,-40 to +85,Diff-Uni,2.03,-,$8.88
+AD7490,12,1 MSPS,16,SAR,1,-,12.5 mW,-40 to +85,SE-Uni,1.5,-,$6.02
+AD6645-MIL,14,80 MSPS,1,Pipelined,0.52,-,1.75 W,-40 to +85,Diff-Uni,0.25,-,-
+AD6645-105,14,105 MSPS,1,Pipelined,-,-,1.5 W,-40 to +85,Diff-Uni,-,-,$56.67
+AD9874,24,541.5 kSPS,1,Sigma-Delta,-,-,79.5 mW,-40 to +85,"Diff-Uni, SE-Uni",-,-,$15.14
+AD9433-105,12,105 MSPS,1,Pipelined,-,-,1.425 W,-40 to +85,Diff-Uni,-,-,$32.84
+AD7783,24,19.79 SPS,1,Sigma-Delta,-,-,8.5 mW,-40 to +85,Diff-Bip,67.11,-,$4.30
+AD7782,24,19.79 SPS,2,Sigma-Delta,-,-,8.5 mW,-40 to +85,Diff-Bip,67.11,-,$4.30
+AD7709,16,105 SPS,4,Sigma-Delta,1.97,-,8.8 mW,-40 to +85,"Diff-Uni, SE-Uni",1,-,$3.94
+AD7676,16,500 kSPS,1,SAR,1,-,74 mW,-40 to +85,Diff-Uni,1,-,$29.54
+AD7675,16,100 kSPS,1,SAR,1.51,-,25 mW,-40 to +85,Diff-Uni,1,-,$14.20
+AD9218-105,10,105 MSPS,2,Pipelined,-,-,565 mW,-40 to +85,Diff-Uni,-,-,$17.33
+AD7719,24,105 SPS,6,Sigma-Delta,-,-,10 mW,-40 to +85,"Diff-Bip, Diff-Uni",67.11,-,$10.82
+AD7718,24,1.365 kSPS,10,Sigma-Delta,-,-,8.75 mW,-40 to +85,"Diff-Uni, SE-Uni",67.11,-,$5.30
+AD7708,16,1.365 kSPS,10,Sigma-Delta,1.1,-,8.75 mW,-40 to +85,"Diff-Uni, SE-Uni",1,-,$4.03
+AD7671,16,1 MSPS,1,SAR,2.49,-,125 mW,-40 to +85,"Diff-Bip, Diff-Uni",-,-,$28.29
+AD7414,10,1.25 SPS,0,-,-,-,-,-,-,-,-,$1.04
+AD9235-20,12,20 MSPS,1,Pipelined,-,-,110 mW,-40 to +85,"Diff-Uni, SE-Uni",-,-,$7.08
+AD7665,16,570 kSPS,1,SAR,2.49,-,107 mW,-40 to +85,"Diff-Bip, Diff-Uni",1,-,$19.23
+AD7663,16,250 kSPS,1,SAR,3.01,-,41 mW,-40 to +85,"Diff-Bip, Diff-Uni",1,-,$12.14
+AD7495,12,1 MSPS,1,SAR,1.5,-,13 mW,-40 to +85,SE-Uni,1.5,-,$6.14
+AD7492,12,1 MSPS,1,SAR,-,-,15 mW,-40 to +85,SE-Uni,-,-,-
+AD7475,12,1 MSPS,1,SAR,1,-,10.5 mW,-40 to +85,SE-Uni,1.5,-,$5.03
+AD10465,14,65 MSPS,2,Pipelined,-,-,3.9 W,-55 to +125,SE-Bip,-,-,$833.21
+AD9410,10,210 MSPS,1,Pipelined,-,-,2.4 W,-40 to +85,Diff-Uni,0.5,-,$53.10
+AD9214-105,10,105 MSPS,1,Pipelined,-,-,325 mW,-40 to +85,Diff-Uni,-,-,$10.83
+AD7899,14,400 kSPS,1,SAR,2,-,125 mW,-55 to +125,"SE-Bip, SE-Uni",1,-,$11.57
+AD7898,12,220 kSPS,1,SAR,1,-,22.5 mW,-40 to +85,SE-Bip,0.9,-,$5.89
+AD7873,12,125 kSPS,6,SAR,-,-,1.4 mW,-40 to +85,SE-Uni,-,-,$1.95
+AD7843,12,125 kSPS,4,SAR,-,-,1.4 mW,-40 to +85,SE-Uni,-,-,$1.16
+AD73360L,16,64 kSPS,6,Sigma-Delta,-,-,80 mW,-40 to +85,"Diff-Uni, SE-Uni",-,-,$5.82
+AD1556,24,16 kSPS,2,"Sigma-Delta, Sigma-Delta Modulator",-,-,8.5 mW,-55 to +85,"Diff-Bip, SE-Bip",-,-,$30.33
+AD1555,24,16 kSPS,2,Sigma-Delta Modulator,-,-,96 mW,-55 to +85,"Diff-Bip, SE-Bip",-,-,$74.61
+AD10200,12,105 MSPS,2,Pipelined,-,-,2.2 W,-55 to +125,Diff-Uni,0.5,-,-
+AD9226,12,65 MSPS,1,Pipelined,-,-,500 mW,-40 to +85,"Diff-Uni, SE-Uni",0.6,-,$20.50
+AD7664,16,570 kSPS,1,SAR,2.49,-,115 mW,-40 to +85,Diff-Uni,1.51,-,$22.08
+AD7660,16,100 kSPS,1,SAR,3.01,-,25 mW,-40 to +85,Diff-Uni,1.77,-,$8.00
+AD7478,8,1 MSPS,1,SAR,0.5,-,17.5 mW,-55 to +125,SE-Uni,0.5,-,$0.96
+AD7724,15,250 kSPS,2,Sigma-Delta Modulator,0.98,-,300 mW,-40 to +85,"Diff-Bip, Diff-Uni",-,-,$10.12
+AD6644-40,14,40 MSPS,1,Pipelined,-,-,1.5 W,-25 to +85,Diff-Uni,-,-,$33.89
+AD7477,10,1 MSPS,1,SAR,1,-,17.5 mW,-55 to +125,SE-Uni,0.9,-,$2.52
+AD7476,12,1 MSPS,1,SAR,1.5,-,17.5 mW,-55 to +125,SE-Uni,1.5,-,$4.05
+AD9432-105,12,105 MSPS,1,Pipelined,-,-,1.1 W,-40 to +85,Diff-Uni,-,-,$32.84
+AD9203,10,40 MSPS,1,Pipelined,0.65,-,108 mW,-40 to +85,"Diff-Uni, SE-Uni",0.25,-,$3.80
+AD7707,16,500 SPS,3,Sigma-Delta,0.13,-,3.75 mW,-40 to +85,"Diff-Uni, SE-Bip",1,-,$5.95
+AD7472,12,1.5 MSPS,1,SAR,1,-,12 mW,-40 to +85,SE-Uni,0.9,-,$7.41
+AD7470,10,1.75 MSPS,1,SAR,1,-,12 mW,-40 to +85,SE-Uni,0.9,-,$3.19
+AD73360,16,64 kSPS,6,Sigma-Delta,-,-,80 mW,-40 to +85,"Diff-Uni, SE-Uni",-,-,$6.34
+AD9288-100,8,100 MSPS,2,Pipelined,-,-,180 mW,-40 to +85,Diff-Uni,-,-,$10.63
+AD9054A-135,8,135 MSPS,1,Pipelined,-,-,700 mW,-40 to +85,Diff-Uni,-,-,$18.51
+AD7888,12,125 kSPS,8,SAR,1,-,3.5 mW,-40 to +105,SE-Uni,1,-,$3.90
+AD7865,14,350 kSPS,4,SAR,1.47,-,160 mW,-40 to +105,"SE-Bip, SE-Uni",1,-,$14.67
+AD7887,12,125 kSPS,2,SAR,1,-,3.5 mW,-40 to +125,SE-Uni,1,-,$3.62
+AD7729,15,270.8 kSPS,2,Sigma-Delta,-,-,59 mW,-40 to +85,"Diff-Uni, SE-Uni",-,-,$9.11
+AD7418,10,66.7 kSPS,2,-,-,-,-,-,-,1,-,$2.74
+AD974,16,200 kSPS,4,SAR,-,-,120 mW,-40 to +85,"SE-Bip, SE-Uni",1.77,-,$26.72
+AD7894,14,200 kSPS,1,SAR,1.47,-,27.5 mW,-40 to +85,"SE-Bip, SE-Uni",1,-,$8.05
+AD7818,10,100 kSPS,2,-,1,-,-,-,-,1,-,$3.00
+AD9283-100,8,100 MSPS,1,Pipelined,-,-,120 mW,-25 to +85,Diff-Uni,-,-,$5.57
+AD7416,10,2.5 kSPS,0,-,-,-,-,-,-,1,-,$1.00
+AD9225,12,25 MSPS,1,Pipelined,-,-,383 mW,-40 to +85,"Diff-Uni, SE-Uni",0.4,-,$14.47
+AD9224,12,40 MSPS,1,Pipelined,-,-,450 mW,-40 to +85,"Diff-Uni, SE-Uni",0.33,-,$12.19
+AD9051,10,60 MSPS,1,Pipelined,0.75,-,315 mW,-40 to +85,Diff-Uni,0.75,-,$6.96
+AD7863,14,175 kSPS,4,SAR,2,-,52.5 mW,-40 to +85,"SE-Bip, SE-Uni",2,-,$14.67
+AD7856,14,285 kSPS,8,SAR,2,-,89.25 mW,-40 to +85,SE-Uni,2,-,$10.02
+AD7723,16,1.2 MSPS,1,Sigma-Delta,2.03,-,475 mW,-40 to +85,"Diff-Bip, Diff-Uni",0.52,-,$27.24
+AD7706,16,500 SPS,3,Sigma-Delta,0.13,-,6.5 mW,-40 to +85,"Diff-Bip, Diff-Uni",1,-,$4.30
+AD7705,16,500 SPS,2,Sigma-Delta,0.13,-,6.5 mW,-40 to +85,"Diff-Bip, Diff-Uni",1,-,$4.17
+AD6600,11,20 MSPS,2,Pipelined,-,-,976 mW,-40 to +85,Diff-Uni,-,-,$40.91
+AD9281,8,28 MSPS,2,Pipelined,-,-,260 mW,-40 to +85,"Diff-Uni, SE-Uni",0.1,-,$3.91
+AD9260,16,2.5 MSPS,1,Sigma-Delta,-,-,637 mW,-40 to +85,Diff-Uni,0.52,-,$44.42
+AD9201,10,20 MSPS,2,Pipelined,1.2,-,245 mW,-40 to +85,"Diff-Uni, SE-Uni",0.4,-,$5.01
+AD7864,12,520 kSPS,4,SAR,0.5,-,120 mW,-40 to +85,"SE-Bip, SE-Uni",0.9,-,$13.81
+AD7817,10,100 kSPS,5,-,1,-,-,-,-,1,-,$4.21
+AD7730L,24,600 SPS,2,Sigma-Delta,-,-,32.5 mW,-40 to +85,"Diff-Bip, Diff-Uni",-,-,$10.85
+AD7339,8,2 MSPS,1,SAR,-,-,225 mW,-40 to +85,SE-Uni,-,-,$7.94
+AD6640,12,65 MSPS,1,Pipelined,1.25,-,865 mW,-40 to +85,Diff-Uni,0.5,-,$39.49
+AD9054AS,8,200 MSPS,1,Other,-,-,781 mW,-55 to +125,Diff-Bip,-,-,-
+AD7825,8,2 MSPS,4,Pipelined,0.75,-,36 mW,-40 to +85,SE-Uni,0.75,-,$4.22
+AD7822,8,2 MSPS,1,Pipelined,0.75,-,60 mW,-40 to +85,SE-Uni,0.75,-,$4.04
+AD7812,10,350 kSPS,8,SAR,1,-,10.5 mW,-40 to +105,"Diff-Uni, SE-Uni",1,-,$3.34
+AD7811,10,350 kSPS,4,SAR,1,-,10.5 mW,-40 to +105,"Diff-Uni, SE-Uni",1,-,$3.60
+AD7731,24,6.4 kSPS,3,Sigma-Delta,-,-,67.5 mW,-40 to +85,"Diff-Bip, Diff-Uni",0.06,-,$10.28
+AD7720,16,12.5 MSPS,1,Sigma-Delta Modulator,2.03,-,215 mW,-40 to +85,"Diff-Bip, Diff-Uni",0.98,-,$10.38
+AD977A,16,200 kSPS,1,SAR,-,-,100 mW,-40 to +85,"SE-Bip, SE-Uni",1.77,-,$22.03
+AD977,16,100 kSPS,1,SAR,-,-,100 mW,-40 to +85,"SE-Bip, SE-Uni",1.75,-,$14.91
+AD9280,8,32 MSPS,1,Pipelined,-,-,110 mW,-40 to +85,"Diff-Uni, SE-Uni",0.2,-,$2.18
+AD7819,8,200 kSPS,1,SAR,0.5,-,17.5 mW,-40 to +105,SE-Uni,0.5,-,$2.29
+AD7813,10,400 kSPS,1,SAR,1,-,17.5 mW,-40 to +105,SE-Uni,1,-,$3.49
+AD7730,24,1.2 kSPS,2,Sigma-Delta,-,-,65 mW,-40 to +85,"Diff-Bip, Diff-Uni, SE-Uni",0.0596,-,$9.98
+AD9241,14,1.25 MSPS,1,Pipelined,-,-,85 mW,-40 to +85,"Diff-Uni, SE-Uni",0.61,-,$9.46
+AD9240,14,10 MSPS,1,Pipelined,-,-,330 mW,-40 to +85,"Diff-Uni, SE-Uni",0.61,-,$18.37
+AD9200,10,20 MSPS,1,Pipelined,0.75,-,100 mW,-40 to +85,"Diff-Uni, SE-Uni, Usr-Defined Range/Offset",0.5,-,$2.53
+AD7823,8,200 kSPS,1,SAR,0.5,-,17.5 mW,-40 to +125,Diff-Uni,0.5,-,$2.68
+AD7810,10,350 kSPS,1,SAR,1,-,17.5 mW,-40 to +105,Diff-Uni,1,-,$3.19
+AD976A,16,200 kSPS,1,SAR,-,-,100 mW,-40 to +85,"SE-Bip, SE-Uni",1.77,-,$25.17
+AD976,16,100 kSPS,1,SAR,-,-,100 mW,-40 to +85,SE-Bip,1.77,-,$14.91
+AD9243,14,3 MSPS,1,Pipelined,-,-,145 mW,-40 to +85,"Diff-Uni, SE-Uni",0.61,-,$11.69
+AD7895,12,192 kSPS,1,SAR,1,-,20 mW,-40 to +125,"SE-Bip, SE-Uni",1,-,$5.01
+AD7862,12,250 kSPS,4,SAR,1,-,75 mW,-40 to +85,"SE-Bip, SE-Uni",1,-,$11.13
+AD7851,14,333 kSPS,1,SAR,-,-,89.3 mW,-40 to +85,Diff-Uni,-,-,-
+AD7722,16,195.3 kSPS,1,Sigma-Delta,0.13,-,375 mW,-40 to +85,"Diff-Bip, Diff-Uni",0.5,-,$17.20
+AD9059,8,60 MSPS,2,Pipelined,0.75,-,505 mW,-40 to +85,SE-Uni,0.75,-,$13.23
+AD9057-40,8,40 MSPS,1,Pipelined,-,-,192 mW,-40 to +85,SE-Uni,-,-,$2.56
+AD10242,12,40 MSPS,2,Pipelined,-,-,2 W,-55 to +125,"SE-Bip, SE-Uni",1.25,-,-
+AD9223,12,3 MSPS,1,Pipelined,-,-,130 mW,-40 to +85,"Diff-Uni, SE-Uni",0.3,-,$7.74
+AD9221,12,1.5 MSPS,1,Pipelined,-,-,70 mW,-40 to +85,"Diff-Uni, SE-Uni",0.3,-,$7.74
+AD7854,12,200 kSPS,1,SAR,-,-,30 mW,-55 to +125,"Diff-Uni, SE-Uni",-,-,-
+AD7859-200,12,200 kSPS,8,SAR,-,-,30 mW,-40 to +85,"SE-Bip, SE-Uni",-,-,-
+AD7721,16,468.75 kSPS,1,Sigma-Delta,1.05,-,150 mW,-40 to +85,"Diff-Bip, Diff-Uni",0.52,-,$12.22
+AD9220,12,10 MSPS,1,Pipelined,-,-,310 mW,-40 to +85,"Diff-Uni, SE-Uni",0.3,-,$6.12
+AD9042S,12,-,1,-,-,-,-,-55 to +125,-,-,-,-
+AD7891,12,500 kSPS,8,SAR,0.75,-,100 mW,-40 to +105,"SE-Bip, SE-Uni",1,-,$14.93
+AD7861,11,28.6 kSPS,7,SAR,2,-,50 mW,-40 to +85,SE-Uni,2.5,-,$15.56
+AD7858-200,12,200 kSPS,8,SAR,-,-,33 mW,-40 to +85,SE-Uni,-,-,-
+AD7853A/B,12,200 kSPS,1,SAR,-,-,33 mW,-40 to +85,"Diff-Uni, SE-Uni",-,-,-
+AD7715,16,500 SPS,1,Sigma-Delta,-,-,9.5 mW,-40 to +85,"Diff-Bip, Diff-Uni",1,-,$5.89
+AD876,10,20 MSPS,1,Pipelined,1,-,190 mW,-40 to +85,SE-Uni,0.75,-,$3.83
+AD7896,12,100 kSPS,1,SAR,0.5,-,10.8 mW,-55 to +125,SE-Uni,1,-,$5.00
+AD7714,24,1 kSPS,5,Sigma-Delta,251.66,-,7 mW,-40 to +105,"Diff-Bip, Diff-Uni",0.0596,-,$8.38
+AD7892-1-500,12,500 kSPS,1,SAR,-,-,90 mW,-40 to +85,SE-Bip,-,-,-
+AD7716,22,2.2 kSPS,4,Sigma-Delta,-,-,50 mW,-40 to +85,SE-Bip,0.477,-,$34.43
+AD7890,12,117 kSPS,8,SAR,0.5,-,50 mW,-55 to +125,"SE-Bip, SE-Uni",1,-,$10.32
+AD7893,12,117 kSPS,1,SAR,0.5,-,45 mW,-55 to +125,"SE-Bip, SE-Uni",1,-,$10.02
+AD677,16,100 kSPS,1,SAR,1.5,-,630 mW,-55 to +125,SE-Bip,1,-,$25.40
+AD676,16,100 kSPS,1,SAR,1.5,-,480 mW,-40 to +85,SE-Bip,1,-,$34.82
+AD7713,24,205 SPS,3,Sigma-Delta,754.97,-,5.5 mW,-55 to +125,"Diff-Bip, Diff-Uni, SE-Uni",0.0596,-,$23.73
+AD7712,24,1.028 kSPS,2,Sigma-Delta,754.97,-,53 mW,-55 to +125,"Diff-Bip, Diff-Uni, SE-Bip",0.0596,-,$15.89
+AD7711,24,1.028 kSPS,2,Sigma-Delta,754.97,-,53 mW,-55 to +125,"Diff-Bip, Diff-Uni, SE-Uni",0.0596,-,$18.43
+AD7710,24,1.028 kSPS,2,Sigma-Delta,754.97,-,53 mW,-55 to +125,"Diff-Bip, Diff-Uni",0.0596,-,$17.40
+AD7703,20,4 kSPS,1,Sigma-Delta,15.73,-,37 mW,-40 to +85,"SE-Bip, SE-Uni",0.5,-,$19.70
+AD1674,12,100 kSPS,1,SAR,0.5,-,575 mW,-55 to +125,"SE-Bip, SE-Uni",1,-,$14.04
+AD7880,12,66 kSPS,1,SAR,1,-,37.5 mW,-40 to +85,"SE-Bip, SE-Uni",1,-,$19.56
+AD7701,16,4 kSPS,1,Sigma-Delta,0.5,-,37 mW,-40 to +85,"SE-Bip, SE-Uni",0.125,-,$15.21
+AD7874,12,7.25 kSPS,4,SAR,0.5,-,150 mW,-55 to +125,SE-Bip,1,-,$37.50
+AD7821,8,1 MSPS,1,Pipelined,-,-,100.5 mW,-55 to +125,"SE-Bip, SE-Uni",-,-,$9.98
+AD670S,8,-,1,SAR,-,-,247.5 mW,-55 to +125,"Diff-Bip, Diff-Uni, SE-Bip, SE-Uni",-,-,-
+AD574A,12,-,1,SAR,-,-,725 mW,-55 to +125,"SE-Bip, SE-Uni",-,-,$17.25
+AD7711A,24,1 kSPS,2,Sigma-Delta,251.66,-,53 mW,-55 to +125,"Diff-Bip, Diff-Uni",0.0596,-,-
+AD9861-80,10,80 MSPS,2,Pipelined,-,-,-,-40 to +85,Diff-Uni,-,-,$13.80
+AD9683-250,14,250,1,Pipelined,-,-,468 mW,-40 to +85,Diff-Bip,-,-,$69.65
+AD9683-170,14,170 MSPS,1,Pipelined,-,-,403 mW,-40 to +85,Diff-Bip,-,-,$38.40
+AD9680-820,14,820 MSPS,2,Pipelined,-,-,2.9 W,-40 to +85,Differential,0.8,-,$369.75
+AD9680-500,14,500 MSPS,2,Pipelined,-,-,2.2 W,-40 to +85,Differential,0.7,-,$500.00
+AD9650-80,16,80 MSPS,2,Pipelined,-,-,642 mW,-40 to +85,Diff-Bip,-,-,$114.92
+AD9650-65,16,65 MSPS,2,Pipelined,-,-,520 mW,-40 to +85,Diff-Bip,-,-,$98.52
+AD9650-25,16,25 MSPS,2,Pipelined,-,-,355 mW,-40 to +85,Diff-Bip,-,-,$53.00
+AD9649-80,14,80 MSPS,1,Pipelined,-,-,118.3 mW,-40 to +85,Diff-Uni,-,-,$25.00
+AD9649-65,14,65 MSPS,1,Pipelined,-,-,101.5 mW,-40 to +85,Diff-Uni,-,-,$23.35
+AD9649-40,14,40 MSPS,1,Pipelined,-,-,73.8 mW,-40 to +85,Diff-Uni,-,-,$15.13
+AD9648-125,14,125 MSPS,2,Pipelined,-,-,220.5 mW,-40 to +85,Diff-Uni,-,-,$51.25
+AD9644-80,14,80 MSPS,2,Pipelined,-,-,423 mW,-40 to +85,Diff-Bip,-,-,$41.65
+AD9643-250,14,250 MSPS,2,Pipelined,-,-,785 mW,-40 to +85,Diff-Bip,-,-,$131.57
+AD9643-210,14,210 MSPS,2,Pipelined,-,-,614 mW,-40 to +85,Diff-Bip,-,-,$109.74
+AD9642-250,14,250 MSPS,1,Pipelined,-,-,360 mW,-40 to +85,"Diff-Bip, Diff-Uni",-,-,$69.65
+AD9642-210,14,210 MSPS,1,Pipelined,-,-,333 mW,-40 to +85,"Diff-Bip, Diff-Uni",-,-,$57.80
+AD9640-80,14,80 MSPS,2,Pipelined,-,-,550 mW,-40 to +85,Diff-Uni,-,-,$37.95
+AD9640-150,14,150 MSPS,2,Pipelined,-,-,1 W,-40 to +85,Diff-Uni,-,-,$98.67
+AD9640-125,14,125 MSPS,2,Pipelined,-,-,910 mW,-40 to +85,Diff-Uni,-,-,$74.38
+AD9637-80,12,80 MSPS,8,Pipelined,-,-,502 mW,-40 to +125,Diff-Uni,-,-,$56.95
+AD9634-250,12,250 MSPS,1,Pipelined,-,-,360 mW,-40 to +85,Diff-Uni,-,-,$35.25
+AD9634-210,12,170 MSPS,1,Pipelined,-,-,333 mW,-40 to +85,Diff-Uni,-,-,$29.25
+AD9633-80,12,80 MSPS,4,Pipelined,-,-,331 mW,-40 to +85,Diff-Uni,-,-,$44.20
+AD9633-125,12,125 MSPS,4,Pipelined,-,-,430 mW,-40 to +85,Diff-Uni,-,-,$68.51
+AD9629-80,12,80 MSPS,1,Pipelined,-,-,114 mW,-40 to +85,Diff-Uni,-,-,$16.70
+AD9629-65,12,65 MSPS,1,Pipelined,-,-,98.9 mW,-40 to +85,Diff-Uni,-,-,$12.08
+AD9629-40,12,40 MSPS,1,Pipelined,-,-,71.7 mW,-40 to +85,Diff-Uni,-,-,$6.85
+AD9628-125,12,125 MSPS,2,Pipelined,-,-,269 mW,-40 to +85,"Diff-Bip, SE-Uni",-,-,$31.32
+AD9627-80,12,80 MSPS,2,Pipelined,-,-,490 mW,-40 to +85,Diff-Uni,-,-,-
+AD9627-150,12,150 MSPS,2,Pipelined,-,-,890 mW,-40 to +85,Diff-Uni,-,-,$48.55
+AD9627-125,12,125 MSPS,2,Pipelined,-,-,890 mW,-40 to +85,Diff-Uni,-,-,$41.75
+AD9626-250,12,250 MSPS,1,Pipelined,-,-,364 mW,-40 to +85,Diff-Uni,-,-,$59.46
+AD9626-210,12,170 MSPS,1,Pipelined,-,-,310 mW,-40 to +85,Diff-Uni,-,-,$42.00
+ad9625-2.6,12,2.6 GSPS,1,Pipelined,-,-,4 W,-40 to +85,Differential,0.7,1 V,$735.00
+ad9625-2.5,12,2.5 GSPS,1,Pipelined,-,-,3.9 W,-40 to +85,Differential,0.7,1 V,$735.00
+AD9613-250,12,250 MSPS,2,Pipelined,-,-,770 mW,-40 to +85,Diff-Bip,-,-,$66.50
+AD9613-210,12,210 MSPS,2,Pipelined,-,-,670 mW,-40 to +85,Diff-Bip,-,-,$55.50
+AD9609-80,10,80 MSPS,1,Pipelined,-,-,89.5 mW,-40 to +85,Diff-Uni,-,-,$4.50
+AD9609-65,10,65 MSPS,1,Pipelined,-,-,88.6 mW,-40 to +85,Diff-Uni,-,-,$4.17
+AD9609-40,10,40 MSPS,1,Pipelined,-,-,67 mW,-40 to +85,Diff-Uni,-,-,$3.75
+AD9609-20,10,20 MSPS,1,Pipelined,-,-,53.1 mW,-40 to +85,Diff-Uni,-,-,$3.50
+AD9608-125,10,125 MSPS,2,Pipelined,-,-,189 mW,-40 to +85,Diff-Uni,-,-,$18.00
+AD9600-150,10,150 MSPS,2,Pipelined,-,-,990 mW,-40 to +85,Diff-Uni,-,-,$37.85
+AD9600-125,10,105 MSPS,2,Pipelined,-,-,740 mW,-40 to +85,Diff-Uni,-,-,$20.19
+AD9600-105,10,105 MSPS,2,Pipelined,-,-,740 mW,-40 to +85,Diff-Uni,-,-,$11.40
+AD9467-250,16,250 MSPS,1,Pipelined,-,-,1.32 W,-40 to +85,"Diff-Uni, SE-Uni",-,-,$119.85
+AD9460-80,16,80 MSPS,1,Pipelined,-,-,1.8 W,-40 to +85,Diff-Uni,-,-,$48.91
+AD9446-80,16,80 MSPS,1,Pipelined,-,-,2.6 W,-40 to +85,Diff-Uni,-,-,$48.91
+AD9445-125,14,125 MSPS,1,Pipelined,-,-,2.6 W,-40 to +85,Diff-Uni,-,-,$55.66
+AD9434-500,12,500 MSPS,1,Pipelined,-,-,660 mW,-40 to +85,Diff-Bip,-,-,$124.95
+AD9433-125,12,125 MSPS,1,Pipelined,-,-,1.5 W,-40 to +85,Diff-Uni,-,-,$34.51
+AD9432-80,12,80 MSPS,1,Pipelined,-,-,1 W,-40 to +85,Diff-Uni,-,-,$26.44
+AD9430-210,12,210 MSPS,1,Pipelined,-,-,1.7 W,-40 to +85,Diff-Uni,-,-,$55.66
+AD9288-80,8,80 MSPS,2,Pipelined,-,-,171 mW,-40 to +85,Diff-Uni,-,-,$5.87
+AD9288-40,8,40 MSPS,2,Pipelined,-,-,156 mW,-40 to +85,Diff-Uni,-,-,$3.44
+AD9283-80,8,80 MSPS,1,Pipelined,-,-,120 mW,-25 to +85,Diff-Uni,-,-,$3.04
+AD9283-50,8,50 MSPS,1,Pipelined,-,-,80 mW,-25 to +85,Diff-Uni,-,-,$2.53
+AD9273-50,12,50 MSPS,8,Pipelined,-,-,943 mW,-40 to +85,SE-Bip,-,-,$47.00
+AD9273-40,12,40 MSPS,8,Pipelined,-,-,873 mW,-40 to +85,SE-Bip,-,-,$45.00
+AD9272-80,12,80 MSPS,8,Pipelined,-,-,1.78 W,-40 to +85,SE-Uni,-,-,$54.00
+AD9272-65,12,65 MSPS,8,Pipelined,-,-,1.69 W,-40 to +85,SE-Uni,-,-,$48.00
+AD9271-50,12,50 MSPS,8,Pipelined,-,-,1.1 W,-40 to +85,SE-Uni,-,-,$50.00
+AD9271-40,12,40 MSPS,8,Pipelined,-,-,1.19 W,-40 to +85,SE-Uni,-,-,$46.00
+AD9269-80,16,80 MSPS,2,Pipelined,-,-,235.6 mW,-40 to +85,Diff-Uni,-,-,$84.09
+AD9269-65,16,65 MSPS,2,Pipelined,-,-,235.6 mW,-40 to +85,Diff-Uni,-,-,-
+AD9269-40,16,40 MSPS,2,Pipelined,-,-,165.7 mW,-40 to +85,Diff-Uni,-,-,$59.50
+AD9268-80,16,80 MSPS,2,Pipelined,-,-,582 mW,-40 to +85,Diff-Uni,-,-,$101.00
+AD9268-125,16,125 MSPS,2,Pipelined,-,-,870 mW,-40 to +85,Diff-Uni,-,-,$136.00
+AD9266-80,16,80 MSPS,1,Pipelined,-,-,151 mW,-40 to +85,Diff-Uni,-,-,$48.33
+AD9266-65,16,65 MSPS,1,Pipelined,-,-,129 mW,-40 to +85,Diff-Uni,-,-,$43.33
+AD9266-40,16,40 MSPS,1,Pipelined,-,-,93 mW,-40 to +85,Diff-Uni,-,-,$35.00
+AD9265-80,16,80 MSPS,1,Pipelined,-,-,308 mW,-40 to +85,Diff-Uni,-,-,$48.33
+AD9265-125,16,125 MSPS,1,Pipelined,-,-,439 mW,-40 to +85,Diff-Uni,-,-,$65.00
+AD9262-5,16,160 MSPS,2,Sigma-Delta,-,-,636 mW,-40 to +85,Diff-Uni,-,-,$37.00
+AD9262-10,16,160 MSPS,2,Sigma-Delta,-,-,688 mW,-40 to +85,Diff-Uni,-,-,$48.00
+AD9258-80,14,80 MSPS,2,Pipelined,-,-,467 mW,-40 to +85,Diff-Bip,-,-,$55.25
+AD9258-125,14,125 MSPS,2,Pipelined,-,-,777 mW,-40 to +85,Diff-Bip,-,-,$93.50
+AD9257-65,14,65 MSPS,8,Pipelined,-,-,464 mW,-40 to +85,Diff-Uni,-,-,$71.40
+AD9255-80,14,80 MSPS,1,Pipelined,-,-,306 mW,-40 to +85,Diff-Uni,-,-,$33.00
+AD9255-125,14,125 MSPS,1,Pipelined,-,-,382 mW,-40 to +85,Diff-Uni,-,-,$59.93
+AD9253-EP,14,125 MSPS,4,Pipelined,-,-,480 mW,-55 to +125,Diff-Uni,-,-,$170.00
+AD9253-80,14,80 MSPS,4,Pipelined,-,-,349 mW,-40 to +85,Diff-Uni,-,-,$62.90
+AD9253-125,14,125 MSPS,4,Pipelined,-,-,457 mW,-40 to +85,Diff-Uni,-,-,$116.45
+AD9251-80,14,80 MSPS,2,Pipelined,-,-,173 mW,-40 to +85,Diff-Uni,-,-,$37.50
+AD9251-65,14,65 MSPS,2,Pipelined,-,-,146.5 mW,-40 to +85,Diff-Uni,-,-,$35.00
+AD9251-40,14,40 MSPS,2,Pipelined,-,-,105.5 mW,-40 to +85,Diff-Uni,-,-,$23.89
+AD9248-65,14,65 MSPS,2,Pipelined,-,-,217 mW,-40 to +85,"Diff-Uni, SE-Uni",-,-,$29.85
+AD9248-40,14,40 MSPS,2,Pipelined,-,-,400 mW,-40 to +85,"Diff-Uni, SE-Uni",-,-,$24.04
+AD9246-80,14,80 MSPS,1,Pipelined,-,-,279 mW,-40 to +85,"Diff-Uni, SE-Uni",-,-,$25.30
+AD9246-125,14,125 MSPS,1,Pipelined,-,-,425 mW,-40 to +85,"Diff-Uni, SE-Uni",-,-,$49.08
+AD9244-65,14,65 MSPS,1,Pipelined,-,-,640 mW,-40 to +85,Diff-Uni,-,-,$25.15
+AD9239-250,12,250 MSPS,4,Pipelined,-,-,1.526 W,-40 to +85,"Diff-Uni, SE-Uni",-,-,$169.15
+AD9239-210,12,210 MSPS,4,Pipelined,-,-,1.298 W,-40 to +85,"Diff-Uni, SE-Uni",-,-,$121.55
+AD9238-65,12,65 MSPS,2,Pipelined,-,-,698 mW,-40 to +85,"Diff-Uni, SE-Uni",-,-,$18.22
+AD9238-40,12,40 MSPS,2,Pipelined,-,-,397 mW,-40 to +85,"Diff-Uni, SE-Uni",-,-,$12.14
+AD9237-65,12,65 MSPS,1,Pipelined,-,-,270 mW,-40 to +85,Diff-Uni,-,-,-
+AD9237-40,12,40 MSPS,1,Pipelined,-,-,120 mW,-40 to +85,Diff-Uni,-,-,$8.00
+AD9235-65,12,65 MSPS,1,Pipelined,-,-,350 mW,-40 to +85,"Diff-Uni, SE-Uni",-,-,$12.14
+AD9235-40,12,20 MSPS,1,Pipelined,-,-,205 mW,-40 to +85,"Diff-Uni, SE-Uni",-,-,$7.99
+AD9233-80,12,80 MSPS,1,Pipelined,-,-,279 mW,-40 to +85,Diff-Bip,-,-,$16.90
+AD9233-125,12,125 MSPS,1,Pipelined,-,-,425 mW,-40 to +85,Diff-Bip,-,-,$27.27
+AD9231-65,12,65 MSPS,2,Pipelined,-,-,173.4 mW,-40 to +85,Diff-Uni,-,-,$18.00
+AD9231-40,12,40 MSPS,2,Pipelined,-,-,121.5 mW,-40 to +85,Diff-Uni,-,-,$12.00
+AD9230-250,12,250 MSPS,1,Pipelined,-,-,434 mW,-40 to +85,Diff-Uni,-,-,$59.71
+AD9230-210,12,210 MSPS,1,Pipelined,-,-,383 mW,-40 to +85,Diff-Uni,-,-,$42.50
+AD9229-65,12,65 MSPS,4,Pipelined,-,-,1.465 W,-40 to +85,Diff-Uni,-,-,$44.53
+AD9228-65,12,65 MSPS,4,Pipelined,-,-,510 mW,-40 to +85,"Diff-Uni, SE-Uni",-,-,$27.73
+AD9222-65,12,65 MSPS,8,Pipelined,-,-,910 mW,-40 to +85,Diff-Uni,-,-,$55.51
+AD9222-50,12,50 MSPS,8,Pipelined,-,-,740 mW,-40 to +85,Diff-Uni,-,-,$48.58
+AD9219-65,10,65 MSPS,4,Pipelined,-,-,378 mW,-40 to +85,Diff-Uni,-,-,$16.19
+AD9218-80,10,80 MSPS,2,Pipelined,-,-,565 mW,-40 to +85,Diff-Uni,-,-,$13.52
+AD9218-65,10,65 MSPS,2,Pipelined,-,-,390 mW,-40 to +85,Diff-Uni,-,-,$11.90
+AD9218-40,10,40 MSPS,2,Pipelined,-,-,340 mW,-40 to +85,Diff-Uni,-,-,$9.11
+AD9216-80,10,80 MSPS,2,Pipelined,-,-,279 mW,-40 to +85,Diff-Uni,-,-,-
+AD9216-65,10,65 MSPS,2,Pipelined,-,-,240 mW,-40 to +85,Diff-Uni,-,-,$7.59
+AD9215-80,10,80 MSPS,1,Pipelined,-,-,96 mW,-40 to +85,Diff-Uni,-,-,$6.78
+AD9215-65,10,65 MSPS,1,Pipelined,-,-,96 mW,-40 to +85,Diff-Uni,-,-,$5.06
+AD9214-80,10,80 MSPS,1,Pipelined,-,-,220 mW,-40 to +85,Diff-Uni,-,-,$8.45
+AD9214-65,10,65 MSPS,1,Pipelined,-,-,220 mW,-40 to +85,Diff-Uni,-,-,$6.33
+AD9212-65,10,65 MSPS,8,Pipelined,-,-,800 mW,-40 to +85,Diff-Uni,-,-,$32.38
+AD9211-300,10,300 MSPS,1,Pipelined,-,-,437 mW,-40 to +85,Diff-Uni,-,-,$46.55
+AD9211-250,10,200 MSPS,1,Pipelined,-,-,353 mW,-40 to +85,Diff-Uni,-,-,$39.47
+AD9204-80,10,80 MSPS,2,Pipelined,-,-,177 mW,-40 to +85,"Diff-Uni, SE-Uni",-,-,-
+AD9204-65,10,65 MSPS,2,Pipelined,-,-,150.8 mW,-40 to +85,"Diff-Uni, SE-Uni",-,-,$7.50
+AD9204-40,10,40 MSPS,2,Pipelined,-,-,111 mW,-40 to +85,"Diff-Uni, SE-Uni",-,-,$7.20
+AD9057-80,8,80 MSPS,1,Pipelined,-,-,220 mW,-40 to +85,SE-Uni,-,-,$3.34
+AD9057-60,8,60 MSPS,1,Pipelined,-,-,205 mW,-40 to +85,SE-Uni,-,-,$2.89
+AD9054A-200,8,200 MSPS,1,Pipelined,-,-,781 mW,-40 to +85,Diff-Uni,-,-,$21.22
+AD7892-3-600,12,600 kSPS,1,SAR,-,-,90 mW,-40 to +85,SE-Uni,-,-,-
+AD7892-2-500,12,500 kSPS,1,SAR,-,-,60 mW,-40 to +85,SE-Bip,-,-,-
+AD7859L-100,12,100 kSPS,8,SAR,-,-,10 mW,-40 to +85,"SE-Bip, SE-Uni",-,-,-
+AD7858L-100,12,100 kSPS,8,SAR,-,-,10.5 mW,-40 to +85,SE-Uni,-,-,-
+AD7854L-100,12,100 kSPS,1,SAR,-,-,10 mW,-55 to +125,"Diff-Uni, SE-Uni",-,-,-
+AD7854-200,12,200 kSPS,1,SAR,-,-,30 mW,-55 to +125,"Diff-Uni, SE-Uni",-,-,-
+AD7853L,12,100 kSPS,1,SAR,-,-,33 mW,-40 to +85,"Diff-Uni, SE-Uni",-,-,-
+AD7851K,14,285 kSPS,1,SAR,-,-,89.3 mW,0 to +85,Diff-Uni,-,-,-
+AD7851A,14,333 kSPS,1,SAR,-,-,89.3 mW,-40 to +85,Diff-Uni,-,-,-
+AD7492-5,12,1.25 MSPS,1,SAR,-,-,16.5 mW,-40 to +85,SE-Uni,-,-,-
+AD7492-4,12,400 kSPS,1,SAR,-,-,15 mW,-40 to +85,SE-Uni,-,-,-
+AD7264-5,14,500 kSPS,2,SAR,-,-,120 mW,-40 to +105,Diff-Uni,-,-,-
+AD7262-5,12,500 kSPS,2,SAR,-,-,175 mW,-40 to +105,Diff-Uni,-,-,$4.10
+AD6655-80,14,80 MSPS,2,Pipelined,-,-,-,-40 to +85,-,-,-,$48.07
+AD6655-150,14,150 MSPS,2,Pipelined,-,-,1.45 W,-40 to +85,-,-,-,$98.67
+AD6655-125,14,125 MSPS,2,Pipelined,-,-,-,-40 to +85,Diff-Uni,-,-,$84.50
+AD6645-80,14,80 MSPS,1,Pipelined,-,-,1.5 W,-40 to +85,Diff-Uni,-,-,-
+AD6644-65,14,65 MSPS,1,Pipelined,-,-,1.5 W,-25 to +85,Diff-Uni,-,-,$45.58
+AD6643-250,11,250 MSPS,2,Pipelined,-,-,853 mW,-40 to +85,Diff-Uni,-,-,$74.80

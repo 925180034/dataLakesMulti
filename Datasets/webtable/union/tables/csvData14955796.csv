@@ -1,0 +1,9 @@
+Name,Country,sex,tour,sl,tr,ju,yob,class,round,div,date,place,site id,line/ramp,speed
+ , , , , , , , , , , , , , , , 
+CHICHARRO Diego,CHI,M,08CHI001,51.5,0.0,0.0,1987.0,L,0.0,OPEN VAR,10/20/2007,3.0,CHI004,3.50@12.000,58.0
+ , , , , , , , , , , , , , , , 
+CHICHARRO Diego,CHI,M,08CHI002,49.0,0.0,0.0,1987.0,L,0.0,OPEN VAR,11/17/2007,7.0,CHI004,1.00@12.000,58.0
+ , , , , , , , , , , , , , , , 
+CHICHARRO Diego,CHI,M,08CHI003,50.0,0.0,0.0,1987.0,L,0.0,OPEN VAR,12/15/2007,3.0,CHI004,2.00@12.000,58.0
+ , , , , , , , , , , , , , , , 
+CHICHARRO Diego,CHI,M,08DOM01,47.0,0.0,0.0,1987.0,R,1.0,S-21M,10/12/2008,5.0,DOM01,5.00@13.000,58.0

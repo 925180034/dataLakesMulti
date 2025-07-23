@@ -1,0 +1,16 @@
+TERM,COURSE,SECTION,TITLE,LOCATION,MEETING_DAYS,START_TIME,END_TIME,CAPACITY,ENROLLED,CREDITS,FACULTY,BLDG,ROOM,BookInfo
+2015SU2,EDU-616,1,Cult & Ling Diver: Inst Strat,GC,R,05:15 PM,08:45 PM,15.0,11,3.0,D. Puri,GRAD,430.0,View Book Info
+2015SU2,EDU-622,1,Inc Spc Child Reg Cl,GC,W,05:15 PM,08:45 PM,15.0,11,3.0,D. Brown,GRAD,430.0,View Book Info
+2015SU2,EDU-625,1,Methods: Elementary Math,GC,M,05:15 PM,08:45 PM,15.0,10,3.0,To be Announced,GRAD,432.0,View Book Info
+2015SU2,HSD-741,0,Action Research,GC, , , ,1.0,0,3.0,V. Smith, , ,View Book Info
+2015SU2,HUS-741,0,Psychology & Ethics of Change,GC, , , ,1.0,0,3.0,V. Smith, , ,View Book Info
+2015SU2,MDL-651,1,Study Abroad,RL, , , , ,13, ,To be Announced, , ,View Book Info
+2015SU2,MSB-744,0,Advanced Corporate Finance,GC,S,08:30 AM,01:30 PM,25.0,2,3.0,E. Ihejirika,GRAD,436.0,View Book Info
+2015SU2,MSB-752,0,Financial Institut. & Markets,GC,S,02:00 PM,07:00 PM,25.0,2,3.0,O. Richards,GRAD,432.0,View Book Info
+2015SU2,MSB-760,30,Employee & Labor Relations,GC,S,08:30 AM,01:30 PM,25.0,12,3.0,A. Armorer,GRAD,442.0,View Book Info
+2015SU2,MSB-762,30,Compensation Analysis & Plan,GC,S,02:00 PM,07:00 PM,25.0,13,3.0,M. Wilson-Farmer,GRAD,436.0,View Book Info
+2015SU2,MSB-774,25,Leadership,GC,S,08:30 AM,01:30 PM,25.0,6,3.0,L. Burks,GRAD,434.0,View Book Info
+2015SU2,MSB-782,25,"Mergers, Acquisitions & Divest",GC,S,08:30 AM,01:30 PM,25.0,11,3.0,O. Richards,GRAD,432.0,View Book Info
+2015SU2,MSB-790,21,Strategic Management,RL,MTWRF,09:00 AM,12:00 PM,25.0,9,0.0,O. Richards, , ,View Book Info
+2015SU2,MSB-790,25,Strategic Management,GC,S,02:00 PM,07:00 PM,25.0,7,3.0,A. Wright,GRAD,434.0,View Book Info
+2015SU2,MSB-800,0,Int. Capstone Research Proj.,GC, , , ,3.0,1,3.0,O. Richards, , ,View Book Info

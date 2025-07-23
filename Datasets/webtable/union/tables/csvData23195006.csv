@@ -1,0 +1,12 @@
+Ticker,Company Name,Financial Strength,Profitability Rank,Market Cap (Mil),P/E (NRI),P/S Ratio,Oper. Margin (%),ROA (%),ROE (%),Debt-to-Rev.,Current Ratio
+FSLR,First Solar Inc,8/10,6/10,"$4,422",20.0,1.53,7.38,3.39,4.62,0.13,3.2
+SOPW,Solar Power Inc,8/10,2/10,"$1,128",0.0,7.24,-32.67,-14.01,-35.18,2.34,1.4
+SLTD,Solar3D Inc,7/10,4/10,$66,0.0,1.94,0.79,-236.66,"-2,445.13",0.05,2.85
+SPWR,SunPower Corp,7/10,3/10,"$3,630",29.7,1.53,4.82,3.80,11.21,0.71,1.95
+SCTY,SolarCity Corp,5/10,3/10,"$5,582",0.0,18.32,-150.60,-0.62,-3.94,5.03,1.05
+APSI,Aqua Power Systems Inc,5/10,2/10,$157,0.0,"72,785.59","-4,133.33",-188.41,0.00,160.50,0.74
+OPVS,NanoFlex Power Corp,4/10,3/10,$453,0.0,0.00,0.00,"-2,096.12",0.00,0.00,0.02
+VSLR,Vivint Solar Inc,4/10,1/10,"$1,615",0.0,40.66,-578.74,-3.38,-9.56,3.47,1.68
+QTMM,Quantum Materials Corp,3/10,3/10,$56,0.0,0.00,0.00,-876.30,0.00,"9,999.00",0.02
+SVLT,Sunvault Energy Inc,0/10,0/10,$66,0.0,6.68,-13.62,-22.76,0.00,0.21,0.65
+EENR,Elite Energies Inc,0/10,0/10,$40,0.0,0.00,0.00,0.00,0.00,0.00,0.0

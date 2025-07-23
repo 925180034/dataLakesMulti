@@ -1,0 +1,22 @@
+ID,Name,Type,Status,Assignee,Votes,Comments,Component,Milestone,Priority,Updated,Reported by
+ID,Name,Type,Status,Assignee,Votes,Comments,Component,Milestone,Priority,Updated,Reported by
+1642,Lost the six 5.4 Cooking recipes from your scan list,Defect,Fixed,Torhal,1,1,Backend Functionality,—,Medium,"Dec 13, 2014",shumanfoo
+1641,LUA error first time scan button is hit,Defect,Invalid,Torhal,0,3,—,—,Medium,"Oct 18, 2014",mushu999
+1640,Engineering Filter,Enhancement,Invalid,resa1983,0,0,Recipe Database,—,Medium,"Oct 18, 2014",resa1983
+1639,Feature: Zone macro,Enhancement,New,Torhal,0,0,—,—,Medium,"Sep 23, 2014",penaiel
+1638,I broke it...,Defect,Declined,pompachomp,0,1,Recipe Database,—,Medium,"Oct 26, 2014",jkimmelf
+1637,NPC Coordinates,Defect,Fixed,Torhal,0,1,—,—,Medium,"Nov 19, 2014",Rhynchelma
+1636,Alt links not working,Defect,Fixed,Torhal,0,5,—,—,Medium,"Dec 13, 2014",Rhynchelma
+1635,Install in mac folders in folders?,Other,Declined,Torhal,0,3,—,—,Medium,"Aug 29, 2014",kmdefenske
+1634,Technique: Glyph of Enduring Deceit - BOP not BOE,Defect,Fixed,resa1983,0,0,Recipe Database,—,Medium,"Sep 06, 2014",Mulaho
+1633,Recipe skill levels for skill ups are wrong,Defect,Fixed,resa1983,0,1,Backend Functionality,—,Medium,"Jun 07, 2015",Elkano
+1632,"Enchant Ring recipes (Agility, Intellect, Stamina, Strength)",Defect,Fixed,pompachomp,0,0,Recipe Database,—,Medium,"Aug 09, 2014",Pertin2
+1631,Does not load,Defect,Invalid,Ackis,0,4,—,—,Medium,"Jul 20, 2014",Moneric
+1630,"""Lashtail Raptor"" considered First Aid trainer?",Defect,Fixed,—,0,1,—,—,Medium,"Jul 13, 2014",Elkano
+1629,Ackis Recept list defect,Defect,Invalid,Ackis,0,0,—,—,Medium,"Jul 05, 2014",siebkopp
+1628,Higher level spellthreads have wrong skill level,Defect,Fixed,resa1983,0,0,Recipe Database,—,Medium,"Jul 10, 2014",SpareSimian
+1627,Says Addon is not enabled or installed,Other,Invalid,Ackis,0,2,—,—,Medium,"Jul 01, 2014",txbunny
+1626,"Ackis Recipe List 3.0+ ""module not loaded""",Defect,Invalid,Ackis,1,2,—,—,Medium,"Jul 10, 2014",Goldzy
+1625,Load on scan and not sooner,Enhancement,Fixed,Ackis,0,0,—,—,Medium,"Jul 10, 2014",rainrider
+1624,Cannot use for Inscription,Defect,Invalid,Torhal,0,1,Backend Functionality,—,Medium,"Jun 08, 2014",gizmogeek
+1623,Show info on item tooltips if alts still need the recipe,Enhancement,New,Torhal,2,2,—,—,Critical,"Jun 16, 2014",Stanzilla

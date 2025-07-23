@@ -1,0 +1,23 @@
+Name,Country,sex,tour,sl,tr,ju,yob,class,round,div,date,place,site id
+ , , , , , , , , , , , , , 
+PHILIPS John,GBR,M,10GBR07,34.5,0.0,0.0,1947.0,L,1.0,55+M,08/13/2010,9.0,GBRSOUTH
+ , , , , , , , , , , , , , 
+PHILIPS John,GBR,M,10GBR07,38.5,0.0,0.0,1947.0,L,2.0,55+M,08/13/2010,9.0,GBRSOUTH
+ , , , , , , , , , , , , , 
+PHILIPS John,GBR,M,10GBR08,0.0,960.0,0.0,1947.0,L,1.0,55+M,08/15/2010,2.0,GBRSOUTH
+ , , , , , , , , , , , , , 
+PHILIPS John,GBR,M,10GBR08,0.0,960.0,0.0,1948.0,L,1.0,55+M,08/15/2010,2.0,GBRSOUTH
+ , , , , , , , , , , , , , 
+PHILIPS John,GBR,M,10GBR08,33.0,0.0,0.0,1947.0,L,1.0,55+M,08/15/2010,10.0,GBRSOUTH
+ , , , , , , , , , , , , , 
+PHILIPS John,GBR,M,10GBR08,33.0,0.0,0.0,1948.0,L,1.0,55+M,08/15/2010,10.0,GBRSOUTH
+ , , , , , , , , , , , , , 
+PHILIPS John,GBR,M,10GBR08,0.0,1270.0,0.0,1948.0,L,2.0,55+M,08/15/2010,2.0,GBRSOUTH
+ , , , , , , , , , , , , , 
+PHILIPS John,GBR,M,10GBR08,0.0,1270.0,0.0,1947.0,L,2.0,55+M,08/15/2010,2.0,GBRSOUTH
+PHILIPS John,GBR,M,10GBR08,0.0,0.0,0.0,1947.0,L,3.0,55+M,08/15/2010,10.0,GBRSOUTH
+PHILIPS John,GBR,M,10GBR08,0.0,0.0,0.0,1948.0,L,3.0,55+M,08/15/2010,10.0,GBRSOUTH
+ , , , , , , , , , , , , , 
+PHILIPS John,GBR,M,10GBR13,40.5,0.0,0.0,1947.0,R,1.0,AllD2,09/01/2010,15.0,GBRTHREE
+ , , , , , , , , , , , , , 
+PHILIPS John,GBR,M,10GBR13,38.0,0.0,0.0,1947.0,R,2.0,AllD2,09/01/2010,15.0,GBRTHREE

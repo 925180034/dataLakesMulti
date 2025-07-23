@@ -1,0 +1,24 @@
+Vendor,Model,CPU,Chipset NB,Chipset SB,Super I/O,EC,Flash Chip,Flash Size,Flash S.,Flash T.,Owner
+ASUS,S96F/Z96F,Intel Core™2 Duo T7400,Intel i945,Intel ICH7,ITE IT8510E,in Super I/O,?,?,?,?,macavity
+Acer,Aspire One ZG5,Intel Atom N270 1.6GHz,Intel 82945GME,Intel NH82801GBM ICH7-M,Winbond WPCE775LA0DG,in Super I/O,Winbond 25x80AVSIG,8Mb,no,SOIP/DIP,XVilka
+Acer,Aspire 3613LC,Intel Celeron M 370 1.5GHz L2: 1MB,Intel 82910GML,Intel FW82801FBM SL7W6 ICH6-M,?,?,PMC 0537 PM39LV040-70JCE,1Mb,no,SOIP/DIP,XVilka
+Dell,Latitude CPi A366XT,"PII, 360 MHz",Intel 440BX, ,SMSC FDC37N958FR,in Super I/O,AMD AM29F040B,512KB,yes,PLCC,UH
+Dell,Latitude C610,"PIII, 1.2 GHz",Intel i830, ,SMSC LPC47N252,in Super I/O,SST SST49LF004A,512KB,no,PLCC,CybFr
+Dell,Dell Vostro V13,"Intel Celeron 743 1.2GHz, L2: 1MB (Ultra Low Voltage)",Mobile Intel GS45 Express GHMC,Intel 82801IEM ICH9M-E,none,ITE IT8502E,Winbond 25Q16BVSIG,2Mb,no,SOIP/PDIP,XVilka
+Fujitsu-S.,Lifebook S-4572,"PIII, 750 MHz",Intel 82440MX, ,SMSC FDC37N769,?,Fujitsu MBM29F400T1,?,no,TSOP(?),UH
+Fujitsu-S.,Lifebook S7110,Intel Core™2 Duo T7200,Intel i945,Intel ICH7,SMSC LPC47N217,Fujitsu MB90378,Spansion S25FL008A2,1024 kB,no,SO8 / SPI,twice11
+Gericom,Webboy 340S2,PIII,SiS630, ,NSC PC87393VJG,NSC PC87570,Winbond 29C020,256 kB,yes,PLCC,NS
+Gateway,W730-K8X,Socket 754, ,??,??,??,SST 39VF040,??,yes,PLCC,Juri
+Gateway,6020GZ,Celeron M 1.4Ghz,Intel 855GME, ,??,??,??,??,no,??,Juri
+Highscreen,XD 14-C1700,Intel Celeron 1.7 GHz,SiS650, ,NSC PC87391(?),?,EON EN29F040(A),512 kB,yes,PLCC,UH
+HP,Omnibook XE3(L),"PIII, 750 MHz",Intel 82371MB,Intel PIIX4M,SMSC FDC37N869,NSC PC87570,SST 28SF040A,512 kB,no,PLCC,UH
+IBM,Thinkpad T30,"Intel P4 Mobile, 1.8 GHz",Intel i845,Intel ICH3-M,NSC PC87392,Renesas H8S 64F3169ATE10,ST M50FW080N5,1024 kB,no,TSOP40 / FWH,edgecase
+MSI,Wind U100,Intel Atom N280 1.66Ghz,Intel 945GSE,Intel ICH7-M,?,ENE KB3310,SST MX25L8005,8 Mb,no,TSOP40 / SPI,?
+One,A110,VIA C7-M ULV 1.0 GHz,VIA VX800, ,none,ENE KB3310,?,?,no,?,UH
+Panasonic,Toughbook CF-25,P166MMX,FW82439TX (430TX),FW82371AB,NSC PC87336VJG,Renesas 3886,SST SST29EE020,256 kB,no,?,Miernik
+Roda,Rocky III+ RK886EX,Intel® Core 2 Duo Mobile T5500,Intel 945,Intel ICH7,SMSC® LPC47N227,Renesas M38859,?,?,?,?,?
+Roda,Rocky II+ RT686,Intel Pentium III,Intel 430BX,Intel FW82371EB,SMSC® FDC37N769,Renesas M38867M8A,SST SST29LE020,256KB,yes,PLCC/parallel,UH
+Sony,Vaio Picturebook PCG-C1XD,P2 400,443ZX, ,?,?,ST M29W004BT,512 kB,no, ,Miernik
+Sony,Vaio Picturebook PCG-C1X,P266MMX,430TX, ,?,?,?,?,?,?,Miernik
+Toshiba,Libretto 50M PA1243CM,P133,custom FPGA, ,?,?,?,?,?,?,Miernik
+Toshiba,Satellite A80-117,Intel Celeron,Intel 915GM,Intel ICH6,SMSC LPC47N217,ENE KB910,?,1024 kB,no,TSOP (?),UH

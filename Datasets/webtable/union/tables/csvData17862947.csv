@@ -1,0 +1,24 @@
+SEASON,TEAM,LEAGUE,GP,W,T,L,OTW,OTL,GF,GA,TP,RANK,POSTSEASON
+2001 - 2002,Karlskrona HK,Division 3,24,13,4,7,-,-,137,96,30,5,-
+2002 - 2003,Karlskrona HK,Division 3,24,15,1,8,-,-,112,76,31,5,-
+2003 - 2004,Karlskrona HK,Division 3,20,8,3,9,-,-,111,97,19,4,-
+2004 - 2005,Karlskrona HK,Division 3,24,22,0,2,-,-,159,61,44,1,-
+2005 - 2006,Karlskrona HK,Division 3,26,20,3,3,-,-,176,55,43,2,Promoted
+2006 - 2007,Karlskrona HK,Division 2,26,21,4,1,-,-,159,67,46,1,-
+2007 - 2008,Karlskrona HK,Division 2,24,17,4,3,-,-,132,59,38,1,Promoted
+ ,Karlskrona HK,Kval Div.1,8,8,-,0,0,0,55,10,24,1,Promoted
+2008 - 2009,Karlskrona HK,Division 1,27,11,-,9,3,4,91,73,43,6,-
+ ,Karlskrona HK,Division 1,10,5,-,3,1,1,39,25,24,1,Kval upp
+2009 - 2010,Karlskrona HK,Division 1,27,13,-,8,2,4,103,91,47,5,-
+ ,Karlskrona HK,Division 1,10,8,-,2,-,-,42,19,32,1,Kval upp
+2010 - 2011,Karlskrona HK,Division 1,27,17,-,7,0,3,98,61,54,3,-
+ ,Karlskrona HK,Division 1,14,5,-,4,3,2,40,36,23,4,Kvalserien AS
+ ,Karlskrona HK,Kvalserien AS,10,5,-,3,1,1,24,18,18,3,-
+2011 - 2012,Karlskrona HK,Division 1,27,15,-,6,3,3,104,54,54,4,-
+ ,Karlskrona HK,Division 1,14,8,-,3,2,1,47,35,29,2,Promoted
+ ,Karlskrona HK,Kvalserien AS,10,8,-,2,0,0,39,23,24,1,Promoted
+2012 - 2013,Karlskrona HK,Allsvenskan,52,11,-,38,1,2,107,186,37,14,Saved in relegation
+ ,Karlskrona HK,Kvalserien AS,10,5,-,3,1,1,31,27,18,2,Saved in relegation
+2013 - 2014,Karlskrona HK,Allsvenskan,52,25,-,20,3,4,154,119,85,5,Kval upp
+2014 - 2015,Karlskrona HK,Allsvenskan,52,26,-,16,8,2,159,124,96,2,Promoted
+2015 - 2016,Karlskrona HK,SHL,-,-,-,-,-,-,-,-,-,-,-

@@ -1,0 +1,17 @@
+Vendor,Mainboard,Northbridge,Southbridge,Super I/O,CPU,Socket,Status,ROM 1,P 2,S 3,F 4,VCS5,v3 only 7
+Advanced Digital Logic,MSM800SEV,AMD Geode™ LX,AMD Geode™ CS5536,—,AMD Geode™ LX,—,WIP,?,?,?,?,—,N
+AMD,DB800,AMD Geode™ LX,AMD CS5536,?,AMD Geode™ LX,—,OK,?,?,?,?,—,N
+AMD,dbM690T (Herring),AMD K8,AMD RS690/SB600,ITE IT8712F,AMD Turion™ / X2 Sempron™,Socket S1G1,WIP,?,?,?,?,—,N
+AMD,Norwich,AMD Geode™ LX,AMD CS5536,—,AMD Geode™ LX,—,OK,?,?,?,?,—,N
+AMD,Serengeti Cheetah,AMD K8,"AMD-8111™, 8151™, 8132™",Winbond™ W83627HF,AMD Opteron™,Socket F,WIP,?,?,?,?,—,N
+AMP,TinyGX,AMD Geode™ LX,AMD CS5536,ITE IT8716F,AMD Geode™ LX,—,WIP,?,?,?,?,—,Y
+Artec Group,DBE61,AMD Geode™ LX,AMD CS5536,—,AMD Geode™ LX,—,WIP,TSOP32,LPC,N,Y,—,N
+Artec Group,DBE62,AMD Geode™ LX,AMD CS5536,—,AMD Geode™ LX,—,OK...,TSOP32,FWH,N,Y,4,Y
+Emulation,QEMU x86,Intel® 440BX,Intel® 82371EB (PIIX4E),—,Intel® Pentium® II/III (?),—,OK,—,?,—,—,—,N
+GIGABYTE,GA-M57SLI-S4,AMD K8,NVIDIA MCP55,ITE IT8716F,AMD Sempron™ / Athlon™ 64 / FX / X2,Socket AM2,WIP,...6,?,N,Y,3,N
+Jetway,J7F2,VIA CN700,VIA VT8237R(P),Fintek F71805F,VIA C7™,NanoBGA2,WIP,?,?,?,?,—,Y
+Kontron,986LCD-M/mITX,Intel® 945,Intel® ICH7,2x Winbond® W83627THG,"Intel® Core™ 2 Duo Mobile, Core™ Duo/Solo, Celeron® M",mPGA478,WIP,PLCC,?,?,?,—,N
+PC Engines,ALIX.1C,AMD Geode™ LX,AMD Geode™ CS5536,Winbond® W83627HF,AMD Geode™ LX,—,OK...,?,?,?,?,4,N
+PC Engines,ALIX.2C3,AMD Geode™ LX,AMD Geode™ CS5536,—,AMD Geode™ LX,—,OK...,?,?,?,?,—,Y
+PC Engines,ALIX.2C2,AMD Geode™ LX,AMD Geode™ CS5536,—,AMD Geode™ LX,—,OK...,?,?,?,?,—,Y
+VIA,EPIA-CN,VIA CN700,VIA VT8237R,VIA VT1211,"VIA C7™, VIA Esther C5J™",NanoBGA2,WIP,?,?,?,?,—,N

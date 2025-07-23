@@ -1,0 +1,10 @@
+Name,Country,sex,tour,sl,tr,ju,yob,class,round,div,date,place,site id,line/ramp,speed
+ , , , , , , , , , , , , , , , 
+MUZIC Feruccio,CRO,M,12ITA008,45.0,0.0,0.0,1992.0,R,1.0,OpeM,08/26/2012,8.0,ITA00011,3.00@13.000,58.0
+ , , , , , , , , , , , , , , , 
+MUZIC Feruccio,CRO,M,12ITA008,46.0,0.0,0.0,1992.0,R,2.0,OpeM,08/26/2012,8.0,ITA00011,4.00@13.000,58.0
+MUZIC Feruccio,CRO,M,12ITA008,0.0,0.0,0.0,1992.0,R,3.0,OpeM,08/26/2012,8.0,ITA00011,1.00@18.250,43.0
+ , , , , , , , , , , , , , , , 
+MUZIC Feruccio,CRO,M,12EAC003,44.0,0.0,0.0,1992.0,R,1.0,OpeM,08/19/2012,42.0,ITAFISN1,2.00@13.000,58.0
+ , , , , , , , , , , , , , , , 
+MUZIC Feruccio,CRO,M,12ITA014,45.5,0.0,0.0,1992.0,L,3.0,OpeM,06/24/2012,8.0,ITAFISN1,3.50@13.000,58.0

@@ -1,0 +1,34 @@
+Name,Country,sex,tour,sl,tr,ju,yob,class,round,div,date,site id
+ , , , , , , , , , , , , 
+SCHREIBER Tadd,USA,M,07S130R,0.0,0.0,48.8,78.0,L,1.0,M2,06/17/2007,USAS0344
+ , , , , , , , , , , , , 
+SCHREIBER Tadd,USA,M,07S130R,0.0,0.0,47.3,78.0,L,2.0,M2,06/17/2007,USAS0344
+ , , , , , , , , , , , , 
+SCHREIBER Tadd,USA,M,07S120R,0.0,0.0,50.6,78.0,R,1.0,M2,07/01/2007,USAS0360
+ , , , , , , , , , , , , 
+SCHREIBER Tadd,USA,M,07S120R,0.0,0.0,49.1,78.0,R,2.0,M2,07/01/2007,USAS0360
+ , , , , , , , , , , , , 
+SCHREIBER Tadd,USA,M,07S120R,50.5,0.0,0.0,78.0,R,3.0,M2,07/01/2007,USAS0360
+ , , , , , , , , , , , , 
+SCHREIBER Tadd,USA,M,07S097B,0.0,0.0,50.1,78.0,L,1.0,M2,07/29/2007,USAS0330
+ , , , , , , , , , , , , 
+SCHREIBER Tadd,USA,M,07S097B,0.0,5860.0,0.0,78.0,L,1.0,M2,07/29/2007,USAS0330
+ , , , , , , , , , , , , 
+SCHREIBER Tadd,USA,M,07S097B,53.0,0.0,0.0,78.0,L,1.0,M2,07/29/2007,USAS0330
+SCHREIBER Tadd,USA,M,07S097B,53.0,5860.0,50.1,78.0,L,1.0,M2,07/29/2007,USAS0330
+ , , , , , , , , , , , , 
+SCHREIBER Tadd,USA,M,07W999A,0.0,0.0,47.8,78.0,L,1.0,M2,08/18/2007,USAW0398
+ , , , , , , , , , , , , 
+SCHREIBER Tadd,USA,M,07W999A,51.0,0.0,0.0,78.0,L,1.0,M2,08/18/2007,USAW0398
+ , , , , , , , , , , , , 
+SCHREIBER Tadd,USA,M,08S035R,48.5,0.0,0.0,78.0,L,1.0,M2,10/07/2007,USAS0360
+ , , , , , , , , , , , , 
+SCHREIBER Tadd,USA,M,08S035R,57.0,0.0,0.0,78.0,L,3.0,M2,10/07/2007,USAS0360
+ , , , , , , , , , , , , 
+SCHREIBER Tadd,USA,M,08S059R,55.0,0.0,0.0,78.0,R,1.0,M2,10/18/2007,USAS0360
+ , , , , , , , , , , , , 
+SCHREIBER Tadd,USA,M,08S059R,55.0,0.0,0.0,78.0,R,3.0,M2,10/18/2007,USAS0360
+ , , , , , , , , , , , , 
+SCHREIBER Tadd,USA,M,08S060R,44.5,0.0,0.0,78.0,R,1.0,M2,10/19/2007,USAS0360
+ , , , , , , , , , , , , 
+SCHREIBER Tadd,USA,M,08S060R,57.0,0.0,0.0,78.0,R,2.0,M2,10/19/2007,USAS0360

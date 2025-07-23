@@ -1,0 +1,10 @@
+Pos,Team,OPS,P-OPS+,BA,OBP,P-OBP+,SLG,P-SLG+,R,HR,RBI,BB,SO,Players
+C,Seattle,0.566,64,0.216,0.253,81,0.313,82,54,10,46,24,123,"M Olivo, P Borders, Y Torrealba, R Rivera, M Ojeda, D Wilson"
+1B,LA Angels,0.703,79,0.271,0.324,95,0.379,84,92,11,79,52,113,"D Erstad, C Kotchmann"
+2B,Kansas City,0.627,73,0.235,0.293,90,0.334,83,66,9,55,44,100,"R Gotay, T Graffanino, A Blanco, D Murphy, D Hocking, J McEwing"
+3B,Cleveland,0.63,70,0.229,0.286,88,0.344,83,63,15,64,40,116,"A Boone, J Hernandez"
+SS,Minnesota,0.608,66,0.235,0.283,86,0.325,80,61,7,47,36,96,"J Bartlett, J Castro, N Punto"
+LF,Baltimore,0.671,75,0.239,0.289,86,0.381,89,73,17,60,42,114,"L Bigbie, E Byrnes, B Surhoff, D Newhan, E Marrero"
+CF,NY Yankees,0.629,73,0.243,0.297,92,0.333,81,68,7,60,50,99,"B Williams, H Matsui, T Womack, B Crosby"
+RF,Toronto,0.704,77,0.261,0.308,92,0.397,85,91,12,76,35,133,"A Rios, R Johnson, G Gross"
+DH,Baltimore,0.639,65,0.21,0.277,82,0.362,83,62,18,70,54,100,"J Gibbons, S Sosa, J Lopez, R Pameiro, B Castro, B Surhoff, A Friere, C Gomez"

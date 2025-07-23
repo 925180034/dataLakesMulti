@@ -1,0 +1,14 @@
+Rk,G#,Date,Tm,Opp,Result,Quarter,Type,Dist,Quarterback,Score Before,Score After
+1,1,2005-09-11,CAR,NOR,L 20-23,1,Receiving,33,Jake Delhomme,Trail 0-7,Tied 7-7
+2,3,2005-09-25,CAR,MIA,L 24-27,2,Receiving,1,Jake Delhomme,Trail 3-14,Trail 10-14
+3,3,2005-09-25,CAR,MIA,L 24-27,2,Receiving,3,Jake Delhomme,Trail 10-21,Trail 17-21
+4,3,2005-09-25,CAR,MIA,L 24-27,4,Receiving,53,Jake Delhomme,Trail 17-24,Tied 24-24
+5,5,2005-10-09,CAR,ARI,W 24-20,2,Receiving,65,Jake Delhomme,Trail 3-7,Lead 10-7*
+6,5,2005-10-09,CAR,ARI,W 24-20,4,Receiving,4,Jake Delhomme,Trail 17-20,Lead 24-20*
+7,6,2005-10-16,CAR,DET,W 21-20,2,Receiving,80,Jake Delhomme,Tied 7-7,Lead 14-7*
+8,7,2005-10-30,CAR,MIN,W 38-13,2,Receiving,13,Jake Delhomme,Lead 17-0,Lead 24-0
+9,8,2005-11-06,CAR,TAM,W 34-14,4,Receiving,35,Jake Delhomme,Lead 27-7,Lead 34-7
+10,12,2005-12-04,CAR,ATL,W 24-6,2,Receiving,18,Jake Delhomme,Lead 7-6,Lead 14-6
+11,14,2005-12-18,CAR,NOR,W 27-10,1,Rushing,20, ,Tied 0-0,Lead 7-0*
+12,14,2005-12-18,CAR,NOR,W 27-10,3,Receiving,15,Jake Delhomme,Lead 17-7,Lead 24-7
+13,16,2006-01-01,CAR,ATL,W 44-11,2,Receiving,42,Jake Delhomme,Lead 17-3,Lead 24-3

@@ -1,0 +1,9 @@
+Bidder,Type of Transaction,Deposit Premium/(Discount) %,Asset Premium/(Discount) $(000 ) / %,SF Loss Share Tranche 1,SF Loss Share Tranche 2,SF Loss Share Tranche 3,Commercial Loss Share Tranche 1,Commercial Loss Share Tranche 2,Commercial Loss Share Tranche 3,Value Appreciation Instrument,Conforming Bid,Linked
+"Winning bid and bidder: CertusBank, N.A., Easley, SC",All deposit whole bank with loss share,0.00%,"$(66,300)",78%,0%,78%,78%,0%,78%,No,Yes,Yes
+"Cover: Hamilton State Bank, Hoschton, GA",All deposit whole bank with loss share,0.50%,"$(90,000)",65%,0%,80%,65%,0%,80%,No,Yes,No
+Other Bid,Modified All deposit whole bank with loss share,0.50%,"$(41,900)",80%,80%, ,80%,80%, ,No,Yes,No
+Other Bid,Modified All deposit whole bank with loss share,0.00%,"$(50,900)",80%,80%, ,80%,80%, ,No,Yes,Yes
+Other Bid,All deposit whole bank with loss share,0.00%,"$(66,300)",79%,0%,79%,79%,0%,79%,No,Yes,No
+Other Bid,All deposit whole bank with loss share,0.50%,"$(71,200)",80%,0%,80%,80%,0%,80%,No,Yes,No
+Other Bid,All deposit whole bank with loss share,1.00%,"$(75,100)",80%,0%,80%,80%,0%,80%,No,Yes,No
+Other Bid,All deposit whole bank with loss share,1.00%,"$(93,700)",65%,0%,80%,65%,0%,80%,No,Yes,No

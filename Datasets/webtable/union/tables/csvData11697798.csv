@@ -1,0 +1,191 @@
+View,Site_Name,Station,Ntwk,Elev,Lat,Lon,installed,state,County,Hydrologic_Unit,SHEF
+Current Historic,Agua Canyon,12M26S,SNTL,8900,37.52,-112.27,1994,UT,Kane,East Fork Sevier River Headwaters 160300020301,AGUU1
+Current Historic,Alta Central,11J61,SNOW,8800,40.59,-111.64,1984,UT,Salt Lake,Headwaters Little Cottonwood Canyon 160202040202,ATCU1
+Current Historic,Bear River RS,10J17S,SNTL,8777,40.89,-110.83,2011,UT,Summit,Willow Creek-Bear River 160101010103,STLU1
+Current Historic,Beaver Dams,11K13S,SNTL,7990,39.14,-111.56,1980,UT,Sanpete,Headwaters Twelvemile Creek 160300040402,BVDU1
+Current Historic,Beaver Divide,11J46S,SNTL,8280,40.61,-111.1,1979,UT,Wasatch,Shingle Creek-Provo River 160202030105,NWZU1
+Current Historic,Ben Lomond Peak,11H08S,SNTL,8000,41.38,-111.94,1979,UT,Weber,Cutler Creek-North Fork Ogden River 160201020302,BLPU1
+Current Historic,Ben Lomond Trail,11H30S,SNTL,5829,41.38,-111.92,1980,UT,Weber,Cutler Creek-North Fork Ogden River 160201020302,BLTU1
+Current Historic,Bevan's Cabin,12J02,SNOW,6430,40.46,-112.25,1954,UT,Tooele,Settlement Canyon 160203040401,BENU1
+Current Historic,Bevans Cabin,12J02S,SNTL,6430,40.46,-112.25,2012,UT,Tooele,Settlement Canyon 160203040401,BENU1
+Current Historic,Big Flat,12L07S,SNTL,10349,38.3,-112.36,1979,UT,Piute,Three Creeks 160300070202,BGFU1
+Current Historic,Birch Crossing,12M16,SNOW,8045,37.74,-112.84,1965,UT,Iron,Dry Lakes Creek 160300060201,BIRU1
+Current Historic,Black Flat-U.M. Ck,11L04S,SNTL,9462,38.68,-111.6,1980,UT,Sevier,U M Creek 140700030101,BFTU1
+Current Historic,Black's Fork Junction,10J22,SNOW,8870,40.96,-110.58,1961,UT,Summit,Meeks Cabin Reservoir-Blacks Forks 140401070103,BLJU1
+Current Historic,Blacks Fork Jct,10J22S,SNTL,8870,40.96,-110.58,2011,UT,Summit,Meeks Cabin Reservoir-Blacks Forks 140401070103,BLJU1
+Current Historic,Box Creek,12L04S,SNTL,9828,38.51,-112.02,1979,UT,Sevier,Greenwich Creek 160300020106,BXCU1
+Current Historic,Brian Head,12M14,SNOW,9972,37.68,-112.86,1965,UT,Iron,Dry Lakes Creek 160300060201,BRHU1
+Current Historic,Brian Head,12M14S,SNTL,9972,37.68,-112.86,2011,UT,Iron,Dry Lakes Creek 160300060201,BRHU1
+Current Historic,Brighton,11J57S,SNTL,8750,40.6,-111.58,1986,UT,Salt Lake,Headwaters Big Cottonwood Canyon 160202040201,BRIU1
+Current Historic,Brighton Cabin,11J58,SNOW,8700,40.6,-111.58,1961,UT,Salt Lake,Headwaters Big Cottonwood Canyon 160202040201,UT215
+Current Historic,Brown Duck,10J30S,SNTL,10600,40.58,-110.59,1979,UT,Duchesne,Brown Duck Creek-Lake Fork River 140600030604,BNDU1
+Current Historic,Bryce Canyon,12M08,SNOW,8000,37.63,-112.17,1935,UT,Garfield,Bryce Creek 140700070102,BRCU1
+Current Historic,Buck Flat,11K31S,SNTL,9430,39.13,-111.44,1979,UT,Sanpete,Ferron Reservoir-Ferron Creek 140600090302,BUFU1
+Current Historic,Buck Pasture,10J23S,SNTL,9700,40.84,-110.66,2012,UT,Summit,West Fork Blacks Fork 140401070101,BCZU1
+Current Historic,Buckboard Flat,09M01,SNOW,8998,37.87,-109.45,1930,UT,San Juan,North Creek-Montezuma Creek 140802030103,BUCU1
+Current Historic,Buckboard Flat,09M01S,SNTL,8998,37.87,-109.45,2012,UT,San Juan,North Creek-Montezuma Creek 140802030103,BUCU1
+Current Historic,Bug Lake,11H37S,SNTL,7950,41.68,-111.42,1979,UT,Rich,Laketown Canyon 160102010102,BULU1
+Current Historic,Burts Miller Ranch,10J06S,SNTL,8000,40.98,-110.85,2009,UT,Summit,Cottonwood Creek-Mill Creek 160101010106,MRHU1
+Current Historic,Burts-Miller Ranch,10J06,SNOW,7998,40.98,-110.85,1937,UT,Summit,Willow Creek-Bear River 160101010103,BRMU1
+Current Historic,Camp Jackson,09M02S,SNTL,8968,37.81,-109.49,1986,UT,San Juan,Johnson Creek 140802010301,CJSU1
+Current Historic,Cascade Mountain,11J70S,SNTL,7774,40.28,-111.61,2003,UT,Utah,Rock Canyon-Provo RIver 160202030505,CAMU1
+Current Historic,Castle Valley,12M13S,SNTL,9580,37.66,-112.74,1980,UT,Iron,Upper Mammoth Creek 160300010201,CVYU1
+Current Historic,Cecret Lake,11J67,SNOW,9750,40.57,-111.62,1992,UT,Salt Lake,Headwaters Little Cottonwood Canyon 160202040202, 
+Current Historic,Chalk Creek #1,11J01S,SNTL,8993,40.85,-111.05,1979,UT,Summit,East Fork Chalk Creek 160201010301,CHCU1
+Current Historic,Chalk Creek #2,11J02S,SNTL,8158,40.89,-111.07,1979,UT,Summit,East Fork Chalk Creek 160201010301,CCKU1
+Current Historic,Chalk Creek #3,11J03,SNOW,7364,40.92,-111.09,1952,UT,Summit,Middle Chalk Creek 160201010304,CHTU1
+Current Historic,Chepeta,10J43S,SNTL,10592,40.77,-110.01,1980,UT,Duchesne,East Fork Whiterocks River 140600031202,CWHU1
+Current Historic,City Creek,11J62,SNOW,7500,40.83,-111.73,1984,UT,Salt Lake,City Creek 160202040304,CCLU1
+Current Historic,Clayton Springs,11M06S,SNTL,10049,37.97,-111.83,2000,UT,Garfield,Coyote Hollow-Antimony Creek 160300020501,CSPU1
+Current Historic,Clear Creek #1,11K21S,SNTL,8908,39.87,-111.28,1979,UT,Utah,Upper Soldier Creek 160202020102,CLCU1
+Current Historic,Clear Creek #2,11K22S,SNTL,7659,39.89,-111.25,1979,UT,Utah,Upper Soldier Creek 160202020102,CRKU1
+Current Historic,Corral,10K05,SNOW,8159,39.66,-110.38,1955,UT,Carbon,Grassy Trail Reservoir-Grassy Trail Creek 140600070903,CAOU1
+Current Historic,Corral,10k05s,SNTL,8159,39.66,-110.38,2013,UT,Carbon,Grassy Trail Reservoir-Grassy Trail Creek 140600070903,CAOU1
+Current Historic,Currant Creek,11J32S,SNTL,8000,40.36,-111.09,1979,UT,Wasatch,Current Creek Reservoir 140600040401,CUCU1
+Current Historic,Daniels-Strawberry,11J23S,SNTL,8037,40.3,-111.26,1979,UT,Wasatch,Willow Creek-Strawberry River 140600040101,DSTU1
+Current Historic,Dill's Camp,11K15S,SNTL,9182,39.05,-111.47,1979,UT,Sanpete,Beaver Creek 140700020201,DCPU1
+Current Historic,Donkey Reservoir,11L05S,SNTL,9800,38.21,-111.48,1986,UT,Sevier,Donkey Creek-Fremont River 140700030305,DRSU1
+Current Historic,Dry Bread Pond,11H55S,SNTL,8350,41.41,-111.54,1979,UT,Weber,Headwaters East Fork Little Bear River Canyon 160102030101,DBPU1
+Current Historic,Dry Fork,12J09S,SNTL,7093,40.57,-112.17,1995,UT,Salt Lake,Bingham Creek 160202040106,DRFU1
+Current Historic,East Fork-Black's Fork G.S.,10J21,SNOW,9308,40.88,-110.54,1961,UT,Summit,East Fork Blacks Fork 140401070102,EFBU1
+Current Historic,East Willow Creek,09K01S,SNTL,8301,39.31,-109.53,1986,UT,Grand,Tenmmile Canyon 140600060205,EWCU1
+Current Historic,EF Blacks Fork GS,10J21S,SNTL,9360,40.88,-110.54,2011,UT,Summit,East Fork Blacks Fork 140401070102,EFBU1
+Current Historic,Farmington,11J11S,SNTL,8000,40.99,-111.82,1979,UT,Davis,Farmington Creek-Frontal Farmington Bay 160201020502,FMNU1
+Current Historic,Farmington Canyon-Lower,11J12,SNOW,6950,40.99,-111.82,1951,UT,Davis,Farmington Creek-Frontal Farmington Bay 160201020502,FNMU1
+Current Historic,Farmington Lower,11J12S,SNTL,6779,40.97,-111.81,2004,UT,Davis,Farmington Creek-Frontal Farmington Bay 160201020502,FARU1
+Current Historic,Farnsworth Lake,11L01S,SNTL,9682,38.77,-111.68,1980,UT,Sevier,Gooseberry Creek 160300030405,FRLU1
+Current Historic,Fish Lake,11L03,SNOW,8818,38.51,-111.77,1931,UT,Sevier,Deadman Hollow 140700030108,FLSU1
+Current Historic,Fish Lake Utah,11L03S,SNTL,8798,38.5,-111.77,2010,UT,Sevier,Deadman Hollow 140700030108,FLSU1
+Current Historic,Five Points Lake,10J26S,SNTL,10940,40.72,-110.47,1980,UT,Duchesne,Garfield Creek 140600030701,FPLU1
+Current Historic,Frances Flats,11J63,SNOW,6700,40.83,-111.77,1938,UT,Salt Lake,City Creek 160202040304,FRFU1
+Current Historic,G.B.R.C. Headquarters,11K11,SNOW,8541,39.32,-111.49,1953,UT,Sanpete,Ephraim Creek 160300040307,GBZU1
+Current Historic,G.B.R.C. Meadows,11K10,SNOW,9780,39.3,-111.45,1930,UT,Sanpete,Ephraim Creek 160300040307,GBMU1
+Current Historic,Garden City Summit,11H07,SNOW,7600,41.92,-111.47,1931,UT,Rich,Hodges Canyon-Frontal Bear River 160102010105,GNCU1
+Current Historic,Garden City Summit,11H07S,SNTL,7705,41.92,-111.47,2009,UT,Cache,Garden City Canyon-Frontal Bear River 160102010106,GDSU1
+Current Historic,Gardner Peak,13M07S,SNTL,8322,37.4,-113.46,2004,UT,Washington,Grass Valley Creek 150100080701,GAPU1
+Current Historic,GBRC HQ,11K11S,SNTL,8541,39.32,-111.49,2012,UT,Sanpete,Ephraim Creek 160300040307,GBZU1
+Current Historic,GBRC Meadows,11K10S,SNTL,9780,39.3,-111.45,2012,UT,Sanpete,Ephraim Creek 160300040307,GBMU1
+Current Historic,George Creek,13H05,SNOW,8994,41.92,-113.41,1981,UT,Box Elder,George Creek 170402100401,GECU1
+Current Historic,George Creek,13H05S,SNTL,9005,41.92,-113.41,2010,UT,Box Elder,George Creek 170402100401,GECU1
+Current Historic,Gooseberry RS,11L02,SNOW,8374,38.79,-111.69,1930,UT,Sevier,Gooseberry Creek 160300030405,UT238
+Current Historic,Gooseberry RS,11L12S,SNTL,7950,38.8,-111.68,1979,UT,Sevier,Gooseberry Creek 160300030405,GOOU1
+Current Historic,Gooseberry RS Up,11L02S,SNTL,8400,38.79,-111.69,2011,UT,Sevier,Gooseberry Creek 160300030405,UT238
+Current Historic,Gutz Peak,13M06S,SNTL,6763,37.5,-113.94,2004,UT,Washington,Pine Park Canyon 150100100101,GTZU1
+Current Historic,Hardscrabble,11J37S,SNTL,7250,40.87,-111.72,1994,UT,Morgan,Hardscrabble Creek 160201020105,HARU1
+Current Historic,Harris Flat,12M05S,SNTL,7800,37.49,-112.58,1979,UT,Kane,Swains Creek 160300010104,HRSU1
+Current Historic,Hayden Fork,10J44S,SNTL,9212,40.8,-110.88,1979,UT,Summit,Hayden Fork 160101010101,HFKU1
+Current Historic,Henry's Fork,10J24,SNOW,10000,40.86,-110.38,1963,UT,Summit,Dahlgreen Creek-Henrys Fork 140401060301,HENU1
+Current Historic,Hewinta,10J04S,SNTL,9519,40.95,-110.48,1985,UT,Summit,West Fork Smiths Fork 140401070203,HEWU1
+Current Historic,Hickerson Park,09J08S,SNTL,9145,40.91,-109.96,1985,UT,Daggett,Upper Sheep Creek 140401060601,HPSU1
+Current Historic,Hidden Springs,11J59,SNOW,5500,40.82,-111.81,1982,UT,Salt Lake,City Creek 160202040304,HNSU1
+Current Historic,Hobble Creek,11J22S,SNTL,7399,40.19,-111.36,2012,UT,Wasatch,Upper Diamond Fork 160202020304,HOBU1
+Current Historic,Hobble Creek Summit,11J22,SNOW,7399,40.19,-111.36,1936,UT,Wasatch,Headwaters Right Fork Hobble Creek 160202020402,HOBU1
+Current Historic,Hole-in-Rock,10J01S,SNTL,9150,40.92,-110.19,1985,UT,Summit,Beaver Creek-Henrys Fork 140401060304,HIRU1
+Current Historic,Horse Ridge,11H21S,SNTL,8160,41.31,-111.45,1979,UT,Morgan,Blue Fork Creek 160201010601,HRGU1
+Current Historic,Huntington Horse,11K05S,SNTL,9657,39.61,-111.3,2012,UT,Sanpete,Left Fork Huntington Creek 140600090101,HNHU1
+Current Historic,Huntington-Horseshoe,11K05,SNOW,9657,39.61,-111.3,1930,UT,Sanpete,Right Fork Huntington Creek 140600090102,HNHU1
+Current Historic,Indian Canyon,10K01S,SNTL,9175,39.89,-110.75,1979,UT,Duchesne,Left Fork Indian Canyon 140600040701,ICYU1
+Current Historic,Johnson Valley,11L06,SNOW,8853,38.62,-111.65,1955,UT,Sevier,Solomon Creek 140700020502,JONU1
+Current Historic,Jones Corral,12L20S,SNTL,9749,38.07,-112.17,2007,UT,Garfield,East Fork Sevier River Outlet 160300020507,JCRU1
+Current Historic,Jones Corral G.S.,12L20,SNOW,9720,38.07,-112.17,1993,UT,Garfield,Hoodle Creek 160300020504, 
+Current Historic,Kilfoil Creek,11H31,SNOW,7300,41.25,-111.41,1963,UT,Rich,Upper Lost Creek 160201010603,KILU1
+Current Historic,Kilfoil Creek,11H31S,SNTL,7220,41.25,-111.41,2010,UT,Morgan,Upper Lost Creek 160201010603,KILU1
+Current Historic,Killyon Canyon,11J60,SNOW,6300,40.8,-111.7,1986,UT,Salt Lake,Emigration Creek 160202040303,KIYU1
+Current Historic,Kimberly Mine,12L06S,SNTL,9129,38.48,-112.39,1980,UT,Piute,Mill Creek 160300030104,KMNU1
+Current Historic,King's Cabin,09J01S,SNTL,8724,40.72,-109.54,1979,UT,Uintah,Middle Little Brush Creek 140600100303,KGCU1
+Current Historic,Klondike Narrows,11H01,SNOW,7400,41.97,-111.6,1955,UT,Cache,Hells Kitchen Canyon-Logan River 160102030302,KLOU1
+Current Historic,Klondike Narrows,11H01S,SNTL,7250,41.97,-111.6,2009,UT,Cache,Hells Kitchen Canyon-Logan River 160102030302,KDNU1
+Current Historic,Kolob,13M05S,SNTL,9206,37.53,-113.05,1979,UT,Iron,Crystal Creek 150100080102,KLBU1
+Current Historic,Lakefork #1,10J10S,SNTL,10415,40.6,-110.43,1979,UT,Duchesne,Crystal Creek-Yellowstone River 140600030705,LKFU1
+Current Historic,Lakefork #3,10J12S,SNTL,8464,40.55,-110.35,2009,UT,Duchesne,Crystal Creek-Yellowstone River 140600030705,LFKU1
+Current Historic,Lakefork Basin,10J25S,SNTL,10966,40.74,-110.62,1979,UT,Duchesne,Ottoson Creek-Lake Fork Creek 140600030601,LBNU1
+Current Historic,Lakefork Mountain #3,10J12,SNOW,8464,40.55,-110.35,1953,UT,Duchesne,Crystal Creek-Yellowstone River 140600030705,LAKU1
+Current Historic,Lambs Canyon,11J41,SNOW,7463,40.72,-111.62,1969,UT,Salt Lake,Parleys Creek 160202040302,LMBU1
+Current Historic,Lasal Mountain,09L03S,SNTL,9560,38.48,-109.27,1980,UT,Grand,Horse Creek-Mill Creek 140300050404,LSMU1
+Current Historic,Lasal Mountain-Lower,09L01,SNOW,8825,38.48,-109.29,1931,UT,San Juan,Horse Creek-Mill Creek 140300050404,LMLU1
+Current Historic,Lasal Mountain-Lower,09L01S,SNTL,8825,38.48,-109.29,2012,UT,San Juan,Horse Creek-Mill Creek 140300050404,LMLU1
+Current Historic,Lightning Ridge,11H59S,SNTL,8215,41.36,-111.49,2004,UT,Weber,Left Fork South Fork Ogden River 160201020201,LIGU1
+Current Historic,Lily Lake,10J35S,SNTL,9156,40.86,-110.8,1980,UT,Summit,East Fork Bear River 160101010104,LLKU1
+Current Historic,Little Bear,11H25S,SNTL,6544,41.41,-111.83,1979,UT,Cache,South Fork Little Bear River 160102030103,LTBU1
+Current Historic,Little Bear-Lower,11H26,SNOW,6000,41.43,-111.84,1956,UT,Cache,South Fork Little Bear River 160102030103,LBLU1
+Current Historic,Little Grassy,13M04S,SNTL,6100,37.49,-113.85,1986,UT,Washington,Little Pine Creek 160300061302,LGCU1
+Current Historic,Lonesome Beaver,10M01S,SNTL,9700,38.08,-110.77,2015,UT,Garfield,Upper Poison Spring Canyon 140700040701, 
+Current Historic,Long Flat,13M02S,SNTL,8000,37.51,-113.4,1979,UT,Washington,Pinto Creek 160300061403,LGFU1
+Current Historic,Long Valley Jct,12M06S,SNTL,7464,37.49,-112.51,1986,UT,Kane,Headwaters East Fork Virgin River 150100080201,LVJU1
+Current Historic,Lookout Peak,11J64S,SNTL,8200,40.84,-111.71,1988,UT,Salt Lake,Parleys Creek 160202040302,LOPU1
+Current Historic,Lost Creek Reservoir,11H32,SNOW,6083,41.22,-111.36,1963,UT,Morgan,Upper Lost Creek 160201010603,LCRU1
+Current Historic,Lost Creek Resv,11H32S,SNTL,6082,41.22,-111.36,2010,UT,Morgan,Upper Lost Creek 160201010603,LCVU1
+Current Historic,Louis Meadow,11J69S,SNTL,6700,40.83,-111.76,1999,UT,Salt Lake,City Creek 160202040304,LMSU1
+Current Historic,Mammoth-Cottonwood,11K03S,SNTL,8727,39.68,-111.32,1979,UT,Emery,Cottonwood Canyon-San Pitch River 160300040203,MCDU1
+Current Historic,Merchant Valley,12L12S,SNTL,8703,38.3,-112.44,1980,UT,Beaver,Merchant Creek 160300070201,MVYU1
+Current Historic,Middle Canyon,12J03,SNOW,6960,40.48,-112.2,1954,UT,Tooele,Middle Canyon 160203040402,MICU1
+Current Historic,Midway Valley,12M23S,SNTL,9800,37.57,-112.84,1980,UT,Iron,Midway Valley-Midway Creek 160300010101,MDVU1
+Current Historic,Mill Creek,11J44,SNOW,6950,40.68,-111.67,1974,UT,Salt Lake,Headwaters Mill Creek 160202040301,MIZU1
+Current Historic,Mill D-South Fork,11J10,SNOW,7400,40.63,-111.63,1935,UT,Salt Lake,Headwaters Big Cottonwood Canyon 160202040201,MDZU1
+Current Historic,Mill-D North,11J65S,SNTL,8967,40.66,-111.64,1988,UT,Salt Lake,Headwaters Big Cottonwood Canyon 160202040201,MLDU1
+Current Historic,Mining Fork,12J07S,SNTL,8221,40.49,-112.61,1988,UT,Tooele,South Willow Creek-Frontal Great Salt Lake 160203040503,MFKU1
+Current Historic,Monte Cristo,11H57S,SNTL,8960,41.47,-111.5,1979,UT,Weber,Sheep Creek 160102030201,MCRU1
+Current Historic,Mosby Mtn.,09J05S,SNTL,9510,40.61,-109.89,1979,UT,Uintah,Mosby Sink-Dry Fork 140600100702,MMTU1
+Current Historic,Mt Baldy,11K12S,SNTL,9494,39.14,-111.51,2012,UT,Sanpete,Headwaters Twelvemile Creek 160300040402,MTBU1
+Current Historic,Mt. Baldy R.S.,11K12,SNOW,9494,39.14,-111.51,1951,UT,Sanpete,Headwaters Twelvemile Creek 160300040402,MTBU1
+Current Historic,Mud Creek #2,11K33,SNOW,8503,39.63,-111.15,1955,UT,Carbon,Mud Creek 140600070203,MUCU1
+Current Historic,Oak Creek,12K02,SNOW,7772,39.35,-112.19,1968,UT,Millard,Upper Oak Creek 160300051503,OARU1
+Current Historic,Oak Creek,12K02S,SNTL,7850,39.35,-112.33,2010,UT,Millard,Upper Oak Creek 160300051503,OARU1
+Current Historic,Panguitch Lake R.S.,12M27,SNOW,8300,37.7,-112.65,1995,UT,Garfield,Ipson Creek 160300010402, 
+Current Historic,Panguitch Lake RS,12M07S,SNTL,8350,37.7,-112.65,2014,UT,Garfield,Ipson Creek 160300010402,PGLU1
+Current Historic,Parley's Canyon Summit,11J15,SNOW,7500,40.77,-111.62,1934,UT,Salt Lake,Big Dutch Hollow-East Canyon Creek 160201020103,PSUU1
+Current Historic,Parley's Summit,11J52S,SNTL,7500,40.76,-111.63,1979,UT,Summit,Big Dutch Hollow-East Canyon Creek 160201020103,PSUU1
+Current Historic,Parrish Creek,11J68S,SNTL,7740,40.93,-111.81,1999,UT,Davis,Holbrook Creek-Frontal Farmington Bay 160201020501,PCRU1
+Current Historic,Payson R.S.,11K52S,SNTL,8066,39.93,-111.63,1980,UT,Utah,Lower Thistsle Creek 160202020205,PYSU1
+Current Historic,Pickle Keg,11K39S,SNTL,9600,39.01,-111.58,1979,UT,Sevier,Skumpah Creek-Salina Creek 160300030402,PKLU1
+Current Historic,Pine Creek,12L15S,SNTL,8790,38.88,-112.25,1985,UT,Millard,North Fork Chalk Creek 160300051401,PCKU1
+Current Historic,Red Pine Ridge,11K28S,SNTL,9009,39.45,-111.27,1979,UT,Emery,Lowry Water 140600090202,RPRU1
+Current Historic,Redden Mine Lwr,11J06S,SNTL,8500,40.67,-111.22,2012,UT,Summit,Thorn Creek-Beaver Creek 160201010103,RMLU1
+Current Historic,Redden Mine-Lower,11J06,SNOW,8500,40.67,-111.22,1930,UT,Summit,Thorn Creek-Beaver Creek 160201010103,RMLU1
+Current Historic,Ree's Flat,11K36,SNOW,7211,39.5,-111.73,1956,UT,Sanpete,Quaking Aspen Creek-Chicken Creek 160300050202,REFU1
+Current Historic,Rees Flat,11K36S,SNTL,7211,39.5,-111.73,2012,UT,Sanpete,Quaking Aspen Creek-Chicken Creek 160300050202,REFU1
+Current Historic,Rock Creek,10J18S,SNTL,7889,40.55,-110.69,1980,UT,Duchesne,South Fork Rock Creek 140600030304,RCKU1
+Current Historic,Rocky Basin-Settleme,12J06S,SNTL,8900,40.44,-112.24,1980,UT,Tooele,Settlement Canyon 160203040401,RBSU1
+Current Historic,Seeley Creek,11K09S,SNTL,9910,39.31,-111.43,1979,UT,Sanpete,Seely Creek 140600090203,SEEU1
+Current Historic,Silver Lake-Brighton,11J16,SNOW,8725,40.6,-111.58,1931,UT,Salt Lake,Headwaters Big Cottonwood Canyon 160202040201,SLBU1
+Current Historic,Smith & Morehouse,11J53S,SNTL,7600,40.79,-111.12,1979,UT,Summit,Moffit Creek-Weber River 160201010203,SMMU1
+Current Historic,Snowbird,11J42S,SNTL,9640,40.56,-111.66,1989,UT,Salt Lake,Headwaters Little Cottonwood Canyon 160202040202,SBDU1
+Current Historic,Spirit Lake,10J55,SNOW,10223,40.84,-110.01,1963,UT,Daggett,Upper Sheep Creek 140401060601,SPIU1
+Current Historic,Spirit Lk,10J55S,SNTL,10235,40.84,-110.01,2009,UT,Daggett,Upper Sheep Creek 140401060601,SPKU1
+Current Historic,Squaw Springs,12L05,SNOW,9105,38.5,-112.01,1954,UT,Piute,Box Creek 160300020107,SQUU1
+Current Historic,Squaw Springs,12L05S,SNTL,9105,38.5,-112.01,2010,UT,Sevier,Box Creek 160300020107,SQUU1
+Current Historic,Steel Creek Park,10J20S,SNTL,10200,40.91,-110.5,1979,UT,Summit,West Fork Smiths Fork 140401070203,SCKU1
+Current Historic,Stillwater Camp,10J17,SNOW,8550,40.87,-110.83,1955,UT,Summit,Stillwater Fork 160101010102,STLU1
+Current Historic,Strawberry Divide,11J08S,SNTL,8123,40.16,-111.21,1979,UT,Wasatch,Mud Creek 140600040103,STDU1
+Current Historic,Sunflower Flat,11M01S,SNTL,9957,38.05,-111.34,2013,UT,Garfield,Oak Creek 140700030406, 
+Current Historic,Susc Ranch,12M17,SNOW,8179,37.6,-112.92,1966,UT,Iron,Crow Creek-Coal Creek 160300060306,SUSU1
+Current Historic,Suu Ranch,12M17S,SNTL,8179,37.6,-112.92,2013,UT,Iron,Crow Creek-Coal Creek 160300060306,SURU1
+Current Historic,Takka Wiiya, ,SNTL,9168,39.74,-113.98,2013,UT,Tooele,Fifteenmile Creek 160203060804,TAKU1
+Current Historic,Tall Poles,12M15,SNOW,8656,37.72,-112.84,1965,UT,Iron,Dry Lakes Creek 160300060201,TALU1
+Current Historic,Temple Fork,11H58S,SNTL,7406,41.79,-111.55,2002,UT,Cache,Temple Fork 160102030303,TPKU1
+Current Historic,Thaynes Canyon,11J56S,SNTL,9230,40.62,-111.53,1988,UT,Summit,Kimball Creek 160201020101,THCU1
+Current Historic,Thistle Flat,11K35,SNOW,8858,39.24,-111.52,1956,UT,Sanpete,Manti Canyon 160300040501,THIU1
+Current Historic,Thistle Flat,11K35S,SNTL,8858,39.24,-111.52,2012,UT,Sanpete,Manti Canyon 160300040501,THIU1
+Current Historic,Timberline,10K06,SNOW,8684,39.68,-110.43,1957,UT,Carbon,Grassy Trail Reservoir-Grassy Trail Creek 140600070903,TMBU1
+Current Historic,Timberline,10K06S,SNTL,8736,39.68,-110.43,2007,UT,Carbon,Grassy Trail Reservoir-Grassy Trail Creek 140600070903,TLNU1
+Current Historic,Timpanogos Divide,11J21S,SNTL,8140,40.43,-111.62,1979,UT,Wasatch,Middle American Fork Canyon 160202010802,TIMU1
+Current Historic,Tony Grove Lake,11H36S,SNTL,8474,41.9,-111.63,1979,UT,Cache,Tony Grove Creek 160102030304,TGLU1
+Current Historic,Tony Grove Ranger Station,11H03,SNOW,6250,41.88,-111.57,1924,UT,Cache,Tony Grove Creek 160102030304,TGRU1
+Current Historic,Tony Grove RS,11H03S,SNTL,6332,41.89,-111.57,2009,UT,Cache,Tony Grove Creek 160102030304,TGSU1
+Current Historic,Trial Lake,10J08,SNOW,9953,40.68,-110.95,1931,UT,Summit,Spring Canyon-Provo River 160202030102,TRLU1
+Current Historic,Trial Lake,10J52S,SNTL,9992,40.68,-110.95,1979,UT,Summit,Spring Canyon-Provo River 160202030102,TRLU1
+Current Historic,Trout Creek,09J16S,SNTL,9518,40.74,-109.67,1979,UT,Uintah,North Fork Ashley Creek 140600100802,TCKU1
+Current Historic,Upper Joe's Valley,11K29,SNOW,8681,39.42,-111.25,1956,UT,Emery,Indian Creek 140600090201,UJVU1
+Current Historic,Upper Joes Valley,11K29S,SNTL,8681,39.42,-111.25,2012,UT,Emery,Indian Creek 140600090201,UJVU1
+Current Historic,Upper Mill Creek,11J66,SNOW,8300,40.68,-111.62,1991,UT,Salt Lake,Headwaters Mill Creek 160202040301, 
+Current Historic,Usu Doc Daniel,11H60S,SNTL,8270,41.86,-111.51,2007,UT,Cache,Tony Grove Creek 160102030304,UDDU1
+Current Historic,Vernon Creek,12K01S,SNTL,7401,39.94,-112.41,1979,UT,Tooele,Vernon Creek 160203040102,VNCU1
+Current Historic,Vipont,13H03,SNOW,7680,41.94,-113.83,1962,UT,Box Elder,Basin Creek 170402100101,VIPU1
+Current Historic,Webster Flat,12M03S,SNTL,9203,37.58,-112.9,1980,UT,Iron,Upper Deep Creek 150100080101,WFLU1
+Current Historic,White River #1,10K02S,SNTL,8641,39.96,-110.99,1979,UT,Wasatch,Right Fork White River 140600070102,WRVU1
+Current Historic,White River #3,11K25,SNOW,7366,39.92,-111.06,1955,UT,Wasatch,Right Fork White River 140600070102,WHIU1
+Current Historic,Widtsoe #3,11M03S,SNTL,9640,37.84,-111.88,1979,UT,Garfield,Sweetwater Creek 160300020403,WSTU1
+Current Historic,Wrigley Creek,11K32,SNOW,9162,39.13,-111.35,1955,UT,Sanpete,Millsite Reservoir-Ferron Creek 140600090303,WRIU1
+Current Historic,Wrigley Creek,11K32S,SNTL,9162,39.13,-111.35,2012,UT,Sanpete,Millsite Reservoir-Ferron Creek 140600090303,WRIU1
+Current Historic,Yankee Reservoir,12M11,SNOW,8715,37.75,-112.77,1942,UT,Iron,Center Creek-Parowan Creek 160300060202,YKEU1
+Current Historic,Yankee Reservoir,12M11S,SNTL,8708,37.75,-112.78,2012,UT,Iron,Center Creek-Parowan Creek 160300060202,YKEU1

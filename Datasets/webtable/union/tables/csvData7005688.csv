@@ -1,0 +1,82 @@
+Demographic characteristics,1900,1910,1920,1930,1940,1950,1960,1970,1980,1990,2000
+Age,X,X,X,X,X,X,X,X,X,X, 
+Sex,X,X,X,X,X,X,X,X,X,X, 
+Color or Race,X,X,X,X,X,X,X,X,X,X, 
+Ancestry/Ethnic Origin,-,-,-,-,-,-,-,-,sX,sX,sX
+"If American Indian, proportions of Indian or other blood",†,†,-,X,-,†,-,-,-,-, 
+"If American Indian, name of Tribe",†,†,-,X,-,†,-,X,X,X,X
+Relationship to head of family or household,X,X,X,X,X,X,X,X,X,X,X
+Married in the past year,-,-,-,-,-,-,-,-,-,-,-
+Marital status,X,X,X,X,X,X,X,X,X,X,sX
+Number of years married,X,X,-,-,-,sX,-,-,-,-,-
+Age at or date of first marriage,-,-,-,X,sX,-,sX,sX,sX,-,-
+Married more than once,-,-,-,-,sX,sX,sX,sX,sX,-,-
+"If remarried, was first marriage terminated by death?",-,-,-,-,-,-,-,sX,sX,-,-
+"Number of years widowed, divorced, or separated",-,-,-,-,-,sX,-,-,-,-,-
+Social Characteristics,1900,1910,1920,1930,1940,1950,1960,1970,1980,1990,2000
+Free or slave,-,-,-,-,-,-,-,-,-,-, 
+"Per slave owner, number of slaves",-,-,-,-,-,-,-,-,-,-,-
+"Per slave owner, number of fugitives",-,-,-,-,-,-,-,-,-,-,-
+"Per slave owner, number of manumitted",-,-,-,-,-,-,-,-,-,-,-
+Physical/mental handicaps and infirmities:, , , , , , , , , , , 
+Deaf or deaf mute,†,†X,†,†,-,-,-,-,-,-,sX
+Blind,†,†X,†,†,-,-,-,-,-,-,sX
+Insane,-,†,-,-,-,-,-,-,-,-, 
+How supported (insane and idiotic only),-,-,-,-,-,-,-,-,-,-, 
+Feeble-minded (idiotic),-,†,-,-,-,-,-,-,-,-,-
+Ill or disabled,-,†,-,-,-,-,-,sX,sX,sX,sX
+Duration of disability,-,†,-,-,-,-,-,sX,-,-,-
+Paupers,-,†,-,-,-,-,-,-,-,-,-
+Convicts,†,†,-,-,-,-,-,-,-,-,-
+Homeless children,-,†,-,-,-,-,-,-,-,-,-
+Education:, , , , , , , , , , , 
+Literacy,X,X,X,X,-,-,-,-,-,-,-
+School attendance,X,X,X,X,X,sX,sX,sX,sX,sX,sX
+Educational attainment,-,-,-,-,X,sX,sX,sX,sX,sX,sX
+Public or private school,-,-,-,-,-,-,sX,sX,-,-,-
+Vocational training,-,-,-,-,-,-,-,sX,-,-,-
+Place of birth,X,X,X,X,X,X,s4X,sX,sX,sX,sX
+Place of birth of parents,X,X,X,X,sX,sX,sX,sX,-,-,-
+Citizenship,X,X,X,X,X,X,4X,sX,sX,sX,sX
+Year of naturalization,-,-,X,-,-,-,-,-,-,-,-
+Eligibility to vote,-,-,-,-,-,-,-,-,-,-,-
+"If foreign born, year of immigration",X,X,X,X,-,-,-,sX,sX,sX,sX
+Language,7X,X,7X,7X,sX,-,sX,sX,sX,sX,sX
+Language of parents,-,X,X,-,-,-,-,-,-,-,-
+Spanish origin or descent,-,-,-,-,-,-,-,sX,sX,sX,sX
+Number of children living,X,X,-,-,-,-,-,-,-,-,-
+Number of children ever born to mother,X,X,-,-,sX,sX,sX,sX,sX,sX,-
+For Grandparent households:, , , , , , , , , , , 
+Are grandchildren under 18 living within the household? Are grandparents Responsible for a Grandchilds basic needs?,--,--,--,--,--,--,-' -,--,--,--,sXsX
+Length of responsibility for grandchild,-,-,-,-,-,-,-,-,-,-,sX
+Veteran status,-,X,-,X,sX,sX,sX,sX,sX,sX,sX
+Length of service,-,-,-,-,-,-,-,-,-,sX,sX
+Whether wife or widow of veteran,-,-,-,-,sX,-,-,-,-,-,-
+"If child of veteran, is father dead?",-,-,-,-,sX,-,-,-,-,-, 
+In service date,-,-,-,-,-,-,-,-,sX,sX,sX
+Farm residence,X,X,X,X,X,X,"s8,9X",9X,-,-,-
+Farm residence in a previous year,-,-,-,-,X,sX,-,-,-,-,-
+Place of residence in a previous year,-,-,-,-,X,sX,sX,sX,sX,sX,sX
+Year moved to present residence,-,-,-,-,-,-,sX,sX,s9X,s9X,s9X
+Industry,-,X,X,X,X,X,sX,sX,sX,sX,sX
+Occupation,X,X,X,X,X,X,sX,sX,sX,sX,sX
+Class of worker,-,X,X,X,X,X,sX,sX,sX,sX,sX
+"Private or public nonemergency work, or public emergency work",-,-,-,-,X,-,-,-,-,-,-
+Employment status,-,-,-,†X,X,X,sX,sX,sX,sX,sX
+Duration of unemployment,X,X,-,†,X,sX,-,-,sX,sX,sX
+Year last worked,-,-,-,-,-,-,sX,sX,sX,sX,sX
+Economic Characteristics,1900,1910,1920,1930,1940,1950,1960,1970,1980,1990,2000
+Weeks worked in preceding year,-,-,-,†,X,sX,sX,sX,sX,sX,sX
+Hours worked in preceding week,-,-,-,†,X,X,sX,sX,sX,sX,sX
+Activity 5 years ago,-,-,-,-,-,-,-,sX,-,-,-
+Industry 5 years ago,-,-,-,-,-,-,-,-,-,-,sX
+Occupation 5 years ago,-,-,-,-,-,-,-,sX,-,-,-
+Class of worker 5 years ago,-,-,-,-,-,-,-,sX,-,-,-
+Value of real estate,-,-,-,-,-,-,-,-,s9X,s9X,s9X
+Value of personal property,-,-,-,-,-,-,-,-,-,-, 
+Income,-,-,-,-,X,sX,sX,sX,sX,sX,sX
+Social Security:, , , , , , , , , , , 
+Registered,-,-,-,-,sX,-,-,-,-,-,-
+Deductions from all or part of wages or salary,-,-,-,-,sX,-,-,-,-,-, 
+Place of work,-,-,-,-,-,-,sX,sX,sX,sX,sX
+Means of transportation to work,-,-,-,-,-,-,sX,sX,sX,sX,sX

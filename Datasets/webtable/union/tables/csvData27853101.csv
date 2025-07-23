@@ -1,0 +1,40 @@
+Name,Country,sex,tour,sl,tr,ju,yob,class,round,div,date,place,site id
+ , , , , , , , , , , , , , 
+BORDIER Lindsay,FRA,M,10BEL01,0.0,2690.0,0.0,2000.0,R,1.0,All,06/26/2010,15.0,BELGRIM
+ , , , , , , , , , , , , , 
+BORDIER Lindsay,FRA,M,10BEL01,0.0,3710.0,0.0,2000.0,R,2.0,All,06/26/2010,15.0,BELGRIM
+ , , , , , , , , , , , , , 
+BORDIER Lindsay,FRA,M,10BEL01,0.0,2900.0,0.0,2000.0,R,3.0,All,06/26/2010,15.0,BELGRIM
+ , , , , , , , , , , , , , 
+BORDIER Lindsay,FRA,M,10BEL02,0.0,2950.0,0.0,2000.0,R,1.0,All,06/27/2010,14.0,BELRNV
+ , , , , , , , , , , , , , 
+BORDIER Lindsay,FRA,M,10BEL02,0.0,4400.0,0.0,2000.0,R,2.0,All,06/27/2010,14.0,BELRNV
+ , , , , , , , , , , , , , 
+BORDIER Lindsay,FRA,M,10BEL02,0.0,3760.0,0.0,2000.0,R,3.0,All,06/27/2010,14.0,BELRNV
+BORDIER Lindsay,FRA,M,10FRA18,0.0,0.0,0.0,2000.0,L,1.0,All,08/01/2010,28.0,FRA1901
+ , , , , , , , , , , , , , 
+BORDIER Lindsay,FRA,M,10FRA18,0.0,1580.0,0.0,2000.0,L,1.0,All,08/01/2010,4.0,FRA1901
+BORDIER Lindsay,FRA,M,10FRA18,0.0,0.0,0.0,2000.0,L,2.0,All,08/01/2010,28.0,FRA1901
+ , , , , , , , , , , , , , 
+BORDIER Lindsay,FRA,M,10FRA18,0.0,3150.0,0.0,2000.0,L,2.0,All,08/01/2010,4.0,FRA1901
+ , , , , , , , , , , , , , 
+BORDIER Lindsay,FRA,M,10FRA18,0.0,2950.0,0.0,2000.0,L,3.0,All,08/01/2010,4.0,FRA1901
+BORDIER Lindsay,FRA,M,10FRA05,0.0,0.0,0.0,2000.0,L,1.0,-10,07/25/2010,2.0,FRA3310
+ , , , , , , , , , , , , , 
+BORDIER Lindsay,FRA,M,10FRA05,0.0,0.0,11.6,2000.0,L,1.0,-10,07/25/2010,4.0,FRA3310
+ , , , , , , , , , , , , , 
+BORDIER Lindsay,FRA,M,10FRA05,0.0,2550.0,0.0,2000.0,L,1.0,-10,07/25/2010,1.0,FRA3310
+BORDIER Lindsay,FRA,M,10FRA05,0.0,0.0,0.0,2000.0,L,2.0,-10,07/25/2010,2.0,FRA3310
+ , , , , , , , , , , , , , 
+BORDIER Lindsay,FRA,M,10FRA05,0.0,0.0,13.3,2000.0,L,2.0,-10,07/25/2010,4.0,FRA3310
+ , , , , , , , , , , , , , 
+BORDIER Lindsay,FRA,M,10FRA05,0.0,3770.0,0.0,2000.0,L,2.0,-10,07/25/2010,1.0,FRA3310
+BORDIER Lindsay,FRA,M,09FRA30,0.0,0.0,0.0,2000.0,L,1.0,S-12,11/22/2009,1.0,FRA9701
+ , , , , , , , , , , , , , 
+BORDIER Lindsay,FRA,M,09FRA30,0.0,3390.0,0.0,2000.0,L,1.0,TAll,11/22/2009,2.0,FRA9701
+BORDIER Lindsay,FRA,M,09FRA30,0.0,0.0,0.0,2000.0,L,2.0,S-12,11/22/2009,1.0,FRA9701
+ , , , , , , , , , , , , , 
+BORDIER Lindsay,FRA,M,09FRA30,0.0,3360.0,0.0,2000.0,L,2.0,TAll,11/22/2009,2.0,FRA9701
+BORDIER Lindsay,FRA,M,09FRA30,0.0,0.0,0.0,2000.0,L,3.0,S-12,11/22/2009,1.0,FRA9701
+ , , , , , , , , , , , , , 
+BORDIER Lindsay,FRA,M,09FRA30,0.0,3660.0,0.0,2000.0,L,3.0,TAll,11/22/2009,2.0,FRA9701

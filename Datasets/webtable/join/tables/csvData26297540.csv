@@ -1,0 +1,9 @@
+Name,Country,sex,tour,sl,tr,ju,yob,class,round,date,place,site id,line/ramp,speed
+ , , , , , , , , , , , , , , 
+WENTZEL Travis,RSA,M,07RSA06,51.0,0.0,0.0,84.0,L,1.0,03/04/2007,4.0,RSA00001,3.00@12.000,58.0
+ , , , , , , , , , , , , , , 
+WENTZEL Travis,RSA,M,07RSA07,51.5,0.0,0.0,84.0,L,1.0,03/04/2007,6.0,RSA00001,3.50@12.000,58.0
+ , , , , , , , , , , , , , , 
+WENTZEL Travis,RSA,M,07RSA03,51.0,0.0,0.0,84.0,L,1.0,01/21/2007,0.0,RSA00002,3.00@12.000,58.0
+ , , , , , , , , , , , , , , 
+WENTZEL Travis,RSA,M,07RSA03,50.0,0.0,0.0,84.0,L,2.0,01/21/2007,0.0,RSA00002,2.00@12.000,58.0

@@ -1,0 +1,30 @@
+Finish,Start,#,Driver,Make,Pts,Laps,Led,Status,Rating,Winnings,Team
+1,3,#38,Elliott Sadler,Ford,0/0,64,36,Running,138.5,"$51,793",Robert Yates Racing
+2,14,#99,Carl Edwards,Ford,0/0,64,0,Running,111.4,"$36,783",Roush Fenway Racing
+3,20,#8,Dale Earnhardt Jr.,Chevrolet,0/0,64,0,Running,98.4,"$31,783",Dale Earnhardt Inc.
+4,29,#48,Jimmie Johnson,Chevrolet,0/0,64,0,Running,111.1,"$26,783",Hendrick Motorsports
+5,28,#17,Matt Kenseth,Ford,0/0,64,0,Running,106.1,"$24,783",Roush Fenway Racing
+6,6,#2,Kurt Busch,Dodge,0/0,64,0,Running,115.0,"$22,383",Penske Racing
+7,1,#31,Jeff Burton,Chevrolet,0/0,64,13,Running,111.8,"$21,283",Richard Childress Racing
+8,10,#20,Tony Stewart,Chevrolet,0/0,64,15,Running,114.9,"$20,283",Joe Gibbs Racing
+9,7,#11,Denny Hamlin,Chevrolet,0/0,64,0,Running,92.2,"$20,258",Joe Gibbs Racing
+10,18,#1,Martin Truex Jr.,Chevrolet,0/0,64,0,Running,88.3,"$20,233",Dale Earnhardt Inc.
+11,12,#66,Jeff Green,Chevrolet,0/0,64,0,Running,83.5,"$20,208",Haas CNC Racing
+12,16,#21,Ken Schrader,Ford,0/0,64,0,Running,93.7,"$20,183",Wood Brothers/JTG Racing
+13,2,#88,Dale Jarrett,Ford,0/0,64,0,Running,85.9,"$20,158",Robert Yates Racing
+14,13,#9,Kasey Kahne,Dodge,0/0,64,0,Running,90.9,"$20,133",Evernham Motorsports
+15,24,#49,Brent Sherman,Ford,0/0,64,0,Running,71.9,"$20,108",BAM Racing
+16,15,#61,Kevin Lepage,Dodge,0/0,64,0,Running,77.0,"$20,083",Peak Fitness Racing
+17,5,#136,Bill Elliott,Chevrolet,0/0,64,0,Running,75.2,"$20,058",Bill Davis Racing
+18,23,#23,Mike Skinner,Chevrolet,0/0,64,0,Running,77.1,"$20,008",Bill Davis Racing
+19,22,#74,Derrike Cope,Dodge,0/0,64,0,Running,68.0,"$19,983",McGlynn Racing
+20,9,#25,Brian Vickers,Chevrolet,0/0,64,0,Running,81.5,"$19,958",Hendrick Motorsports
+21,4,#07,Clint Bowyer,Chevrolet,0/0,64,0,Running,85.5,"$19,908",Richard Childress Racing
+22,26,#152,Larry Gunselman,Dodge,0/0,64,0,Running,58.9,"$19,883",Ware Racing Enterprises
+23,19,#50,Larry Foyt,Dodge,0/0,64,0,Running,62.1,"$19,833",Arnold Motorsports
+24,27,#159,Andy Belmont,Chevrolet,0/0,63,0,Running,58.7,"$19,808",Andy Belmont Motorsports
+25,21,#64,Randy LaJoie,Chevrolet,0/0,62,0,Running,55.5,"$19,783",Front Row Motorsports
+26,8,#14,Sterling Marlin,Chevrolet,0/0,60,0,accident,92.4,"$19,758",Ginn Racing
+27,25,#92,Chad Chaffin,Dodge,0/0,58,0,accident,65.8,"$19,733",Front Row Motorsports
+28,17,#15,Paul Menard,Chevrolet,0/0,26,0,accident,64.1,"$19,708",Dale Earnhardt Inc.
+29,11,#00,Hermie Sadler,Ford,0/0,12,0,overheating,54.2,"$19,683",MBA Racing

@@ -1,0 +1,9 @@
+1991 HRs,#car,#yr,#gm,Date,@Bat,Pitcher,Score,Inn,Out,RoB,Pit(cnt)Sequence,RBI,BOP,Pos,WPA,bWE,Play Description
+1,1,1,1,1991-06-16,CHC,Jose Melendez,tied 0-0,t 3,0,---,"1,(0-0) X",1,9,1,0.119,62%,Home Run (Fly Ball to Deep LF Line); Maddux Scores
+1992 HRs,#car,#yr,#gm,Date,@Bat,Pitcher,Score,Inn,Out,RoB,Pit(cnt)Sequence,RBI,BOP,Pos,WPA,bWE,Play Description
+2,2,1,1,1992-04-20,CHC,Kyle Abbott,tied 0-0,b 3,1,---,"6,(3-2) BFBFBX",1,9,1,0.130,66%,Home Run (Fly Ball to Deep LF Line); Maddux Scores
+1999 HRs,#car,#yr,#gm,Date,@Bat,Pitcher,Score,Inn,Out,RoB,Pit(cnt)Sequence,RBI,BOP,Pos,WPA,bWE,Play Description
+3,3,1,1,1999-04-06,ATL,Chad Ogea,ahead 3-1,b 4,0,---,"8,(3-2) BFBFBFFX",1,9,1,0.074,85%,Home Run (Fly Ball to Deep LF)
+4,4,2,1,1999-05-30,ATL,Kevin Brown,tied 0-0,b 3,1,---,"6,(2-2) BCCFBX",1,9,1,0.113,64%,Home Run (Fly Ball to Deep RF)
+2005 HRs,#car,#yr,#gm,Date,@Bat,Pitcher,Score,Inn,Out,RoB,Pit(cnt)Sequence,RBI,BOP,Pos,WPA,bWE,Play Description
+5,5,1,1,2005-06-10,CHC,John Halama,ahead 7-2,b 6,1,---,"1,(0-0) X",1,9,1,0.014,98%,Home Run (Line Drive to LF-CF)

@@ -1,0 +1,31 @@
+SEASON,TEAM,LEAGUE,GP,W,T,L,OTW,OTL,GF,GA,TP,RANK,POSTSEASON
+1985 - 1986,TPS,Liiga,36,18,5,13,-,-,153,139,41,3,Bronze game loss
+1986 - 1987,TPS,Liiga,44,22,6,16,-,-,198,194,50,3,Bronze game loss
+1987 - 1988,TPS,Liiga,44,22,3,19,-,-,206,182,47,5,Did not make playoffs
+1988 - 1989,TPS,Liiga,44,29,5,10,-,-,209,120,63,1,Champion
+1989 - 1990,TPS,Liiga,44,31,3,10,-,-,175,100,65,1,Champion
+1990 - 1991,TPS,Liiga,44,27,5,12,-,-,168,109,59,1,Champion
+1991 - 1992,TPS,Liiga,44,29,1,14,-,-,181,153,59,3,Quarterfinal loss
+1992 - 1993,TPS,Liiga,48,28,8,12,-,-,178,138,64,1,Champion
+1993 - 1994,TPS,Liiga,48,34,0,14,-,-,227,124,68,1,Final loss
+1994 - 1995,TPS,Liiga,50,30,3,17,-,-,219,149,63,4,Champion
+1995 - 1996,TPS,Liiga,50,33,5,12,-,-,216,141,71,2,Final loss
+1996 - 1997,TPS,Liiga,50,32,7,11,-,-,191,105,71,2,Final loss
+1997 - 1998,TPS,Liiga,48,30,6,12,-,-,162,111,66,1,Quarterfinal loss
+1998 - 1999,TPS,Liiga,54,37,7,10,-,-,179,107,81,1,Champion
+1999 - 2000,TPS,Liiga,54,39,5,10,-,-,232,118,83,1,Champion
+2000 - 2001,TPS,Liiga,56,36,4,16,-,-,186,115,76,2,Champion
+2001 - 2002,TPS,Liiga,56,31,6,19,-,-,154,111,69,4,Bronze game loss
+2002 - 2003,TPS,Liiga,56,24,6,26,-,-,138,138,56,8,Quarterfinal loss
+2003 - 2004,TPS,Liiga,56,30,15,11,-,-,169,112,80,1,Final loss
+2004 - 2005,TPS,Liiga,56,22,-,16,8,10,146,142,92,6,Quarterfinal loss
+2005 - 2006,TPS,Liiga,56,14,-,23,11,8,119,135,72,10,Playoffs Qualifier loss
+2006 - 2007,TPS,Liiga,56,23,-,22,6,5,167,155,86,7,Playoffs Qualifier loss
+2007 - 2008,TPS,Liiga,56,18,-,27,2,9,130,164,67,10,Playoffs Qualifier loss
+2008 - 2009,TPS,Liiga,58,21,-,27,7,3,133,159,80,10,Quarterfinal loss
+2009 - 2010,TPS,Liiga,58,25,-,25,6,2,169,169,89,6,Champion
+2010 - 2011,TPS,Liiga,60,12,-,32,8,8,134,186,60,13,Did not make playoffs
+2011 - 2012,TPS,Liiga,60,21,-,30,6,3,134,180,78,10,Playoffs Qualifier loss
+2012 - 2013,TPS,Liiga,60,12,-,28,8,12,144,181,64,13,Did not make playoffs
+2013 - 2014,TPS,Liiga,60,12,-,31,6,11,135,197,59,13,Did not make playoffs
+2014 - 2015,TPS,Liiga,60,17,-,32,3,8,122,172,65,13,Did not make playoffs

@@ -1,0 +1,51 @@
+Catalog Number,Kingdom,Phylum,Class,Order,Family,Genus,Specific Epithet,Locality,Continent,Country,State/Province
+9999,Invertebrates,Cnidaria, , , , , ,72139,North America,USA,MT
+9998,Invertebrates,Cnidaria,Anthozoa,Tabulata,Auloporidae,Syringopora,surcularia,72139,North America,USA,MT
+9997,Invertebrates,Mollusca,Bivalvia,Unionoida,Unionidae,Unio,sp.,72138,North America,USA,MT
+9994,Invertebrates,Mollusca,Bivalvia,Unionoida,Unionidae,Unio,sp.,72138,North America,USA,MT
+9993,Invertebrates,Mollusca,Bivalvia,Unionoida,Unionidae,Unio,sp.,72138,North America,USA,MT
+9992,Invertebrates,Mollusca,Bivalvia,Unionoida,Unionidae,Unio,couesi,72138,North America,USA,MT
+9991,Invertebrates,Mollusca,Bivalvia,Unionoida,Unionidae,Unio,sp.,72138,North America,USA,MT
+9990,Invertebrates,Mollusca,Bivalvia,Unionoida,Unionidae,Unio,sp.,72138,North America,USA,MT
+999,Invertebrates,Mollusca,Bivalvia,Veneroida,Capulidae,Capulus,obliguus,75949,North America,USA, 
+9989,Invertebrates,Mollusca,Bivalvia,Unionoida,Unionidae,Unio,sp.,72138,North America,USA,MT
+9988,Invertebrates,Mollusca,Gastropoda,Neotaenioglossa,Pleuroceridae,Goniobasis,nebrascensis,72138,North America,USA,MT
+9987,Invertebrates,Mollusca,Gastropoda,Basommatophora,Planorbidae,Planorbis,sp.,72138,North America,USA,MT
+9986,Invertebrates,Mollusca,Gastropoda,Basommatophora,Lymnaeidae,Lymnaea,compactilis,72138,North America,USA,MT
+9985, , , , , , , ,72138,North America,USA,MT
+9984,Invertebrates,Mollusca,Gastropoda,Architaenioglossa,Viviparidae,Viviparus,retusus,72138,North America,USA,MT
+9983,Invertebrates,Mollusca,Gastropoda,Architaenioglossa,Viviparidae,Campeloma,nebrascensis,72138,North America,USA,MT
+9982,Invertebrates,Mollusca,Gastropoda,Architaenioglossa,Viviparidae,Viviparus,companiformes,72138,North America,USA,MT
+9981,Invertebrates,Mollusca,Gastropoda,Architaenioglossa,Viviparidae,Viviparus,leidyi,72138,North America,USA,MT
+9980,Invertebrates,Mollusca,Gastropoda,Neotaenioglossa, , , ,72137,North America,USA,CA
+998,Invertebrates,Mollusca,Bivalvia,Veneroida,Capulidae,Capulus,latus,75949,North America,USA, 
+9979,Invertebrates,Mollusca,Bivalvia,Veneroida,Veneridae,Meretrix,ovalis,72137,North America,USA,CA
+9978,Invertebrates,Mollusca,Gastropoda,Neotaenioglossa,Strombidae,Rimella,canalifera,72137,North America,USA,CA
+9977,Invertebrates,Mollusca,Gastropoda,Neotaenioglossa,Ficidae,Ficopsis,horni,72137,North America,USA,CA
+9976,Invertebrates,Mollusca,Gastropoda,Sorbeoconcha,Naticidae,Amauropsis,alveata,72137,North America,USA,CA
+9975,Invertebrates,Mollusca,Gastropoda,Neotaenioglossa,Turritellidae,Turritella,uvasana,72137,North America,USA,CA
+9973,Invertebrates,Mollusca,Gastropoda,Sorbeoconcha,Naticidae,Lunatia,horni,72137,North America,USA,CA
+9972,Invertebrates,Mollusca,Gastropoda,Neotaenioglossa,Naticidae,Neverita,secta,72137,North America,USA,CA
+9971,Invertebrates,Mollusca,Gastropoda,Neogastropoda,Olividae,Ancillaria,bretzi,72136,North America,USA,WA
+9970,Invertebrates,Mollusca,Gastropoda,Basommatophora,Siphonariidae,Siphonalia,bicarinata,72136,North America,USA,WA
+997,Invertebrates,Echinodermata,Crinoidea,Monobathrida,Actinocrinitidae,Actinocrinus,verrucosus,75949,North America,USA, 
+9969,Invertebrates,Mollusca,Bivalvia,Arcoida,Glycymeridae,Glycymeris,sagitata,72136,North America,USA,WA
+9968,Invertebrates,Mollusca,Bivalvia,Veneroida,Carditidae,Venericardia,planicosta,72136,North America,USA,WA
+9967,Invertebrates,Mollusca,Bivalvia,Pterioida,Ostreidae,Ostrea,fettkei,72136,North America,USA,WA
+9966,Invertebrates,Mollusca,Bivalvia,Veneroida,Solenidae,Solen,conradi,72135,North America,USA,WA
+9965,Invertebrates,Mollusca,Bivalvia,Veneroida,Mactridae,Pseudocardium,gabbi,72135,North America,USA,WA
+9964,Invertebrates,Mollusca,Bivalvia,Veneroida,Semelidae,Semele,montesanoensis,72135,North America,USA,WA
+9963,Invertebrates,Mollusca,Gastropoda,Neotaenioglossa,Naticidae,Polinices,galianoi,72135,North America,USA,WA
+9962,Invertebrates,Mollusca,Gastropoda,Neogastropoda,Buccinidae,Chrysodomus,imperialis,72135,North America,USA,WA
+9961,Invertebrates,Mollusca,Gastropoda,Neotaenioglossa,Naticidae,Natica,consors,72135,North America,USA,WA
+9960,Invertebrates,Mollusca,Gastropoda,Neotaenioglossa,Ranellidae,Argobuccinum,oregonensis,72133,North America,USA,OR
+996,Invertebrates,Echinodermata,Crinoidea,Monobathrida,Solecuritidae,Teleiocrinus,umbrosus,75949,North America,USA, 
+9958,Invertebrates,Mollusca,Gastropoda,Neotaenioglossa,Calyptraeidae,Crepidula,praerupta,72133,North America,USA,OR
+9957,Invertebrates,Mollusca,Gastropoda,Neotaenioglossa,Calyptraeidae,Crepidula,princeps,72133,North America,USA,OR
+9955,Invertebrates,Mollusca,Bivalvia,Veneroida,Veneridae,Dosinia,whitneyi,72133,North America,USA,OR
+9954,Invertebrates,Mollusca,Bivalvia,Veneroida,Mactridae,Mulinia,oregonensis,72133,North America,USA,OR
+9953,Invertebrates,Mollusca,Bivalvia,Veneroida,Tellinidae,Macoma,astori,72133,North America,USA,OR
+9952,Invertebrates,Mollusca,Bivalvia,Veneroida,Tellinidae,Macoma,calcarea,72133,North America,USA,OR
+9951,Invertebrates,Mollusca,Bivalvia,Nuculoida,Nuculidae,Nucula,conradi,72133,North America,USA,OR
+9950,Invertebrates,Mollusca,Bivalvia,Arcoida,Glycymeridae,Glycymeris,gabbi,72133,North America,USA,OR
+995,Invertebrates,Cnidaria,Anthozoa,Rugosa,Zaphrentidae,Zaphrentis,sp.,75949,North America,USA, 

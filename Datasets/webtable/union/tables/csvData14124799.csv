@@ -1,0 +1,10 @@
+Name,Country,sex,tour,sl,tr,ju,yob,class,round,date,place,site id,line/ramp,speed
+ , , , , , , , , , , , , , , 
+KOEHLER Theodor,GER,M,09GER02,45.0,0.0,0.0,1948.0,L,1.0,07/05/2009,1.0,GERBREM,3.00@13.000,55.0
+ , , , , , , , , , , , , , , 
+KOEHLER Theodor,GER,M,09GER02,39.0,0.0,0.0,1948.0,L,2.0,07/05/2009,1.0,GERBREM,3.00@14.250,55.0
+ , , , , , , , , , , , , , , 
+KOEHLER Theodor,GER,M,09GER02,41.0,0.0,0.0,1948.0,L,3.0,07/05/2009,1.0,GERBREM,5.00@14.250,55.0
+KOEHLER Theodor,GER,M,09GER03,0.0,0.0,0.0,1948.0,L,1.0,07/12/2009,2.0,GERFELD,3.00@18.250,34.0
+ , , , , , , , , , , , , , , 
+KOEHLER Theodor,GER,M,09GER03,34.25,0.0,0.0,1948.0,L,2.0,07/12/2009,2.0,GERFELD,4.25@16.000,55.0

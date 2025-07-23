@@ -1,0 +1,16 @@
+Model,Engine,Displacement (cc),Bore/Stroke (mm),Comp. Ratio,Fuel System,Power (kW/bhp),Torque (Nm/ft-lb),0-62mph man,0-62mph auto,Produced,Where Sold (If not in all markets)
+520i,I-6 24V,1991,80/66,1:11.0,Multiport Fuel Injection,110/150 @6250RPM,190/140 @3500RPM,10.2sec,11.5sec,1996-2000,Non-US
+520i,I-6 24V,2171,80/72,1:10.7,Multiport Fuel Injection,125/168 @6100RPM,210/150 @3500RPM,9.1sec,10.2sec,2000-2003,Non-US
+523i,I-6 24V,2496,84/75,1:10.5,Multiport Fuel Injection,125/168 @5500RPM,245/181 @3500RPM,8.5sec,9.6sec,1995-2000,Non-US
+525i,I-6 24V,2494,84/75,1:10.5,Multiport Fuel Injection,141/189 @6000RPM,245/181 @3500RPM,8.1sec,8.9sec,2000-2003, 
+528i,I-6 24V,2793,84/84,1:10.2,Multiport Fuel Injection,14w/190 @5500RPM,280/210 @3500RPM,7.5sec,8.8sec,1995-2000, 
+530i,I-6 24V,2979,84/89.6,1:10.2,Multiport Fuel Injection,170/228 @5900RPM,300/220 @3500RPM,7.1sec,7.6sec,2000-2003, 
+535i,V8 32V,3498,84/78.9,1:10,Multiport Fuel Injection,180/241 @5800RPM,345/254 @3500RPM,6.9sec,7.6,1996-2003,Non-US
+540i,V8 32V,4398,92/82.7,1:10,Multiport Fuel Injection,210/282 @5400RPM,440/320 @3600RPM,6.2sec,6.4,1996-2003, 
+M5,V8 32V,4941,94/89,1:11,Multiport Fuel Injection,294/394 @6600RPM,500/370 @3800RPM,5.3sec, ,1998-2003, 
+520d,I-4 16V,1951,88/84,1:19,Common rail turbodiesel,100/134 @4000,280/210 @1750RPM,10.6sec, ,2000-2003,Some European countries
+525d,I-6 24V,2497,80/82.8,1:17.5,Common rail turbodiesel,120/161 @4000,350/260 @2000RPM,8.9sec,9.1,2000-2003,Some European countries
+525td,I-6 12V,2498,80/82.8,1:22.0,Indirect injection turbodiesel,185/114 @4800,230/170 @1900RPM,11.9sec, ,1997-2000,Europe
+525tds,I-6 12V,2497,80/82.8,1:22.0,Indirect injection turbodiesel,105/141 @4000,280/210 @2200RPM,10.4sec,11.0,1996-2000,Europe
+530d,I-6 24V,2926,84/88,1:18.0,Common rail turbodiesel,135/181 @4000,390/290 @1750RPM,8.0sec,8.4,1998-2000,Europe
+530d,I-6 24V,2926,84/88,1:18.0,Common rail turbodiesel,142/193 @4000,410/302 @1750RPM,7.8sec,8.0,2000-2003,Europe
