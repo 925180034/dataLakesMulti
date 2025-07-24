@@ -1,3 +1,5 @@
+# .env.example 应该被提交，所以不应该在.gitignore中
+
 # Python
 __pycache__/
 *.py[cod]

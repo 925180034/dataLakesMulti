@@ -98,6 +98,98 @@ class AgentState(BaseModel):
         self.column_matches = []
         self.table_candidates = []
         self.table_matches = []
+    
+    @classmethod
+    def from_dict(cls, data: Dict[str, Any]) -> 'AgentState':
+        """从字典创建AgentState实例（处理LangGraph序列化问题）"""
+        if isinstance(data, cls):
+            return data
+        
+        # 转换嵌套的表信息
+        query_tables = []
+        if data.get('query_tables'):
+            for table_data in data['query_tables']:
+                if isinstance(table_data, dict):
+                    # 转换列信息
+                    columns = []
+                    if table_data.get('columns'):
+                        for col_data in table_data['columns']:
+                            if isinstance(col_data, dict):
+                                columns.append(ColumnInfo(**col_data))
+                            else:
+                                columns.append(col_data)
+                    table_data['columns'] = columns
+                    query_tables.append(TableInfo(**table_data))
+                else:
+                    query_tables.append(table_data)
+        
+        # 转换嵌套的列信息
+        query_columns = []
+        if data.get('query_columns'):
+            for col_data in data['query_columns']:
+                if isinstance(col_data, dict):
+                    query_columns.append(ColumnInfo(**col_data))
+                else:
+                    query_columns.append(col_data)
+        
+        # 转换其他嵌套对象
+        column_matches = []
+        if data.get('column_matches'):
+            for match_data in data['column_matches']:
+                if isinstance(match_data, dict):
+                    column_matches.append(MatchResult(**match_data))
+                else:
+                    column_matches.append(match_data)
+        
+        table_matches = []
+        if data.get('table_matches'):
+            for match_data in data['table_matches']:
+                if isinstance(match_data, dict):
+                    # 转换嵌套的匹配结果
+                    matched_columns = []
+                    if match_data.get('matched_columns'):
+                        for col_match in match_data['matched_columns']:
+                            if isinstance(col_match, dict):
+                                matched_columns.append(MatchResult(**col_match))
+                            else:
+                                matched_columns.append(col_match)
+                    match_data['matched_columns'] = matched_columns
+                    table_matches.append(TableMatchResult(**match_data))
+                else:
+                    table_matches.append(match_data)
+        
+        final_results = []
+        if data.get('final_results'):
+            for result_data in data['final_results']:
+                if isinstance(result_data, dict):
+                    # 转换嵌套的匹配结果
+                    matched_columns = []
+                    if result_data.get('matched_columns'):
+                        for col_match in result_data['matched_columns']:
+                            if isinstance(col_match, dict):
+                                matched_columns.append(MatchResult(**col_match))
+                            else:
+                                matched_columns.append(col_match)
+                    result_data['matched_columns'] = matched_columns
+                    final_results.append(TableMatchResult(**result_data))
+                else:
+                    final_results.append(result_data)
+        
+        # 创建新的状态对象
+        return cls(
+            user_query=data.get('user_query', ''),
+            query_tables=query_tables,
+            query_columns=query_columns,
+            strategy=TaskStrategy(data['strategy']) if data.get('strategy') else None,
+            current_step=data.get('current_step', 'planning'),
+            column_matches=column_matches,
+            table_candidates=data.get('table_candidates', []),
+            table_matches=table_matches,
+            final_results=final_results,
+            final_report=data.get('final_report', ''),
+            processing_log=data.get('processing_log', []),
+            error_messages=data.get('error_messages', [])
+        )
 
 
 class SearchResult(BaseModel):

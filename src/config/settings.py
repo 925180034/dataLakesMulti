@@ -3,6 +3,10 @@ from pydantic import BaseModel, Field
 import os
 import yaml
 from pathlib import Path
+from dotenv import load_dotenv
+
+# 加载.env文件
+load_dotenv()
 
 
 class LLMConfig(BaseModel):
@@ -10,6 +14,7 @@ class LLMConfig(BaseModel):
     provider: str = "openai"  # openai, anthropic
     model_name: str = "gpt-3.5-turbo"
     api_key: Optional[str] = None
+    base_url: Optional[str] = None  # 自定义API端点
     temperature: float = 0.1
     max_tokens: int = 2000
     timeout: int = 30
@@ -18,7 +23,7 @@ class LLMConfig(BaseModel):
 class VectorDBConfig(BaseModel):
     """向量数据库配置"""
     provider: str = "faiss"  # faiss, chromadb
-    dimension: int = 1536
+    dimension: int = 384  # SentenceTransformer all-MiniLM-L6-v2 维度
     index_type: str = "IVFFlat"
     db_path: str = "./data/vector_db"
     
@@ -195,11 +200,18 @@ class Settings(BaseModel):
         """使用环境变量覆盖配置"""
         # LLM配置
         if os.getenv("OPENAI_API_KEY"):
+            self.llm.provider = "openai"
             self.llm.api_key = os.getenv("OPENAI_API_KEY")
+            if os.getenv("OPENAI_BASE_URL"):
+                self.llm.base_url = os.getenv("OPENAI_BASE_URL")
         elif os.getenv("ANTHROPIC_API_KEY"):
             self.llm.provider = "anthropic"
             self.llm.model_name = "claude-3-sonnet-20240229"
             self.llm.api_key = os.getenv("ANTHROPIC_API_KEY")
+        elif os.getenv("GEMINI_API_KEY"):
+            self.llm.provider = "gemini"
+            self.llm.model_name = "gemini-1.5-flash"
+            self.llm.api_key = os.getenv("GEMINI_API_KEY")
         
         # 路径配置
         if os.getenv("VECTOR_DB_PATH"):

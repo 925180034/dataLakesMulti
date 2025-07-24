@@ -1,0 +1,32 @@
+[
+  {
+    "table_name": "basketball_seattle_stats",
+    "column_name": "defensive_rating",
+    "data_type": "int",
+    "sample_values": ["85", "95", "101", "103", "103"]
+  },
+  {
+    "table_name": "basketball_minnesota_stats", 
+    "column_name": "defensive_rating",
+    "data_type": "int",
+    "sample_values": ["125", "97", "111", "112", "120"]
+  },
+  {
+    "table_name": "baseball_pitching_stats",
+    "column_name": "opponent_avg", 
+    "data_type": "float",
+    "sample_values": ["0.257", "0.257", "0.264", "0.259", "0.251"]
+  },
+  {
+    "table_name": "baseball_batting_stats",
+    "column_name": "opponent_avg",
+    "data_type": "float", 
+    "sample_values": ["0.262", "0.249", "0.255", "0.26", "0.254"]
+  },
+  {
+    "table_name": "minor_league_batting",
+    "column_name": "batting_avg",
+    "data_type": "float",
+    "sample_values": ["0.364", "0.301", "0.286", "0.288", "0.276"]
+  }
+]

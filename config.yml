@@ -25,7 +25,7 @@ llm:
 # 向量数据库配置
 vector_db:
   provider: "faiss"  # faiss, chromadb, pinecone
-  dimension: 1536
+  dimension: 384  # SentenceTransformer all-MiniLM-L6-v2 维度
   index_type: "IVFFlat"
   db_path: "./data/vector_db"
   collection_name: "data_lakes_vectors"

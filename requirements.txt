@@ -1,0 +1,36 @@
+# 核心LangGraph和LangChain依赖
+langgraph==0.5.4
+langchain==0.3.26
+langchain-openai==0.3.28
+langchain-anthropic==0.3.17
+
+# Google Gemini API
+google-generativeai==0.8.5
+
+# 向量搜索和索引
+faiss-cpu==1.7.4
+chromadb==0.4.22
+sentence-transformers==2.7.0
+
+# 数据处理
+pandas==2.2.2
+numpy==1.24.3
+scikit-learn==1.4.2
+
+# 配置管理
+pydantic==2.11.7
+python-dotenv==1.0.1
+pyyaml==6.0.1
+
+# Web框架
+fastapi==0.110.2
+uvicorn==0.29.0
+
+# 工具库
+click==8.1.7
+
+# 开发工具
+jupyter==1.0.0
+pytest==8.2.0
+black==24.4.2
+isort==5.13.2

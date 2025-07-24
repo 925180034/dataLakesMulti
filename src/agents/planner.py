@@ -15,6 +15,8 @@ class PlannerAgent(BaseAgent):
     
     async def process(self, state: AgentState) -> AgentState:
         """处理规划任务"""
+        # 确保状态对象正确
+        state = self._ensure_agent_state(state)
         self.log_progress(state, "开始任务规划")
         
         # 如果还没有选择策略，进行策略决策
@@ -34,28 +36,41 @@ class PlannerAgent(BaseAgent):
         self.log_progress(state, "分析用户需求，选择处理策略")
         
         try:
-            # 构建策略决策Prompt
-            prompt = format_prompt(
-                "planner_strategy_decision",
-                user_query=state.user_query,
-                table_count=len(state.query_tables),
-                column_count=len(state.query_columns)
-            )
+            # 基于输入数据类型的策略决策规则
+            has_tables = len(state.query_tables) > 0
+            has_columns = len(state.query_columns) > 0
             
-            # 调用LLM进行策略选择
-            response = await self.call_llm(prompt)
-            
-            # 解析策略选择
-            if "1" in response or "Bottom-Up" in response or "自下而上" in response:
+            # 简化的策略决策逻辑
+            if has_columns and not has_tables:
+                # 只有列数据，使用BOTTOM_UP
                 state.strategy = TaskStrategy.BOTTOM_UP
-                self.log_progress(state, "选择Bottom-Up策略: 先匹配列，再聚合表")
-            elif "2" in response or "Top-Down" in response or "自上而下" in response:
+                self.log_progress(state, "检测到列数据，选择Bottom-Up策略: 先匹配列，再聚合表")
+            elif has_tables and not has_columns:
+                # 只有表数据，使用TOP_DOWN
                 state.strategy = TaskStrategy.TOP_DOWN
-                self.log_progress(state, "选择Top-Down策略: 先发现表，再匹配列")
+                self.log_progress(state, "检测到表数据，选择Top-Down策略: 先发现表，再匹配列")
             else:
-                # 默认策略
-                state.strategy = TaskStrategy.BOTTOM_UP
-                self.log_progress(state, "使用默认Bottom-Up策略")
+                # 使用LLM进行策略选择
+                prompt = format_prompt(
+                    "planner_strategy_decision",
+                    user_query=state.user_query,
+                    table_count=len(state.query_tables),
+                    column_count=len(state.query_columns)
+                )
+                
+                response = await self.call_llm(prompt)
+                
+                # 解析策略选择
+                if "1" in response or "Bottom-Up" in response or "自下而上" in response:
+                    state.strategy = TaskStrategy.BOTTOM_UP
+                    self.log_progress(state, "LLM选择Bottom-Up策略: 先匹配列，再聚合表")
+                elif "2" in response or "Top-Down" in response or "自上而下" in response:
+                    state.strategy = TaskStrategy.TOP_DOWN
+                    self.log_progress(state, "LLM选择Top-Down策略: 先发现表，再匹配列")
+                else:
+                    # 默认策略
+                    state.strategy = TaskStrategy.BOTTOM_UP
+                    self.log_progress(state, "使用默认Bottom-Up策略")
                 
         except Exception as e:
             self.log_error(state, f"策略决策失败: {e}")

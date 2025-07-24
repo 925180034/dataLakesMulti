@@ -1,0 +1,25 @@
+# 测试查询示例
+
+## JOIN 查询 (用于寻找可连接的表)
+1. "find tables with basketball defensive rating data for joining"  
+   - 期望匹配: basketball_seattle_stats 和 basketball_minnesota_stats (defensive_rating列)
+
+2. "find baseball statistics tables that can be joined on opponent average"
+   - 期望匹配: baseball_pitching_stats 和 baseball_batting_stats (opponent_avg列)
+
+3. "discover tables with batting average columns for join operations"
+   - 期望匹配: minor_league_batting (batting_avg) 和其他平均数列
+
+## UNION 查询 (用于寻找结构相似的表)  
+4. "find similar basketball statistics tables for union operations"
+   - 期望匹配: basketball_seattle_stats 和 basketball_minnesota_stats
+
+5. "discover baseball tables with similar schema for data union"
+   - 期望匹配: baseball_pitching_stats 和 baseball_batting_stats
+
+## 基于数据集的真实匹配关系:
+- csvData1549285__2.csv ↔ csvData20409520__4.csv (defensive_rating列)
+- csvData15936069__14 ↔ csvData15936069__16 (opponent_avg列)  
+- csvData13638124__4 ↔ csvData7320164__7 (GIDP列)
+- csvData19387543__3 ↔ csvData11762781 (avg列)
+- csvData13051044__2 ↔ csvData21266749 (多个篮球统计列)

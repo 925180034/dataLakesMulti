@@ -19,6 +19,13 @@ class BaseAgent(ABC):
         """处理状态并返回更新后的状态"""
         pass
     
+    def _ensure_agent_state(self, state) -> AgentState:
+        """确保输入是AgentState对象（处理LangGraph序列化问题）"""
+        from src.core.models import AgentState
+        if isinstance(state, dict):
+            return AgentState.from_dict(state)
+        return state
+    
     async def call_llm(self, prompt: str, system_prompt: Optional[str] = None) -> str:
         """调用LLM生成文本"""
         try:

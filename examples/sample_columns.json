@@ -1,0 +1,12 @@
+[
+  {
+    "table_name": "orders",
+    "column_name": "customer_id",
+    "data_type": "int",
+    "sample_values": [
+      "1",
+      "2",
+      "3"
+    ]
+  }
+]
