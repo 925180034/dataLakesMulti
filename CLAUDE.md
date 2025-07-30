@@ -28,19 +28,34 @@ cp .env.example .env
 ```
 
 ### Running the System
+
+**Recommended Method** (using run_cli.py wrapper):
 ```bash
 # CLI discovery command
-python -m src.cli discover -q "find joinable tables" -t examples/sample_tables.json -f markdown
+python run_cli.py discover -q "find joinable tables" -t examples/sample_tables.json -f markdown
 
 # Start API server
-python -m src.cli serve
+python run_cli.py serve
 
 # Index data for faster search
-python -m src.cli index-tables examples/sample_tables.json
-python -m src.cli index-columns examples/sample_columns.json
+python run_cli.py index-tables examples/sample_tables.json
+python run_cli.py index-columns examples/sample_columns.json
 
 # View configuration
-python -m src.cli config
+python run_cli.py config
+
+# Get help
+python run_cli.py --help
+```
+
+**Alternative Methods**:
+```bash
+# Method 1: Direct module execution (requires PYTHONPATH=.)
+export PYTHONPATH=.
+python -m src.cli discover -q "find joinable tables" -t examples/sample_tables.json -f markdown
+
+# Method 2: Using shell wrapper (if available)
+./datalakes discover -q "find joinable tables" -t examples/sample_tables.json -f markdown
 ```
 
 ### Testing
@@ -172,15 +187,61 @@ When running `python -m src.cli serve`:
 - **pydantic==2.11.7**: Data validation and settings
 - **fastapi==0.110.2**: Web API framework
 
+## Project Status
+
+### ✅ Fully Functional
+- **Configuration System**: All CLI configuration commands work
+- **Gemini API Integration**: Text generation and JSON output working properly
+- **CLI Interface**: All command-line functionality operational
+- **Embedding System**: Offline mode with virtual vectors (network-independent)
+- **Basic Testing**: All pytest tests passing
+- **Multiple Launch Methods**: run_cli.py, direct module execution, shell wrapper
+
+### ⚠️ Partially Functional
+- **Data Discovery**: Basic functionality works, but workflow has minor bugs
+- **Vector Search**: Uses virtual vectors in offline mode (lower accuracy)
+- **API Server**: Can start but not fully tested
+
+### 🔧 Areas for Improvement
+- **Full Network Functionality**: Requires internet access to download HuggingFace models
+- **Workflow Error Handling**: Some edge cases need optimization
+
+## Quick Start Reference
+
+For detailed setup instructions, see `QUICK_START.md`:
+1. Setup Python 3.10+ environment
+2. Install dependencies: `pip install -r requirements.txt`
+3. Configure API keys in `.env` file
+4. Test installation: `python run_cli.py config`
+5. Run discovery: `python run_cli.py discover -q "your query" -t examples/sample_tables.json`
+
 ## Troubleshooting
 
 ### Common Issues
 1. **Missing API Keys**: Ensure `.env` file has correct API keys
+   - Copy from `.env.example` and add your API key
+   - Recommended: Use `GEMINI_API_KEY` (free and stable)
+
 2. **Import Errors**: Verify all dependencies in `requirements.txt` are installed
-3. **Database Issues**: Check that `./data/vector_db` and `./data/index_db` directories exist
-4. **Memory Issues**: Reduce `batch_size` in `config.yml` for large datasets
+   - Run: `pip install -r requirements.txt`
+   - Use virtual environment to avoid conflicts
+
+3. **Module Not Found**: Use recommended launch method
+   - Recommended: `python run_cli.py` (handles PYTHONPATH automatically)
+   - Alternative: `export PYTHONPATH=. && python -m src.cli`
+
+4. **Network Issues**: System works offline with limited functionality
+   - Embedding system uses virtual vectors in offline mode
+   - For full functionality, ensure internet access to download models
+
+5. **Database Issues**: Check that data directories exist
+   - `./data/vector_db` and `./data/index_db` directories
+   - System will create them automatically if missing
+
+6. **Memory Issues**: Reduce `batch_size` in `config.yml` for large datasets
 
 ### Debugging
 - Enable debug mode: Set `DEBUG=true` in `.env`
 - Check logs in `./logs/` directory
 - Use verbose CLI output: Add `-v` flag to commands
+- Test API connection: Use test scripts in `QUICK_START.md`

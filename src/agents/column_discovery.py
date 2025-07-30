@@ -9,6 +9,7 @@ from src.core.models import (
 from src.tools.vector_search import vector_search_engine
 from src.tools.value_search import value_search_engine
 from src.tools.embedding import get_embedding_generator
+from src.tools.hybrid_similarity import hybrid_similarity_engine
 from src.config.prompts import format_prompt
 from src.config.settings import settings
 
@@ -23,6 +24,7 @@ class ColumnDiscoveryAgent(BaseAgent):
         self.vector_search = vector_search_engine
         self.value_search = value_search_engine
         self.embedding_gen = get_embedding_generator()
+        self.hybrid_similarity = hybrid_similarity_engine
     
     async def process(self, state: AgentState) -> AgentState:
         """处理列发现任务"""
@@ -116,6 +118,10 @@ class ColumnDiscoveryAgent(BaseAgent):
                         )
                         matches.append(match)
             
+            # 使用混合相似度计算增强匹配结果
+            if matches:
+                matches = await self._enhance_matches_with_hybrid_similarity(query_column, matches)
+            
             # 使用LLM进行最终的匹配评估和筛选
             if matches:
                 matches = await self._llm_evaluate_matches(query_column, matches)
@@ -135,6 +141,100 @@ class ColumnDiscoveryAgent(BaseAgent):
             logger.error(f"列 {query_column.full_name} 匹配失败: {e}")
         
         return matches
+    
+    async def _enhance_matches_with_hybrid_similarity(
+        self, 
+        query_column: ColumnInfo, 
+        candidate_matches: List[MatchResult]
+    ) -> List[MatchResult]:
+        """使用混合相似度计算增强匹配结果"""
+        try:
+            enhanced_matches = []
+            
+            # 确定场景类型
+            scenario = "SLD" if query_column.sample_values else "SMD"
+            
+            for match in candidate_matches:
+                # 解析目标列信息（从metadata中获取或重新构建）
+                target_column = self._create_target_column_info(match.target_column)
+                
+                if target_column:
+                    # 使用混合相似度计算精确相似度
+                    similarity_result = self.hybrid_similarity.calculate_column_similarity(
+                        query_column, target_column, scenario
+                    )
+                    
+                    # 创建增强的匹配结果
+                    enhanced_confidence = similarity_result['combined_similarity']
+                    
+                    # 合并原有置信度和新计算的相似度
+                    final_confidence = 0.3 * match.confidence + 0.7 * enhanced_confidence
+                    
+                    enhanced_reason = (
+                        f"混合相似度 ({scenario}): {enhanced_confidence:.3f} "
+                        f"[名称: {similarity_result['name_similarity']:.3f}, "
+                        f"结构: {similarity_result['structural_similarity']:.3f}, "
+                        f"语义: {similarity_result['semantic_similarity']:.3f}] | "
+                        f"原始: {match.reason}"
+                    )
+                    
+                    enhanced_match = MatchResult(
+                        source_column=match.source_column,
+                        target_column=match.target_column,
+                        confidence=min(final_confidence, 1.0),
+                        reason=enhanced_reason,
+                        match_type=f"hybrid_{scenario.lower()}"
+                    )
+                    
+                    enhanced_matches.append(enhanced_match)
+                    
+                    logger.debug(f"增强匹配 {match.target_column}: "
+                               f"{match.confidence:.3f} -> {final_confidence:.3f}")
+                else:
+                    # 如果无法获取目标列信息，保留原匹配
+                    enhanced_matches.append(match)
+            
+            logger.info(f"混合相似度增强完成，处理了 {len(enhanced_matches)} 个匹配")
+            return enhanced_matches
+            
+        except Exception as e:
+            logger.error(f"混合相似度增强失败: {e}")
+            return candidate_matches
+    
+    def _create_target_column_info(self, target_column_full_name: str) -> ColumnInfo:
+        """根据目标列全名创建ColumnInfo对象"""
+        try:
+            # 解析表名和列名
+            if '.' in target_column_full_name:
+                table_name, column_name = target_column_full_name.split('.', 1)
+            else:
+                table_name = "unknown"
+                column_name = target_column_full_name
+            
+            # 尝试从向量搜索引擎的元数据中获取详细信息
+            target_column_info = None
+            
+            # 遍历已索引的列信息查找匹配
+            for col_id, col_info in self.vector_search.column_metadata.items():
+                if col_info.full_name == target_column_full_name:
+                    target_column_info = col_info
+                    break
+            
+            # 如果找不到完整信息，创建基础信息
+            if not target_column_info:
+                target_column_info = ColumnInfo(
+                    table_name=table_name,
+                    column_name=column_name,
+                    data_type=None,
+                    sample_values=[]
+                )
+                logger.debug(f"为 {target_column_full_name} 创建了基础列信息")
+            
+            return target_column_info
+            
+        except Exception as e:
+            logger.error(f"创建目标列信息失败 {target_column_full_name}: {e}")
+            return None
     
     async def _semantic_search(self, query_column: ColumnInfo) -> List[VectorSearchResult]:
         """执行语义搜索"""
