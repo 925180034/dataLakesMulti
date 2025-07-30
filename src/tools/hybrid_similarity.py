@@ -547,3 +547,6 @@ class HybridSimilarityEngine:
 
 # 全局实例
 hybrid_similarity_engine = HybridSimilarityEngine()
+
+# 别名兼容性
+HybridSimilarityCalculator = HybridSimilarityEngine

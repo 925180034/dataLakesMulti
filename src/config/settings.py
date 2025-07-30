@@ -22,10 +22,22 @@ class LLMConfig(BaseModel):
 
 class VectorDBConfig(BaseModel):
     """向量数据库配置"""
-    provider: str = "faiss"  # faiss, chromadb
+    provider: str = "faiss"  # faiss, chromadb, hnsw
     dimension: int = 384  # SentenceTransformer all-MiniLM-L6-v2 维度
     index_type: str = "IVFFlat"
     db_path: str = "./data/vector_db"
+    
+    # HNSW特定配置 - 基于LakeBench最佳实践
+    hnsw_config: Dict[str, Any] = Field(default_factory=lambda: {
+        "M": 32,                    # 每个节点的连接数，LakeBench验证的最优值
+        "ef_construction": 100,     # 构建时搜索深度，影响构建质量
+        "ef": 10,                   # 查询时搜索深度，平衡速度和准确率
+        "max_elements": 100000,     # 支持的最大元素数量
+        "space": "cosine"           # 距离度量：cosine, l2, ip
+    })
+    
+    # 通用性能配置
+    max_elements: int = 100000
     
     
 class IndexConfig(BaseModel):
@@ -33,6 +45,49 @@ class IndexConfig(BaseModel):
     provider: str = "whoosh"
     index_path: str = "./data/index_db"
     
+
+class HungarianMatcherConfig(BaseModel):
+    """匈牙利算法匹配器配置"""
+    enabled: bool = True
+    similarity_threshold: float = 0.6  # 匹配阈值
+    batch_size: int = 100               # 批量匹配大小
+    max_table_size: int = 50            # 最大表列数限制
+    
+    # 评分权重配置
+    scoring_weights: Dict[str, float] = Field(default_factory=lambda: {
+        "raw_total": 0.1,           # 原始总分权重
+        "normalized_min": 0.2,      # 最小列数标准化权重
+        "normalized_max": 0.2,      # 最大列数标准化权重
+        "jaccard_style": 0.15,      # Jaccard风格权重
+        "average_similarity": 0.2,  # 平均相似度权重
+        "weighted": 0.15            # 加权分数权重
+    })
+
+
+class LSHPrefilterConfig(BaseModel):
+    """LSH预过滤器配置 - Phase 2新增"""
+    enabled: bool = True
+    num_hash_functions: int = 64      # LSH哈希函数数量
+    num_hash_tables: int = 8          # 哈希表数量
+    signature_length: int = 32        # MinHash签名长度
+    bands: int = 16                   # MinHash分带数量
+    rows_per_band: int = 2            # 每带行数
+    similarity_threshold: float = 0.5  # 相似度阈值
+    max_candidates: int = 1000        # 最大候选数量
+    save_path: str = "./data/lsh_indices"  # 索引保存路径
+
+
+class VectorizedOptimizerConfig(BaseModel):
+    """向量化计算优化器配置 - Phase 2新增"""
+    enabled: bool = True
+    batch_size: int = 1000            # 批处理大小
+    use_gpu: bool = False             # 是否使用GPU
+    max_workers: int = 4              # 最大工作进程数
+    chunk_size: int = 100             # 分块大小
+    parallel_threshold: int = 10000   # 并行处理阈值
+    memory_limit_mb: int = 2048       # 内存限制(MB)
+    precision: str = 'float32'        # 计算精度：float16, float32, float64
+
 
 class ThresholdConfig(BaseModel):
     """阈值配置"""
@@ -49,6 +104,9 @@ class ThresholdConfig(BaseModel):
     column_count_weight: float = 0.3
     confidence_weight: float = 0.5
     key_column_bonus: float = 0.2
+    
+    # HNSW搜索参数
+    hnsw_search_k_multiplier: float = 3.0  # 搜索候选数倍数
 
 
 class CacheConfig(BaseModel):
@@ -56,6 +114,19 @@ class CacheConfig(BaseModel):
     enabled: bool = True
     cache_dir: str = "./cache"
     ttl_seconds: int = 3600  # 1小时
+    
+    # 多级缓存配置 - Phase 2准备
+    multi_level_cache: Dict[str, Any] = Field(default_factory=lambda: {
+        "enabled": False,  # Phase 2启用
+        "l1_memory_size": 1000,        # L1内存缓存大小
+        "l2_redis_enabled": False,     # L2 Redis缓存
+        "l2_redis_url": "redis://localhost:6379",
+        "l3_disk_enabled": True,       # L3磁盘缓存
+        "l3_disk_path": "./cache/l3"
+    })
+    
+    # 缓存策略配置
+    max_size_mb: int = 1024
     
 
 class LoggingConfig(BaseModel):
@@ -99,6 +170,9 @@ class Settings(BaseModel):
     llm: LLMConfig = Field(default_factory=LLMConfig)
     vector_db: VectorDBConfig = Field(default_factory=VectorDBConfig)
     index: IndexConfig = Field(default_factory=IndexConfig)
+    hungarian_matcher: HungarianMatcherConfig = Field(default_factory=HungarianMatcherConfig)
+    lsh_prefilter: LSHPrefilterConfig = Field(default_factory=LSHPrefilterConfig)  # Phase 2新增
+    vectorized_optimizer: VectorizedOptimizerConfig = Field(default_factory=VectorizedOptimizerConfig)  # Phase 2新增
     thresholds: ThresholdConfig = Field(default_factory=ThresholdConfig)
     cache: CacheConfig = Field(default_factory=CacheConfig)
     logging: LoggingConfig = Field(default_factory=LoggingConfig)
@@ -153,6 +227,21 @@ class Settings(BaseModel):
             if 'index' in config_data:
                 index_config = config_data['index']
                 settings.index = IndexConfig(**index_config)
+            
+            # 更新匈牙利匹配器配置
+            if 'hungarian_matcher' in config_data:
+                hungarian_config = config_data['hungarian_matcher']
+                settings.hungarian_matcher = HungarianMatcherConfig(**hungarian_config)
+            
+            # 更新LSH预过滤器配置 - Phase 2新增
+            if 'lsh_prefilter' in config_data:
+                lsh_config = config_data['lsh_prefilter']
+                settings.lsh_prefilter = LSHPrefilterConfig(**lsh_config)
+            
+            # 更新向量化优化器配置 - Phase 2新增
+            if 'vectorized_optimizer' in config_data:
+                vectorized_config = config_data['vectorized_optimizer']
+                settings.vectorized_optimizer = VectorizedOptimizerConfig(**vectorized_config)
             
             # 更新阈值配置
             if 'thresholds' in config_data:

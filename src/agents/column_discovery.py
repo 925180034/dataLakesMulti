@@ -6,7 +6,7 @@ from src.core.models import (
     AgentState, ColumnInfo, MatchResult, 
     VectorSearchResult, ValueSearchResult
 )
-from src.tools.vector_search import vector_search_engine
+from src.tools.vector_search import get_vector_search_engine
 from src.tools.value_search import value_search_engine
 from src.tools.embedding import get_embedding_generator
 from src.tools.hybrid_similarity import hybrid_similarity_engine
@@ -21,7 +21,7 @@ class ColumnDiscoveryAgent(BaseAgent):
     
     def __init__(self):
         super().__init__("ColumnDiscoveryAgent")
-        self.vector_search = vector_search_engine
+        self.vector_search = get_vector_search_engine()
         self.value_search = value_search_engine
         self.embedding_gen = get_embedding_generator()
         self.hybrid_similarity = hybrid_similarity_engine
@@ -301,10 +301,10 @@ class ColumnDiscoveryAgent(BaseAgent):
             # 构建评估prompt
             prompt = format_prompt(
                 "column_discovery",
-                table_name=query_column.table_name,
-                column_name=query_column.column_name,
+                table_name=query_column.table_name or "未知",
+                column_name=query_column.column_name or "未知",
                 data_type=query_column.data_type or "未知",
-                sample_values=str(query_column.sample_values[:5]),
+                sample_values=str(query_column.sample_values[:5]) if query_column.sample_values else "无",
                 candidates=self._format_candidates_for_llm(candidates_info)
             )
             

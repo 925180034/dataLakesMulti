@@ -24,11 +24,20 @@ llm:
 
 # 向量数据库配置
 vector_db:
-  provider: "faiss"  # faiss, chromadb, pinecone
+  provider: "faiss"  # faiss, chromadb, hnsw - 使用FAISS确保稳定性
   dimension: 384  # SentenceTransformer all-MiniLM-L6-v2 维度
-  index_type: "IVFFlat"
+  index_type: "IVFFlat"  # 保留兼容性，HNSW不使用此参数
   db_path: "./data/vector_db"
   collection_name: "data_lakes_vectors"
+  max_elements: 100000  # HNSW最大元素数量
+  
+  # HNSW特定配置 - 基于LakeBench最佳实践
+  hnsw_config:
+    M: 32                    # LakeBench验证的最优参数
+    ef_construction: 100     # 构建质量保证
+    ef: 10                   # 查询速度平衡点
+    max_elements: 100000     # 支持10万级规模
+    space: "cosine"          # 余弦距离度量
 
 # 倒排索引配置
 index:
@@ -38,6 +47,45 @@ index:
     - "table_name"
     - "column_name"
     - "values"
+
+# 匈牙利算法匹配器配置 - Phase 1
+hungarian_matcher:
+  enabled: true
+  similarity_threshold: 0.6  # 匹配阈值
+  batch_size: 100           # 批量匹配大小
+  max_table_size: 50        # 最大表列数限制
+  
+  # 评分权重配置
+  scoring_weights:
+    raw_total: 0.1           # 原始总分权重
+    normalized_min: 0.2      # 最小列数标准化权重
+    normalized_max: 0.2      # 最大列数标准化权重
+    jaccard_style: 0.15      # Jaccard风格权重
+    average_similarity: 0.2  # 平均相似度权重
+    weighted: 0.15           # 加权分数权重
+
+# LSH预过滤器配置 - Phase 2新增
+lsh_prefilter:
+  enabled: true
+  num_hash_functions: 64     # LSH哈希函数数量，影响精度
+  num_hash_tables: 8         # 哈希表数量，影响召回率
+  signature_length: 32       # MinHash签名长度
+  bands: 16                  # MinHash分带数量
+  rows_per_band: 2          # 每带行数
+  similarity_threshold: 0.5  # 预过滤相似度阈值
+  max_candidates: 1000      # 最大候选数量
+  save_path: "./data/lsh_indices"
+
+# 向量化计算优化器配置 - Phase 2新增
+vectorized_optimizer:
+  enabled: true
+  batch_size: 1000          # 批处理大小，影响内存和速度
+  use_gpu: false            # GPU加速（需要CuPy）
+  max_workers: 4            # 并行工作进程数
+  chunk_size: 100           # 分块大小
+  parallel_threshold: 10000 # 并行处理阈值
+  memory_limit_mb: 2048     # 内存限制
+  precision: "float32"      # 计算精度
 
 # 阈值配置
 thresholds:
@@ -54,6 +102,9 @@ thresholds:
   column_count_weight: 0.3
   confidence_weight: 0.5
   key_column_bonus: 0.2
+  
+  # HNSW搜索参数 - Phase 1新增
+  hnsw_search_k_multiplier: 3.0  # 搜索候选数倍数
 
 # 缓存配置
 cache:
@@ -61,6 +112,15 @@ cache:
   cache_dir: "./cache"
   ttl_seconds: 3600  # 1小时
   max_size_mb: 1024  # 1GB
+  
+  # 多级缓存配置 - Phase 2已启用
+  multi_level_cache:
+    enabled: true   # Phase 2已启用
+    l1_memory_size: 1000        # L1内存缓存大小
+    l2_redis_enabled: false     # L2 Redis缓存（可选）
+    l2_redis_url: "redis://localhost:6379"
+    l3_disk_enabled: true       # L3磁盘缓存
+    l3_disk_path: "./cache/l3"
 
 # 日志配置
 logging:

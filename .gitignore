@@ -162,3 +162,7 @@ keys/
 # 备份文件
 *.bak
 *.backup
+
+# 项目知识文档（包含可能的版权内容）
+ProjectKnowledge/
+**/ProjectKnowledge/

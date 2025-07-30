@@ -103,8 +103,59 @@ def discover(query: str, tables: str, columns: str, output: str, format: str):
 
 @cli.command()
 @click.option('--tables', '-t', required=True, help='表数据JSON文件路径')
+@click.option('--columns', '-c', help='列数据JSON文件路径（可选）')
+@click.option('--output', '-o', help='索引保存路径（可选）')
+def build_index(tables: str, columns: str, output: str):
+    """构建WebTable数据索引（推荐使用）"""
+    try:
+        from src.tools.data_indexer import build_webtable_indices
+        
+        tables_path = Path(tables)
+        if not tables_path.exists():
+            click.echo(f"错误: 表文件不存在: {tables}", err=True)
+            sys.exit(1)
+        
+        if columns:
+            columns_path = Path(columns)
+            if not columns_path.exists():
+                click.echo(f"错误: 列文件不存在: {columns}", err=True)
+                sys.exit(1)
+        
+        click.echo("🔧 开始构建WebTable数据索引...")
+        click.echo(f"📊 表数据文件: {tables}")
+        if columns:
+            click.echo(f"📊 列数据文件: {columns}")
+        if output:
+            click.echo(f"💾 索引保存路径: {output}")
+        
+        # 构建索引
+        result = asyncio.run(build_webtable_indices(
+            tables_file=str(tables_path),
+            columns_file=str(columns_path) if columns else None,
+            save_path=output
+        ))
+        
+        if result['status'] == 'success':
+            click.echo("\n✅ 索引构建完成!")
+            click.echo(f"📊 统计信息:")
+            click.echo(f"  - 处理表数: {result['tables_processed']}")
+            click.echo(f"  - 索引表数: {result['tables_indexed']}")
+            click.echo(f"  - 处理列数: {result['columns_processed']}")
+            click.echo(f"  - 索引列数: {result['columns_indexed']}")
+            click.echo(f"  - 索引路径: {result['index_path']}")
+        else:
+            click.echo(f"❌ 索引构建失败: {result.get('error', '未知错误')}", err=True)
+            sys.exit(1)
+        
+    except Exception as e:
+        click.echo(f"❌ 索引构建失败: {e}", err=True)
+        sys.exit(1)
+
+
+@cli.command()
+@click.option('--tables', '-t', required=True, help='表数据JSON文件路径')
 def index_tables(tables: str):
-    """为表建立索引"""
+    """为表建立索引（兼容性命令）"""
     try:
         tables_path = Path(tables)
         if not tables_path.exists():
@@ -131,7 +182,7 @@ def index_tables(tables: str):
 @cli.command()
 @click.option('--columns', '-c', required=True, help='列数据JSON文件路径')
 def index_columns(columns: str):
-    """为列建立索引"""
+    """为列建立索引（兼容性命令）"""
     try:
         columns_path = Path(columns)
         if not columns_path.exists():
@@ -152,6 +203,41 @@ def index_columns(columns: str):
         
     except Exception as e:
         click.echo(f"❌ 索引建立失败: {e}", err=True)
+        sys.exit(1)
+
+
+@cli.command()
+@click.option('--path', '-p', help='索引路径（可选，默认使用配置路径）')
+def verify_index(path: str):
+    """验证索引是否正确构建"""
+    try:
+        from src.tools.data_indexer import verify_indices
+        
+        click.echo("🔍 开始验证索引...")
+        
+        result = asyncio.run(verify_indices(path))
+        
+        if result['status'] == 'success':
+            click.echo("✅ 索引验证成功!")
+            click.echo("📊 索引统计:")
+            
+            vector_stats = result.get('vector_search', {})
+            click.echo(f"  向量搜索:")
+            click.echo(f"    - 列数量: {vector_stats.get('column_count', 0)}")
+            click.echo(f"    - 表数量: {vector_stats.get('table_count', 0)}")
+            
+            value_stats = result.get('value_search', {})
+            click.echo(f"  值搜索:")
+            click.echo(f"    - 索引列数: {value_stats.get('indexed_columns', 0)}")
+            
+            if vector_stats.get('column_count', 0) == 0 and vector_stats.get('table_count', 0) == 0:
+                click.echo("\n⚠️  警告: 索引为空，请先使用 build-index 命令构建索引")
+        else:
+            click.echo(f"❌ 索引验证失败: {result.get('error', '未知错误')}", err=True)
+            sys.exit(1)
+        
+    except Exception as e:
+        click.echo(f"❌ 索引验证失败: {e}", err=True)
         sys.exit(1)
 
 

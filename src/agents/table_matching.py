@@ -14,20 +14,45 @@ logger = logging.getLogger(__name__)
 
 
 class TableMatchingAgent(BaseAgent):
-    """表匹配智能体 - 详细比较两个表，找出所有匹配的列对"""
+    """表匹配智能体 - 详细比较两个表，找出所有匹配的列对
+    
+    Version 2.0: 支持传统匹配和匈牙利算法增强匹配
+    """
     
     def __init__(self):
         super().__init__("TableMatchingAgent")
         self.embedding_gen = get_embedding_generator()
         # 缓存表信息以避免重复加载
         self.table_info_cache: Dict[str, TableInfo] = {}
+        
+        # 判断是否启用增强匹配
+        self.enhanced_matching_enabled = settings.hungarian_matcher.enabled
+        self.enhanced_agent = None
+        
+        if self.enhanced_matching_enabled:
+            try:
+                from src.agents.enhanced_table_matching import EnhancedTableMatchingAgent
+                self.enhanced_agent = EnhancedTableMatchingAgent()
+                logger.info("匈牙利算法增强匹配已启用")
+            except ImportError as e:
+                logger.warning(f"无法加载增强匹配模块: {e}，将使用传统匹配方法")
+                self.enhanced_matching_enabled = False
     
     async def process(self, state: AgentState) -> AgentState:
         """处理表匹配任务"""
         # 确保状态对象正确
         state = self._ensure_agent_state(state)
-        self.log_progress(state, "开始表对表匹配处理")
         
+        # 选择匹配方法
+        if self.enhanced_matching_enabled and self.enhanced_agent:
+            self.log_progress(state, "开始增强表匹配处理（匈牙利算法）")
+            return await self.enhanced_agent.process(state)
+        else:
+            self.log_progress(state, "开始传统表匹配处理")
+            return await self._traditional_matching_process(state)
+    
+    async def _traditional_matching_process(self, state: AgentState) -> AgentState:
+        """传统匹配处理流程"""
         if not state.query_tables or not state.table_candidates:
             self.log_error(state, "缺少查询表或候选表信息")
             return state
@@ -62,13 +87,13 @@ class TableMatchingAgent(BaseAgent):
             state.table_matches = valid_matches
             state.final_results = valid_matches[:settings.thresholds.top_k_results]
             
-            self.log_progress(state, f"表匹配完成，找到 {len(valid_matches)} 个有效匹配")
+            self.log_progress(state, f"传统表匹配完成，找到 {len(valid_matches)} 个有效匹配")
             
             # 更新处理步骤
             state.current_step = "finalization"
             
         except Exception as e:
-            self.log_error(state, f"表匹配处理失败: {e}")
+            self.log_error(state, f"传统表匹配处理失败: {e}")
         
         return state
     
@@ -520,7 +545,8 @@ class TableMatchingAgent(BaseAgent):
         
         try:
             # 从向量搜索引擎的元数据中获取表信息
-            from src.tools.vector_search import vector_search_engine
+            from src.tools.vector_search import get_vector_search_engine
+            vector_search_engine = get_vector_search_engine()
             
             # 查找表元数据
             for table_info in vector_search_engine.table_metadata.values():

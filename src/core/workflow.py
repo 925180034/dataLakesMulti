@@ -43,9 +43,20 @@ class DataLakesWorkflow:
             # 异步加载索引
             async def load_indices():
                 index_path = settings.vector_db.db_path
-                await self.table_discovery.vector_search.load_index(index_path)
-                await self.column_discovery.vector_search.load_index(index_path)
-                logger.info("已加载现有索引文件")
+                
+                # 检查并加载表发现的索引
+                if self.table_discovery.vector_search is not None:
+                    await self.table_discovery.vector_search.load_index(index_path)
+                else:
+                    logger.warning("表发现的向量搜索引擎未初始化，跳过索引加载")
+                
+                # 检查并加载列发现的索引
+                if self.column_discovery.vector_search is not None:
+                    await self.column_discovery.vector_search.load_index(index_path)
+                else:
+                    logger.warning("列发现的向量搜索引擎未初始化，跳过索引加载")
+                
+                logger.info("索引加载任务完成")
             
             # 运行加载任务
             if loop.is_running():

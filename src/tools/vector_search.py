@@ -333,9 +333,22 @@ def create_vector_search_engine() -> VectorSearchEngine:
     
     if provider == "faiss":
         return FAISSVectorSearch(dimension=settings.vector_db.dimension)
+    elif provider == "hnsw":
+        from src.tools.hnsw_search import HNSWVectorSearch
+        return HNSWVectorSearch(
+            dimension=settings.vector_db.dimension,
+            collection_name=getattr(settings.vector_db, 'collection_name', 'data_lakes')
+        )
     else:
-        raise ValueError(f"不支持的向量搜索引擎: {provider}")
+        raise ValueError(f"不支持的向量搜索引擎: {provider}，支持的类型: faiss, hnsw")
 
 
-# 全局向量搜索引擎实例
-vector_search_engine = create_vector_search_engine()
+# 全局向量搜索引擎实例 - 延迟初始化以避免循环导入
+vector_search_engine = None
+
+def get_vector_search_engine():
+    """获取全局向量搜索引擎实例，支持延迟初始化"""
+    global vector_search_engine
+    if vector_search_engine is None:
+        vector_search_engine = create_vector_search_engine()
+    return vector_search_engine

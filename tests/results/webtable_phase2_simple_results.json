@@ -1,0 +1,77 @@
+{
+  "vector_performance": [
+    {
+      "scenario": "Small (100x100)",
+      "baseline_time": 0.0004756450653076172,
+      "optimized_time": 0.0002703666687011719,
+      "speedup": 1.7592592592592593,
+      "result_similarity": 1.0
+    },
+    {
+      "scenario": "Medium (500x500)",
+      "baseline_time": 0.001997232437133789,
+      "optimized_time": 0.002305746078491211,
+      "speedup": 0.8661979112811499,
+      "result_similarity": 1.0
+    },
+    {
+      "scenario": "Large (1000x1000)",
+      "baseline_time": 0.00470423698425293,
+      "optimized_time": 0.007942676544189453,
+      "speedup": 0.5922735186408117,
+      "result_similarity": 1.0
+    },
+    {
+      "scenario": "WebTable-like (50x200)",
+      "baseline_time": 0.0006339550018310547,
+      "optimized_time": 0.0006580352783203125,
+      "speedup": 0.9634057971014492,
+      "result_similarity": 1.0
+    }
+  ],
+  "memory_optimization": [
+    {
+      "data_size": "100x100",
+      "baseline_memory": 0.03814697265625,
+      "optimized_memory": 0.25,
+      "memory_saving": -555.36
+    },
+    {
+      "data_size": "500x500",
+      "baseline_memory": 0.95367431640625,
+      "optimized_memory": 0.25,
+      "memory_saving": 73.7856
+    },
+    {
+      "data_size": "1000x1000",
+      "baseline_memory": 3.814697265625,
+      "optimized_memory": 0.25,
+      "memory_saving": 93.4464
+    },
+    {
+      "data_size": "2000x2000",
+      "baseline_memory": 15.2587890625,
+      "optimized_memory": 0.25,
+      "memory_saving": 98.36160000000001
+    }
+  ],
+  "data_processing": [
+    {
+      "dataset": "Join Tables",
+      "tables_processed": 30,
+      "total_columns": 260,
+      "processing_time": 0.00027871131896972656,
+      "throughput": 107638.25491873396,
+      "avg_columns_per_table": 8.666666666666666
+    },
+    {
+      "dataset": "Union Tables",
+      "tables_processed": 5,
+      "total_columns": 38,
+      "processing_time": 5.030632019042969e-05,
+      "throughput": 99391.09004739336,
+      "avg_columns_per_table": 7.6
+    }
+  ],
+  "success_rate": 33.33333333333333
+}

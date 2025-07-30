@@ -1,0 +1,76 @@
+{
+  "test_summary": {
+    "total_scenarios": 3,
+    "total_success": 15,
+    "total_errors": 0,
+    "total_tables_tested": 65,
+    "total_queries_executed": 15,
+    "overall_start_time": 1753858458.5121925,
+    "total_time": 13.311655044555664,
+    "overall_throughput": 1.1268320843496356
+  },
+  "scenario_results": [
+    {
+      "scenario": "Join Tables - Small Scale",
+      "tables_count": 30,
+      "columns_count": 260,
+      "queries_count": 5,
+      "execution_times": [
+        11.28781008720398,
+        0.2095775604248047,
+        0.2054755687713623,
+        0.19211769104003906,
+        0.189117431640625
+      ],
+      "success_count": 5,
+      "error_count": 0,
+      "avg_results_per_query": 0.0,
+      "total_time": 12.089330196380615,
+      "throughput_qps": 0.41358784306321067,
+      "memory_usage": 5.6,
+      "performance_breakdown": {}
+    },
+    {
+      "scenario": "Join Tables - Medium Scale",
+      "tables_count": 30,
+      "columns_count": 260,
+      "queries_count": 5,
+      "execution_times": [
+        0.19341278076171875,
+        0.20007824897766113,
+        0.19818758964538574,
+        0.1995985507965088,
+        0.1964726448059082
+      ],
+      "success_count": 5,
+      "error_count": 0,
+      "avg_results_per_query": 0.0,
+      "total_time": 0.992363691329956,
+      "throughput_qps": 5.038475353022085,
+      "memory_usage": 5.6,
+      "performance_breakdown": {}
+    },
+    {
+      "scenario": "Union Tables - Full Scale",
+      "tables_count": 5,
+      "columns_count": 38,
+      "queries_count": 5,
+      "execution_times": [
+        0.04184770584106445,
+        0.0420985221862793,
+        0.03837275505065918,
+        0.04316902160644531,
+        0.042717933654785156
+      ],
+      "success_count": 5,
+      "error_count": 0,
+      "avg_results_per_query": 0.0,
+      "total_time": 0.21155619621276855,
+      "throughput_qps": 23.63438220911926,
+      "memory_usage": 0.88,
+      "performance_breakdown": {}
+    }
+  ],
+  "performance_comparison": {},
+  "optimization_metrics": {}
+}

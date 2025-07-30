@@ -60,7 +60,7 @@ python -m src.cli discover -q "find joinable tables" -t examples/sample_tables.j
 
 ### Testing
 ```bash
-# Run all tests
+# Run all tests (now organized in tests/ directory)
 python -m pytest tests/
 
 # Run with verbose output
@@ -68,6 +68,12 @@ python -m pytest tests/ -v
 
 # Run specific test file
 python -m pytest tests/test_workflow.py
+
+# Run integration tests
+python -m pytest tests/test_integration.py
+
+# Run performance tests
+python -m pytest tests/test_scalable_search.py
 ```
 
 ### Code Quality
@@ -174,6 +180,33 @@ When running `python -m src.cli serve`:
 - Update `src/config/settings.py` for new config options
 - Modify prompt templates in `src/config/prompts.py`
 
+## Project Structure (Post-Cleanup)
+
+The project has been recently organized with proper file separation:
+
+```
+/root/dataLakesMulti/
+├── src/                        # Source code
+│   ├── agents/                 # Multi-agent implementations
+│   ├── core/                   # Core workflow and models
+│   ├── tools/                  # Search and utility tools
+│   ├── config/                 # Configuration management
+│   └── cli.py                  # Command-line interface
+├── tests/                      # All test files (organized)
+│   ├── test_*.py               # Unit and integration tests
+│   ├── full_pipeline_test.py   # End-to-end tests
+│   └── README.md               # Test documentation
+├── docs/                       # Comprehensive documentation
+│   ├── COMPREHENSIVE_ARCHITECTURE_UPGRADE.md # Main upgrade plan
+│   ├── lakebench_analysis.md   # Technical analysis
+│   ├── architecture_diagram.md # System design
+│   └── README.md               # Documentation index
+├── examples/                   # Sample data and demos
+│   ├── demos/                  # Demo scripts and utilities
+│   └── sample_*.json           # Example datasets
+└── config.yml                 # Main configuration
+```
+
 ## Important Dependencies
 
 - **langgraph==0.5.4**: Multi-agent workflow orchestration
@@ -194,8 +227,10 @@ When running `python -m src.cli serve`:
 - **Gemini API Integration**: Text generation and JSON output working properly
 - **CLI Interface**: All command-line functionality operational
 - **Embedding System**: Offline mode with virtual vectors (network-independent)
-- **Basic Testing**: All pytest tests passing
+- **Basic Testing**: All pytest tests passing and organized in tests/ directory
 - **Multiple Launch Methods**: run_cli.py, direct module execution, shell wrapper
+- **Project Structure**: Clean organization with proper file separation
+- **Documentation System**: Comprehensive docs in docs/ directory with unified architecture upgrade plan
 
 ### ⚠️ Partially Functional
 - **Data Discovery**: Basic functionality works, but workflow has minor bugs
@@ -203,8 +238,32 @@ When running `python -m src.cli serve`:
 - **API Server**: Can start but not fully tested
 
 ### 🔧 Areas for Improvement
+- **Performance Optimization**: Ready for HNSW indexing and Hungarian algorithm implementation
 - **Full Network Functionality**: Requires internet access to download HuggingFace models
 - **Workflow Error Handling**: Some edge cases need optimization
+- **Architecture Upgrade**: Comprehensive upgrade plan available in docs/COMPREHENSIVE_ARCHITECTURE_UPGRADE.md
+
+## Documentation Structure
+
+The project maintains comprehensive documentation in the `docs/` directory:
+
+### 📁 Key Documents
+- **docs/COMPREHENSIVE_ARCHITECTURE_UPGRADE.md**: Main architecture upgrade plan (4-phase implementation)
+- **docs/lakebench_analysis.md**: Technical analysis and performance optimization insights
+- **docs/architecture_diagram.md**: System architecture and design documentation
+- **docs/WEBTABLE_TEST_REPORT.md**: Testing reports and validation results
+- **docs/environment_requirements.md**: Environment setup and configuration
+- **docs/README.md**: Complete documentation index
+
+### 🎯 Performance Optimization Roadmap
+The system has a comprehensive 4-phase upgrade plan targeting:
+- **Query Speed**: 2.5s → 10-50ms (98% improvement)
+- **Matching Accuracy**: 80% → 95% (18.75% improvement)  
+- **System Scalability**: 1,000 → 100,000 tables (100x expansion)
+- **Memory Efficiency**: 80% reduction
+- **System Availability**: 99.9% stability
+
+See `docs/COMPREHENSIVE_ARCHITECTURE_UPGRADE.md` for detailed implementation plan.
 
 ## Quick Start Reference
 
@@ -245,3 +304,21 @@ For detailed setup instructions, see `QUICK_START.md`:
 - Check logs in `./logs/` directory
 - Use verbose CLI output: Add `-v` flag to commands
 - Test API connection: Use test scripts in `QUICK_START.md`
+
+## Recent Updates
+
+### Project Cleanup (July 30, 2024)
+- ✅ **File Organization**: All test files moved to `tests/` directory
+- ✅ **Documentation Consolidation**: Technical docs organized in `docs/` directory  
+- ✅ **Architecture Unification**: Merged performance improvement plans into single comprehensive upgrade document
+- ✅ **Structure Optimization**: Demo scripts organized in `examples/demos/`
+- ✅ **Cache Cleanup**: Removed all Python cache files and temporary data
+
+### Next Steps
+The system is ready for the next phase of development following the 4-phase architecture upgrade plan:
+1. **Phase 1**: HNSW indexing and Hungarian algorithm integration (Weeks 1-3)
+2. **Phase 2**: LSH prefiltering and vectorized computation (Weeks 4-6)
+3. **Phase 3**: Multi-feature fusion and graph analysis (Weeks 7-9)  
+4. **Phase 4**: Distributed architecture and high availability (Weeks 10-12)
+
+Refer to `docs/COMPREHENSIVE_ARCHITECTURE_UPGRADE.md` for detailed implementation guidance.

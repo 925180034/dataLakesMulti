@@ -3,7 +3,7 @@ import logging
 import asyncio
 from src.agents.base import BaseAgent
 from src.core.models import AgentState, TableInfo, VectorSearchResult
-from src.tools.vector_search import vector_search_engine
+from src.tools.vector_search import get_vector_search_engine
 from src.tools.embedding import get_embedding_generator
 from src.config.prompts import format_prompt
 from src.config.settings import settings
@@ -16,7 +16,7 @@ class TableDiscoveryAgent(BaseAgent):
     
     def __init__(self):
         super().__init__("TableDiscoveryAgent")
-        self.vector_search = vector_search_engine
+        self.vector_search = get_vector_search_engine()
         self.embedding_gen = get_embedding_generator()
     
     async def process(self, state: AgentState) -> AgentState:
