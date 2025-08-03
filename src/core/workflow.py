@@ -332,15 +332,24 @@ class DataLakesWorkflow:
 
 
 # 工作流工厂函数
-def create_workflow(use_optimized: bool = True) -> DataLakesWorkflow:
+def create_workflow(use_optimized: bool = True, use_ultra: bool = False) -> DataLakesWorkflow:
     """创建数据湖工作流实例
     
     Args:
         use_optimized: 是否使用优化的工作流，默认为True
+        use_ultra: 是否使用超优化工作流，默认为False
         
     Returns:
-        DataLakesWorkflow 或 OptimizedDataLakesWorkflow 实例
+        DataLakesWorkflow, OptimizedDataLakesWorkflow 或 UltraOptimizedWorkflow 实例
     """
+    if use_ultra:
+        try:
+            from src.core.ultra_optimized_workflow import create_ultra_optimized_workflow
+            return create_ultra_optimized_workflow()
+        except ImportError as e:
+            logger.warning(f"无法导入超优化工作流，降级到优化版本: {e}")
+            use_optimized = True
+    
     if use_optimized:
         try:
             from src.core.optimized_workflow import create_optimized_workflow
@@ -358,7 +367,8 @@ async def discover_data(
     query_tables: List[Dict[str, Any]] = None,
     query_columns: List[Dict[str, Any]] = None,
     all_tables_data: List[Dict[str, Any]] = None,
-    use_optimized: bool = True
+    use_optimized: bool = True,
+    use_ultra: bool = False
 ) -> AgentState:
     """便捷的数据发现函数
     
@@ -368,6 +378,7 @@ async def discover_data(
         query_columns: 查询列的数据
         all_tables_data: 所有表的数据（用于初始化优化工作流）
         use_optimized: 是否使用优化工作流
+        use_ultra: 是否使用超优化工作流
     """
     from src.core.models import TableInfo, ColumnInfo
     
@@ -392,13 +403,15 @@ async def discover_data(
     )
     
     # 创建工作流
-    workflow = create_workflow(use_optimized=use_optimized)
+    workflow = create_workflow(use_optimized=use_optimized, use_ultra=use_ultra)
     
     # 如果使用优化工作流且提供了所有表数据，则进行初始化
-    if use_optimized and all_tables_data:
+    if (use_optimized or use_ultra) and all_tables_data:
         from src.core.optimized_workflow import OptimizedDataLakesWorkflow
-        if isinstance(workflow, OptimizedDataLakesWorkflow):
-            logger.info("初始化优化工作流...")
+        from src.core.ultra_optimized_workflow import UltraOptimizedWorkflow
+        
+        if isinstance(workflow, (OptimizedDataLakesWorkflow, UltraOptimizedWorkflow)):
+            logger.info(f"初始化{'超' if use_ultra else ''}优化工作流...")
             from src.utils.data_parser import parse_tables_data
             all_tables = parse_tables_data(all_tables_data)
             await workflow.initialize(all_tables)

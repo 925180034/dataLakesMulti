@@ -35,7 +35,7 @@ class OpenAIClient(LLMClient):
             "openai_api_key": config.get("api_key"),
             "temperature": config.get("temperature", 0.1),
             "max_tokens": config.get("max_tokens", 2000),
-            "timeout": config.get("timeout", 30)
+            "timeout": config.get("timeout", int(os.getenv('LLM_TIMEOUT', '30')))
         }
         
         # 如果有自定义base_url，添加到参数中
@@ -86,7 +86,7 @@ class AnthropicClient(LLMClient):
             anthropic_api_key=config.get("api_key"),
             temperature=config.get("temperature", 0.1),
             max_tokens=config.get("max_tokens", 2000),
-            timeout=config.get("timeout", 30)
+            timeout=config.get("timeout", int(os.getenv('LLM_TIMEOUT', '30')))
         )
     
     async def generate(self, prompt: str, system_prompt: Optional[str] = None) -> str:
@@ -190,7 +190,8 @@ class GeminiClient(LLMClient):
     
     async def generate(self, prompt: str, system_prompt: Optional[str] = None) -> str:
         """生成文本响应 - 支持自动重试和密钥切换"""
-        max_retries = 3
+        # 从环境变量读取配置（支持动态调整）
+        max_retries = int(os.getenv('LLM_MAX_RETRIES', '3'))
         
         for attempt in range(max_retries):
             try:
