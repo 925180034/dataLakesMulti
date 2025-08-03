@@ -21,8 +21,12 @@ class DataLakesWorkflow:
         self.table_discovery = TableDiscoveryAgent()
         self.table_matching = TableMatchingAgent()
         
-        # 在工作流创建时加载已存在的索引
-        self._load_existing_indices()
+        # 注释掉索引加载，在初始化时会导致事件循环问题
+        # 索引会在实际使用时按需加载
+        # self._load_existing_indices()
+        
+        # 标记，确保只初始化一次向量搜索引擎
+        self._vector_search_initialized = False
         
         self.workflow = self._build_workflow()
         self.app = self.workflow.compile()
@@ -32,13 +36,10 @@ class DataLakesWorkflow:
         try:
             from src.config.settings import settings
             import asyncio
+            import nest_asyncio
             
-            # 创建新的事件循环或使用现有的
-            try:
-                loop = asyncio.get_event_loop()
-            except RuntimeError:
-                loop = asyncio.new_event_loop()
-                asyncio.set_event_loop(loop)
+            # 允许嵌套的事件循环
+            nest_asyncio.apply()
             
             # 异步加载索引
             async def load_indices():
@@ -58,14 +59,8 @@ class DataLakesWorkflow:
                 
                 logger.info("索引加载任务完成")
             
-            # 运行加载任务
-            if loop.is_running():
-                # 如果循环正在运行，创建任务
-                import asyncio
-                asyncio.create_task(load_indices())
-            else:
-                # 否则直接运行
-                loop.run_until_complete(load_indices())
+            # 使用 asyncio.run 来运行异步任务
+            asyncio.run(load_indices())
                 
         except Exception as e:
             logger.warning(f"加载索引失败（这是正常的，如果索引文件不存在）: {e}")
@@ -266,18 +261,30 @@ class DataLakesWorkflow:
         """运行工作流"""
         try:
             logger.info("开始执行数据湖工作流")
+            logger.info(f"初始状态: 查询={initial_state.user_query}, 表数={len(initial_state.query_tables)}, 列数={len(initial_state.query_columns)}")
             
             # 验证初始状态
             self._validate_initial_state(initial_state)
+            logger.info("初始状态验证完成")
             
             # 执行工作流
-            final_state = await self.app.ainvoke(initial_state)
+            logger.info("开始调用工作流应用...")
+            result = await self.app.ainvoke(initial_state)
+            
+            # 确保返回的是 AgentState 对象
+            if isinstance(result, dict):
+                logger.info("将字典结果转换为 AgentState 对象")
+                final_state = AgentState(**result)
+            else:
+                final_state = result
             
             logger.info("数据湖工作流执行完成")
             return final_state
             
         except Exception as e:
             logger.error(f"工作流执行失败: {e}")
+            import traceback
+            logger.error(f"详细错误信息: {traceback.format_exc()}")
             initial_state.add_error(f"工作流执行失败: {e}")
             return initial_state
     
@@ -325,18 +332,43 @@ class DataLakesWorkflow:
 
 
 # 工作流工厂函数
-def create_workflow() -> DataLakesWorkflow:
-    """创建数据湖工作流实例"""
-    return DataLakesWorkflow()
+def create_workflow(use_optimized: bool = True) -> DataLakesWorkflow:
+    """创建数据湖工作流实例
+    
+    Args:
+        use_optimized: 是否使用优化的工作流，默认为True
+        
+    Returns:
+        DataLakesWorkflow 或 OptimizedDataLakesWorkflow 实例
+    """
+    if use_optimized:
+        try:
+            from src.core.optimized_workflow import create_optimized_workflow
+            return create_optimized_workflow()
+        except ImportError as e:
+            logger.warning(f"无法导入优化工作流，使用基础版本: {e}")
+            return DataLakesWorkflow()
+    else:
+        return DataLakesWorkflow()
 
 
 # 便捷函数
 async def discover_data(
     user_query: str,
     query_tables: List[Dict[str, Any]] = None,
-    query_columns: List[Dict[str, Any]] = None
+    query_columns: List[Dict[str, Any]] = None,
+    all_tables_data: List[Dict[str, Any]] = None,
+    use_optimized: bool = True
 ) -> AgentState:
-    """便捷的数据发现函数"""
+    """便捷的数据发现函数
+    
+    Args:
+        user_query: 用户查询
+        query_tables: 查询表的数据
+        query_columns: 查询列的数据
+        all_tables_data: 所有表的数据（用于初始化优化工作流）
+        use_optimized: 是否使用优化工作流
+    """
     from src.core.models import TableInfo, ColumnInfo
     
     # 转换输入数据
@@ -359,6 +391,21 @@ async def discover_data(
         query_columns=parsed_columns
     )
     
-    # 运行工作流
-    workflow = create_workflow()
+    # 创建工作流
+    workflow = create_workflow(use_optimized=use_optimized)
+    
+    # 如果使用优化工作流且提供了所有表数据，则进行初始化
+    if use_optimized and all_tables_data:
+        from src.core.optimized_workflow import OptimizedDataLakesWorkflow
+        if isinstance(workflow, OptimizedDataLakesWorkflow):
+            logger.info("初始化优化工作流...")
+            from src.utils.data_parser import parse_tables_data
+            all_tables = parse_tables_data(all_tables_data)
+            await workflow.initialize(all_tables)
+            
+            # 对于优化工作流，使用 run_optimized 方法
+            all_table_names = [table_data.get('table_name', '') for table_data in all_tables_data]
+            return await workflow.run_optimized(initial_state, all_table_names)
+    
+    # 运行基础工作流
     return await workflow.run(initial_state)

@@ -18,6 +18,7 @@ class TableDiscoveryAgent(BaseAgent):
         super().__init__("TableDiscoveryAgent")
         self.vector_search = get_vector_search_engine()
         self.embedding_gen = get_embedding_generator()
+        # 移除立即索引加载 - 改为延迟加载以避免重复加载问题
     
     async def process(self, state: AgentState) -> AgentState:
         """处理表发现任务"""
@@ -78,6 +79,11 @@ class TableDiscoveryAgent(BaseAgent):
     async def _discover_similar_tables(self, query_table: TableInfo) -> List[VectorSearchResult]:
         """为单个查询表发现相似表"""
         try:
+            # 确保索引已加载
+            if not await self._ensure_index_loaded():
+                logger.error("向量索引加载失败，无法进行表发现")
+                return []
+            
             logger.info(f"处理查询表: {query_table.table_name}")
             
             # 生成查询表的嵌入向量
@@ -281,6 +287,11 @@ class TableDiscoveryAgent(BaseAgent):
     async def discover_by_keywords(self, keywords: List[str], k: int = 10) -> List[str]:
         """根据关键词发现相关表（辅助功能）"""
         try:
+            # 确保索引已加载
+            if not await self._ensure_index_loaded():
+                logger.error("向量索引加载失败，无法进行关键词发现")
+                return []
+            
             # 将关键词组合成查询文本
             query_text = " ".join(keywords)
             
@@ -299,3 +310,52 @@ class TableDiscoveryAgent(BaseAgent):
         except Exception as e:
             logger.error(f"关键词表发现失败: {e}")
             return []
+    
+    async def _ensure_index_loaded(self):
+        """简化的索引加载确保方法 - 异步版本"""
+        try:
+            # 简单检查：尝试获取索引统计信息
+            if hasattr(self.vector_search, 'get_collection_stats'):
+                stats = self.vector_search.get_collection_stats()
+                # 兼容不同的向量搜索引擎
+                tables_count = 0
+                if 'tables' in stats:
+                    tables_count = stats.get('tables', {}).get('count', 0)
+                elif 'hnsw_index' in stats:
+                    tables_count = stats.get('hnsw_index', {}).get('total_elements', 0)
+                
+                if tables_count > 0:
+                    logger.debug(f"向量搜索索引已加载，包含 {tables_count} 个元素")
+                    return True
+            
+            # 如果索引未加载，尝试加载
+            from src.config.settings import settings
+            import os
+            logger.info("开始加载向量搜索索引...")
+            
+            # 根据向量搜索引擎类型确定索引文件路径
+            if hasattr(self.vector_search, '__class__') and 'HNSW' in self.vector_search.__class__.__name__:
+                # HNSW需要完整的文件路径
+                index_path = os.path.join(settings.vector_db.db_path, 'hnsw_index.bin')
+            else:
+                # 其他类型使用目录路径
+                index_path = settings.vector_db.db_path
+            
+            await self.vector_search.load_index(index_path)
+            
+            # 验证加载结果
+            if hasattr(self.vector_search, 'get_collection_stats'):
+                stats = self.vector_search.get_collection_stats()
+                # 兼容不同的向量搜索引擎
+                tables_count = 0
+                if 'tables' in stats:
+                    tables_count = stats.get('tables', {}).get('count', 0)
+                elif 'hnsw_index' in stats:
+                    tables_count = stats.get('hnsw_index', {}).get('total_elements', 0)
+                logger.info(f"索引加载完成，包含 {tables_count} 个元素")
+                return tables_count > 0
+            return False
+            
+        except Exception as e:
+            logger.error(f"索引加载失败: {e}")
+            return False

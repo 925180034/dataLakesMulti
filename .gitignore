@@ -166,3 +166,9 @@ keys/
 # 项目知识文档（包含可能的版权内容）
 ProjectKnowledge/
 **/ProjectKnowledge/
+
+# 实验结果文件
+experiment_results/
+batch_experiment_*.json
+simple_experiment_*.json
+*_results_*.json

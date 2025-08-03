@@ -1,9 +1,0 @@
-Mat,Start,Sub,Pts,Tries,Conv,Pens,Drop,Won,Lost,Draw,%,Team,Opposition,Match Date
-1,1,0,0,0,0,0,0,0,1,0,0.0,Anglo-Welsh,v New Zealand,25 Jul 1908
-2,2,0,8,1,1,1,0,1,1,0,50.0,England,v Wales,15 Jan 1910
-3,3,0,8,1,1,1,0,1,1,1,50.0,England,v Ireland,12 Feb 1910
-4,4,0,10,1,2,1,0,2,1,1,62.5,England,v France,3 Mar 1910
-5,5,0,12,1,3,1,0,3,1,1,70.0,England,v Scotland,19 Mar 1910
-6,6,0,14,1,4,1,0,4,1,1,75.0,England,v Wales,20 Jan 1912
-7,7,0,18,1,6,1,0,5,1,1,78.57,England,v Wales,17 Jan 1914
-8,8,0,20,1,7,1,0,6,1,1,81.25,England,v Ireland,14 Feb 1914

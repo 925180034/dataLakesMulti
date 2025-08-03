@@ -1,8 +1,0 @@
-Model,Status,Target(s),Platform,CPU Speed (MHz),Flash (MB),RAM (MB),Wireless NIC,Wireless Standard,Wired Ports,VLAN Config,USB
-W502U / R36,12.09,ramips,Ralink RT305x,320,8,32,Ralink RT305x,b/g/n,2x 100M,?,1x 2.0
-N2,12.09,ar71xx,Atheros AR7240,320,8,32,?,b/g/n,2x 100M,?,-
-N5,12.09,ar71xx,Atheros AR7240,320,8,32,?,b/g/n,2x 100M,?,-
-AP120c,12.09,ar71xx,Atheros AR9344,533,16,128,Atheros AR9344,a/b/g/n,1x Gbit (PoE),No,-
-AP121,12.09,ar71xx,Atheros AR9330,400,8,32,Atheros AR9330,b/g/n,2x 100M,No,1x 2.0
-Hornet-UB / AP121 / AP121U,12.09,ar71xx,Atheros AR9330,400,8,32,Atheros AR9330,b/g/n,2x 100M,No,1x 2.0
-AP96,12.09,ar71xx,Atheros AR9331,400,8,32,?,?,2x 100M,?,Yes

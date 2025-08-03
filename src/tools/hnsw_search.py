@@ -33,6 +33,11 @@ class HNSWVectorSearch(VectorSearchEngine):
         self.column_metadata = {}  # 存储列元数据
         self.table_metadata = {}   # 存储表元数据
         self.next_id = 0
+        
+        # 加载状态跟踪 - 防止重复加载警告
+        self._index_loaded = False
+        self._index_file_path = None
+        
         self._initialize_index()
     
     def _initialize_index(self):
@@ -48,14 +53,22 @@ class HNSWVectorSearch(VectorSearchEngine):
             
             # 初始化索引，预分配空间以提高性能
             max_elements = getattr(settings.vector_db, 'max_elements', 100000)
+            hnsw_config = getattr(settings.vector_db, 'hnsw_config', {})
+            
+            # 对于小数据集，使用更小的M值以避免错误
+            M_value = hnsw_config.get('M', 16)
+            if max_elements < 1000:
+                M_value = min(M_value, 8)  # 小数据集使用更小的M值
+            
             self.index.init_index(
                 max_elements=max_elements, 
-                ef_construction=100,  # LakeBench最优值
-                M=32                  # LakeBench最优值
+                ef_construction=hnsw_config.get('ef_construction', 200),
+                M=M_value
             )
             
-            # 设置查询时的ef参数，平衡速度和准确率
-            self.index.set_ef(10)
+            # 设置查询时的ef参数，针对小数据集优化
+            ef_search = hnsw_config.get('ef', 50)
+            self.index.set_ef(ef_search)
             
             logger.info(f"HNSW索引初始化完成，维度: {self.dimension}, 最大元素: {max_elements}")
             
@@ -158,15 +171,15 @@ class HNSWVectorSearch(VectorSearchEngine):
                         continue
                     
                     result = VectorSearchResult(
-                        id=str(point_id),
-                        content=metadata.get("full_name", f"column_{point_id}"),
-                        similarity=similarity,
-                        metadata=metadata
+                        item_id=metadata.get("full_name", str(point_id)),  # 使用实际列名作为ID
+                        score=similarity,
+                        metadata=metadata,
+                        embedding=None
                     )
                     results.append(result)
             
             # 按相似度排序并限制结果数量
-            results.sort(key=lambda x: x.similarity, reverse=True)
+            results.sort(key=lambda x: x.score, reverse=True)
             final_results = results[:k]
             
             logger.debug(f"HNSW列搜索返回 {len(final_results)} 个结果，阈值: {threshold}")
@@ -188,20 +201,58 @@ class HNSWVectorSearch(VectorSearchEngine):
             if len(query_embedding) != self.dimension:
                 raise ValueError(f"查询向量维度不匹配")
             
-            search_k = min(k * 3, len(self.table_metadata)) if min_columns else k
+            # 增加搜索数量，因为结果中可能包含列ID需要过滤
+            search_k = min(k * 10, self.index.get_current_count())  # 搜索更多以补偿过滤
+            search_k = max(search_k, min(100, self.index.get_current_count()))  # 至少搜索100个
             
             if len(self.table_metadata) == 0:
                 logger.warning("表索引为空，返回空结果")
                 return []
             
+            # 动态调整ef参数以避免HNSW错误
+            table_count = len(self.table_metadata)
+            
+            # 根据数据量和搜索需求调整ef参数
+            # 对于小数据集，使用更保守的ef值
+            min_ef = max(search_k + 10, 20)  # 至少20，并且比k大10
+            safe_ef = min(table_count, min_ef)  # 但不超过表数量
+            
+            # 确保ef参数合理
+            if safe_ef < search_k:
+                safe_ef = min(search_k + 10, table_count)
+            
+            self.index.set_ef(safe_ef)
+            logger.debug(f"动态调整ef参数为: {safe_ef} (表数量: {table_count}, 搜索k: {search_k})")
+            
             # 执行HNSW搜索
-            labels, distances = self.index.knn_query([query_embedding], k=search_k)
+            try:
+                labels, distances = self.index.knn_query([query_embedding], k=search_k)
+            except Exception as e:
+                logger.error(f"HNSW搜索参数调整失败，尝试更保守的参数: {e}")
+                # 使用更保守的参数重试
+                safe_ef = max(min(table_count // 4, 5), 1)  # 至少1，最多5
+                safe_k = max(min(search_k, table_count // 4, 5), 1)  # 至少1，最多5
+                self.index.set_ef(safe_ef)
+                try:
+                    if safe_k > 0 and safe_k <= table_count:
+                        labels, distances = self.index.knn_query([query_embedding], k=safe_k)
+                        search_k = safe_k
+                    else:
+                        logger.warning("数据量太小，无法执行有效的HNSW搜索")
+                        return []
+                except Exception as final_e:
+                    logger.warning(f"HNSW搜索最终失败: {final_e}，返回空结果")
+                    return []
             
             # 转换结果
             results = []
             for point_id, distance in zip(labels[0], distances[0]):
                 similarity = 1.0 - distance
                 
+                # 确保只返回表结果（表ID在0-99范围内）
+                if point_id not in self.table_metadata:
+                    continue
+                    
                 if similarity >= threshold:
                     metadata = self.table_metadata.get(point_id, {})
                     
@@ -210,14 +261,14 @@ class HNSWVectorSearch(VectorSearchEngine):
                         continue
                     
                     result = VectorSearchResult(
-                        id=str(point_id),
-                        content=metadata.get("table_name", f"table_{point_id}"),
-                        similarity=similarity,
-                        metadata=metadata
+                        item_id=metadata.get("table_name", str(point_id)),  # 使用实际表名作为ID
+                        score=similarity,
+                        metadata=metadata,
+                        embedding=None
                     )
                     results.append(result)
             
-            results.sort(key=lambda x: x.similarity, reverse=True)
+            results.sort(key=lambda x: x.score, reverse=True)
             final_results = results[:k]
             
             logger.debug(f"HNSW表搜索返回 {len(final_results)} 个结果")
@@ -250,15 +301,43 @@ class HNSWVectorSearch(VectorSearchEngine):
             raise
     
     async def load_index(self, file_path: str) -> None:
-        """从磁盘加载HNSW索引"""
+        """从磁盘加载HNSW索引 - 防止重复加载"""
         try:
-            # 加载HNSW索引
+            import os
+            
+            # 检查是否已经加载了相同的索引文件
+            if self._index_loaded and self._index_file_path == file_path:
+                logger.debug(f"HNSW索引已加载: {file_path}")
+                return
+            
+            # 检查索引文件是否存在
+            if not os.path.exists(file_path):
+                logger.info(f"HNSW索引文件不存在: {file_path}，将使用新索引")
+                return
+            
+            # 检查元数据文件是否存在
+            metadata_path = f"{file_path}.metadata"
+            if not os.path.exists(metadata_path):
+                logger.info(f"HNSW元数据文件不存在: {metadata_path}，将使用新索引")
+                return
+            
+            # 加载HNSW索引 - 创建新的索引实例以避免重复加载问题
+            import hnswlib
             max_elements = getattr(settings.vector_db, 'max_elements', 100000)
-            self.index.load_index(file_path, max_elements=max_elements)
+            
+            # 创建新索引并加载
+            new_index = hnswlib.Index(space='cosine', dim=self.dimension)
+            new_index.load_index(file_path, max_elements=max_elements)
+            
+            # 替换旧索引
+            self.index = new_index
+            
+            # 标记为已加载
+            self._index_loaded = True
+            self._index_file_path = file_path
             
             # 加载元数据
             import pickle
-            metadata_path = f"{file_path}.metadata"
             with open(metadata_path, 'rb') as f:
                 data = pickle.load(f)
                 self.column_metadata = data['column_metadata']
@@ -274,13 +353,15 @@ class HNSWVectorSearch(VectorSearchEngine):
         """获取索引统计信息"""
         try:
             total_elements = self.index.get_current_count() if self.index else 0
+            hnsw_config = getattr(settings.vector_db, 'hnsw_config', {})
             
             return {
                 "hnsw_index": {
                     "total_elements": total_elements,
                     "max_elements": self.index.get_max_elements() if self.index else 0,
-                    "ef_parameter": 10,  # 当前ef设置
-                    "M_parameter": 32,   # 当前M设置
+                    "ef_parameter": hnsw_config.get('ef', 50),
+                    "M_parameter": hnsw_config.get('M', 16),
+                    "ef_construction": hnsw_config.get('ef_construction', 200),
                     "dimension": self.dimension
                 },
                 "columns": {

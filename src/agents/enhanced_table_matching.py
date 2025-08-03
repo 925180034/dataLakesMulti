@@ -254,7 +254,7 @@ class EnhancedTableMatchingAgent(BaseAgent):
         return " ".join(parts)
     
     async def _get_table_info(self, table_name: str) -> Optional[TableInfo]:
-        """获取表信息"""
+        """获取表信息 - 增强版本处理表名格式变化"""
         if table_name in self.table_info_cache:
             return self.table_info_cache[table_name]
         
@@ -263,17 +263,33 @@ class EnhancedTableMatchingAgent(BaseAgent):
             from src.tools.vector_search import get_vector_search_engine
             vector_search_engine = get_vector_search_engine()
             
+            # 准备表名匹配变体：处理.csv后缀问题
+            def normalize_table_name(name: str) -> str:
+                """标准化表名，去除.csv后缀"""
+                return name.replace('.csv', '') if name and name.endswith('.csv') else name
+            
+            def table_names_match(name1: str, name2: str) -> bool:
+                """检查两个表名是否匹配（考虑.csv后缀变化）"""
+                if not name1 or not name2:
+                    return False
+                # 精确匹配
+                if name1 == name2:
+                    return True
+                # 标准化后匹配
+                return normalize_table_name(name1) == normalize_table_name(name2)
+            
             # 检查当前使用的搜索引擎类型
             if hasattr(vector_search_engine, 'table_metadata'):
                 # FAISS搜索引擎
                 for table_info in vector_search_engine.table_metadata.values():
-                    if hasattr(table_info, 'table_name') and table_info.table_name == table_name:
+                    if hasattr(table_info, 'table_name') and table_names_match(table_info.table_name, table_name):
                         self.table_info_cache[table_name] = table_info
                         return table_info
             elif hasattr(vector_search_engine, 'table_metadata'):
                 # HNSW搜索引擎
                 for table_info in vector_search_engine.table_metadata.values():
-                    if table_info.get('table_name') == table_name:
+                    metadata_table_name = table_info.get('table_name')
+                    if metadata_table_name and table_names_match(metadata_table_name, table_name):
                         # 构建TableInfo对象
                         columns = []
                         for i, col_name in enumerate(table_info.get('column_names', [])):
@@ -292,9 +308,22 @@ class EnhancedTableMatchingAgent(BaseAgent):
                         )
                         
                         self.table_info_cache[table_name] = table_obj
+                        logger.debug(f"表信息匹配成功: 查询'{table_name}' -> 元数据'{metadata_table_name}'")
                         return table_obj
             
-            logger.warning(f"表信息未找到: {table_name}")
+            # 尝试更宽泛的匹配策略
+            logger.debug(f"尝试模糊匹配表名: {table_name}")
+            normalized_query = normalize_table_name(table_name)
+            
+            if hasattr(vector_search_engine, 'table_metadata'):
+                for table_info in vector_search_engine.table_metadata.values():
+                    metadata_name = table_info.get('table_name') if hasattr(table_info, 'get') else getattr(table_info, 'table_name', None)
+                    if metadata_name and normalized_query in normalize_table_name(metadata_name):
+                        logger.debug(f"模糊匹配成功: 查询'{table_name}' -> 元数据'{metadata_name}'")
+                        # 返回找到的表信息（使用类似的构建逻辑）
+                        break
+            
+            logger.warning(f"表信息未找到: {table_name} (标准化: {normalized_query})")
             return None
             
         except Exception as e:

@@ -27,7 +27,14 @@ class BaseAgent(ABC):
         return state
     
     async def call_llm(self, prompt: str, system_prompt: Optional[str] = None) -> str:
-        """调用LLM生成文本"""
+        """调用LLM生成文本 - 支持跳过模式用于测试"""
+        import os
+        
+        # 快速修复包: 跳过LLM调用模式 (用于调试和测试)
+        if os.getenv('SKIP_LLM') == 'true':
+            logger.warning(f"{self.name} 跳过LLM调用 (SKIP_LLM=true)")
+            return "mock_response_for_testing"
+        
         try:
             response = await self.llm_client.generate(prompt, system_prompt)
             return response

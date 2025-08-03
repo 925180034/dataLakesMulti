@@ -84,16 +84,16 @@ class DataIndexer:
             
             tables = []
             for table_data in raw_data:
-                # 确保表数据包含必要字段
-                table_name = table_data.get('name') or table_data.get('table_name', 'unknown')
+                # 确保表数据包含必要字段 - 优先使用WebTable格式的字段名
+                table_name = table_data.get('table_name') or table_data.get('name', 'unknown')
                 columns_data = table_data.get('columns', [])
                 
                 columns = []
                 for col_data in columns_data:
                     column = ColumnInfo(
                         table_name=table_name,
-                        column_name=col_data.get('name') or col_data.get('column_name', 'unknown'),
-                        data_type=col_data.get('type') or col_data.get('data_type'),
+                        column_name=col_data.get('column_name') or col_data.get('name', 'unknown'),
+                        data_type=col_data.get('data_type') or col_data.get('type'),
                         sample_values=col_data.get('sample_values', [])
                     )
                     columns.append(column)
@@ -267,13 +267,15 @@ class DataIndexer:
             logger.info(f"保存索引到: {save_path}")
             
             # 确保目录存在
-            Path(save_path).parent.mkdir(parents=True, exist_ok=True)
+            Path(save_path).mkdir(parents=True, exist_ok=True)
             
-            # 保存向量搜索索引
-            await self.vector_search.save_index(save_path)
+            # 保存向量搜索索引 - 修正：save_path是目录，需要添加文件名
+            vector_index_path = str(Path(save_path) / "hnsw_index.bin")
+            await self.vector_search.save_index(vector_index_path)
             
             # 保存值搜索索引
-            await self.value_search.save_index(save_path)
+            value_index_path = str(Path(save_path) / "value_index.pkl")
+            await self.value_search.save_index(value_index_path)
             
             logger.info("索引保存完成")
             
@@ -287,9 +289,12 @@ class DataIndexer:
             if save_path is None:
                 save_path = settings.vector_db.db_path
             
-            # 加载索引
-            await self.vector_search.load_index(save_path)
-            await self.value_search.load_index(save_path)
+            # 加载索引 - 修正：save_path是目录，需要添加文件名
+            vector_index_path = str(Path(save_path) / "hnsw_index.bin")
+            await self.vector_search.load_index(vector_index_path)
+            
+            value_index_path = str(Path(save_path) / "value_index.pkl")
+            await self.value_search.load_index(value_index_path)
             
             # 获取统计信息
             stats = {

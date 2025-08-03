@@ -251,18 +251,82 @@ class GeminiClient(LLMClient):
     
     async def generate_json(self, prompt: str, system_prompt: Optional[str] = None) -> Dict[str, Any]:
         """生成JSON格式响应 - 支持自动重试和密钥切换"""
-        json_prompt = f"{prompt}\n\n请确保响应是有效的JSON格式。"
+        json_prompt = f"{prompt}\n\n请确保响应是有效的JSON格式，不要包含任何注释或额外文本。"
         response = await self.generate(json_prompt, system_prompt)
         
         try:
             return json.loads(response)
-        except json.JSONDecodeError:
+        except json.JSONDecodeError as e:
             import re
-            json_match = re.search(r'\{.*\}', response, re.DOTALL)
+            # 尝试修复常见的JSON错误
+            fixed_response = response
+            
+            # 1. 移除可能的markdown代码块标记
+            fixed_response = re.sub(r'```json\s*', '', fixed_response)
+            fixed_response = re.sub(r'```\s*$', '', fixed_response)
+            
+            # 2. 修复缺失的逗号（在 } 或 ] 后面跟着 " 或 { 或 [ 的情况）
+            fixed_response = re.sub(r'([}\]])\s*\n\s*(["{[])', r'\1,\n\2', fixed_response)
+            
+            # 3. 移除行尾的逗号（在 } 或 ] 前面）
+            fixed_response = re.sub(r',\s*([}\]])', r'\1', fixed_response)
+            
+            # 4. 尝试处理被截断的JSON
+            # 如果响应以不完整的方式结束，尝试补全
+            if not fixed_response.rstrip().endswith('}'):
+                # 计算需要补全的括号
+                open_braces = fixed_response.count('{')
+                close_braces = fixed_response.count('}')
+                open_brackets = fixed_response.count('[')
+                close_brackets = fixed_response.count(']')
+                
+                # 移除最后一个不完整的元素
+                # 找到最后一个完整的逗号或开括号位置
+                for i in range(len(fixed_response) - 1, -1, -1):
+                    if fixed_response[i] in [',', '{', '[']:
+                        fixed_response = fixed_response[:i+1]
+                        if fixed_response[i] == ',':
+                            fixed_response = fixed_response[:i]
+                        break
+                
+                # 补全缺失的括号
+                while close_brackets < open_brackets:
+                    fixed_response += ']'
+                    close_brackets += 1
+                    
+                while close_braces < open_braces:
+                    fixed_response += '}'
+                    close_braces += 1
+            
+            # 5. 尝试提取JSON对象
+            json_match = re.search(r'\{.*\}', fixed_response, re.DOTALL)
             if json_match:
-                return json.loads(json_match.group())
-            else:
-                raise ValueError(f"无法解析JSON响应: {response}")
+                try:
+                    return json.loads(json_match.group())
+                except json.JSONDecodeError:
+                    # 如果还是失败，尝试提取能解析的部分
+                    try:
+                        # 找到第一个有效的JSON对象
+                        text = json_match.group()
+                        # 逐步截断尝试
+                        for end_pos in range(len(text), 0, -1):
+                            try:
+                                partial = text[:end_pos]
+                                # 补全括号
+                                open_b = partial.count('{')
+                                close_b = partial.count('}')
+                                partial += '}' * (open_b - close_b)
+                                result = json.loads(partial)
+                                logger.warning(f"成功解析部分JSON响应")
+                                return result
+                            except:
+                                continue
+                    except:
+                        pass
+            
+            # 6. 如果还是失败，尝试返回一个默认的空结果
+            logger.warning(f"无法解析JSON响应，返回默认值。原始响应: {response[:500]}")
+            return {"error": "JSON解析失败", "raw_response": response[:500]}
     
     def get_api_status(self) -> Dict[str, Any]:
         """获取API密钥状态"""

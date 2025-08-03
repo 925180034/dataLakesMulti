@@ -24,6 +24,11 @@ class TableMatchingAgent(BaseAgent):
         self.embedding_gen = get_embedding_generator()
         # 缓存表信息以避免重复加载
         self.table_info_cache: Dict[str, TableInfo] = {}
+        # 缓存HNSW搜索实例
+        self._hnsw_search = None
+        self._hnsw_loaded = False
+        # 在初始化时就创建HNSW实例（但不加载索引）
+        self._init_hnsw()
         
         # 判断是否启用增强匹配
         self.enhanced_matching_enabled = settings.hungarian_matcher.enabled
@@ -38,10 +43,41 @@ class TableMatchingAgent(BaseAgent):
                 logger.warning(f"无法加载增强匹配模块: {e}，将使用传统匹配方法")
                 self.enhanced_matching_enabled = False
     
+    def _init_hnsw(self):
+        """初始化HNSW搜索实例（同步方法）"""
+        try:
+            from src.tools.hnsw_search import create_hnsw_search
+            self._hnsw_search = create_hnsw_search()
+            logger.debug("创建HNSW搜索实例成功")
+        except Exception as e:
+            logger.error(f"创建HNSW搜索实例失败: {e}")
+            self._hnsw_search = None
+    
+    async def pre_load_index(self):
+        """预加载HNSW索引（在工作流开始前调用）"""
+        if self._hnsw_search and not self._hnsw_loaded:
+            try:
+                from src.config.settings import settings
+                import os
+                index_path = os.path.join(settings.vector_db.db_path, 'hnsw_index.bin')
+                logger.info(f"预加载HNSW索引: {index_path}")
+                await self._hnsw_search.load_index(index_path)
+                self._hnsw_loaded = True
+                logger.info(f"HNSW索引预加载完成，包含 {len(self._hnsw_search.table_metadata)} 个表")
+                return True
+            except Exception as e:
+                logger.error(f"预加载HNSW索引失败: {e}")
+                return False
+        return self._hnsw_loaded
+    
     async def process(self, state: AgentState) -> AgentState:
         """处理表匹配任务"""
         # 确保状态对象正确
         state = self._ensure_agent_state(state)
+        
+        # 确保HNSW索引已加载
+        if not self._hnsw_loaded:
+            await self.pre_load_index()
         
         # 选择匹配方法
         if self.enhanced_matching_enabled and self.enhanced_agent:
@@ -541,21 +577,170 @@ class TableMatchingAgent(BaseAgent):
     async def _get_table_info(self, table_name: str) -> Optional[TableInfo]:
         """获取表信息（从缓存或向量搜索元数据）"""
         if table_name in self.table_info_cache:
+            logger.debug(f"从缓存获取表信息: {table_name}")
             return self.table_info_cache[table_name]
         
+        logger.debug(f"尝试获取表信息: {table_name}")
+        
         try:
-            # 从向量搜索引擎的元数据中获取表信息
-            from src.tools.vector_search import get_vector_search_engine
-            vector_search_engine = get_vector_search_engine()
+            # 尝试多种方式获取表信息
             
-            # 查找表元数据
-            for table_info in vector_search_engine.table_metadata.values():
-                if table_info.table_name == table_name:
-                    # 缓存表信息
-                    self.table_info_cache[table_name] = table_info
-                    return table_info
+            # 方式1: 从HNSW向量搜索引擎的元数据获取
+            try:
+                # 确保HNSW已初始化和加载
+                if self._hnsw_search is None or not self._hnsw_loaded:
+                    # 如果还没有加载，尝试加载
+                    await self.pre_load_index()
+                
+                if self._hnsw_search and self._hnsw_loaded:
+                    hnsw_search = self._hnsw_search
+                    logger.debug(f"使用已加载的HNSW索引，包含 {len(hnsw_search.table_metadata)} 个表")
+                else:
+                    logger.debug("HNSW索引未能成功加载")
+                    raise Exception("HNSW索引未加载")
+                
+                # 查找表元数据 - 处理字典格式
+                from src.utils.table_name_utils import normalize_table_name
+                normalized_query = normalize_table_name(table_name)
+                
+                for table_info_dict in hnsw_search.table_metadata.values():
+                    # 检查是否是字典格式
+                    if isinstance(table_info_dict, dict):
+                        stored_table_name = table_info_dict.get('table_name')
+                        # 标准化后比较表名
+                        if normalize_table_name(stored_table_name) == normalized_query:
+                            # 将字典转换为TableInfo对象
+                            from src.core.models import ColumnInfo
+                            
+                            columns = []
+                            column_names = table_info_dict.get('column_names', [])
+                            data_types = table_info_dict.get('data_types', [])
+                            
+                            for i, col_name in enumerate(column_names):
+                                col_type = data_types[i] if i < len(data_types) else 'string'
+                                column = ColumnInfo(
+                                    table_name=table_name,
+                                    column_name=col_name,
+                                    data_type=col_type,
+                                    sample_values=[]  # 暂时为空
+                                )
+                                columns.append(column)
+                            
+                            table_info = TableInfo(
+                                table_name=table_name,
+                                columns=columns
+                            )
+                            
+                            # 缓存表信息
+                            self.table_info_cache[table_name] = table_info
+                            logger.debug(f"从HNSW引擎获取到表信息: {table_name}")
+                            return table_info
+                    
+                    # 处理TableInfo对象格式
+                    elif hasattr(table_info_dict, 'table_name'):
+                        if normalize_table_name(table_info_dict.table_name) == normalized_query:
+                            # 缓存表信息
+                            self.table_info_cache[table_name] = table_info_dict
+                            logger.debug(f"从HNSW引擎获取到表信息: {table_name}")
+                            return table_info_dict
+                        
+            except Exception as e:
+                logger.debug(f"从HNSW引擎获取表信息失败: {e}")
             
-            logger.warning(f"表信息未找到: {table_name}")
+            # 方式2: 从全局向量搜索引擎获取
+            try:
+                from src.tools.vector_search import get_vector_search_engine
+                vector_search_engine = get_vector_search_engine()
+                
+                # 尝试加载索引
+                from src.config.settings import settings
+                import os
+                if hasattr(vector_search_engine, 'load_index'):
+                    # 根据引擎类型确定索引路径
+                    if hasattr(vector_search_engine, '__class__') and 'HNSW' in vector_search_engine.__class__.__name__:
+                        index_path = os.path.join(settings.vector_db.db_path, 'hnsw_index.bin')
+                    else:
+                        index_path = settings.vector_db.db_path
+                    await vector_search_engine.load_index(index_path)
+                
+                # 查找表元数据
+                from src.utils.table_name_utils import normalize_table_name
+                normalized_query = normalize_table_name(table_name)
+                
+                for table_info in vector_search_engine.table_metadata.values():
+                    if normalize_table_name(table_info.table_name) == normalized_query:
+                        # 缓存表信息
+                        self.table_info_cache[table_name] = table_info
+                        logger.debug(f"从全局引擎获取到表信息: {table_name}")
+                        return table_info
+                        
+            except Exception as e:
+                logger.debug(f"从全局引擎获取表信息失败: {e}")
+            
+            # 方式3: 从工作流的TableDiscoveryAgent获取
+            try:
+                from src.core.workflow import DataLakesWorkflow
+                # 这种方式可能会创建新的工作流实例，但至少能获取到索引数据
+                workflow = DataLakesWorkflow()
+                table_discovery_agent = workflow.table_discovery
+                
+                if hasattr(table_discovery_agent, 'vector_search') and table_discovery_agent.vector_search:
+                    vector_search = table_discovery_agent.vector_search
+                    for table_info in vector_search.table_metadata.values():
+                        if table_info.table_name == table_name:
+                            self.table_info_cache[table_name] = table_info
+                            logger.debug(f"从工作流获取到表信息: {table_name}")
+                            return table_info
+                            
+            except Exception as e:
+                logger.debug(f"从工作流获取表信息失败: {e}")
+            
+            # 方式3: 最后的备选方案 - 从原始数据文件加载
+            try:
+                import json
+                from pathlib import Path
+                from src.core.models import TableInfo, ColumnInfo
+                from src.utils.table_name_utils import normalize_table_name
+                
+                # 尝试从subset和complete数据集加载
+                data_files = [
+                    Path("examples/final_subset_tables.json"),
+                    Path("examples/final_complete_tables.json")
+                ]
+                
+                normalized_query = normalize_table_name(table_name)
+                
+                for data_file in data_files:
+                    if data_file.exists():
+                        tables_data = json.load(open(data_file))
+                        for table_data in tables_data:
+                            if normalize_table_name(table_data.get('table_name', '')) == normalized_query:
+                                # 转换为TableInfo对象
+                                columns = []
+                                for col_data in table_data.get('columns', []):
+                                    col = ColumnInfo(
+                                        table_name=col_data.get('table_name', ''),
+                                        column_name=col_data.get('column_name', ''),
+                                        data_type=col_data.get('data_type', 'unknown'),
+                                        sample_values=col_data.get('sample_values', [])
+                                    )
+                                    columns.append(col)
+                                
+                                table_info = TableInfo(
+                                    table_name=table_data.get('table_name', ''),
+                                    columns=columns,
+                                    row_count=table_data.get('row_count', 0)
+                                )
+                                
+                                # 缓存表信息
+                                self.table_info_cache[table_name] = table_info
+                                logger.debug(f"从原始数据文件获取到表信息: {table_name}")
+                                return table_info
+                
+            except Exception as e:
+                logger.debug(f"从原始数据文件获取表信息失败: {e}")
+            
+            logger.warning(f"表信息未找到: {table_name} (标准化: {normalize_table_name(table_name)})")
             return None
             
         except Exception as e:

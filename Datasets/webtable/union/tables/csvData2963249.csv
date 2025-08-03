@@ -1,6 +1,0 @@
-Weapon name (current weapon is highlighted),Damage per attack (damage per projectile),Damage per second,Effect damage and duration,Attacks per second,Critical Chance % multiplier,Critical damage,Action Point cost,Damage per action point,Weapon spread,Magazine capacity (shots per reload),Weight,Value in caps,Value to weight ratio
-[[Archimedes II Cannon (Fallout 4)|]],100,3300.0, ,3.0,x2,60,37,29.7,0.2,24(4.8),8,20000,2500.0
-[[Heavy Gauss Cannon|]],100,157.9, ,1.58,x2,80,37,2.7,0.1,24(4.8),8,15500,1937.5
-[[Pulse Cannon|]],90,670.8,+550emp }/+350s,1.34,x2,45,37,5205.1,0.1,24(4),8,14000,1750.0
-[[Plasma Cannon|]],90,155.8,+35plasma /2s,1.34,x2,75,37,4.3,0.1,24(4),8,15000,1875.0
-[[Laser Cannon|]],95,167.5,+40laser /2s,1.34,x2,90,37,4.7,0.1,24(4),8,16000,2000.0

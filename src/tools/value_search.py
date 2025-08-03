@@ -242,7 +242,8 @@ class InMemoryValueSearch(ValueSearchEngine):
                 'column_values': self.column_values
             }
             
-            with open(file_path / "value_index.pkl", 'wb') as f:
+            # 修正：file_path已经是完整的文件路径，不需要再添加文件名
+            with open(file_path, 'wb') as f:
                 pickle.dump(index_data, f)
             
             logger.info(f"值索引保存完成: {file_path}")
@@ -257,13 +258,13 @@ class InMemoryValueSearch(ValueSearchEngine):
             import pickle
             
             file_path = Path(file_path)
-            index_file = file_path / "value_index.pkl"
             
-            if not index_file.exists():
-                logger.warning(f"值索引文件不存在: {index_file}")
+            # 修正：file_path已经是完整的文件路径
+            if not file_path.exists():
+                logger.warning(f"值索引文件不存在: {file_path}")
                 return
             
-            with open(index_file, 'rb') as f:
+            with open(file_path, 'rb') as f:
                 index_data = pickle.load(f)
             
             # 恢复数据结构

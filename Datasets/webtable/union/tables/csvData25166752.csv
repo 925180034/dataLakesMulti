@@ -1,8 +1,0 @@
-Label,Test,Server,JDK,Database,OS,Ran by,Runner,Errors,Fail,Warning,Setup failures,Setup warning,Total,Success,Comments
-2.0 2009-11-12,LRGTestModel,JSE,Sun JDK 1.6.0_07,MySQL 5.1.39,Windows XP,James,browser,0,0,209,0,6,8591,Passed, 
-2.0 2009-11-12,LRGTestModel,JSE,Sun JDK 1.6.0_07,Oracle 11g,Windows XP,James,browser,0,0,84,0,0,8612,Passed, 
-2.0 2009-11-12,LRGTestModel,JSE,Sun JDK 1.6.0_07,DB2 SQL09010,Windows XP,James,browser,0,1,321,0,7,8564,Failed,database deadlock in multithreaded test
-2.0 2009-11-11,LRGTestModel,JSE,Sun JDK 1.6,Derby 10.3.1.4,Windows XP,James,browser,1,12,321,0,7,8564,Failed,"locking issue, case function not supported, driver null-pointers"
-2.0 2009-11-10,LRGTestModel,JSE,Sun JDK 1.6.0_07,Firebird 2.13,Windows XP,James,browser,11,18,219,0,7,8564,Failed,some functions not supported
-2.0 2009-11-05,LRGTestModel,JSE,Sun JDK 1.6.0_07,HSQL 1.8.1,Windows XP,James,browser,56,0,219,0,8,8301,Failed,"outer-joins, query-timeouts"
-2.0 2009-10-13+,LRGTestModel,JSE,Sun JDK 1.6.0_07,H2 1.2,Windows XP,James,browser,0,0,212,0,10,8089,Passed, 

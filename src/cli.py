@@ -11,6 +11,7 @@ import click
 from src.core.workflow import create_workflow, discover_data
 from src.core.models import AgentState, TableInfo, ColumnInfo
 from src.config.settings import settings
+from src.utils.data_parser import parse_tables_data, parse_columns_data
 
 
 @click.group()
@@ -27,7 +28,9 @@ def cli():
 @click.option('--columns', '-c', help='查询列的JSON文件路径') 
 @click.option('--output', '-o', help='输出结果到文件')
 @click.option('--format', '-f', type=click.Choice(['json', 'markdown', 'table']), default='markdown', help='输出格式')
-def discover(query: str, tables: str, columns: str, output: str, format: str):
+@click.option('--all-tables', help='所有表的JSON文件路径（用于初始化优化工作流）')
+@click.option('--no-optimize', is_flag=True, help='禁用优化工作流，使用基础版本')
+def discover(query: str, tables: str, columns: str, output: str, format: str, all_tables: str = None, no_optimize: bool = False):
     """执行数据发现"""
     try:
         # 加载输入数据
@@ -42,8 +45,7 @@ def discover(query: str, tables: str, columns: str, output: str, format: str):
             
             with open(tables_path) as f:
                 tables_data = json.load(f)
-                for table_data in tables_data:
-                    query_tables.append(TableInfo(**table_data))
+                query_tables = parse_tables_data(tables_data)
         
         if columns:
             columns_path = Path(columns)
@@ -53,20 +55,40 @@ def discover(query: str, tables: str, columns: str, output: str, format: str):
             
             with open(columns_path) as f:
                 columns_data = json.load(f)
-                for col_data in columns_data:
-                    query_columns.append(ColumnInfo(**col_data))
+                query_columns = parse_columns_data(columns_data)
         
         if not query_tables and not query_columns:
             click.echo("错误: 必须提供 --tables 或 --columns 参数", err=True)
             sys.exit(1)
         
-        # 执行发现
-        click.echo("🔍 开始数据发现...")
+        # 加载所有表数据（如果提供）
+        all_tables_data = None
+        if all_tables:
+            if format != 'json':
+                click.echo(f"📊 加载所有表数据: {all_tables}")
+            all_tables_path = Path(all_tables)
+            if not all_tables_path.exists():
+                click.echo(f"错误: 找不到文件 {all_tables}", err=True)
+                sys.exit(1)
+            
+            with open(all_tables_path) as f:
+                all_tables_data = json.load(f)
+                if format != 'json':
+                    click.echo(f"✅ 已加载 {len(all_tables_data)} 个表")
+        
+        # 执行发现 - 只在非JSON格式时显示进度
+        if format != 'json':
+            if no_optimize:
+                click.echo("🔍 开始数据发现（使用基础工作流）...")
+            else:
+                click.echo("🚀 开始数据发现（使用优化工作流）...")
         
         result = asyncio.run(discover_data(
             user_query=query,
             query_tables=[t.model_dump() for t in query_tables],
-            query_columns=[c.model_dump() for c in query_columns]
+            query_columns=[c.model_dump() for c in query_columns],
+            all_tables_data=all_tables_data,
+            use_optimized=not no_optimize
         ))
         
         # 确保result是AgentState对象
@@ -86,15 +108,22 @@ def discover(query: str, tables: str, columns: str, output: str, format: str):
         if output:
             with open(output, 'w', encoding='utf-8') as f:
                 f.write(output_text)
-            click.echo(f"✅ 结果已保存到: {output}")
+            if format != 'json':  # JSON格式时避免额外输出
+                click.echo(f"✅ 结果已保存到: {output}")
         else:
-            click.echo(output_text)
+            if format == 'json':
+                # JSON格式时只输出纯JSON，不添加任何前缀或后缀
+                click.echo(output_text)
+            else:
+                # 非JSON格式时直接输出内容（进度信息已在上面显示）
+                click.echo(output_text)
         
-        # 显示摘要
-        if result.final_results:
-            click.echo(f"\n📊 摘要: 找到 {len(result.final_results)} 个匹配结果")
-        else:
-            click.echo("\n❌ 未找到匹配结果")
+        # 只在非JSON格式时显示摘要
+        if format != 'json':
+            if result.final_results:
+                click.echo(f"\n📊 摘要: 找到 {len(result.final_results)} 个匹配结果")
+            else:
+                click.echo("\n❌ 未找到匹配结果")
             
     except Exception as e:
         click.echo(f"❌ 发现失败: {e}", err=True)
