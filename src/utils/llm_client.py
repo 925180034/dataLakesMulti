@@ -2,6 +2,7 @@ from typing import Dict, Any, Optional
 from abc import ABC, abstractmethod
 import json
 import logging
+import os  # 添加os模块导入
 from langchain_openai import ChatOpenAI
 from langchain_anthropic import ChatAnthropic
 from langchain.schema import HumanMessage, SystemMessage

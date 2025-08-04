@@ -41,9 +41,18 @@
    - 数据流程图
    - 智能体交互图
 
+6. **[系统架构详细图表](SYSTEM_ARCHITECTURE_DIAGRAMS.md)** 🆕⭐
+   - 系统整体架构图
+   - 数据流图
+   - 查询处理流程图
+   - 多智能体协作流程图
+   - 性能优化组件图
+   - 三层加速架构详细图
+   - 系统部署架构图
+
 ### 测试与评估
 
-6. **[WebTable测试报告](WEBTABLE_TEST_REPORT.md)**
+7. **[WebTable测试报告](WEBTABLE_TEST_REPORT.md)**
    - WebTable数据集测试结果
    - 性能基准测试
    - 问题分析与解决方案

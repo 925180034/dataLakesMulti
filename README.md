@@ -10,7 +10,7 @@
 
 ### 🎯 核心特性
 
-- **智能路由**：自动识别用户意图，选择最优处理策略
+- **三层加速架构**：元数据过滤 → 向量搜索 → LLM验证，逐层优化性能
 - **多智能体协作**：5个专业智能体协同工作，各司其职
 - **高性能搜索**：HNSW向量索引，支持毫秒级相似度搜索
 - **完整评价体系**：Precision、Recall、F1-Score自动计算
@@ -47,23 +47,31 @@ cp .env.example .env
 4. **运行测试**
 ```bash
 # 快速测试（3个查询）
-python unified_experiment.py 3 subset 30
+python run_full_experiment_fixed.py --dataset subset --max-queries 3
 
 # 标准评估（50个查询）
-python unified_experiment.py 50 subset 30
+python run_full_experiment_fixed.py --dataset subset --max-queries 50
+
+# 完整评估（所有查询）
+python run_full_experiment_fixed.py --dataset subset
 ```
 
 ## 📊 实验与评估
 
-### 统一实验脚本
-系统提供统一的实验脚本，自动计算所有评价指标：
+### 实验脚本
+系统提供完整的实验脚本，自动计算所有评价指标：
 
 ```bash
-python unified_experiment.py [查询数] [数据集] [超时秒数]
+python run_full_experiment_fixed.py [选项]
+
+# 选项：
+--dataset [subset|complete]   # 数据集类型
+--max-queries [数量]          # 最大查询数
+--no-llm                      # 禁用LLM（仅测试）
 
 # 示例：
-python unified_experiment.py 50 subset 30    # 子集测试
-python unified_experiment.py 100 complete 60  # 完整测试
+python run_full_experiment_fixed.py --dataset subset --max-queries 50
+python run_full_experiment_fixed.py --dataset complete --max-queries 100
 ```
 
 ### 评价指标
@@ -87,12 +95,15 @@ dataLakesMulti/
 ├── docs/                  # 📚 完整文档中心
 │   ├── README.md          # 文档索引
 │   ├── SYSTEM_ARCHITECTURE_AND_PLAN.md  # 系统架构
+│   ├── SYSTEM_ARCHITECTURE_DIAGRAMS.md  # 架构图表
 │   ├── QUICK_START.md     # 快速开始
 │   └── ...               # 更多文档
 ├── examples/              # 示例数据
-├── tests/                 # 测试用例
+├── tests/                 # 测试用例（已整理）
 ├── experiment_results/    # 实验结果
-└── unified_experiment.py  # 统一实验脚本
+├── run_full_experiment_fixed.py  # 完整实验脚本
+├── ultra_fast_evaluation_fixed.py  # 快速评估脚本
+└── run_cli.py            # CLI接口
 ```
 
 ## 📖 文档
@@ -118,12 +129,18 @@ cp config_optimized.yml config.yml
 
 ## 📈 性能指标
 
-当前系统性能（基于100表子集测试）：
-- **查询成功率**：> 95%
-- **平均响应时间**：15-20秒
-- **平均精确率**：~85%
-- **平均召回率**：~78%
-- **平均F1分数**：~81%
+### 最新测试结果（2025年8月）
+基于最新优化后的系统性能：
+- **查询成功率**：100%
+- **平均响应时间**：1.08秒（带LLM验证）
+- **平均精确率**：30%（需进一步优化）
+- **平均召回率**：75%
+- **平均F1分数**：43%
+
+### 优化目标
+- **目标响应时间**：3-8秒 ✅ 已达成
+- **目标精确率**：>90%（进行中）
+- **目标召回率**：>90%（进行中）
 
 ## 🤝 贡献
 
@@ -141,5 +158,6 @@ cp config_optimized.yml config.yml
 
 ---
 
-**项目版本**: v2.0  
-**更新日期**: 2024年7月30日
+**项目版本**: v2.1  
+**更新日期**: 2025年8月4日  
+**最近更新**: 代码清理、移除冗余文件、更新文档
