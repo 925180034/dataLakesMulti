@@ -1,0 +1,19 @@
+{
+  "dataset_type": "complete",
+  "source_prefix": "final_complete",
+  "join_dataset": {
+    "tables": 1534,
+    "queries": 5824,
+    "ground_truth": 6805
+  },
+  "union_dataset": {
+    "tables": 1534,
+    "queries": 1534,
+    "ground_truth": 8248
+  },
+  "total_original": {
+    "tables": 1534,
+    "queries": 7358,
+    "ground_truth": 15053
+  }
+}

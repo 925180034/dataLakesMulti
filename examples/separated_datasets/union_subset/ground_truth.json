@@ -1,0 +1,552 @@
+[
+  {
+    "query_table": "csvData10027553__12.csv",
+    "candidate_table": "csvData10027553__12.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData10163568__5.csv",
+    "candidate_table": "csvData14248779__2.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData10163568__5.csv",
+    "candidate_table": "csvData10163568__5.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData10289113.csv",
+    "candidate_table": "csvData10289113.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData10327833.csv",
+    "candidate_table": "csvData10327833.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData1102081__3.csv",
+    "candidate_table": "csvData1102081__3.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData11632972.csv",
+    "candidate_table": "csvData11632972.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData11945851.csv",
+    "candidate_table": "csvData11945851.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData11957850__1.csv",
+    "candidate_table": "csvData11957850__1.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData12168209__5.csv",
+    "candidate_table": "csvData12168209__5.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData12906779__1.csv",
+    "candidate_table": "csvData19132138__12.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData12906779__1.csv",
+    "candidate_table": "csvData12906779__1.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData1303939__3.csv",
+    "candidate_table": "csvData1303939__3.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData13288404.csv",
+    "candidate_table": "csvData13288404.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData13336059__13.csv",
+    "candidate_table": "csvData13336059__13.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData13336059__16.csv",
+    "candidate_table": "csvData13336059__16.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData1335254.csv",
+    "candidate_table": "csvData1335254.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData13419799.csv",
+    "candidate_table": "csvData13419799.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData13638124__5.csv",
+    "candidate_table": "csvData13638124__5.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData13638124__5.csv",
+    "candidate_table": "csvData16461238__2.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData13891302__10.csv",
+    "candidate_table": "csvData436368__10.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData13891302__10.csv",
+    "candidate_table": "csvData13891302__10.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData14248779__2.csv",
+    "candidate_table": "csvData14248779__2.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData14248779__2.csv",
+    "candidate_table": "csvData10163568__5.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData14780613__0.csv",
+    "candidate_table": "csvData14780613__0.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData14976959.csv",
+    "candidate_table": "csvData14976959.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData14993847.csv",
+    "candidate_table": "csvData14993847.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData15307913.csv",
+    "candidate_table": "csvData15307913.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData15894443__13.csv",
+    "candidate_table": "csvData15894443__13.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData15936069__15.csv",
+    "candidate_table": "csvData15936069__15.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData16114577__11.csv",
+    "candidate_table": "csvData16114577__11.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData16339602.csv",
+    "candidate_table": "csvData16339602.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData16403538.csv",
+    "candidate_table": "csvData16403538.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData1644016__4.csv",
+    "candidate_table": "csvData1644016__4.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData16461238__2.csv",
+    "candidate_table": "csvData16461238__2.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData16461238__2.csv",
+    "candidate_table": "csvData13638124__5.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData16744180.csv",
+    "candidate_table": "csvData16744180.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData16984008__0.csv",
+    "candidate_table": "csvData16984008__0.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData1786628__7.csv",
+    "candidate_table": "csvData1786628__7.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData18409343.csv",
+    "candidate_table": "csvData18409343.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData18518969__7.csv",
+    "candidate_table": "csvData18518969__7.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData18562133__11.csv",
+    "candidate_table": "csvData18562133__11.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData18562133__11.csv",
+    "candidate_table": "csvData4676916__9.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData18823542.csv",
+    "candidate_table": "csvData18823542.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData18926379__2.csv",
+    "candidate_table": "csvData18926379__2.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData19114693__5.csv",
+    "candidate_table": "csvData19114693__5.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData19132138__12.csv",
+    "candidate_table": "csvData19132138__12.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData19898919__1.csv",
+    "candidate_table": "csvData19898919__1.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData20186787.csv",
+    "candidate_table": "csvData20186787.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData21180610__1.csv",
+    "candidate_table": "csvData21180610__1.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData21675463__5.csv",
+    "candidate_table": "csvData21675463__5.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData21810799__3.csv",
+    "candidate_table": "csvData21810799__3.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData21947308__1.csv",
+    "candidate_table": "csvData21947308__1.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData22293691.csv",
+    "candidate_table": "csvData22293691.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData22384272__0.csv",
+    "candidate_table": "csvData22384272__0.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData22558849__1.csv",
+    "candidate_table": "csvData22558849__1.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData22558849__12.csv",
+    "candidate_table": "csvData22558849__12.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData22558849__12.csv",
+    "candidate_table": "csvData4888338__0.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData22709338__0.csv",
+    "candidate_table": "csvData22709338__0.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData23141915__6.csv",
+    "candidate_table": "csvData23141915__6.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData23195006.csv",
+    "candidate_table": "csvData23195006.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData24805223__2.csv",
+    "candidate_table": "csvData24805223__2.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData2590167__10.csv",
+    "candidate_table": "csvData2590167__10.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData2590167__10.csv",
+    "candidate_table": "csvData2590167__13.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData2590167__13.csv",
+    "candidate_table": "csvData2590167__13.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData2590167__13.csv",
+    "candidate_table": "csvData2590167__10.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData26447856__0.csv",
+    "candidate_table": "csvData26447856__0.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData26959440__0.csv",
+    "candidate_table": "csvData26959440__0.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData26959440__0.csv",
+    "candidate_table": "csvData21675463__5.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData27587184__3.csv",
+    "candidate_table": "csvData27587184__3.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData2852713__12.csv",
+    "candidate_table": "csvData2852713__12.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData28932469.csv",
+    "candidate_table": "csvData28932469.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData29110750.csv",
+    "candidate_table": "csvData29110750.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData29230622__16.csv",
+    "candidate_table": "csvData29230622__16.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData29383799__16.csv",
+    "candidate_table": "csvData436368__10.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData29383799__16.csv",
+    "candidate_table": "csvData29383799__16.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData29453038__18.csv",
+    "candidate_table": "csvData29453038__18.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData3871380__2.csv",
+    "candidate_table": "csvData3871380__2.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData3871380__2.csv",
+    "candidate_table": "csvData1303939__3.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData436368__10.csv",
+    "candidate_table": "csvData436368__10.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData4674540__6.csv",
+    "candidate_table": "csvData4674540__6.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData4676916__9.csv",
+    "candidate_table": "csvData4676916__9.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData4676916__9.csv",
+    "candidate_table": "csvData18562133__11.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData4888338__0.csv",
+    "candidate_table": "csvData4888338__0.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData4888338__0.csv",
+    "candidate_table": "csvData22558849__12.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData5018557__1.csv",
+    "candidate_table": "csvData5018557__1.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData5296964.csv",
+    "candidate_table": "csvData5296964.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData5416457__1.csv",
+    "candidate_table": "csvData5416457__1.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData5825429.csv",
+    "candidate_table": "csvData5825429.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData6444295__3.csv",
+    "candidate_table": "csvData6444295__5.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData6444295__3.csv",
+    "candidate_table": "csvData6444295__3.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData6444295__5.csv",
+    "candidate_table": "csvData6444295__5.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData6444295__5.csv",
+    "candidate_table": "csvData6444295__3.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData6605406__1.csv",
+    "candidate_table": "csvData6605406__1.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData6697673.csv",
+    "candidate_table": "csvData6697673.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData7256518.csv",
+    "candidate_table": "csvData7256518.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData7434868__4.csv",
+    "candidate_table": "csvData7434868__4.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData7824564.csv",
+    "candidate_table": "csvData7824564.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData8288967__18.csv",
+    "candidate_table": "csvData8288967__18.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData8479264__13.csv",
+    "candidate_table": "csvData8479264__13.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData8479264__13.csv",
+    "candidate_table": "csvData2590167__13.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData8479264__13.csv",
+    "candidate_table": "csvData2590167__10.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData8549891__10.csv",
+    "candidate_table": "csvData8549891__10.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData8598250__1.csv",
+    "candidate_table": "csvData436368__10.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData8598250__1.csv",
+    "candidate_table": "csvData8598250__1.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData9205349__16.csv",
+    "candidate_table": "csvData9205349__16.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData9469123__3.csv",
+    "candidate_table": "csvData9469123__3.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData9702682__1.csv",
+    "candidate_table": "csvData9702682__1.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData9739809__1.csv",
+    "candidate_table": "csvData9739809__1.csv",
+    "query_type": "union"
+  },
+  {
+    "query_table": "csvData9925714__1.csv",
+    "candidate_table": "csvData9925714__1.csv",
+    "query_type": "union"
+  }
+]

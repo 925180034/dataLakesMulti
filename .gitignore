@@ -172,3 +172,9 @@ experiment_results/
 batch_experiment_*.json
 simple_experiment_*.json
 *_results_*.json
+
+# 论文草稿目录（完全忽略）
+paper_draft/
+
+# WebTable数据集目录（大文件，不需要上传）
+Datasets/

@@ -1,0 +1,19 @@
+{
+  "dataset_type": "subset",
+  "source_prefix": "final_subset",
+  "join_dataset": {
+    "tables": 100,
+    "queries": 402,
+    "ground_truth": 84
+  },
+  "union_dataset": {
+    "tables": 100,
+    "queries": 100,
+    "ground_truth": 110
+  },
+  "total_original": {
+    "tables": 100,
+    "queries": 502,
+    "ground_truth": 194
+  }
+}
