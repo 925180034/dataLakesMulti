@@ -167,11 +167,18 @@ keys/
 ProjectKnowledge/
 **/ProjectKnowledge/
 
-# 实验结果文件
-experiment_results/
+# 临时实验结果文件
 batch_experiment_*.json
 simple_experiment_*.json
 *_results_*.json
+real_ablation_*
+.archive_cleanup_*
+
+# 临时分析和报告文件
+FINAL_OPTIMIZATION_REPORT.md
+THREE_LAYER_ABLATION_FINAL_REPORT.md
+THREE_LAYER_ARCHITECTURE_ANALYSIS.md
+run_system.py
 
 # 论文草稿目录（完全忽略）
 paper_draft/
