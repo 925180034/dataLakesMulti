@@ -11,34 +11,229 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - Do NOT create new architectures or approaches
 - Always verify changes align with the plan
 
+### 🚨 MANDATORY: Real System Validation - NO SIMULATION ALLOWED
+
+**CRITICAL REQUIREMENT**: ALL experiments and evaluations MUST use REAL systems, REAL data, and REAL metrics. NO simulation or mock systems allowed.
+
+#### ✅ Required Real System Components
+**You MUST verify these components are actually running:**
+
+1. **Real LLM API Calls** 
+   ```python
+   # ✅ REQUIRED: Real Gemini/OpenAI API calls
+   llm_response = await self.llm_client.generate_json(prompt)
+   
+   # ❌ FORBIDDEN: Mock/simulation 
+   await asyncio.sleep(0.05)  # This is FAKE!
+   ```
+
+2. **Real SentenceTransformer Models**
+   ```python
+   # ✅ REQUIRED: Real model loading
+   from sentence_transformers import SentenceTransformer
+   model = SentenceTransformer('all-MiniLM-L6-v2')
+   embedding = model.encode(text)
+   
+   # ❌ FORBIDDEN: Hash-based fake vectors
+   hash_obj = hashlib.sha256(text.encode())  # This is FAKE!
+   ```
+
+3. **Real Data Processing**
+   - Use actual data from `examples/separated_datasets/`
+   - Process real JSON files with real table structures
+   - NO artificial or generated test data
+
+4. **Real Evaluation Metrics**
+   - Calculate metrics from actual prediction vs ground truth comparisons
+   - NO hardcoded or simulated scores
+   - Time measurements must reflect actual processing time
+
+#### 🔍 Verification Checklist - Run BEFORE Every Experiment
+
+**Before running ANY experiment, verify:**
+
+```bash
+# 1. Check real API keys are loaded
+echo "API Key length: ${#GEMINI_API_KEY}"  # Should be 39+ characters
+
+# 2. Check real model exists  
+ls -la ~/.cache/torch/sentence_transformers/  # Should show downloaded models
+
+# 3. Check real data exists
+ls -la examples/separated_datasets/union_subset/  # Should show real JSON files
+
+# 4. Verify NOT using simulation flags
+echo "SKIP_LLM: $SKIP_LLM"  # Should be 'false' or empty
+```
+
+#### 📊 Expected Real Processing Times
+
+**WARNING: If you see these times, you're using SIMULATION:**
+- Layer2 (Vector): <10ms ❌ (Real should be 0.5-5s)
+- Layer3 (LLM): <100ms ❌ (Real should be 1-8s)
+- Total per query: <1s ❌ (Real should be 2-10s)
+
+**REAL processing times should be:**
+- Layer2 (SentenceTransformer): 0.5-5 seconds per query
+- Layer3 (LLM API): 1-8 seconds per query  
+- Total per query: 2-10 seconds for complete processing
+
+#### 🚨 Red Flags - Signs of Simulation
+
+**If you see ANY of these, STOP immediately:**
+- Processing time <0.1s per query
+- "模拟LLM" or "模拟" in logs
+- `asyncio.sleep()` used for delays
+- Hash-based vector generation
+- Hardcoded similarity scores
+- Perfect round numbers in results (50.0%, 100.0%)
+
+#### ✅ Approved Real Systems Only
+
+**ONLY use these verified real components:**
+- `src/utils/llm_client.py` - GeminiClient with real API
+- `src/tools/embedding.py` - SentenceTransformerEmbeddingGenerator  
+- `src/core/workflow.py` - DataLakesWorkflow with real agents
+- `real_three_layer_ablation.py` - Verified real system script
+
+**NEVER use these simulation files:**
+- `optimized_three_layer_system.py` - Contains simulation code
+- Any file with "mock", "fake", "simulate" in comments
+
+#### 📋 Mandatory Pre-Experiment Validation
+
+**Run this validation BEFORE every experiment:**
+
+```python
+# Validation script - add to beginning of every experiment
+def validate_real_system():
+    # 1. Check API keys
+    api_key = os.getenv('GEMINI_API_KEY')
+    assert api_key and len(api_key) > 30, "Real API key required"
+    
+    # 2. Check SentenceTransformer model
+    model_path = Path.home() / '.cache/torch/sentence_transformers'
+    assert model_path.exists(), "Real SentenceTransformer cache required"
+    
+    # 3. Check no simulation flags
+    skip_llm = os.getenv('SKIP_LLM', '').lower()
+    assert skip_llm in ['false', ''], f"SKIP_LLM must be false, got: {skip_llm}"
+    
+    # 4. Check real data exists
+    data_path = Path("examples/separated_datasets")
+    assert data_path.exists(), "Real dataset path required"
+    
+    print("✅ Real system validation passed")
+```
+
+#### 🔬 Truth Verification Protocol
+
+**For EVERY experiment result, provide proof:**
+
+1. **Time Evidence**: Show actual processing times >1s per query
+2. **API Evidence**: Show real API call logs/responses  
+3. **Model Evidence**: Show SentenceTransformer model loading logs
+4. **Data Evidence**: Show actual data being processed from real files
+5. **Metric Evidence**: Show calculation from actual predictions vs ground truth
+
+**Format for reporting:**
+```
+🔍 Real System Evidence:
+- API Calls: X successful Gemini calls (Y seconds each)  
+- Vector Generation: SentenceTransformer processed X tables (Y seconds total)
+- Data Source: Loaded X tables from examples/separated_datasets/
+- Processing Time: Total X.XX seconds (breakdown: L1=Xs, L2=Xs, L3=Xs)
+- Metrics: Calculated from X predictions vs X ground truth entries
+```
+
 ### 📊 Current System Status (August 2025)
-**Overall Completion**: ~70% of target requirements
+**Overall Completion**: ~60% of target requirements
+**Current Focus**: 🎯 **三层架构优化任务**
 
 | Component | Status | Completion | Priority |
 |-----------|--------|------------|----------|
 | Phase 1: Basic Infrastructure | ✅ Complete | 100% | - |
-| Phase 2: Performance Acceleration | ✅ Complete | 100% | - |
+| Phase 2: 三层架构优化 | 🔄 In Progress | 70% | **HIGH** |
 | Phase 3: Scale Deployment | 📋 Planned | 0% | MEDIUM |
 
-### ✅ Recent Achievements (2025-08-03)
-1. **Core Matching Fixed** - System now returns valid predictions with proper accuracy
-2. **Performance Target Achieved** - 0.07-3s/query (exceeds 3-8s target) 
-3. **Batch Processing Implemented** - 10x reduction in LLM calls
-4. **Parallel Processing Enabled** - max_concurrent_requests = 10
-5. **Multi-Level Caching** - 857x speedup with cache hits
+### ✅ Recent Achievements (2025-08-10)
+1. **三层架构诊断完成** - 发现并诊断了三层架构的实现问题
+2. **消融实验框架建立** - 完整的三层架构消融实验系统
+3. **LLM层智能调用** - 基于置信度的智能LLM调用机制（30-50%调用率）
+4. **问题根因分析** - 明确识别了各层存在的技术问题
+5. **LakeBench技术分析** - 获得HNSW、匈牙利算法等优化方案
 
-### 📈 Performance Metrics
-- **Query Speed**: 0.07s (cached) / 2-3s (uncached) ✅
-- **Matching Accuracy**: ~85% Precision, ~78% Recall ✅
-- **LLM Efficiency**: 1-2 calls/query (was 10-20) ✅
-- **Cache Hit Rate**: >95% on repeated queries ✅
-- **Speedup**: Up to 857x with optimizations ✅
+### 📈 Real System Performance Metrics (Verified 2025-08-10)
 
-### 📋 Next Development Priorities
-1. **Scale Testing** - Expand from 100 to 10,000+ tables
-2. **Accuracy Improvement** - Reach >90% precision/recall target
-3. **Production Deployment** - Docker containerization and API server
-4. **Monitoring & Observability** - Add metrics and logging dashboards
+**🔥 TRUE Three-Layer Architecture (Real SentenceTransformer + Real LLM API)**:
+- **Layer1 Only**: F1=0.0%, 查询时间=0.000s (元数据过滤基准)
+- **Layer1+2 Real**: F1=0.0%, 查询时间=3.434s (真实SentenceTransformer向量搜索)
+- **Complete Real**: F1=0.0%, 查询时间=4.788s (完整系统含真实Gemini LLM)
+
+**Real Processing Time Breakdown per Query**:
+- Layer1 (Metadata Filter): ~0.000s
+- Layer2 (SentenceTransformer): ~3.434s (包含首次模型加载14.55s)
+- Layer3 (Gemini LLM API): ~1.353s (2.89-4.73s range)
+
+**🚨 CRITICAL ISSUES IDENTIFIED**:
+1. **Accuracy Problem**: All configurations show 0% F1 score - Ground Truth parsing needs fix
+2. **Performance Gap**: Real system is 84x slower than simulated (4.8s vs 0.057s)
+3. **LLM Cost**: Each query requires 1-5 seconds of API time
+4. **Vector Cost**: Real embedding generation needs 3+ seconds per query
+
+**Next Priority**: Fix Ground Truth format parsing to get accurate F1 scores
+
+### 🎯 当前开发优先级（基于真实系统验证结果）
+
+**🚨 CRITICAL (Must Fix First)**:
+1. **修复Ground Truth解析问题** - 当前0% F1分数的根本原因
+   - 检查ground truth数据格式 (每个候选表一条记录 vs 列表格式)
+   - 修复预测结果与ground truth的匹配逻辑
+   - 验证表名标准化和ID匹配规则
+
+**⚡ HIGH PRIORITY (Performance Optimization)**:
+2. **Layer2向量搜索优化** - 从3.4秒优化到<1秒
+   - 批量向量化处理 (减少API调用次数)
+   - 向量缓存机制 (避免重复计算)
+   - HNSW索引预构建 (启动时一次性构建)
+
+3. **Layer3 LLM调用优化** - 从1.4秒优化到<0.5秒
+   - 智能LLM调用策略 (仅在必要时调用)
+   - 批量LLM处理 (多个查询合并)
+   - 响应缓存机制 (相似查询复用结果)
+
+**🔧 MEDIUM PRIORITY (Architecture Enhancement)**:
+4. **实现HNSW预索引** - 系统启动时预构建全部向量索引
+5. **添加匈牙利算法精确匹配** - Layer3精度提升
+6. **元数据过滤层智能化** - Layer1候选数量自适应调整
+
+**📊 SUCCESS CRITERIA**:
+- Target F1: >80% (Fix ground truth parsing first)
+- Target Query Time: <2 seconds per query
+- Target LLM Usage: <30% of queries (intelligent calling)
+
+## 🎯 IMMEDIATE NEXT STEPS
+
+### Step 1: Fix Ground Truth Parsing (URGENT)
+**Current Issue**: 0% F1 scores due to ground truth format mismatch
+**Action Required**: 
+```python
+# Check ground truth format in examples/separated_datasets/union_subset/ground_truth.json
+# Fix the parsing logic in real_three_layer_ablation.py lines 400-406
+# Expected ground truth format vs actual format mismatch needs resolution
+```
+
+### Step 2: Optimize Real System Performance
+**Current Issue**: 4.8s per query vs 2s target
+**Action Required**:
+- Layer2: Batch SentenceTransformer processing (reduce 3.4s → <1s)  
+- Layer3: Smart LLM caching (reduce 1.4s → <0.5s)
+- Overall: 4.8s → <2s per query target
+
+**Success Validation**: Run `real_three_layer_ablation.py` and verify:
+- ✅ F1 scores >50% (not 0%)
+- ✅ Processing times <3s per query
+- ✅ Real API calls (not simulation)
 
 ## Project Overview
 
@@ -74,26 +269,54 @@ cp .env.example .env
 
 ### Running the System
 
-**Recommended Methods**:
+**🔥 REQUIRED: Use REAL System Only**
 
-1. **Evaluation with Metrics (评估实验)**:
+1. **Real Three-Layer Architecture Testing (RECOMMENDED)**:
 ```bash
-# Main evaluation script that computes Precision, Recall, F1-Score
-python evaluate_with_metrics.py
+# Verified real system with actual SentenceTransformer + LLM API
+python real_three_layer_ablation.py
 
-# This script:
-# - Loads data from examples/final_subset_*.json files
-# - Runs queries through both basic and optimized workflows
-# - Calculates standard evaluation metrics
-# - Outputs results to evaluation_results.json
+# This script GUARANTEES:
+# ✅ Real SentenceTransformer model loading (~8s initialization)
+# ✅ Real Gemini LLM API calls (2-5s per query)
+# ✅ Real data from examples/separated_datasets/
+# ✅ Real processing times (4-5s per query)
+# ✅ True ablation study results
 
-# Note: Currently returns 0 metrics due to core matching issues (MUST FIX)
+# Expected Real Results:
+# - Layer1 Only: ~0.000s per query
+# - Layer1+2 Real: ~3.434s per query (real vector search)
+# - Full Real 3-Layer: ~4.788s per query (with LLM)
 ```
 
-2. **Unified Experiment Script (DEPRECATED - does not exist)**:
+2. **Pre-Experiment Validation (MANDATORY)**:
 ```bash
-# These commands reference a non-existent script
-# Use evaluate_with_metrics.py instead
+# Run BEFORE any experiment to ensure real system
+python -c "
+import os
+from pathlib import Path
+
+# Validate real components exist
+api_key = os.getenv('GEMINI_API_KEY')
+print(f'API Key: {len(api_key) if api_key else 0} characters')
+
+model_cache = Path.home() / '.cache/torch/sentence_transformers'
+print(f'SentenceTransformer Cache: {model_cache.exists()}')
+
+data_path = Path('examples/separated_datasets/union_subset')
+print(f'Real Data Path: {data_path.exists()}')
+
+skip_llm = os.getenv('SKIP_LLM', '').lower()
+print(f'SKIP_LLM: {skip_llm} (should be false/empty)')
+"
+```
+
+3. **⚠️ DEPRECATED/FORBIDDEN Methods**:
+```bash
+# ❌ DO NOT USE - Contains simulation code
+# python evaluate_with_metrics.py  # May use mock systems
+# python optimized_three_layer_system.py  # Contains asyncio.sleep() simulation
+# python verify_three_layer_llm.py  # Previous verification, use real_three_layer_ablation.py instead
 ```
 
 3. **CLI Commands**:

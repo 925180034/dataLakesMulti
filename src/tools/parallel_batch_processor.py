@@ -38,8 +38,8 @@ class ParallelBatchProcessor:
     def __init__(
         self,
         llm_client,
-        max_concurrent: int = 20,  # 提高并发数
-        timeout_per_call: float = 5.0,  # 单次调用超时
+        max_concurrent: int = 10,  # 提高并发数
+        timeout_per_call: float = 7.0,  # 单次调用超时
         enable_fast_fail: bool = True
     ):
         self.llm_client = llm_client

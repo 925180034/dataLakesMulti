@@ -95,15 +95,16 @@ class MetadataFilter:
         
         for table_name in all_tables:
             if table_name == query_table.table_name:
-                continue
+                # 包含查询表本身（用于自连接），给予高分
+                table_scores[table_name] = 1.0  # 最高分
+            else:
+                score = self._calculate_metadata_similarity(
+                    query_features, 
+                    self.table_metadata.get(table_name, {})
+                )
                 
-            score = self._calculate_metadata_similarity(
-                query_features, 
-                self.table_metadata.get(table_name, {})
-            )
-            
-            if score > 0:
-                table_scores[table_name] = score
+                if score > 0:
+                    table_scores[table_name] = score
         
         # 排序并返回Top-K
         sorted_tables = sorted(

@@ -1,0 +1,572 @@
+[
+  {
+    "query_table": "csvData4676916__9.csv",
+    "query_column": "OPS",
+    "ground_truth": [
+      "csvData4676916__9.csv"
+    ]
+  },
+  {
+    "query_table": "csvData4676916__9.csv",
+    "query_column": "AVG",
+    "ground_truth": [
+      "csvData4676916__9.csv"
+    ]
+  },
+  {
+    "query_table": "csvData29230622__16.csv",
+    "query_column": "oppAVG",
+    "ground_truth": [
+      "csvData29230622__16.csv"
+    ]
+  },
+  {
+    "query_table": "csvData29230622__16.csv",
+    "query_column": "oppOPS",
+    "ground_truth": [
+      "csvData29230622__16.csv"
+    ]
+  },
+  {
+    "query_table": "csvData4888338__0.csv",
+    "query_column": "Feb",
+    "ground_truth": [
+      "csvData4888338__0.csv"
+    ]
+  },
+  {
+    "query_table": "csvData18926379__2.csv",
+    "query_column": "ORB%",
+    "ground_truth": [
+      "csvData18926379__2.csv"
+    ]
+  },
+  {
+    "query_table": "csvData6444295__5.csv",
+    "query_column": "Player",
+    "ground_truth": [
+      "csvData6444295__5.csv"
+    ]
+  },
+  {
+    "query_table": "csvData6444295__5.csv",
+    "query_column": "MPG",
+    "ground_truth": [
+      "csvData6444295__5.csv"
+    ]
+  },
+  {
+    "query_table": "csvData10027553__12.csv",
+    "query_column": "Team",
+    "ground_truth": [
+      "csvData10027553__12.csv",
+      "csvData9739809__1.csv"
+    ]
+  },
+  {
+    "query_table": "csvData10027553__12.csv",
+    "query_column": "Player",
+    "ground_truth": [
+      "csvData10027553__12.csv"
+    ]
+  },
+  {
+    "query_table": "csvData3871380__2.csv",
+    "query_column": "hbp",
+    "ground_truth": [
+      "csvData3871380__2.csv"
+    ]
+  },
+  {
+    "query_table": "csvData21675463__5.csv",
+    "query_column": "Team",
+    "ground_truth": [
+      "csvData21675463__5.csv",
+      "csvData9739809__1.csv"
+    ]
+  },
+  {
+    "query_table": "csvData9205349__16.csv",
+    "query_column": "iFenwick",
+    "ground_truth": [
+      "csvData9205349__16.csv"
+    ]
+  },
+  {
+    "query_table": "csvData9205349__16.csv",
+    "query_column": "iFenwick/60",
+    "ground_truth": [
+      "csvData9205349__16.csv"
+    ]
+  },
+  {
+    "query_table": "csvData21947308__1.csv",
+    "query_column": "Result",
+    "ground_truth": [
+      "csvData21947308__1.csv"
+    ]
+  },
+  {
+    "query_table": "csvData23141915__6.csv",
+    "query_column": "TRB%",
+    "ground_truth": [
+      "csvData23141915__6.csv"
+    ]
+  },
+  {
+    "query_table": "csvData18562133__11.csv",
+    "query_column": "Player",
+    "ground_truth": [
+      "csvData18562133__11.csv"
+    ]
+  },
+  {
+    "query_table": "csvData18562133__11.csv",
+    "query_column": "OBP",
+    "ground_truth": [
+      "csvData18562133__11.csv",
+      "csvData9739809__1.csv"
+    ]
+  },
+  {
+    "query_table": "csvData16114577__11.csv",
+    "query_column": "SLG",
+    "ground_truth": [
+      "csvData16114577__11.csv"
+    ]
+  },
+  {
+    "query_table": "csvData15936069__15.csv",
+    "query_column": "SLG",
+    "ground_truth": [
+      "csvData15936069__15.csv"
+    ]
+  },
+  {
+    "query_table": "csvData15936069__15.csv",
+    "query_column": "PPF",
+    "ground_truth": [
+      "csvData15936069__15.csv"
+    ]
+  },
+  {
+    "query_table": "csvData21810799__3.csv",
+    "query_column": "TOV%",
+    "ground_truth": [
+      "csvData21810799__3.csv"
+    ]
+  },
+  {
+    "query_table": "csvData21810799__3.csv",
+    "query_column": "DRB%",
+    "ground_truth": [
+      "csvData21810799__3.csv"
+    ]
+  },
+  {
+    "query_table": "csvData21810799__3.csv",
+    "query_column": "DRtg",
+    "ground_truth": [
+      "csvData21810799__3.csv"
+    ]
+  },
+  {
+    "query_table": "csvData13891302__10.csv",
+    "query_column": "OPS",
+    "ground_truth": [
+      "csvData13891302__10.csv"
+    ]
+  },
+  {
+    "query_table": "csvData18823542.csv",
+    "query_column": "site id",
+    "ground_truth": [
+      "csvData18823542.csv"
+    ]
+  },
+  {
+    "query_table": "csvData18823542.csv",
+    "query_column": "tour",
+    "ground_truth": [
+      "csvData18823542.csv"
+    ]
+  },
+  {
+    "query_table": "csvData18823542.csv",
+    "query_column": "place",
+    "ground_truth": [
+      "csvData18823542.csv"
+    ]
+  },
+  {
+    "query_table": "csvData18823542.csv",
+    "query_column": "round",
+    "ground_truth": [
+      "csvData18823542.csv"
+    ]
+  },
+  {
+    "query_table": "csvData18823542.csv",
+    "query_column": "date",
+    "ground_truth": [
+      "csvData18823542.csv"
+    ]
+  },
+  {
+    "query_table": "csvData18823542.csv",
+    "query_column": "line/ramp",
+    "ground_truth": [
+      "csvData18823542.csv"
+    ]
+  },
+  {
+    "query_table": "csvData16339602.csv",
+    "query_column": "Year",
+    "ground_truth": [
+      "csvData16339602.csv"
+    ]
+  },
+  {
+    "query_table": "csvData16339602.csv",
+    "query_column": "Age",
+    "ground_truth": [
+      "csvData16339602.csv"
+    ]
+  },
+  {
+    "query_table": "csvData16339602.csv",
+    "query_column": "Strikeout Rate",
+    "ground_truth": [
+      "csvData16339602.csv"
+    ]
+  },
+  {
+    "query_table": "csvData16339602.csv",
+    "query_column": "Isolated Power",
+    "ground_truth": [
+      "csvData16339602.csv"
+    ]
+  },
+  {
+    "query_table": "csvData16339602.csv",
+    "query_column": "Walk Rate",
+    "ground_truth": [
+      "csvData16339602.csv"
+    ]
+  },
+  {
+    "query_table": "csvData16339602.csv",
+    "query_column": "BB/K Ratio",
+    "ground_truth": [
+      "csvData16339602.csv"
+    ]
+  },
+  {
+    "query_table": "csvData16339602.csv",
+    "query_column": "Contact Rate",
+    "ground_truth": [
+      "csvData16339602.csv"
+    ]
+  },
+  {
+    "query_table": "csvData13891302__10.csv",
+    "query_column": "GIDP",
+    "ground_truth": [
+      "csvData9739809__1.csv"
+    ]
+  },
+  {
+    "query_table": "csvData9739809__1.csv",
+    "query_column": "OBP",
+    "ground_truth": [
+      "csvData9739809__1.csv"
+    ]
+  },
+  {
+    "query_table": "csvData2852713__12.csv",
+    "query_column": "Rpos",
+    "ground_truth": [
+      "csvData2852713__12.csv"
+    ]
+  },
+  {
+    "query_table": "csvData2852713__12.csv",
+    "query_column": "Acquired",
+    "ground_truth": [
+      "csvData2852713__12.csv"
+    ]
+  },
+  {
+    "query_table": "csvData29453038__18.csv",
+    "query_column": "Team",
+    "ground_truth": [
+      "csvData9739809__1.csv"
+    ]
+  },
+  {
+    "query_table": "csvData29383799__16.csv",
+    "query_column": "Team",
+    "ground_truth": [
+      "csvData9739809__1.csv"
+    ]
+  },
+  {
+    "query_table": "csvData9739809__1.csv",
+    "query_column": "GIDP",
+    "ground_truth": [
+      "csvData9739809__1.csv"
+    ]
+  },
+  {
+    "query_table": "csvData18562133__11.csv",
+    "query_column": "Team",
+    "ground_truth": [
+      "csvData9739809__1.csv"
+    ]
+  },
+  {
+    "query_table": "csvData13638124__5.csv",
+    "query_column": "OBP",
+    "ground_truth": [
+      "csvData9739809__1.csv"
+    ]
+  },
+  {
+    "query_table": "csvData2590167__13.csv",
+    "query_column": "GIDP",
+    "ground_truth": [
+      "csvData9739809__1.csv"
+    ]
+  },
+  {
+    "query_table": "csvData13891302__10.csv",
+    "query_column": "Team",
+    "ground_truth": [
+      "csvData9739809__1.csv"
+    ]
+  },
+  {
+    "query_table": "csvData15894443__13.csv",
+    "query_column": "oppAVG",
+    "ground_truth": [
+      "csvData29230622__16.csv"
+    ]
+  },
+  {
+    "query_table": "csvData9702682__1.csv",
+    "query_column": "ibb",
+    "ground_truth": [
+      "csvData9702682__1.csv"
+    ]
+  },
+  {
+    "query_table": "csvData4676916__9.csv",
+    "query_column": "Team",
+    "ground_truth": [
+      "csvData9739809__1.csv"
+    ]
+  },
+  {
+    "query_table": "csvData436368__10.csv",
+    "query_column": "Team",
+    "ground_truth": [
+      "csvData9739809__1.csv"
+    ]
+  },
+  {
+    "query_table": "csvData16114577__11.csv",
+    "query_column": "Team",
+    "ground_truth": [
+      "csvData9739809__1.csv"
+    ]
+  },
+  {
+    "query_table": "csvData9739809__1.csv",
+    "query_column": "Team",
+    "ground_truth": [
+      "csvData9739809__1.csv"
+    ]
+  },
+  {
+    "query_table": "csvData9469123__3.csv",
+    "query_column": "OBP",
+    "ground_truth": [
+      "csvData9739809__1.csv"
+    ]
+  },
+  {
+    "query_table": "csvData5018557__1.csv",
+    "query_column": "Team",
+    "ground_truth": [
+      "csvData9739809__1.csv"
+    ]
+  },
+  {
+    "query_table": "csvData2852713__12.csv",
+    "query_column": "oWAR",
+    "ground_truth": [
+      "csvData2852713__12.csv"
+    ]
+  },
+  {
+    "query_table": "csvData2852713__12.csv",
+    "query_column": "Rbat",
+    "ground_truth": [
+      "csvData2852713__12.csv"
+    ]
+  },
+  {
+    "query_table": "csvData2852713__12.csv",
+    "query_column": "RAR",
+    "ground_truth": [
+      "csvData2852713__12.csv"
+    ]
+  },
+  {
+    "query_table": "csvData2852713__12.csv",
+    "query_column": "Rbaser",
+    "ground_truth": [
+      "csvData2852713__12.csv"
+    ]
+  },
+  {
+    "query_table": "csvData12906779__1.csv",
+    "query_column": "AGE",
+    "ground_truth": [
+      "csvData12906779__1.csv"
+    ]
+  },
+  {
+    "query_table": "csvData22558849__12.csv",
+    "query_column": "Gact",
+    "ground_truth": [
+      "csvData22558849__12.csv"
+    ]
+  },
+  {
+    "query_table": "csvData13638124__5.csv",
+    "query_column": "Team",
+    "ground_truth": [
+      "csvData9739809__1.csv"
+    ]
+  },
+  {
+    "query_table": "csvData15936069__15.csv",
+    "query_column": "oppAVG",
+    "ground_truth": [
+      "csvData29230622__16.csv"
+    ]
+  },
+  {
+    "query_table": "csvData19132138__12.csv",
+    "query_column": "oppOPS",
+    "ground_truth": [
+      "csvData29230622__16.csv"
+    ]
+  },
+  {
+    "query_table": "csvData19132138__12.csv",
+    "query_column": "OBP",
+    "ground_truth": [
+      "csvData9739809__1.csv"
+    ]
+  },
+  {
+    "query_table": "csvData2852713__12.csv",
+    "query_column": "dWAR",
+    "ground_truth": [
+      "csvData2852713__12.csv"
+    ]
+  },
+  {
+    "query_table": "csvData19114693__5.csv",
+    "query_column": "S/G",
+    "ground_truth": [
+      "csvData19114693__5.csv"
+    ]
+  },
+  {
+    "query_table": "csvData12906779__1.csv",
+    "query_column": "OBP",
+    "ground_truth": [
+      "csvData9739809__1.csv"
+    ]
+  },
+  {
+    "query_table": "csvData2852713__12.csv",
+    "query_column": "WAA",
+    "ground_truth": [
+      "csvData2852713__12.csv"
+    ]
+  },
+  {
+    "query_table": "csvData19132138__12.csv",
+    "query_column": "AGE",
+    "ground_truth": [
+      "csvData12906779__1.csv"
+    ]
+  },
+  {
+    "query_table": "csvData2852713__12.csv",
+    "query_column": "Rdp",
+    "ground_truth": [
+      "csvData2852713__12.csv"
+    ]
+  },
+  {
+    "query_table": "csvData5018557__1.csv",
+    "query_column": "OBP",
+    "ground_truth": [
+      "csvData9739809__1.csv"
+    ]
+  },
+  {
+    "query_table": "csvData1102081__3.csv",
+    "query_column": "Team",
+    "ground_truth": [
+      "csvData9739809__1.csv"
+    ]
+  },
+  {
+    "query_table": "csvData10327833.csv",
+    "query_column": "Car Number",
+    "ground_truth": [
+      "csvData10327833.csv"
+    ]
+  },
+  {
+    "query_table": "csvData11945851.csv",
+    "query_column": "Scoring",
+    "ground_truth": [
+      "csvData11945851.csv"
+    ]
+  },
+  {
+    "query_table": "csvData11945851.csv",
+    "query_column": "PTS/48",
+    "ground_truth": [
+      "csvData11945851.csv"
+    ]
+  },
+  {
+    "query_table": "csvData11945851.csv",
+    "query_column": "FTA/G",
+    "ground_truth": [
+      "csvData11945851.csv"
+    ]
+  },
+  {
+    "query_table": "csvData22293691.csv",
+    "query_column": "iFenwick/60",
+    "ground_truth": [
+      "csvData9205349__16.csv"
+    ]
+  },
+  {
+    "query_table": "csvData22293691.csv",
+    "query_column": "iFenwick",
+    "ground_truth": [
+      "csvData9205349__16.csv"
+    ]
+  }
+]
