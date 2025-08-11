@@ -1,0 +1,22 @@
+{
+  "config": {
+    "num_queries": 3,
+    "dataset_type": "subset",
+    "init_time": 12.305540800094604
+  },
+  "performance": {
+    "avg_time": 0.010703404744466146,
+    "median_time": 0.010485410690307617,
+    "std_time": 0.00035320623290340154,
+    "min_time": 0.01042318344116211,
+    "max_time": 0.011201620101928711,
+    "success_rate": 1.0,
+    "total_matches": 10,
+    "failed_queries": []
+  },
+  "query_times": [
+    0.011201620101928711,
+    0.010485410690307617,
+    0.01042318344116211
+  ]
+}

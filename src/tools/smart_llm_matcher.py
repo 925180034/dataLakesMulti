@@ -29,15 +29,15 @@ class SmartLLMMatcher:
     def __init__(self, llm_client):
         self.llm_client = llm_client
         self.cache = {}  # LLM调用缓存
-        self.batch_size = 10  # 增加批量大小
-        self.max_candidates_per_query = 10  # 减少每个查询的候选数，提高速度
+        self.batch_size = 20  # 增加批量大小以提高效率
+        self.max_candidates_per_query = 5  # 减少每个查询的候选数，提高速度
         
-        # 初始化批量处理器
+        # 初始化批量处理器 - 优化批量和并发参数
         from src.tools.batch_llm_processor import BatchLLMProcessor
         self.batch_processor = BatchLLMProcessor(
             llm_client=llm_client,
-            max_batch_size=10,
-            max_concurrent=5
+            max_batch_size=20,  # 增加批量大小
+            max_concurrent=10   # 增加并发数
         )
         
     async def match_tables(

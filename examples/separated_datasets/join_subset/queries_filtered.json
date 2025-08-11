@@ -1,0 +1,407 @@
+[
+  {
+    "query_table": "csvData4676916__9.csv",
+    "query_column": "OPS",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData4676916__9.csv",
+    "query_column": "AVG",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData29230622__16.csv",
+    "query_column": "oppAVG",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData29230622__16.csv",
+    "query_column": "oppOPS",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData4888338__0.csv",
+    "query_column": "Feb",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData18926379__2.csv",
+    "query_column": "ORB%",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData6444295__5.csv",
+    "query_column": "Player",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData6444295__5.csv",
+    "query_column": "MPG",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData10027553__12.csv",
+    "query_column": "Team",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData10027553__12.csv",
+    "query_column": "Player",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData3871380__2.csv",
+    "query_column": "hbp",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData21675463__5.csv",
+    "query_column": "Team",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData9205349__16.csv",
+    "query_column": "iFenwick",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData9205349__16.csv",
+    "query_column": "iFenwick/60",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData21947308__1.csv",
+    "query_column": "Result",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData23141915__6.csv",
+    "query_column": "TRB%",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData18562133__11.csv",
+    "query_column": "Player",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData18562133__11.csv",
+    "query_column": "OBP",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData16114577__11.csv",
+    "query_column": "SLG",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData15936069__15.csv",
+    "query_column": "SLG",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData15936069__15.csv",
+    "query_column": "PPF",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData21810799__3.csv",
+    "query_column": "TOV%",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData21810799__3.csv",
+    "query_column": "DRB%",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData21810799__3.csv",
+    "query_column": "DRtg",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData13891302__10.csv",
+    "query_column": "OPS",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData18823542.csv",
+    "query_column": "site id",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData18823542.csv",
+    "query_column": "tour",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData18823542.csv",
+    "query_column": "place",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData18823542.csv",
+    "query_column": "round",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData18823542.csv",
+    "query_column": "date",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData18823542.csv",
+    "query_column": "line/ramp",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData16339602.csv",
+    "query_column": "Year",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData16339602.csv",
+    "query_column": "Age",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData16339602.csv",
+    "query_column": "Strikeout Rate",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData16339602.csv",
+    "query_column": "Isolated Power",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData16339602.csv",
+    "query_column": "Walk Rate",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData16339602.csv",
+    "query_column": "BB/K Ratio",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData16339602.csv",
+    "query_column": "Contact Rate",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData13891302__10.csv",
+    "query_column": "GIDP",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData9739809__1.csv",
+    "query_column": "OBP",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData2852713__12.csv",
+    "query_column": "Rpos",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData2852713__12.csv",
+    "query_column": "Acquired",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData29453038__18.csv",
+    "query_column": "Team",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData29383799__16.csv",
+    "query_column": "Team",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData9739809__1.csv",
+    "query_column": "GIDP",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData18562133__11.csv",
+    "query_column": "Team",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData13638124__5.csv",
+    "query_column": "OBP",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData2590167__13.csv",
+    "query_column": "GIDP",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData13891302__10.csv",
+    "query_column": "Team",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData15894443__13.csv",
+    "query_column": "oppAVG",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData9702682__1.csv",
+    "query_column": "ibb",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData4676916__9.csv",
+    "query_column": "Team",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData436368__10.csv",
+    "query_column": "Team",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData16114577__11.csv",
+    "query_column": "Team",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData9739809__1.csv",
+    "query_column": "Team",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData9469123__3.csv",
+    "query_column": "OBP",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData5018557__1.csv",
+    "query_column": "Team",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData2852713__12.csv",
+    "query_column": "oWAR",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData2852713__12.csv",
+    "query_column": "Rbat",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData2852713__12.csv",
+    "query_column": "RAR",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData2852713__12.csv",
+    "query_column": "Rbaser",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData12906779__1.csv",
+    "query_column": "AGE",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData22558849__12.csv",
+    "query_column": "Gact",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData13638124__5.csv",
+    "query_column": "Team",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData15936069__15.csv",
+    "query_column": "oppAVG",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData19132138__12.csv",
+    "query_column": "oppOPS",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData19132138__12.csv",
+    "query_column": "OBP",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData2852713__12.csv",
+    "query_column": "dWAR",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData19114693__5.csv",
+    "query_column": "S/G",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData12906779__1.csv",
+    "query_column": "OBP",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData2852713__12.csv",
+    "query_column": "WAA",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData19132138__12.csv",
+    "query_column": "AGE",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData2852713__12.csv",
+    "query_column": "Rdp",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData5018557__1.csv",
+    "query_column": "OBP",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData1102081__3.csv",
+    "query_column": "Team",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData10327833.csv",
+    "query_column": "Car Number",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData11945851.csv",
+    "query_column": "Scoring",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData11945851.csv",
+    "query_column": "PTS/48",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData11945851.csv",
+    "query_column": "FTA/G",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData22293691.csv",
+    "query_column": "iFenwick/60",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData22293691.csv",
+    "query_column": "iFenwick",
+    "task_type": "join"
+  }
+]

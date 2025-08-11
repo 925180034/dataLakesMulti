@@ -1,0 +1,97 @@
+{
+  "L1": {
+    "config": "L1",
+    "task": "join",
+    "best_params": null,
+    "best_f1": 0,
+    "all_results": [
+      {
+        "params": {
+          "max_metadata_candidates": 300
+        },
+        "hit@1": 0.0,
+        "hit@5": 0.0,
+        "hit@10": 0.0,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "avg_latency": 0.014610862731933594,
+        "evaluated_queries": 5,
+        "f1@5": 0
+      },
+      {
+        "params": {
+          "max_metadata_candidates": 500
+        },
+        "hit@1": 0.0,
+        "hit@5": 0.0,
+        "hit@10": 0.0,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "avg_latency": 0.015076446533203124,
+        "evaluated_queries": 5,
+        "f1@5": 0
+      },
+      {
+        "params": {
+          "max_metadata_candidates": 700
+        },
+        "hit@1": 0.0,
+        "hit@5": 0.0,
+        "hit@10": 0.0,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "avg_latency": 0.015475082397460937,
+        "evaluated_queries": 5,
+        "f1@5": 0
+      }
+    ]
+  },
+  "L1+L2": {
+    "config": "L1+L2",
+    "task": "join",
+    "best_params": null,
+    "best_f1": 0,
+    "all_results": [
+      {
+        "params": {
+          "max_metadata_candidates": 500,
+          "max_vector_candidates": 100,
+          "vector_threshold": 0.5
+        },
+        "hit@1": 0.0,
+        "hit@5": 0.0,
+        "hit@10": 0.0,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "avg_latency": 0.03818302154541016,
+        "evaluated_queries": 5,
+        "f1@5": 0
+      }
+    ]
+  },
+  "L1+L2+L3": {
+    "config": "L1+L2+L3",
+    "task": "join",
+    "best_params": null,
+    "best_f1": 0,
+    "all_results": [
+      {
+        "params": {
+          "max_metadata_candidates": 500,
+          "max_vector_candidates": 100,
+          "max_llm_candidates": 15,
+          "vector_threshold": 0.5,
+          "early_stop_threshold": 0.9
+        },
+        "hit@1": 0.0,
+        "hit@5": 0.0,
+        "hit@10": 0.0,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "avg_latency": 0.03793082237243652,
+        "evaluated_queries": 5,
+        "f1@5": 0
+      }
+    ]
+  }
+}

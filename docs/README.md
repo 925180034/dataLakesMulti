@@ -1,63 +1,53 @@
 # 📚 数据湖多智能体系统文档中心
 
-欢迎来到数据湖多智能体系统的文档中心。本目录包含了系统的所有技术文档、设计文档和使用指南。
+欢迎来到数据湖多智能体系统的文档中心。本系统采用**多智能体协同架构**，集成**三层加速工具**，实现高效的数据湖发现（Data Lake Discovery）。
 
-## 🗂️ 文档索引
+## 🎯 核心架构文档（最新版）
 
-### 核心文档
+### 多智能体系统架构
+1. **[完整系统架构](COMPLETE_SYSTEM_ARCHITECTURE.md)** ⭐⭐⭐
+   - 多智能体系统详细设计
+   - 6个专门Agent职责说明
+   - 三层加速工具集成
+   - 数据湖发现能力
+   - 技术实现细节
 
-1. **[系统架构与实施计划](SYSTEM_ARCHITECTURE_AND_PLAN.md)** ⭐
-   - 三层加速架构设计
-   - 支持10,000+表的实用方案
-   - 环境配置指南
-   - 性能优化策略
-   - *推荐首先阅读*
+2. **[多Agent架构详解](MULTI_AGENT_ARCHITECTURE_EXPLAINED.md)** ⭐⭐
+   - 各Agent详细职责
+   - Agent协同机制
+   - 决策流程图
+   - 与纯三层架构对比
 
-2. **[实用架构详细设计](PRACTICAL_ARCHITECTURE_PLAN.md)** 🆕
-   - 详细的三层架构实现
-   - 并行处理框架
-   - 多级缓存策略
-   - 性能分析和优化
+3. **[架构图表集合](ARCHITECTURE_DIAGRAMS.md)** ⭐⭐
+   - 系统架构可视化
+   - 数据流程图
+   - Agent协同流程
+   - 性能指标对比
 
-2. **[快速开始指南](QUICK_START.md)**
+### 快速开始
+1. **[快速开始指南](QUICK_START.md)**
    - 环境搭建步骤
    - 基本使用示例
    - 常见问题解答
 
-3. **[项目设计文档](Project-Design-Document.md)**
+2. **[项目设计文档](Project-Design-Document.md)**
    - 原始设计理念
    - 多智能体协作框架
    - 数据格式说明
 
-### 技术分析文档
+### 技术分析
 
-4. **[LakeBench项目分析](lakebench_analysis.md)**
+3. **[LakeBench项目分析](lakebench_analysis.md)**
    - LakeBench论文深度解析
    - 11种数据发现算法对比
    - 性能优化insights
 
-5. **[架构图解](architecture_diagram.md)**
-   - 系统组件关系图
-   - 数据流程图
-   - 智能体交互图
-
-6. **[系统架构详细图表](SYSTEM_ARCHITECTURE_DIAGRAMS.md)** 🆕⭐
-   - 系统整体架构图
-   - 数据流图
-   - 查询处理流程图
-   - 多智能体协作流程图
-   - 性能优化组件图
-   - 三层加速架构详细图
-   - 系统部署架构图
-
-### 测试与评估
-
-7. **[WebTable测试报告](WEBTABLE_TEST_REPORT.md)**
+4. **[WebTable测试报告](WEBTABLE_TEST_REPORT.md)**
    - WebTable数据集测试结果
    - 性能基准测试
    - 问题分析与解决方案
 
-7. **[环境需求说明](environment_requirements.md)**
+5. **[环境需求说明](environment_requirements.md)**
    - 硬件要求
    - 软件依赖
    - 配置建议

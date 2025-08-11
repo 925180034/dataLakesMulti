@@ -55,12 +55,16 @@ class UltraOptimizedWorkflow(OptimizedDataLakesWorkflow):
     def __init__(self):
         super().__init__()
         
-        # 优化参数（平衡性能和准确性）
-        self.max_metadata_candidates = 50  # 元数据筛选候选数（适度增加）
-        self.max_vector_candidates = 20    # 向量搜索候选数（适度增加）
-        self.max_llm_candidates = 5        # LLM验证候选数（适度增加）
+        # 优化参数（根据数据集大小调整）
+        self.max_metadata_candidates = 1000  # 元数据筛选候选数（大幅增加以提高召回率）
+        self.max_vector_candidates = 200    # 向量搜索候选数（增加到200）
+        self.max_llm_candidates = 30        # LLM验证候选数（增加到30）
         self.early_stop_threshold = 0.90   # 早期终止阈值（提高以减少误判）
-        self.enable_llm_matching = False   # 是否启用LLM匹配（可选）
+        
+        # 层控制开关（用于消融实验）
+        self.enable_metadata_filter = True  # 是否启用元数据筛选（Layer 1）
+        self.enable_vector_search = True    # 是否启用向量搜索（Layer 2）
+        self.enable_llm_matching = False     # 是否启用LLM匹配（Layer 3）
         
         # 评价指标追踪
         self.metrics_tracker = defaultdict(list)
@@ -150,29 +154,49 @@ class UltraOptimizedWorkflow(OptimizedDataLakesWorkflow):
         state: AgentState,
         all_table_names: List[str]
     ) -> AgentState:
-        """执行超优化流程"""
+        """执行超优化流程（支持层控制）"""
         
-        # 三层优化处理
-        # 第1层：元数据筛选（更严格）
-        metadata_candidates = await self._ultra_metadata_filter(
-            state.query_tables,
-            all_table_names,
-            top_k=self.max_metadata_candidates
-        )
+        candidates = []
         
-        if not metadata_candidates:
-            logger.warning("元数据筛选无结果，直接返回")
-            state.table_matches = []
-            return state
+        # Layer 1: 元数据筛选
+        if self.enable_metadata_filter:
+            metadata_candidates = await self._ultra_metadata_filter(
+                state.query_tables,
+                all_table_names,
+                top_k=self.max_metadata_candidates
+            )
+            
+            if not metadata_candidates:
+                logger.warning("元数据筛选无结果")
+                state.table_matches = []
+                return state
+            
+            # 准备下一层的输入
+            candidates = [name for name, _ in metadata_candidates]
+        else:
+            # 跳过元数据筛选，使用所有表
+            candidates = all_table_names
         
-        # 第2层：向量搜索（更少候选）
-        vector_candidates = await self._ultra_vector_search(
-            state.query_tables,
-            [name for name, _ in metadata_candidates],
-            k=self.max_vector_candidates
-        )
+        # Layer 2: 向量搜索
+        if self.enable_vector_search:
+            vector_candidates = await self._ultra_vector_search(
+                state.query_tables,
+                candidates,
+                k=self.max_vector_candidates if self.max_vector_candidates > 0 else len(candidates)
+            )
+        else:
+            # 跳过向量搜索，直接传递候选（转换为字典格式）
+            vector_candidates = {}
+            for query_table in state.query_tables:
+                query_name = query_table.table_name
+                # 如果有metadata candidates，使用它们的分数；否则使用默认分数
+                if self.enable_metadata_filter and metadata_candidates:
+                    # metadata_candidates是列表，需要过滤
+                    vector_candidates[query_name] = metadata_candidates[:self.max_vector_candidates or 100]
+                else:
+                    vector_candidates[query_name] = [(name, 0.5) for name in candidates[:self.max_vector_candidates or 100]]
         
-        # 根据配置决定是否使用LLM
+        # Layer 3: LLM匹配
         if self.enable_llm_matching:
             # 早期终止检查
             if self._should_early_stop(vector_candidates):
@@ -181,6 +205,20 @@ class UltraOptimizedWorkflow(OptimizedDataLakesWorkflow):
                 return state
             
             # 第3层：LLM验证（极少候选）
+            # 对于self-join优化：如果查询表自己已经是最高分，直接返回
+            if vector_candidates:
+                query_table_name = state.query_tables[0].table_name if state.query_tables else None
+                top_candidates = list(vector_candidates.values())[0] if vector_candidates else []
+                
+                # 如果第一个候选就是查询表自己且分数很高，跳过LLM
+                if (top_candidates and len(top_candidates) > 0 and 
+                    top_candidates[0][0] == query_table_name and 
+                    top_candidates[0][1] > 0.9):
+                    # 快速返回self-join结果
+                    state.table_matches = self._format_vector_results(vector_candidates)
+                    state.final_results = state.table_matches
+                    return state
+            
             final_matches = await self._ultra_llm_matching(
                 state.query_tables,
                 vector_candidates,
@@ -351,7 +389,9 @@ class UltraOptimizedWorkflow(OptimizedDataLakesWorkflow):
         results = []
         
         for query_name, candidates in vector_results.items():
-            for table_name, score in candidates[:10]:  # 取前10个
+            # 使用配置的候选数，而不是硬编码
+            max_results = self.max_vector_candidates if self.enable_vector_search else 20
+            for table_name, score in candidates[:max_results]:  # 取前10个
                 if score > 0.5:  # 降低阈值
                     results.append(TableMatchResult(
                         source_table=query_name,
@@ -377,7 +417,9 @@ class UltraOptimizedWorkflow(OptimizedDataLakesWorkflow):
         
         for query_name, candidates in vector_results.items():
             # 取TOP-K结果
-            for table_name, score in candidates[:10]:
+            # 使用配置的候选数，而不是硬编码
+            max_results = self.max_vector_candidates if self.enable_vector_search else 20
+            for table_name, score in candidates[:max_results]:
                 results.append(TableMatchResult(
                     source_table=query_name,
                     target_table=table_name,

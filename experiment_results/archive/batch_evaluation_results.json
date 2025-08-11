@@ -1,0 +1,134 @@
+{
+  "summary": {
+    "total_queries": 20,
+    "total_time": 210.76650071144104,
+    "avg_time": 10.538212513923645,
+    "avg_time_no_init": 10.147874317671123,
+    "min_time": 0.026599645614624023,
+    "max_time": 36.243571519851685,
+    "total_matches": 32,
+    "success_rate": 0.65
+  },
+  "results": [
+    {
+      "query": "csvData6444295__5.csv",
+      "matches": 10,
+      "time": 17.954638242721558,
+      "top_match": "csvData6444295__3.csv"
+    },
+    {
+      "query": "csvData13638124__5.csv",
+      "matches": 1,
+      "time": 8.513181447982788,
+      "top_match": "csvData9739809__1.csv"
+    },
+    {
+      "query": "csvData10163568__5.csv",
+      "matches": 4,
+      "time": 29.534565687179565,
+      "top_match": "csvData10163568__5.csv"
+    },
+    {
+      "query": "csvData9739809__1.csv",
+      "matches": 1,
+      "time": 9.34127402305603,
+      "top_match": "csvData9739809__1.csv"
+    },
+    {
+      "query": "csvData18518969__7.csv",
+      "matches": 3,
+      "time": 19.951329231262207,
+      "top_match": "csvData18518969__7.csv"
+    },
+    {
+      "query": "csvData1786628__7.csv",
+      "matches": 1,
+      "time": 10.229729413986206,
+      "top_match": "csvData14780613__0.csv"
+    },
+    {
+      "query": "csvData16642348.csv",
+      "matches": 0,
+      "time": 0.04868817329406738,
+      "top_match": null
+    },
+    {
+      "query": "csvData14248779__2.csv",
+      "matches": 1,
+      "time": 11.044401407241821,
+      "top_match": "csvData14248779__2.csv"
+    },
+    {
+      "query": "csvData9469123__3.csv",
+      "matches": 0,
+      "time": 0.056784868240356445,
+      "top_match": null
+    },
+    {
+      "query": "csvData13419799.csv",
+      "matches": 0,
+      "time": 0.036698341369628906,
+      "top_match": null
+    },
+    {
+      "query": "csvData6605406__1.csv",
+      "matches": 1,
+      "time": 11.129828214645386,
+      "top_match": "csvData6605406__1.csv"
+    },
+    {
+      "query": "csvData9702682__1.csv",
+      "matches": 1,
+      "time": 7.149472236633301,
+      "top_match": "csvData9702682__1.csv"
+    },
+    {
+      "query": "csvData28932469.csv",
+      "matches": 1,
+      "time": 13.855940103530884,
+      "top_match": "csvData1335254.csv"
+    },
+    {
+      "query": "csvData12168209__5.csv",
+      "matches": 5,
+      "time": 36.243571519851685,
+      "top_match": "csvData12168209__5.csv"
+    },
+    {
+      "query": "csvData2999628.csv",
+      "matches": 0,
+      "time": 0.0608973503112793,
+      "top_match": null
+    },
+    {
+      "query": "csvData24805223__2.csv",
+      "matches": 0,
+      "time": 0.03479266166687012,
+      "top_match": null
+    },
+    {
+      "query": "csvData10327833.csv",
+      "matches": 0,
+      "time": 0.026599645614624023,
+      "top_match": null
+    },
+    {
+      "query": "csvData10289113.csv",
+      "matches": 0,
+      "time": 6.325709819793701,
+      "top_match": null
+    },
+    {
+      "query": "csvData1303939__3.csv",
+      "matches": 2,
+      "time": 15.39792537689209,
+      "top_match": "csvData1303939__3.csv"
+    },
+    {
+      "query": "csvData16403538.csv",
+      "matches": 1,
+      "time": 13.828222513198853,
+      "top_match": "csvData1335254.csv"
+    }
+  ]
+}

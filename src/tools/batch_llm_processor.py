@@ -168,10 +168,13 @@ class BatchLLMProcessor:
         for attempt in range(max_retries):
             try:
                 # 调用LLM的generate_json方法以获得结构化输出
+                print(f"  🤖 调用LLM API - 批次大小: {len(batch)}")
                 if hasattr(self.llm_client, 'generate_json'):
                     # 优先使用generate_json方法
                     try:
+                        print(f"  📤 发送到LLM: generate_json")
                         response = await self.llm_client.generate_json(prompt)
+                        print(f"  📥 收到LLM响应")
                         # 如果返回的是字典，转换为JSON字符串供解析器处理
                         if isinstance(response, dict):
                             response = json.dumps(response)
@@ -179,10 +182,14 @@ class BatchLLMProcessor:
                             response = json.dumps(response)
                     except Exception as e:
                         logger.warning(f"generate_json失败，回退到generate: {e}")
+                        print(f"  📤 发送到LLM: generate")
                         response = await self.llm_client.generate(prompt)
+                        print(f"  📥 收到LLM响应")
                 else:
                     # 使用普通generate方法
+                    print(f"  📤 发送到LLM: generate")
                     response = await self.llm_client.generate(prompt)
+                    print(f"  📥 收到LLM响应")
                 
                 # 解析响应
                 results = response_parser(response, batch)

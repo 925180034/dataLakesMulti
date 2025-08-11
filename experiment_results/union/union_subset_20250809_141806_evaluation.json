@@ -1,0 +1,84 @@
+{
+  "experiment_info": {
+    "timestamp": "2025-08-09T14:18:06.844528",
+    "task": "union",
+    "dataset": "subset",
+    "experiment_type": "evaluation",
+    "description": "Batch evaluation of 8 queries",
+    "file_path": "/root/dataLakesMulti/experiment_results/union/union_subset_20250809_141806_evaluation.json",
+    "parameters": {
+      "metadata_top_k": 50,
+      "vector_top_k": 5,
+      "llm_top_k": 2,
+      "enable_llm_matching": true
+    },
+    "system_config": {
+      "task_type": "union",
+      "dataset_size": "subset"
+    }
+  },
+  "results": {
+    "tested_queries": 8,
+    "avg_precision": 0.5,
+    "avg_recall": 0.9375,
+    "avg_f1": 0.6458333333333333,
+    "avg_query_time": 0.008284956216812134,
+    "total_execution_time": 0.06627964973449707
+  },
+  "detailed_results": [
+    {
+      "query": "csvData10027553__12.csv",
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "query": "csvData10163568__5.csv",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5
+    },
+    {
+      "query": "csvData10289113.csv",
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "query": "csvData10327833.csv",
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "query": "csvData1102081__3.csv",
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "query": "csvData11632972.csv",
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "query": "csvData11945851.csv",
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "query": "csvData11957850__1.csv",
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    }
+  ],
+  "metadata": {
+    "version": "1.0",
+    "generated_by": "ExperimentManager",
+    "total_queries": 8,
+    "execution_time": 0.06627964973449707
+  }
+}

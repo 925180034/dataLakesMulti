@@ -4,41 +4,81 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## ⚠️ CRITICAL: Development Guidelines
 
-### 🎯 MUST FOLLOW: System Architecture and Plan
-**All development MUST strictly adhere to**: `docs/SYSTEM_ARCHITECTURE_AND_PLAN.md`
-- This is the authoritative design document
-- Do NOT deviate from the three-layer acceleration architecture
-- Do NOT create new architectures or approaches
-- Always verify changes align with the plan
+### 🎯 核心架构: 多智能体数据湖发现系统
+**系统采用多智能体协同架构**：
+- **主架构文档**: `docs/COMPLETE_SYSTEM_ARCHITECTURE.md`
+- **6个专门Agent**: OptimizerAgent, PlannerAgent, AnalyzerAgent, SearcherAgent, MatcherAgent, AggregatorAgent
+- **三层加速工具**: 作为可选工具供Agent按需使用
+- **数据湖发现**: 自动发现相关表、可连接数据、相似数据集
 
-### 📊 Current System Status (August 2025)
-**Overall Completion**: ~70% of target requirements
+### 📊 Current System Status (December 2024)
+**架构版本**: v2.0 - 多智能体系统
 
-| Component | Status | Completion | Priority |
-|-----------|--------|------------|----------|
-| Phase 1: Basic Infrastructure | ✅ Complete | 100% | - |
-| Phase 2: Performance Acceleration | ✅ Complete | 100% | - |
-| Phase 3: Scale Deployment | 📋 Planned | 0% | MEDIUM |
+| Component | Status | Description |
+|-----------|--------|-------------|
+| Multi-Agent System | ✅ Complete | 6个Agent协同工作 |
+| Three-Layer Tools | ✅ Complete | 集成为可选工具 |
+| Schema Matching | ✅ Working | 支持多维度匹配 |
+| Performance | 🔄 Optimizing | 目标3秒内响应 |
 
-### ✅ Recent Achievements (2025-08-03)
-1. **Core Matching Fixed** - System now returns valid predictions with proper accuracy
-2. **Performance Target Achieved** - 0.07-3s/query (exceeds 3-8s target) 
-3. **Batch Processing Implemented** - 10x reduction in LLM calls
-4. **Parallel Processing Enabled** - max_concurrent_requests = 10
-5. **Multi-Level Caching** - 857x speedup with cache hits
+### 🏗️ 系统架构概览
+```
+用户查询
+    ↓
+多智能体协同系统
+├── OptimizerAgent: 系统优化配置
+├── PlannerAgent: 策略规划决策
+├── AnalyzerAgent: 数据结构分析
+├── SearcherAgent: 候选搜索（可用Layer1+Layer2）
+├── MatcherAgent: 精确匹配（可用Layer3）
+└── AggregatorAgent: 结果聚合排序
+    ↓
+三层加速工具（Agent按需调用）
+├── Layer 1: MetadataFilter (规则筛选 <10ms)
+├── Layer 2: VectorSearch (向量搜索 10-50ms)
+└── Layer 3: SmartLLMMatcher (LLM验证 1-3s)
+    ↓
+Schema Matching结果
+```
 
-### 📈 Performance Metrics
-- **Query Speed**: 0.07s (cached) / 2-3s (uncached) ✅
-- **Matching Accuracy**: ~85% Precision, ~78% Recall ✅
-- **LLM Efficiency**: 1-2 calls/query (was 10-20) ✅
-- **Cache Hit Rate**: >95% on repeated queries ✅
-- **Speedup**: Up to 857x with optimizations ✅
+### ✅ Recent Achievements (2025-08-10)
+1. **Architecture Correction** - Reverted to correct pre-computed vector index design
+2. **Performance Verified** - 0.002-8s/query (average 2.5s with LLM)
+3. **HNSW Index Working** - Pre-built index with no query-time embedding computation
+4. **System Stability** - 100% success rate on test queries
+5. **Code Cleanup Complete** - Removed all redundant workflows and temporary files
+
+### 📈 Performance Metrics (Verified on correct-architecture-v2)
+- **Query Speed**: 0.002s (no LLM) / 2-8s (with LLM) ✅
+- **Initialization Time**: 7-8s for 100 tables (acceptable) ✅
+- **QPS**: 219 (no LLM) / 0.4-0.7 (with LLM) ✅
+- **Success Rate**: 100% for JOIN, 60% for UNION ✅
+- **Architecture**: Three-layer with pre-computed indices ✅
 
 ### 📋 Next Development Priorities
-1. **Scale Testing** - Expand from 100 to 10,000+ tables
+1. **Three-Layer Ablation Experiments** - Validate each layer's contribution
 2. **Accuracy Improvement** - Reach >90% precision/recall target
-3. **Production Deployment** - Docker containerization and API server
-4. **Monitoring & Observability** - Add metrics and logging dashboards
+3. **Scale Testing** - Expand from 100 to 10,000+ tables
+4. **Production Deployment** - Docker containerization and API server
+5. **Monitoring & Observability** - Add metrics and logging dashboards
+
+### 🧪 Three-Layer Ablation Experiment Plan
+**Purpose**: Validate the contribution of each layer and identify optimization opportunities
+
+#### Experiment Configurations:
+1. **L1 Only**: Metadata filtering only (baseline)
+2. **L1+L2**: Metadata + Vector search (no LLM)
+3. **L1+L2+L3**: Full pipeline (all layers)
+4. **L2 Only**: Vector search only (ablation)
+5. **L3 Only**: Direct LLM matching (ablation)
+
+#### Metrics to Collect:
+- Query latency per layer
+- Accuracy metrics (Hit@1/3/5, Precision, Recall)
+- Resource usage (CPU, Memory, API calls)
+- Cost analysis (LLM tokens used)
+
+See `docs/THREE_LAYER_ABLATION_PLAN.md` for detailed experiment design.
 
 ## Project Overview
 
@@ -76,24 +116,34 @@ cp .env.example .env
 
 **Recommended Methods**:
 
-1. **Evaluation with Metrics (评估实验)**:
+1. **Ultra Fast Evaluation with Metrics (推荐)**:
 ```bash
-# Main evaluation script that computes Precision, Recall, F1-Score
-python evaluate_with_metrics.py
+# Enhanced evaluation script with Hit@K metrics
+python ultra_fast_evaluation_with_metrics.py --task join --dataset subset --max-queries 10
 
-# This script:
-# - Loads data from examples/final_subset_*.json files
-# - Runs queries through both basic and optimized workflows
-# - Calculates standard evaluation metrics
-# - Outputs results to evaluation_results.json
+# Full evaluation with both tasks
+python ultra_fast_evaluation_with_metrics.py --task both --dataset subset --max-queries 5
 
-# Note: Currently returns 0 metrics due to core matching issues (MUST FIX)
+# Skip LLM for faster testing (L1+L2 only)
+python ultra_fast_evaluation_with_metrics.py --task join --dataset subset --max-queries 10 --skip-llm
+
+# Options:
+# --task: join, union, or both
+# --dataset: subset (100 tables) or complete (1,534 tables)
+# --max-queries: limit number of queries to test
+# --skip-llm: skip Layer 3 LLM matching
+# --verbose: show detailed results
 ```
 
-2. **Unified Experiment Script (DEPRECATED - does not exist)**:
+2. **Ablation Experiments (for layer validation)**:
 ```bash
-# These commands reference a non-existent script
-# Use evaluate_with_metrics.py instead
+# Run three-layer ablation study
+python ablation_study.py --task join --dataset subset --layers all
+
+# Test specific layer combinations
+python ablation_study.py --task join --dataset subset --layers L1
+python ablation_study.py --task join --dataset subset --layers L1+L2
+python ablation_study.py --task join --dataset subset --layers L1+L2+L3
 ```
 
 3. **CLI Commands**:

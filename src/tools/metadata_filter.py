@@ -94,13 +94,18 @@ class MetadataFilter:
         table_scores = {}
         
         for table_name in all_tables:
-            if table_name == query_table.table_name:
-                continue
+            # 允许self-join：不再跳过查询表自身
+            # if table_name == query_table.table_name:
+            #     continue
                 
             score = self._calculate_metadata_similarity(
                 query_features, 
                 self.table_metadata.get(table_name, {})
             )
+            
+            # 如果是查询表自身，给一个高分（支持self-join）
+            if table_name == query_table.table_name:
+                score = max(score, 0.95)  # 确保self-join有高优先级
             
             if score > 0:
                 table_scores[table_name] = score
