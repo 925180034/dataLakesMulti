@@ -1,0 +1,160 @@
+{
+  "results": [
+    {
+      "query": "csvData4676916__9.csv",
+      "predicted": [
+        "csvData18562133__11.csv",
+        "csvData13891302__10.csv",
+        "csvData3871380__2.csv",
+        "csvData5018557__1.csv",
+        "csvData436368__10.csv"
+      ],
+      "expected": [
+        "csvData4676916__9.csv"
+      ],
+      "hit": false,
+      "time": 0.0007119178771972656
+    },
+    {
+      "query": "csvData4676916__9.csv",
+      "predicted": [
+        "csvData18562133__11.csv",
+        "csvData13891302__10.csv",
+        "csvData3871380__2.csv",
+        "csvData5018557__1.csv",
+        "csvData436368__10.csv"
+      ],
+      "expected": [
+        "csvData4676916__9.csv"
+      ],
+      "hit": false,
+      "time": 0.00066375732421875
+    },
+    {
+      "query": "csvData29230622__16.csv",
+      "predicted": [
+        "csvData15936069__15.csv",
+        "csvData5018557__1.csv",
+        "csvData4676916__9.csv",
+        "csvData19132138__12.csv",
+        "csvData13638124__5.csv"
+      ],
+      "expected": [
+        "csvData29230622__16.csv"
+      ],
+      "hit": false,
+      "time": 0.0006663799285888672
+    },
+    {
+      "query": "csvData29230622__16.csv",
+      "predicted": [
+        "csvData15936069__15.csv",
+        "csvData5018557__1.csv",
+        "csvData4676916__9.csv",
+        "csvData19132138__12.csv",
+        "csvData13638124__5.csv"
+      ],
+      "expected": [
+        "csvData29230622__16.csv"
+      ],
+      "hit": false,
+      "time": 0.0006399154663085938
+    },
+    {
+      "query": "csvData4888338__0.csv",
+      "predicted": [
+        "csvData6444295__5.csv",
+        "csvData10163568__5.csv",
+        "csvData9739809__1.csv",
+        "csvData18518969__7.csv",
+        "csvData1786628__7.csv"
+      ],
+      "expected": [
+        "csvData4888338__0.csv"
+      ],
+      "hit": false,
+      "time": 0.0005903244018554688
+    },
+    {
+      "query": "csvData18926379__2.csv",
+      "predicted": [
+        "csvData27587184__3.csv",
+        "csvData23141915__6.csv",
+        "csvData1786628__7.csv",
+        "csvData14248779__2.csv",
+        "csvData5416457__1.csv"
+      ],
+      "expected": [
+        "csvData18926379__2.csv"
+      ],
+      "hit": false,
+      "time": 0.0006322860717773438
+    },
+    {
+      "query": "csvData6444295__5.csv",
+      "predicted": [
+        "csvData6444295__3.csv",
+        "csvData7434868__4.csv",
+        "csvData6605406__1.csv",
+        "csvData9925714__1.csv",
+        "csvData1102081__3.csv"
+      ],
+      "expected": [
+        "csvData6444295__5.csv"
+      ],
+      "hit": false,
+      "time": 0.0006022453308105469
+    },
+    {
+      "query": "csvData6444295__5.csv",
+      "predicted": [
+        "csvData6444295__3.csv",
+        "csvData7434868__4.csv",
+        "csvData6605406__1.csv",
+        "csvData9925714__1.csv",
+        "csvData1102081__3.csv"
+      ],
+      "expected": [
+        "csvData6444295__5.csv"
+      ],
+      "hit": false,
+      "time": 0.0005877017974853516
+    },
+    {
+      "query": "csvData10027553__12.csv",
+      "predicted": [
+        "csvData21675463__5.csv",
+        "csvData24805223__2.csv",
+        "csvData8479264__13.csv",
+        "csvData9739809__1.csv",
+        "csvData4674540__6.csv"
+      ],
+      "expected": [
+        "csvData10027553__12.csv",
+        "csvData9739809__1.csv"
+      ],
+      "hit": true,
+      "time": 0.0006053447723388672
+    },
+    {
+      "query": "csvData10027553__12.csv",
+      "predicted": [
+        "csvData21675463__5.csv",
+        "csvData24805223__2.csv",
+        "csvData8479264__13.csv",
+        "csvData9739809__1.csv",
+        "csvData4674540__6.csv"
+      ],
+      "expected": [
+        "csvData10027553__12.csv"
+      ],
+      "hit": false,
+      "time": 0.0005972385406494141
+    }
+  ],
+  "metrics": {
+    "hit_rate": 0.1,
+    "avg_time": 0.0006297111511230468,
+    "total_queries": 10
+  }
+}

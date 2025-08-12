@@ -1,0 +1,37 @@
+# LaTeX temporary files
+*.aux
+*.log
+*.pdf
+*.bbl
+*.blg
+*.out
+*.toc
+*.lof
+*.lot
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.nav
+*.snm
+*.vrb
+
+# Editor backup files
+*.bak
+*~
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build directories
+build/
+output/
+
+# Bibliography databases (if sensitive)
+# *.bib
+
+# Keep the main tex file
+!paper_ieee_experimental.tex
+!main.tex

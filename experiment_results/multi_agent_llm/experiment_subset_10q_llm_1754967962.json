@@ -1,0 +1,27 @@
+{
+  "config": {
+    "dataset": "subset",
+    "queries": 10,
+    "workers": 8,
+    "llm_enabled": true,
+    "total_time": 14.593170404434204
+  },
+  "metrics": {
+    "precision": 0.09999999999999999,
+    "recall": 0.2962962962962963,
+    "f1_score": 0.14953271028037382,
+    "hit_at_1": 0.2222222222222222,
+    "hit_at_3": 0.6666666666666666,
+    "hit_at_5": 0.4444444444444444,
+    "hit_at_10": 0.4444444444444444,
+    "mrr": 0.40740740740740744,
+    "avg_response_time": 5.201635837554932,
+    "throughput": 0.19224721438209283
+  },
+  "statistics": {
+    "total_queries": 10,
+    "successful_queries": 10,
+    "join_queries": 10,
+    "union_queries": 0
+  }
+}

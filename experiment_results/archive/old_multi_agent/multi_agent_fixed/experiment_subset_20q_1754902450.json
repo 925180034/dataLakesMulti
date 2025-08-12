@@ -1,0 +1,26 @@
+{
+  "config": {
+    "dataset": "subset",
+    "queries": 20,
+    "workers": 2,
+    "total_time": 0.004548788070678711
+  },
+  "metrics": {
+    "precision": 0.005,
+    "recall": 0.025,
+    "f1_score": 0.008333333333333333,
+    "hit_at_1": 0.0,
+    "hit_at_3": 0.0,
+    "hit_at_5": 0.0,
+    "hit_at_10": 0.05,
+    "mrr": 0.005,
+    "avg_response_time": 0.00015438795089721679,
+    "throughput": 6477.189406223458
+  },
+  "statistics": {
+    "total_queries": 20,
+    "successful_queries": 20,
+    "join_queries": 20,
+    "union_queries": 0
+  }
+}
