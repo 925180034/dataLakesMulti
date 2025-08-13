@@ -1,4 +1,15 @@
-# 系统架构图表集合
+# 系统架构图表集合 - 数据湖多智能体发现系统
+
+## 📊 目录
+1. [整体系统架构图](#1-整体系统架构图)
+2. [多智能体协同流程](#2-多智能体协同流程)
+3. [LangGraph状态流转图](#3-langgraph状态流转图)
+4. [三层加速架构详解](#4-三层加速架构详解)
+5. [数据流处理管道](#5-数据流处理管道)
+6. [性能优化架构](#6-性能优化架构)
+7. [部署架构图](#7-部署架构图)
+
+---
 
 ## 1. 整体系统架构图
 
@@ -7,11 +18,11 @@ graph TB
     subgraph "📱 用户接口层"
         UI[Web UI/CLI]
         API[REST API]
-        GQL[GraphQL]
+        SDK[Python SDK]
     end
     
     subgraph "🤖 多智能体系统"
-        ORCH[协调器 Orchestrator]
+        WORKFLOW[LangGraph Workflow<br/>工作流编排]
         
         subgraph "决策层 Agents"
             OPT[⚙️ OptimizerAgent<br/>性能优化]
@@ -25,7 +36,7 @@ graph TB
             AGG[📊 AggregatorAgent<br/>结果聚合]
         end
         
-        MSG[消息总线<br/>Message Bus]
+        STATE[StateGraph<br/>状态管理]
     end
     
     subgraph "⚡ 三层加速架构"
@@ -35,26 +46,27 @@ graph TB
     end
     
     subgraph "💾 数据存储层"
-        DL[(数据湖<br/>10,000+ Tables)]
+        DL[(数据湖<br/>1,534 Tables)]
         IDX[(索引存储<br/>HNSW/Inverted)]
         CACHE[(缓存<br/>Multi-Level)]
     end
     
     subgraph "🧠 LLM服务"
         LLM[LLM Provider<br/>Gemini/GPT/Claude]
+        PROXY[Proxy Client<br/>异步调用]
     end
     
     UI --> API
-    API --> ORCH
-    GQL --> ORCH
+    API --> WORKFLOW
+    SDK --> WORKFLOW
     
-    ORCH <--> MSG
-    MSG <--> OPT
-    MSG <--> PLAN
-    MSG <--> ANAL
-    MSG <--> SEARCH
-    MSG <--> MATCH
-    MSG <--> AGG
+    WORKFLOW --> STATE
+    STATE <--> OPT
+    STATE <--> PLAN
+    STATE <--> ANAL
+    STATE <--> SEARCH
+    STATE <--> MATCH
+    STATE <--> AGG
     
     ANAL --> L1
     SEARCH --> L1
@@ -63,457 +75,368 @@ graph TB
     
     L1 --> IDX
     L2 --> IDX
-    L3 --> LLM
+    L3 --> PROXY
+    PROXY --> LLM
     
     IDX --> DL
     CACHE --> DL
     
-    style ORCH fill:#f9f,stroke:#333,stroke-width:4px
-    style MSG fill:#bbf,stroke:#333,stroke-width:2px
-    style L1 fill:#9f9,stroke:#333,stroke-width:2px
-    style L2 fill:#9f9,stroke:#333,stroke-width:2px
-    style L3 fill:#9f9,stroke:#333,stroke-width:2px
+    style WORKFLOW fill:#ff9999
+    style L1 fill:#99ff99
+    style L2 fill:#99ff99
+    style L3 fill:#99ff99
+    style LLM fill:#9999ff
 ```
 
-## 2. Agent协同工作流程图
-
-```mermaid
-flowchart LR
-    subgraph "JOIN查询处理流程"
-        J1[查询输入] --> J2[OptimizerAgent<br/>配置优化]
-        J2 --> J3[PlannerAgent<br/>识别JOIN策略]
-        J3 --> J4[AnalyzerAgent<br/>提取外键关系]
-        J4 --> J5[SearcherAgent<br/>Layer1+Layer2搜索]
-        J5 --> J6[MatcherAgent<br/>验证JOIN条件]
-        J6 --> J7[AggregatorAgent<br/>排序输出]
-        J7 --> J8[返回结果]
-    end
-```
-
-```mermaid
-flowchart LR
-    subgraph "UNION查询处理流程"
-        U1[查询输入] --> U2[OptimizerAgent<br/>配置优化]
-        U2 --> U3[PlannerAgent<br/>识别UNION策略]
-        U3 --> U4[AnalyzerAgent<br/>分析表结构]
-        U4 --> U5[SearcherAgent<br/>向量相似搜索]
-        U5 --> U6[MatcherAgent<br/>验证兼容性]
-        U6 --> U7[AggregatorAgent<br/>合并结果]
-        U7 --> U8[返回结果]
-    end
-```
-
-## 3. 三层加速数据流图
-
-```mermaid
-graph TD
-    Q[查询表] --> L1{Layer 1<br/>元数据筛选}
-    
-    L1 -->|列数匹配| L1A[规则1: 列数±2]
-    L1 -->|类型匹配| L1B[规则2: 类型签名]
-    L1 -->|命名模式| L1C[规则3: 命名相似]
-    
-    L1A --> L1R[1000候选]
-    L1B --> L1R
-    L1C --> L1R
-    
-    L1R --> L2{Layer 2<br/>向量搜索}
-    
-    L2 -->|表嵌入| L2A[BERT嵌入]
-    L2 -->|相似度| L2B[余弦相似度]
-    L2 -->|HNSW| L2C[近邻搜索]
-    
-    L2A --> L2R[100候选]
-    L2B --> L2R
-    L2C --> L2R
-    
-    L2R --> L3{Layer 3<br/>LLM验证}
-    
-    L3 -->|规则跳过| L3A[明显匹配]
-    L3 -->|LLM验证| L3B[复杂匹配]
-    L3 -->|批处理| L3C[批量验证]
-    
-    L3A --> L3R[20-30结果]
-    L3B --> L3R
-    L3C --> L3R
-    
-    L3R --> R[最终结果]
-    
-    style L1 fill:#e1f5fe,stroke:#01579b
-    style L2 fill:#fff3e0,stroke:#e65100
-    style L3 fill:#f3e5f5,stroke:#4a148c
-```
-
-## 4. 数据湖发现能力图
-
-```mermaid
-graph TB
-    subgraph "数据湖发现类型"
-        DLD[Data Lake Discovery]
-        
-        DLD --> ST[表结构发现<br/>Structure Discovery]
-        DLD --> SE[语义关联发现<br/>Semantic Discovery]
-        DLD --> IN[数据实例发现<br/>Instance Discovery]
-        DLD --> CO[关系约束发现<br/>Constraint Discovery]
-        
-        ST --> ST1[列名匹配]
-        ST --> ST2[类型匹配]
-        ST --> ST3[结构相似]
-        
-        SE --> SE1[词向量相似]
-        SE --> SE2[上下文理解]
-        SE --> SE3[领域知识]
-        
-        IN --> IN1[值重叠]
-        IN --> IN2[分布相似]
-        IN --> IN3[模式识别]
-        
-        CO --> CO1[主外键]
-        CO --> CO2[唯一性]
-        CO --> CO3[参照完整性]
-    end
-    
-    subgraph "Agent负责分工"
-        A1[AnalyzerAgent] -.-> ST
-        A2[SearcherAgent] -.-> SE
-        A3[MatcherAgent] -.-> IN
-        A3 -.-> CO
-    end
-```
-
-## 5. 性能优化策略图
-
-```mermaid
-graph LR
-    subgraph "优化层次"
-        O[性能优化]
-        
-        O --> O1[索引优化]
-        O --> O2[缓存优化]
-        O --> O3[并发优化]
-        O --> O4[批处理优化]
-        
-        O1 --> O11[HNSW索引]
-        O1 --> O12[倒排索引]
-        O1 --> O13[混合索引]
-        
-        O2 --> O21[L1内存缓存]
-        O2 --> O22[L2磁盘缓存]
-        O2 --> O23[L3分布式缓存]
-        
-        O3 --> O31[异步IO]
-        O3 --> O32[线程池]
-        O3 --> O33[协程并发]
-        
-        O4 --> O41[自适应批大小]
-        O4 --> O42[流式处理]
-        O4 --> O43[预取策略]
-    end
-```
-
-## 6. Agent决策流程图
-
-```mermaid
-stateDiagram-v2
-    [*] --> 查询输入
-    
-    查询输入 --> PlannerAgent: 分析查询
-    
-    state PlannerAgent {
-        [*] --> 意图识别
-        意图识别 --> JOIN判断: contains "join"
-        意图识别 --> UNION判断: contains "union"
-        意图识别 --> 复杂判断: 其他
-        
-        JOIN判断 --> BottomUp策略
-        UNION判断 --> TopDown策略
-        复杂判断 --> LLM分析
-        LLM分析 --> 混合策略
-    }
-    
-    PlannerAgent --> AnalyzerAgent: 传递策略
-    
-    state AnalyzerAgent {
-        [*] --> 表分析
-        表分析 --> 简单分析: 列数<20
-        表分析 --> 复杂分析: 列数>=20
-        
-        简单分析 --> 规则提取
-        复杂分析 --> LLM理解
-        
-        规则提取 --> 特征输出
-        LLM理解 --> 特征输出
-    }
-    
-    AnalyzerAgent --> SearcherAgent: 传递特征
-    
-    state SearcherAgent {
-        [*] --> 搜索策略
-        搜索策略 --> Layer1: 候选<100
-        搜索策略 --> Layer1_2: 100-1000
-        搜索策略 --> 全层搜索: >1000
-        
-        Layer1 --> 候选列表
-        Layer1_2 --> 候选列表
-        全层搜索 --> 候选列表
-    }
-    
-    SearcherAgent --> MatcherAgent: 传递候选
-    
-    state MatcherAgent {
-        [*] --> 匹配策略
-        匹配策略 --> 规则验证: 明显匹配
-        匹配策略 --> LLM验证: 需要验证
-        
-        规则验证 --> 匹配结果
-        LLM验证 --> 匹配结果
-    }
-    
-    MatcherAgent --> AggregatorAgent: 传递匹配
-    
-    state AggregatorAgent {
-        [*] --> 聚合策略
-        聚合策略 --> 简单排序: 结果>100
-        聚合策略 --> 混合排序: 20-100
-        聚合策略 --> 详细排序: <20
-        
-        简单排序 --> 最终结果
-        混合排序 --> 最终结果
-        详细排序 --> LLM重排
-        LLM重排 --> 最终结果
-    }
-    
-    AggregatorAgent --> [*]
-```
-
-## 7. 系统部署架构图
-
-```mermaid
-graph TB
-    subgraph "客户端"
-        C1[Web浏览器]
-        C2[CLI工具]
-        C3[SDK客户端]
-    end
-    
-    subgraph "负载均衡层"
-        LB[Nginx/HAProxy<br/>负载均衡器]
-    end
-    
-    subgraph "应用服务器集群"
-        subgraph "节点1"
-            API1[API Server]
-            MA1[Multi-Agent System]
-            ACC1[三层加速]
-        end
-        
-        subgraph "节点2"
-            API2[API Server]
-            MA2[Multi-Agent System]
-            ACC2[三层加速]
-        end
-        
-        subgraph "节点3"
-            API3[API Server]
-            MA3[Multi-Agent System]
-            ACC3[三层加速]
-        end
-    end
-    
-    subgraph "存储层"
-        subgraph "向量数据库集群"
-            VDB1[(FAISS Master)]
-            VDB2[(FAISS Slave)]
-        end
-        
-        subgraph "缓存集群"
-            RED1[(Redis Master)]
-            RED2[(Redis Slave)]
-        end
-        
-        subgraph "数据湖存储"
-            S3[(对象存储<br/>S3/MinIO)]
-        end
-    end
-    
-    subgraph "LLM服务"
-        LLM1[Gemini API]
-        LLM2[OpenAI API]
-        LLM3[Claude API]
-    end
-    
-    subgraph "监控系统"
-        PROM[Prometheus]
-        GRAF[Grafana]
-        ELK[ELK Stack]
-    end
-    
-    C1 --> LB
-    C2 --> LB
-    C3 --> LB
-    
-    LB --> API1
-    LB --> API2
-    LB --> API3
-    
-    API1 --> MA1 --> ACC1
-    API2 --> MA2 --> ACC2
-    API3 --> MA3 --> ACC3
-    
-    ACC1 --> VDB1
-    ACC2 --> VDB1
-    ACC3 --> VDB1
-    VDB1 --> VDB2
-    
-    ACC1 --> RED1
-    ACC2 --> RED1
-    ACC3 --> RED1
-    RED1 --> RED2
-    
-    ACC1 --> S3
-    ACC2 --> S3
-    ACC3 --> S3
-    
-    MA1 --> LLM1
-    MA2 --> LLM2
-    MA3 --> LLM3
-    
-    API1 --> PROM
-    API2 --> PROM
-    API3 --> PROM
-    PROM --> GRAF
-    
-    API1 --> ELK
-    API2 --> ELK
-    API3 --> ELK
-```
-
-## 8. 数据处理流程图
+## 2. 多智能体协同流程
 
 ```mermaid
 sequenceDiagram
-    participant User as 用户
-    participant API as API网关
-    participant Orch as 协调器
-    participant Cache as 缓存
-    participant Agents as 多Agent系统
-    participant L1 as Layer1
-    participant L2 as Layer2
-    participant L3 as Layer3
-    participant DB as 数据湖
+    participant U as 用户
+    participant W as LangGraph Workflow
+    participant O as OptimizerAgent
+    participant P as PlannerAgent
+    participant A as AnalyzerAgent
+    participant S as SearcherAgent
+    participant M as MatcherAgent
+    participant G as AggregatorAgent
     
-    User->>API: 发送查询请求
-    API->>Orch: 转发请求
+    U->>W: 查询请求
+    W->>O: 系统优化配置
+    O-->>W: 并行度(3-5)、缓存策略
     
-    Orch->>Cache: 检查缓存
-    alt 缓存命中
-        Cache-->>Orch: 返回缓存结果
-        Orch-->>API: 直接返回
-        API-->>User: 显示结果
-    else 缓存未命中
-        Orch->>Agents: 启动Agent协同
-        
-        Agents->>L1: 元数据筛选
-        L1->>DB: 查询元数据索引
-        DB-->>L1: 返回1000候选
-        L1-->>Agents: 初步候选
-        
-        Agents->>L2: 向量搜索
-        L2->>DB: HNSW搜索
-        DB-->>L2: 返回100候选
-        L2-->>Agents: 精选候选
-        
-        Agents->>L3: LLM验证
-        L3->>L3: 智能匹配
-        L3-->>Agents: 最终结果
-        
-        Agents-->>Orch: 聚合结果
-        Orch->>Cache: 更新缓存
-        Orch-->>API: 返回结果
-        API-->>User: 显示结果
+    W->>P: 制定执行策略
+    P-->>W: Bottom-Up(JOIN)/Top-Down(UNION)
+    
+    W->>A: 分析查询表
+    A-->>W: 表结构、特征
+    
+    par 并行执行
+        W->>S: 搜索候选表
+        Note over S: Layer1: 元数据筛选
+        Note over S: Layer2: 向量搜索
+        S-->>W: 6-10个候选表
+    and
+        W->>M: 准备匹配器
+        M-->>W: LLM就绪
     end
+    
+    W->>M: 验证候选表
+    Note over M: Layer3: 并行LLM验证(3-5并发)
+    M-->>W: 匹配分数
+    
+    W->>G: 聚合结果
+    G-->>W: Top-K推荐
+    
+    W-->>U: 返回结果
 ```
 
-## 9. 性能指标对比图
+## 3. LangGraph状态流转图
+
+```mermaid
+stateDiagram-v2
+    [*] --> OptimizerAgent: 初始化
+    
+    OptimizerAgent --> PlannerAgent: 优化配置完成
+    note right of OptimizerAgent
+        设置并发度: 3-5
+        选择缓存策略
+        配置批处理大小
+    end note
+    
+    PlannerAgent --> AnalyzerAgent: 策略确定
+    note right of PlannerAgent
+        JOIN: Bottom-Up策略
+        UNION: Top-Down策略
+    end note
+    
+    AnalyzerAgent --> SearcherAgent: 表分析完成
+    note right of AnalyzerAgent
+        提取表特征
+        识别关键列
+        计算复杂度
+    end note
+    
+    SearcherAgent --> MatcherAgent: 候选表生成
+    note right of SearcherAgent
+        Layer 1: 元数据过滤
+        Layer 2: 向量搜索
+        返回6-10个候选
+    end note
+    
+    MatcherAgent --> AggregatorAgent: LLM验证完成
+    note right of MatcherAgent
+        并行LLM调用(3-5)
+        生成匹配分数
+        收集匹配证据
+    end note
+    
+    AggregatorAgent --> [*]: 结果返回
+    note right of AggregatorAgent
+        综合三层分数
+        最终排序
+        返回Top-K
+    end note
+```
+
+## 4. 三层加速架构详解
+
+```mermaid
+flowchart TB
+    subgraph INPUTS["输入"]
+        Q[查询表<br/>customer_orders]
+        DB[(数据湖<br/>1,534 tables)]
+    end
+    
+    subgraph LAYER1["Layer 1: MetadataFilter"]
+        M1[列数匹配<br/>5 columns]
+        M2[类型匹配<br/>int,string,date]
+        M3[名称模式<br/>order,customer]
+        M4[统计过滤<br/>row_count>100]
+        MR1[487 tables]
+        
+        M1 --> MR1
+        M2 --> MR1
+        M3 --> MR1
+        M4 --> MR1
+    end
+    
+    subgraph LAYER2["Layer 2: VectorSearch"]
+        V1[表嵌入<br/>384-dim]
+        V2[HNSW索引<br/>M=32,ef=200]
+        V3[相似度计算<br/>cosine]
+        V4[Top-K选择<br/>K=50]
+        VR1[50 tables]
+        
+        V1 --> V2
+        V2 --> V3
+        V3 --> V4
+        V4 --> VR1
+    end
+    
+    subgraph LAYER3["Layer 3: SmartLLMMatcher"]
+        L1[Prompt生成]
+        L2[并行调用<br/>3-5 concurrent]
+        L3[分数计算<br/>0-1 scale]
+        L4[证据收集]
+        LR1[6-10 tables]
+        
+        L1 --> L2
+        L2 --> L3
+        L3 --> L4
+        L4 --> LR1
+    end
+    
+    Q --> M1
+    DB --> M1
+    MR1 --> V1
+    VR1 --> L1
+    LR1 --> R[最终结果<br/>Top-K]
+    
+    style M1 fill:#ffcccc
+    style V2 fill:#ccffcc
+    style L2 fill:#ccccff
+```
+
+## 5. 数据流处理管道
 
 ```mermaid
 graph LR
-    subgraph "纯三层加速"
-        P1[查询] --> P2[Layer1<br/>10ms]
-        P2 --> P3[Layer2<br/>50ms]
-        P3 --> P4[Layer3<br/>2000ms]
-        P4 --> P5[结果<br/>总计: 2060ms]
+    subgraph INPUT["数据输入"]
+        JSON[JSON数据]
+        CSV[CSV数据]
+        PARQUET[Parquet数据]
     end
     
-    subgraph "多Agent+三层加速"
-        M1[查询] --> M2[Agent决策<br/>5ms]
-        M2 --> M3{智能路由}
-        M3 -->|简单| M4A[仅Layer1<br/>10ms]
-        M3 -->|中等| M4B[Layer1+2<br/>60ms]
-        M3 -->|复杂| M4C[全部层<br/>2060ms]
-        M4A --> M5[结果<br/>15ms]
-        M4B --> M5[结果<br/>65ms]
-        M4C --> M5[结果<br/>2065ms]
+    subgraph PREPROCESS["预处理"]
+        PARSE[解析器]
+        VALIDATE[验证器]
+        TRANSFORM[转换器]
     end
     
-    style P5 fill:#fcc,stroke:#f00
-    style M5 fill:#cfc,stroke:#0f0
+    subgraph FEATURE["特征提取"]
+        META[元数据提取]
+        EMBED[嵌入生成]
+        STAT[统计计算]
+    end
+    
+    subgraph INDEX["索引构建"]
+        HNSW[HNSW构建]
+        INVERTED[倒排索引]
+        BTREE[B+树索引]
+    end
+    
+    subgraph STORAGE["持久化"]
+        FAISS[(FAISS)]
+        REDIS[(Redis)]
+        DISK[(磁盘)]
+    end
+    
+    JSON --> PARSE
+    CSV --> PARSE
+    PARQUET --> PARSE
+    
+    PARSE --> VALIDATE
+    VALIDATE --> TRANSFORM
+    
+    TRANSFORM --> META
+    TRANSFORM --> EMBED
+    TRANSFORM --> STAT
+    
+    META --> INVERTED
+    EMBED --> HNSW
+    STAT --> BTREE
+    
+    HNSW --> FAISS
+    INVERTED --> REDIS
+    BTREE --> DISK
 ```
 
-## 10. 数据湖表匹配工作流程
+## 6. 性能优化架构
+
+### 6.1 串行 vs 并行处理
 
 ```mermaid
-flowchart TD
-    Start([开始]) --> Input[输入两个表]
+graph TB
+    subgraph "❌ Before: 串行处理 (30-50秒)"
+        S1["LLM调用1<br/>2s"] --> S2["LLM调用2<br/>2s"]
+        S2 --> S3["LLM调用3<br/>2s"]
+        S3 --> S4["..."]
+        S4 --> S10["LLM调用10<br/>2s"]
+        S10 --> SR["总时间: ~20s"]
+    end
     
-    Input --> A1{AnalyzerAgent}
-    A1 --> SM[结构匹配]
+    subgraph "✅ After: 并行处理 (2-4秒)"
+        P0["asyncio.gather<br/>3-5并发"]
+        P0 --> P1["LLM调用1"]
+        P0 --> P2["LLM调用2"]
+        P0 --> P3["LLM调用3"]
+        P0 --> P4["LLM调用4"]
+        P0 --> P5["LLM调用5"]
+        
+        P1 --> PR["总时间: 2-4s"]
+        P2 --> PR
+        P3 --> PR
+        P4 --> PR
+        P5 --> PR
+    end
     
-    SM --> SM1[列名完全匹配]
-    SM --> SM2[列名模糊匹配]
-    SM --> SM3[数据类型匹配]
-    
-    SM1 --> Score1[匹配分数+0.4]
-    SM2 --> Score2[匹配分数+0.2]
-    SM3 --> Score3[匹配分数+0.2]
-    
-    Score1 --> A2{SearcherAgent}
-    Score2 --> A2
-    Score3 --> A2
-    
-    A2 --> SEM[语义匹配]
-    SEM --> Vec[生成词向量]
-    Vec --> Sim[计算相似度]
-    Sim --> Score4[匹配分数+0.2]
-    
-    Score4 --> A3{MatcherAgent}
-    A3 --> IM[实例匹配]
-    
-    IM --> Val[样本值比较]
-    Val --> Over[计算重叠度]
-    Over --> Score5[匹配分数+0.2]
-    
-    Score5 --> Final[综合评分]
-    
-    Final --> Check{分数>0.7?}
-    Check -->|是| Match[可以匹配]
-    Check -->|否| NoMatch[不能匹配]
-    
-    Match --> End([结束])
-    NoMatch --> End
-    
-    style A1 fill:#e3f2fd,stroke:#1976d2
-    style A2 fill:#fff3e0,stroke:#f57c00
-    style A3 fill:#f3e5f5,stroke:#7b1fa2
+    style SR fill:#ffcccc
+    style PR fill:#ccffcc
 ```
 
-## 总结
+### 6.2 HTTP客户端优化
 
-这些架构图展示了系统的：
-1. **整体架构**：多层次、模块化设计
-2. **工作流程**：Agent协同和数据流动
-3. **技术细节**：三层加速和数据湖发现
-4. **部署方案**：分布式、高可用架构
-5. **性能优化**：多维度优化策略
+```mermaid
+flowchart LR
+    subgraph "❌ 同步客户端 (阻塞)"
+        REQ1["requests.post"]
+        REQ1 --> BLOCK["线程阻塞"]
+        BLOCK --> RESP1["响应"]
+    end
+    
+    subgraph "✅ 异步客户端 (非阻塞)"
+        ASYNC1["aiohttp.post"]
+        ASYNC1 --> EVENT["事件循环"]
+        EVENT --> ASYNC2["其他任务"]
+        ASYNC2 --> EVENT
+        EVENT --> RESP2["响应"]
+    end
+    
+    style BLOCK fill:#ffcccc
+    style EVENT fill:#ccffcc
+```
 
-系统通过**6个智能Agent**的协同工作和**三层加速架构**的性能优化，实现了高效、准确的数据湖发现能力。
+## 7. 部署架构图
+
+```mermaid
+graph TB
+    subgraph CLIENT["客户端"]
+        CLI[CLI客户端]
+        WEB[Web浏览器]
+        JUPYTER[Jupyter Notebook]
+    end
+    
+    subgraph LB["负载均衡"]
+        NGINX[Nginx<br/>反向代理]
+    end
+    
+    subgraph APPCLUSTER["应用服务器集群"]
+        APP1[FastAPI Server 1<br/>8 workers]
+        APP2[FastAPI Server 2<br/>8 workers]
+        APP3[FastAPI Server 3<br/>8 workers]
+    end
+    
+    subgraph CACHELAYER["缓存层"]
+        REDIS1[(Redis Master)]
+        REDIS2[(Redis Slave)]
+    end
+    
+    subgraph VECTORDB["向量数据库"]
+        FAISS1[(FAISS Primary)]
+        FAISS2[(FAISS Replica)]
+    end
+    
+    subgraph LLMSERVICE["LLM服务"]
+        GEMINI[Gemini API]
+        GPT[OpenAI API]
+        CLAUDE[Claude API]
+    end
+    
+    subgraph MONITOR["监控"]
+        PROM[Prometheus]
+        GRAFANA[Grafana]
+        LOG[ELK Stack]
+    end
+    
+    CLI --> NGINX
+    WEB --> NGINX
+    JUPYTER --> NGINX
+    
+    NGINX --> APP1
+    NGINX --> APP2
+    NGINX --> APP3
+    
+    APP1 --> REDIS1
+    APP2 --> REDIS1
+    APP3 --> REDIS1
+    REDIS1 --> REDIS2
+    
+    APP1 --> FAISS1
+    APP2 --> FAISS1
+    APP3 --> FAISS1
+    FAISS1 --> FAISS2
+    
+    APP1 --> GEMINI
+    APP2 --> GPT
+    APP3 --> CLAUDE
+    
+    APP1 --> PROM
+    APP2 --> PROM
+    APP3 --> PROM
+    PROM --> GRAFANA
+    
+    APP1 --> LOG
+    APP2 --> LOG
+    APP3 --> LOG
+```
+
+## 📈 性能指标总览
+
+| 层级 | 响应时间 | 处理能力 | 输出数量 |
+|------|----------|---------|---------|
+| Layer 1 | ~5ms | 100→30-50 tables | 元数据过滤 |
+| Layer 2 | ~2.5s | 30-50→6-10 tables | 向量搜索 |
+| Layer 3 | 1-2s/item | 6-10→最终结果 | LLM验证 |
+| **端到端** | **10-15s** | **100% 成功率** | **Top-K结果** |
+
+## 🔥 关键优化成果
+
+- **并行化**: LLM调用从串行改为并行(3-5并发)，性能提升 **5-10x**
+- **LangGraph架构**: 使用StateGraph管理状态流转，提高可靠性
+- **智能路由**: 基于任务类型(JOIN/UNION)自动选择策略
+- **稳定性**: 100%查询成功率，无超时问题
+
+---
+
+*最后更新: 2025-08-12*

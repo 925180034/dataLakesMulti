@@ -80,113 +80,78 @@ asyncio.run(test())
 ### 基本命令
 
 ```bash
-# 方法1: 使用启动脚本（推荐）
-python run_cli.py config          # 查看配置
-python run_cli.py --help          # 查看帮助
-python run_cli.py discover -q "find similar tables" -t examples/sample_tables.json
+# 使用LangGraph多智能体系统（推荐）
+python run_langgraph_system.py --help          # 查看帮助
+python run_langgraph_system.py --dataset subset --max-queries 5 --task join
 
-# 方法2: 使用shell脚本
-./datalakes config
-./datalakes --help
-./datalakes discover -q "find similar tables" -t examples/sample_tables.json
-
-# 方法3: 设置环境变量
-export PYTHONPATH=.
-python -m src.cli config
+# 查看配置（如需要）
+python -c "import yaml; print(yaml.safe_load(open('config.yml')))"
 ```
 
 ### 第四步：运行示例
 
-**1. 查找相似表结构（用于Join操作）**:
+**1. 查找相似表结构（用于JOIN操作）**:
 ```bash
-# 使用真实数据集（推荐）
-python run_cli.py discover -q "find tables with similar column structures for joining" \
-  -t examples/real_test_tables.json -f markdown
+# 使用subset数据集（100表，推荐入门）
+python run_langgraph_system.py --dataset subset --max-queries 5 --task join
 
-# 或使用基础示例
-python run_cli.py discover -q "find tables with similar column structures for joining" \
-  -t examples/sample_tables.json -f markdown
+# 或使用complete数据集（1534表）
+python run_langgraph_system.py --dataset complete --max-queries 3 --task join
 ```
 
-**2. 查找语义相关表（用于Union操作）**:
+**2. 查找语义相关表（用于UNION操作）**:
 ```bash
-# 使用真实数据集（推荐）
-python run_cli.py discover -q "find semantically related tables for union operations" \
-  -t examples/real_test_tables.json -f json
+# UNION任务测试
+python run_langgraph_system.py --dataset subset --max-queries 5 --task union
 
-# 或使用基础示例
-python run_cli.py discover -q "find semantically related tables for union operations" \
-  -t examples/sample_tables.json -f json
+# 同时测试JOIN和UNION
+python run_langgraph_system.py --dataset subset --max-queries 5 --task both
 ```
 
-**3. 查找匹配的列**:
+**3. 保存结果到文件**:
 ```bash
-# 使用真实数据集（推荐）
-python run_cli.py discover -q "find columns that can be joined together" \
-  -c examples/real_test_columns.json -f table
+# 保存详细结果
+python run_langgraph_system.py --dataset subset --max-queries 10 --task join --output results.json
 
-# 或使用基础示例
-python run_cli.py discover -q "find columns that can be joined together" \
-  -c examples/sample_columns.json -f table
+# 查看保存的结果
+python -c "import json; print(json.dumps(json.load(open('results.json')), indent=2))"
 ```
 
-**4. 启动API服务**:
+**4. 系统测试与验证**:
 ```bash
-python run_cli.py serve
-# 访问 http://localhost:8000/docs 查看API文档
+# 快速系统测试
+python test_langgraph.py
+
+# 详细性能测试（如果存在）
+python -m pytest tests/ -v
 ```
 
-**5. 索引数据（可选，用于更快搜索）**:
-```bash
-# 索引真实数据集（推荐）
-python run_cli.py index-tables examples/real_test_tables.json
-python run_cli.py index-columns examples/real_test_columns.json
+### 第五步：理解输出结果
 
-# 或索引基础示例数据
-python run_cli.py index-tables examples/sample_tables.json
-python run_cli.py index-columns examples/sample_columns.json
-```
-
-### 第五步：输出格式选择
-
-系统支持多种输出格式：
-
-- **markdown** (`-f markdown`): 结构化的Markdown格式，适合文档
-- **json** (`-f json`): JSON格式，适合程序处理
-- **table** (`-f table`): 表格格式，适合终端查看
+系统输出包含以下信息：
+- **匹配表列表**: 按相关性排序的候选表
+- **匹配分数**: 每个表的匹配置信度 (0-1)
+- **匹配类型**: JOIN 或 UNION
+- **详细证据**: 元数据、向量、LLM三层的分数详情
 
 ### 常见使用场景
 
-**场景1：数据库表Join分析**
+**场景1：数据库表JOIN分析**
 ```bash
-# 找到可以进行Join操作的表（使用真实数据集）
-python run_cli.py discover -q "which tables can be joined based on common columns" \
-  -t examples/real_test_tables.json -f markdown
+# 寻找可JOIN的表（基于列匹配）
+python run_langgraph_system.py --dataset subset --max-queries 3 --task join
 ```
 
-**场景2：数据整合分析**
+**场景2：数据集UNION分析** 
 ```bash
-# 找到相似的数据结构用于合并（使用真实数据集）
-python run_cli.py discover -q "find tables with similar schemas for data integration" \
-  -t examples/real_test_tables.json -f json
+# 寻找可UNION的表（基于表语义）
+python run_langgraph_system.py --dataset subset --max-queries 3 --task union
 ```
 
-**场景3：列级别匹配**
+**场景3：综合数据发现**
 ```bash
-# 分析列之间的匹配关系（使用真实数据集）
-python run_cli.py discover -q "find matching columns across different tables" \
-  -c examples/real_test_columns.json -f table
-```
-
-**场景4：复杂业务查询**
-```bash
-# 客户数据分析（使用真实数据集）
-python run_cli.py discover -q "find all tables containing customer or user data for analytics" \
-  -t examples/real_test_tables.json -f markdown
-
-# 销售数据发现（使用真实数据集）
-python run_cli.py discover -q "identify tables with sales, revenue or transaction information" \
-  -t examples/real_test_tables.json -f json
+# 同时进行JOIN和UNION分析
+python run_langgraph_system.py --dataset subset --max-queries 5 --task both --output comprehensive_results.json
 ```
 
 ## ✅ 已解决的问题

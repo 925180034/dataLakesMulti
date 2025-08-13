@@ -1,22 +1,22 @@
 # 📚 数据湖多智能体系统文档中心
 
-欢迎来到数据湖多智能体系统的文档中心。本系统采用**多智能体协同架构**，集成**三层加速工具**，实现高效的数据湖发现（Data Lake Discovery）。
+欢迎来到数据湖多智能体系统的文档中心。本系统采用**LangGraph多智能体协同架构**，集成**三层加速工具**，实现高效的数据湖发现（Data Lake Discovery）。
 
 ## 🎯 核心架构文档（最新版）
 
-### 多智能体系统架构
-1. **[完整系统架构](COMPLETE_SYSTEM_ARCHITECTURE.md)** ⭐⭐⭐
-   - 多智能体系统详细设计
-   - 6个专门Agent职责说明
+### 系统实现与架构
+1. **[系统实现文档](SYSTEM_IMPLEMENTATION.md)** ⭐⭐⭐
+   - LangGraph多智能体系统详细实现
+   - 6个专门Agent技术细节
    - 三层加速工具集成
-   - 数据湖发现能力
-   - 技术实现细节
+   - 性能指标与优化方向
+   - 当前系统运行方式
 
-2. **[多Agent架构详解](MULTI_AGENT_ARCHITECTURE_EXPLAINED.md)** ⭐⭐
-   - 各Agent详细职责
-   - Agent协同机制
-   - 决策流程图
-   - 与纯三层架构对比
+2. **[完整系统架构](COMPLETE_SYSTEM_ARCHITECTURE.md)** ⭐⭐⭐
+   - 多智能体系统设计理念
+   - 数据湖发现能力说明
+   - 技术栈与框架选择
+   - 系统部署与扩展策略
 
 3. **[架构图表集合](ARCHITECTURE_DIAGRAMS.md)** ⭐⭐
    - 系统架构可视化
@@ -64,36 +64,36 @@
 2. 研究 [LakeBench项目分析](lakebench_analysis.md)
 3. 查看架构实现细节
 
-### 实验与评估
-1. 使用统一实验脚本：
+### 系统运行与测试
+1. 使用LangGraph多智能体系统：
    ```bash
-   python unified_experiment.py 50 subset 30
+   python run_langgraph_system.py --dataset subset --max-queries 5 --task join
    ```
-2. 查看实验结果：`experiment_results/`目录
-3. 分析评价指标
+2. 查看测试结果和性能指标
+3. 分析匹配质量和系统性能
 
 ## 📊 实验运行指南
 
 ### 推荐实验流程
 
-1. **环境验证**
+1. **快速测试（5个查询）**
    ```bash
-   ./run_experiment.sh config
+   python run_langgraph_system.py --dataset subset --max-queries 5 --task join
    ```
 
-2. **快速测试（3个查询）**
+2. **标准测试（JOIN任务）**
    ```bash
-   python unified_experiment.py 3 subset 30
+   python run_langgraph_system.py --dataset subset --max-queries 10 --task join
    ```
 
-3. **标准评估（50个查询）**
+3. **完整测试（JOIN+UNION）**
    ```bash
-   python unified_experiment.py 50 subset 30
+   python run_langgraph_system.py --dataset subset --max-queries 10 --task both
    ```
 
-4. **完整评估（100个查询）**
+4. **大规模测试（完整数据集）**
    ```bash
-   python unified_experiment.py 100 complete 60
+   python run_langgraph_system.py --dataset complete --max-queries 10 --task join
    ```
 
 ### 评价指标说明
@@ -105,29 +105,43 @@
 - **成功率**：查询完成的比例
 - **响应时间**：平均处理时间
 
-所有结果保存在 `experiment_results/` 目录中。
+结果自动输出到控制台，可使用 `--output` 参数保存到文件。
 
 ## 🔧 配置优化
-
-### 性能优化配置
-使用优化配置以获得更好的性能：
-```bash
-cp config_optimized.yml config.yml
-```
 
 ### 环境变量配置
 创建 `.env` 文件：
 ```bash
-GEMINI_API_KEY=your_api_key
+# 推荐使用Gemini API（免费且稳定）
+GEMINI_API_KEY=your_gemini_api_key
+
+# 或使用其他LLM API
+OPENAI_API_KEY=your_openai_api_key
+ANTHROPIC_API_KEY=your_anthropic_api_key
+
+# 可选配置
 CACHE_ENABLED=true
 DEBUG=false
 ```
 
-## 📈 最新进展
+### 系统配置
+编辑 `config.yml` 调整系统参数：
+```yaml
+llm:
+  provider: "gemini"  # 或 "openai", "anthropic"
+  
+performance:
+  batch_size: 10
+  timeout: 60
+```
 
-- ✅ **Phase 1 完成**：核心功能实现
-- 🔄 **Phase 2 进行中**：性能优化
-- 📋 **Phase 3 计划中**：完整部署
+## 📈 系统状态
+
+- ✅ **LangGraph多智能体系统**：完全实现并运行稳定
+- ✅ **6个专门Agent**：协同工作，各司其职
+- ✅ **三层加速架构**：Layer 1-3全部集成
+- ✅ **性能表现**：10-15秒/查询，100%成功率
+- 🔄 **性能优化**：Layer 2向量搜索优化中
 
 ## 🤝 贡献指南
 
@@ -139,10 +153,10 @@ DEBUG=false
 ## 📞 获取帮助
 
 - 查看 [快速开始指南](QUICK_START.md) 的故障排除部分
-- 检查 [系统架构文档](SYSTEM_ARCHITECTURE_AND_PLAN.md) 的性能优化建议
-- 查看实验日志：`logs/` 目录
+- 参考 [系统实现文档](SYSTEM_IMPLEMENTATION.md) 了解技术细节
+- 查看系统输出日志进行问题诊断
 
 ---
 
-**文档更新日期**: 2024年7月30日  
-**版本**: v3.0
+**文档更新日期**: 2024-08-12  
+**版本**: v4.0 - LangGraph多智能体系统

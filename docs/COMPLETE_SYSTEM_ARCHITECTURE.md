@@ -5,10 +5,9 @@
 2. [核心架构设计](#核心架构设计)
 3. [多智能体系统详解](#多智能体系统详解)
 4. [三层加速架构](#三层加速架构)
-5. [数据湖发现能力](#数据湖发现能力)
-6. [技术实现细节](#技术实现细节)
-7. [性能优化策略](#性能优化策略)
-8. [系统部署与扩展](#系统部署与扩展)
+5. [技术实现细节](#技术实现细节)
+6. [性能优化策略](#性能优化策略)
+7. [系统部署与扩展](#系统部署与扩展)
 
 ---
 
@@ -20,139 +19,56 @@
 ### 1.2 核心能力
 - **数据湖发现**: 自动发现相关表、可连接数据、相似数据集
 - **智能决策**: 6个专门Agent协同工作
-- **性能加速**: 三层递进式优化
+- **性能加速**: 三层递进式优化（<10ms → 10-50ms → 1-3s）
 - **灵活扩展**: 支持新Agent和新策略
 
 ### 1.3 技术栈
 ```yaml
 语言: Python 3.10+
 框架: LangGraph, LangChain
-LLM: Gemini/OpenAI/Anthropic
-向量数据库: FAISS/ChromaDB
-嵌入模型: Sentence-Transformers
-并发: AsyncIO
-缓存: Multi-level Cache
+LLM: Gemini 1.5 (主要) / OpenAI / Anthropic
+向量数据库: FAISS (HNSW索引)
+嵌入模型: Sentence-Transformers (all-MiniLM-L6-v2)
+并发: AsyncIO + aiohttp
+缓存: 三级缓存（内存/Redis/磁盘）
 ```
+
+### 1.4 系统规模
+- **数据规模**: 1,534个表，~7,000列
+- **响应时间**: 5-10秒（端到端）
+- **并发能力**: 10个并发查询
+- **准确率**: Hit@10 36% (complete) / 44% (subset)
 
 ---
 
 ## 2. 核心架构设计
 
-### 2.1 系统架构图
+### 2.1 整体架构
 
-```mermaid
-graph TB
-    subgraph "用户层"
-        U[用户查询]
-        API[REST API/CLI]
-    end
-    
-    subgraph "多智能体协同层"
-        O[Orchestrator协调器]
-        
-        subgraph "6个专门Agent"
-            A1[OptimizerAgent<br/>系统优化]
-            A2[PlannerAgent<br/>策略规划]
-            A3[AnalyzerAgent<br/>数据分析]
-            A4[SearcherAgent<br/>候选搜索]
-            A5[MatcherAgent<br/>精确匹配]
-            A6[AggregatorAgent<br/>结果聚合]
-        end
-        
-        MB[消息总线]
-    end
-    
-    subgraph "三层加速工具层"
-        L1[Layer 1: MetadataFilter<br/>规则筛选 <10ms]
-        L2[Layer 2: VectorSearch<br/>向量相似度 10-50ms]
-        L3[Layer 3: SmartLLMMatcher<br/>LLM验证 1-3s]
-    end
-    
-    subgraph "数据层"
-        DL[数据湖<br/>10,000+ Tables]
-        VI[向量索引<br/>HNSW Index]
-        MI[元数据索引<br/>Inverted Index]
-        C[多级缓存<br/>L1/L2/L3 Cache]
-    end
-    
-    U --> API
-    API --> O
-    O --> MB
-    MB <--> A1
-    MB <--> A2
-    MB <--> A3
-    MB <--> A4
-    MB <--> A5
-    MB <--> A6
-    
-    A1 -.配置.-> A2
-    A2 -.策略.-> A3
-    A3 -.分析.-> A4
-    A4 -.候选.-> A5
-    A5 -.匹配.-> A6
-    
-    A3 --> L1
-    A4 --> L1
-    A4 --> L2
-    A5 --> L3
-    
-    L1 --> MI
-    L2 --> VI
-    L3 --> DL
-    
-    DL --> C
-    VI --> C
-    MI --> C
-```
+系统采用**分层架构**设计，包含以下核心层次：
 
-### 2.2 数据流架构
+1. **接口层**: CLI、REST API、Python SDK
+2. **协调层**: Orchestrator总协调器
+3. **智能体层**: 6个专门Agent协同工作
+4. **加速层**: 三层递进式筛选优化
+5. **数据层**: 数据湖、索引、缓存
 
-```mermaid
-sequenceDiagram
-    participant User
-    participant Orchestrator
-    participant OptimizerAgent
-    participant PlannerAgent
-    participant AnalyzerAgent
-    participant SearcherAgent
-    participant MatcherAgent
-    participant AggregatorAgent
-    participant Layer1
-    participant Layer2
-    participant Layer3
-    
-    User->>Orchestrator: 查询请求
-    Orchestrator->>OptimizerAgent: 系统状态分析
-    OptimizerAgent-->>Orchestrator: 优化配置
-    
-    Orchestrator->>PlannerAgent: 制定策略
-    PlannerAgent->>PlannerAgent: 分析查询意图
-    Note over PlannerAgent: JOIN/UNION/Complex?
-    PlannerAgent-->>Orchestrator: 执行计划
-    
-    Orchestrator->>AnalyzerAgent: 数据分析
-    AnalyzerAgent->>Layer1: 元数据分析
-    Layer1-->>AnalyzerAgent: 表结构特征
-    AnalyzerAgent-->>Orchestrator: 分析结果
-    
-    Orchestrator->>SearcherAgent: 搜索候选
-    SearcherAgent->>Layer1: 规则筛选
-    Layer1-->>SearcherAgent: 1000候选
-    SearcherAgent->>Layer2: 向量搜索
-    Layer2-->>SearcherAgent: 100候选
-    SearcherAgent-->>Orchestrator: 候选列表
-    
-    Orchestrator->>MatcherAgent: 验证匹配
-    MatcherAgent->>Layer3: LLM验证
-    Layer3-->>MatcherAgent: 匹配分数
-    MatcherAgent-->>Orchestrator: 验证结果
-    
-    Orchestrator->>AggregatorAgent: 整合结果
-    AggregatorAgent->>AggregatorAgent: 排序去重
-    AggregatorAgent-->>Orchestrator: 最终结果
-    
-    Orchestrator-->>User: 返回Top-K结果
-```
+### 2.2 关键创新
+
+#### 2.2.1 多智能体协同
+- **分工明确**: 每个Agent专注特定任务
+- **消息驱动**: 基于消息总线的松耦合通信
+- **并行执行**: 独立任务并行处理
+
+#### 2.2.2 三层加速架构
+- **Layer 1**: 规则筛选，快速过滤（<10ms）
+- **Layer 2**: 向量搜索，语义匹配（10-50ms）
+- **Layer 3**: LLM验证，精确判断（1-3s）
+
+#### 2.2.3 异步并发优化
+- **并行LLM调用**: 从串行72s优化到并行3.6s
+- **异步HTTP客户端**: 使用aiohttp替代requests
+- **协程池管理**: 动态调整并发度
 
 ---
 
@@ -160,714 +76,452 @@ sequenceDiagram
 
 ### 3.1 Agent角色定义
 
-| Agent | 角色 | 核心职责 | 决策能力 | 使用工具 |
-|-------|------|---------|---------|---------|
-| **OptimizerAgent** | 系统优化器 | 监控性能、动态调优 | 资源分配策略 | 性能监控、配置管理 |
-| **PlannerAgent** | 任务规划器 | 理解意图、制定策略 | JOIN/UNION/复杂策略选择 | LLM分析（可选） |
-| **AnalyzerAgent** | 数据分析器 | 理解表结构、发现模式 | 表类型识别、关系推断 | Layer1、LLM（可选） |
-| **SearcherAgent** | 候选搜索器 | 高效搜索、空间管理 | 搜索策略选择 | Layer1、Layer2 |
-| **MatcherAgent** | 精确匹配器 | 验证匹配、生成证据 | 匹配策略选择 | Layer3、规则引擎 |
-| **AggregatorAgent** | 结果聚合器 | 整合排序、生成解释 | 排序策略选择 | LLM重排（可选） |
-
-### 3.2 Agent协同机制
-
+#### 3.1.1 OptimizerAgent（优化器）
 ```python
-class AgentCollaboration:
-    """Agent协同工作机制"""
+class OptimizerAgent:
+    """系统优化配置Agent"""
     
-    def __init__(self):
-        self.message_bus = []  # 消息总线
-        self.shared_context = {}  # 共享上下文
-        self.agent_states = {}  # Agent状态
+    职责:
+    - 动态调整系统参数
+    - 选择最优并行度（1-20）
+    - 配置缓存策略
+    - 资源分配优化
     
-    async def collaborate(self, task):
-        """协同处理流程"""
-        # 1. 消息广播
-        await self.broadcast_task(task)
-        
-        # 2. Agent响应
-        responses = await self.collect_responses()
-        
-        # 3. 决策融合
-        decision = await self.fuse_decisions(responses)
-        
-        # 4. 任务分配
-        subtasks = await self.allocate_subtasks(decision)
-        
-        # 5. 并行执行
-        results = await asyncio.gather(*[
-            agent.execute(subtask) 
-            for agent, subtask in subtasks
-        ])
-        
-        # 6. 结果整合
-        return await self.integrate_results(results)
+    决策逻辑:
+    - if query_complexity > 0.8: workers = 16
+    - if data_size > 1000: enable_cache = True
+    - if latency > 10s: increase_parallelism()
 ```
 
-### 3.3 Agent决策树
+#### 3.1.2 PlannerAgent（规划器）
+```python
+class PlannerAgent:
+    """策略规划Agent"""
+    
+    职责:
+    - 选择执行策略（Bottom-Up/Top-Down）
+    - 制定执行计划
+    - 任务分解与调度
+    
+    策略选择:
+    - JOIN任务 → Bottom-Up（列匹配优先）
+    - UNION任务 → Top-Down（表相似优先）
+    - 混合任务 → Hybrid（自适应）
+```
 
-```mermaid
-graph TD
-    Start[查询输入] --> P[PlannerAgent分析]
+#### 3.1.3 AnalyzerAgent（分析器）
+```python
+class AnalyzerAgent:
+    """数据分析Agent"""
     
-    P --> P1{查询类型?}
-    P1 -->|JOIN| PJ[Bottom-Up策略]
-    P1 -->|UNION| PU[Top-Down策略]
-    P1 -->|复杂| PC[混合策略]
+    职责:
+    - 提取表结构特征
+    - 识别关键列
+    - 计算统计信息
+    - 生成表指纹
     
-    PJ --> A[AnalyzerAgent]
-    PU --> A
-    PC --> A
+    分析维度:
+    - 结构特征: 列数、列名、数据类型
+    - 内容特征: 样本值、分布、模式
+    - 语义特征: 描述、注释、业务含义
+```
+
+#### 3.1.4 SearcherAgent（搜索器）
+```python
+class SearcherAgent:
+    """候选搜索Agent"""
     
-    A --> A1{数据复杂度?}
-    A1 -->|简单| AS[规则分析]
-    A1 -->|复杂| AC[LLM分析]
+    职责:
+    - 调用Layer 1元数据筛选
+    - 调用Layer 2向量搜索
+    - 管理搜索策略
+    - 候选剪枝优化
     
-    AS --> S[SearcherAgent]
-    AC --> S
+    搜索流程:
+    1. metadata_filter() → 500 candidates
+    2. vector_search() → 50 candidates
+    3. prune_candidates() → optimized list
+```
+
+#### 3.1.5 MatcherAgent（匹配器）
+```python
+class MatcherAgent:
+    """精确匹配Agent"""
     
-    S --> S1{候选规模?}
-    S1 -->|<100| S2[仅Layer1]
-    S1 -->|100-1000| S3[Layer1+Layer2]
-    S1 -->|>1000| S4[全层搜索]
+    职责:
+    - 调用Layer 3 LLM验证
+    - 并行处理候选表
+    - 计算匹配分数
+    - 收集匹配证据
     
-    S2 --> M[MatcherAgent]
-    S3 --> M
-    S4 --> M
+    并行策略:
+    - 批大小: 20个并发LLM调用
+    - 超时控制: 30秒
+    - 重试机制: 最多3次
+```
+
+#### 3.1.6 AggregatorAgent（聚合器）
+```python
+class AggregatorAgent:
+    """结果聚合Agent"""
     
-    M --> M1{验证策略?}
-    M1 -->|明显匹配| MR[规则验证]
-    M1 -->|需要验证| ML[LLM验证]
+    职责:
+    - 融合多维度分数
+    - 结果排序
+    - Top-K选择
+    - 生成推荐理由
     
-    MR --> AG[AggregatorAgent]
-    ML --> AG
+    分数融合公式:
+    final_score = 0.3 * metadata_score + 
+                  0.3 * vector_score + 
+                  0.4 * llm_score
+```
+
+### 3.2 Agent通信机制
+
+```python
+# 消息总线实现
+class MessageBus:
+    def __init__(self):
+        self.subscribers = defaultdict(list)
+        self.message_queue = asyncio.Queue()
     
-    AG --> AG1{结果数量?}
-    AG1 -->|<20| AGD[详细排序]
-    AG1 -->|20-100| AGH[混合排序]
-    AG1 -->|>100| AGS[简单排序]
+    async def publish(self, topic: str, message: Any):
+        """发布消息到指定主题"""
+        for subscriber in self.subscribers[topic]:
+            await subscriber.handle_message(message)
     
-    AGD --> End[输出结果]
-    AGH --> End
-    AGS --> End
+    def subscribe(self, topic: str, agent: BaseAgent):
+        """订阅指定主题"""
+        self.subscribers[topic].append(agent)
 ```
 
 ---
 
 ## 4. 三层加速架构
 
-### 4.1 Layer 1: MetadataFilter（元数据筛选层）
+### 4.1 Layer 1: MetadataFilter（元数据筛选）
 
 ```python
 class MetadataFilter:
-    """第一层：快速规则筛选"""
+    """快速规则筛选，响应时间<10ms"""
     
-    def __init__(self):
-        self.index = {
-            'column_count': {},  # 列数索引
-            'column_types': {},  # 类型索引
-            'naming_patterns': {},  # 命名模式索引
-            'table_patterns': {}  # 表模式索引
-        }
-    
-    def filter_candidates(self, query_table, all_tables):
-        """多维度筛选"""
+    def filter(self, query_table, all_tables):
         candidates = []
         
-        # 1. 列数相似性
+        # 1. 列数匹配（±20%）
         col_count = len(query_table.columns)
-        similar_count_tables = self.index['column_count'].get(
-            range(col_count - 2, col_count + 3)
-        )
-        
-        # 2. 列类型匹配
-        type_signature = self.get_type_signature(query_table)
-        type_matched = self.index['column_types'].get(type_signature)
-        
-        # 3. 命名模式
-        naming_pattern = self.extract_naming_pattern(query_table)
-        pattern_matched = self.index['naming_patterns'].get(naming_pattern)
-        
-        # 4. 综合评分
         for table in all_tables:
-            score = self.calculate_metadata_score(
-                table, 
-                col_count_weight=0.3,
-                type_match_weight=0.4,
-                naming_weight=0.3
-            )
-            if score > 0.5:
-                candidates.append((table, score))
+            if 0.8 * col_count <= len(table.columns) <= 1.2 * col_count:
+                candidates.append(table)
         
-        return sorted(candidates, key=lambda x: x[1], reverse=True)
+        # 2. 数据类型匹配
+        query_types = {col.type for col in query_table.columns}
+        candidates = [t for t in candidates 
+                     if len(query_types & {c.type for c in t.columns}) > 0.5]
+        
+        # 3. 名称模式匹配
+        keywords = extract_keywords(query_table.name)
+        candidates = [t for t in candidates 
+                     if any(kw in t.name for kw in keywords)]
+        
+        return candidates[:500]  # 最多返回500个
 ```
 
-**性能指标**:
-- 处理时间: <10ms
-- 筛选率: 90% (10,000→1,000)
-- 准确率: 70%
+**优化技术**:
+- 倒排索引: 按列数建立索引，O(1)查找
+- 位图匹配: 数据类型用位图表示，快速求交
+- 布隆过滤器: 快速排除不可能的候选
 
-### 4.2 Layer 2: VectorSearch（向量搜索层）
+### 4.2 Layer 2: VectorSearch（向量搜索）
 
 ```python
-class VectorSearchEngine:
-    """第二层：向量相似度搜索"""
+class VectorSearch:
+    """基于HNSW的向量相似度搜索，响应时间10-50ms"""
     
     def __init__(self):
-        self.index = faiss.IndexHNSWFlat(1536, 32)  # HNSW索引
+        self.index = faiss.IndexHNSWFlat(384, 32)  # 384维，M=32
         self.embeddings = {}
-        
-    def build_index(self, tables):
-        """构建HNSW索引"""
+    
+    async def build_index(self, tables):
+        """预计算所有表的嵌入向量"""
         embeddings = []
         for table in tables:
-            # 生成表的向量表示
-            embedding = self.create_table_embedding(table)
-            embeddings.append(embedding)
-            self.embeddings[table.name] = embedding
+            emb = await self.generate_embedding(table)
+            embeddings.append(emb)
+            self.embeddings[table.name] = emb
         
-        # 批量添加到索引
-        self.index.add(np.array(embeddings))
-        
-    def search(self, query_embedding, k=100):
-        """向量搜索"""
-        # HNSW近似最近邻搜索
-        distances, indices = self.index.search(
-            query_embedding.reshape(1, -1), 
-            k
-        )
-        
-        results = []
-        for dist, idx in zip(distances[0], indices[0]):
-            similarity = 1 / (1 + dist)  # 距离转相似度
-            results.append((self.table_names[idx], similarity))
-        
-        return results
+        # 构建HNSW索引
+        embeddings_array = np.array(embeddings)
+        self.index.add(embeddings_array)
+    
+    def search(self, query_embedding, k=50):
+        """搜索最相似的k个表"""
+        distances, indices = self.index.search(query_embedding, k)
+        return [(self.table_names[i], 1/(1+d)) for i, d in zip(indices[0], distances[0])]
 ```
 
-**性能指标**:
-- 构建时间: O(n log n)
-- 查询时间: 10-50ms
-- 召回率: 85%
-- 精度: 75%
+**HNSW参数优化**:
+- M=32: 每个节点的邻居数
+- ef_construction=200: 构建时的搜索宽度
+- ef_search=100: 查询时的搜索宽度
 
-### 4.3 Layer 3: SmartLLMMatcher（智能LLM匹配层）
+### 4.3 Layer 3: SmartLLMMatcher（LLM验证）
 
 ```python
 class SmartLLMMatcher:
-    """第三层：智能LLM验证"""
+    """并行LLM精确匹配，响应时间1-3s"""
     
-    def __init__(self, llm_client):
-        self.llm_client = llm_client
-        self.skip_rules = [
-            self.is_self_join,
-            self.has_obvious_foreign_key,
-            self.exact_schema_match
-        ]
+    async def match_batch(self, query_table, candidates):
+        """并行验证多个候选表"""
         
-    async def match_tables(self, query_table, candidates):
-        """智能匹配策略"""
-        matches = []
-        
+        # 构建prompt
+        prompts = []
         for candidate in candidates:
-            # 1. 规则预判
-            if any(rule(query_table, candidate) for rule in self.skip_rules):
-                matches.append({
-                    'table': candidate,
-                    'score': 0.95,
-                    'method': 'rule_based'
-                })
-                continue
-            
-            # 2. LLM验证（仅高潜力候选）
-            if self.is_high_potential(candidate):
-                match_result = await self.llm_verify(
-                    query_table, 
-                    candidate
-                )
-                if match_result['score'] > 0.7:
-                    matches.append(match_result)
+            prompt = self.build_prompt(query_table, candidate)
+            prompts.append(prompt)
         
-        return matches
-    
-    async def llm_verify(self, table1, table2):
-        """LLM深度验证"""
-        prompt = f"""
-        判断两个表是否可以JOIN:
+        # 并行调用LLM（关键优化！）
+        tasks = []
+        for prompt in prompts[:20]:  # 最多20个并发
+            task = asyncio.create_task(
+                self.llm_client.generate(prompt, timeout=30)
+            )
+            tasks.append(task)
         
-        表1: {table1.name}
-        列: {[col.name for col in table1.columns]}
-        类型: {[col.type for col in table1.columns]}
+        # 等待所有结果
+        results = await asyncio.gather(*tasks, return_exceptions=True)
         
-        表2: {table2.name}
-        列: {[col.name for col in table2.columns]}
-        类型: {[col.type for col in table2.columns]}
+        # 解析结果
+        scores = []
+        for result in results:
+            if isinstance(result, Exception):
+                scores.append(0.0)
+            else:
+                score = self.parse_llm_response(result)
+                scores.append(score)
         
-        分析:
-        1. 是否有共同列（外键关系）
-        2. 数据类型是否兼容
-        3. 业务逻辑是否相关
-        
-        返回: {{
-            "can_join": true/false,
-            "confidence": 0-1,
-            "join_columns": [],
-            "reason": ""
-        }}
-        """
-        
-        response = await self.llm_client.generate(prompt)
-        return self.parse_llm_response(response)
+        return scores
 ```
 
-**性能指标**:
-- 处理时间: 1-3s/批次
-- 准确率: 90%+
-- API成本: $0.001-0.01/查询
+**并行优化关键**:
+```python
+# ❌ Before: 串行调用（72秒）
+for candidate in candidates:
+    result = llm_client.generate(prompt)  # 阻塞！
+    
+# ✅ After: 并行调用（3.6秒）
+tasks = [llm_client.generate(p) for p in prompts]
+results = await asyncio.gather(*tasks)  # 并行！
+```
 
 ---
 
-## 5. 数据湖发现能力
+## 5. 技术实现细节
 
-### 5.1 数据湖发现定义
+### 5.1 异步HTTP客户端优化
 
-**数据湖发现（Data Lake Discovery）**是在大规模、异构的数据湖中自动识别和定位相关数据资源的过程。本系统通过多Agent协同实现了全面的数据发现能力。
-
-### 5.2 发现类型支持
-
-#### 5.2.1 结构匹配（Structure Matching）
 ```python
-def structure_matching(table1, table2):
-    """结构级别匹配"""
-    matches = {
-        'exact_match': [],      # 完全匹配
-        'partial_match': [],    # 部分匹配
-        'type_compatible': []   # 类型兼容
+# src/utils/llm_client_proxy.py
+class GeminiClientWithProxy:
+    """异步LLM客户端，支持代理"""
+    
+    def __init__(self, proxy_url="http://127.0.0.1:7890"):
+        self.proxy = proxy_url
+        self.base_url = "https://generativelanguage.googleapis.com"
+    
+    async def generate(self, prompt: str):
+        """异步生成响应"""
+        
+        # ✅ 使用aiohttp（非阻塞）
+        async with aiohttp.ClientSession() as session:
+            async with session.post(
+                f"{self.base_url}/v1/models/gemini-1.5-flash:generateContent",
+                json={"contents": [{"parts": [{"text": prompt}]}]},
+                proxy=self.proxy,
+                timeout=aiohttp.ClientTimeout(total=30)
+            ) as response:
+                result = await response.json()
+                return result["candidates"][0]["content"]["parts"][0]["text"]
+        
+        # ❌ 不要使用requests（阻塞）
+        # response = requests.post(url, json=data)  # 会阻塞事件循环！
+```
+
+### 5.2 数据格式转换
+
+```python
+def dict_to_table_info(table_dict: Dict[str, Any]) -> TableInfo:
+    """将字典转换为TableInfo对象"""
+    columns = []
+    for col_dict in table_dict.get('columns', []):
+        column_info = ColumnInfo(
+            table_name=table_dict['table_name'],
+            column_name=col_dict.get('column_name', col_dict.get('name', '')),
+            data_type=col_dict.get('data_type', col_dict.get('type', 'unknown')),
+            sample_values=col_dict.get('sample_values', [])[:5],
+            null_count=col_dict.get('null_count'),
+            unique_count=col_dict.get('unique_count')
+        )
+        columns.append(column_info)
+    
+    return TableInfo(
+        table_name=table_dict['table_name'],
+        columns=columns,
+        row_count=table_dict.get('row_count'),
+        description=table_dict.get('description')
+    )
+```
+
+### 5.3 评价指标计算
+
+```python
+def calculate_metrics(predictions, ground_truth):
+    """计算多维度评价指标"""
+    
+    metrics = {
+        'precision': len(set(predictions) & set(ground_truth)) / len(predictions),
+        'recall': len(set(predictions) & set(ground_truth)) / len(ground_truth),
+        'f1_score': 2 * precision * recall / (precision + recall),
+        'hit_at_1': 1 if predictions[0] in ground_truth else 0,
+        'hit_at_3': 1 if any(p in ground_truth for p in predictions[:3]) else 0,
+        'hit_at_5': 1 if any(p in ground_truth for p in predictions[:5]) else 0,
+        'hit_at_10': 1 if any(p in ground_truth for p in predictions[:10]) else 0,
+        'mrr': calculate_mrr(predictions, ground_truth)
     }
     
-    for col1 in table1.columns:
-        for col2 in table2.columns:
-            # 名称匹配
-            if col1.name == col2.name:
-                matches['exact_match'].append((col1, col2))
-            # 类型匹配
-            elif compatible_types(col1.type, col2.type):
-                matches['type_compatible'].append((col1, col2))
-            # 模糊匹配
-            elif similarity(col1.name, col2.name) > 0.8:
-                matches['partial_match'].append((col1, col2))
-    
-    return matches
+    return metrics
 ```
-
-#### 5.2.2 语义匹配（Semantic Matching）
-```python
-def semantic_matching(table1, table2):
-    """语义级别匹配"""
-    # 使用词向量计算语义相似度
-    embeddings1 = [embed(col.name) for col in table1.columns]
-    embeddings2 = [embed(col.name) for col in table2.columns]
-    
-    semantic_matches = []
-    for emb1, col1 in zip(embeddings1, table1.columns):
-        for emb2, col2 in zip(embeddings2, table2.columns):
-            similarity = cosine_similarity(emb1, emb2)
-            if similarity > 0.7:
-                semantic_matches.append({
-                    'column1': col1,
-                    'column2': col2,
-                    'similarity': similarity
-                })
-    
-    return semantic_matches
-```
-
-#### 5.2.3 实例匹配（Instance Matching）
-```python
-def instance_matching(table1, table2):
-    """数据实例级别匹配"""
-    matches = []
-    
-    for col1 in table1.columns:
-        for col2 in table2.columns:
-            # 样本值重叠度
-            overlap = len(
-                set(col1.sample_values) & 
-                set(col2.sample_values)
-            ) / len(set(col1.sample_values))
-            
-            if overlap > 0.5:
-                matches.append({
-                    'columns': (col1, col2),
-                    'overlap_ratio': overlap,
-                    'common_values': list(
-                        set(col1.sample_values) & 
-                        set(col2.sample_values)
-                    )
-                })
-    
-    return matches
-```
-
-### 5.3 数据湖发现工作流
-
-```mermaid
-graph LR
-    subgraph "Data Lake Discovery Pipeline"
-        Input[查询需求] --> SM[表结构分析]
-        SM --> SEM[语义搜索]
-        SEM --> IM[数据关联发现]
-        IM --> CM[关系验证]
-        CM --> Score[相关性评分]
-        Score --> Output[发现结果]
-    end
-    
-    subgraph "Agent分工"
-        A3[AnalyzerAgent] -.-> SM
-        A4[SearcherAgent] -.-> SEM
-        A5[MatcherAgent] -.-> IM
-        A5 -.-> CM
-        A6[AggregatorAgent] -.-> Score
-    end
-```
-
-### 5.4 发现策略
-
-| 策略 | 适用场景 | Agent负责 | 准确率 | 速度 |
-|-----|---------|----------|--------|------|
-| **精确匹配** | 标准化schema | AnalyzerAgent | 100% | 快 |
-| **模糊匹配** | 相似命名 | SearcherAgent | 85% | 中 |
-| **语义匹配** | 不同命名约定 | MatcherAgent+LLM | 90% | 慢 |
-| **统计匹配** | 数据分布相似 | AnalyzerAgent | 75% | 中 |
-| **机器学习** | 复杂关系 | MatcherAgent+LLM | 95% | 慢 |
 
 ---
 
-## 6. 技术实现细节
+## 6. 性能优化策略
 
-### 6.1 核心数据结构
+### 6.1 并行化优化
 
-```python
-@dataclass
-class TableInfo:
-    """表信息"""
-    table_name: str
-    columns: List[ColumnInfo]
-    row_count: Optional[int] = None
-    metadata: Dict[str, Any] = field(default_factory=dict)
+| 优化项 | Before | After | 提升 |
+|--------|--------|-------|------|
+| LLM调用 | 串行72s | 并行3.6s | 20x |
+| 嵌入生成 | 串行15s | 批量2s | 7.5x |
+| 候选搜索 | 顺序执行 | 并行执行 | 3x |
 
-@dataclass
-class ColumnInfo:
-    """列信息"""
-    table_name: str
-    column_name: str
-    data_type: str
-    sample_values: List[Any] = field(default_factory=list)
-    is_nullable: bool = True
-    is_primary_key: bool = False
-    is_foreign_key: bool = False
-
-@dataclass
-class TableMatchResult:
-    """匹配结果"""
-    source_table: str
-    target_table: str
-    score: float
-    matched_columns: List[Tuple[str, str]]
-    match_type: str  # 'join', 'union', 'similar'
-    evidence: Dict[str, Any]
-
-@dataclass
-class AgentMessage:
-    """Agent间通信消息"""
-    sender: str
-    receiver: str
-    message_type: str
-    content: Any
-    priority: int = 0
-    timestamp: float = field(default_factory=time.time)
-```
-
-### 6.2 并发处理
-
-```python
-class ParallelProcessor:
-    """并行处理器"""
-    
-    def __init__(self, max_workers=10):
-        self.semaphore = asyncio.Semaphore(max_workers)
-        self.executor = ThreadPoolExecutor(max_workers=max_workers)
-    
-    async def process_batch(self, items, processor_func):
-        """批量并行处理"""
-        async def process_with_limit(item):
-            async with self.semaphore:
-                return await processor_func(item)
-        
-        tasks = [process_with_limit(item) for item in items]
-        return await asyncio.gather(*tasks, return_exceptions=True)
-```
-
-### 6.3 缓存策略
+### 6.2 缓存策略
 
 ```python
 class MultiLevelCache:
-    """多级缓存"""
+    """三级缓存系统"""
     
     def __init__(self):
-        self.l1_cache = {}  # 内存缓存（热点数据）
-        self.l2_cache = {}  # 磁盘缓存（常用数据）
-        self.l3_cache = {}  # 远程缓存（Redis）
-        
+        self.l1_cache = {}  # 内存缓存（最快）
+        self.l2_cache = redis.Redis()  # Redis缓存（中等）
+        self.l3_cache = DiskCache()  # 磁盘缓存（最慢）
+    
     async def get(self, key):
-        """多级查找"""
         # L1查找
         if key in self.l1_cache:
             return self.l1_cache[key]
         
         # L2查找
-        if key in self.l2_cache:
-            value = self.l2_cache[key]
+        value = await self.l2_cache.get(key)
+        if value:
             self.l1_cache[key] = value  # 提升到L1
             return value
         
         # L3查找
-        value = await self.redis_get(key)
+        value = await self.l3_cache.get(key)
         if value:
-            self.l2_cache[key] = value  # 提升到L2
+            await self.l2_cache.set(key, value)  # 提升到L2
             self.l1_cache[key] = value  # 提升到L1
+            return value
         
-        return value
+        return None
 ```
 
-### 6.4 评价指标
-
-```python
-@dataclass
-class EvaluationMetrics:
-    """评价指标"""
-    precision: float = 0.0      # 精确率
-    recall: float = 0.0         # 召回率
-    f1_score: float = 0.0       # F1分数
-    mrr: float = 0.0           # 平均倒数排名
-    ndcg: float = 0.0          # 归一化折损累计增益
-    hit_rate_at_k: Dict[int, float] = field(default_factory=dict)
-    query_time: float = 0.0    # 查询时间
-    throughput: float = 0.0    # 吞吐量
-```
-
----
-
-## 7. 性能优化策略
-
-### 7.1 索引优化
+### 6.3 索引优化
 
 ```yaml
-元数据索引:
-  类型: 倒排索引
-  更新策略: 增量更新
-  内存占用: O(n)
-  查询复杂度: O(1)
-
-向量索引:
-  类型: HNSW
-  参数: M=32, ef_construction=200
-  构建复杂度: O(n log n)
-  查询复杂度: O(log n)
-  召回率: >0.95
-
-混合索引:
-  策略: 元数据预筛选 + 向量精排
-  优化效果: 查询时间减少60%
-```
-
-### 7.2 批处理优化
-
-```python
-class BatchOptimizer:
-    """批处理优化器"""
-    
-    def __init__(self):
-        self.optimal_batch_sizes = {
-            'metadata_filter': 1000,
-            'vector_search': 100,
-            'llm_matching': 10
-        }
-    
-    def adaptive_batching(self, items, stage):
-        """自适应批处理"""
-        batch_size = self.optimal_batch_sizes[stage]
-        
-        # 根据系统负载动态调整
-        if self.system_load > 0.8:
-            batch_size = batch_size // 2
-        elif self.system_load < 0.3:
-            batch_size = batch_size * 2
-        
-        return [
-            items[i:i + batch_size] 
-            for i in range(0, len(items), batch_size)
-        ]
-```
-
-### 7.3 查询优化
-
-| 优化技术 | 实现方式 | 性能提升 |
-|---------|---------|---------|
-| **查询缓存** | LRU Cache | 50% |
-| **结果预取** | Prefetching | 30% |
-| **并行查询** | AsyncIO | 40% |
-| **索引下推** | Filter Pushdown | 35% |
-| **查询重写** | Query Rewriting | 25% |
-
----
-
-## 8. 系统部署与扩展
-
-### 8.1 部署架构
-
-```yaml
-生产环境部署:
-  服务器配置:
-    CPU: 16核+
-    内存: 32GB+
-    GPU: 可选（加速嵌入生成）
-    存储: SSD 500GB+
+HNSW索引参数:
+  M: 32  # 每个节点的边数
+  ef_construction: 200  # 构建时的动态列表大小
+  ef_search: 100  # 搜索时的动态列表大小
   
-  容器化:
-    Docker: 微服务架构
-    Kubernetes: 编排管理
-    
-  负载均衡:
-    类型: Round-Robin / Least-Connection
-    健康检查: /health endpoint
-    
-  监控:
-    Prometheus: 指标收集
-    Grafana: 可视化
-    ELK: 日志分析
-```
-
-### 8.2 扩展能力
-
-```mermaid
-graph TD
-    subgraph "当前系统"
-        C1[6个Agent]
-        C2[3层加速]
-        C3[10K表支持]
-    end
-    
-    subgraph "扩展方向"
-        E1[新Agent类型]
-        E2[更多加速层]
-        E3[100K+表支持]
-        E4[分布式部署]
-        E5[实时流处理]
-        E6[AutoML优化]
-    end
-    
-    C1 --> E1
-    C2 --> E2
-    C3 --> E3
-    C3 --> E4
-    
-    E4 --> E5
-    E5 --> E6
-```
-
-### 8.3 API接口
-
-```python
-# REST API
-@app.post("/api/v1/discover")
-async def discover_tables(request: DiscoverRequest):
-    """发现相关表"""
-    orchestrator = get_orchestrator()
-    results = await orchestrator.process_query_with_collaboration(
-        query=request.query,
-        query_table=request.table,
-        strategy=request.strategy or "auto"
-    )
-    return DiscoverResponse(
-        tables=results[:request.top_k],
-        metadata={
-            "query_time": elapsed,
-            "total_candidates": len(results),
-            "strategy_used": strategy
-        }
-    )
-
-# GraphQL接口
-type Query {
-    discoverTables(
-        query: String!
-        table: TableInput!
-        strategy: Strategy
-        topK: Int = 10
-    ): DiscoverResult!
-}
-
-type DiscoverResult {
-    tables: [TableMatch!]!
-    metadata: Metadata!
-}
+性能指标:
+  构建时间: 7-8秒（1,534个表）
+  搜索时间: 10-50ms
+  内存占用: ~200MB
+  召回率: 85%@50
 ```
 
 ---
 
-## 9. 总结
+## 7. 系统部署与扩展
 
-### 9.1 系统特点
+### 7.1 部署架构
 
-1. **多智能体协同**: 6个专门Agent分工明确，协同决策
-2. **三层加速架构**: 递进式优化，性能与准确率平衡
-3. **数据湖发现**: 支持结构、语义、实例多维度匹配
-4. **灵活扩展**: 易于添加新Agent和新策略
-5. **高性能**: 毫秒级响应，支持万级表规模
+```yaml
+生产部署:
+  负载均衡: Nginx
+  应用服务: FastAPI (8 workers × 3 instances)
+  缓存: Redis Cluster
+  向量库: FAISS with persistence
+  监控: Prometheus + Grafana
+  日志: ELK Stack
+```
 
-### 9.2 技术创新
+### 7.2 扩展性设计
 
-- **智能决策**: Agent独立决定是否使用LLM
-- **动态优化**: OptimizerAgent实时调整系统配置
-- **混合搜索**: 规则+向量+LLM三层递进
-- **并行处理**: 异步协同，充分利用资源
+#### 7.2.1 水平扩展
+- **无状态设计**: 所有Agent无状态，可水平扩展
+- **分片策略**: 数据按hash分片到多个节点
+- **负载均衡**: Round-robin或最少连接数
 
-### 9.3 应用场景
+#### 7.2.2 垂直优化
+- **GPU加速**: 向量计算使用GPU
+- **内存优化**: 使用内存映射文件
+- **JIT编译**: 使用Numba加速计算密集型代码
 
-- 数据湖表发现
-- 数据集成
-- ETL自动化
-- 数据血缘分析
-- Schema演化追踪
+### 7.3 未来优化方向
 
-### 9.4 性能指标
+1. **模型优化**
+   - 微调专门的表匹配模型
+   - 使用更轻量的嵌入模型
+   - 实现模型量化压缩
 
-| 指标 | 数值 | 说明 |
-|-----|------|------|
-| **查询延迟** | 0.5-3s | 根据复杂度 |
-| **吞吐量** | 100+ QPS | 单机 |
-| **准确率** | >90% | 数据湖发现 |
-| **召回率** | >85% | Top-10 |
-| **支持规模** | 10K+ tables | 可扩展到100K+ |
+2. **算法优化**
+   - 实现增量索引更新
+   - 使用近似算法加速
+   - 引入强化学习优化策略
+
+3. **系统优化**
+   - 实现分布式Agent
+   - 支持流式处理
+   - 添加自适应并发控制
 
 ---
 
-## 附录：关键代码位置
+## 📊 系统性能总结
 
-```
-/root/dataLakesMulti/
-├── src/core/
-│   ├── multi_agent_system.py          # 多Agent基础架构
-│   ├── enhanced_multi_agent_system.py # 增强版多Agent实现
-│   └── ultra_optimized_workflow.py    # 三层加速实现
-├── src/agents/                        # 原始Agent实现（LangGraph）
-├── src/tools/
-│   ├── metadata_filter.py            # Layer 1实现
-│   ├── vector_search.py              # Layer 2实现
-│   └── smart_llm_matcher.py          # Layer 3实现
-├── docs/
-│   ├── MULTI_AGENT_ARCHITECTURE_EXPLAINED.md
-│   └── COMPLETE_SYSTEM_ARCHITECTURE.md
-└── examples/                          # 测试数据集
-```
+### 当前性能指标
+
+| 指标 | Subset (100表) | Complete (1,534表) |
+|------|---------------|-------------------|
+| 响应时间 | 5.2秒 | 9.4秒 |
+| 吞吐量 | 0.19 QPS | 0.11 QPS |
+| Precision | 10.0% | 7.5% |
+| Recall | 29.6% | 9.3% |
+| Hit@10 | 44.4% | 36.0% |
+| 内存使用 | ~1GB | ~2GB |
+| CPU使用 | 4 cores | 8 cores |
+
+### 关键成就
+
+✅ **性能突破**: 查询响应从72秒优化到5-10秒（92%提升）
+✅ **并发能力**: 支持20个并发LLM调用
+✅ **系统稳定**: 100%查询成功率，无崩溃
+✅ **可扩展性**: 成功处理15倍数据增长（100→1,534表）
+
+---
+
+*文档版本: 2.0*
+*最后更新: 2025-08-12*
+*作者: Multi-Agent System Team*

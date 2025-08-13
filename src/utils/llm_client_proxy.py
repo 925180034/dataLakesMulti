@@ -106,3 +106,14 @@ class GeminiClientWithProxy:
         except json.JSONDecodeError as e:
             logger.error(f"Failed to parse JSON: {e}")
             return {}
+
+
+def get_llm_client():
+    """Get LLM client instance"""
+    # Create default config
+    config = {
+        'api_key': os.getenv('GEMINI_API_KEY'),
+        'model': 'gemini-1.5-flash',
+        'proxy': os.getenv('HTTP_PROXY', 'http://127.0.0.1:7890')
+    }
+    return GeminiClientWithProxy(config)
