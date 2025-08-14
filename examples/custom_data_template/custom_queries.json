@@ -1,0 +1,32 @@
+[
+  {
+    "query_id": "q001",
+    "query_table": "customers",
+    "query_type": "join",
+    "description": "Find tables that can join with customers table"
+  },
+  {
+    "query_id": "q002",
+    "query_table": "orders",
+    "query_type": "join",
+    "description": "Find tables that can join with orders table"
+  },
+  {
+    "query_id": "q003",
+    "query_table": "products",
+    "query_type": "join",
+    "description": "Find tables that can join with products table"
+  },
+  {
+    "query_id": "q004",
+    "query_table": "customers",
+    "query_type": "union",
+    "description": "Find tables with similar structure to customers"
+  },
+  {
+    "query_id": "q005",
+    "query_table": "order_items",
+    "query_type": "join",
+    "description": "Find tables that can join with order_items"
+  }
+]

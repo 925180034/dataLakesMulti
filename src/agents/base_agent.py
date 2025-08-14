@@ -5,7 +5,10 @@ from abc import ABC, abstractmethod
 from typing import Dict, Any, Optional
 import logging
 import time
+import asyncio
+import os
 from src.core.state import WorkflowState, PerformanceMetrics
+from src.utils.llm_client_proxy import GeminiClientWithProxy
 
 
 class BaseAgent(ABC):
@@ -13,18 +16,28 @@ class BaseAgent(ABC):
     Abstract base class for all agents in the system
     """
     
-    def __init__(self, name: str, description: str = ""):
+    def __init__(self, name: str, description: str = "", use_llm: bool = False):
         """
         Initialize base agent
         
         Args:
             name: Agent name for identification
             description: Agent description
+            use_llm: Whether this agent uses LLM capabilities
         """
         self.name = name
         self.description = description
         self.logger = logging.getLogger(f"Agent.{name}")
         self.execution_count = 0
+        self.use_llm = use_llm
+        
+        # Initialize LLM client if needed
+        if use_llm:
+            self.llm_client = GeminiClientWithProxy({
+                "temperature": 0.1,
+                "max_tokens": 2000
+            })
+            self.logger.info(f"Initialized {name} with LLM capabilities")
         
     def __call__(self, state: WorkflowState) -> WorkflowState:
         """
@@ -131,3 +144,45 @@ class BaseAgent(ABC):
         """
         for key, value in kwargs.items():
             self.logger.debug(f"Metric - {key}: {value}")
+    
+    async def call_llm(self, prompt: str, system_prompt: Optional[str] = None) -> str:
+        """
+        Call LLM with the given prompt
+        
+        Args:
+            prompt: The prompt to send to LLM
+            system_prompt: Optional system prompt
+            
+        Returns:
+            LLM response as string
+        """
+        if not self.use_llm:
+            raise ValueError(f"Agent {self.name} is not configured to use LLM")
+        
+        try:
+            response = await self.llm_client.generate(prompt, system_prompt)
+            return response
+        except Exception as e:
+            self.logger.error(f"LLM call failed: {e}")
+            return ""
+    
+    async def call_llm_json(self, prompt: str, system_prompt: Optional[str] = None) -> Dict[str, Any]:
+        """
+        Call LLM and expect JSON response
+        
+        Args:
+            prompt: The prompt to send to LLM
+            system_prompt: Optional system prompt
+            
+        Returns:
+            LLM response as dictionary
+        """
+        if not self.use_llm:
+            raise ValueError(f"Agent {self.name} is not configured to use LLM")
+        
+        try:
+            response = await self.llm_client.generate_json(prompt, system_prompt)
+            return response
+        except Exception as e:
+            self.logger.error(f"LLM JSON call failed: {e}")
+            return {}

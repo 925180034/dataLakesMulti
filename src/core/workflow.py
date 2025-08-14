@@ -2,7 +2,7 @@ from typing import Dict, Any, List
 import logging
 from langgraph.graph import StateGraph, END
 from src.core.models import AgentState, TaskStrategy
-from src.agents.planner import PlannerAgent
+from src.agents.planner_agent import PlannerAgent
 from src.agents.column_discovery import ColumnDiscoveryAgent
 from src.agents.table_aggregation import TableAggregationAgent
 from src.agents.table_discovery import TableDiscoveryAgent

@@ -1,0 +1,170 @@
+# 优化配置文件 - 解决超时问题
+# 数据湖多智能体系统配置文件
+
+# 基础配置
+project:
+  name: "DataLakes Multi-Agent System"
+  version: "1.0.0"
+  debug: true  # 开启调试以查看问题
+
+# 路径配置
+paths:
+  data_dir: "./data"
+  cache_dir: "./cache"
+  log_dir: "./logs"
+  prompt_templates_dir: "./src/config/prompts"
+
+# LLM配置优化 - 减少超时和调用时间 (快速修复包)
+llm:
+  provider: "gemini"  
+  model_name: "gemini-1.5-flash"
+  temperature: 0        # 从0.0确保一致性和速度
+  max_tokens: 1000      # 减少到1000，提高响应速度
+  timeout: 10           # 减少到10秒，快速失败
+  # API密钥通过环境变量设置: GEMINI_API_KEY, OPENAI_API_KEY 或 ANTHROPIC_API_KEY
+
+# 向量数据库配置 - 优化性能
+vector_db:
+  provider: "hnsw"   # faiss, chromadb, hnsw
+  dimension: 384  # SentenceTransformer all-MiniLM-L6-v2 维度
+  index_type: "IVFFlat"
+  db_path: "./data/vector_db"
+  collection_name: "data_lakes_vectors"
+  max_elements: 10000  # 减少最大元素数量
+  
+  # HNSW特定配置 - 优化后的参数
+  hnsw_config:
+    M: 48                    # 增加连接数以提高召回率
+    ef_construction: 200     # 增加构建时的搜索宽度以提高质量
+    ef: 50                   # 增加搜索时的宽度以避免错误
+    max_elements: 100000     # 支持10万级规模
+    space: "cosine"          # 余弦距离度量
+
+# 倒排索引配置
+index:
+  provider: "whoosh"
+  index_path: "./data/index_db"
+  schema_fields:
+    - "table_name"
+    - "column_name"
+    - "values"
+
+# 匈牙利算法匹配器配置 - 匹配LakeBench
+hungarian_matcher:
+  enabled: false
+  similarity_threshold: 0.6  # LakeBench使用0.6-0.7
+  batch_size: 100           # 增加批量大小
+  max_table_size: 50        # 支持更大的表
+  
+  # 评分权重配置
+  scoring_weights:
+    raw_total: 0.2           
+    normalized_min: 0.2      
+    normalized_max: 0.2      
+    jaccard_style: 0.1       
+    average_similarity: 0.2  
+    weighted: 0.1           
+
+# LSH预过滤器配置 - Phase 2启用但优化参数
+lsh_prefilter:
+  enabled: true              # 重新启用以保持架构完整性
+  num_hash_functions: 32     # 减少哈希函数数量
+  num_hash_tables: 4         # 减少哈希表数量
+  signature_length: 16       # 减少签名长度
+  bands: 8                   # 减少分带数量
+  rows_per_band: 2          
+  similarity_threshold: 0.6  
+  max_candidates: 100       # 减少候选数量
+  save_path: "./data/lsh_indices"
+
+# 向量化计算优化器配置 - Phase 2启用但优化参数
+vectorized_optimizer:
+  enabled: true             # 重新启用以保持架构完整性
+  batch_size: 100          # 减少批处理大小
+  use_gpu: false            
+  max_workers: 2           # 减少工作进程数
+  chunk_size: 50           # 减少分块大小
+  parallel_threshold: 1000 # 降低并行处理阈值
+  memory_limit_mb: 1024    # 减少内存限制
+  precision: "float32"     
+
+# 阈值配置 - 优化匹配速度
+thresholds:
+  # 匹配阈值 - 匹配LakeBench baseline
+  semantic_similarity_threshold: 0.6   # LakeBench标准阈值
+  value_overlap_threshold: 0.3
+  column_match_confidence_threshold: 0.6  # LakeBench置信度阈值
+  
+  # 搜索参数 - 匹配LakeBench
+  max_candidates: 60        # LakeBench默认K=60
+  top_k_results: 10         # 每个查询列返回的列数
+  
+  # 表评分权重
+  column_count_weight: 0.4
+  confidence_weight: 0.4
+  key_column_bonus: 0.2
+  
+  # HNSW搜索参数
+  hnsw_search_k_multiplier: 3.0  # LakeBench标准值
+
+# 缓存配置 - 启用积极缓存
+cache:
+  enabled: true
+  cache_dir: "./cache"
+  ttl_seconds: 3600        # 减少到1小时
+  max_size_mb: 1024        # 减少缓存大小
+  
+  # 多级缓存配置
+  multi_level_cache:
+    enabled: true           
+    l1_memory_size: 1000    # 减少内存缓存
+    l2_redis_enabled: false     
+    l2_redis_url: "redis://localhost:6379"
+    l3_disk_enabled: true       
+    l3_disk_path: "./cache/l3"
+
+# 日志配置优化 - 减少日志输出提高性能 (快速修复包)
+logging:
+  level: "INFO"     # 改为INFO以查看详细日志，帮助诊断问题
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file_rotation: true
+  max_file_size_mb: 5      # 减少日志文件大小
+  backup_count: 3
+
+# 性能配置优化 - Phase 2性能加速配置
+performance:
+  max_concurrent_requests: 10   # 提升到10，支持并发查询目标
+  request_timeout: 10           # 减少到10秒，快速失败
+  retry_attempts: 1             # 减少到1次重试，快速失败
+  batch_size: 100               # 增加批处理大小，提高效率
+  
+  # 优化工作流配置
+  optimized_workflow:
+    enabled: true                  # 启用优化工作流
+    metadata_filter_top_k: 500     # 减少到500，提高速度
+    vector_search_top_k: 50        # 减少到50，提高速度
+    llm_verify_top_k: 10           # 减少到10，减少LLM调用
+    
+    # 批处理配置
+    batch_embedding_size: 100      # 批量嵌入生成大小
+    batch_llm_size: 10            # 批量LLM调用大小
+    
+    # 并行处理配置
+    max_workers: 8                # 增加到8，提高并行度
+    async_batch_size: 20          # 增加到20，提高批处理效率
+    
+    # 缓存预热配置
+    cache_warm_up_enabled: true    # 启用缓存预热
+    hot_tables_count: 100         # 热点表数量
+    
+    # 性能监控
+    enable_monitoring: true        # 启用性能监控
+    slow_query_threshold: 5       # 降低到5秒，更严格的监控
+    export_metrics: true          # 导出性能指标
+
+# 安全配置
+security:
+  enable_api_key_validation: true
+  rate_limit_per_minute: 60
+  allowed_file_types: [".csv", ".json", ".parquet"]
+  max_file_size_mb: 50     # 减少最大文件大小

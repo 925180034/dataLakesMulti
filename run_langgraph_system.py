@@ -28,16 +28,20 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-def load_test_data(dataset_type: str = 'subset') -> tuple:
-    """Load test dataset"""
-    if dataset_type == 'subset':
-        tables_file = 'examples/final_subset_tables.json'
-        queries_file = 'examples/final_subset_queries.json'
-        ground_truth_file = 'examples/final_subset_ground_truth.json'
-    else:
-        tables_file = 'examples/final_complete_tables.json'
-        queries_file = 'examples/final_complete_queries.json'
-        ground_truth_file = 'examples/final_complete_ground_truth.json'
+def load_test_data(dataset_type: str = 'subset', task_type: str = 'join') -> tuple:
+    """Load test dataset from reorganized structure"""
+    # Build path based on task and dataset type
+    base_dir = Path(f'examples/separated_datasets/{task_type}_{dataset_type}')
+    
+    # Check if directory exists
+    if not base_dir.exists():
+        # Fallback to join dataset if specific task dataset doesn't exist
+        logger.warning(f"Directory {base_dir} not found, using join dataset")
+        base_dir = Path(f'examples/separated_datasets/join_{dataset_type}')
+    
+    tables_file = base_dir / 'tables.json'
+    queries_file = base_dir / 'queries.json'
+    ground_truth_file = base_dir / 'ground_truth.json'
     
     # Load tables
     with open(tables_file, 'r') as f:
@@ -51,7 +55,7 @@ def load_test_data(dataset_type: str = 'subset') -> tuple:
     with open(ground_truth_file, 'r') as f:
         ground_truth = json.load(f)
     
-    logger.info(f"Loaded {len(tables)} tables, {len(queries)} queries")
+    logger.info(f"Loaded {len(tables)} tables, {len(queries)} queries from {base_dir}")
     return tables, queries, ground_truth
 
 
@@ -70,8 +74,17 @@ def run_single_query(workflow, query_info: Dict, tables: List[Dict]) -> Dict:
     return result
 
 
-def evaluate_results(results: List[Dict], ground_truth: Dict) -> Dict:
+def evaluate_results(results: List[Dict], ground_truth: List[Dict]) -> Dict:
     """Evaluate results against ground truth"""
+    # Convert ground truth list to dict format
+    gt_dict = {}
+    for gt in ground_truth:
+        query_table = gt['query_table']
+        candidate_table = gt['candidate_table']
+        if query_table not in gt_dict:
+            gt_dict[query_table] = set()
+        gt_dict[query_table].add(candidate_table)
+    
     metrics = {
         'total_queries': len(results),
         'successful_queries': 0,
@@ -80,7 +93,10 @@ def evaluate_results(results: List[Dict], ground_truth: Dict) -> Dict:
         'total_time': 0,
         'precision_sum': 0,
         'recall_sum': 0,
-        'f1_sum': 0
+        'f1_sum': 0,
+        'hit_at_1': 0,
+        'hit_at_3': 0,
+        'hit_at_5': 0
     }
     
     total_time = 0
@@ -91,22 +107,35 @@ def evaluate_results(results: List[Dict], ground_truth: Dict) -> Dict:
             
             # Calculate precision/recall if ground truth available
             query_table = result.get('query_table')
-            if query_table and query_table in ground_truth:
-                expected = set(ground_truth[query_table])
-                predicted = set([r['table_name'] for r in result.get('results', [])])
+            if query_table and query_table in gt_dict:
+                expected = gt_dict[query_table]
+                predicted_list = [r['table_name'] for r in result.get('results', [])]
+                predicted = set(predicted_list)
+                
+                # Calculate Hit@K metrics
+                if predicted_list:
+                    if predicted_list[0] in expected:
+                        metrics['hit_at_1'] += 1
+                    if any(p in expected for p in predicted_list[:3]):
+                        metrics['hit_at_3'] += 1
+                    if any(p in expected for p in predicted_list[:5]):
+                        metrics['hit_at_5'] += 1
                 
                 if predicted:
                     precision = len(expected & predicted) / len(predicted)
                     metrics['precision_sum'] += precision
+                else:
+                    precision = 0
                 
                 if expected:
                     recall = len(expected & predicted) / len(expected)
                     metrics['recall_sum'] += recall
+                else:
+                    recall = 0
                 
-                if predicted or expected:
-                    if precision + recall > 0:
-                        f1 = 2 * precision * recall / (precision + recall)
-                        metrics['f1_sum'] += f1
+                if precision + recall > 0:
+                    f1 = 2 * precision * recall / (precision + recall)
+                    metrics['f1_sum'] += f1
         else:
             metrics['failed_queries'] += 1
         
@@ -119,10 +148,16 @@ def evaluate_results(results: List[Dict], ground_truth: Dict) -> Dict:
         metrics['avg_precision'] = metrics['precision_sum'] / metrics['successful_queries']
         metrics['avg_recall'] = metrics['recall_sum'] / metrics['successful_queries']
         metrics['avg_f1'] = metrics['f1_sum'] / metrics['successful_queries']
+        metrics['hit_at_1_rate'] = metrics['hit_at_1'] / metrics['successful_queries']
+        metrics['hit_at_3_rate'] = metrics['hit_at_3'] / metrics['successful_queries']
+        metrics['hit_at_5_rate'] = metrics['hit_at_5'] / metrics['successful_queries']
     else:
         metrics['avg_precision'] = 0
         metrics['avg_recall'] = 0
         metrics['avg_f1'] = 0
+        metrics['hit_at_1_rate'] = 0
+        metrics['hit_at_3_rate'] = 0
+        metrics['hit_at_5_rate'] = 0
     
     return metrics
 
@@ -143,8 +178,8 @@ def main():
     args = parser.parse_args()
     
     # Load data
-    logger.info(f"Loading {args.dataset} dataset...")
-    tables, queries, ground_truth = load_test_data(args.dataset)
+    logger.info(f"Loading {args.dataset} dataset for task {args.task}...")
+    tables, queries, ground_truth = load_test_data(args.dataset, args.task)
     
     # Filter queries by task type
     if args.task != 'both':
@@ -201,22 +236,46 @@ def main():
         logger.info(f"Average Precision: {metrics['avg_precision']:.3f}")
         logger.info(f"Average Recall: {metrics['avg_recall']:.3f}")
         logger.info(f"Average F1: {metrics['avg_f1']:.3f}")
+        logger.info(f"Hit@1: {metrics['hit_at_1_rate']:.3f}")
+        logger.info(f"Hit@3: {metrics['hit_at_3_rate']:.3f}")
+        logger.info(f"Hit@5: {metrics['hit_at_5_rate']:.3f}")
     
-    # Save results if requested
+    # Create unified experiment results folder
+    from datetime import datetime
+    timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+    experiment_name = f"langgraph_{args.task}_{args.dataset}_{timestamp}"
+    
+    # Create experiment results directory if not exists
+    experiment_dir = Path('experiment_results')
+    experiment_dir.mkdir(exist_ok=True)
+    
+    # Create subdirectories for organization
+    task_dir = experiment_dir / args.task
+    task_dir.mkdir(exist_ok=True)
+    
+    # Save results
+    output_file = task_dir / f"{experiment_name}.json"
+    output_data = {
+        'experiment_name': experiment_name,
+        'dataset': args.dataset,
+        'task': args.task,
+        'queries': queries,
+        'results': results,
+        'metrics': metrics,
+        'timestamp': time.time(),
+        'datetime': timestamp
+    }
+    
+    with open(output_file, 'w') as f:
+        json.dump(output_data, f, indent=2)
+    
+    logger.info(f"\n💾 Results saved to {output_file}")
+    
+    # Also save to custom output if specified
     if args.output:
-        output_data = {
-            'dataset': args.dataset,
-            'task': args.task,
-            'queries': queries,
-            'results': results,
-            'metrics': metrics,
-            'timestamp': time.time()
-        }
-        
         with open(args.output, 'w') as f:
             json.dump(output_data, f, indent=2)
-        
-        logger.info(f"\n💾 Results saved to {args.output}")
+        logger.info(f"💾 Also saved to {args.output}")
     
     logger.info("\n✨ LangGraph workflow execution complete!")
 

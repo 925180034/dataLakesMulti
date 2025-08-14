@@ -1,230 +1,184 @@
 """
-MatcherAgent - Precise matching with parallel LLM verification
+MatcherAgent - LLM-based table matching and verification
 """
 import asyncio
+import json
 from typing import List, Dict, Any
 from src.agents.base_agent import BaseAgent
 from src.core.state import WorkflowState, MatchResult, CandidateTable
 from src.tools.llm_matcher import LLMMatcherTool
+from src.config.prompts import get_agent_prompt, format_user_prompt
 
 
 class MatcherAgent(BaseAgent):
     """
-    Matcher Agent responsible for precise matching using parallel LLM verification
+    Matcher Agent responsible for LLM-based verification of table matches
     """
     
     def __init__(self):
         super().__init__(
             name="MatcherAgent",
-            description="Performs precise table matching using parallel LLM calls"
+            description="Uses LLM to verify and score table matches with intelligent prompts",
+            use_llm=True  # Enable LLM for matching
         )
         
-        # Initialize LLM matcher tool
+        # Initialize LLM matcher tool (for batch processing)
         self.llm_matcher = LLMMatcherTool()
+        
+        # Use centralized prompt from config
+        self.system_prompt = get_agent_prompt("MatcherAgent", "system_prompt")
         
     def process(self, state: WorkflowState) -> WorkflowState:
         """
-        Perform precise matching on candidates using LLM
+        Verify candidate tables using LLM with intelligent prompts
         
         Args:
             state: Current workflow state
             
         Returns:
-            Updated state with match results
+            Updated state with verified matches
         """
-        self.logger.info("Starting LLM-based precise matching")
-        
-        # Check if we should skip matching
-        if state.get('skip_matcher', False):
-            self.logger.info("Skipping matcher (flag set by planner)")
-            state['matches'] = []
+        # Check if we should skip LLM matching
+        if state.get('should_use_llm', True) == False:
+            self.logger.info("Skipping LLM matcher as per optimization config")
+            # Pass through top candidates without LLM verification
+            candidates = state.get('candidates', [])
+            state['match_results'] = []
+            for c in candidates[:10]:
+                # Create proper MatchResult with required fields
+                state['match_results'].append(MatchResult(
+                    query_table=state.get('query_task', {}).table_name if state.get('query_task') else 'unknown',
+                    matched_table=c.table_name,
+                    score=c.score,
+                    match_type='unknown',
+                    confidence=c.score * 0.5,
+                    agent_used='SearcherAgent',
+                    evidence={'reason': 'No LLM verification performed'}
+                ))
             return state
         
-        # Get required inputs
+        self.logger.info("Starting LLM-based table matching with intelligent prompts")
+        
+        # Get candidates and query info
         candidates = state.get('candidates', [])
-        query_table = state.get('query_table')
-        all_tables = state.get('all_tables', [])
         query_task = state.get('query_task')
         optimization_config = state.get('optimization_config')
-        strategy = state.get('strategy')
         
         if not candidates:
-            self.logger.info("No candidates to match")
-            state['matches'] = []
+            self.logger.warning("No candidates to match")
+            state['match_results'] = []
             return state
         
-        if not query_table:
-            self.logger.error("No query table found")
-            state['matches'] = []
-            return state
+        # Get query table info
+        query_table_name = query_task.table_name if query_task else 'unknown'
+        query_table_info = state.get('query_table')
         
-        # Determine LLM concurrency
-        llm_concurrency = 20  # Default
-        if optimization_config:
-            llm_concurrency = optimization_config.llm_concurrency
+        if not query_table_info:
+            # Try to find query table in all_tables
+            all_tables = state.get('all_tables', [])
+            for t in all_tables:
+                if t.get('table_name') == query_table_name:
+                    query_table_info = t
+                    break
         
-        self.logger.info(f"Using LLM concurrency: {llm_concurrency}")
+        if not query_table_info:
+            self.logger.warning("Query table info not found, using minimal info")
+            query_table_info = {'table_name': query_table_name}
         
-        # Filter candidates for LLM verification
-        llm_candidates = self._select_candidates_for_llm(
-            candidates, 
-            strategy.confidence_threshold if strategy else 0.5
-        )
+        # Determine batch size for parallel processing
+        batch_size = optimization_config.llm_concurrency if optimization_config else 3
+        max_candidates = min(len(candidates), 10)  # Limit total candidates
         
-        self.logger.info(f"Selected {len(llm_candidates)} candidates for LLM verification")
+        self.logger.info(f"Processing {max_candidates} candidates with batch size {batch_size}")
         
-        # Run async LLM matching
-        matches = asyncio.run(
-            self._run_parallel_llm_matching(
-                query_table,
-                llm_candidates,
-                all_tables,
-                query_task.task_type if query_task else 'join',
-                llm_concurrency
-            )
-        )
-        
-        self.logger.info(f"LLM matching complete: {len(matches)} matches found")
-        
-        # Add high-confidence candidates that didn't need LLM
-        for candidate in candidates:
-            if candidate.score > 0.95:
-                # Very high confidence, add directly
-                match = MatchResult(
-                    query_table=query_table.get('table_name', ''),
-                    matched_table=candidate.table_name,
-                    score=candidate.score,
-                    match_type=query_task.task_type if query_task else 'join',
-                    confidence=candidate.score,
-                    agent_used='MatcherAgent-HighConfidence',
-                    evidence=candidate.evidence
+        # Use the batch_verify method which exists in LLMMatcherTool
+        try:
+            # Prepare candidate table info
+            candidate_tables = []
+            for c in candidates[:max_candidates]:
+                # Find full table info for each candidate
+                candidate_info = None
+                for t in state.get('all_tables', []):
+                    if t.get('table_name') == c.table_name:
+                        candidate_info = t
+                        break
+                
+                if candidate_info:
+                    candidate_tables.append(candidate_info)
+                else:
+                    # Use minimal info if full info not found
+                    candidate_tables.append({
+                        'table_name': c.table_name,
+                        'columns': []
+                    })
+            
+            # Run batch LLM verification
+            loop = asyncio.new_event_loop()
+            asyncio.set_event_loop(loop)
+            
+            llm_results = loop.run_until_complete(
+                self.llm_matcher.batch_verify(
+                    query_table=query_table_info,
+                    candidate_tables=candidate_tables,
+                    task_type=query_task.task_type if query_task else 'join',
+                    max_concurrent=batch_size,  # Fixed parameter name
+                    existing_scores=[c.score for c in candidates[:max_candidates]]  # Pass existing scores
                 )
-                matches.append(match)
-                self.logger.debug(f"Added high-confidence match: {candidate.table_name}")
-        
-        # Sort matches by score
-        matches.sort(key=lambda x: x.score, reverse=True)
-        
-        # Update state
-        state['matches'] = matches
-        
-        # Update metrics
-        if state.get('metrics'):
-            state['metrics'].llm_calls_made = len(llm_candidates)
+            )
+            loop.close()
+            
+            # Convert LLM results to MatchResult objects
+            match_results = []
+            for i, result in enumerate(llm_results):
+                if result.get('is_match', False):
+                    # Create MatchResult with proper structure
+                    match = MatchResult(
+                        query_table=query_table_name,
+                        matched_table=candidates[i].table_name,
+                        score=result.get('confidence', 0.5),
+                        match_type=query_task.task_type if query_task else 'unknown',
+                        confidence=result.get('confidence', 0.5),
+                        agent_used='MatcherAgent',
+                        evidence={'reason': result.get('reason', 'LLM verification successful')}
+                    )
+                    match_results.append(match)
+                else:
+                    self.logger.debug(f"Table {candidates[i].table_name} not matched: {result.get('reason')}")
+            
+            # Sort by score
+            match_results.sort(key=lambda x: x.score, reverse=True)
+            
+            # Store results
+            state['match_results'] = match_results
+            
+            self.logger.info(f"LLM matching complete: {len(match_results)} matches found")
+            if match_results:
+                self.logger.info(f"Top match: {match_results[0].matched_table} (score: {match_results[0].score:.3f})")
+            
+        except Exception as e:
+            self.logger.error(f"Error in batch LLM matching: {e}")
+            # Fallback to simple scoring
+            state['match_results'] = []
+            for c in candidates[:5]:
+                # Create proper MatchResult with required fields
+                state['match_results'].append(MatchResult(
+                    query_table=query_table_name,
+                    matched_table=c.table_name,
+                    score=c.score * 0.5,  # Reduce confidence without LLM
+                    match_type=query_task.task_type if query_task else 'unknown',
+                    confidence=c.score * 0.5,
+                    agent_used='MatcherAgent',
+                    evidence={'reason': f'LLM matching failed: {str(e)}'}
+                ))
         
         return state
-    
-    def _select_candidates_for_llm(self, candidates: List[CandidateTable], 
-                                   threshold: float) -> List[CandidateTable]:
-        """
-        Select which candidates need LLM verification
-        """
-        llm_candidates = []
-        
-        for candidate in candidates:
-            # Skip very high confidence candidates
-            if candidate.score > 0.95:
-                continue
-            
-            # Skip very low confidence candidates
-            if candidate.score < threshold * 0.5:
-                continue
-            
-            # Add medium confidence candidates for LLM verification
-            llm_candidates.append(candidate)
-        
-        # Limit to top candidates to control costs
-        return llm_candidates[:20]
-    
-    async def _run_parallel_llm_matching(
-        self,
-        query_table: Dict,
-        candidates: List[CandidateTable],
-        all_tables: List[Dict],
-        task_type: str,
-        concurrency: int
-    ) -> List[MatchResult]:
-        """
-        Run LLM matching in parallel with controlled concurrency
-        """
-        matches = []
-        
-        # Create table lookup
-        table_lookup = {t['table_name']: t for t in all_tables}
-        
-        # Create tasks for all candidates
-        tasks = []
-        for candidate in candidates:
-            candidate_table = table_lookup.get(candidate.table_name)
-            if candidate_table:
-                task = self.llm_matcher.verify_match(
-                    query_table,
-                    candidate_table,
-                    task_type,
-                    candidate.score  # Pass existing score as context
-                )
-                tasks.append((candidate, task))
-        
-        # Execute in batches with controlled concurrency
-        all_matches = []
-        for i in range(0, len(tasks), concurrency):
-            batch = tasks[i:i + concurrency]
-            batch_tasks = [task for _, task in batch]
-            batch_candidates = [candidate for candidate, _ in batch]
-            
-            try:
-                # Run batch in parallel
-                results = await asyncio.gather(*batch_tasks, return_exceptions=True)
-                
-                # Process results
-                for j, result in enumerate(results):
-                    candidate = batch_candidates[j]
-                    
-                    if isinstance(result, Exception):
-                        self.logger.error(f"LLM matching failed for {candidate.table_name}: {result}")
-                        continue
-                    
-                    if result and result.get('is_match', False):
-                        # Create match result
-                        match = MatchResult(
-                            query_table=query_table.get('table_name', ''),
-                            matched_table=candidate.table_name,
-                            score=self._combine_scores(
-                                candidate.score, 
-                                result.get('confidence', 0.5)
-                            ),
-                            match_type=task_type,
-                            confidence=result.get('confidence', 0.5),
-                            agent_used='MatcherAgent-LLM',
-                            evidence={
-                                **candidate.evidence,
-                                'llm_result': result
-                            }
-                        )
-                        all_matches.append(match)
-                        
-            except Exception as e:
-                self.logger.error(f"Batch LLM matching failed: {e}")
-        
-        return all_matches
-    
-    def _combine_scores(self, candidate_score: float, llm_confidence: float) -> float:
-        """
-        Combine candidate score with LLM confidence
-        """
-        # Weighted average: 40% candidate score, 60% LLM confidence
-        return candidate_score * 0.4 + llm_confidence * 0.6
     
     def validate_input(self, state: WorkflowState) -> bool:
         """
         Validate required inputs
         """
         if 'candidates' not in state:
-            self.logger.warning("No candidates in state")
+            self.logger.warning("No candidates in state, will return empty results")
             state['candidates'] = []
-        
-        if 'query_table' not in state:
-            self.logger.error("Missing query_table in state")
-            return False
         
         return True

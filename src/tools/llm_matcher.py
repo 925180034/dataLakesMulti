@@ -179,7 +179,8 @@ Return JSON:
     async def batch_verify(self, query_table: Dict[str, Any],
                           candidate_tables: List[Dict[str, Any]], 
                           task_type: str = 'join',
-                          max_concurrent: int = 10) -> List[Dict[str, Any]]:
+                          max_concurrent: int = 10,
+                          existing_scores: Optional[List[float]] = None) -> List[Dict[str, Any]]:
         """
         Verify multiple candidates in parallel
         
@@ -188,18 +189,22 @@ Return JSON:
             candidate_tables: List of candidate tables
             task_type: 'join' or 'union'
             max_concurrent: Maximum concurrent LLM calls
+            existing_scores: Optional list of scores from previous layers
             
         Returns:
             List of verification results
         """
         # Create verification tasks
         tasks = []
-        for candidate in candidate_tables:
+        for i, candidate in enumerate(candidate_tables):
+            # Get existing score if provided
+            existing_score = existing_scores[i] if existing_scores and i < len(existing_scores) else 0.5
+            
             task = self.verify_match(
                 query_table,
                 candidate,
                 task_type,
-                candidate.get('score', 0.5)
+                existing_score
             )
             tasks.append(task)
         

@@ -1,0 +1,44 @@
+[
+  {
+    "query_table": "customers",
+    "candidate_table": "orders",
+    "label": 1,
+    "reason": "Orders table has customer_id as foreign key"
+  },
+  {
+    "query_table": "customers",
+    "candidate_table": "customer_segments",
+    "label": 1,
+    "reason": "Customer_segments table has customer_id for joining"
+  },
+  {
+    "query_table": "orders",
+    "candidate_table": "customers",
+    "label": 1,
+    "reason": "Can join on customer_id"
+  },
+  {
+    "query_table": "orders",
+    "candidate_table": "order_items",
+    "label": 1,
+    "reason": "Order_items has order_id as foreign key"
+  },
+  {
+    "query_table": "products",
+    "candidate_table": "order_items",
+    "label": 1,
+    "reason": "Order_items has product_id for joining"
+  },
+  {
+    "query_table": "order_items",
+    "candidate_table": "orders",
+    "label": 1,
+    "reason": "Can join on order_id"
+  },
+  {
+    "query_table": "order_items",
+    "candidate_table": "products",
+    "label": 1,
+    "reason": "Can join on product_id"
+  }
+]

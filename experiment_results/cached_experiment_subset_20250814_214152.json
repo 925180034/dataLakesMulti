@@ -1,0 +1,132 @@
+{
+  "join": {
+    "results": [
+      {
+        "query_table": "csvData13891302__10.csv",
+        "predictions": [
+          "csvData26959440__0.csv",
+          "csvData1303939__3.csv",
+          "csvData8598250__1.csv",
+          "csvData9739809__1.csv",
+          "csvData2590167__13.csv"
+        ],
+        "time": 50.21909999847412
+      },
+      {
+        "query_table": "csvData23141915__6.csv",
+        "predictions": [
+          "csvData27587184__3.csv",
+          "csvData18518969__7.csv",
+          "csvData1303939__3.csv",
+          "csvData2590167__13.csv",
+          "csvData26959440__0.csv"
+        ],
+        "time": 26.619250297546387
+      },
+      {
+        "query_table": "csvData9739809__1.csv",
+        "predictions": [
+          "csvData2590167__10.csv",
+          "csvData26959440__0.csv",
+          "csvData2590167__13.csv",
+          "csvData13891302__10.csv",
+          "csvData1303939__3.csv"
+        ],
+        "time": 26.84546732902527
+      },
+      {
+        "query_table": "csvData2852713__12.csv",
+        "predictions": [
+          "csvData29230622__16.csv",
+          "csvData7434868__4.csv",
+          "csvData22709338__0.csv",
+          "csvData3871380__2.csv",
+          "csvData13336059__13.csv"
+        ],
+        "time": 23.81597375869751
+      },
+      {
+        "query_table": "csvData4676916__9.csv",
+        "predictions": [
+          "csvData10163568__5.csv",
+          "csvData18562133__11.csv",
+          "csvData3871380__2.csv",
+          "csvData1303939__3.csv",
+          "csvData26959440__0.csv"
+        ],
+        "time": 22.353414297103882
+      },
+      {
+        "query_table": "csvData29453038__18.csv",
+        "predictions": [
+          "csvData24805223__2.csv",
+          "csvData22558849__1.csv",
+          "csvData22384272__0.csv",
+          "csvData13336059__16.csv",
+          "csvData9205349__16.csv"
+        ],
+        "time": 20.090540885925293
+      },
+      {
+        "query_table": "csvData29383799__16.csv",
+        "predictions": [
+          "csvData8598250__1.csv",
+          "csvData13891302__10.csv",
+          "csvData13638124__5.csv",
+          "csvData26959440__0.csv",
+          "csvData9739809__1.csv"
+        ],
+        "time": 38.43694734573364
+      },
+      {
+        "query_table": "csvData29230622__16.csv",
+        "predictions": [
+          "csvData7434868__4.csv",
+          "csvData5416457__1.csv",
+          "csvData1786628__7.csv",
+          "csvData18518969__7.csv",
+          "csvData15936069__15.csv"
+        ],
+        "time": 31.318076610565186
+      },
+      {
+        "query_table": "csvData3871380__2.csv",
+        "predictions": [
+          "csvData1303939__3.csv",
+          "csvData26447856__0.csv",
+          "csvData22709338__0.csv",
+          "csvData26959440__0.csv",
+          "csvData13336059__13.csv"
+        ],
+        "time": 19.90475559234619
+      },
+      {
+        "query_table": "csvData18562133__11.csv",
+        "predictions": [
+          "csvData4676916__9.csv",
+          "csvData10163568__5.csv",
+          "csvData3871380__2.csv",
+          "csvData5018557__1.csv",
+          "csvData1303939__3.csv"
+        ],
+        "time": 29.7089524269104
+      }
+    ],
+    "metrics": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "hit@5": 0.4,
+      "hit@10": 0.4,
+      "precision": 0.08,
+      "recall": 0.4,
+      "f1_score": 0.13333333333333336,
+      "valid_queries": 5,
+      "total_queries": 10
+    },
+    "total_time": 289.3124785423279,
+    "avg_time": 28.931247854232787,
+    "total_llm_calls": 0,
+    "cache_hits": 9,
+    "cache_hit_rate": 0.9
+  }
+}

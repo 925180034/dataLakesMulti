@@ -1,9 +1,12 @@
 """
 OptimizerAgent - System optimization and resource allocation
 """
+import asyncio
+import json
 from typing import Dict, Any
 from src.agents.base_agent import BaseAgent
 from src.core.state import WorkflowState, OptimizationConfig
+from src.config.prompts import get_agent_prompt, format_user_prompt
 
 
 class OptimizerAgent(BaseAgent):
@@ -14,8 +17,12 @@ class OptimizerAgent(BaseAgent):
     def __init__(self):
         super().__init__(
             name="OptimizerAgent",
-            description="Optimizes system configuration based on query complexity and data size"
+            description="Optimizes system configuration based on query complexity and data size",
+            use_llm=True  # Enable LLM for intelligent optimization
         )
+        
+        # Use centralized prompt from config
+        self.system_prompt = get_agent_prompt("OptimizerAgent", "system_prompt")
         
     def process(self, state: WorkflowState) -> WorkflowState:
         """
@@ -40,15 +47,36 @@ class OptimizerAgent(BaseAgent):
         # Initialize optimization config
         config = OptimizationConfig()
         
-        # Determine parallel workers based on data size
-        if data_size < 100:
-            config.parallel_workers = 4
-        elif data_size < 500:
-            config.parallel_workers = 8
-        elif data_size < 1000:
-            config.parallel_workers = 12
+        # Try LLM-based optimization first
+        llm_config = self._get_llm_optimization(query_task, data_size)
+        
+        if llm_config and 'parallel_workers' in llm_config:
+            # Apply LLM recommendations
+            config.parallel_workers = llm_config.get('parallel_workers', 8)
+            config.llm_concurrency = llm_config.get('llm_concurrency', 3)
+            config.batch_size = llm_config.get('batch_size', 10)
+            
+            # Parse cache strategy
+            cache_strategy = llm_config.get('cache_strategy', 'L2')
+            config.cache_level = cache_strategy
+            
+            self.logger.info(f"LLM Optimization Applied:")
+            self.logger.info(f"  Reasoning: {llm_config.get('reasoning', 'No reasoning provided')}")
+            self.logger.info(f"  Estimated Time: {llm_config.get('estimated_time', 'Unknown')}")
+            self.logger.info(f"  Resource Usage: {llm_config.get('resource_usage', 'Unknown')}")
         else:
-            config.parallel_workers = 16
+            # Fallback to rule-based optimization
+            self.logger.info("Using rule-based optimization (LLM unavailable or failed)")
+            
+            # Determine parallel workers based on data size
+            if data_size < 100:
+                config.parallel_workers = 4
+            elif data_size < 500:
+                config.parallel_workers = 8
+            elif data_size < 1000:
+                config.parallel_workers = 12
+            else:
+                config.parallel_workers = 16
         
         # Determine LLM concurrency based on task type and data size (reduced to avoid rate limiting)
         if task_type == 'join':
@@ -88,6 +116,49 @@ class OptimizerAgent(BaseAgent):
         state['should_use_llm'] = config.use_llm_verification
         
         return state
+    
+    def _get_llm_optimization(self, query_task, data_size: int) -> dict:
+        """Use LLM to determine optimal configuration"""
+        if not query_task:
+            return {}
+        
+        # Determine complexity
+        if data_size < 100:
+            complexity = "simple"
+        elif data_size < 500:
+            complexity = "medium"
+        elif data_size < 1000:
+            complexity = "complex"
+        else:
+            complexity = "very complex"
+        
+        # Use centralized user prompt template
+        prompt = format_user_prompt(
+            "OptimizerAgent",
+            task_type=query_task.task_type,
+            data_size=data_size,
+            complexity=complexity,
+            memory_gb=16,  # Default assumption
+            rate_limit=100  # Default API rate limit
+        )
+        
+        try:
+            # Handle async call in sync context
+            try:
+                loop = asyncio.get_running_loop()
+                # We're in an async context, but called from sync
+                import concurrent.futures
+                with concurrent.futures.ThreadPoolExecutor() as executor:
+                    future = executor.submit(asyncio.run, self.call_llm_json(prompt, self.system_prompt))
+                    response = future.result(timeout=10)
+            except RuntimeError:
+                # No running loop, we can create one
+                response = asyncio.run(self.call_llm_json(prompt, self.system_prompt))
+            
+            return response
+        except Exception as e:
+            self.logger.warning(f"LLM optimization failed: {e}, using rule-based fallback")
+            return {}
     
     def validate_input(self, state: WorkflowState) -> bool:
         """

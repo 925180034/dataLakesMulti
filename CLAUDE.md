@@ -11,6 +11,29 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **三层加速工具**: 作为可选工具供Agent按需使用
 - **数据湖发现**: 自动发现相关表、可连接数据、相似数据集
 
+### ⚠️ 关键要求：LLM验证层（L3）绝对不能跳过
+**重要**：本系统的核心价值在于多智能体的智能协同，特别是L3层的LLM验证：
+- **L1层（元数据过滤）**: 快速初筛，减少候选集
+- **L2层（向量搜索）**: 语义相似性匹配
+- **L3层（LLM验证）**: ⚡**必须启用**⚡ 智能验证和精确匹配
+
+**禁止事项**：
+- ❌ 不要设置 `SKIP_LLM=true`
+- ❌ 不要设置 `use_llm: false`
+- ❌ 不要创建跳过LLM的测试脚本
+- ❌ 不要在消融实验外禁用LLM
+
+**LLM配置要求**（config.yml）：
+```yaml
+llm_matcher:
+  enable_llm: true  # 必须为true
+agents:
+  matcher:
+    enable_llm: true  # 必须为true
+  analyzer:
+    enable_llm: true  # 必须为true
+```
+
 ### 📊 Current System Status (December 2024)
 **架构版本**: v2.0 - 多智能体系统
 

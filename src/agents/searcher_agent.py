@@ -1,12 +1,16 @@
 """
 SearcherAgent - Multi-layer candidate discovery
 """
+import asyncio
+import json
+import os
 from typing import List, Dict, Any
 import numpy as np
 from src.agents.base_agent import BaseAgent
 from src.core.state import WorkflowState, CandidateTable
 from src.tools.metadata_filter_tool import MetadataFilterTool
 from src.tools.vector_search_tool import VectorSearchTool
+from src.config.prompts import get_agent_prompt, format_user_prompt
 
 
 class SearcherAgent(BaseAgent):
@@ -17,8 +21,12 @@ class SearcherAgent(BaseAgent):
     def __init__(self):
         super().__init__(
             name="SearcherAgent",
-            description="Searches for candidate tables using metadata filtering and vector search"
+            description="Searches for candidate tables using metadata filtering and vector search",
+            use_llm=True  # Enable LLM for intelligent search strategy
         )
+        
+        # Use centralized prompt from config
+        self.system_prompt = get_agent_prompt("SearcherAgent", "system_prompt")
         
         # Initialize search tools
         self.metadata_filter = MetadataFilterTool()
@@ -50,8 +58,12 @@ class SearcherAgent(BaseAgent):
         candidates = []
         candidate_scores = {}  # Track scores from different sources
         
+        # Check environment variables for layer control
+        skip_metadata = os.environ.get('SKIP_METADATA', 'false').lower() == 'true'
+        skip_vector = os.environ.get('SKIP_VECTOR', 'false').lower() == 'true'
+        
         # Layer 1: Metadata Filtering
-        if strategy and strategy.use_metadata:
+        if strategy and strategy.use_metadata and not skip_metadata:
             self.logger.info("Layer 1: Metadata filtering")
             
             metadata_candidates = self._metadata_search(
@@ -68,7 +80,7 @@ class SearcherAgent(BaseAgent):
             self.logger.info(f"  - Found {len(metadata_candidates)} candidates from metadata")
         
         # Layer 2: Vector Search
-        if strategy and strategy.use_vector:
+        if strategy and strategy.use_vector and not skip_vector:
             self.logger.info("Layer 2: Vector similarity search")
             
             vector_candidates = self._vector_search(

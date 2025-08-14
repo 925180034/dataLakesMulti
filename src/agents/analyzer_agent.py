@@ -1,9 +1,12 @@
 """
 AnalyzerAgent - Table structure and semantic analysis
 """
+import asyncio
+import json
 from typing import Dict, List, Any
 from src.agents.base_agent import BaseAgent
 from src.core.state import WorkflowState, TableAnalysis
+from src.config.prompts import get_agent_prompt, format_user_prompt
 
 
 class AnalyzerAgent(BaseAgent):
@@ -14,8 +17,12 @@ class AnalyzerAgent(BaseAgent):
     def __init__(self):
         super().__init__(
             name="AnalyzerAgent",
-            description="Analyzes table structure, identifies patterns and key columns"
+            description="Analyzes table structure, identifies patterns and key columns",
+            use_llm=True  # Enable LLM for intelligent analysis
         )
+        
+        # Use centralized prompt from config
+        self.system_prompt = get_agent_prompt("AnalyzerAgent", "system_prompt")
         
     def process(self, state: WorkflowState) -> WorkflowState:
         """
@@ -38,6 +45,9 @@ class AnalyzerAgent(BaseAgent):
             state['errors'].append("AnalyzerAgent: No query table to analyze")
             return state
         
+        # Try LLM-based analysis first
+        llm_analysis = self._get_llm_analysis(query_table)
+        
         # Initialize analysis
         analysis = TableAnalysis(
             column_count=0,
@@ -47,6 +57,24 @@ class AnalyzerAgent(BaseAgent):
             column_names=[],
             patterns={}
         )
+        
+        # Apply LLM insights if available
+        if llm_analysis and 'table_type' in llm_analysis:
+            analysis.table_type = llm_analysis.get('table_type', 'unknown')
+            analysis.key_columns = llm_analysis.get('key_columns', [])
+            analysis.patterns = {
+                'semantic_domain': llm_analysis.get('semantic_domain', 'unknown'),
+                'patterns': llm_analysis.get('patterns', []),
+                'join_potential': llm_analysis.get('join_potential', {}),
+                'insights': llm_analysis.get('insights', '')
+            }
+            
+            self.logger.info(f"LLM Analysis Applied:")
+            self.logger.info(f"  Table Type: {analysis.table_type}")
+            self.logger.info(f"  Semantic Domain: {analysis.patterns.get('semantic_domain')}")
+            self.logger.info(f"  Insights: {analysis.patterns.get('insights')}")
+        else:
+            self.logger.info("Using rule-based analysis (LLM unavailable or failed)")
         
         # Extract table name
         table_name = query_table.get('table_name', '').lower()
@@ -127,6 +155,50 @@ class AnalyzerAgent(BaseAgent):
             state['metrics'].candidates_generated = analysis.column_count
         
         return state
+    
+    def _get_llm_analysis(self, query_table: Dict[str, Any]) -> dict:
+        """Use LLM to analyze table structure"""
+        # Format table info for prompt
+        columns = query_table.get('columns', [])
+        column_info = []
+        for col in columns[:20]:  # Limit to first 20 columns
+            col_info = f"{col.get('column_name', col.get('name', 'unknown'))} ({col.get('data_type', col.get('type', 'unknown'))})"
+            if col.get('sample_values'):
+                samples = col['sample_values'][:3]
+                col_info += f" [{', '.join(str(s) for s in samples)}]"
+            column_info.append(col_info)
+        
+        # Basic statistics
+        stats = {
+            'column_count': len(columns),
+            'has_id_columns': any('id' in str(col.get('column_name', col.get('name', ''))).lower() for col in columns),
+            'has_date_columns': any('date' in str(col.get('data_type', col.get('type', ''))).lower() for col in columns)
+        }
+        
+        # Use centralized user prompt template
+        prompt = format_user_prompt(
+            "AnalyzerAgent",
+            table_name=query_table.get('table_name', 'unknown'),
+            columns=', '.join(column_info),
+            sample_data=str(columns[:3]) if columns else 'N/A',
+            statistics=str(stats)
+        )
+        
+        try:
+            # Handle async call in sync context
+            try:
+                loop = asyncio.get_running_loop()
+                import concurrent.futures
+                with concurrent.futures.ThreadPoolExecutor() as executor:
+                    future = executor.submit(asyncio.run, self.call_llm_json(prompt, self.system_prompt))
+                    response = future.result(timeout=10)
+            except RuntimeError:
+                response = asyncio.run(self.call_llm_json(prompt, self.system_prompt))
+            
+            return response
+        except Exception as e:
+            self.logger.warning(f"LLM analysis failed: {e}, using rule-based fallback")
+            return {}
     
     def validate_input(self, state: WorkflowState) -> bool:
         """

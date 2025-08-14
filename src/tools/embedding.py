@@ -181,6 +181,33 @@ class SentenceTransformerEmbeddingGenerator(EmbeddingGenerator):
             self.model = None
             self._model_initialized = True  # 标记为已尝试初始化
     
+    def generate_text_embedding_sync(self, text: str) -> List[float]:
+        """同步生成文本嵌入向量"""
+        # 延迟初始化模型
+        if not self._model_initialized:
+            self._initialize_model()
+        
+        try:
+            if not text or not text.strip():
+                logger.warning("输入文本为空")
+                # 返回默认维度的零向量
+                return [0.0] * 384  # all-MiniLM-L6-v2的维度
+            
+            # 如果模型初始化失败，返回虚拟向量
+            if self.model is None:
+                logger.warning(f"模型未初始化，返回虚拟嵌入向量")
+                return self._generate_dummy_embedding(text)
+            
+            text = text.strip()
+            embedding = self.model.encode(text, convert_to_numpy=True)
+            
+            logger.debug(f"生成文本嵌入向量，维度: {len(embedding)}")
+            return embedding.tolist()
+            
+        except Exception as e:
+            logger.error(f"生成文本嵌入失败: {e}")
+            return self._generate_dummy_embedding(text)
+    
     async def generate_text_embedding(self, text: str) -> List[float]:
         """生成文本嵌入向量"""
         # 延迟初始化模型

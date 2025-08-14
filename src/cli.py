@@ -8,7 +8,7 @@ import sys
 from pathlib import Path
 from typing import List, Dict, Any
 import click
-from src.core.workflow import create_workflow, discover_data
+from src.core.langgraph_workflow import create_workflow, DataLakeDiscoveryWorkflow
 from src.core.models import AgentState, TableInfo, ColumnInfo
 from src.config.settings import settings
 from src.utils.data_parser import parse_tables_data, parse_columns_data

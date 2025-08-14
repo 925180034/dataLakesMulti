@@ -42,6 +42,13 @@ class GeminiClientWithProxy:
     async def generate(self, prompt: str, system_prompt: Optional[str] = None) -> str:
         """通过REST API调用Gemini（支持代理） - 真正的异步版本"""
         
+        # 记录API调用开始
+        logger.info("🚀 [GEMINI API CALL START] =====================================")
+        logger.info(f"   Model: {self.model_name}")
+        logger.info(f"   Prompt length: {len(prompt)} chars")
+        if system_prompt:
+            logger.info(f"   System prompt length: {len(system_prompt)} chars")
+        
         if system_prompt:
             prompt = f"{system_prompt}\n\n{prompt}"
         
@@ -60,9 +67,13 @@ class GeminiClientWithProxy:
             "generationConfig": self.generation_config
         }
         
+        import time
+        start_time = time.time()
+        
         try:
             # 使用aiohttp进行真正的异步请求
             async with aiohttp.ClientSession() as session:
+                logger.info(f"   Sending request to Gemini API...")
                 async with session.post(
                     url_with_key,
                     json=data,
@@ -70,30 +81,43 @@ class GeminiClientWithProxy:
                     timeout=aiohttp.ClientTimeout(total=30)
                 ) as response:
                     
+                    elapsed_time = time.time() - start_time
+                    
                     if response.status == 200:
                         result = await response.json()
                         # 提取生成的文本
                         if "candidates" in result and result["candidates"]:
                             content = result["candidates"][0]["content"]
                             if "parts" in content and content["parts"]:
-                                return content["parts"][0]["text"]
+                                response_text = content["parts"][0]["text"]
+                                logger.info(f"✅ [GEMINI API SUCCESS] Response received in {elapsed_time:.2f}s")
+                                logger.info(f"   Response length: {len(response_text)} chars")
+                                logger.info("===========================================================")
+                                return response_text
                         
-                        logger.error(f"Unexpected response format: {result}")
+                        logger.error(f"❌ [GEMINI API ERROR] Unexpected response format: {result}")
+                        logger.info("===========================================================")
                         return ""
                     else:
                         text = await response.text()
-                        logger.error(f"API request failed: {response.status} - {text}")
+                        logger.error(f"❌ [GEMINI API ERROR] Request failed: {response.status} - {text}")
+                        logger.info("===========================================================")
                         raise Exception(f"API request failed: {response.status}")
                         
         except asyncio.TimeoutError:
-            logger.error("Request timed out after 30 seconds")
+            elapsed_time = time.time() - start_time
+            logger.error(f"⏱️ [GEMINI API TIMEOUT] Request timed out after {elapsed_time:.2f}s")
+            logger.info("===========================================================")
             raise TimeoutError("Request timed out")
         except Exception as e:
-            logger.error(f"Request failed: {e}")
+            elapsed_time = time.time() - start_time
+            logger.error(f"❌ [GEMINI API ERROR] Request failed after {elapsed_time:.2f}s: {e}")
+            logger.info("===========================================================")
             raise
     
     async def generate_json(self, prompt: str, system_prompt: Optional[str] = None) -> Dict[str, Any]:
         """生成JSON响应"""
+        logger.info("📊 [GEMINI JSON REQUEST] Starting JSON generation...")
         json_prompt = f"{prompt}\n\nPlease ensure the response is valid JSON format."
         response = await self.generate(json_prompt, system_prompt)
         
@@ -101,10 +125,13 @@ class GeminiClientWithProxy:
             # 尝试解析JSON
             if '{' in response and '}' in response:
                 json_str = response[response.find('{'):response.rfind('}')+1]
-                return json.loads(json_str)
+                result = json.loads(json_str)
+                logger.info(f"✅ [GEMINI JSON SUCCESS] Successfully parsed JSON with {len(result)} keys")
+                return result
+            logger.warning("⚠️ [GEMINI JSON WARNING] No JSON found in response, returning empty dict")
             return {}
         except json.JSONDecodeError as e:
-            logger.error(f"Failed to parse JSON: {e}")
+            logger.error(f"❌ [GEMINI JSON ERROR] Failed to parse JSON: {e}")
             return {}
 
 

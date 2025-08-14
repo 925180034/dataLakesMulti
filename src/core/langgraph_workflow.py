@@ -34,6 +34,11 @@ class DataLakeDiscoveryWorkflow:
         self.matcher = MatcherAgent()
         self.aggregator = AggregatorAgent()
         
+        # 缓存机制 - 避免重复调用
+        self.optimization_cache = {}  # {task_type: optimization_config}
+        self.strategy_cache = {}      # {task_type: strategy}
+        self.analysis_cache = {}      # {table_name: analysis_result}
+        
         # Build workflow
         self.workflow = self._build_workflow()
         
@@ -43,10 +48,10 @@ class DataLakeDiscoveryWorkflow:
         # Create state graph
         graph = StateGraph(WorkflowState)
         
-        # Add nodes (agents)
-        graph.add_node("optimizer", self.optimizer.process)
-        graph.add_node("planner", self.planner.process)
-        graph.add_node("analyzer", self.analyzer.process)
+        # Add nodes (agents) with caching wrappers
+        graph.add_node("optimizer", self._cached_optimizer_process)
+        graph.add_node("planner", self._cached_planner_process)
+        graph.add_node("analyzer", self._cached_analyzer_process)
         graph.add_node("searcher", self.searcher.process)
         graph.add_node("matcher", self.matcher.process)
         graph.add_node("aggregator", self.aggregator.process)
@@ -77,6 +82,97 @@ class DataLakeDiscoveryWorkflow:
         
         # Compile the graph
         return graph.compile()
+    
+    def _cached_optimizer_process(self, state: WorkflowState) -> WorkflowState:
+        """Optimizer with caching"""
+        # 获取缓存键
+        query_task = state.get('query_task')
+        all_tables = state.get('all_tables', [])
+        if query_task:
+            cache_key = f"{query_task.task_type}_{len(all_tables)}"
+        else:
+            cache_key = None
+        
+        # 检查缓存
+        if cache_key and cache_key in self.optimization_cache:
+            self.logger.info(f"✅ Using cached optimization config for {cache_key}")
+            state['optimization_config'] = self.optimization_cache[cache_key]
+            state['should_use_llm'] = state['optimization_config'].use_llm_verification
+            # 更新metrics - 记录跳过了优化器
+            if 'metrics' in state:
+                state['metrics'].agent_times['optimizer'] = 0.001  # 缓存命中，几乎无耗时
+            return state
+        
+        # 调用原始处理
+        self.logger.info(f"🔄 Computing new optimization config for {cache_key}")
+        state = self.optimizer.process(state)
+        
+        # 保存到缓存
+        if cache_key and 'optimization_config' in state:
+            self.optimization_cache[cache_key] = state['optimization_config']
+            self.logger.info(f"💾 Cached optimization config for {cache_key}")
+        
+        return state
+    
+    def _cached_planner_process(self, state: WorkflowState) -> WorkflowState:
+        """Planner with caching"""
+        # 获取缓存键
+        query_task = state.get('query_task')
+        all_tables = state.get('all_tables', [])
+        if query_task:
+            cache_key = f"{query_task.task_type}_{len(all_tables)}"
+        else:
+            cache_key = None
+        
+        # 检查缓存
+        if cache_key and cache_key in self.strategy_cache:
+            self.logger.info(f"✅ Using cached strategy for {cache_key}")
+            state['strategy'] = self.strategy_cache[cache_key]
+            # 更新metrics
+            if 'metrics' in state:
+                state['metrics'].agent_times['planner'] = 0.001
+            return state
+        
+        # 调用原始处理
+        self.logger.info(f"🔄 Computing new strategy for {cache_key}")
+        state = self.planner.process(state)
+        
+        # 保存到缓存
+        if cache_key and 'strategy' in state:
+            self.strategy_cache[cache_key] = state['strategy']
+            self.logger.info(f"💾 Cached strategy for {cache_key}")
+        
+        return state
+    
+    def _cached_analyzer_process(self, state: WorkflowState) -> WorkflowState:
+        """Analyzer with caching for table analysis"""
+        query_table = state.get('query_table')
+        
+        if query_table:
+            table_name = query_table.get('table_name', '')
+            
+            # 检查缓存
+            if table_name and table_name in self.analysis_cache:
+                self.logger.info(f"✅ Using cached analysis for table {table_name}")
+                state['table_analysis'] = self.analysis_cache[table_name]
+                # 更新metrics
+                if 'metrics' in state:
+                    state['metrics'].agent_times['analyzer'] = 0.001
+                return state
+            
+            # 调用原始处理
+            self.logger.info(f"🔄 Analyzing table {table_name}")
+            state = self.analyzer.process(state)
+            
+            # 保存到缓存
+            if table_name and 'table_analysis' in state:
+                self.analysis_cache[table_name] = state['table_analysis']
+                self.logger.info(f"💾 Cached analysis for table {table_name}")
+        else:
+            # 没有查询表，直接调用原始处理
+            state = self.analyzer.process(state)
+        
+        return state
     
     def _should_use_matcher(self, state: WorkflowState) -> bool:
         """Determine if we should use the matcher agent"""
@@ -117,6 +213,11 @@ class DataLakeDiscoveryWorkflow:
         """
         start_time = time.time()
         self.logger.info(f"Starting workflow for query: {query}, task: {task_type}")
+        self.logger.debug(f"Query table name: {query_table_name}, Tables count: {len(tables)}")
+        
+        # 检查缓存 - 对于相同任务类型，复用优化配置和策略
+        cache_key = f"{task_type}_{len(tables)}"
+        self.logger.info(f"Cache key: {cache_key}, Existing caches: {list(self.optimization_cache.keys())}")
         
         # Find query table
         query_table = None
@@ -126,16 +227,21 @@ class DataLakeDiscoveryWorkflow:
                 if table.get('table_name') == query_table_name:
                     query_table = table
                     break
+            if not query_table:
+                # Log first few table names for debugging
+                sample_names = [t.get('table_name', 'unnamed') for t in tables[:5]]
+                self.logger.debug(f"Sample table names: {sample_names}")
+                self.logger.debug(f"Looking for: {query_table_name}")
         else:
             # Use first table as query table for testing
             if tables:
                 query_table = tables[0]
         
         if not query_table:
-            self.logger.error("No query table found")
+            self.logger.error(f"No query table found. Query table name: {query_table_name}, Tables count: {len(tables)}")
             return {
                 'success': False,
-                'error': 'No query table found',
+                'error': f'No query table found: {query_table_name}',
                 'results': []
             }
         
