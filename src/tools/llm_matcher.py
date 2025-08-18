@@ -7,6 +7,7 @@ import json
 from typing import Dict, Any, List, Optional
 import logging
 from src.utils.llm_client_proxy import get_llm_client
+from src.tools.value_similarity_tool import ValueSimilarityTool
 
 
 class LLMMatcherTool:
@@ -18,6 +19,7 @@ class LLMMatcherTool:
     def __init__(self):
         self.logger = logging.getLogger(self.__class__.__name__)
         self.llm_client = None
+        self.value_similarity_tool = ValueSimilarityTool()
         self._initialize_llm()
         
     def _initialize_llm(self):
@@ -76,66 +78,128 @@ class LLMMatcherTool:
     
     def _build_join_prompt(self, query_table: Dict, candidate_table: Dict) -> str:
         """Build prompt for JOIN task verification"""
-        prompt = f"""Analyze if these two tables can be joined effectively.
+        # 提取更多细节信息
+        query_cols = query_table.get('columns', [])[:15]
+        candidate_cols = candidate_table.get('columns', [])[:15]
+        
+        # 获取列名列表用于精确比较
+        query_col_names = [c.get('column_name', c.get('name', '')) for c in query_cols]
+        candidate_col_names = [c.get('column_name', c.get('name', '')) for c in candidate_cols]
+        
+        # 计算列名重叠
+        common_cols = set(query_col_names) & set(candidate_col_names)
+        overlap_ratio = len(common_cols) / max(len(query_col_names), 1)
+        
+        # 计算值相似性
+        value_similarity = self.value_similarity_tool.calculate_value_similarity(
+            query_table, candidate_table, 'join'
+        )
+        
+        # 找出最佳JOIN列
+        best_join_cols = self.value_similarity_tool.find_best_join_columns(
+            query_table, candidate_table
+        )
+        
+        prompt = f"""判断这两个表是否可以进行JOIN操作。
 
-Query Table: {query_table.get('table_name')}
-Columns: {self._format_columns(query_table.get('columns', [])[:10])}
+查询表: {query_table.get('table_name')}
+列数: {len(query_cols)}
+列详情: {self._format_columns(query_cols)}
 
-Candidate Table: {candidate_table.get('table_name')}
-Columns: {self._format_columns(candidate_table.get('columns', [])[:10])}
+候选表: {candidate_table.get('table_name')}
+列数: {len(candidate_cols)}
+列详情: {self._format_columns(candidate_cols)}
 
-Consider:
-1. Do they have joinable key columns (IDs, codes, etc)?
-2. Are the data types compatible for joining?
-3. Do the column names suggest a relationship?
+共同列名: {list(common_cols) if common_cols else '无'}
+列名重叠率: {overlap_ratio:.1%}
+数据值相似度: {value_similarity:.1%}
+潜在JOIN列: {[f"{q}={c} (置信度:{conf:.1%})" for q, c, conf in best_join_cols] if best_join_cols else '未发现'}
 
-Return JSON:
+判断标准（必须满足至少一个）:
+1. 存在相同的列名且数据类型兼容（最重要）
+2. 数据样本值有重叠（value_similarity > 0.3）
+3. 有明显的主键-外键关系（如id和xxx_id）
+4. 存在语义相似的列（如user_id和userid）
+
+重要：如果数据值相似度>0.5，很可能可以JOIN！
+
+返回JSON格式：
 {{
   "is_match": true/false,
   "confidence": 0.0-1.0,
-  "join_keys": ["column pairs that can be used for joining"],
-  "reason": "brief explanation"
+  "join_keys": ["可用于JOIN的列对"],
+  "reason": "判断理由（中文）"
 }}"""
         return prompt
     
     def _build_union_prompt(self, query_table: Dict, candidate_table: Dict) -> str:
         """Build prompt for UNION task verification"""
-        prompt = f"""Analyze if these two tables can be unioned (have similar schema).
+        # 提取更多细节信息
+        query_cols = query_table.get('columns', [])[:15]
+        candidate_cols = candidate_table.get('columns', [])[:15]
+        
+        # 获取列名列表用于精确比较
+        query_col_names = [c.get('column_name', c.get('name', '')) for c in query_cols]
+        candidate_col_names = [c.get('column_name', c.get('name', '')) for c in candidate_cols]
+        
+        # 计算列名重叠
+        common_cols = set(query_col_names) & set(candidate_col_names)
+        overlap_ratio = len(common_cols) / max(len(set(query_col_names) | set(candidate_col_names)), 1)
+        
+        # 计算值分布相似性
+        value_similarity = self.value_similarity_tool.calculate_value_similarity(
+            query_table, candidate_table, 'union'
+        )
+        
+        prompt = f"""判断这两个表是否可以进行UNION操作（是否有相似的模式）。
 
-Query Table: {query_table.get('table_name')}
-Columns: {self._format_columns(query_table.get('columns', [])[:10])}
+查询表: {query_table.get('table_name')}
+列数: {len(query_cols)}
+列详情: {self._format_columns(query_cols)}
 
-Candidate Table: {candidate_table.get('table_name')}  
-Columns: {self._format_columns(candidate_table.get('columns', [])[:10])}
+候选表: {candidate_table.get('table_name')}
+列数: {len(candidate_cols)}
+列详情: {self._format_columns(candidate_cols)}
 
-Consider:
-1. Do they have similar column structure?
-2. Are the data types compatible?
-3. Do they represent the same type of entity?
+共同列名: {list(common_cols) if common_cols else '无'}
+列名重叠率: {overlap_ratio:.1%}
+数据分布相似度: {value_similarity:.1%}
 
-Return JSON:
+判断标准（需要同时满足）:
+1. 列数量相近（差异不超过30%）
+2. 至少50%的列名相同或语义相似
+3. 相同列的数据类型必须兼容
+4. 数据分布相似（value_similarity > 0.5）
+
+重要：如果数据分布相似度>0.6，很可能是相同类型的表！
+
+返回JSON格式：
 {{
   "is_match": true/false,
   "confidence": 0.0-1.0,
-  "column_overlap": 0.0-1.0,
-  "reason": "brief explanation"
+  "column_overlap": {overlap_ratio:.2f},
+  "reason": "判断理由（中文）"
 }}"""
         return prompt
     
     def _format_columns(self, columns: List[Dict]) -> str:
-        """Format columns for prompt"""
+        """Format columns for prompt with more details"""
         formatted = []
         for col in columns:
             name = col.get('column_name', col.get('name', ''))
             dtype = col.get('data_type', col.get('type', 'unknown'))
             samples = col.get('sample_values', [])
             
+            # 包含更多样本值以便更好判断
             col_str = f"{name} ({dtype})"
             if samples:
-                col_str += f" [{', '.join(str(s) for s in samples[:2])}]"
+                # 显示最多5个样本值
+                sample_strs = [str(s) for s in samples[:5] if s is not None]
+                if sample_strs:
+                    col_str += f" [{', '.join(sample_strs)}]"
             formatted.append(col_str)
             
-        return ', '.join(formatted)
+        return '\n  '.join(formatted)  # 换行显示更清晰
     
     def _parse_llm_response(self, response: str, existing_score: float) -> Dict[str, Any]:
         """Parse LLM response"""

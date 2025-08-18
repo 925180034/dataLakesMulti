@@ -49,14 +49,24 @@ class VectorSearchTool:
             try:
                 # 加载预计算的FAISS索引
                 with open(index_file, 'rb') as f:
-                    self._precomputed_index = pickle.load(f)
+                    loaded_index = pickle.load(f)
                 with open(embeddings_file, 'rb') as f:
                     self._precomputed_embeddings = pickle.load(f)
+                
+                # 检查加载的索引类型
+                if hasattr(loaded_index, 'ntotal'):
+                    # 是有效的FAISS索引
+                    self._precomputed_index = loaded_index
+                    ntotal = self._precomputed_index.ntotal
+                else:
+                    # 可能是dict或其他格式，尝试转换
+                    self.logger.warning(f"索引格式不正确: {type(loaded_index)}, 将重新构建")
+                    return False
                 
                 # 构建表名列表（保持顺序）
                 self._table_names_list = [t.table_name for t in tables]
                 
-                self.logger.info(f"✅ 加载预计算FAISS索引: {self._precomputed_index.ntotal} 个向量")
+                self.logger.info(f"✅ 加载预计算FAISS索引: {ntotal} 个向量")
                 return True
             except Exception as e:
                 self.logger.warning(f"加载预计算索引失败: {e}")
@@ -85,7 +95,14 @@ class VectorSearchTool:
             
             # 优先使用预计算的嵌入
             if table_name in precomputed_embeddings:
-                embedding = precomputed_embeddings[table_name].tolist()
+                # 处理不同格式的嵌入（可能是list或numpy array）
+                emb = precomputed_embeddings[table_name]
+                if hasattr(emb, 'tolist'):
+                    embedding = emb.tolist()
+                elif isinstance(emb, list):
+                    embedding = emb
+                else:
+                    embedding = list(emb)
                 self.logger.debug(f"✅ 使用预计算嵌入: {table_name}")
             else:
                 # 降级到实时计算
@@ -145,7 +162,14 @@ class VectorSearchTool:
                 query_table_name = query_table_info.table_name
                 
                 if query_table_name in precomputed_embeddings:
-                    query_embedding = precomputed_embeddings[query_table_name].tolist()
+                    # 处理不同格式的嵌入
+                    emb = precomputed_embeddings[query_table_name]
+                    if hasattr(emb, 'tolist'):
+                        query_embedding = emb.tolist()
+                    elif isinstance(emb, list):
+                        query_embedding = emb
+                    else:
+                        query_embedding = list(emb)
                     self.logger.debug(f"✅ 使用预计算查询嵌入: {query_table_name}")
             except Exception as e:
                 self.logger.warning(f"查询嵌入加载失败: {e}")
@@ -190,11 +214,23 @@ class VectorSearchTool:
         
         # 获取查询向量
         if query_table_name in self._precomputed_embeddings:
-            query_vector = np.array(self._precomputed_embeddings[query_table_name]).astype('float32')
+            # 处理不同格式的嵌入
+            embedding = self._precomputed_embeddings[query_table_name]
+            if isinstance(embedding, list):
+                query_vector = np.array(embedding).astype('float32')
+            elif isinstance(embedding, np.ndarray):
+                query_vector = embedding.astype('float32')
+            else:
+                query_vector = np.array(embedding).astype('float32')
         else:
             # 如果没有预计算的查询向量，实时计算
+            self.logger.warning(f"查询表 {query_table_name} 没有预计算嵌入，实时计算...")
             query_text = self._table_to_text_dict(query_table)
-            query_vector = np.array(self.embedding_model.generate_text_embedding_sync(query_text)).astype('float32')
+            # 使用同步方法生成嵌入
+            import asyncio
+            query_vector = np.array(asyncio.run(
+                self.embedding_model.generate_text_embedding(query_text)
+            )).astype('float32')
         
         # 搜索
         query_vector = query_vector.reshape(1, -1)
@@ -203,14 +239,14 @@ class VectorSearchTool:
         # 构建结果
         results = []
         for idx, dist in zip(indices[0], distances[0]):
-            if idx < len(self._table_names_list):
+            if idx >= 0 and idx < len(self._table_names_list):
                 table_name = self._table_names_list[idx]
                 # 转换距离为相似度分数 (0-1)
                 score = 1.0 / (1.0 + dist)  # 简单的距离到相似度转换
                 results.append((table_name, score))
         
         elapsed = (time.time() - start_time) * 1000
-        self.logger.info(f"Vector search with precomputed index took {elapsed:.1f}ms")
+        self.logger.info(f"Vector search with precomputed index took {elapsed:.1f}ms, found {len(results)} results")
         
         return results
     

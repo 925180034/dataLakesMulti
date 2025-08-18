@@ -10,6 +10,7 @@ from src.agents.base_agent import BaseAgent
 from src.core.state import WorkflowState, CandidateTable
 from src.tools.metadata_filter_tool import MetadataFilterTool
 from src.tools.vector_search_tool import VectorSearchTool
+from src.tools.smd_enhanced_metadata_filter import SMDEnhancedMetadataFilter
 from src.config.prompts import get_agent_prompt, format_user_prompt
 
 
@@ -29,7 +30,13 @@ class SearcherAgent(BaseAgent):
         self.system_prompt = get_agent_prompt("SearcherAgent", "system_prompt")
         
         # Initialize search tools
-        self.metadata_filter = MetadataFilterTool()
+        # 使用SMD增强过滤器替代原有的元数据过滤器
+        self.use_enhanced_filter = os.getenv('USE_SMD_ENHANCED', 'true').lower() == 'true'
+        if self.use_enhanced_filter:
+            self.logger.info("Using SMD Enhanced Metadata Filter")
+            self.metadata_filter = SMDEnhancedMetadataFilter(max_features=1000)
+        else:
+            self.metadata_filter = MetadataFilterTool()
         self.vector_search = VectorSearchTool()
         
     def process(self, state: WorkflowState) -> WorkflowState:
@@ -160,19 +167,29 @@ class SearcherAgent(BaseAgent):
         Perform metadata-based filtering
         """
         try:
-            # Use metadata filter tool
-            criteria = {
-                'column_count': len(query_table.get('columns', [])),
-                'column_names': analysis.column_names if analysis else [],
-                'key_columns': analysis.key_columns if analysis else [],
-                'table_type': analysis.table_type if analysis else 'unknown'
-            }
-            
-            candidates = self.metadata_filter.filter(
-                query_table,
-                all_tables,
-                criteria
-            )
+            # 根据使用的过滤器类型调用不同的方法
+            if self.use_enhanced_filter:
+                # SMD增强过滤器
+                candidates = self.metadata_filter.filter_candidates(
+                    query_table=query_table,
+                    all_tables=all_tables,
+                    threshold=0.25,  # 降低阈值以捕获同组表
+                    max_candidates=100
+                )
+            else:
+                # 原有的元数据过滤器
+                criteria = {
+                    'column_count': len(query_table.get('columns', [])),
+                    'column_names': analysis.column_names if analysis else [],
+                    'key_columns': analysis.key_columns if analysis else [],
+                    'table_type': analysis.table_type if analysis else 'unknown'
+                }
+                
+                candidates = self.metadata_filter.filter(
+                    query_table,
+                    all_tables,
+                    criteria
+                )
             
             return candidates
             

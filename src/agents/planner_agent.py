@@ -48,7 +48,8 @@ class PlannerAgent(BaseAgent):
         if llm_strategy and 'strategy_name' in llm_strategy:
             # Apply LLM recommendations
             strategy.name = llm_strategy.get('strategy_name', 'hybrid')
-            strategy.top_k = llm_strategy.get('top_k', 40)
+            # 强制使用100个候选，忽略LLM建议的值
+            strategy.top_k = 100  # 固定为100，不使用LLM的建议
             strategy.confidence_threshold = llm_strategy.get('confidence_threshold', 0.65)
             strategy.use_metadata = True
             strategy.use_vector = optimization_config.use_vector_search if optimization_config else True
@@ -72,7 +73,7 @@ class PlannerAgent(BaseAgent):
                 strategy.use_metadata = True
                 strategy.use_vector = optimization_config.use_vector_search if optimization_config else True
                 strategy.use_llm = optimization_config.use_llm_verification if optimization_config else True
-                strategy.top_k = 50
+                strategy.top_k = 100  # 增加候选数量
                 strategy.confidence_threshold = 0.7
                 
                 self.logger.info("Selected BOTTOM-UP strategy for JOIN task (rule-based)")
@@ -83,7 +84,7 @@ class PlannerAgent(BaseAgent):
                 strategy.use_metadata = True
                 strategy.use_vector = optimization_config.use_vector_search if optimization_config else True
                 strategy.use_llm = optimization_config.use_llm_verification if optimization_config else True
-                strategy.top_k = 30
+                strategy.top_k = 100  # 增加候选数量
                 strategy.confidence_threshold = 0.6
                 
                 self.logger.info("Selected TOP-DOWN strategy for UNION task (rule-based)")
@@ -94,16 +95,15 @@ class PlannerAgent(BaseAgent):
                 strategy.use_metadata = True
                 strategy.use_vector = True
                 strategy.use_llm = True
-                strategy.top_k = 40
+                strategy.top_k = 100  # 增加候选数量
                 strategy.confidence_threshold = 0.65
                 
                 self.logger.info("Selected HYBRID strategy for general task (rule-based)")
         
         # Adjust based on optimization config
         if optimization_config:
-            if optimization_config.batch_size < 10:
-                # Small batch size, reduce candidates
-                strategy.top_k = min(strategy.top_k, 30)
+            # 始终保持100个候选，不根据batch_size调整
+            strategy.top_k = 100  # 固定为100，不调整
             
             if not optimization_config.use_vector_search:
                 strategy.use_vector = False

@@ -33,38 +33,49 @@ class AggregatorAgent(BaseAgent):
         # Get matches and candidates
         matches = state.get('matches', [])
         candidates = state.get('candidates', [])
+        
+        self.logger.info(f"Aggregating {len(matches)} matches and {len(candidates)} candidates")
         strategy = state.get('strategy')
         
         # Combine all results
         all_results = {}
         
-        # Add matches from MatcherAgent
+        # Priority 1: Add matches from MatcherAgent (LLM-verified)
         for match in matches:
             table_name = match.matched_table
-            if table_name not in all_results or match.score > all_results[table_name].score:
-                all_results[table_name] = match
+            # LLM-verified matches get priority
+            all_results[table_name] = match
+            self.logger.debug(f"Added LLM match: {table_name} (score: {match.score:.3f})")
         
-        # Add high-confidence candidates that weren't matched
-        for candidate in candidates:
-            if candidate.table_name not in all_results:
-                # Create a match result from candidate
-                query_table = state.get('query_table', {})
-                query_task = state.get('query_task')
-                
-                match = MatchResult(
-                    query_table=query_table.get('table_name', ''),
-                    matched_table=candidate.table_name,
-                    score=candidate.score,
-                    match_type=query_task.task_type if query_task else 'join',
-                    confidence=candidate.score,
-                    agent_used='AggregatorAgent-Candidate',
-                    evidence=candidate.evidence
-                )
-                
-                # Only add if meets minimum threshold
-                min_threshold = strategy.confidence_threshold if strategy else 0.5
-                if candidate.score >= min_threshold:
-                    all_results[candidate.table_name] = match
+        # Priority 2: Add candidates from SearcherAgent if not already matched
+        # But only if we don't have enough LLM matches
+        max_results = 20  # Maximum results to return
+        
+        if len(all_results) < max_results:
+            for candidate in candidates:
+                if candidate.table_name not in all_results:
+                    # Create a match result from candidate
+                    query_table = state.get('query_table', {})
+                    query_task = state.get('query_task')
+                    
+                    match = MatchResult(
+                        query_table=query_table.get('table_name', ''),
+                        matched_table=candidate.table_name,
+                        score=candidate.score * 0.9,  # Slightly reduce score for non-LLM verified
+                        match_type=query_task.task_type if query_task else 'join',
+                        confidence=candidate.score * 0.9,
+                        agent_used='AggregatorAgent-Candidate',
+                        evidence=candidate.evidence
+                    )
+                    
+                    # Only add if meets minimum threshold
+                    min_threshold = strategy.confidence_threshold if strategy else 0.4
+                    if candidate.score >= min_threshold:
+                        all_results[candidate.table_name] = match
+                        self.logger.debug(f"Added candidate: {candidate.table_name} (score: {candidate.score:.3f})")
+                    
+                    if len(all_results) >= max_results:
+                        break
         
         # Convert to list and sort
         final_results = list(all_results.values())
@@ -128,11 +139,13 @@ class AggregatorAgent(BaseAgent):
             if 'vector_score' in result.evidence and result.evidence['vector_score'] > 0:
                 source_bonus += 0.5
             
-            # Agent trust level
+            # Agent trust level - prioritize LLM-verified matches
             agent_trust = {
-                'MatcherAgent-LLM': 1.0,
+                'MatcherAgent-LLM': 1.0,  # Highest trust for LLM verification
+                'MatcherAgent': 0.95,      # High trust for matcher
                 'MatcherAgent-HighConfidence': 0.9,
-                'AggregatorAgent-Candidate': 0.7
+                'SearcherAgent': 0.8,       # Good trust for searcher
+                'AggregatorAgent-Candidate': 0.7  # Lower for unverified candidates
             }.get(result.agent_used, 0.5)
             
             # Calculate composite score

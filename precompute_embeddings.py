@@ -216,9 +216,9 @@ def precompute_all_embeddings(tables, dataset_type):
         import hashlib
         hash_obj = hashlib.md5(table_text.encode())
         hash_bytes = hash_obj.digest()
-        # 转换为768维向量（模拟sentence-transformers的输出）
+        # 转换为384维向量（匹配all-MiniLM-L6-v2的输出维度）
         embedding = []
-        for i in range(768):
+        for i in range(384):  # 改为384维以匹配系统期望
             byte_idx = i % len(hash_bytes)
             embedding.append(float(hash_bytes[byte_idx]) / 255.0)
         

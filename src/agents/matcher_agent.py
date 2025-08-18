@@ -43,10 +43,10 @@ class MatcherAgent(BaseAgent):
             self.logger.info("Skipping LLM matcher as per optimization config")
             # Pass through top candidates without LLM verification
             candidates = state.get('candidates', [])
-            state['match_results'] = []
+            state['matches'] = []
             for c in candidates[:10]:
                 # Create proper MatchResult with required fields
-                state['match_results'].append(MatchResult(
+                state['matches'].append(MatchResult(
                     query_table=state.get('query_task', {}).table_name if state.get('query_task') else 'unknown',
                     matched_table=c.table_name,
                     score=c.score,
@@ -66,7 +66,7 @@ class MatcherAgent(BaseAgent):
         
         if not candidates:
             self.logger.warning("No candidates to match")
-            state['match_results'] = []
+            state['matches'] = []
             return state
         
         # Get query table info
@@ -149,7 +149,7 @@ class MatcherAgent(BaseAgent):
             match_results.sort(key=lambda x: x.score, reverse=True)
             
             # Store results
-            state['match_results'] = match_results
+            state['matches'] = match_results
             
             self.logger.info(f"LLM matching complete: {len(match_results)} matches found")
             if match_results:
@@ -158,10 +158,10 @@ class MatcherAgent(BaseAgent):
         except Exception as e:
             self.logger.error(f"Error in batch LLM matching: {e}")
             # Fallback to simple scoring
-            state['match_results'] = []
+            state['matches'] = []
             for c in candidates[:5]:
                 # Create proper MatchResult with required fields
-                state['match_results'].append(MatchResult(
+                state['matches'].append(MatchResult(
                     query_table=query_table_name,
                     matched_table=c.table_name,
                     score=c.score * 0.5,  # Reduce confidence without LLM

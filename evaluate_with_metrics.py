@@ -43,6 +43,12 @@ def calculate_metrics(results: List[Dict], ground_truth: List[Dict]) -> Dict[str
         query_table = result.get('query_table', '')
         predictions = result.get('predictions', [])
         
+        # 确保predictions是列表且不为None
+        if predictions is None:
+            predictions = []
+        elif not isinstance(predictions, list):
+            predictions = []
+        
         if query_table not in gt_dict:
             continue
         

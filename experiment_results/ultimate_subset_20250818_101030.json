@@ -1,0 +1,1952 @@
+{
+  "join": {
+    "results": [
+      {
+        "query_table": "csvData22688206__2.csv",
+        "predictions": [
+          "csvData22418917__5.csv",
+          "csvData6468042__2.csv",
+          "csvData6468042__1.csv",
+          "csvData432880__5.csv",
+          "csvData1644016__0.csv"
+        ],
+        "time": 27.818408489227295,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 27.81800627708435,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData8549891__9.csv",
+        "predictions": [
+          "csvData8549891__10.csv",
+          "csvData20075499__5.csv",
+          "csvData1102081__8.csv",
+          "csvData8598250__1.csv",
+          "csvData15745723__4.csv"
+        ],
+        "time": 28.14650011062622,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 28.146165132522583,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData22709338__1.csv",
+        "predictions": [
+          "csvData22709338__0.csv",
+          "csvData436368__8.csv",
+          "csvData436368__11.csv",
+          "csvData26853929__7.csv",
+          "csvData26853929__6.csv"
+        ],
+        "time": 28.227848529815674,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 28.227335453033447,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData6468042__1.csv",
+        "predictions": [
+          "csvData6468042__2.csv",
+          "csvData22688206__2.csv",
+          "csvData11585188__5.csv",
+          "csvData22418917__5.csv",
+          "csvData18518969__7.csv"
+        ],
+        "time": 29.02964997291565,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 29.02926540374756,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData14518660__14.csv",
+        "predictions": [
+          "csvData16773669__3.csv",
+          "csvData23141915__8.csv",
+          "csvData23141915__6.csv",
+          "csvData13703215__18.csv",
+          "csvData17302070__11.csv"
+        ],
+        "time": 29.066489219665527,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 29.066096544265747,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData8288967__18.csv",
+        "predictions": [
+          "csvData8288967__19.csv",
+          "csvData1102081__8.csv",
+          "csvData2798756__5.csv",
+          "csvData2798756__3.csv",
+          "csvData8598250__1.csv"
+        ],
+        "time": 30.270375728607178,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 30.269949913024902,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData22709338__0.csv",
+        "predictions": [
+          "csvData22709338__1.csv",
+          "csvData436368__8.csv",
+          "csvData436368__11.csv",
+          "csvData26853929__7.csv",
+          "csvData26853929__6.csv"
+        ],
+        "time": 31.65058970451355,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 31.650212287902832,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData16382327__5.csv",
+        "predictions": [
+          "csvData16382327__4.csv",
+          "csvData1644016__0.csv",
+          "csvData11585188__5.csv",
+          "csvData432880__5.csv",
+          "csvData2660625__0.csv"
+        ],
+        "time": 32.74556803703308,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 32.74512839317322,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData7063593__2.csv",
+        "predictions": [
+          "csvData25120653__1.csv",
+          "csvData25794067__0.csv",
+          "csvData23141915__6.csv",
+          "csvData23141915__8.csv",
+          "csvData12739105__4.csv"
+        ],
+        "time": 18.473230838775635,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 18.472872018814087,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData1549285__1.csv",
+        "predictions": [
+          "csvData25120653__1.csv",
+          "csvData12739105__3.csv",
+          "csvData12739105__4.csv",
+          "csvData25917960__0.csv",
+          "csvData1549285__0.csv"
+        ],
+        "time": 18.263278007507324,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 18.262916326522827,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData432880__5.csv",
+        "predictions": [
+          "csvData12739105__3.csv",
+          "csvData26522418__3.csv",
+          "csvData8963593__3.csv",
+          "csvData22688206__2.csv",
+          "csvData25120653__1.csv"
+        ],
+        "time": 18.78244709968567,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 18.782068967819214,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData25794067__0.csv",
+        "predictions": [
+          "csvData7063593__2.csv",
+          "csvData25917960__0.csv",
+          "csvData28449023__4.csv",
+          "csvData18518969__7.csv",
+          "csvData26655046__0.csv"
+        ],
+        "time": 18.5663845539093,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 18.565954446792603,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData15936069__14.csv",
+        "predictions": [
+          "csvData24341501__0.csv",
+          "csvData24131822__5.csv",
+          "csvData29230622__16.csv",
+          "csvData15936069__16.csv",
+          "csvData23904874__19.csv"
+        ],
+        "time": 18.586225748062134,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 18.585869312286377,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData917122__2.csv",
+        "predictions": [
+          "csvData26522418__3.csv",
+          "csvData12739105__4.csv",
+          "csvData16083137__3.csv",
+          "csvData12739105__3.csv",
+          "csvData2660625__0.csv"
+        ],
+        "time": 20.232998847961426,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 20.23263430595398,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData25322806__4.csv",
+        "predictions": [
+          "csvData1644016__0.csv",
+          "csvData3178438__19.csv",
+          "csvData3178438__17.csv",
+          "csvData18518969__7.csv",
+          "csvData12739105__4.csv"
+        ],
+        "time": 20.149616241455078,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 20.14922070503235,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData12739105__3.csv",
+        "predictions": [
+          "csvData17093328__0.csv",
+          "csvData1549285__2.csv",
+          "csvData1549285__1.csv",
+          "csvData1549285__0.csv",
+          "csvData17093328__2.csv"
+        ],
+        "time": 22.827197790145874,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 22.826839447021484,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData7222492__8.csv",
+        "predictions": [
+          "csvData7222492__5.csv",
+          "csvData27008272__5.csv",
+          "csvData6468042__7.csv",
+          "csvData15745723__7.csv",
+          "csvData15745723__5.csv"
+        ],
+        "time": 16.086678743362427,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 16.086326837539673,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData4674540__15.csv",
+        "predictions": [
+          "csvData18661263__13.csv",
+          "csvData10027553__2.csv",
+          "csvData4676916__2.csv",
+          "csvData25437325__8.csv",
+          "csvData25437325__11.csv"
+        ],
+        "time": 17.961973190307617,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 17.961575269699097,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData1644016__0.csv",
+        "predictions": [
+          "csvData16382327__4.csv",
+          "csvData16382327__5.csv",
+          "csvData25322806__4.csv",
+          "csvData13051044__0.csv",
+          "csvData16984008__5.csv"
+        ],
+        "time": 17.856750011444092,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 17.856393337249756,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData25917960__0.csv",
+        "predictions": [
+          "csvData17093328__0.csv",
+          "csvData23141915__6.csv",
+          "csvData23141915__8.csv",
+          "csvData8963593__3.csv",
+          "csvData12739105__4.csv"
+        ],
+        "time": 19.646089792251587,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 19.645744562149048,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData23141915__6.csv",
+        "predictions": [
+          "csvData18518969__7.csv",
+          "csvData19898919__3.csv",
+          "csvData7470046__3.csv",
+          "csvData25917960__0.csv",
+          "csvData28449023__4.csv"
+        ],
+        "time": 19.873838424682617,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 19.873435974121094,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData1444875__7.csv",
+        "predictions": [
+          "csvData4431378__4.csv",
+          "csvData23033509__1.csv",
+          "csvData26651945__8.csv",
+          "csvData18562133__11.csv",
+          "csvData26651945__9.csv"
+        ],
+        "time": 19.17167067527771,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 19.17130732536316,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData13891302__14.csv",
+        "predictions": [
+          "csvData10027553__2.csv",
+          "csvData4676916__2.csv",
+          "csvData20075499__5.csv",
+          "csvData29453038__8.csv",
+          "csvData15745723__4.csv"
+        ],
+        "time": 18.690269231796265,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 18.689870834350586,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData2798756__3.csv",
+        "predictions": [
+          "csvData2798756__5.csv",
+          "csvData8963593__3.csv",
+          "csvData26655046__0.csv",
+          "csvData14248779__0.csv",
+          "csvData25917960__0.csv"
+        ],
+        "time": 19.09100317955017,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 19.090627908706665,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData7470046__3.csv",
+        "predictions": [
+          "csvData17093328__0.csv",
+          "csvData23141915__8.csv",
+          "csvData23141915__6.csv",
+          "csvData1549285__0.csv",
+          "csvData917122__2.csv"
+        ],
+        "time": 17.78087043762207,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 17.780476808547974,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData1549285__2.csv",
+        "predictions": [
+          "csvData25120653__1.csv",
+          "csvData12739105__3.csv",
+          "csvData12739105__4.csv",
+          "csvData1549285__1.csv",
+          "csvData1549285__0.csv"
+        ],
+        "time": 20.777200937271118,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 20.776840925216675,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData2761087__12.csv",
+        "predictions": [
+          "csvData14833792__2.csv",
+          "csvData2877720__14.csv",
+          "csvData22658714__6.csv",
+          "csvData7615166__8.csv",
+          "csvData7615166__6.csv"
+        ],
+        "time": 18.28095579147339,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 18.28059411048889,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData23141915__0.csv",
+        "predictions": [
+          "csvData23141915__1.csv",
+          "csvData1549285__0.csv",
+          "csvData14248779__0.csv",
+          "csvData12739105__4.csv",
+          "csvData12739105__3.csv"
+        ],
+        "time": 19.641266584396362,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 19.640876293182373,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData3178438__17.csv",
+        "predictions": [
+          "csvData3178438__19.csv",
+          "csvData25322806__4.csv",
+          "csvData22688206__2.csv",
+          "csvData8770780__8.csv",
+          "csvData22418917__5.csv"
+        ],
+        "time": 16.24909234046936,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 16.248741149902344,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData23141915__8.csv",
+        "predictions": [
+          "csvData18518969__7.csv",
+          "csvData19898919__3.csv",
+          "csvData7470046__2.csv",
+          "csvData7470046__3.csv",
+          "csvData25917960__0.csv"
+        ],
+        "time": 19.689528465270996,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 19.689133882522583,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData13703215__18.csv",
+        "predictions": [
+          "csvData436368__8.csv",
+          "csvData26651945__13.csv",
+          "csvData29383799__1.csv",
+          "csvData1102081__8.csv",
+          "csvData22658714__6.csv"
+        ],
+        "time": 20.427934885025024,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 20.427302360534668,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData4431378__4.csv",
+        "predictions": [
+          "csvData20535739__5.csv",
+          "csvData20535739__7.csv",
+          "csvData23003743__0.csv",
+          "csvData19072013__2.csv",
+          "csvData26651945__9.csv"
+        ],
+        "time": 20.388962030410767,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 20.38858962059021,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData2879490__3.csv",
+        "predictions": [
+          "csvData27987124__1.csv",
+          "csvData27987124__4.csv",
+          "csvData4823585__2.csv",
+          "csvData5124506__0.csv",
+          "csvData5124506__2.csv"
+        ],
+        "time": 17.838449001312256,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 17.83810305595398,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData8620997__2.csv",
+        "predictions": [
+          "csvData29453038__8.csv",
+          "csvData15745723__5.csv",
+          "csvData15745723__7.csv",
+          "csvData14213420__1.csv",
+          "csvData19130941__0.csv"
+        ],
+        "time": 18.63154149055481,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 18.63119149208069,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData5124506__0.csv",
+        "predictions": [
+          "csvData18784108__0.csv",
+          "csvData18562133__11.csv",
+          "csvData21873021__6.csv",
+          "csvData26651945__13.csv",
+          "csvData27987124__1.csv"
+        ],
+        "time": 20.220367193222046,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 20.22001814842224,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData26651945__13.csv",
+        "predictions": [
+          "csvData18562133__11.csv",
+          "csvData5124506__2.csv",
+          "csvData5124506__0.csv",
+          "csvData4823585__2.csv",
+          "csvData1444875__7.csv"
+        ],
+        "time": 17.61234450340271,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 17.6119863986969,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData29383799__2.csv",
+        "predictions": [
+          "csvData18661263__13.csv",
+          "csvData18661263__15.csv",
+          "csvData14833792__2.csv",
+          "csvData436368__8.csv",
+          "csvData436368__11.csv"
+        ],
+        "time": 19.82078218460083,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 19.820431232452393,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData10025189__3.csv",
+        "predictions": [
+          "csvData23003743__0.csv",
+          "csvData1102081__8.csv",
+          "csvData13891302__14.csv",
+          "csvData18562133__11.csv",
+          "csvData15745723__17.csv"
+        ],
+        "time": 19.760969161987305,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 19.7606201171875,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData26853929__7.csv",
+        "predictions": [
+          "csvData7320164__8.csv",
+          "csvData8479264__2.csv",
+          "csvData8479264__3.csv",
+          "csvData27987124__1.csv",
+          "csvData21286196__7.csv"
+        ],
+        "time": 16.44970464706421,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 16.449477672576904,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData25437325__8.csv",
+        "predictions": [
+          "csvData1444875__15.csv",
+          "csvData14833792__2.csv",
+          "csvData22658714__6.csv",
+          "csvData18661263__13.csv",
+          "csvData4676916__10.csv"
+        ],
+        "time": 18.197118759155273,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 18.19673752784729,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData7104405__9.csv",
+        "predictions": [
+          "csvData7401568__11.csv",
+          "csvData18661263__14.csv",
+          "csvData18661263__15.csv",
+          "csvData29383799__1.csv",
+          "csvData2877720__14.csv"
+        ],
+        "time": 16.803024768829346,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 16.802679538726807,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData23003743__0.csv",
+        "predictions": [
+          "csvData4431378__4.csv",
+          "csvData18562133__0.csv",
+          "csvData18562133__3.csv",
+          "csvData18562133__2.csv",
+          "csvData10025189__3.csv"
+        ],
+        "time": 19.028799057006836,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 19.02841305732727,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData1902536__3.csv",
+        "predictions": [
+          "csvData4431378__4.csv",
+          "csvData2877720__14.csv",
+          "csvData1902536__0.csv",
+          "csvData29346752__7.csv",
+          "csvData7615166__8.csv"
+        ],
+        "time": 17.705657243728638,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 17.705286741256714,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData24131822__5.csv",
+        "predictions": [
+          "csvData9469123__13.csv",
+          "csvData15936069__14.csv",
+          "csvData9103974__8.csv",
+          "csvData15936069__16.csv",
+          "csvData29230622__16.csv"
+        ],
+        "time": 19.014461994171143,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 19.014094591140747,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData4676916__2.csv",
+        "predictions": [
+          "csvData20535739__14.csv",
+          "csvData20535739__15.csv",
+          "csvData13891302__8.csv",
+          "csvData2877720__7.csv",
+          "csvData7401568__11.csv"
+        ],
+        "time": 19.805212020874023,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 19.80484628677368,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData20535739__7.csv",
+        "predictions": [
+          "csvData4431378__4.csv",
+          "csvData2877720__14.csv",
+          "csvData13891302__10.csv",
+          "csvData13891302__9.csv",
+          "csvData13891302__8.csv"
+        ],
+        "time": 21.072740077972412,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 21.072346925735474,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData9739809__1.csv",
+        "predictions": [
+          "csvData13891302__14.csv",
+          "csvData13703215__18.csv",
+          "csvData13434912__2.csv",
+          "csvData4798003__1.csv",
+          "csvData18493125__15.csv"
+        ],
+        "time": 18.580287218093872,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 18.579817295074463,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData4676916__10.csv",
+        "predictions": [
+          "csvData26853929__7.csv",
+          "csvData26853929__6.csv",
+          "csvData19553885__1.csv",
+          "csvData7320164__8.csv",
+          "csvData20535739__13.csv"
+        ],
+        "time": 19.207977771759033,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 19.207578897476196,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData4798003__1.csv",
+        "predictions": [
+          "csvData23033509__2.csv",
+          "csvData23033509__1.csv",
+          "csvData23033509__0.csv",
+          "csvData23033509__3.csv",
+          "csvData23033509__4.csv"
+        ],
+        "time": 21.51641821861267,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 21.51603627204895,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData8479264__2.csv",
+        "predictions": [
+          "csvData3383853__9.csv",
+          "csvData3383853__10.csv",
+          "csvData3383853__11.csv",
+          "csvData18661263__13.csv",
+          "csvData18661263__15.csv"
+        ],
+        "time": 19.87036657333374,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 19.869960069656372,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      }
+    ],
+    "metrics": {
+      "hit@1": 0.28,
+      "hit@3": 0.4,
+      "hit@5": 0.46,
+      "hit@10": 0.46,
+      "precision": 0.13200000000000003,
+      "recall": 0.24552380952380948,
+      "f1_score": 0.15412964812964813,
+      "valid_queries": 50,
+      "total_queries": 50
+    },
+    "total_time": 141.37066221237183,
+    "avg_time": 2.8274132442474365,
+    "total_llm_calls": 2,
+    "cache_hits": 0,
+    "cache_hit_rate": 0.0,
+    "optimization_savings": {
+      "optimizer_calls_saved": 49,
+      "planner_calls_saved": 49,
+      "estimated_time_saved": 196
+    }
+  },
+  "union": {
+    "results": [
+      {
+        "query_table": "csvData10193130.csv",
+        "predictions": [
+          "csvData10219632.csv",
+          "csvData10051410.csv",
+          "csvData12071306.csv",
+          "csvData4355784.csv",
+          "csvData11170774.csv"
+        ],
+        "time": 33.78473496437073,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 33.78431940078735,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData10025189__5.csv",
+        "predictions": [
+          "csvData19072013__0.csv",
+          "csvData1902536__5.csv",
+          "csvData1902536__9.csv",
+          "csvData2404013__7.csv",
+          "csvData2404013__8.csv"
+        ],
+        "time": 35.37920331954956,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 35.37898850440979,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData10477563.csv",
+        "predictions": [
+          "csvData20629248.csv",
+          "csvData1010199.csv",
+          "csvData10237155.csv",
+          "csvData18412849.csv",
+          "csvData16827568.csv"
+        ],
+        "time": 35.559499979019165,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 35.55911374092102,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData1016273.csv",
+        "predictions": [
+          "csvData20967791.csv",
+          "csvData13860887.csv",
+          "csvData1576351.csv",
+          "csvData4168914.csv",
+          "csvData17586963.csv"
+        ],
+        "time": 36.0669686794281,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 36.066550493240356,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData10219632.csv",
+        "predictions": [
+          "csvData4355784.csv",
+          "csvData11170774.csv",
+          "csvData12071306.csv",
+          "csvData16397159.csv",
+          "csvData10193130.csv"
+        ],
+        "time": 36.13623571395874,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 36.135825395584106,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData10289113.csv",
+        "predictions": [
+          "csvData3836886.csv",
+          "csvData21411958.csv",
+          "csvData1016273.csv",
+          "csvData7401568__12.csv",
+          "csvData7401568__14.csv"
+        ],
+        "time": 36.27963328361511,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 36.27927851676941,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData10237155.csv",
+        "predictions": [
+          "csvData16827568.csv",
+          "csvData10477563.csv",
+          "csvData25283220.csv",
+          "csvData23145953.csv",
+          "csvData10513074.csv"
+        ],
+        "time": 36.37363052368164,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 36.37322449684143,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData10051410.csv",
+        "predictions": [
+          "csvData11170774.csv",
+          "csvData10193130.csv",
+          "csvData4355784.csv",
+          "csvData12071306.csv",
+          "csvData10219632.csv"
+        ],
+        "time": 36.796767234802246,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 36.79624319076538,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData11170774.csv",
+        "predictions": [
+          "csvData12071306.csv",
+          "csvData4355784.csv",
+          "csvData10219632.csv",
+          "csvData16397159.csv",
+          "csvData10051410.csv"
+        ],
+        "time": 22.245337963104248,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 22.244973182678223,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData10025189__2.csv",
+        "predictions": [
+          "csvData13227194__13.csv",
+          "csvData5376485__5.csv",
+          "csvData5376485__7.csv",
+          "csvData5376485__4.csv",
+          "csvData5376485__6.csv"
+        ],
+        "time": 23.01071524620056,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 23.010340213775635,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData10632456.csv",
+        "predictions": [
+          "csvData12583877.csv",
+          "csvData19660418.csv",
+          "csvData10444015.csv",
+          "csvData2404013.csv",
+          "csvData10025189.csv"
+        ],
+        "time": 22.547974348068237,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 22.54758930206299,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData10642868.csv",
+        "predictions": [
+          "csvData16725882.csv",
+          "csvData17302070.csv",
+          "csvData18661263.csv",
+          "csvData20099586.csv",
+          "csvData25437325.csv"
+        ],
+        "time": 26.657748699188232,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 26.65730857849121,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData10001964__3.csv",
+        "predictions": [
+          "csvData22418917__2.csv",
+          "csvData10001964__2.csv",
+          "csvData1786628__5.csv",
+          "csvData7984902__1.csv",
+          "csvData19706578__5.csv"
+        ],
+        "time": 23.99659252166748,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 23.9961895942688,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData11237599__3.csv",
+        "predictions": [
+          "csvData27381326__3.csv",
+          "csvData27381326__2.csv",
+          "csvData21411958.csv",
+          "csvData1016273.csv",
+          "csvData11547010__3.csv"
+        ],
+        "time": 24.630285501480103,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 24.63013792037964,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData1010199.csv",
+        "predictions": [
+          "csvData10477563.csv",
+          "csvData25283220.csv",
+          "csvData16482053.csv",
+          "csvData23145953.csv",
+          "csvData21873021.csv"
+        ],
+        "time": 25.690427541732788,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 25.689987897872925,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData10749767__4.csv",
+        "predictions": [
+          "csvData10074535__3.csv",
+          "csvData10074535__1.csv",
+          "csvData10074535__2.csv",
+          "csvData10074535__0.csv",
+          "csvData16000106__1.csv"
+        ],
+        "time": 27.112224578857422,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 27.111871480941772,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData1000970.csv",
+        "predictions": [
+          "csvData16541306.csv",
+          "csvData24181536.csv",
+          "csvData4168914.csv",
+          "csvData13860887.csv",
+          "csvData10248679.csv"
+        ],
+        "time": 20.234776735305786,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 20.234384536743164,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData10088067__3.csv",
+        "predictions": [
+          "csvData10088067__0.csv",
+          "csvData10088067__1.csv",
+          "csvData10088067__4.csv",
+          "csvData10088067__2.csv",
+          "csvData23138641__16.csv"
+        ],
+        "time": 23.691156148910522,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 23.6907901763916,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData10088067__16.csv",
+        "predictions": [
+          "csvData10088067__17.csv",
+          "csvData10088067__15.csv",
+          "csvData10088067__18.csv",
+          "csvData10088067__19.csv",
+          "csvData9475480__8.csv"
+        ],
+        "time": 24.560404300689697,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 24.56007409095764,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData10088067__2.csv",
+        "predictions": [
+          "csvData10088067__1.csv",
+          "csvData10088067__0.csv",
+          "csvData10088067__3.csv",
+          "csvData10088067__4.csv",
+          "csvData23138641__16.csv"
+        ],
+        "time": 22.223364114761353,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 22.222997426986694,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData10444015.csv",
+        "predictions": [
+          "csvData10632456.csv",
+          "csvData12583877.csv",
+          "csvData19660418.csv",
+          "csvData14833792.csv",
+          "csvData10025189.csv"
+        ],
+        "time": 23.034363508224487,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 23.033944606781006,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData10025189__0.csv",
+        "predictions": [
+          "csvData13227194__13.csv",
+          "csvData5376485__5.csv",
+          "csvData5376485__4.csv",
+          "csvData5376485__7.csv",
+          "csvData5376485__6.csv"
+        ],
+        "time": 22.805315494537354,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 22.804933309555054,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData10088067__4.csv",
+        "predictions": [
+          "csvData10088067__0.csv",
+          "csvData10088067__3.csv",
+          "csvData10088067__1.csv",
+          "csvData10088067__2.csv",
+          "csvData23138641__16.csv"
+        ],
+        "time": 24.268895626068115,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 24.268508434295654,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData10212811__4.csv",
+        "predictions": [
+          "csvData18493125__14.csv",
+          "csvData18493125__12.csv",
+          "csvData18493125__13.csv",
+          "csvData14833792__0.csv",
+          "csvData13292203__4.csv"
+        ],
+        "time": 23.833784580230713,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 23.833418607711792,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData10248679.csv",
+        "predictions": [
+          "csvData24181536.csv",
+          "csvData20967791.csv",
+          "csvData16541306.csv",
+          "csvData13860887.csv",
+          "csvData4168914.csv"
+        ],
+        "time": 24.872243404388428,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 24.871862173080444,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData10001964__2.csv",
+        "predictions": [
+          "csvData22418917__2.csv",
+          "csvData10001964__3.csv",
+          "csvData1786628__5.csv",
+          "csvData7984902__1.csv",
+          "csvData19706578__5.csv"
+        ],
+        "time": 23.659947633743286,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 23.65950918197632,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData10025189__1.csv",
+        "predictions": [
+          "csvData13227194__13.csv",
+          "csvData5376485__5.csv",
+          "csvData5376485__7.csv",
+          "csvData5376485__4.csv",
+          "csvData5376485__6.csv"
+        ],
+        "time": 22.95252227783203,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 22.952167987823486,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData10045833.csv",
+        "predictions": [
+          "csvData17586963.csv",
+          "csvData12187972.csv",
+          "csvData18275710.csv",
+          "csvData22713157.csv",
+          "csvData9136635.csv"
+        ],
+        "time": 23.39682912826538,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 23.396458387374878,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData10027553__5.csv",
+        "predictions": [
+          "csvData10027553__1.csv",
+          "csvData10027553__0.csv",
+          "csvData10027553__2.csv",
+          "csvData10027553__3.csv",
+          "csvData8598250__1.csv"
+        ],
+        "time": 23.90706706047058,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 23.906691551208496,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData10025189__4.csv",
+        "predictions": [
+          "csvData19072013__0.csv",
+          "csvData1902536__9.csv",
+          "csvData1902536__5.csv",
+          "csvData2404013__7.csv",
+          "csvData2404013__8.csv"
+        ],
+        "time": 25.705109357833862,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 25.70474672317505,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData10027553__14.csv",
+        "predictions": [
+          "csvData14833792__5.csv",
+          "csvData16000106__1.csv",
+          "csvData16000106__0.csv",
+          "csvData16000106__2.csv",
+          "csvData24108736__0.csv"
+        ],
+        "time": 22.602084636688232,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 22.601707220077515,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData10027553__12.csv",
+        "predictions": [
+          "csvData14833792__5.csv",
+          "csvData16000106__1.csv",
+          "csvData16000106__0.csv",
+          "csvData16000106__2.csv",
+          "csvData24108736__0.csv"
+        ],
+        "time": 25.679925680160522,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 25.679543256759644,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData10074535__2.csv",
+        "predictions": [
+          "csvData21647644__0.csv",
+          "csvData10749767__5.csv",
+          "csvData10749767__3.csv",
+          "csvData10749767__4.csv",
+          "csvData27987124__0.csv"
+        ],
+        "time": 24.04712224006653,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 24.04667043685913,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData10074535__7.csv",
+        "predictions": [
+          "csvData4674540__8.csv",
+          "csvData4674540__9.csv",
+          "csvData4674540__10.csv",
+          "csvData4674540__11.csv",
+          "csvData436368__7.csv"
+        ],
+        "time": 24.27351450920105,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 24.273113012313843,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData10088067__1.csv",
+        "predictions": [
+          "csvData10088067__0.csv",
+          "csvData10088067__2.csv",
+          "csvData10088067__3.csv",
+          "csvData10088067__4.csv",
+          "csvData23138641__16.csv"
+        ],
+        "time": 23.362170457839966,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 23.361778497695923,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData10088067__15.csv",
+        "predictions": [
+          "csvData10088067__18.csv",
+          "csvData10088067__16.csv",
+          "csvData10088067__19.csv",
+          "csvData10088067__17.csv",
+          "csvData9475480__8.csv"
+        ],
+        "time": 25.320669889450073,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 25.320268630981445,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData10513074__3.csv",
+        "predictions": [
+          "csvData1303939__3.csv",
+          "csvData1303939__5.csv",
+          "csvData1303939__4.csv",
+          "csvData10027553__0.csv",
+          "csvData10749767__0.csv"
+        ],
+        "time": 24.96191143989563,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 24.961344242095947,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData10547086__6.csv",
+        "predictions": [
+          "csvData20075499__8.csv",
+          "csvData5376485__1.csv",
+          "csvData5376485__0.csv",
+          "csvData5376485__2.csv",
+          "csvData5376485__3.csv"
+        ],
+        "time": 24.15247416496277,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 24.15205979347229,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData10602310__1.csv",
+        "predictions": [
+          "csvData24782950__0.csv",
+          "csvData20409520__2.csv",
+          "csvData27587184__1.csv",
+          "csvData27587184__0.csv",
+          "csvData7470046__0.csv"
+        ],
+        "time": 24.70503544807434,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 24.704663276672363,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData1068737__2.csv",
+        "predictions": [
+          "csvData1068737__1.csv",
+          "csvData1068737__0.csv",
+          "csvData7434868__8.csv",
+          "csvData7434868__3.csv",
+          "csvData27008272__3.csv"
+        ],
+        "time": 58.72833871841431,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 58.72798705101013,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData10027553__4.csv",
+        "predictions": [
+          "csvData10027553__1.csv",
+          "csvData10027553__0.csv",
+          "csvData10027553__2.csv",
+          "csvData10027553__3.csv",
+          "csvData8598250__1.csv"
+        ],
+        "time": 59.37528944015503,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 59.37490510940552,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData10163568__2.csv",
+        "predictions": [
+          "csvData10163568__1.csv",
+          "csvData10163568__0.csv",
+          "csvData20409520__2.csv",
+          "csvData11284975__2.csv",
+          "csvData22475593__4.csv"
+        ],
+        "time": 56.32928729057312,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 56.32887840270996,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData10212811__2.csv",
+        "predictions": [
+          "csvData23033509__7.csv",
+          "csvData23033509__8.csv",
+          "csvData13771482__12.csv",
+          "csvData13771482__15.csv",
+          "csvData10212811__0.csv"
+        ],
+        "time": 57.217609882354736,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 57.21723294258118,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData10508770__5.csv",
+        "predictions": [
+          "csvData23033509__0.csv",
+          "csvData9739809__5.csv",
+          "csvData9739809__6.csv",
+          "csvData9739809__7.csv",
+          "csvData9739809__8.csv"
+        ],
+        "time": 56.93954563140869,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 56.93915295600891,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData10074535__15.csv",
+        "predictions": [
+          "csvData13336059__14.csv",
+          "csvData13336059__10.csv",
+          "csvData2590167__3.csv",
+          "csvData2590167__1.csv",
+          "csvData13336059__13.csv"
+        ],
+        "time": 56.877403020858765,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 56.876962661743164,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData10088067__17.csv",
+        "predictions": [
+          "csvData10088067__16.csv",
+          "csvData10088067__15.csv",
+          "csvData10088067__18.csv",
+          "csvData10088067__19.csv",
+          "csvData23138641__17.csv"
+        ],
+        "time": 56.10935020446777,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 56.1089346408844,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData10508770__6.csv",
+        "predictions": [
+          "csvData19553885__15.csv",
+          "csvData19553885__12.csv",
+          "csvData4823585__6.csv",
+          "csvData4823585__8.csv",
+          "csvData4823585__7.csv"
+        ],
+        "time": 60.727707862854004,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 60.72731614112854,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData10163568__0.csv",
+        "predictions": [
+          "csvData10163568__1.csv",
+          "csvData10163568__2.csv",
+          "csvData20409520__2.csv",
+          "csvData11284975__2.csv",
+          "csvData22475593__4.csv"
+        ],
+        "time": 23.088030338287354,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 23.087635040283203,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData10163568__1.csv",
+        "predictions": [
+          "csvData10163568__0.csv",
+          "csvData10163568__2.csv",
+          "csvData20409520__2.csv",
+          "csvData11284975__2.csv",
+          "csvData22475593__4.csv"
+        ],
+        "time": 22.025161504745483,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 22.024786949157715,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      },
+      {
+        "query_table": "csvData10212811__0.csv",
+        "predictions": [
+          "csvData23033509__7.csv",
+          "csvData23033509__8.csv",
+          "csvData13771482__12.csv",
+          "csvData13771482__15.csv",
+          "csvData10212811__2.csv"
+        ],
+        "time": 22.83593487739563,
+        "llm_calls": 0,
+        "metrics": {
+          "total_time": 22.83555793762207,
+          "candidates_generated": 100,
+          "llm_calls_made": 0,
+          "agent_times": {}
+        },
+        "from_cache": false
+      }
+    ],
+    "metrics": {
+      "hit@1": 0.42,
+      "hit@3": 0.48,
+      "hit@5": 0.6,
+      "hit@10": 0.6,
+      "precision": 0.26799999999999996,
+      "recall": 0.3022301587301586,
+      "f1_score": 0.2614859584859584,
+      "valid_queries": 50,
+      "total_queries": 50
+    },
+    "total_time": 210.69206643104553,
+    "avg_time": 4.21384132862091,
+    "total_llm_calls": 2,
+    "cache_hits": 0,
+    "cache_hit_rate": 0.0,
+    "optimization_savings": {
+      "optimizer_calls_saved": 49,
+      "planner_calls_saved": 49,
+      "estimated_time_saved": 196
+    }
+  }
+}
