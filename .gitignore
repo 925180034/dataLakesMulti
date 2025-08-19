@@ -1,4 +1,9 @@
-paper_draft
+# Paper draft - should not be in repository
+paper_draft/
+
+# Cleanup backup
+.cleanup_backup/
+
 # Python
 __pycache__/
 *.py[cod]

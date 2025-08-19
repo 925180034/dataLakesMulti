@@ -35,6 +35,12 @@ class OptimizationConfig:
     use_vector_search: bool = True
     use_llm_verification: bool = True
     batch_size: int = 20
+    
+    # L3层LLM匹配参数（新增）
+    llm_confidence_threshold: float = 0.5
+    aggregator_min_score: float = 0.2
+    aggregator_max_results: int = 50
+    vector_top_k: int = 150
 
 
 @dataclass

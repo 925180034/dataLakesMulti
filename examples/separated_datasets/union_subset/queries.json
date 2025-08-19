@@ -1,402 +1,202 @@
 [
   {
-    "query_table": "csvData10051410.csv",
-    "query_type": "union"
+    "query_table": "csvData10027553__1.csv",
+    "task_type": "union"
   },
   {
-    "query_table": "csvData1016273.csv",
-    "query_type": "union"
+    "query_table": "csvData13434912__2.csv",
+    "task_type": "union"
   },
   {
-    "query_table": "csvData10219632.csv",
-    "query_type": "union"
+    "query_table": "csvData13891302__10.csv",
+    "task_type": "union"
   },
   {
-    "query_table": "csvData10237155.csv",
-    "query_type": "union"
+    "query_table": "csvData19072013__2.csv",
+    "task_type": "union"
   },
   {
-    "query_table": "csvData10289113.csv",
-    "query_type": "union"
+    "query_table": "csvData21084464__14.csv",
+    "task_type": "union"
   },
   {
-    "query_table": "csvData10025189__5.csv",
-    "query_type": "union"
+    "query_table": "csvData22658714__3.csv",
+    "task_type": "union"
   },
   {
-    "query_table": "csvData10193130.csv",
-    "query_type": "union"
+    "query_table": "csvData22658714__6.csv",
+    "task_type": "union"
   },
   {
-    "query_table": "csvData10477563.csv",
-    "query_type": "union"
+    "query_table": "csvData25283220__3.csv",
+    "task_type": "union"
   },
   {
-    "query_table": "csvData10642868.csv",
-    "query_type": "union"
+    "query_table": "csvData2590167__3.csv",
+    "task_type": "union"
   },
   {
-    "query_table": "csvData11170774.csv",
-    "query_type": "union"
+    "query_table": "csvData436368__11.csv",
+    "task_type": "union"
   },
   {
-    "query_table": "csvData10025189__2.csv",
-    "query_type": "union"
+    "query_table": "csvData436368__8.csv",
+    "task_type": "union"
   },
   {
-    "query_table": "csvData1010199.csv",
-    "query_type": "union"
+    "query_table": "csvData13336059__13.csv",
+    "task_type": "union"
   },
   {
-    "query_table": "csvData10632456.csv",
-    "query_type": "union"
+    "query_table": "csvData13823415.csv",
+    "task_type": "union"
   },
   {
-    "query_table": "csvData10749767__4.csv",
-    "query_type": "union"
+    "query_table": "csvData13891302__15.csv",
+    "task_type": "union"
   },
   {
-    "query_table": "csvData11237599__3.csv",
-    "query_type": "union"
+    "query_table": "csvData13997791__3.csv",
+    "task_type": "union"
   },
   {
-    "query_table": "csvData10001964__3.csv",
-    "query_type": "union"
+    "query_table": "csvData14213420__0.csv",
+    "task_type": "union"
   },
   {
-    "query_table": "csvData1000970.csv",
-    "query_type": "union"
+    "query_table": "csvData1444875__15.csv",
+    "task_type": "union"
   },
   {
-    "query_table": "csvData10088067__16.csv",
-    "query_type": "union"
+    "query_table": "csvData15965777__14.csv",
+    "task_type": "union"
   },
   {
-    "query_table": "csvData10088067__3.csv",
-    "query_type": "union"
+    "query_table": "csvData19130941__1.csv",
+    "task_type": "union"
   },
   {
-    "query_table": "csvData10444015.csv",
-    "query_type": "union"
+    "query_table": "csvData20967043__0.csv",
+    "task_type": "union"
   },
   {
-    "query_table": "csvData10025189__0.csv",
-    "query_type": "union"
+    "query_table": "csvData22418917__2.csv",
+    "task_type": "union"
   },
   {
-    "query_table": "csvData10088067__2.csv",
-    "query_type": "union"
+    "query_table": "csvData23033509__18.csv",
+    "task_type": "union"
   },
   {
-    "query_table": "csvData10088067__4.csv",
-    "query_type": "union"
+    "query_table": "csvData24108736__4.csv",
+    "task_type": "union"
   },
   {
-    "query_table": "csvData10212811__4.csv",
-    "query_type": "union"
+    "query_table": "csvData25283220__2.csv",
+    "task_type": "union"
   },
   {
-    "query_table": "csvData10248679.csv",
-    "query_type": "union"
+    "query_table": "csvData25283220__8.csv",
+    "task_type": "union"
   },
   {
-    "query_table": "csvData10001964__2.csv",
-    "query_type": "union"
+    "query_table": "csvData25450714__17.csv",
+    "task_type": "union"
   },
   {
-    "query_table": "csvData10025189__1.csv",
-    "query_type": "union"
+    "query_table": "csvData26651945__12.csv",
+    "task_type": "union"
   },
   {
-    "query_table": "csvData10025189__4.csv",
-    "query_type": "union"
+    "query_table": "csvData2679641__12.csv",
+    "task_type": "union"
   },
   {
-    "query_table": "csvData10027553__5.csv",
-    "query_type": "union"
+    "query_table": "csvData2877720__14.csv",
+    "task_type": "union"
   },
   {
-    "query_table": "csvData10045833.csv",
-    "query_type": "union"
+    "query_table": "csvData2877720__7.csv",
+    "task_type": "union"
   },
   {
-    "query_table": "csvData10027553__12.csv",
-    "query_type": "union"
+    "query_table": "csvData29383799__3.csv",
+    "task_type": "union"
   },
   {
-    "query_table": "csvData10027553__14.csv",
-    "query_type": "union"
+    "query_table": "csvData29453038__6.csv",
+    "task_type": "union"
   },
   {
-    "query_table": "csvData10074535__2.csv",
-    "query_type": "union"
+    "query_table": "csvData4798003__8.csv",
+    "task_type": "union"
   },
   {
-    "query_table": "csvData10074535__7.csv",
-    "query_type": "union"
+    "query_table": "csvData5376485__5.csv",
+    "task_type": "union"
   },
   {
-    "query_table": "csvData10088067__15.csv",
-    "query_type": "union"
+    "query_table": "csvData7104405__5.csv",
+    "task_type": "union"
   },
   {
-    "query_table": "csvData10088067__1.csv",
-    "query_type": "union"
+    "query_table": "csvData7104405__6.csv",
+    "task_type": "union"
   },
   {
-    "query_table": "csvData10513074__3.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData10547086__6.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData10602310__1.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData1068737__2.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData10027553__4.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData10163568__2.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData10212811__2.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData10508770__5.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData10508770__6.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData10074535__15.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData10088067__17.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData10163568__0.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData10163568__1.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData10212811__0.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData10027553__0.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData10027553__3.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData10027553__6.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData10074535__0.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData10074535__5.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData10025189__3.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData10027553.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData10027553__7.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData10074535__4.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData10088067__0.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData10001964__0.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData10025189.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData10074535.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData10212811__3.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData109230__1.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData10001964__1.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData10163568__5.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData10212811__5.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData10547086__14.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData10891176__1.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData10027553__15.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData10074535__1.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData11387111__2.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData12026656__3.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData1303939__5.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData10027553__13.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData10074535__12.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData10074535__3.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData10547086__12.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData1102081__11.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData1102081__2.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData11387111__1.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData1303939__3.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData1303939__4.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData13227194__3.csv",
-    "query_type": "union"
+    "query_table": "csvData7104405__9.csv",
+    "task_type": "union"
   },
   {
     "query_table": "csvData10074535__14.csv",
-    "query_type": "union"
+    "task_type": "union"
   },
   {
-    "query_table": "csvData10547086__13.csv",
-    "query_type": "union"
+    "query_table": "csvData1102081__14.csv",
+    "task_type": "union"
   },
   {
-    "query_table": "csvData1102081__8.csv",
-    "query_type": "union"
+    "query_table": "csvData11585188__1.csv",
+    "task_type": "union"
   },
   {
-    "query_table": "csvData11387111__0.csv",
-    "query_type": "union"
+    "query_table": "csvData13292203__2.csv",
+    "task_type": "union"
   },
   {
-    "query_table": "csvData12906779__14.csv",
-    "query_type": "union"
+    "query_table": "csvData13638124__4.csv",
+    "task_type": "union"
   },
   {
-    "query_table": "csvData10547086__5.csv",
-    "query_type": "union"
+    "query_table": "csvData15936069__14.csv",
+    "task_type": "union"
   },
   {
-    "query_table": "csvData10749767__0.csv",
-    "query_type": "union"
+    "query_table": "csvData17302070__9.csv",
+    "task_type": "union"
   },
   {
-    "query_table": "csvData12739105__4.csv",
-    "query_type": "union"
+    "query_table": "csvData18493125__12.csv",
+    "task_type": "union"
   },
   {
-    "query_table": "csvData13227194__2.csv",
-    "query_type": "union"
+    "query_table": "csvData18493125__14.csv",
+    "task_type": "union"
   },
   {
-    "query_table": "csvData13336059__11.csv",
-    "query_type": "union"
+    "query_table": "csvData18661263__12.csv",
+    "task_type": "union"
   },
   {
-    "query_table": "csvData10749767__2.csv",
-    "query_type": "union"
+    "query_table": "csvData1902536__12.csv",
+    "task_type": "union"
   },
   {
-    "query_table": "csvData1102081__6.csv",
-    "query_type": "union"
+    "query_table": "csvData19553885__0.csv",
+    "task_type": "union"
   },
   {
-    "query_table": "csvData13292203__0.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData13771482__6.csv",
-    "query_type": "union"
-  },
-  {
-    "query_table": "csvData13891302__9.csv",
-    "query_type": "union"
+    "query_table": "csvData19688700__5.csv",
+    "task_type": "union"
   }
 ]
