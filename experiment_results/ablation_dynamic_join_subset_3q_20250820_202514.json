@@ -1,0 +1,126 @@
+{
+  "experiment_info": {
+    "timestamp": "20250820_202514",
+    "task_type": "join",
+    "dataset_type": "subset",
+    "max_queries": 3,
+    "mode": "dynamic",
+    "enable_dynamic": true
+  },
+  "results": {
+    "L1": {
+      "metrics": {
+        "hit@1": 0.0,
+        "hit@3": 0.3333333333333333,
+        "hit@5": 0.3333333333333333,
+        "precision": 0.06666666666666667,
+        "recall": 0.3333333333333333,
+        "f1_score": 0.11111111111111112,
+        "valid_queries": 3
+      },
+      "time": 0.03556203842163086,
+      "avg_time": 0.011854012807210287,
+      "dynamic": false,
+      "predictions": {
+        "csvData22293691.csv": [
+          "csvData22980923.csv",
+          "csvData24643235.csv",
+          "csvData1800845.csv",
+          "csvData18254710.csv",
+          "csvData26294380.csv"
+        ],
+        "csvData10917663.csv": [
+          "csvData12357349.csv",
+          "csvData12722558.csv",
+          "csvData15196643.csv",
+          "csvData14919643.csv",
+          "csvData7778755.csv"
+        ],
+        "csvData11632972.csv": [
+          "csvData23195006.csv",
+          "csvData15352261.csv",
+          "csvData18409343.csv",
+          "csvData19687925.csv",
+          "csvData12116743.csv"
+        ]
+      }
+    },
+    "L1_L2": {
+      "metrics": {
+        "hit@1": 0.0,
+        "hit@3": 0.3333333333333333,
+        "hit@5": 0.3333333333333333,
+        "precision": 0.06666666666666667,
+        "recall": 0.3333333333333333,
+        "f1_score": 0.11111111111111112,
+        "valid_queries": 3
+      },
+      "time": 0.028063297271728516,
+      "avg_time": 0.009354432423909506,
+      "dynamic": false,
+      "predictions": {
+        "csvData22293691.csv": [
+          "csvData22980923.csv",
+          "csvData24643235.csv",
+          "csvData26294380.csv",
+          "csvData27008272__4.csv",
+          "csvData27008272__5.csv"
+        ],
+        "csvData10917663.csv": [
+          "csvData12357349.csv",
+          "csvData15196643.csv",
+          "csvData12520151.csv",
+          "csvData14919643.csv",
+          "csvData7778755.csv"
+        ],
+        "csvData11632972.csv": [
+          "csvData12116743.csv",
+          "csvData15352261.csv",
+          "csvData19687925.csv",
+          "csvData22226385.csv",
+          "csvData16681302.csv"
+        ]
+      }
+    },
+    "L1_L2_L3": {
+      "metrics": {
+        "hit@1": 0.0,
+        "hit@3": 0.3333333333333333,
+        "hit@5": 0.3333333333333333,
+        "precision": 0.06666666666666667,
+        "recall": 0.3333333333333333,
+        "f1_score": 0.11111111111111112,
+        "valid_queries": 3
+      },
+      "time": 0.027919292449951172,
+      "avg_time": 0.00930643081665039,
+      "dynamic": true,
+      "predictions": {
+        "csvData22293691.csv": [],
+        "csvData10917663.csv": [
+          "csvData12520151.csv",
+          "csvData12357349.csv",
+          "csvData15196643.csv",
+          "csvData14919643.csv",
+          "csvData7778755.csv"
+        ],
+        "csvData11632972.csv": [
+          "csvData12116743.csv",
+          "csvData15352261.csv",
+          "csvData19687925.csv",
+          "csvData22226385.csv",
+          "csvData16681302.csv"
+        ]
+      }
+    }
+  },
+  "summary": {
+    "best_layer": "L1",
+    "best_f1": 0.11111111111111112,
+    "best_hit1": 0.0
+  },
+  "optimization_summary": {
+    "join": "\n╔══════════════════════════════════════════════════════════════╗\n║  JOIN Dynamic Optimization Summary              ║\n╠══════════════════════════════════════════════════════════════╣\n║  Queries Processed:     3                              ║\n║  Total Adjustments:     0                              ║\n║                                                               ║\n║  Current Parameters:                                          ║\n║    • Confidence Threshold:  0.150                     ║\n║    • Min Score:  0.020                               ║\n║    • Max Results:  400                              ║\n║    • Vector TopK:  500                              ║\n║                                                               ║\n║  Recent Performance (last 3 queries):                      ║\n║    • Avg Precision:  0.067                       ║\n║    • Avg Recall:  0.333                          ║\n║    • Avg F1:  0.111                              ║\n║    • Avg Query Time:  2.50s                     ║\n╚══════════════════════════════════════════════════════════════╝\n",
+    "union": "No data yet for union"
+  }
+}

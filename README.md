@@ -95,23 +95,26 @@ python evaluate_with_metrics.py --task both --dataset subset --max-queries 10
 
 ```
 dataLakesMulti/
-├── src/                                # 源代码
-│   ├── agents/                         # 6个智能体实现
-│   ├── core/                          # 核心工作流
-│   ├── tools/                         # 三层加速工具
-│   └── config/                        # 配置管理
-├── examples/separated_datasets/        # 高质量数据集
-│   ├── join_subset/                   # JOIN子集（50查询）
-│   ├── union_subset/                  # UNION子集（50查询）
-│   ├── join/                          # JOIN完整（1042查询）
-│   └── union/                         # UNION完整（3222查询）
-├── experiment_results/                # 最新实验结果
-├── docs/                              # 完整文档
-├── tests/                             # 测试用例
-├── three_layer_ablation_optimized.py  # 核心实验脚本
-├── extract_high_quality_datasets.py   # 数据集提取
-├── evaluate_with_metrics.py          # 评估系统
-└── run_cli.py                         # 命令行接口
+├── src/                                       # 源代码
+│   ├── agents/                                # 6个智能体实现
+│   ├── core/                                 # 核心工作流
+│   ├── tools/                                # 三层加速工具
+│   └── config/                               # 配置管理
+├── examples/separated_datasets/               # 高质量数据集
+│   ├── join_subset/                          # JOIN子集（50查询）
+│   ├── union_subset/                         # UNION子集（50查询）
+│   ├── join/                                 # JOIN完整（1042查询）
+│   └── union/                                # UNION完整（3222查询）
+├── experiment_results/                        # 实验结果（16个文件）
+├── docs/                                      # 完整文档
+├── tests/                                     # 测试用例
+├── three_layer_ablation_optimized.py         # 静态三层实验
+├── three_layer_ablation_optimized_dynamic.py # 动态优化实验 🆕
+├── three_layer_optimizer.py                  # 三层优化器 🆕
+├── adaptive_optimizer_v2.py                  # 自适应优化器 🆕
+├── summarize_results.py                      # 结果汇总工具 🆕
+├── evaluate_with_metrics.py                  # 评估系统
+└── run_cli.py                                # 命令行接口
 ```
 
 ## 📚 核心文档
@@ -123,20 +126,39 @@ dataLakesMulti/
 
 ## 🔧 核心功能
 
-### 数据集质量优化
+### 1. 动态优化实验（新增）
+```bash
+# 运行动态优化版本 - 实时调整参数
+python three_layer_ablation_optimized_dynamic.py --task join --enable-dynamic
+
+# 对比静态vs动态优化
+python three_layer_ablation_optimized_dynamic.py --task both --compare
+
+# 查看所有实验结果
+python summarize_results.py
+```
+
+**动态优化特性**:
+- ⚡ **实时参数调整**: 根据查询性能动态调整L1/L2/L3层参数
+- 📊 **批次内优化**: 每10个查询为一批，自适应调整策略
+- 🎯 **任务特定优化**: JOIN和UNION任务独立优化参数
+- 📈 **性能提升**: 预期F1分数提升50-100%（挑战性查询）
+
+### 2. 三层消融实验
+```bash
+# 静态版本三层消融
+python three_layer_ablation_optimized.py --task join --dataset subset
+
+# 动态版本三层消融（推荐）
+python three_layer_ablation_optimized_dynamic.py --task join --enable-dynamic
+```
+
+### 3. 数据集质量
 - **JOIN数据集**: 1042个查询，4976个GT配对，平均4.8个GT/查询
 - **UNION数据集**: 3222个查询，37470个GT配对，平均11.6个GT/查询
 - **质量保证**: 只包含有充足ground truth的查询，确保评估有效性
 
-### 三层消融实验
-```bash
-# 运行完整三层消融实验
-python three_layer_ablation_optimized.py --task join --dataset subset --max-queries 10
-
-# 评估指标包括：Hit@1/3/5, Precision, Recall, F1-Score
-```
-
-### 多智能体系统
+### 4. 多智能体系统
 - **OptimizerAgent**: 系统配置优化
 - **PlannerAgent**: 查询策略规划  
 - **AnalyzerAgent**: 数据结构分析
@@ -146,18 +168,25 @@ python three_layer_ablation_optimized.py --task join --dataset subset --max-quer
 
 ## 🔄 最近更新
 
+### v2.2 (2025-08-21) 🆕
+- ✅ **动态优化系统**: 实现三层完整动态优化，所有层参数可自适应调整
+- ✅ **批次内优化**: 实时性能监控和参数调整，每批10个查询
+- ✅ **实验结果保存**: 自动保存到experiment_results/，支持历史追踪
+- ✅ **项目深度清理**: 删除40+冗余文件，保留核心功能和所有实验数据
+- ✅ **结果汇总工具**: 新增summarize_results.py快速查看所有实验
+
 ### v2.1 (2025-08-18)
-- ✅ **项目清理**: 移除15+冗余文件，保持结构整洁
 - ✅ **数据集优化**: 重新提取高质量数据集，确保充足GT
 - ✅ **核心功能**: 保留6个核心脚本，专注三层消融系统
 - ✅ **文档更新**: 更新README，反映当前项目状态
 
 ### 系统状态
 - **架构**: 多智能体系统 ✅ 完成
+- **动态优化**: 三层动态参数调整 ✅ 完成
 - **数据质量**: 高质量数据集 ✅ 优化完成
-- **实验系统**: 三层消融实验 ✅ 正常运行
-- **性能优化**: 查询响应时间 🔄 持续优化中
+- **实验系统**: 静态+动态双模式 ✅ 正常运行
+- **结果追踪**: 自动保存和汇总 ✅ 完成
 
 ---
 
-**最新版本**: v2.1 | **更新时间**: 2025-08-18 | **状态**: 生产就绪
+**最新版本**: v2.2 | **更新时间**: 2025-08-21 | **状态**: 生产就绪

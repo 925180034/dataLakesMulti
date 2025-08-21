@@ -27,6 +27,9 @@ import numpy as np
 # 添加项目路径
 sys.path.insert(0, str(Path(__file__).parent))
 
+# 首先导入配置模块，自动启用离线模式
+from src import config  # 这会自动设置离线模式
+
 # 设置日志
 logging.basicConfig(
     level=logging.INFO,

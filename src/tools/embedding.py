@@ -167,9 +167,25 @@ class SentenceTransformerEmbeddingGenerator(EmbeddingGenerator):
             return
             
         try:
+            # 设置离线模式环境变量
+            import os
+            os.environ['HF_HUB_OFFLINE'] = '1'
+            os.environ['TRANSFORMERS_OFFLINE'] = '1'
+            os.environ['HF_HOME'] = '/root/.cache/huggingface'
+            os.environ['HUGGINGFACE_HUB_CACHE'] = '/root/.cache/huggingface/hub'
+            os.environ['HF_HUB_DISABLE_TELEMETRY'] = '1'
+            
             from sentence_transformers import SentenceTransformer
             logger.info(f"正在初始化SentenceTransformer模型: {self.model_name}")
-            self.model = SentenceTransformer(self.model_name)
+            
+            # 尝试从本地缓存加载
+            local_model_path = f"/root/.cache/huggingface/hub/models--sentence-transformers--{self.model_name}"
+            if os.path.exists(local_model_path):
+                logger.info(f"使用本地缓存模型: {local_model_path}")
+                self.model = SentenceTransformer(self.model_name, cache_folder="/root/.cache/huggingface/hub")
+            else:
+                self.model = SentenceTransformer(self.model_name)
+            
             self._model_initialized = True
             logger.info(f"初始化SentenceTransformer模型完成: {self.model_name}")
         except ImportError:
