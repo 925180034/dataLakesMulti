@@ -1,0 +1,191 @@
+# JOIN任务专用配置
+# 针对关系推理优化的参数配置
+project_name: Multi-Agent Data Lake Discovery (JOIN Optimized)
+version: 2.0-join-optimized
+debug: false
+task_type: join
+
+# LLM配置 - JOIN需要更强的推理能力
+llm:
+  provider: gemini
+  model_name: gemini-1.5-flash
+  temperature: 0.1  # 稍高温度增加创造性
+  max_tokens: 1500  # 更多token用于复杂推理
+  timeout: 30
+  max_retries: 5
+  retry_delay: 2
+  batch_size: 8  # 小批次确保质量
+
+# 向量搜索配置 - 重点语义理解
+vector_search:
+  similarity_threshold: 0.25  # 更低阈值，捕获弱关系
+  top_k: 120  # 更多候选
+  use_precomputed: true
+  embedding_model: all-MiniLM-L6-v2
+  index_type: hnsw
+  hnsw_params:
+    M: 24  # 增加连接数
+    ef_construction: 300  
+    ef_search: 200
+  # JOIN特定参数
+  focus_on_column_semantics: true
+  ignore_table_name_similarity: true  # 忽略表名相似性
+
+# 元数据过滤 - 放宽结构限制
+metadata_filter:
+  column_similarity_threshold: 0.25  # 很低的阈值
+  min_column_overlap: 1  # 最少1列重叠即可
+  fuzzy_match: true
+  use_type_matching: true
+  use_name_similarity: false  # 不依赖名称相似
+  max_candidates: 200  # 更多候选
+  # JOIN特定参数
+  weights:
+    table_name: 0.05  # 几乎忽略表名
+    column_name: 0.30  # 列名中等重要
+    column_type: 0.35  # 类型匹配很重要
+    column_value: 0.30  # 值分布重要
+  foreign_key_detection: true  # 检测潜在外键
+  relationship_patterns:
+    - "*_id"  # ID列
+    - "*_key"  # 键列
+    - "*_code"  # 代码列
+    - "*_no"  # 编号列
+
+# LLM匹配器 - 强化推理验证
+llm_matcher:
+  confidence_threshold: 0.40  # 降低阈值
+  batch_size: 8
+  use_caching: true
+  cache_ttl: 3600
+  max_retries: 3
+  timeout: 25
+  enable_llm: true
+  # JOIN特定参数
+  prompt_focus: "relationship_reasoning"  # 关系推理
+  include_column_values: true  # 包含列值样本
+  analyze_foreign_keys: true  # 分析外键关系
+  semantic_matching_weight: 0.7  # 语义匹配权重高
+
+# 评分策略 - 适合JOIN任务
+scoring:
+  # JOIN优化权重分配
+  weights:
+    metadata: 0.15  # 降低元数据权重
+    vector: 0.35    # 中等向量权重
+    llm: 0.50       # 最高LLM权重（推理能力）
+  
+  use_composite_score: true
+  normalize_scores: true
+  ranking_algorithm: weighted_sum
+  
+  # JOIN特定加分项
+  boost_factors:
+    exact_name_match: 1.0  # 不加分（表名通常不同）
+    high_column_overlap: 1.1  # 少量加分
+    same_domain: 1.05  # 几乎不加分
+    llm_high_confidence: 1.4  # 大幅加分
+    foreign_key_match: 1.5  # 外键匹配大幅加分
+    semantic_relationship: 1.3  # 语义关系加分
+
+# 多智能体系统配置
+agents:
+  # 优化器Agent
+  optimizer:
+    enable_cache: true
+    cache_ttl: 3600
+    parallel_workers: 6
+    batch_size: 8
+    optimization_focus: "relationship_discovery"
+  
+  # 规划器Agent
+  planner:
+    enable_cache: true
+    cache_ttl: 3600
+    strategy_preference: "bottom-up"  # JOIN优先bottom-up
+    enable_relationship_analysis: true
+  
+  # 分析器Agent
+  analyzer:
+    enable_llm: true
+    analysis_depth: "deep"  # 深度分析
+    pattern_detection: true
+    focus_areas:
+      - "foreign_key_candidates"
+      - "semantic_relationships"
+      - "value_distributions"
+  
+  # 搜索器Agent
+  searcher:
+    parallel_search: true
+    max_parallel: 4
+    use_multi_layer: true
+    layer_config:
+      L1_metadata: true
+      L2_vector: true
+      L3_llm: true
+    # JOIN特定配置
+    search_strategy: "semantic_first"  # 语义优先
+    expand_search_on_low_confidence: true
+  
+  # 匹配器Agent
+  matcher:
+    enable_llm: true
+    batch_size: 8
+    parallel_matching: true
+    confidence_boost: 0.9  # 降低boost
+    cache_results: true
+    # JOIN特定配置
+    matching_strategy: "relationship_based"
+    require_semantic_validation: true
+    min_semantic_score: 0.3
+  
+  # 聚合器Agent
+  aggregator:
+    min_score: 0.25  # 更低的最小分数
+    max_results: 30  # 更多结果
+    use_composite_ranking: true
+    filter_self_match: false  # 允许self-join
+    # JOIN特定配置
+    prefer_diverse_results: true  # 偏好多样化结果
+    relationship_weight: 0.4  # 关系权重
+
+# 性能优化
+performance:
+  enable_parallel: true
+  max_workers: 4
+  batch_processing: true
+  cache_enabled: true
+  cache_size: 1500
+  memory_limit: 6144  # MB
+  
+  # 超时设置
+  timeouts:
+    agent_timeout: 90  # 更长超时
+    llm_timeout: 40
+    search_timeout: 15
+
+# 数据目录
+data_dir: ./data
+cache_dir: ./cache
+log_dir: ./logs
+
+# 日志配置
+logging:
+  level: INFO
+  format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+  file: logs/system_join.log
+  rotate: true
+  max_size: 10485760  # 10MB
+  backup_count: 5
+
+# 实验配置
+experiment:
+  enable_metrics: true
+  track_performance: true
+  save_intermediate: true  # 保存中间结果
+  benchmark_mode: false
+  task_specific_metrics:
+    - "foreign_key_accuracy"
+    - "semantic_match_rate"
+    - "relationship_discovery_rate"

@@ -51,10 +51,11 @@ class IntraBatchOptimizer:
         self.adjustment_interval = 5  # 每5个查询评估一次
         self.min_samples = 3  # 最少需要3个样本才开始调整
         
-        # 目标性能指标
+        # ⭐ 更新：基于实际测试结果的现实目标
+        # JOIN最高F1只能到0.12，UNION最高F1只能到0.31
         self.targets = {
-            'join': {'precision': 0.3, 'recall': 0.4, 'f1': 0.35},
-            'union': {'precision': 0.5, 'recall': 0.35, 'f1': 0.4}
+            'join': {'precision': 0.20, 'recall': 0.25, 'f1': 0.20},   # 更现实的JOIN目标
+            'union': {'precision': 0.35, 'recall': 0.30, 'f1': 0.32}   # 更现实的UNION目标
         }
         
         # 调整步长
@@ -64,23 +65,47 @@ class IntraBatchOptimizer:
             'large': 0.10    # 大幅调整
         }
         
+        # ⭐ 新增：任务特定的优化特性
+        self.task_features = {
+            'join': {
+                'foreign_key_detection': True,
+                'relationship_analysis': True,
+                'ignore_table_name': True,
+                'boost_factors': {
+                    'foreign_key_match': 1.5,
+                    'semantic_relationship': 1.3,
+                    'llm_high_confidence': 1.4
+                }
+            },
+            'union': {
+                'prefix_matching': True,
+                'pattern_recognition': True,
+                'same_source_detection': True,
+                'boost_factors': {
+                    'same_prefix': 2.0,
+                    'same_pattern': 1.6,
+                    'exact_name_match': 1.8
+                }
+            }
+        }
+        
     def initialize_batch(self, task_type: str, data_size: int):
         """初始化批次，设置初始参数"""
         state = self.states[task_type]
         
-        # 根据任务类型设置初始参数
+        # ⭐ 更新：使用基于config.yml和分析结果的优化初始参数
         if task_type == 'join':
-            # JOIN: 激进初始参数
-            state.llm_confidence_threshold = 0.15
-            state.aggregator_min_score = 0.02
-            state.aggregator_max_results = 400
-            state.vector_top_k = 500
+            # JOIN: 关系推理优化 - 低阈值捕获弱关系
+            state.llm_confidence_threshold = 0.40  # 从0.15改为0.40（基于分析）
+            state.aggregator_min_score = 0.08      # 从0.02改为0.08
+            state.aggregator_max_results = 200     # 从400改为200（更合理）
+            state.vector_top_k = 120               # 从500改为120（基于分析）
         else:  # union
-            # UNION: 平衡初始参数
-            state.llm_confidence_threshold = 0.20
-            state.aggregator_min_score = 0.05
-            state.aggregator_max_results = 200
-            state.vector_top_k = 300
+            # UNION: 模式匹配优化 - 高阈值确保精确
+            state.llm_confidence_threshold = 0.60  # 从0.20改为0.60（基于分析）
+            state.aggregator_min_score = 0.12      # 从0.05改为0.12
+            state.aggregator_max_results = 80      # 从200改为80（更精确）
+            state.vector_top_k = 40                # 从300改为40（基于分析）
             
         # 重置统计
         state.queries_processed = 0
@@ -237,8 +262,74 @@ class IntraBatchOptimizer:
             'aggregator_max_results': state.aggregator_max_results,
             'vector_top_k': state.vector_top_k,
             'queries_processed': state.queries_processed,
-            'total_adjustments': state.total_adjustments
+            'total_adjustments': state.total_adjustments,
+            'task_features': self.task_features.get(task_type, {})  # 包含任务特定特性
         }
+    
+    def apply_boost_factor(self, task_type: str, score: float, table1: str, table2: str) -> float:
+        """应用任务特定的boost factor
+        
+        Args:
+            task_type: 'join' 或 'union'
+            score: 原始分数
+            table1: 查询表名
+            table2: 候选表名
+            
+        Returns:
+            调整后的分数
+        """
+        boost_factors = self.task_features[task_type].get('boost_factors', {})
+        
+        if task_type == 'join':
+            # JOIN特定boost
+            if self._has_foreign_key_pattern(table1, table2):
+                score *= boost_factors.get('foreign_key_match', 1.5)
+                
+        elif task_type == 'union':
+            # UNION特定boost
+            if self._has_same_prefix(table1, table2):
+                score *= boost_factors.get('same_prefix', 2.0)
+            elif self._has_same_pattern(table1, table2):
+                score *= boost_factors.get('same_pattern', 1.6)
+        
+        return score
+    
+    def _has_foreign_key_pattern(self, table1: str, table2: str) -> bool:
+        """检查是否有潜在的外键关系"""
+        fk_patterns = ['_id', '_key', '_code', '_no']
+        t1_lower = table1.lower()
+        t2_lower = table2.lower()
+        
+        for pattern in fk_patterns:
+            if pattern in t1_lower or pattern in t2_lower:
+                base1 = t1_lower.replace(pattern, '')
+                base2 = t2_lower.replace(pattern, '')
+                if base1 in t2_lower or base2 in t1_lower:
+                    return True
+        return False
+    
+    def _has_same_prefix(self, table1: str, table2: str) -> bool:
+        """检查是否有相同前缀"""
+        def get_prefix(name):
+            if '__' in name:
+                return name.split('__')[0]
+            elif '_' in name:
+                parts = name.split('_')
+                if len(parts) > 1:
+                    return parts[0]
+            return name[:min(10, len(name))]
+        
+        return get_prefix(table1) == get_prefix(table2)
+    
+    def _has_same_pattern(self, table1: str, table2: str) -> bool:
+        """检查是否有相同模式"""
+        import re
+        
+        # 提取模式（将数字替换为占位符）
+        pattern1 = re.sub(r'\d+', '#', table1)
+        pattern2 = re.sub(r'\d+', '#', table2)
+        
+        return pattern1 == pattern2
         
     def get_optimization_summary(self, task_type: str) -> str:
         """获取优化总结"""

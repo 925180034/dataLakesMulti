@@ -150,17 +150,26 @@ def initialize_shared_resources_l2(tables: List[Dict], dataset_type: str) -> Dic
 
 
 def initialize_shared_resources_l3(tables: List[Dict], task_type: str, dataset_type: str) -> Dict:
-    """初始化完整三层共享资源（包含OptimizerAgent和PlannerAgent配置）"""
+    """初始化完整三层共享资源（包含任务特定的优化配置）"""
     logger.info("🚀 初始化L1+L2+L3层共享资源...")
     
     # 初始化L1+L2资源
     l2_config = initialize_shared_resources_l2(tables, dataset_type)
     
+    # ⭐ 使用优化后的动态优化器
+    from adaptive_optimizer_v2 import IntraBatchOptimizer
+    dynamic_optimizer = IntraBatchOptimizer()
+    dynamic_optimizer.initialize_batch(task_type, len(tables))
+    
+    # 获取优化配置
+    optimization_config = dynamic_optimizer.get_current_params(task_type)
+    
     # 初始化工作流（获取优化配置）
     from src.core.langgraph_workflow import DataLakeDiscoveryWorkflow
     workflow = DataLakeDiscoveryWorkflow()
     
-    # 获取批处理优化配置（只调用一次OptimizerAgent）
+    # 如果需要原始OptimizerAgent的其他功能，仍然调用它
+    # 但使用任务特定的配置覆盖其默认设置
     from src.agents.optimizer_agent import OptimizerAgent
     from types import SimpleNamespace
     optimizer = OptimizerAgent()
@@ -172,8 +181,18 @@ def initialize_shared_resources_l3(tables: List[Dict], task_type: str, dataset_t
         'all_tables': tables
     }
     
+    # 获取原始配置并与任务特定配置合并
     result = optimizer.process(state)
-    optimization_config = result.get('optimization_config')
+    original_config = result.get('optimization_config', {})
+    
+    # 如果original_config不是字典，转换为字典
+    if hasattr(original_config, '__dict__'):
+        original_config = original_config.__dict__
+    elif not isinstance(original_config, dict):
+        original_config = {}
+    
+    # 合并配置，任务特定配置优先
+    merged_config = {**original_config, **optimization_config}
     
     # 获取批处理执行策略（只调用一次PlannerAgent）
     from src.agents.planner_agent import PlannerAgent
@@ -188,15 +207,17 @@ def initialize_shared_resources_l3(tables: List[Dict], task_type: str, dataset_t
     config = {
         **l2_config,
         'layer': 'L1+L2+L3',
-        'optimization_config': optimization_config,
+        'optimization_config': merged_config,
         'execution_strategy': execution_strategy,
         'task_type': task_type,
+        'dynamic_optimizer': dynamic_optimizer,  # 保存动态优化器实例供后续使用
         'workflow_initialized': True
     }
     
-    logger.info(f"✅ L1+L2+L3层资源初始化完成")
-    logger.info(f"  - OptimizerAgent配置: {optimization_config}")
-    logger.info(f"  - PlannerAgent策略: {execution_strategy}")
+    logger.info(f"✅ L1+L2+L3层资源初始化完成 - {task_type.upper()}任务优化")
+    logger.info(f"  - 初始阈值: {optimization_config['llm_confidence_threshold']:.3f}")
+    logger.info(f"  - 初始候选: {optimization_config['aggregator_max_results']}")
+    logger.info(f"  - 动态优化: 启用（每5个查询调整一次）")
     
     return config
 
@@ -381,10 +402,13 @@ def process_query_l2(args: Tuple) -> Dict:
 
 
 def process_query_l3(args: Tuple) -> Dict:
-    """处理单个查询 - 完整三层（优化版：直接使用LLM验证确保UNION任务正确处理）"""
+    """处理单个查询 - 完整三层（优化版：任务特定优化和boost factors）"""
     query, tables, shared_config, cache_file_path = args
     query_table_name = query.get('query_table', '')
     task_type = query.get('task_type', shared_config.get('task_type', 'join'))
+    
+    # 获取动态优化器实例（如果存在）
+    dynamic_optimizer = shared_config.get('dynamic_optimizer', None)
     
     # 检查缓存
     cache_key = hashlib.md5(
@@ -465,12 +489,26 @@ def process_query_l3(args: Tuple) -> Dict:
                 )
                 loop.close()
                 
-                # 提取验证通过的表（使用OptimizerAgent的置信度阈值）
-                l3_predictions = []
+                # 提取验证通过的表并应用任务特定的boost factors
+                l3_scored = []
                 for i, result in enumerate(llm_results):
                     confidence = result.get('confidence', 0)
-                    if result.get('is_match', False) and confidence > confidence_threshold:
-                        l3_predictions.append(candidate_tables[i].get('name'))
+                    candidate_name = candidate_tables[i].get('name')
+                    
+                    # 应用任务特定的boost factor（如果有优化器）
+                    if dynamic_optimizer:
+                        boosted_confidence = dynamic_optimizer.apply_boost_factor(
+                            task_type, confidence, query_table_name, candidate_name
+                        )
+                    else:
+                        boosted_confidence = confidence
+                    
+                    if result.get('is_match', False) and boosted_confidence > confidence_threshold:
+                        l3_scored.append((candidate_name, boosted_confidence))
+                
+                # 按boost后的置信度排序
+                l3_scored.sort(key=lambda x: x[1], reverse=True)
+                l3_predictions = [name for name, score in l3_scored]
                 
                 logger.info(f"L3层LLM验证: {len(l3_predictions)}/{len(candidate_tables)} 通过置信度阈值 {confidence_threshold}")
                 

@@ -1,0 +1,191 @@
+# UNION任务专用配置
+# 针对模式匹配优化的参数配置
+project_name: Multi-Agent Data Lake Discovery (UNION Optimized)
+version: 2.0-union-optimized
+debug: false
+task_type: union
+
+# LLM配置 - UNION需要精确模式识别
+llm:
+  provider: gemini
+  model_name: gemini-1.5-flash
+  temperature: 0.0  # 零温度确保一致性
+  max_tokens: 800  # 较少token足够
+  timeout: 20
+  max_retries: 3
+  retry_delay: 1
+  batch_size: 15  # 大批次提高效率
+
+# 向量搜索配置 - 重点结构相似
+vector_search:
+  similarity_threshold: 0.50  # 高阈值确保相似性
+  top_k: 40  # 较少候选即可
+  use_precomputed: true
+  embedding_model: all-MiniLM-L6-v2
+  index_type: hnsw
+  hnsw_params:
+    M: 12  # 标准连接数
+    ef_construction: 150
+    ef_search: 100
+  # UNION特定参数
+  focus_on_structure_similarity: true
+  boost_same_prefix_tables: true  # 增强同前缀表
+
+# 元数据过滤 - 严格结构匹配
+metadata_filter:
+  column_similarity_threshold: 0.50  # 高阈值
+  min_column_overlap: 3  # 至少3列重叠
+  fuzzy_match: false  # 精确匹配
+  use_type_matching: true
+  use_name_similarity: true  # 使用名称相似
+  max_candidates: 80  # 较少候选
+  # UNION特定参数
+  weights:
+    table_name: 0.35  # 表名很重要
+    column_name: 0.30  # 列名重要
+    column_type: 0.25  # 类型重要
+    column_value: 0.10  # 值不太重要
+  prefix_matching: true  # 前缀匹配
+  suffix_matching: true  # 后缀匹配
+  pattern_recognition:
+    - "*__[0-9]+"  # 编号模式
+    - "*_v[0-9]+"  # 版本模式
+    - "*_[0-9]{8}"  # 日期模式
+
+# LLM匹配器 - 模式验证
+llm_matcher:
+  confidence_threshold: 0.60  # 高阈值
+  batch_size: 15
+  use_caching: true
+  cache_ttl: 7200  # 更长缓存
+  max_retries: 2
+  timeout: 15
+  enable_llm: true
+  # UNION特定参数
+  prompt_focus: "pattern_matching"  # 模式匹配
+  include_column_values: false  # 不需要列值
+  analyze_structure: true  # 分析结构
+  pattern_matching_weight: 0.8  # 模式匹配权重高
+
+# 评分策略 - 适合UNION任务
+scoring:
+  # UNION优化权重分配
+  weights:
+    metadata: 0.40  # 高元数据权重
+    vector: 0.35    # 中等向量权重
+    llm: 0.25       # 较低LLM权重（验证用）
+  
+  use_composite_score: true
+  normalize_scores: true
+  ranking_algorithm: weighted_sum
+  
+  # UNION特定加分项
+  boost_factors:
+    exact_name_match: 1.8  # 大幅加分
+    high_column_overlap: 1.5  # 大幅加分
+    same_domain: 1.4  # 显著加分
+    llm_high_confidence: 1.2  # 适度加分
+    same_prefix: 2.0  # 同前缀大幅加分
+    same_pattern: 1.6  # 同模式加分
+
+# 多智能体系统配置
+agents:
+  # 优化器Agent
+  optimizer:
+    enable_cache: true
+    cache_ttl: 7200
+    parallel_workers: 10
+    batch_size: 15
+    optimization_focus: "pattern_recognition"
+  
+  # 规划器Agent
+  planner:
+    enable_cache: true
+    cache_ttl: 7200
+    strategy_preference: "top-down"  # UNION优先top-down
+    enable_pattern_analysis: true
+  
+  # 分析器Agent
+  analyzer:
+    enable_llm: true
+    analysis_depth: "standard"  # 标准分析
+    pattern_detection: true
+    focus_areas:
+      - "table_name_patterns"
+      - "column_structure"
+      - "data_types"
+  
+  # 搜索器Agent
+  searcher:
+    parallel_search: true
+    max_parallel: 6
+    use_multi_layer: true
+    layer_config:
+      L1_metadata: true
+      L2_vector: true
+      L3_llm: true
+    # UNION特定配置
+    search_strategy: "pattern_first"  # 模式优先
+    use_prefix_index: true  # 使用前缀索引
+  
+  # 匹配器Agent
+  matcher:
+    enable_llm: true
+    batch_size: 15
+    parallel_matching: true
+    confidence_boost: 1.3  # 增加boost
+    cache_results: true
+    # UNION特定配置
+    matching_strategy: "pattern_based"
+    require_structure_validation: true
+    min_structure_score: 0.5
+  
+  # 聚合器Agent
+  aggregator:
+    min_score: 0.40  # 较高的最小分数
+    max_results: 15  # 较少结果
+    use_composite_ranking: true
+    filter_self_match: true  # 过滤自匹配
+    # UNION特定配置
+    prefer_same_source: true  # 偏好同源表
+    pattern_weight: 0.5  # 模式权重
+
+# 性能优化
+performance:
+  enable_parallel: true
+  max_workers: 5
+  batch_processing: true
+  cache_enabled: true
+  cache_size: 2000
+  memory_limit: 4096  # MB
+  
+  # 超时设置
+  timeouts:
+    agent_timeout: 60
+    llm_timeout: 25
+    search_timeout: 10
+
+# 数据目录
+data_dir: ./data
+cache_dir: ./cache
+log_dir: ./logs
+
+# 日志配置
+logging:
+  level: INFO
+  format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+  file: logs/system_union.log
+  rotate: true
+  max_size: 10485760  # 10MB
+  backup_count: 5
+
+# 实验配置
+experiment:
+  enable_metrics: true
+  track_performance: true
+  save_intermediate: false  # 不需要中间结果
+  benchmark_mode: false
+  task_specific_metrics:
+    - "pattern_match_accuracy"
+    - "same_source_rate"
+    - "structure_similarity_score"
