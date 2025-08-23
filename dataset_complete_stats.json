@@ -1,0 +1,158 @@
+{
+  "webtable": {
+    "join": {
+      "subset": {
+        "queries": 100,
+        "tables": 195,
+        "ground_truth": 645,
+        "coverage": 100.0,
+        "rows_stats": {
+          "min": 15,
+          "max": 443,
+          "mean": 107.12,
+          "std": 100.55
+        },
+        "columns_stats": {
+          "min": 4,
+          "max": 11,
+          "mean": 8.33,
+          "std": 1.51
+        }
+      },
+      "complete": {
+        "queries": 1534,
+        "tables": 1534,
+        "ground_truth": 6805,
+        "coverage": 100.0,
+        "rows_stats": {
+          "min": 5,
+          "max": 477,
+          "mean": 77.09,
+          "std": 83.44
+        },
+        "columns_stats": {
+          "min": 3,
+          "max": 24,
+          "mean": 9.51,
+          "std": 3.29
+        }
+      }
+    },
+    "union": {
+      "subset": {
+        "queries": 100,
+        "tables": 397,
+        "ground_truth": 726,
+        "coverage": 100.0,
+        "rows_stats": {
+          "min": 5,
+          "max": 615,
+          "mean": 98.15,
+          "std": 98.5
+        },
+        "columns_stats": {
+          "min": 3,
+          "max": 22,
+          "mean": 11.77,
+          "std": 6.16
+        }
+      },
+      "complete": {
+        "queries": 5487,
+        "tables": 5487,
+        "ground_truth": 41903,
+        "coverage": 100.0,
+        "rows_stats": {
+          "min": 5,
+          "max": 640,
+          "mean": 61.08,
+          "std": 77.48
+        },
+        "columns_stats": {
+          "min": 3,
+          "max": 24,
+          "mean": 10.24,
+          "std": 5.02
+        }
+      }
+    }
+  },
+  "opendata": {
+    "join": {
+      "subset": {
+        "queries": 100,
+        "tables": 169,
+        "ground_truth": 2534,
+        "coverage": 100.0,
+        "rows_stats": {
+          "min": 554,
+          "max": 1000,
+          "mean": 984.37,
+          "std": 72.68
+        },
+        "columns_stats": {
+          "min": 3,
+          "max": 64,
+          "mean": 27.4,
+          "std": 11.63
+        }
+      },
+      "complete": {
+        "queries": 500,
+        "tables": 500,
+        "ground_truth": 8458,
+        "coverage": 100.0,
+        "rows_stats": {
+          "min": 49,
+          "max": 1000,
+          "mean": 982.72,
+          "std": 98.21
+        },
+        "columns_stats": {
+          "min": 3,
+          "max": 195,
+          "mean": 20.46,
+          "std": 15.45
+        }
+      }
+    },
+    "union": {
+      "subset": {
+        "queries": 100,
+        "tables": 288,
+        "ground_truth": 855,
+        "coverage": 100.0,
+        "rows_stats": {
+          "min": 160,
+          "max": 1000,
+          "mean": 997.08,
+          "std": 49.41
+        },
+        "columns_stats": {
+          "min": 4,
+          "max": 20,
+          "mean": 14.19,
+          "std": 2.27
+        }
+      },
+      "complete": {
+        "queries": 3095,
+        "tables": 3095,
+        "ground_truth": 39040,
+        "coverage": 100.0,
+        "rows_stats": {
+          "min": 5,
+          "max": 1000,
+          "mean": 969.37,
+          "std": 143.95
+        },
+        "columns_stats": {
+          "min": 3,
+          "max": 329,
+          "mean": 19.85,
+          "std": 20.58
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "join": {
+    "subset": {
+      "queries": 100,
+      "tables": 169,
+      "ground_truth": 2534
+    },
+    "complete": {
+      "queries": 500,
+      "tables": 500,
+      "ground_truth": 8458
+    }
+  },
+  "union": {
+    "subset": {
+      "queries": 100,
+      "tables": 292,
+      "ground_truth": 875
+    },
+    "complete": {
+      "queries": 3006,
+      "tables": 3006,
+      "ground_truth": 37159
+    }
+  }
+}

@@ -46,23 +46,125 @@ os.environ['USE_SMD_ENHANCED'] = 'true'
 os.environ['PYTHONHASHSEED'] = '0'
 
 
+# ================== 缓存管理器 ==================
+class CacheManager:
+    """统一的缓存管理器，提供内存和磁盘双层缓存"""
+    
+    def __init__(self, cache_dir: str = "cache/experiment_cache"):
+        self.cache_dir = Path(cache_dir)
+        self.cache_dir.mkdir(parents=True, exist_ok=True)
+        self.memory_cache = {}  # 内存缓存
+        self.stats = {
+            'hits': 0,
+            'misses': 0,
+            'saves': 0
+        }
+        logger.info(f"✅ 缓存系统初始化: {self.cache_dir}")
+    
+    def _get_cache_key(self, operation: str, query: Dict, params: Dict = None) -> str:
+        """生成缓存键"""
+        key_data = {
+            'op': operation,
+            'query': query.get('query_table', '') if isinstance(query, dict) else str(query),
+            'params': params or {}
+        }
+        key_str = json.dumps(key_data, sort_keys=True)
+        return hashlib.md5(key_str.encode()).hexdigest()
+    
+    def get(self, operation: str, query: Dict, params: Dict = None) -> Optional[Any]:
+        """获取缓存结果"""
+        cache_key = self._get_cache_key(operation, query, params)
+        
+        # 先检查内存缓存
+        if cache_key in self.memory_cache:
+            self.stats['hits'] += 1
+            return self.memory_cache[cache_key]
+        
+        # 检查磁盘缓存
+        cache_file = self.cache_dir / f"{operation}_{cache_key}.pkl"
+        if cache_file.exists():
+            try:
+                with open(cache_file, 'rb') as f:
+                    result = pickle.load(f)
+                    self.memory_cache[cache_key] = result  # 加载到内存
+                    self.stats['hits'] += 1
+                    return result
+            except:
+                pass
+        
+        self.stats['misses'] += 1
+        return None
+    
+    def set(self, operation: str, query: Dict, result: Any, params: Dict = None):
+        """保存缓存结果"""
+        cache_key = self._get_cache_key(operation, query, params)
+        
+        # 保存到内存缓存
+        self.memory_cache[cache_key] = result
+        
+        # 保存到磁盘缓存
+        cache_file = self.cache_dir / f"{operation}_{cache_key}.pkl"
+        try:
+            with open(cache_file, 'wb') as f:
+                pickle.dump(result, f)
+            self.stats['saves'] += 1
+        except Exception as e:
+            logger.warning(f"缓存保存失败: {e}")
+    
+    def get_stats(self) -> Dict:
+        """获取缓存统计"""
+        total = self.stats['hits'] + self.stats['misses']
+        hit_rate = self.stats['hits'] / total if total > 0 else 0
+        return {
+            'hits': self.stats['hits'],
+            'misses': self.stats['misses'],
+            'saves': self.stats['saves'],
+            'hit_rate': f"{hit_rate:.1%}",
+            'memory_items': len(self.memory_cache)
+        }
+    
+    def clear(self):
+        """清空缓存"""
+        self.memory_cache.clear()
+        for cache_file in self.cache_dir.glob("*.pkl"):
+            cache_file.unlink()
+        logger.info("缓存已清空")
+
+
+# 全局缓存管理器
+cache_manager = None
+
+def init_cache_manager(dataset_name: str = '', task_type: str = '', dataset_type: str = ''):
+    """初始化全局缓存管理器"""
+    global cache_manager
+    if cache_manager is None:
+        cache_dir = f"cache/experiment_cache/{dataset_name}_{task_type}_{dataset_type}".strip('_')
+        cache_manager = CacheManager(cache_dir)
+    return cache_manager
+
+
 def load_dataset(task_type: str, dataset_type: str = 'subset') -> tuple:
     """加载数据集
     
     Args:
         task_type: 'join' 或 'union'
-        dataset_type: 'subset', 'true_subset', 'complete' 或 'full'
+        dataset_type: 'subset', 'true_subset', 'complete', 'full' 或自定义路径
     """
-    # 处理数据集路径
-    if dataset_type == 'complete' or dataset_type == 'full':
-        # 完整数据集没有后缀
-        base_dir = Path(f'examples/separated_datasets/{task_type}')
-    elif dataset_type == 'true_subset':
-        # 真正的子集数据
-        base_dir = Path(f'examples/separated_datasets/{task_type}_true_subset')
+    # 检查是否是自定义路径
+    if '/' in dataset_type or dataset_type.startswith('examples'):
+        # 直接使用提供的路径
+        base_dir = Path(dataset_type)
     else:
-        # subset数据集有_subset后缀（注意：当前subset和complete相同）
-        base_dir = Path(f'examples/separated_datasets/{task_type}_{dataset_type}')
+        # 处理预定义的数据集路径
+        if dataset_type == 'complete' or dataset_type == 'full':
+            # 完整数据集没有后缀
+            base_dir = Path(f'examples/separated_datasets/{task_type}')
+        elif dataset_type == 'true_subset':
+            # 真正的子集数据
+            base_dir = Path(f'examples/separated_datasets/{task_type}_true_subset')
+        else:
+            # subset数据集有_subset后缀（注意：当前subset和complete相同）
+            base_dir = Path(f'examples/separated_datasets/{task_type}_{dataset_type}')
     
     with open(base_dir / 'tables.json', 'r') as f:
         tables = json.load(f)
@@ -103,16 +205,23 @@ def initialize_shared_resources_l1(tables: List[Dict], dataset_type: str) -> Dic
     
     from src.tools.smd_enhanced_metadata_filter import SMDEnhancedMetadataFilter
     
-    # 初始化元数据过滤器
+    # 初始化元数据过滤器并预构建索引
     metadata_filter = SMDEnhancedMetadataFilter()
     
-    # 元数据过滤器不需要预处理，它在filter_by_column_overlap中处理
+    # 预构建SMD索引（只构建一次，所有查询共享）
+    logger.info(f"📊 预构建SMD索引（{len(tables)}个表）...")
+    metadata_filter.build_index(tables)
+    
+    # 序列化索引以便在进程间共享
+    smd_index_serialized = pickle.dumps(metadata_filter)
+    logger.info(f"✅ SMD索引构建完成，大小: {len(smd_index_serialized) / 1024:.1f}KB")
     
     config = {
         'layer': 'L1',
         'table_count': len(tables),
         'dataset_type': dataset_type,
-        'filter_initialized': True
+        'filter_initialized': True,
+        'smd_index': smd_index_serialized  # 添加序列化的索引
     }
     
     logger.info("✅ L1层资源初始化完成")
@@ -227,24 +336,30 @@ def process_query_l1(args: Tuple) -> Dict:
     query, tables, shared_config, cache_file_path = args
     query_table_name = query.get('query_table', '')
     
-    # 检查缓存
-    cache_key = hashlib.md5(f"L1:{query_table_name}:{len(tables)}".encode()).hexdigest()
+    # 初始化或获取缓存管理器（子进程需要）
+    global cache_manager
+    if cache_manager is None and cache_file_path:
+        # cache_file_path现在是缓存目录路径
+        cache_dir = cache_file_path
+        cache_manager = CacheManager(cache_dir)
     
-    # 加载缓存
-    cache = {}
-    if Path(cache_file_path).exists():
-        try:
-            with open(cache_file_path, 'rb') as f:
-                cache = pickle.load(f)
-        except:
-            pass
+    # 使用缓存管理器
+    if cache_manager:
+        cached = cache_manager.get('l1', query)
+        if cached is not None:
+            return cached
     
-    if cache_key in cache:
-        return cache[cache_key]
-    
-    # 运行L1层
-    from src.tools.smd_enhanced_metadata_filter import SMDEnhancedMetadataFilter
-    metadata_filter = SMDEnhancedMetadataFilter()
+    # 使用预构建的SMD索引（通过pickle序列化）
+    if 'smd_index' in shared_config:
+        # 反序列化SMD索引
+        import io
+        from src.tools.smd_enhanced_metadata_filter import SMDEnhancedMetadataFilter
+        metadata_filter = pickle.loads(shared_config['smd_index'])
+    else:
+        # 降级：构建新索引（不应该发生）
+        from src.tools.smd_enhanced_metadata_filter import SMDEnhancedMetadataFilter
+        metadata_filter = SMDEnhancedMetadataFilter()
+        metadata_filter.build_index(tables)
     
     # 查找查询表
     query_table = None
@@ -256,10 +371,7 @@ def process_query_l1(args: Tuple) -> Dict:
     if not query_table:
         result = {'query_table': query_table_name, 'predictions': []}
     else:
-        # L1: 元数据过滤 - 使用正确的方法名filter_candidates
-        # 先构建索引
-        metadata_filter.build_index(tables)
-        # 然后过滤候选
+        # L1: 元数据过滤 - 使用预构建的索引
         candidates = metadata_filter.filter_candidates(
             query_table, max_candidates=10
         )
@@ -272,10 +384,9 @@ def process_query_l1(args: Tuple) -> Dict:
         
         result = {'query_table': query_table_name, 'predictions': predictions}
     
-    # 保存缓存
-    cache[cache_key] = result
-    with open(cache_file_path, 'wb') as f:
-        pickle.dump(cache, f)
+    # 保存到全局缓存
+    if cache_manager:
+        cache_manager.set('l1', query, result)
     
     return result
 
@@ -286,20 +397,18 @@ def process_query_l2(args: Tuple) -> Dict:
     query_table_name = query.get('query_table', '')
     task_type = query.get('task_type', 'join')  # 获取任务类型
     
-    # 检查缓存
-    cache_key = hashlib.md5(f"L2:{task_type}:{query_table_name}:{len(tables)}".encode()).hexdigest()
+    # 初始化或获取缓存管理器（子进程需要）
+    global cache_manager
+    if cache_manager is None and cache_file_path:
+        # cache_file_path现在是缓存目录路径
+        cache_dir = cache_file_path
+        cache_manager = CacheManager(cache_dir)
     
-    # 加载缓存
-    cache = {}
-    if Path(cache_file_path).exists():
-        try:
-            with open(cache_file_path, 'rb') as f:
-                cache = pickle.load(f)
-        except:
-            pass
-    
-    if cache_key in cache:
-        return cache[cache_key]
+    # 使用缓存管理器
+    if cache_manager:
+        cached = cache_manager.get('l1_l2', query, {'task_type': task_type})
+        if cached is not None:
+            return cached
     
     # 运行L1+L2层
     from src.tools.smd_enhanced_metadata_filter import SMDEnhancedMetadataFilter
@@ -393,10 +502,9 @@ def process_query_l2(args: Tuple) -> Dict:
         
         result = {'query_table': query_table_name, 'predictions': predictions}
     
-    # 保存缓存
-    cache[cache_key] = result
-    with open(cache_file_path, 'wb') as f:
-        pickle.dump(cache, f)
+    # 保存到全局缓存
+    if cache_manager:
+        cache_manager.set('l1_l2', query, result, {'task_type': task_type})
     
     return result
 
@@ -410,22 +518,18 @@ def process_query_l3(args: Tuple) -> Dict:
     # 获取动态优化器实例（如果存在）
     dynamic_optimizer = shared_config.get('dynamic_optimizer', None)
     
-    # 检查缓存
-    cache_key = hashlib.md5(
-        f"L3:{task_type}:{query_table_name}:{len(tables)}".encode()
-    ).hexdigest()
+    # 初始化或获取缓存管理器（子进程需要）
+    global cache_manager
+    if cache_manager is None and cache_file_path:
+        # cache_file_path现在是缓存目录路径
+        cache_dir = cache_file_path
+        cache_manager = CacheManager(cache_dir)
     
-    # 加载缓存
-    cache = {}
-    if Path(cache_file_path).exists():
-        try:
-            with open(cache_file_path, 'rb') as f:
-                cache = pickle.load(f)
-        except:
-            pass
-    
-    if cache_key in cache:
-        return cache[cache_key]
+    # 使用缓存管理器
+    if cache_manager:
+        cached = cache_manager.get('l1_l2_l3', query, {'task_type': task_type})
+        if cached is not None:
+            return cached
     
     # 先运行L2层获取基础结果
     l2_cache_file = cache_file_path.replace('L3', 'L2')
@@ -573,10 +677,9 @@ def process_query_l3(args: Tuple) -> Dict:
     
     query_result = {'query_table': query_table_name, 'predictions': final_predictions}
     
-    # 保存缓存
-    cache[cache_key] = query_result
-    with open(cache_file_path, 'wb') as f:
-        pickle.dump(cache, f)
+    # 保存到全局缓存
+    if cache_manager:
+        cache_manager.set('l1_l2_l3', query, query_result, {'task_type': task_type})
     
     return query_result
 
@@ -605,13 +708,17 @@ def run_layer_experiment(layer: str, tables: List[Dict], queries: List[Dict],
         shared_config = initialize_shared_resources_l3(tables, task_type, dataset_type)
         process_func = process_query_l3
     
-    # 准备缓存文件
-    cache_file = Path(f"cache/ablation_{dataset_type}_{layer.replace('+', '_')}.pkl")
-    cache_file.parent.mkdir(exist_ok=True)
+    # 使用缓存管理器的目录（如果存在）
+    if cache_manager:
+        cache_dir = cache_manager.cache_dir
+    else:
+        # 降级到默认缓存目录
+        cache_dir = Path(f"cache/ablation_{dataset_type}_{layer.replace('+', '_')}")
+        cache_dir.mkdir(parents=True, exist_ok=True)
     
-    # 准备进程池参数
+    # 准备进程池参数（每个查询传递缓存目录路径）
     query_args = [
-        (query, tables, shared_config, str(cache_file))
+        (query, tables, shared_config, str(cache_dir))
         for query in queries
     ]
     
@@ -821,6 +928,9 @@ def run_ablation_experiment_optimized(task_type: str, dataset_type: str = 'subse
         logger.info(f"🎯 Using challenging mixed queries to test layer improvements")
     logger.info(f"{'='*80}")
     
+    # 初始化缓存管理器
+    init_cache_manager(dataset_type, task_type, str(max_queries) if max_queries else 'all')
+    
     # 加载数据
     tables, queries, ground_truth = load_dataset(task_type, dataset_type)
     logger.info(f"📊 Dataset: {len(tables)} tables, {len(queries)} queries")
@@ -934,9 +1044,11 @@ def main():
     import argparse
     parser = argparse.ArgumentParser(description='优化版三层架构消融实验')
     parser.add_argument('--task', choices=['join', 'union', 'both'], default='both',
-                       help='任务类型')
-    parser.add_argument('--dataset', choices=['subset', 'true_subset', 'complete', 'full'], default='true_subset',
-                       help='数据集类型: true_subset(真正子集,快), subset(旧子集=完整), complete/full(完整数据集)')
+                       help='任务类型 (both会同时运行join和union)')
+    parser.add_argument('--dataset', type=str, default='webtable',
+                       help='数据集名称: webtable, opendata, 或自定义路径')
+    parser.add_argument('--dataset-type', choices=['subset', 'complete', 'true_subset'], default='subset',
+                       help='数据集类型: subset(子集), complete(完整), true_subset(WebTable的真子集)')
     parser.add_argument('--max-queries', type=str, default='10',
                        help='最大查询数 (数字或"all"表示使用全部)')
     parser.add_argument('--workers', type=int, default=4,
@@ -968,11 +1080,29 @@ def main():
     tasks = ['join', 'union'] if args.task == 'both' else [args.task]
     all_results = {}
     
-    # 处理数据集类型（full转换为complete）
-    dataset_type = 'complete' if args.dataset == 'full' else args.dataset
-    
+    # 构建数据集路径
     for task in tasks:
-        results = run_ablation_experiment_optimized(task, dataset_type, max_queries, args.workers, use_challenging)
+        # 处理数据集路径
+        if '/' in args.dataset and not args.dataset.startswith('examples/'):
+            # 自定义完整路径（非examples开头）
+            task_dataset = args.dataset
+        elif args.dataset.startswith('examples/') and args.task != 'both':
+            # 直接使用提供的路径（单任务模式）
+            task_dataset = args.dataset
+        elif args.dataset in ['webtable', 'opendata']:
+            # 使用标准数据集
+            task_dataset = f"examples/{args.dataset}/{task}_{args.dataset_type}"
+        elif args.dataset == 'true_subset':
+            # WebTable的真子集（向后兼容）
+            task_dataset = f"examples/separated_datasets/{task}_true_subset"
+        else:
+            # 其他预定义类型（向后兼容）
+            if args.dataset_type == 'complete':
+                task_dataset = f"examples/separated_datasets/{task}"
+            else:
+                task_dataset = f"examples/separated_datasets/{task}_{args.dataset_type}"
+            
+        results = run_ablation_experiment_optimized(task, task_dataset, max_queries, args.workers, use_challenging)
         all_results[task] = results
     
     # 打印结果表格
@@ -991,6 +1121,18 @@ def main():
         json.dump(all_results, f, indent=2)
     
     logger.info(f"\n✅ Results saved to: {output_path}")
+    
+    # 输出缓存统计
+    if cache_manager:
+        cache_stats = cache_manager.get_stats()
+        print("\n" + "="*100)
+        print("📊 CACHE STATISTICS")
+        print("="*100)
+        print(f"  Cache Hits: {cache_stats['hits']}")
+        print(f"  Cache Misses: {cache_stats['misses']}")
+        print(f"  Cache Saves: {cache_stats['saves']}")
+        print(f"  Hit Rate: {cache_stats['hit_rate']}")
+        print(f"  Memory Items: {cache_stats['memory_items']}")
     
     # 优化总结
     print("\n" + "="*100)

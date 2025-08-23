@@ -1,0 +1,56 @@
+清理旧的examples目录...
+
+============================================================
+处理 WebTable 数据集
+============================================================
+
+处理 WebTable JOIN 数据...
+  需要提取的表格总数: 4290
+  有效查询数（有GT）: 1534
+  成功读取表格数: 1534
+  Subset: 100 queries, 195 tables, 645 GT
+  Complete: 1534 queries, 1534 tables, 6805 GT
+
+处理 WebTable UNION 数据...
+  需要提取的表格总数: 35309
+  有效查询数（有GT）: 5487
+  成功读取表格数: 5487
+  Subset: 100 queries, 397 tables, 726 GT
+  Complete: 5487 queries, 5487 tables, 41903 GT
+
+============================================================
+处理 OpenData 数据集
+============================================================
+
+处理 OpenData JOIN 数据...
+  需要提取的表格总数: 3010
+  有效查询数（有GT）: 500
+  成功读取表格数: 500
+  缺失表格数: 2510
+  Subset: 100 queries, 169 tables, 2534 GT
+  Complete: 500 queries, 500 tables, 8458 GT
+
+处理 OpenData UNION 数据...
+  需要提取的表格总数: 8006
+  有效查询数（有GT）: 3095
+  成功读取表格数: 3095
+  缺失表格数: 4911
+  Subset: 100 queries, 288 tables, 855 GT
+  Complete: 3095 queries, 3095 tables, 39040 GT
+
+============================================================
+数据提取完成！
+============================================================
+统计信息已保存到 dataset_complete_stats.json
+
+WEBTABLE:
+  join subset: 100 queries, 195 tables, 645 GT
+  join complete: 1534 queries, 1534 tables, 6805 GT
+  union subset: 100 queries, 397 tables, 726 GT
+  union complete: 5487 queries, 5487 tables, 41903 GT
+
+OPENDATA:
+  join subset: 100 queries, 169 tables, 2534 GT
+  join complete: 500 queries, 500 tables, 8458 GT
+  union subset: 100 queries, 288 tables, 855 GT
+  union complete: 3095 queries, 3095 tables, 39040 GT

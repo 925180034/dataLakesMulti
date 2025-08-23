@@ -1,0 +1,86 @@
+{
+  "webtable": {
+    "join": {
+      "subset": {
+        "queries": 50,
+        "tables": 103,
+        "total_columns": 1115,
+        "avg_columns_per_table": 10.83,
+        "total_sample_values": 5575,
+        "ground_truth": 239,
+        "avg_gt_per_query": 4.78
+      },
+      "complete": {
+        "queries": 1042,
+        "tables": 1534,
+        "total_columns": 14586,
+        "avg_columns_per_table": 9.51,
+        "total_sample_values": 72930,
+        "ground_truth": 6070,
+        "avg_gt_per_query": 5.83
+      }
+    },
+    "union": {
+      "subset": {
+        "queries": 50,
+        "tables": 200,
+        "total_columns": 2009,
+        "avg_columns_per_table": 10.04,
+        "total_sample_values": 10045,
+        "ground_truth": 582,
+        "avg_gt_per_query": 11.64
+      },
+      "complete": {
+        "queries": 3222,
+        "tables": 5466,
+        "total_columns": 55993,
+        "avg_columns_per_table": 10.24,
+        "total_sample_values": 279954,
+        "ground_truth": 34369,
+        "avg_gt_per_query": 10.67
+      }
+    }
+  },
+  "opendata": {
+    "join": {
+      "subset": {
+        "queries": 100,
+        "tables": 169,
+        "total_columns": 4630,
+        "avg_columns_per_table": 27.4,
+        "total_sample_values": 19298,
+        "ground_truth": 2534,
+        "avg_gt_per_query": 25.34
+      },
+      "complete": {
+        "queries": 500,
+        "tables": 500,
+        "total_columns": 10229,
+        "avg_columns_per_table": 20.46,
+        "total_sample_values": 40628,
+        "ground_truth": 8458,
+        "avg_gt_per_query": 16.92
+      }
+    },
+    "union": {
+      "subset": {
+        "queries": 100,
+        "tables": 292,
+        "total_columns": 4237,
+        "avg_columns_per_table": 14.51,
+        "total_sample_values": 12679,
+        "ground_truth": 875,
+        "avg_gt_per_query": 8.75
+      },
+      "complete": {
+        "queries": 3006,
+        "tables": 3006,
+        "total_columns": 59821,
+        "avg_columns_per_table": 19.9,
+        "total_sample_values": 243402,
+        "ground_truth": 37159,
+        "avg_gt_per_query": 12.36
+      }
+    }
+  }
+}

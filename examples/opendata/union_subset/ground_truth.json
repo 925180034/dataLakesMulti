@@ -1,0 +1,3422 @@
+[
+  {
+    "query_table": "CAN_CSV0000000000000474.csv",
+    "candidate_table": "CAN_CSV0000000000004975.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000474.csv",
+    "candidate_table": "CAN_CSV0000000000000474.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000474.csv",
+    "candidate_table": "CAN_CSV0000000000001198.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000474.csv",
+    "candidate_table": "CAN_CSV0000000000007017.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000474.csv",
+    "candidate_table": "CAN_CSV0000000000012583.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000557.csv",
+    "candidate_table": "CAN_CSV0000000000000557.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000557.csv",
+    "candidate_table": "CAN_CSV0000000000000558.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000557.csv",
+    "candidate_table": "CAN_CSV0000000000027226.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000557.csv",
+    "candidate_table": "CAN_CSV0000000000005080.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000557.csv",
+    "candidate_table": "CAN_CSV0000000000002294.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000557.csv",
+    "candidate_table": "CAN_CSV0000000000002292.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000557.csv",
+    "candidate_table": "CAN_CSV0000000000013782.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000557.csv",
+    "candidate_table": "CAN_CSV0000000000013602.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000557.csv",
+    "candidate_table": "CAN_CSV0000000000005071.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000557.csv",
+    "candidate_table": "CAN_CSV0000000000014315.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000558.csv",
+    "candidate_table": "CAN_CSV0000000000000558.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000558.csv",
+    "candidate_table": "CAN_CSV0000000000000557.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000558.csv",
+    "candidate_table": "CAN_CSV0000000000027243.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000558.csv",
+    "candidate_table": "CAN_CSV0000000000027217.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000558.csv",
+    "candidate_table": "CAN_CSV0000000000012859.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000581.csv",
+    "candidate_table": "CAN_CSV0000000000000581.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000581.csv",
+    "candidate_table": "CAN_CSV0000000000000589.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000581.csv",
+    "candidate_table": "CAN_CSV0000000000002292.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000581.csv",
+    "candidate_table": "CAN_CSV0000000000013782.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000581.csv",
+    "candidate_table": "CAN_CSV0000000000014315.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000589.csv",
+    "candidate_table": "CAN_CSV0000000000027243.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000589.csv",
+    "candidate_table": "CAN_CSV0000000000000589.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000589.csv",
+    "candidate_table": "CAN_CSV0000000000000581.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000589.csv",
+    "candidate_table": "CAN_CSV0000000000027226.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000589.csv",
+    "candidate_table": "CAN_CSV0000000000014315.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000624.csv",
+    "candidate_table": "CAN_CSV0000000000000624.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000624.csv",
+    "candidate_table": "CAN_CSV0000000000014315.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000624.csv",
+    "candidate_table": "CAN_CSV0000000000014395.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000624.csv",
+    "candidate_table": "CAN_CSV0000000000002292.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000624.csv",
+    "candidate_table": "CAN_CSV0000000000027217.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000624.csv",
+    "candidate_table": "CAN_CSV0000000000013602.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000629.csv",
+    "candidate_table": "CAN_CSV0000000000013328.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000629.csv",
+    "candidate_table": "CAN_CSV0000000000012536.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000629.csv",
+    "candidate_table": "CAN_CSV0000000000027151.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000629.csv",
+    "candidate_table": "CAN_CSV0000000000000629.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000629.csv",
+    "candidate_table": "CAN_CSV0000000000001185.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000629.csv",
+    "candidate_table": "CAN_CSV0000000000013782.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000629.csv",
+    "candidate_table": "CAN_CSV0000000000005437.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000629.csv",
+    "candidate_table": "CAN_CSV0000000000015794.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000633.csv",
+    "candidate_table": "CAN_CSV0000000000000732.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000633.csv",
+    "candidate_table": "CAN_CSV0000000000000724.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000633.csv",
+    "candidate_table": "CAN_CSV0000000000000633.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000633.csv",
+    "candidate_table": "CAN_CSV0000000000000831.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000633.csv",
+    "candidate_table": "CAN_CSV0000000000013036.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000634.csv",
+    "candidate_table": "CAN_CSV0000000000000638.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000634.csv",
+    "candidate_table": "CAN_CSV0000000000000634.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000634.csv",
+    "candidate_table": "CAN_CSV0000000000000848.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000634.csv",
+    "candidate_table": "CAN_CSV0000000000000642.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000634.csv",
+    "candidate_table": "CAN_CSV0000000000005303.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000638.csv",
+    "candidate_table": "CAN_CSV0000000000000638.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000638.csv",
+    "candidate_table": "CAN_CSV0000000000027281.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000638.csv",
+    "candidate_table": "CAN_CSV0000000000027266.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000638.csv",
+    "candidate_table": "CAN_CSV0000000000027280.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000638.csv",
+    "candidate_table": "CAN_CSV0000000000000634.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000638.csv",
+    "candidate_table": "CAN_CSV0000000000000848.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000638.csv",
+    "candidate_table": "CAN_CSV0000000000005070.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000642.csv",
+    "candidate_table": "CAN_CSV0000000000027217.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000642.csv",
+    "candidate_table": "CAN_CSV0000000000000634.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000642.csv",
+    "candidate_table": "CAN_CSV0000000000000758.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000642.csv",
+    "candidate_table": "CAN_CSV0000000000000642.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000642.csv",
+    "candidate_table": "CAN_CSV0000000000027280.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000642.csv",
+    "candidate_table": "CAN_CSV0000000000001052.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000642.csv",
+    "candidate_table": "CAN_CSV0000000000000638.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000642.csv",
+    "candidate_table": "CAN_CSV0000000000027266.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000659.csv",
+    "candidate_table": "CAN_CSV0000000000027217.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000659.csv",
+    "candidate_table": "CAN_CSV0000000000000659.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000680.csv",
+    "candidate_table": "CAN_CSV0000000000005298.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000680.csv",
+    "candidate_table": "CAN_CSV0000000000005326.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000680.csv",
+    "candidate_table": "CAN_CSV0000000000000680.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000680.csv",
+    "candidate_table": "CAN_CSV0000000000005427.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000680.csv",
+    "candidate_table": "CAN_CSV0000000000005926.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000680.csv",
+    "candidate_table": "CAN_CSV0000000000027103.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000686.csv",
+    "candidate_table": "CAN_CSV0000000000027103.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000686.csv",
+    "candidate_table": "CAN_CSV0000000000000686.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000686.csv",
+    "candidate_table": "CAN_CSV0000000000000638.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000686.csv",
+    "candidate_table": "CAN_CSV0000000000005313.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000686.csv",
+    "candidate_table": "CAN_CSV0000000000005303.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000686.csv",
+    "candidate_table": "CAN_CSV0000000000001159.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000686.csv",
+    "candidate_table": "CAN_CSV0000000000013946.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000686.csv",
+    "candidate_table": "CAN_CSV0000000000005418.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000686.csv",
+    "candidate_table": "CAN_CSV0000000000027287.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000691.csv",
+    "candidate_table": "CAN_CSV0000000000000691.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000691.csv",
+    "candidate_table": "CAN_CSV0000000000014061.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000695.csv",
+    "candidate_table": "CAN_CSV0000000000027103.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000695.csv",
+    "candidate_table": "CAN_CSV0000000000005430.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000695.csv",
+    "candidate_table": "CAN_CSV0000000000005321.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000695.csv",
+    "candidate_table": "CAN_CSV0000000000000695.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000695.csv",
+    "candidate_table": "CAN_CSV0000000000013740.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000708.csv",
+    "candidate_table": "CAN_CSV0000000000000708.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000708.csv",
+    "candidate_table": "CAN_CSV0000000000000710.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000708.csv",
+    "candidate_table": "CAN_CSV0000000000000709.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000708.csv",
+    "candidate_table": "CAN_CSV0000000000006892.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000708.csv",
+    "candidate_table": "CAN_CSV0000000000001009.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000708.csv",
+    "candidate_table": "CAN_CSV0000000000000680.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000708.csv",
+    "candidate_table": "CAN_CSV0000000000027103.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000709.csv",
+    "candidate_table": "CAN_CSV0000000000000708.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000709.csv",
+    "candidate_table": "CAN_CSV0000000000000709.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000709.csv",
+    "candidate_table": "CAN_CSV0000000000012568.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000709.csv",
+    "candidate_table": "CAN_CSV0000000000004706.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000709.csv",
+    "candidate_table": "CAN_CSV0000000000015797.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000710.csv",
+    "candidate_table": "CAN_CSV0000000000000709.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000710.csv",
+    "candidate_table": "CAN_CSV0000000000000708.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000710.csv",
+    "candidate_table": "CAN_CSV0000000000001052.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000710.csv",
+    "candidate_table": "CAN_CSV0000000000001009.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000710.csv",
+    "candidate_table": "CAN_CSV0000000000027151.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000714.csv",
+    "candidate_table": "CAN_CSV0000000000005313.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000714.csv",
+    "candidate_table": "CAN_CSV0000000000015794.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000714.csv",
+    "candidate_table": "CAN_CSV0000000000005437.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000714.csv",
+    "candidate_table": "CAN_CSV0000000000000714.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000714.csv",
+    "candidate_table": "CAN_CSV0000000000005930.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000714.csv",
+    "candidate_table": "CAN_CSV0000000000005446.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000714.csv",
+    "candidate_table": "CAN_CSV0000000000001140.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000714.csv",
+    "candidate_table": "CAN_CSV0000000000027103.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000724.csv",
+    "candidate_table": "CAN_CSV0000000000012460.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000724.csv",
+    "candidate_table": "CAN_CSV0000000000000732.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000724.csv",
+    "candidate_table": "CAN_CSV0000000000000724.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000724.csv",
+    "candidate_table": "CAN_CSV0000000000000633.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000724.csv",
+    "candidate_table": "CAN_CSV0000000000012680.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000724.csv",
+    "candidate_table": "CAN_CSV0000000000013782.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000724.csv",
+    "candidate_table": "CAN_CSV0000000000012458.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000724.csv",
+    "candidate_table": "CAN_CSV0000000000001123.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000724.csv",
+    "candidate_table": "CAN_CSV0000000000005437.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000724.csv",
+    "candidate_table": "CAN_CSV0000000000000714.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000732.csv",
+    "candidate_table": "CAN_CSV0000000000000732.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000732.csv",
+    "candidate_table": "CAN_CSV0000000000000957.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000732.csv",
+    "candidate_table": "CAN_CSV0000000000000970.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000732.csv",
+    "candidate_table": "CAN_CSV0000000000000724.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000732.csv",
+    "candidate_table": "CAN_CSV0000000000027217.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000732.csv",
+    "candidate_table": "CAN_CSV0000000000000633.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000732.csv",
+    "candidate_table": "CAN_CSV0000000000001000.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000732.csv",
+    "candidate_table": "CAN_CSV0000000000000965.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000732.csv",
+    "candidate_table": "CAN_CSV0000000000001023.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000732.csv",
+    "candidate_table": "CAN_CSV0000000000002261.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000732.csv",
+    "candidate_table": "CAN_CSV0000000000000642.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000732.csv",
+    "candidate_table": "CAN_CSV0000000000005378.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000732.csv",
+    "candidate_table": "CAN_CSV0000000000000964.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000732.csv",
+    "candidate_table": "CAN_CSV0000000000000958.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000758.csv",
+    "candidate_table": "CAN_CSV0000000000027281.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000758.csv",
+    "candidate_table": "CAN_CSV0000000000027266.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000758.csv",
+    "candidate_table": "CAN_CSV0000000000027280.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000758.csv",
+    "candidate_table": "CAN_CSV0000000000000758.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000758.csv",
+    "candidate_table": "CAN_CSV0000000000005418.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000758.csv",
+    "candidate_table": "CAN_CSV0000000000005304.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000758.csv",
+    "candidate_table": "CAN_CSV0000000000000642.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000759.csv",
+    "candidate_table": "CAN_CSV0000000000027103.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000759.csv",
+    "candidate_table": "CAN_CSV0000000000027287.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000759.csv",
+    "candidate_table": "CAN_CSV0000000000000634.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000759.csv",
+    "candidate_table": "CAN_CSV0000000000005303.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000759.csv",
+    "candidate_table": "CAN_CSV0000000000000759.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000759.csv",
+    "candidate_table": "CAN_CSV0000000000014061.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000759.csv",
+    "candidate_table": "CAN_CSV0000000000000848.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000759.csv",
+    "candidate_table": "CAN_CSV0000000000000686.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000772.csv",
+    "candidate_table": "CAN_CSV0000000000000917.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000772.csv",
+    "candidate_table": "CAN_CSV0000000000000772.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000772.csv",
+    "candidate_table": "CAN_CSV0000000000000843.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000772.csv",
+    "candidate_table": "CAN_CSV0000000000013602.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000772.csv",
+    "candidate_table": "CAN_CSV0000000000000841.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000772.csv",
+    "candidate_table": "CAN_CSV0000000000002256.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000772.csv",
+    "candidate_table": "CAN_CSV0000000000000982.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000772.csv",
+    "candidate_table": "CAN_CSV0000000000012921.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000773.csv",
+    "candidate_table": "CAN_CSV0000000000006892.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000773.csv",
+    "candidate_table": "CAN_CSV0000000000006905.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000773.csv",
+    "candidate_table": "CAN_CSV0000000000012558.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000773.csv",
+    "candidate_table": "CAN_CSV0000000000000773.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000773.csv",
+    "candidate_table": "CAN_CSV0000000000012516.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000773.csv",
+    "candidate_table": "CAN_CSV0000000000012577.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000773.csv",
+    "candidate_table": "CAN_CSV0000000000007014.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000773.csv",
+    "candidate_table": "CAN_CSV0000000000006834.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000773.csv",
+    "candidate_table": "CAN_CSV0000000000006911.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000773.csv",
+    "candidate_table": "CAN_CSV0000000000027103.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000822.csv",
+    "candidate_table": "CAN_CSV0000000000005741.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000822.csv",
+    "candidate_table": "CAN_CSV0000000000005757.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000822.csv",
+    "candidate_table": "CAN_CSV0000000000000822.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000822.csv",
+    "candidate_table": "CAN_CSV0000000000005768.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000822.csv",
+    "candidate_table": "CAN_CSV0000000000005783.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000822.csv",
+    "candidate_table": "CAN_CSV0000000000013036.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000822.csv",
+    "candidate_table": "CAN_CSV0000000000013725.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000822.csv",
+    "candidate_table": "CAN_CSV0000000000005744.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000831.csv",
+    "candidate_table": "CAN_CSV0000000000005741.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000831.csv",
+    "candidate_table": "CAN_CSV0000000000005757.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000831.csv",
+    "candidate_table": "CAN_CSV0000000000000831.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000831.csv",
+    "candidate_table": "CAN_CSV0000000000005768.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000831.csv",
+    "candidate_table": "CAN_CSV0000000000005744.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000831.csv",
+    "candidate_table": "CAN_CSV0000000000005817.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000831.csv",
+    "candidate_table": "CAN_CSV0000000000000977.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000831.csv",
+    "candidate_table": "CAN_CSV0000000000002292.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000841.csv",
+    "candidate_table": "CAN_CSV0000000000027103.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000841.csv",
+    "candidate_table": "CAN_CSV0000000000000841.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000841.csv",
+    "candidate_table": "CAN_CSV0000000000005892.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000841.csv",
+    "candidate_table": "CAN_CSV0000000000001046.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000841.csv",
+    "candidate_table": "CAN_CSV0000000000000772.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000843.csv",
+    "candidate_table": "CAN_CSV0000000000000843.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000843.csv",
+    "candidate_table": "CAN_CSV0000000000012921.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000843.csv",
+    "candidate_table": "CAN_CSV0000000000001065.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000843.csv",
+    "candidate_table": "CAN_CSV0000000000006894.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000843.csv",
+    "candidate_table": "CAN_CSV0000000000012926.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000843.csv",
+    "candidate_table": "CAN_CSV0000000000006889.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000843.csv",
+    "candidate_table": "CAN_CSV0000000000000917.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000843.csv",
+    "candidate_table": "CAN_CSV0000000000006974.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000843.csv",
+    "candidate_table": "CAN_CSV0000000000000914.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000843.csv",
+    "candidate_table": "CAN_CSV0000000000006950.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000843.csv",
+    "candidate_table": "CAN_CSV0000000000000976.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000843.csv",
+    "candidate_table": "CAN_CSV0000000000000915.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000843.csv",
+    "candidate_table": "CAN_CSV0000000000027103.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000848.csv",
+    "candidate_table": "CAN_CSV0000000000001119.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000848.csv",
+    "candidate_table": "CAN_CSV0000000000005070.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000848.csv",
+    "candidate_table": "CAN_CSV0000000000000843.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000848.csv",
+    "candidate_table": "CAN_CSV0000000000013946.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000848.csv",
+    "candidate_table": "CAN_CSV0000000000000638.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000848.csv",
+    "candidate_table": "CAN_CSV0000000000000848.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000848.csv",
+    "candidate_table": "CAN_CSV0000000000000759.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000848.csv",
+    "candidate_table": "CAN_CSV0000000000005303.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000848.csv",
+    "candidate_table": "CAN_CSV0000000000027103.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000886.csv",
+    "candidate_table": "CAN_CSV0000000000013946.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000886.csv",
+    "candidate_table": "CAN_CSV0000000000005486.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000886.csv",
+    "candidate_table": "CAN_CSV0000000000000886.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000886.csv",
+    "candidate_table": "CAN_CSV0000000000006690.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000886.csv",
+    "candidate_table": "CAN_CSV0000000000000759.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000886.csv",
+    "candidate_table": "CAN_CSV0000000000013953.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000886.csv",
+    "candidate_table": "CAN_CSV0000000000012457.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000886.csv",
+    "candidate_table": "CAN_CSV0000000000006975.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000886.csv",
+    "candidate_table": "CAN_CSV0000000000027103.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000893.csv",
+    "candidate_table": "CAN_CSV0000000000006840.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000893.csv",
+    "candidate_table": "CAN_CSV0000000000000976.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000893.csv",
+    "candidate_table": "CAN_CSV0000000000000893.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000893.csv",
+    "candidate_table": "CAN_CSV0000000000006740.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000893.csv",
+    "candidate_table": "CAN_CSV0000000000006799.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000893.csv",
+    "candidate_table": "CAN_CSV0000000000000982.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000893.csv",
+    "candidate_table": "CAN_CSV0000000000000904.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000893.csv",
+    "candidate_table": "CAN_CSV0000000000000903.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000893.csv",
+    "candidate_table": "CAN_CSV0000000000006879.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000893.csv",
+    "candidate_table": "CAN_CSV0000000000006809.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000893.csv",
+    "candidate_table": "CAN_CSV0000000000000905.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000893.csv",
+    "candidate_table": "CAN_CSV0000000000012569.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000893.csv",
+    "candidate_table": "CAN_CSV0000000000007012.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000893.csv",
+    "candidate_table": "CAN_CSV0000000000012570.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000893.csv",
+    "candidate_table": "CAN_CSV0000000000006880.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000893.csv",
+    "candidate_table": "CAN_CSV0000000000006928.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000893.csv",
+    "candidate_table": "CAN_CSV0000000000006927.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000893.csv",
+    "candidate_table": "CAN_CSV0000000000002292.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000893.csv",
+    "candidate_table": "CAN_CSV0000000000006776.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000893.csv",
+    "candidate_table": "CAN_CSV0000000000006777.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000903.csv",
+    "candidate_table": "CAN_CSV0000000000006928.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000903.csv",
+    "candidate_table": "CAN_CSV0000000000000905.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000903.csv",
+    "candidate_table": "CAN_CSV0000000000006879.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000903.csv",
+    "candidate_table": "CAN_CSV0000000000006885.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000903.csv",
+    "candidate_table": "CAN_CSV0000000000006919.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000903.csv",
+    "candidate_table": "CAN_CSV0000000000000903.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000903.csv",
+    "candidate_table": "CAN_CSV0000000000006930.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000903.csv",
+    "candidate_table": "CAN_CSV0000000000006927.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000903.csv",
+    "candidate_table": "CAN_CSV0000000000000976.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000903.csv",
+    "candidate_table": "CAN_CSV0000000000006894.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000903.csv",
+    "candidate_table": "CAN_CSV0000000000006889.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000903.csv",
+    "candidate_table": "CAN_CSV0000000000006914.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000903.csv",
+    "candidate_table": "CAN_CSV0000000000014395.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000903.csv",
+    "candidate_table": "CAN_CSV0000000000000913.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000903.csv",
+    "candidate_table": "CAN_CSV0000000000006891.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000904.csv",
+    "candidate_table": "CAN_CSV0000000000000904.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000904.csv",
+    "candidate_table": "CAN_CSV0000000000006927.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000904.csv",
+    "candidate_table": "CAN_CSV0000000000006880.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000904.csv",
+    "candidate_table": "CAN_CSV0000000000006919.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000904.csv",
+    "candidate_table": "CAN_CSV0000000000006894.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000904.csv",
+    "candidate_table": "CAN_CSV0000000000006930.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000904.csv",
+    "candidate_table": "CAN_CSV0000000000000905.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000904.csv",
+    "candidate_table": "CAN_CSV0000000000000903.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000904.csv",
+    "candidate_table": "CAN_CSV0000000000006879.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000904.csv",
+    "candidate_table": "CAN_CSV0000000000000976.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000904.csv",
+    "candidate_table": "CAN_CSV0000000000000982.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000904.csv",
+    "candidate_table": "CAN_CSV0000000000000843.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000904.csv",
+    "candidate_table": "CAN_CSV0000000000027103.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000905.csv",
+    "candidate_table": "CAN_CSV0000000000006891.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000905.csv",
+    "candidate_table": "CAN_CSV0000000000006885.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000905.csv",
+    "candidate_table": "CAN_CSV0000000000006919.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000905.csv",
+    "candidate_table": "CAN_CSV0000000000006930.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000905.csv",
+    "candidate_table": "CAN_CSV0000000000006894.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000905.csv",
+    "candidate_table": "CAN_CSV0000000000006889.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000905.csv",
+    "candidate_table": "CAN_CSV0000000000006928.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000905.csv",
+    "candidate_table": "CAN_CSV0000000000000903.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000905.csv",
+    "candidate_table": "CAN_CSV0000000000000904.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000905.csv",
+    "candidate_table": "CAN_CSV0000000000006879.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000905.csv",
+    "candidate_table": "CAN_CSV0000000000006799.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000905.csv",
+    "candidate_table": "CAN_CSV0000000000006872.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000905.csv",
+    "candidate_table": "CAN_CSV0000000000006910.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000905.csv",
+    "candidate_table": "CAN_CSV0000000000006911.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000905.csv",
+    "candidate_table": "CAN_CSV0000000000006884.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000905.csv",
+    "candidate_table": "CAN_CSV0000000000027103.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000909.csv",
+    "candidate_table": "CAN_CSV0000000000006975.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000909.csv",
+    "candidate_table": "CAN_CSV0000000000006976.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000909.csv",
+    "candidate_table": "CAN_CSV0000000000000909.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000909.csv",
+    "candidate_table": "CAN_CSV0000000000000914.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000909.csv",
+    "candidate_table": "CAN_CSV0000000000000913.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000909.csv",
+    "candidate_table": "CAN_CSV0000000000006974.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000909.csv",
+    "candidate_table": "CAN_CSV0000000000006777.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000909.csv",
+    "candidate_table": "CAN_CSV0000000000012557.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000909.csv",
+    "candidate_table": "CAN_CSV0000000000001065.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000909.csv",
+    "candidate_table": "CAN_CSV0000000000006691.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000909.csv",
+    "candidate_table": "CAN_CSV0000000000027103.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000913.csv",
+    "candidate_table": "CAN_CSV0000000000000909.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000913.csv",
+    "candidate_table": "CAN_CSV0000000000000913.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000913.csv",
+    "candidate_table": "CAN_CSV0000000000006976.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000913.csv",
+    "candidate_table": "CAN_CSV0000000000006974.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000913.csv",
+    "candidate_table": "CAN_CSV0000000000006975.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000913.csv",
+    "candidate_table": "CAN_CSV0000000000000914.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000913.csv",
+    "candidate_table": "CAN_CSV0000000000006973.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000913.csv",
+    "candidate_table": "CAN_CSV0000000000000903.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000913.csv",
+    "candidate_table": "CAN_CSV0000000000012557.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000913.csv",
+    "candidate_table": "CAN_CSV0000000000006970.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000913.csv",
+    "candidate_table": "CAN_CSV0000000000006691.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000913.csv",
+    "candidate_table": "CAN_CSV0000000000027103.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000914.csv",
+    "candidate_table": "CAN_CSV0000000000006976.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000914.csv",
+    "candidate_table": "CAN_CSV0000000000000914.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000914.csv",
+    "candidate_table": "CAN_CSV0000000000000909.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000914.csv",
+    "candidate_table": "CAN_CSV0000000000006974.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000914.csv",
+    "candidate_table": "CAN_CSV0000000000006975.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000914.csv",
+    "candidate_table": "CAN_CSV0000000000012557.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000914.csv",
+    "candidate_table": "CAN_CSV0000000000006945.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000914.csv",
+    "candidate_table": "CAN_CSV0000000000006566.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000914.csv",
+    "candidate_table": "CAN_CSV0000000000000714.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000915.csv",
+    "candidate_table": "CAN_CSV0000000000013792.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000915.csv",
+    "candidate_table": "CAN_CSV0000000000000843.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000915.csv",
+    "candidate_table": "CAN_CSV0000000000006992.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000915.csv",
+    "candidate_table": "CAN_CSV0000000000000915.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000915.csv",
+    "candidate_table": "CAN_CSV0000000000006997.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000915.csv",
+    "candidate_table": "CAN_CSV0000000000000917.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000915.csv",
+    "candidate_table": "CAN_CSV0000000000002256.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000915.csv",
+    "candidate_table": "CAN_CSV0000000000000952.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000915.csv",
+    "candidate_table": "CAN_CSV0000000000027103.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000917.csv",
+    "candidate_table": "CAN_CSV0000000000006992.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000917.csv",
+    "candidate_table": "CAN_CSV0000000000007000.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000917.csv",
+    "candidate_table": "CAN_CSV0000000000000917.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000917.csv",
+    "candidate_table": "CAN_CSV0000000000012457.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000917.csv",
+    "candidate_table": "CAN_CSV0000000000000976.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000917.csv",
+    "candidate_table": "CAN_CSV0000000000000982.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000917.csv",
+    "candidate_table": "CAN_CSV0000000000006777.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000917.csv",
+    "candidate_table": "CAN_CSV0000000000006891.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000917.csv",
+    "candidate_table": "CAN_CSV0000000000000903.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000917.csv",
+    "candidate_table": "CAN_CSV0000000000001157.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000917.csv",
+    "candidate_table": "CAN_CSV0000000000013602.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000917.csv",
+    "candidate_table": "CAN_CSV0000000000000905.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000917.csv",
+    "candidate_table": "CAN_CSV0000000000027103.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000918.csv",
+    "candidate_table": "CAN_CSV0000000000006806.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000918.csv",
+    "candidate_table": "CAN_CSV0000000000000918.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000918.csv",
+    "candidate_table": "CAN_CSV0000000000006823.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000918.csv",
+    "candidate_table": "CAN_CSV0000000000006822.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000918.csv",
+    "candidate_table": "CAN_CSV0000000000012677.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000918.csv",
+    "candidate_table": "CAN_CSV0000000000007017.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000918.csv",
+    "candidate_table": "CAN_CSV0000000000006811.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000918.csv",
+    "candidate_table": "CAN_CSV0000000000012679.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000918.csv",
+    "candidate_table": "CAN_CSV0000000000007016.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000918.csv",
+    "candidate_table": "CAN_CSV0000000000012569.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000918.csv",
+    "candidate_table": "CAN_CSV0000000000012676.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000918.csv",
+    "candidate_table": "CAN_CSV0000000000006905.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000918.csv",
+    "candidate_table": "CAN_CSV0000000000027103.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000940.csv",
+    "candidate_table": "CAN_CSV0000000000001000.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000940.csv",
+    "candidate_table": "CAN_CSV0000000000000970.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000940.csv",
+    "candidate_table": "CAN_CSV0000000000000960.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000940.csv",
+    "candidate_table": "CAN_CSV0000000000000958.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000940.csv",
+    "candidate_table": "CAN_CSV0000000000001023.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000940.csv",
+    "candidate_table": "CAN_CSV0000000000000940.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000940.csv",
+    "candidate_table": "CAN_CSV0000000000000959.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000952.csv",
+    "candidate_table": "CAN_CSV0000000000013953.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000952.csv",
+    "candidate_table": "CAN_CSV0000000000013792.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000952.csv",
+    "candidate_table": "CAN_CSV0000000000000952.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000952.csv",
+    "candidate_table": "CAN_CSV0000000000012921.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000952.csv",
+    "candidate_table": "CAN_CSV0000000000012928.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000952.csv",
+    "candidate_table": "CAN_CSV0000000000012926.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000952.csv",
+    "candidate_table": "CAN_CSV0000000000000843.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000952.csv",
+    "candidate_table": "CAN_CSV0000000000027103.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000957.csv",
+    "candidate_table": "CAN_CSV0000000000000965.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000957.csv",
+    "candidate_table": "CAN_CSV0000000000000958.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000957.csv",
+    "candidate_table": "CAN_CSV0000000000000970.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000957.csv",
+    "candidate_table": "CAN_CSV0000000000000963.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000957.csv",
+    "candidate_table": "CAN_CSV0000000000001000.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000957.csv",
+    "candidate_table": "CAN_CSV0000000000000977.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000957.csv",
+    "candidate_table": "CAN_CSV0000000000000964.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000957.csv",
+    "candidate_table": "CAN_CSV0000000000000960.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000957.csv",
+    "candidate_table": "CAN_CSV0000000000000957.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000957.csv",
+    "candidate_table": "CAN_CSV0000000000000959.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000957.csv",
+    "candidate_table": "CAN_CSV0000000000012460.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000957.csv",
+    "candidate_table": "CAN_CSV0000000000012459.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000957.csv",
+    "candidate_table": "CAN_CSV0000000000012497.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000957.csv",
+    "candidate_table": "CAN_CSV0000000000027103.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000958.csv",
+    "candidate_table": "CAN_CSV0000000000000957.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000958.csv",
+    "candidate_table": "CAN_CSV0000000000000963.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000958.csv",
+    "candidate_table": "CAN_CSV0000000000000958.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000958.csv",
+    "candidate_table": "CAN_CSV0000000000000960.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000958.csv",
+    "candidate_table": "CAN_CSV0000000000000977.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000958.csv",
+    "candidate_table": "CAN_CSV0000000000000959.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000958.csv",
+    "candidate_table": "CAN_CSV0000000000001023.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000958.csv",
+    "candidate_table": "CAN_CSV0000000000000961.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000958.csv",
+    "candidate_table": "CAN_CSV0000000000000970.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000958.csv",
+    "candidate_table": "CAN_CSV0000000000000965.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000958.csv",
+    "candidate_table": "CAN_CSV0000000000012497.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000958.csv",
+    "candidate_table": "CAN_CSV0000000000000964.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000958.csv",
+    "candidate_table": "CAN_CSV0000000000012459.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000958.csv",
+    "candidate_table": "CAN_CSV0000000000027103.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000959.csv",
+    "candidate_table": "CAN_CSV0000000000000970.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000959.csv",
+    "candidate_table": "CAN_CSV0000000000000977.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000959.csv",
+    "candidate_table": "CAN_CSV0000000000000963.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000959.csv",
+    "candidate_table": "CAN_CSV0000000000000958.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000959.csv",
+    "candidate_table": "CAN_CSV0000000000000961.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000959.csv",
+    "candidate_table": "CAN_CSV0000000000000960.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000959.csv",
+    "candidate_table": "CAN_CSV0000000000001000.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000959.csv",
+    "candidate_table": "CAN_CSV0000000000000957.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000959.csv",
+    "candidate_table": "CAN_CSV0000000000001023.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000959.csv",
+    "candidate_table": "CAN_CSV0000000000000964.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000959.csv",
+    "candidate_table": "CAN_CSV0000000000000997.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000959.csv",
+    "candidate_table": "CAN_CSV0000000000027103.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000960.csv",
+    "candidate_table": "CAN_CSV0000000000001000.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000960.csv",
+    "candidate_table": "CAN_CSV0000000000001023.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000960.csv",
+    "candidate_table": "CAN_CSV0000000000000963.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000960.csv",
+    "candidate_table": "CAN_CSV0000000000000957.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000960.csv",
+    "candidate_table": "CAN_CSV0000000000000977.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000960.csv",
+    "candidate_table": "CAN_CSV0000000000000959.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000960.csv",
+    "candidate_table": "CAN_CSV0000000000000961.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000960.csv",
+    "candidate_table": "CAN_CSV0000000000000958.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000960.csv",
+    "candidate_table": "CAN_CSV0000000000000970.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000960.csv",
+    "candidate_table": "CAN_CSV0000000000000965.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000960.csv",
+    "candidate_table": "CAN_CSV0000000000012515.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000960.csv",
+    "candidate_table": "CAN_CSV0000000000012455.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000960.csv",
+    "candidate_table": "CAN_CSV0000000000012459.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000960.csv",
+    "candidate_table": "CAN_CSV0000000000027103.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000961.csv",
+    "candidate_table": "CAN_CSV0000000000001009.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000961.csv",
+    "candidate_table": "CAN_CSV0000000000000959.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000961.csv",
+    "candidate_table": "CAN_CSV0000000000000958.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000961.csv",
+    "candidate_table": "CAN_CSV0000000000000963.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000961.csv",
+    "candidate_table": "CAN_CSV0000000000000957.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000961.csv",
+    "candidate_table": "CAN_CSV0000000000000964.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000961.csv",
+    "candidate_table": "CAN_CSV0000000000001000.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000961.csv",
+    "candidate_table": "CAN_CSV0000000000000970.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000961.csv",
+    "candidate_table": "CAN_CSV0000000000000965.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000961.csv",
+    "candidate_table": "CAN_CSV0000000000001023.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000961.csv",
+    "candidate_table": "CAN_CSV0000000000000961.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000961.csv",
+    "candidate_table": "CAN_CSV0000000000000977.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000961.csv",
+    "candidate_table": "CAN_CSV0000000000000960.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000961.csv",
+    "candidate_table": "CAN_CSV0000000000000997.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000961.csv",
+    "candidate_table": "CAN_CSV0000000000000940.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000961.csv",
+    "candidate_table": "CAN_CSV0000000000002261.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000961.csv",
+    "candidate_table": "CAN_CSV0000000000027281.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000963.csv",
+    "candidate_table": "CAN_CSV0000000000001000.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000963.csv",
+    "candidate_table": "CAN_CSV0000000000001023.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000963.csv",
+    "candidate_table": "CAN_CSV0000000000000964.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000963.csv",
+    "candidate_table": "CAN_CSV0000000000000970.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000963.csv",
+    "candidate_table": "CAN_CSV0000000000000977.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000963.csv",
+    "candidate_table": "CAN_CSV0000000000000965.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000963.csv",
+    "candidate_table": "CAN_CSV0000000000000957.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000963.csv",
+    "candidate_table": "CAN_CSV0000000000000963.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000963.csv",
+    "candidate_table": "CAN_CSV0000000000000958.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000963.csv",
+    "candidate_table": "CAN_CSV0000000000012459.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000963.csv",
+    "candidate_table": "CAN_CSV0000000000027103.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000964.csv",
+    "candidate_table": "CAN_CSV0000000000000970.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000964.csv",
+    "candidate_table": "CAN_CSV0000000000000964.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000964.csv",
+    "candidate_table": "CAN_CSV0000000000000961.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000964.csv",
+    "candidate_table": "CAN_CSV0000000000000959.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000964.csv",
+    "candidate_table": "CAN_CSV0000000000000957.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000964.csv",
+    "candidate_table": "CAN_CSV0000000000001023.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000964.csv",
+    "candidate_table": "CAN_CSV0000000000000977.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000964.csv",
+    "candidate_table": "CAN_CSV0000000000000965.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000964.csv",
+    "candidate_table": "CAN_CSV0000000000001000.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000964.csv",
+    "candidate_table": "CAN_CSV0000000000012458.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000964.csv",
+    "candidate_table": "CAN_CSV0000000000000773.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000964.csv",
+    "candidate_table": "CAN_CSV0000000000012496.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000964.csv",
+    "candidate_table": "CAN_CSV0000000000027103.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000965.csv",
+    "candidate_table": "CAN_CSV0000000000000959.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000965.csv",
+    "candidate_table": "CAN_CSV0000000000000958.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000965.csv",
+    "candidate_table": "CAN_CSV0000000000000963.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000965.csv",
+    "candidate_table": "CAN_CSV0000000000000957.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000965.csv",
+    "candidate_table": "CAN_CSV0000000000000964.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000965.csv",
+    "candidate_table": "CAN_CSV0000000000001000.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000965.csv",
+    "candidate_table": "CAN_CSV0000000000000970.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000965.csv",
+    "candidate_table": "CAN_CSV0000000000000965.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000965.csv",
+    "candidate_table": "CAN_CSV0000000000001023.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000965.csv",
+    "candidate_table": "CAN_CSV0000000000000961.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000965.csv",
+    "candidate_table": "CAN_CSV0000000000000977.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000965.csv",
+    "candidate_table": "CAN_CSV0000000000000997.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000965.csv",
+    "candidate_table": "CAN_CSV0000000000012459.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000965.csv",
+    "candidate_table": "CAN_CSV0000000000000940.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000965.csv",
+    "candidate_table": "CAN_CSV0000000000012458.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000965.csv",
+    "candidate_table": "CAN_CSV0000000000000773.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000965.csv",
+    "candidate_table": "CAN_CSV0000000000001142.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000965.csv",
+    "candidate_table": "CAN_CSV0000000000013782.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000970.csv",
+    "candidate_table": "CAN_CSV0000000000000960.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000970.csv",
+    "candidate_table": "CAN_CSV0000000000000964.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000970.csv",
+    "candidate_table": "CAN_CSV0000000000000958.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000970.csv",
+    "candidate_table": "CAN_CSV0000000000000957.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000970.csv",
+    "candidate_table": "CAN_CSV0000000000000963.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000970.csv",
+    "candidate_table": "CAN_CSV0000000000001000.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000970.csv",
+    "candidate_table": "CAN_CSV0000000000001023.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000970.csv",
+    "candidate_table": "CAN_CSV0000000000000965.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000970.csv",
+    "candidate_table": "CAN_CSV0000000000000970.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000970.csv",
+    "candidate_table": "CAN_CSV0000000000000959.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000970.csv",
+    "candidate_table": "CAN_CSV0000000000012458.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000970.csv",
+    "candidate_table": "CAN_CSV0000000000027103.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000976.csv",
+    "candidate_table": "CAN_CSV0000000000006840.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000976.csv",
+    "candidate_table": "CAN_CSV0000000000000982.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000976.csv",
+    "candidate_table": "CAN_CSV0000000000006799.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000976.csv",
+    "candidate_table": "CAN_CSV0000000000000904.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000976.csv",
+    "candidate_table": "CAN_CSV0000000000006777.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000976.csv",
+    "candidate_table": "CAN_CSV0000000000006891.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000976.csv",
+    "candidate_table": "CAN_CSV0000000000000976.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000976.csv",
+    "candidate_table": "CAN_CSV0000000000006880.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000976.csv",
+    "candidate_table": "CAN_CSV0000000000006930.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000976.csv",
+    "candidate_table": "CAN_CSV0000000000012583.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000976.csv",
+    "candidate_table": "CAN_CSV0000000000012569.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000976.csv",
+    "candidate_table": "CAN_CSV0000000000012677.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000976.csv",
+    "candidate_table": "CAN_CSV0000000000027103.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000977.csv",
+    "candidate_table": "CAN_CSV0000000000001009.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000977.csv",
+    "candidate_table": "CAN_CSV0000000000000959.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000977.csv",
+    "candidate_table": "CAN_CSV0000000000000958.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000977.csv",
+    "candidate_table": "CAN_CSV0000000000000963.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000977.csv",
+    "candidate_table": "CAN_CSV0000000000000957.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000977.csv",
+    "candidate_table": "CAN_CSV0000000000000964.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000977.csv",
+    "candidate_table": "CAN_CSV0000000000001000.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000977.csv",
+    "candidate_table": "CAN_CSV0000000000000970.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000977.csv",
+    "candidate_table": "CAN_CSV0000000000000965.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000977.csv",
+    "candidate_table": "CAN_CSV0000000000001023.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000977.csv",
+    "candidate_table": "CAN_CSV0000000000000961.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000977.csv",
+    "candidate_table": "CAN_CSV0000000000000977.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000977.csv",
+    "candidate_table": "CAN_CSV0000000000000960.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000977.csv",
+    "candidate_table": "CAN_CSV0000000000000997.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000977.csv",
+    "candidate_table": "CAN_CSV0000000000000940.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000977.csv",
+    "candidate_table": "CAN_CSV0000000000012515.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000977.csv",
+    "candidate_table": "CAN_CSV0000000000012459.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000977.csv",
+    "candidate_table": "CAN_CSV0000000000012460.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000977.csv",
+    "candidate_table": "CAN_CSV0000000000013036.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000982.csv",
+    "candidate_table": "CAN_CSV0000000000006777.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000982.csv",
+    "candidate_table": "CAN_CSV0000000000000976.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000982.csv",
+    "candidate_table": "CAN_CSV0000000000000982.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000982.csv",
+    "candidate_table": "CAN_CSV0000000000006799.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000982.csv",
+    "candidate_table": "CAN_CSV0000000000006840.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000982.csv",
+    "candidate_table": "CAN_CSV0000000000006894.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000982.csv",
+    "candidate_table": "CAN_CSV0000000000000909.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000982.csv",
+    "candidate_table": "CAN_CSV0000000000006880.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000982.csv",
+    "candidate_table": "CAN_CSV0000000000007017.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000982.csv",
+    "candidate_table": "CAN_CSV0000000000012677.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000982.csv",
+    "candidate_table": "CAN_CSV0000000000027103.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000997.csv",
+    "candidate_table": "CAN_CSV0000000000000958.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000997.csv",
+    "candidate_table": "CAN_CSV0000000000000960.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000997.csv",
+    "candidate_table": "CAN_CSV0000000000001009.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000997.csv",
+    "candidate_table": "CAN_CSV0000000000000997.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000997.csv",
+    "candidate_table": "CAN_CSV0000000000000959.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000997.csv",
+    "candidate_table": "CAN_CSV0000000000027103.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001000.csv",
+    "candidate_table": "CAN_CSV0000000000000965.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001000.csv",
+    "candidate_table": "CAN_CSV0000000000000963.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001000.csv",
+    "candidate_table": "CAN_CSV0000000000000960.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001000.csv",
+    "candidate_table": "CAN_CSV0000000000001000.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001000.csv",
+    "candidate_table": "CAN_CSV0000000000000958.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001000.csv",
+    "candidate_table": "CAN_CSV0000000000000970.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001000.csv",
+    "candidate_table": "CAN_CSV0000000000000964.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001000.csv",
+    "candidate_table": "CAN_CSV0000000000000977.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001000.csv",
+    "candidate_table": "CAN_CSV0000000000001023.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001000.csv",
+    "candidate_table": "CAN_CSV0000000000000940.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001000.csv",
+    "candidate_table": "CAN_CSV0000000000012515.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001000.csv",
+    "candidate_table": "CAN_CSV0000000000012606.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001000.csv",
+    "candidate_table": "CAN_CSV0000000000012459.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001000.csv",
+    "candidate_table": "CAN_CSV0000000000012599.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001000.csv",
+    "candidate_table": "CAN_CSV0000000000027103.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001009.csv",
+    "candidate_table": "CAN_CSV0000000000000961.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001009.csv",
+    "candidate_table": "CAN_CSV0000000000000959.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001009.csv",
+    "candidate_table": "CAN_CSV0000000000000997.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001009.csv",
+    "candidate_table": "CAN_CSV0000000000001009.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001009.csv",
+    "candidate_table": "CAN_CSV0000000000000960.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001009.csv",
+    "candidate_table": "CAN_CSV0000000000012501.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001009.csv",
+    "candidate_table": "CAN_CSV0000000000027103.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001018.csv",
+    "candidate_table": "CAN_CSV0000000000001018.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001018.csv",
+    "candidate_table": "CAN_CSV0000000000012558.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001018.csv",
+    "candidate_table": "CAN_CSV0000000000000918.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001018.csv",
+    "candidate_table": "CAN_CSV0000000000006780.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001018.csv",
+    "candidate_table": "CAN_CSV0000000000006950.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001018.csv",
+    "candidate_table": "CAN_CSV0000000000006956.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001018.csv",
+    "candidate_table": "CAN_CSV0000000000006907.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001018.csv",
+    "candidate_table": "CAN_CSV0000000000013602.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001023.csv",
+    "candidate_table": "CAN_CSV0000000000001023.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001023.csv",
+    "candidate_table": "CAN_CSV0000000000000960.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001023.csv",
+    "candidate_table": "CAN_CSV0000000000000977.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001023.csv",
+    "candidate_table": "CAN_CSV0000000000000965.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001023.csv",
+    "candidate_table": "CAN_CSV0000000000000970.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001023.csv",
+    "candidate_table": "CAN_CSV0000000000000964.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001023.csv",
+    "candidate_table": "CAN_CSV0000000000000957.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001023.csv",
+    "candidate_table": "CAN_CSV0000000000000963.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001023.csv",
+    "candidate_table": "CAN_CSV0000000000001000.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001023.csv",
+    "candidate_table": "CAN_CSV0000000000012599.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001023.csv",
+    "candidate_table": "CAN_CSV0000000000012919.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001023.csv",
+    "candidate_table": "CAN_CSV0000000000027103.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001024.csv",
+    "candidate_table": "CAN_CSV0000000000012924.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001024.csv",
+    "candidate_table": "CAN_CSV0000000000012922.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001024.csv",
+    "candidate_table": "CAN_CSV0000000000012926.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001024.csv",
+    "candidate_table": "CAN_CSV0000000000012928.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001024.csv",
+    "candidate_table": "CAN_CSV0000000000012927.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001024.csv",
+    "candidate_table": "CAN_CSV0000000000012929.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001024.csv",
+    "candidate_table": "CAN_CSV0000000000001028.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001024.csv",
+    "candidate_table": "CAN_CSV0000000000001032.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001024.csv",
+    "candidate_table": "CAN_CSV0000000000012923.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001024.csv",
+    "candidate_table": "CAN_CSV0000000000012921.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001024.csv",
+    "candidate_table": "CAN_CSV0000000000001024.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001024.csv",
+    "candidate_table": "CAN_CSV0000000000005437.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001024.csv",
+    "candidate_table": "CAN_CSV0000000000001025.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001024.csv",
+    "candidate_table": "CAN_CSV0000000000013782.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001025.csv",
+    "candidate_table": "CAN_CSV0000000000012927.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001025.csv",
+    "candidate_table": "CAN_CSV0000000000001025.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001025.csv",
+    "candidate_table": "CAN_CSV0000000000012930.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001025.csv",
+    "candidate_table": "CAN_CSV0000000000001028.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001025.csv",
+    "candidate_table": "CAN_CSV0000000000012929.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001025.csv",
+    "candidate_table": "CAN_CSV0000000000012925.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001025.csv",
+    "candidate_table": "CAN_CSV0000000000012922.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001025.csv",
+    "candidate_table": "CAN_CSV0000000000000918.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001025.csv",
+    "candidate_table": "CAN_CSV0000000000012583.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001025.csv",
+    "candidate_table": "CAN_CSV0000000000012679.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001025.csv",
+    "candidate_table": "CAN_CSV0000000000012921.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001025.csv",
+    "candidate_table": "CAN_CSV0000000000027103.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001028.csv",
+    "candidate_table": "CAN_CSV0000000000001024.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001028.csv",
+    "candidate_table": "CAN_CSV0000000000012930.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001028.csv",
+    "candidate_table": "CAN_CSV0000000000012922.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001028.csv",
+    "candidate_table": "CAN_CSV0000000000012923.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001028.csv",
+    "candidate_table": "CAN_CSV0000000000012928.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001028.csv",
+    "candidate_table": "CAN_CSV0000000000012925.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001028.csv",
+    "candidate_table": "CAN_CSV0000000000001025.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001028.csv",
+    "candidate_table": "CAN_CSV0000000000001032.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001028.csv",
+    "candidate_table": "CAN_CSV0000000000012927.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001028.csv",
+    "candidate_table": "CAN_CSV0000000000012921.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001028.csv",
+    "candidate_table": "CAN_CSV0000000000012924.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001028.csv",
+    "candidate_table": "CAN_CSV0000000000006771.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001028.csv",
+    "candidate_table": "CAN_CSV0000000000027103.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001032.csv",
+    "candidate_table": "CAN_CSV0000000000012930.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001032.csv",
+    "candidate_table": "CAN_CSV0000000000012925.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001032.csv",
+    "candidate_table": "CAN_CSV0000000000001028.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001032.csv",
+    "candidate_table": "CAN_CSV0000000000012926.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001032.csv",
+    "candidate_table": "CAN_CSV0000000000001032.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001032.csv",
+    "candidate_table": "CAN_CSV0000000000001024.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001032.csv",
+    "candidate_table": "CAN_CSV0000000000001065.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001032.csv",
+    "candidate_table": "CAN_CSV0000000000012927.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001032.csv",
+    "candidate_table": "CAN_CSV0000000000005241.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001032.csv",
+    "candidate_table": "CAN_CSV0000000000027103.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001046.csv",
+    "candidate_table": "CAN_CSV0000000000000841.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001046.csv",
+    "candidate_table": "CAN_CSV0000000000001046.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001046.csv",
+    "candidate_table": "CAN_CSV0000000000006192.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001046.csv",
+    "candidate_table": "CAN_CSV0000000000013328.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001046.csv",
+    "candidate_table": "CAN_CSV0000000000002292.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001051.csv",
+    "candidate_table": "CAN_CSV0000000000006988.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001051.csv",
+    "candidate_table": "CAN_CSV0000000000001052.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001051.csv",
+    "candidate_table": "CAN_CSV0000000000001051.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001051.csv",
+    "candidate_table": "CAN_CSV0000000000013405.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001051.csv",
+    "candidate_table": "CAN_CSV0000000000027103.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001052.csv",
+    "candidate_table": "CAN_CSV0000000000001052.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001052.csv",
+    "candidate_table": "CAN_CSV0000000000001051.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001052.csv",
+    "candidate_table": "CAN_CSV0000000000004707.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001052.csv",
+    "candidate_table": "CAN_CSV0000000000027103.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001058.csv",
+    "candidate_table": "CAN_CSV0000000000001058.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001058.csv",
+    "candidate_table": "CAN_CSV0000000000013124.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001058.csv",
+    "candidate_table": "CAN_CSV0000000000001140.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001058.csv",
+    "candidate_table": "CAN_CSV0000000000012522.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001058.csv",
+    "candidate_table": "CAN_CSV0000000000002292.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001058.csv",
+    "candidate_table": "CAN_CSV0000000000027217.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001058.csv",
+    "candidate_table": "CAN_CSV0000000000013782.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001065.csv",
+    "candidate_table": "CAN_CSV0000000000013144.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001065.csv",
+    "candidate_table": "CAN_CSV0000000000000843.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001065.csv",
+    "candidate_table": "CAN_CSV0000000000001065.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001065.csv",
+    "candidate_table": "CAN_CSV0000000000001032.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001065.csv",
+    "candidate_table": "CAN_CSV0000000000000909.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001065.csv",
+    "candidate_table": "CAN_CSV0000000000005241.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001065.csv",
+    "candidate_table": "CAN_CSV0000000000015731.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001065.csv",
+    "candidate_table": "CAN_CSV0000000000013036.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001090.csv",
+    "candidate_table": "CAN_CSV0000000000001090.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001090.csv",
+    "candidate_table": "CAN_CSV0000000000015776.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001090.csv",
+    "candidate_table": "CAN_CSV0000000000000474.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001090.csv",
+    "candidate_table": "CAN_CSV0000000000013782.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001090.csv",
+    "candidate_table": "CAN_CSV0000000000013602.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001119.csv",
+    "candidate_table": "CAN_CSV0000000000000848.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001119.csv",
+    "candidate_table": "CAN_CSV0000000000013576.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001119.csv",
+    "candidate_table": "CAN_CSV0000000000015794.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001119.csv",
+    "candidate_table": "CAN_CSV0000000000001119.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001119.csv",
+    "candidate_table": "CAN_CSV0000000000013397.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001119.csv",
+    "candidate_table": "CAN_CSV0000000000027287.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001119.csv",
+    "candidate_table": "CAN_CSV0000000000000913.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001119.csv",
+    "candidate_table": "CAN_CSV0000000000005070.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001119.csv",
+    "candidate_table": "CAN_CSV0000000000027103.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001123.csv",
+    "candidate_table": "CAN_CSV0000000000013029.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001123.csv",
+    "candidate_table": "CAN_CSV0000000000013397.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001123.csv",
+    "candidate_table": "CAN_CSV0000000000013576.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001123.csv",
+    "candidate_table": "CAN_CSV0000000000001123.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001123.csv",
+    "candidate_table": "CAN_CSV0000000000001148.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001123.csv",
+    "candidate_table": "CAN_CSV0000000000027266.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001123.csv",
+    "candidate_table": "CAN_CSV0000000000001032.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001123.csv",
+    "candidate_table": "CAN_CSV0000000000012903.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001123.csv",
+    "candidate_table": "CAN_CSV0000000000005347.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001123.csv",
+    "candidate_table": "CAN_CSV0000000000006690.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001123.csv",
+    "candidate_table": "CAN_CSV0000000000027103.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001140.csv",
+    "candidate_table": "CAN_CSV0000000000001140.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001140.csv",
+    "candidate_table": "CAN_CSV0000000000001157.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001140.csv",
+    "candidate_table": "CAN_CSV0000000000013732.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001140.csv",
+    "candidate_table": "CAN_CSV0000000000027103.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001142.csv",
+    "candidate_table": "CAN_CSV0000000000001140.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001142.csv",
+    "candidate_table": "CAN_CSV0000000000001142.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001142.csv",
+    "candidate_table": "CAN_CSV0000000000013575.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001142.csv",
+    "candidate_table": "CAN_CSV0000000000001023.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001142.csv",
+    "candidate_table": "CAN_CSV0000000000027103.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001143.csv",
+    "candidate_table": "CAN_CSV0000000000000915.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001143.csv",
+    "candidate_table": "CAN_CSV0000000000002256.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001143.csv",
+    "candidate_table": "CAN_CSV0000000000005482.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001143.csv",
+    "candidate_table": "CAN_CSV0000000000001143.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001143.csv",
+    "candidate_table": "CAN_CSV0000000000001052.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001143.csv",
+    "candidate_table": "CAN_CSV0000000000001051.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001143.csv",
+    "candidate_table": "CAN_CSV0000000000027103.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001147.csv",
+    "candidate_table": "CAN_CSV0000000000001149.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001147.csv",
+    "candidate_table": "CAN_CSV0000000000001147.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001147.csv",
+    "candidate_table": "CAN_CSV0000000000001153.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001147.csv",
+    "candidate_table": "CAN_CSV0000000000027103.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001148.csv",
+    "candidate_table": "CAN_CSV0000000000001153.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001148.csv",
+    "candidate_table": "CAN_CSV0000000000001147.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001148.csv",
+    "candidate_table": "CAN_CSV0000000000001149.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001148.csv",
+    "candidate_table": "CAN_CSV0000000000001148.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001148.csv",
+    "candidate_table": "CAN_CSV0000000000012929.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001148.csv",
+    "candidate_table": "CAN_CSV0000000000004711.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001148.csv",
+    "candidate_table": "CAN_CSV0000000000012922.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001148.csv",
+    "candidate_table": "CAN_CSV0000000000013029.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001148.csv",
+    "candidate_table": "CAN_CSV0000000000001123.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001148.csv",
+    "candidate_table": "CAN_CSV0000000000027103.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001149.csv",
+    "candidate_table": "CAN_CSV0000000000001147.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001149.csv",
+    "candidate_table": "CAN_CSV0000000000001148.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001149.csv",
+    "candidate_table": "CAN_CSV0000000000001149.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001149.csv",
+    "candidate_table": "CAN_CSV0000000000001153.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001149.csv",
+    "candidate_table": "CAN_CSV0000000000013411.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001149.csv",
+    "candidate_table": "CAN_CSV0000000000027103.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001153.csv",
+    "candidate_table": "CAN_CSV0000000000001147.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001153.csv",
+    "candidate_table": "CAN_CSV0000000000001148.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001153.csv",
+    "candidate_table": "CAN_CSV0000000000001149.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001153.csv",
+    "candidate_table": "CAN_CSV0000000000001153.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001153.csv",
+    "candidate_table": "CAN_CSV0000000000013728.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001153.csv",
+    "candidate_table": "CAN_CSV0000000000006892.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001153.csv",
+    "candidate_table": "CAN_CSV0000000000027103.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001157.csv",
+    "candidate_table": "CAN_CSV0000000000001159.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001157.csv",
+    "candidate_table": "CAN_CSV0000000000004700.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001157.csv",
+    "candidate_table": "CAN_CSV0000000000001142.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001157.csv",
+    "candidate_table": "CAN_CSV0000000000001140.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001157.csv",
+    "candidate_table": "CAN_CSV0000000000027051.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001157.csv",
+    "candidate_table": "CAN_CSV0000000000027103.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001159.csv",
+    "candidate_table": "CAN_CSV0000000000001157.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001159.csv",
+    "candidate_table": "CAN_CSV0000000000013602.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001159.csv",
+    "candidate_table": "CAN_CSV0000000000001159.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001159.csv",
+    "candidate_table": "CAN_CSV0000000000001142.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001159.csv",
+    "candidate_table": "CAN_CSV0000000000002256.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001159.csv",
+    "candidate_table": "CAN_CSV0000000000027103.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001185.csv",
+    "candidate_table": "CAN_CSV0000000000001185.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001185.csv",
+    "candidate_table": "CAN_CSV0000000000000893.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001185.csv",
+    "candidate_table": "CAN_CSV0000000000006701.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001185.csv",
+    "candidate_table": "CAN_CSV0000000000002256.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001185.csv",
+    "candidate_table": "CAN_CSV0000000000004959.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001185.csv",
+    "candidate_table": "CAN_CSV0000000000027287.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001185.csv",
+    "candidate_table": "CAN_CSV0000000000013782.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001198.csv",
+    "candidate_table": "CAN_CSV0000000000001198.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001198.csv",
+    "candidate_table": "CAN_CSV0000000000027188.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001198.csv",
+    "candidate_table": "CAN_CSV0000000000006973.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001198.csv",
+    "candidate_table": "CAN_CSV0000000000006988.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001198.csv",
+    "candidate_table": "CAN_CSV0000000000006997.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001217.csv",
+    "candidate_table": "CAN_CSV0000000000014315.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001217.csv",
+    "candidate_table": "CAN_CSV0000000000001217.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001217.csv",
+    "candidate_table": "CAN_CSV0000000000002295.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001217.csv",
+    "candidate_table": "CAN_CSV0000000000001242.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001242.csv",
+    "candidate_table": "CAN_CSV0000000000002292.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001242.csv",
+    "candidate_table": "CAN_CSV0000000000002295.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001242.csv",
+    "candidate_table": "CAN_CSV0000000000001242.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001286.csv",
+    "candidate_table": "CAN_CSV0000000000027430.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001286.csv",
+    "candidate_table": "CAN_CSV0000000000001286.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001286.csv",
+    "candidate_table": "CAN_CSV0000000000002323.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001286.csv",
+    "candidate_table": "CAN_CSV0000000000001018.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001286.csv",
+    "candidate_table": "CAN_CSV0000000000005080.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001286.csv",
+    "candidate_table": "CAN_CSV0000000000014562.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001286.csv",
+    "candidate_table": "CAN_CSV0000000000001217.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__0.csv",
+    "candidate_table": "CAN_CSV0000000000027440__8.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__0.csv",
+    "candidate_table": "CAN_CSV0000000000027440__10.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__0.csv",
+    "candidate_table": "CAN_CSV0000000000001294__2.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__0.csv",
+    "candidate_table": "CAN_CSV0000000000027440__11.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__0.csv",
+    "candidate_table": "CAN_CSV0000000000001294__1.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__0.csv",
+    "candidate_table": "CAN_CSV0000000000001294__0.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__0.csv",
+    "candidate_table": "CAN_CSV0000000000027440__9.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__1.csv",
+    "candidate_table": "CAN_CSV0000000000001294__2.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__1.csv",
+    "candidate_table": "CAN_CSV0000000000001294__1.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__1.csv",
+    "candidate_table": "CAN_CSV0000000000001294__0.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__2.csv",
+    "candidate_table": "CAN_CSV0000000000001294__2.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__2.csv",
+    "candidate_table": "CAN_CSV0000000000001294__1.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__2.csv",
+    "candidate_table": "CAN_CSV0000000000001294__0.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__3.csv",
+    "candidate_table": "CAN_CSV0000000000001294__3.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__3.csv",
+    "candidate_table": "CAN_CSV0000000000027440__8.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__3.csv",
+    "candidate_table": "CAN_CSV0000000000001294__8.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__3.csv",
+    "candidate_table": "CAN_CSV0000000000027440__10.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__3.csv",
+    "candidate_table": "CAN_CSV0000000000001294__6.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__3.csv",
+    "candidate_table": "CAN_CSV0000000000027440__11.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__3.csv",
+    "candidate_table": "CAN_CSV0000000000001294__7.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__3.csv",
+    "candidate_table": "CAN_CSV0000000000001294__4.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__3.csv",
+    "candidate_table": "CAN_CSV0000000000001294__5.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__3.csv",
+    "candidate_table": "CAN_CSV0000000000027440__9.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__4.csv",
+    "candidate_table": "CAN_CSV0000000000001294__3.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__4.csv",
+    "candidate_table": "CAN_CSV0000000000001294__8.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__4.csv",
+    "candidate_table": "CAN_CSV0000000000001294__6.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__4.csv",
+    "candidate_table": "CAN_CSV0000000000001294__7.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__4.csv",
+    "candidate_table": "CAN_CSV0000000000001294__4.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__4.csv",
+    "candidate_table": "CAN_CSV0000000000001294__5.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__5.csv",
+    "candidate_table": "CAN_CSV0000000000001294__3.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__5.csv",
+    "candidate_table": "CAN_CSV0000000000001294__8.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__5.csv",
+    "candidate_table": "CAN_CSV0000000000001294__6.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__5.csv",
+    "candidate_table": "CAN_CSV0000000000001294__7.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__5.csv",
+    "candidate_table": "CAN_CSV0000000000001294__4.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__5.csv",
+    "candidate_table": "CAN_CSV0000000000001294__5.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__6.csv",
+    "candidate_table": "CAN_CSV0000000000001294__3.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__6.csv",
+    "candidate_table": "CAN_CSV0000000000001294__8.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__6.csv",
+    "candidate_table": "CAN_CSV0000000000001294__6.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__6.csv",
+    "candidate_table": "CAN_CSV0000000000001294__2.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__6.csv",
+    "candidate_table": "CAN_CSV0000000000001294__7.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__6.csv",
+    "candidate_table": "CAN_CSV0000000000001294__4.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__6.csv",
+    "candidate_table": "CAN_CSV0000000000001294__0.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__6.csv",
+    "candidate_table": "CAN_CSV0000000000001294__1.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__6.csv",
+    "candidate_table": "CAN_CSV0000000000001294__5.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__6.csv",
+    "candidate_table": "SG_CSV0000000000000388.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__7.csv",
+    "candidate_table": "CAN_CSV0000000000001294__3.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__7.csv",
+    "candidate_table": "CAN_CSV0000000000001294__8.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__7.csv",
+    "candidate_table": "CAN_CSV0000000000001294__6.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__7.csv",
+    "candidate_table": "CAN_CSV0000000000001294__7.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__7.csv",
+    "candidate_table": "CAN_CSV0000000000001294__4.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__7.csv",
+    "candidate_table": "CAN_CSV0000000000001294__5.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__7.csv",
+    "candidate_table": "SG_CSV0000000000000388.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__8.csv",
+    "candidate_table": "CAN_CSV0000000000001294__3.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__8.csv",
+    "candidate_table": "CAN_CSV0000000000014395.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__8.csv",
+    "candidate_table": "CAN_CSV0000000000001294__8.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__8.csv",
+    "candidate_table": "CAN_CSV0000000000001294__6.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__8.csv",
+    "candidate_table": "CAN_CSV0000000000001294__2.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__8.csv",
+    "candidate_table": "CAN_CSV0000000000001294__7.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__8.csv",
+    "candidate_table": "CAN_CSV0000000000001294__1.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__8.csv",
+    "candidate_table": "CAN_CSV0000000000001294__4.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__8.csv",
+    "candidate_table": "CAN_CSV0000000000001294__0.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__8.csv",
+    "candidate_table": "CAN_CSV0000000000001294__5.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__8.csv",
+    "candidate_table": "SG_CSV0000000000000388.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001301.csv",
+    "candidate_table": "CAN_CSV0000000000001301.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001301.csv",
+    "candidate_table": "CAN_CSV0000000000014547.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001306.csv",
+    "candidate_table": "CAN_CSV0000000000001306.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001310.csv",
+    "candidate_table": "CAN_CSV0000000000017175.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001310.csv",
+    "candidate_table": "CAN_CSV0000000000001310.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001313__0.csv",
+    "candidate_table": "CAN_CSV0000000000001313__12.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001313__0.csv",
+    "candidate_table": "CAN_CSV0000000000001313__4.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001313__0.csv",
+    "candidate_table": "CAN_CSV0000000000001313__13.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001313__0.csv",
+    "candidate_table": "CAN_CSV0000000000001313__2.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001313__0.csv",
+    "candidate_table": "CAN_CSV0000000000001313__10.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001313__0.csv",
+    "candidate_table": "CAN_CSV0000000000001313__1.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001313__0.csv",
+    "candidate_table": "CAN_CSV0000000000001313__0.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001313__0.csv",
+    "candidate_table": "CAN_CSV0000000000001313__3.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001313__0.csv",
+    "candidate_table": "CAN_CSV0000000000001313__11.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001313__0.csv",
+    "candidate_table": "CAN_CSV0000000000001313__14.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001313__0.csv",
+    "candidate_table": "CAN_CSV0000000000000714.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001313__0.csv",
+    "candidate_table": "USA_CSV0000000000034543__13.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001313__0.csv",
+    "candidate_table": "USA_CSV0000000000034543__12.csv"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001313__0.csv",
+    "candidate_table": "USA_CSV0000000000034543__14.csv"
+  }
+]
