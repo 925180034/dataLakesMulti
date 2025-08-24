@@ -1,0 +1,45 @@
+{
+  "config": {
+    "task": "union",
+    "dataset": "subset",
+    "queries": 10,
+    "tables": 908,
+    "use_llm": false
+  },
+  "results": {
+    "L1": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "hit@5": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "total_queries": 10,
+      "time": 0.05391335487365723,
+      "avg_time": 0.005391335487365723
+    },
+    "L1+L2": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "hit@5": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "total_queries": 10,
+      "time": 15.019974708557129,
+      "avg_time": 1.501997470855713
+    },
+    "L1+L2+L3": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "hit@5": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "total_queries": 10,
+      "time": 5.947958469390869,
+      "avg_time": 0.5947958469390869
+    }
+  },
+  "timestamp": "20250824_155710"
+}

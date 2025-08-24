@@ -1,0 +1,43 @@
+{
+  "union": {
+    "L1": {
+      "metrics": {
+        "hit@1": 0.0,
+        "hit@3": 0.0,
+        "hit@5": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "valid_queries": 0
+      },
+      "time": 0.10698771476745605,
+      "avg_time": 0.026746928691864014
+    },
+    "L1_L2": {
+      "metrics": {
+        "hit@1": 0.0,
+        "hit@3": 0.0,
+        "hit@5": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "valid_queries": 0
+      },
+      "time": 0.21085023880004883,
+      "avg_time": 0.05271255970001221
+    },
+    "L1_L2_L3": {
+      "metrics": {
+        "hit@1": 0.0,
+        "hit@3": 0.0,
+        "hit@5": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "valid_queries": 0
+      },
+      "time": 0.16740965843200684,
+      "avg_time": 0.04185241460800171
+    }
+  }
+}

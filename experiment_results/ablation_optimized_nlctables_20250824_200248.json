@@ -1,0 +1,84 @@
+{
+  "join": {
+    "L1": {
+      "metrics": {
+        "hit@1": 0.0,
+        "hit@3": 0.0,
+        "hit@5": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "valid_queries": 0
+      },
+      "time": 4.689697265625,
+      "avg_time": 0.10421549479166667
+    },
+    "L1_L2": {
+      "metrics": {
+        "hit@1": 0.0,
+        "hit@3": 0.0,
+        "hit@5": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "valid_queries": 0
+      },
+      "time": 7.195459842681885,
+      "avg_time": 0.159899107615153
+    },
+    "L1_L2_L3": {
+      "metrics": {
+        "hit@1": 0.0,
+        "hit@3": 0.0,
+        "hit@5": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "valid_queries": 0
+      },
+      "time": 7.655916929244995,
+      "avg_time": 0.17013148731655545
+    }
+  },
+  "union": {
+    "L1": {
+      "metrics": {
+        "hit@1": 0.0,
+        "hit@3": 0.0,
+        "hit@5": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "valid_queries": 0
+      },
+      "time": 8.325481176376343,
+      "avg_time": 0.08325481176376343
+    },
+    "L1_L2": {
+      "metrics": {
+        "hit@1": 0.0,
+        "hit@3": 0.0,
+        "hit@5": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "valid_queries": 0
+      },
+      "time": 94.00716185569763,
+      "avg_time": 0.9400716185569763
+    },
+    "L1_L2_L3": {
+      "metrics": {
+        "hit@1": 0.0,
+        "hit@3": 0.0,
+        "hit@5": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "valid_queries": 0
+      },
+      "time": 36.19448471069336,
+      "avg_time": 0.3619448471069336
+    }
+  }
+}

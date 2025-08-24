@@ -44,6 +44,8 @@ os.environ['TABLE_NAME_WEIGHT'] = '0.05'
 os.environ['USE_SMD_ENHANCED'] = 'true'
 # 固定hash种子
 os.environ['PYTHONHASHSEED'] = '0'
+# 禁用tokenizers并行以避免fork警告
+os.environ['TOKENIZERS_PARALLELISM'] = 'false'
 
 
 # ================== 缓存管理器 ==================
@@ -162,8 +164,14 @@ def load_dataset(task_type: str, dataset_type: str = 'subset') -> tuple:
         elif dataset_type == 'true_subset':
             # 真正的子集数据
             base_dir = Path(f'examples/separated_datasets/{task_type}_true_subset')
+        elif dataset_type in ['join_subset', 'union_subset']:
+            # 如果已经包含task_type前缀，直接使用
+            base_dir = Path(f'examples/separated_datasets/{dataset_type}')
+        elif dataset_type == 'subset':
+            # subset数据集有_subset后缀
+            base_dir = Path(f'examples/separated_datasets/{task_type}_subset')
         else:
-            # subset数据集有_subset后缀（注意：当前subset和complete相同）
+            # 其他情况
             base_dir = Path(f'examples/separated_datasets/{task_type}_{dataset_type}')
     
     with open(base_dir / 'tables.json', 'r') as f:

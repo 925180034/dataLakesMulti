@@ -1,0 +1,63 @@
+{
+  "individual": [
+    {
+      "query_id": "nlc_union_1",
+      "time": 0.007878541946411133,
+      "P@5": 0.0,
+      "R@5": 0.0,
+      "P@10": 0.0,
+      "R@10": 0.0,
+      "P@20": 0.0,
+      "R@20": 0.0,
+      "NDCG@10": 0.0
+    },
+    {
+      "query_id": "nlc_union_2",
+      "time": 0.0040776729583740234,
+      "P@5": 0.0,
+      "R@5": 0.0,
+      "P@10": 0.0,
+      "R@10": 0.0,
+      "P@20": 0.0,
+      "R@20": 0.0,
+      "NDCG@10": 0.0
+    },
+    {
+      "query_id": "nlc_union_3",
+      "time": 0.003509521484375,
+      "P@5": 0,
+      "R@5": 0.0,
+      "P@10": 0,
+      "R@10": 0.0,
+      "P@20": 0,
+      "R@20": 0.0,
+      "NDCG@10": 0.0
+    }
+  ],
+  "average": {
+    "avg_time": 0.005155245463053386,
+    "avg_P@5": 0.0,
+    "avg_R@5": 0.0,
+    "avg_P@10": 0.0,
+    "avg_R@10": 0.0,
+    "avg_P@20": 0.0,
+    "avg_R@20": 0.0,
+    "avg_NDCG@10": 0.0
+  },
+  "cache_stats": {
+    "hits": 144,
+    "misses": 0,
+    "saves": 0,
+    "hit_rate": "100.0%",
+    "memory_items": 4
+  },
+  "config": {
+    "dataset": "examples/nlctables/union_subset",
+    "task": "union",
+    "layers": "L1+L2+L3",
+    "num_queries": 3,
+    "num_threads": 4,
+    "batch_size": 10,
+    "has_llm": true
+  }
+}

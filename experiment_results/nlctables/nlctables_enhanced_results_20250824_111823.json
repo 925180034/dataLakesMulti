@@ -1,0 +1,154 @@
+{
+  "config": {
+    "dataset": "/root/dataLakesMulti/examples/nlctables_proper/nlctables_union",
+    "max_queries": 10,
+    "use_llm": false
+  },
+  "results": [
+    {
+      "query_id": "nlc_union_1",
+      "predictions": [],
+      "ground_truth": [
+        "dl_table_145_3_4_1"
+      ],
+      "times": {
+        "l1": 0.0004019737243652344,
+        "l2": 0.021025657653808594,
+        "l3": 0.0007877349853515625
+      }
+    },
+    {
+      "query_id": "nlc_union_2",
+      "predictions": [],
+      "ground_truth": [
+        "dl_table_145_3_4_2"
+      ],
+      "times": {
+        "l1": 0.0004050731658935547,
+        "l2": 0.009051799774169922,
+        "l3": 0.0002067089080810547
+      }
+    },
+    {
+      "query_id": "nlc_union_3",
+      "predictions": [],
+      "ground_truth": [
+        "dl_table_145_1_3_3",
+        "dl_table_145_1_3_2",
+        "dl_table_145_1_3_1",
+        "dl_table_145_1_3_5",
+        "dl_table_145_1_3_4"
+      ],
+      "times": {
+        "l1": 0.007921934127807617,
+        "l2": 0.0176088809967041,
+        "l3": 0.001110076904296875
+      }
+    },
+    {
+      "query_id": "nlc_union_4",
+      "predictions": [],
+      "ground_truth": [
+        "dl_table_145_3_6_1"
+      ],
+      "times": {
+        "l1": 0.00040793418884277344,
+        "l2": 0.008977174758911133,
+        "l3": 0.00017762184143066406
+      }
+    },
+    {
+      "query_id": "nlc_union_5",
+      "predictions": [],
+      "ground_truth": [
+        "dl_table_145_3_6_2"
+      ],
+      "times": {
+        "l1": 0.0004055500030517578,
+        "l2": 0.008934497833251953,
+        "l3": 0.00019669532775878906
+      }
+    },
+    {
+      "query_id": "nlc_union_6",
+      "predictions": [],
+      "ground_truth": [
+        "dl_table_155_3_4_1"
+      ],
+      "times": {
+        "l1": 0.00040268898010253906,
+        "l2": 0.015561580657958984,
+        "l3": 0.0007421970367431641
+      }
+    },
+    {
+      "query_id": "nlc_union_7",
+      "predictions": [],
+      "ground_truth": [
+        "dl_table_155_1_1_1",
+        "dl_table_155_1_1_3",
+        "dl_table_155_1_1_5",
+        "dl_table_155_1_1_4",
+        "dl_table_155_1_1_2"
+      ],
+      "times": {
+        "l1": 0.00041031837463378906,
+        "l2": 0.007868528366088867,
+        "l3": 0.00011563301086425781
+      }
+    },
+    {
+      "query_id": "nlc_union_8",
+      "predictions": [],
+      "ground_truth": [
+        "dl_table_38_4_1_1_cv_1_3_4",
+        "dl_table_38_4_1_1_cv_1_3_5",
+        "dl_table_38_4_1_1_cv_1_3_3",
+        "dl_table_38_4_1_1_cv_1_3_1",
+        "dl_table_38_4_1_1_cv_1_3_2"
+      ],
+      "times": {
+        "l1": 0.0077555179595947266,
+        "l2": 0.015531063079833984,
+        "l3": 0.0001697540283203125
+      }
+    },
+    {
+      "query_id": "nlc_union_10",
+      "predictions": [],
+      "ground_truth": [
+        "dl_table_38_1_2_1",
+        "dl_table_38_1_2_4",
+        "dl_table_38_1_2_2",
+        "dl_table_38_1_2_5",
+        "dl_table_38_1_2_3"
+      ],
+      "times": {
+        "l1": 0.0010056495666503906,
+        "l2": 0.007887840270996094,
+        "l3": 0.00015211105346679688
+      }
+    },
+    {
+      "query_id": "nlc_union_11",
+      "predictions": [],
+      "ground_truth": [
+        "dl_table_72_3_4_1"
+      ],
+      "times": {
+        "l1": 0.00041031837463378906,
+        "l2": 0.015786170959472656,
+        "l3": 0.0008602142333984375
+      }
+    }
+  ],
+  "summary": {
+    "total_queries": 10,
+    "total_predictions": 0,
+    "total_ground_truth": 26,
+    "total_hits": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1_score": 0.0
+  }
+}

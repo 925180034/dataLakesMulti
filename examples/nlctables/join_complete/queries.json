@@ -1,0 +1,1459 @@
+[
+  {
+    "query_id": "nlc_join_1",
+    "query_text": "Can you find more joinable tables with keyword 0.363with the topic related to Sports_Team_Statistics",
+    "seed_table": "q_table_118_j1_3",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "0.363with"
+      ],
+      "topics": [
+        "Sports_Team_Statistics"
+      ],
+      "column_mentions": [],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_3",
+    "query_text": "Can you find more joinable tables with similar content to Value7with the topic related to Canon_EOS_Framework_Data",
+    "seed_table": "q_table_16_j2_1",
+    "task_type": "join",
+    "features": {
+      "keywords": [],
+      "topics": [
+        "Canon_EOS_Framework_Data"
+      ],
+      "column_mentions": [
+        "Value7with"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_5",
+    "query_text": "Can you find more joinable tables with additonal features related to Original Declaration and better mention keyword Tidy ConfigurableEmbeddedServletContainerFactory",
+    "seed_table": "q_table_60_j3_2",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "Tidy"
+      ],
+      "topics": [],
+      "column_mentions": [
+        "Original"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_7",
+    "query_text": "I want to find more joinable tables, and these tables have topics related to stockport_contracts",
+    "seed_table": "q_table_110_j1_1",
+    "task_type": "join",
+    "features": {
+      "keywords": [],
+      "topics": [
+        "stockport_contracts"
+      ],
+      "column_mentions": [],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_8",
+    "query_text": "Can you find more tables with similar content to Ext. Applied to Contract and have more than 10 records",
+    "seed_table": "q_table_110_j3_1",
+    "task_type": "join",
+    "features": {
+      "keywords": [],
+      "topics": [],
+      "column_mentions": [
+        "Ext."
+      ],
+      "value_mentions": [],
+      "constraints": {
+        "min_rows": 10
+      }
+    }
+  },
+  {
+    "query_id": "nlc_join_9",
+    "query_text": "I want to find more joinable tables, and these tables have features related to Cost per pupilwith the topic related to Educational_District_Finances",
+    "seed_table": "q_table_12_j2_1",
+    "task_type": "join",
+    "features": {
+      "keywords": [],
+      "topics": [
+        "Educational_District_Finances"
+      ],
+      "column_mentions": [
+        "Cost"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_11",
+    "query_text": "Can you find more joinable tables with additonal features related to 50 and better mention keyword 5",
+    "seed_table": "q_table_24_j3_2",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "5"
+      ],
+      "topics": [],
+      "column_mentions": [],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_14",
+    "query_text": "I need to locate additional joinable tables  with a column count exceeding 10",
+    "seed_table": "q_table_142_j1_2",
+    "task_type": "join",
+    "features": {
+      "keywords": [],
+      "topics": [],
+      "column_mentions": [],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_15",
+    "query_text": "Can you find more joinable tables with similar content to with the topic related to Cycling_Race_Results",
+    "seed_table": "q_table_6_j2_1",
+    "task_type": "join",
+    "features": {
+      "keywords": [],
+      "topics": [
+        "Cycling_Race_Results"
+      ],
+      "column_mentions": [],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_17",
+    "query_text": "Can you find more joinable tables with additonal features related to Mode of transport and better mention keyword  Nil Return ",
+    "seed_table": "q_table_13_j3_2",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "Nil"
+      ],
+      "topics": [],
+      "column_mentions": [
+        "Mode"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_18",
+    "query_text": "I am looking for additional joinable tables that cover keyword Rail / Taxi and the number of columns are larger than 10with the topic related to senior_officials_expenses",
+    "seed_table": "q_table_13_j3_3",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "Rail"
+      ],
+      "topics": [
+        "senior_officials_expenses"
+      ],
+      "column_mentions": [],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_19",
+    "query_text": "I want to find more joinable tables, and these tables have topics related to Game_Rating_and_Info",
+    "seed_table": "q_table_50_j1_1",
+    "task_type": "join",
+    "features": {
+      "keywords": [],
+      "topics": [
+        "Game_Rating_and_Info"
+      ],
+      "column_mentions": [],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_21",
+    "query_text": "I am looking for additional joinable tables that contain info about Count3",
+    "seed_table": "q_table_68_j2_1",
+    "task_type": "join",
+    "features": {
+      "keywords": [],
+      "topics": [],
+      "column_mentions": [
+        "Count3"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_23",
+    "query_text": "I want to find more joinable tables that have features related to Status and better contain keyword 19/Feb/14.",
+    "seed_table": "q_table_100_j3_2",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "19/Feb/14."
+      ],
+      "topics": [],
+      "column_mentions": [
+        "Status"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_25",
+    "query_text": "I am looking for additional joinable tables that cover keyword The United States Itinerancy of Mrs. Zilpha Elaw, 1812-1840",
+    "seed_table": "q_table_155_j1_3",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "The"
+      ],
+      "topics": [],
+      "column_mentions": [],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_27",
+    "query_text": "I want to find more joinable tables, and these tables have features related to Run",
+    "seed_table": "q_table_39_j2_1",
+    "task_type": "join",
+    "features": {
+      "keywords": [],
+      "topics": [],
+      "column_mentions": [
+        "Run"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_29",
+    "query_text": "Can you find more joinable tables with additonal features related to Parameter Count and better mention keyword IndexList<T>",
+    "seed_table": "q_table_37_j3_2",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "IndexList<T>"
+      ],
+      "topics": [],
+      "column_mentions": [
+        "Parameter"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_31",
+    "query_text": "I want to find more joinable tables, and these tables have keyword 0.923076923",
+    "seed_table": "q_table_67_j1_3",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "0.923076923"
+      ],
+      "topics": [],
+      "column_mentions": [],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_32",
+    "query_text": "I want to find more joinable tables with the number of features larger than 10",
+    "seed_table": "q_table_67_j1_2",
+    "task_type": "join",
+    "features": {
+      "keywords": [],
+      "topics": [],
+      "column_mentions": [],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_33",
+    "query_text": "I want to find more joinable tables, and these tables have features related to Part No.with the topic related to Electronic_Components_Inventory",
+    "seed_table": "q_table_125_j2_1",
+    "task_type": "join",
+    "features": {
+      "keywords": [],
+      "topics": [
+        "Electronic_Components_Inventory"
+      ],
+      "column_mentions": [
+        "Part"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_35",
+    "query_text": "I want to find more joinable tables that have features related to Score_5 and better contain keyword 3.8125.",
+    "seed_table": "q_table_90_j3_2",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "3.8125."
+      ],
+      "topics": [],
+      "column_mentions": [
+        "Score_5"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_37",
+    "query_text": "I am looking for additional joinable tables that cover keyword Animeband 0.5.9",
+    "seed_table": "q_table_106_j1_3",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "Animeband"
+      ],
+      "topics": [],
+      "column_mentions": [],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_39",
+    "query_text": "I am looking for additional joinable tables that contain info about Status",
+    "seed_table": "q_table_58_j2_1",
+    "task_type": "join",
+    "features": {
+      "keywords": [],
+      "topics": [],
+      "column_mentions": [
+        "Status"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_41",
+    "query_text": "I am looking for additional joinable tables that contain info about price and mention keyword RABBIT",
+    "seed_table": "q_table_95_j3_2",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "RABBIT"
+      ],
+      "topics": [],
+      "column_mentions": [],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_43",
+    "query_text": "I am looking for additional joinable tables that cover keyword !(lhsString == null)with the topic related to Code_Analysis",
+    "seed_table": "q_table_87_j1_3",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "!(lhsString"
+      ],
+      "topics": [
+        "Code_Analysis"
+      ],
+      "column_mentions": [],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_45",
+    "query_text": "Can you find more joinable tables with similar content to Total Money ($)",
+    "seed_table": "q_table_64_j2_1",
+    "task_type": "join",
+    "features": {
+      "keywords": [],
+      "topics": [],
+      "column_mentions": [
+        "Total"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_47",
+    "query_text": "Can you find more joinable tables with additonal features related to Description and better mention keyword 4",
+    "seed_table": "q_table_154_j3_2",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "4"
+      ],
+      "topics": [],
+      "column_mentions": [
+        "Description"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_48",
+    "query_text": "I want to find more large-scale joinable tables having more than 10 rows, and these tables have features related to Description",
+    "seed_table": "q_table_154_j3_1",
+    "task_type": "join",
+    "features": {
+      "keywords": [],
+      "topics": [],
+      "column_mentions": [
+        "Description"
+      ],
+      "value_mentions": [],
+      "constraints": {
+        "min_rows": 10
+      }
+    }
+  },
+  {
+    "query_id": "nlc_join_49",
+    "query_text": "I want to find more joinable tables, and these tables have topics related to Radio_Frequency_Records",
+    "seed_table": "q_table_7_j1_1",
+    "task_type": "join",
+    "features": {
+      "keywords": [],
+      "topics": [
+        "Radio_Frequency_Records"
+      ],
+      "column_mentions": [],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_51",
+    "query_text": "Can you find more joinable tables with similar content to Payscale Maximum (Â£)",
+    "seed_table": "q_table_139_j2_1",
+    "task_type": "join",
+    "features": {
+      "keywords": [],
+      "topics": [],
+      "column_mentions": [
+        "Payscale"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_53",
+    "query_text": "Can you find more joinable tables with additonal features related to Call Count and better mention keyword 1",
+    "seed_table": "q_table_29_j3_2",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "1"
+      ],
+      "topics": [],
+      "column_mentions": [
+        "Call"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_55",
+    "query_text": "I want to find more joinable tables, and these tables have topics related to Course_Schedule",
+    "seed_table": "q_table_46_j1_1",
+    "task_type": "join",
+    "features": {
+      "keywords": [],
+      "topics": [
+        "Course_Schedule"
+      ],
+      "column_mentions": [],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_56",
+    "query_text": "I want to find more large-scale joinable tables having more than 10 rows, and these tables have features related to Times",
+    "seed_table": "q_table_46_j3_1",
+    "task_type": "join",
+    "features": {
+      "keywords": [],
+      "topics": [],
+      "column_mentions": [
+        "Times"
+      ],
+      "value_mentions": [],
+      "constraints": {
+        "min_rows": 10
+      }
+    }
+  },
+  {
+    "query_id": "nlc_join_57",
+    "query_text": "I want to find more joinable tables, and these tables have features related to Wt.with the topic related to Player_Profile_Data",
+    "seed_table": "q_table_69_j2_1",
+    "task_type": "join",
+    "features": {
+      "keywords": [],
+      "topics": [
+        "Player_Profile_Data"
+      ],
+      "column_mentions": [
+        "Wt.with"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_59",
+    "query_text": "Can you find more joinable tables with additonal features related to Description code and better mention keyword LS6 1LU",
+    "seed_table": "q_table_17_j3_2",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "LS6"
+      ],
+      "topics": [],
+      "column_mentions": [
+        "Description"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_60",
+    "query_text": "I want to find more joinable tables with the number of features larger than 10with the topic related to Business_Rates_Data",
+    "seed_table": "q_table_17_j1_2",
+    "task_type": "join",
+    "features": {
+      "keywords": [],
+      "topics": [
+        "Business_Rates_Data"
+      ],
+      "column_mentions": [],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_61",
+    "query_text": "Can you find more joinable tables with similar content to prescribing",
+    "seed_table": "q_table_144_j1_1",
+    "task_type": "join",
+    "features": {
+      "keywords": [],
+      "topics": [],
+      "column_mentions": [],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_62",
+    "query_text": "I need to locate additional joinable tables  with a column count exceeding 10",
+    "seed_table": "q_table_144_j1_2",
+    "task_type": "join",
+    "features": {
+      "keywords": [],
+      "topics": [],
+      "column_mentions": [],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_63",
+    "query_text": "I am looking for additional joinable tables that contain info about Nat. Champs Pointswith the topic related to College_Football_Rankings",
+    "seed_table": "q_table_75_j2_1",
+    "task_type": "join",
+    "features": {
+      "keywords": [],
+      "topics": [
+        "College_Football_Rankings"
+      ],
+      "column_mentions": [
+        "Nat."
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_65",
+    "query_text": "I am looking for additional joinable tables that contain info about QR #12 and mention keyword DNS",
+    "seed_table": "q_table_102_j3_2",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "DNS"
+      ],
+      "topics": [],
+      "column_mentions": [
+        "QR"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_66",
+    "query_text": "I am looking for additional large-scale joinable tables that contain info about QR #12 and have more than 10 rows",
+    "seed_table": "q_table_102_j3_1",
+    "task_type": "join",
+    "features": {
+      "keywords": [],
+      "topics": [],
+      "column_mentions": [
+        "QR"
+      ],
+      "value_mentions": [],
+      "constraints": {
+        "min_rows": 10
+      }
+    }
+  },
+  {
+    "query_id": "nlc_join_67",
+    "query_text": "Can you find more joinable tables with keyword -2.4with the topic related to Baseball_Player_Stats",
+    "seed_table": "q_table_62_j1_3",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "-2.4with"
+      ],
+      "topics": [
+        "Baseball_Player_Stats"
+      ],
+      "column_mentions": [],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_68",
+    "query_text": "I want to find more joinable tables, and these tables have keyword -9.8 and have more than 10 columns",
+    "seed_table": "q_table_62_j3_3",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "-9.8"
+      ],
+      "topics": [],
+      "column_mentions": [],
+      "value_mentions": [],
+      "constraints": {
+        "min_rows": 10
+      }
+    }
+  },
+  {
+    "query_id": "nlc_join_69",
+    "query_text": "I am looking for additional joinable tables that contain info about DisciplineNumeratorwith the topic related to report_card_discipline_for_2015_16_0",
+    "seed_table": "q_table_25_j2_1",
+    "task_type": "join",
+    "features": {
+      "keywords": [],
+      "topics": [
+        "report_card_discipline_for_2015_16_0"
+      ],
+      "column_mentions": [
+        "DisciplineNumeratorwith"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_71",
+    "query_text": "I am looking for additional joinable tables that contain info about Area and mention keyword 99.74",
+    "seed_table": "q_table_2_j3_2",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "99.74"
+      ],
+      "topics": [],
+      "column_mentions": [
+        "Area"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_73",
+    "query_text": "Can you find more joinable tables with keyword 2",
+    "seed_table": "q_table_108_j1_3",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "2"
+      ],
+      "topics": [],
+      "column_mentions": [],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_74",
+    "query_text": "I need to locate additional joinable tables  with a column count exceeding 10",
+    "seed_table": "q_table_108_j1_2",
+    "task_type": "join",
+    "features": {
+      "keywords": [],
+      "topics": [],
+      "column_mentions": [],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_75",
+    "query_text": "I want to find more joinable tables, and these tables have features related to Residence",
+    "seed_table": "q_table_145_j2_1",
+    "task_type": "join",
+    "features": {
+      "keywords": [],
+      "topics": [],
+      "column_mentions": [
+        "Residence"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_76",
+    "query_text": "I need to locate additional joinable tables  with a column count exceeding 10with the topic related to Baptismal_Records",
+    "seed_table": "q_table_145_j1_2",
+    "task_type": "join",
+    "features": {
+      "keywords": [],
+      "topics": [
+        "Baptismal_Records"
+      ],
+      "column_mentions": [],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_79",
+    "query_text": "I am looking for additional joinable tables that cover keyword iChronology.getYearMonthMillis(year,month)>0",
+    "seed_table": "q_table_55_j1_3",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "iChronology.getYearMonthMillis(year"
+      ],
+      "topics": [],
+      "column_mentions": [],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_81",
+    "query_text": "I want to find more joinable tables, and these tables have features related to Draft Info",
+    "seed_table": "q_table_71_j2_1",
+    "task_type": "join",
+    "features": {
+      "keywords": [],
+      "topics": [],
+      "column_mentions": [
+        "Draft"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_82",
+    "query_text": "I want to find more joinable tables, and these tables have keyword 1969-11-20 and have more than 10 columnswith the topic related to Player_Profile_Data",
+    "seed_table": "q_table_71_j3_3",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "1969-11-20"
+      ],
+      "topics": [
+        "Player_Profile_Data"
+      ],
+      "column_mentions": [],
+      "value_mentions": [],
+      "constraints": {
+        "min_rows": 10
+      }
+    }
+  },
+  {
+    "query_id": "nlc_join_83",
+    "query_text": "I am looking for additional joinable tables that contain info about registration number and mention keyword 79",
+    "seed_table": "q_table_121_j3_2",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "79"
+      ],
+      "topics": [],
+      "column_mentions": [],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_85",
+    "query_text": "I am looking for additional joinable tables that cover keyword SouthEast",
+    "seed_table": "q_table_104_j1_3",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "SouthEast"
+      ],
+      "topics": [],
+      "column_mentions": [],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_86",
+    "query_text": "I am looking for additional large-scale joinable tables that contain info about Setup and have more than 10 rows",
+    "seed_table": "q_table_104_j3_1",
+    "task_type": "join",
+    "features": {
+      "keywords": [],
+      "topics": [],
+      "column_mentions": [
+        "Setup"
+      ],
+      "value_mentions": [],
+      "constraints": {
+        "min_rows": 10
+      }
+    }
+  },
+  {
+    "query_id": "nlc_join_87",
+    "query_text": "I am looking for additional joinable tables that contain info about Prev Pos",
+    "seed_table": "q_table_78_j2_1",
+    "task_type": "join",
+    "features": {
+      "keywords": [],
+      "topics": [],
+      "column_mentions": [
+        "Prev"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_89",
+    "query_text": "I am looking for additional joinable tables that contain info about Expense area and mention keyword Balfour Beatty WorkPlace Ltd",
+    "seed_table": "q_table_31_j3_2",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "Balfour"
+      ],
+      "topics": [],
+      "column_mentions": [
+        "Expense"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_91",
+    "query_text": "I want to find more joinable tables, and these tables have keyword Truewith the topic related to VariableDeclaration",
+    "seed_table": "q_table_61_j1_3",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "Truewith"
+      ],
+      "topics": [
+        "VariableDeclaration"
+      ],
+      "column_mentions": [],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_93",
+    "query_text": "I want to find more joinable tables, and these tables have features related to Book",
+    "seed_table": "q_table_152_j2_1",
+    "task_type": "join",
+    "features": {
+      "keywords": [],
+      "topics": [],
+      "column_mentions": [
+        "Book"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_95",
+    "query_text": "Can you find more joinable tables with additonal features related to Function_Name and better mention keyword exports",
+    "seed_table": "q_table_32_j3_2",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "exports"
+      ],
+      "topics": [],
+      "column_mentions": [
+        "Function_Name"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_96",
+    "query_text": "I am looking for additional large-scale joinable tables that contain info about Function_Name and have more than 10 rows",
+    "seed_table": "q_table_32_j3_1",
+    "task_type": "join",
+    "features": {
+      "keywords": [],
+      "topics": [],
+      "column_mentions": [
+        "Function_Name"
+      ],
+      "value_mentions": [],
+      "constraints": {
+        "min_rows": 10
+      }
+    }
+  },
+  {
+    "query_id": "nlc_join_97",
+    "query_text": "I want to find more joinable tables, and these tables have topics related to Experiment_Results",
+    "seed_table": "q_table_11_j1_1",
+    "task_type": "join",
+    "features": {
+      "keywords": [],
+      "topics": [
+        "Experiment_Results"
+      ],
+      "column_mentions": [],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_99",
+    "query_text": "I want to find more joinable tables, and these tables have features related to Hem.with the topic related to Constellations",
+    "seed_table": "q_table_63_j2_1",
+    "task_type": "join",
+    "features": {
+      "keywords": [],
+      "topics": [
+        "Constellations"
+      ],
+      "column_mentions": [
+        "Hem.with"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_100",
+    "query_text": "I want to find more joinable tables, and these tables have keyword قطب‌نما and have more than 10 columnswith the topic related to Constellations",
+    "seed_table": "q_table_63_j3_3",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "قطب‌نما"
+      ],
+      "topics": [
+        "Constellations"
+      ],
+      "column_mentions": [],
+      "value_mentions": [],
+      "constraints": {
+        "min_rows": 10
+      }
+    }
+  },
+  {
+    "query_id": "nlc_join_101",
+    "query_text": "I want to find more joinable tables that have features related to RTP-SUCCESSES and better contain keyword -20.00.",
+    "seed_table": "q_table_56_j3_2",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "-20.00."
+      ],
+      "topics": [],
+      "column_mentions": [
+        "RTP-SUCCESSES"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_103",
+    "query_text": "I want to find more joinable tables, and these tables have keyword No",
+    "seed_table": "q_table_141_j1_3",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "No"
+      ],
+      "topics": [],
+      "column_mentions": [],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_105",
+    "query_text": "I am looking for additional joinable tables that contain info about Max Daily",
+    "seed_table": "q_table_107_j2_1",
+    "task_type": "join",
+    "features": {
+      "keywords": [],
+      "topics": [],
+      "column_mentions": [
+        "Max"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_107",
+    "query_text": "I want to find more joinable tables that have features related to Rec. 3 and better contain keyword 2.",
+    "seed_table": "q_table_126_j3_2",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "2."
+      ],
+      "topics": [],
+      "column_mentions": [
+        "Rec."
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_109",
+    "query_text": "I am looking for additional joinable tables that cover keyword 851564.11",
+    "seed_table": "q_table_23_j1_3",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "851564.11"
+      ],
+      "topics": [],
+      "column_mentions": [],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_111",
+    "query_text": "I am looking for additional joinable tables that contain info about Historywith the topic related to Railway_Locomotive_History",
+    "seed_table": "q_table_40_j2_1",
+    "task_type": "join",
+    "features": {
+      "keywords": [],
+      "topics": [
+        "Railway_Locomotive_History"
+      ],
+      "column_mentions": [
+        "Historywith"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_113",
+    "query_text": "I am looking for additional joinable tables that contain info about Milestone and mention keyword enhancement",
+    "seed_table": "q_table_97_j3_2",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "enhancement"
+      ],
+      "topics": [],
+      "column_mentions": [
+        "Milestone"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_115",
+    "query_text": "Can you find more joinable tables with similar content to BMW PGA Championship Winners",
+    "seed_table": "q_table_79_j1_1",
+    "task_type": "join",
+    "features": {
+      "keywords": [],
+      "topics": [],
+      "column_mentions": [
+        "BMW"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_117",
+    "query_text": "I want to find more joinable tables, and these tables have features related to Synonym",
+    "seed_table": "q_table_136_j2_1",
+    "task_type": "join",
+    "features": {
+      "keywords": [],
+      "topics": [],
+      "column_mentions": [
+        "Synonym"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_119",
+    "query_text": "I am looking for additional joinable tables that contain info about Office and mention keyword --",
+    "seed_table": "q_table_77_j3_2",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "--"
+      ],
+      "topics": [],
+      "column_mentions": [
+        "Office"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_121",
+    "query_text": "I want to find more joinable tables, and these tables have topics related to CSS_Selectors_Usage",
+    "seed_table": "q_table_135_j1_1",
+    "task_type": "join",
+    "features": {
+      "keywords": [],
+      "topics": [
+        "CSS_Selectors_Usage"
+      ],
+      "column_mentions": [],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_123",
+    "query_text": "Can you find more joinable tables with similar content to Min Tempwith the topic related to Weather_Station_Temperature_Records",
+    "seed_table": "q_table_116_j2_1",
+    "task_type": "join",
+    "features": {
+      "keywords": [],
+      "topics": [
+        "Weather_Station_Temperature_Records"
+      ],
+      "column_mentions": [
+        "Min"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_125",
+    "query_text": "Can you find more joinable tables with additonal features related to Note and better mention keyword to",
+    "seed_table": "q_table_86_j3_2",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "to"
+      ],
+      "topics": [],
+      "column_mentions": [
+        "Note"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_127",
+    "query_text": "Can you find more joinable tables with similar content to Meeting_Room_Capacity_Data",
+    "seed_table": "q_table_45_j1_1",
+    "task_type": "join",
+    "features": {
+      "keywords": [],
+      "topics": [],
+      "column_mentions": [
+        "Meeting_Room_Capacity_Data"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_129",
+    "query_text": "Can you find more joinable tables with similar content to Quincy Center Bus Station",
+    "seed_table": "q_table_1_j2_1",
+    "task_type": "join",
+    "features": {
+      "keywords": [],
+      "topics": [],
+      "column_mentions": [
+        "Quincy"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_131",
+    "query_text": "I am looking for additional joinable tables that contain info about Measurement_26 and mention keyword 27",
+    "seed_table": "q_table_99_j3_2",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "27"
+      ],
+      "topics": [],
+      "column_mentions": [
+        "Measurement_26"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_132",
+    "query_text": "Searching for supplementary tables that have more than 10 columns to ensure sufficient data for our studywith the topic related to Experimental_Data",
+    "seed_table": "q_table_99_j1_2",
+    "task_type": "join",
+    "features": {
+      "keywords": [],
+      "topics": [
+        "Experimental_Data"
+      ],
+      "column_mentions": [],
+      "value_mentions": [],
+      "constraints": {
+        "min_rows": 10
+      }
+    }
+  },
+  {
+    "query_id": "nlc_join_135",
+    "query_text": "I am looking for additional joinable tables that contain info about Service Descriptionwith the topic related to Healthcare_Service_Records",
+    "seed_table": "q_table_66_j2_1",
+    "task_type": "join",
+    "features": {
+      "keywords": [],
+      "topics": [
+        "Healthcare_Service_Records"
+      ],
+      "column_mentions": [
+        "Service"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_137",
+    "query_text": "I am looking for additional joinable tables that contain info about Writer and mention keyword Paul Verhoeven",
+    "seed_table": "q_table_38_j3_2",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "Paul"
+      ],
+      "topics": [],
+      "column_mentions": [
+        "Writer"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_139",
+    "query_text": "I want to find more joinable tables, and these tables have keyword Yes",
+    "seed_table": "q_table_130_j1_3",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "Yes"
+      ],
+      "topics": [],
+      "column_mentions": [],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_141",
+    "query_text": "I want to find more joinable tables, and these tables have features related to Conditionswith the topic related to Weather_Data",
+    "seed_table": "q_table_138_j2_1",
+    "task_type": "join",
+    "features": {
+      "keywords": [],
+      "topics": [
+        "Weather_Data"
+      ],
+      "column_mentions": [
+        "Conditionswith"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_142",
+    "query_text": "Can you find more tables with similar content to Humidity and have more than 10 records",
+    "seed_table": "q_table_138_j3_1",
+    "task_type": "join",
+    "features": {
+      "keywords": [],
+      "topics": [],
+      "column_mentions": [
+        "Humidity"
+      ],
+      "value_mentions": [],
+      "constraints": {
+        "min_rows": 10
+      }
+    }
+  },
+  {
+    "query_id": "nlc_join_143",
+    "query_text": "I am looking for additional joinable tables that contain info about Stars and mention keyword 3 stars",
+    "seed_table": "q_table_88_j3_2",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "3"
+      ],
+      "topics": [],
+      "column_mentions": [
+        "Stars"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_145",
+    "query_text": "Can you find more joinable tables with keyword /iː/",
+    "seed_table": "q_table_85_j1_3",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "/iː/"
+      ],
+      "topics": [],
+      "column_mentions": [],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_147",
+    "query_text": "I want to find more joinable tables, and these tables have features related to Description",
+    "seed_table": "q_table_94_j2_1",
+    "task_type": "join",
+    "features": {
+      "keywords": [],
+      "topics": [],
+      "column_mentions": [
+        "Description"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_148",
+    "query_text": "Can you find more joinable tables with keyword 339064626-4 and at least 10 columns",
+    "seed_table": "q_table_94_j3_3",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "339064626-4"
+      ],
+      "topics": [],
+      "column_mentions": [],
+      "value_mentions": [],
+      "constraints": {
+        "min_cols": 10
+      }
+    }
+  },
+  {
+    "query_id": "nlc_join_149",
+    "query_text": "I am looking for additional joinable tables that contain info about Description and mention keyword GetTagsTest",
+    "seed_table": "q_table_43_j3_2",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "GetTagsTest"
+      ],
+      "topics": [],
+      "column_mentions": [
+        "Description"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  }
+]

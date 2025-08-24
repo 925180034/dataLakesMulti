@@ -1,0 +1,4167 @@
+[
+  {
+    "name": "dl_table_110_j3_1",
+    "columns": [
+      {
+        "name": "Postcode",
+        "type": "string",
+        "sample_values": [
+          "W1B 3AT",
+          "Various - See Below",
+          "SK6 6AF",
+          "PR5 6AW",
+          "Various - See Below"
+        ]
+      },
+      {
+        "name": "Contract Title",
+        "type": "string",
+        "sample_values": [
+          "Pre Payment Cards ",
+          "Day Care Services",
+          "Home and / or Community based Support Service",
+          "Planned Highway Structural maintenance ",
+          "Alternative Provision and One to One Tutoring Services "
+        ]
+      },
+      {
+        "name": "Review Date",
+        "type": "string",
+        "sample_values": [
+          "31/07/2019",
+          "01/04/2018",
+          "01/09/2017",
+          "21/06/2017",
+          "01/03/2018"
+        ]
+      },
+      {
+        "name": "Agreement Type",
+        "type": "string",
+        "sample_values": [
+          "Contract",
+          "Framework Agreement",
+          "Contract",
+          "Contract",
+          "Framework Agreement"
+        ]
+      },
+      {
+        "name": "Contract Start Date",
+        "type": "string",
+        "sample_values": [
+          "01/08/2017",
+          "01/04/2016",
+          "01/04/2013",
+          "30/09/2015",
+          "01/03/2016"
+        ]
+      },
+      {
+        "name": "UID",
+        "type": "string",
+        "sample_values": [
+          "3726",
+          "1606",
+          "596",
+          "383",
+          "1401"
+        ]
+      },
+      {
+        "name": "Supplier Name",
+        "type": "date",
+        "sample_values": [
+          "Pre Paid Financial  Services",
+          "Various - See Below",
+          "Comprehensive Health Care",
+          "Eric Wright Civil Engineering Ltd",
+          "Various - See Below"
+        ]
+      },
+      {
+        "name": "Route to Market",
+        "type": "numeric",
+        "sample_values": [
+          "Call Off (External)",
+          "OJEU Tender",
+          "OJEU Tender",
+          "OJEU Tender",
+          "Tender"
+        ]
+      },
+      {
+        "name": "Contract Term (Months)",
+        "type": "numeric",
+        "sample_values": [
+          "36",
+          "36",
+          "36",
+          "24",
+          "12"
+        ]
+      },
+      {
+        "name": "Maximum Duration of Contract (Months)",
+        "type": "date",
+        "sample_values": [
+          "48",
+          "48",
+          "60",
+          "24",
+          "19"
+        ]
+      },
+      {
+        "name": "Contract End Date",
+        "type": "string",
+        "sample_values": [
+          "31/07/2020",
+          "31/03/2019",
+          "31/03/2018",
+          "29/09/2017",
+          "31/08/2018"
+        ]
+      },
+      {
+        "name": "Ext. Applied to Contract",
+        "type": "date",
+        "sample_values": [
+          "Yes",
+          "No",
+          "Yes",
+          "No",
+          "Yes"
+        ]
+      },
+      {
+        "name": "Maximum Extend Date",
+        "type": "date",
+        "sample_values": [
+          "31/07/2021",
+          "31/03/2020",
+          "31/03/2018",
+          "29/09/2019",
+          "31/08/2018"
+        ]
+      },
+      {
+        "name": "Estimated Annual Value",
+        "type": "string",
+        "sample_values": [
+          "Â£12,990.00",
+          "Â£1,100,000.00",
+          "Included above",
+          "Included above",
+          "Â£600,000.00"
+        ]
+      },
+      {
+        "name": "Estimated Total Value",
+        "type": "string",
+        "sample_values": [
+          "Â£45,000.00",
+          "Â£4,400,000.00",
+          "Included above",
+          "Included above",
+          "Â£1,800,000.00"
+        ]
+      },
+      {
+        "name": "Supplier Type",
+        "type": "string",
+        "sample_values": [
+          "Large",
+          "Various - See Below",
+          "Large",
+          "SME",
+          "Various - See Below"
+        ]
+      },
+      {
+        "name": "Registered Number",
+        "type": "string",
+        "sample_values": [
+          "06337638",
+          "Various - See Below",
+          "2883893",
+          "2565379",
+          "Various - See Below"
+        ]
+      },
+      {
+        "name": "Council Directorate",
+        "type": "string",
+        "sample_values": [
+          "Stockport- Corporate & Support Services",
+          "Stockport- Services to People",
+          "Stockport- Services to People",
+          "Stockport- Services to Place",
+          "Stockport- Services to People"
+        ]
+      }
+    ],
+    "row_count": 246,
+    "metadata": {
+      "page_title": "",
+      "second_title": "",
+      "has_header": true
+    }
+  },
+  {
+    "name": "dl_table_60_j3_2",
+    "columns": [
+      {
+        "name": "Change Details",
+        "type": "numeric",
+        "sample_values": [
+          "RENAME\t{Interface SpringApplicationLifecycleMXBean at spring-boot-tools/spring-boot-maven-plugin/src/it/start-stop/src/main/java/org/test/SampleApplication.java:53}\t{Interface SpringApplicationAdminMXBean at spring-boot-tools/spring-boot-maven-plugin/src/it/start-stop/src/main/java/org/test/SampleApplication.java:53})",
+          "MOVE_RENAME\t{Interface Operator at src/main/java/io/reactivex/Flowable.java:48}\t{Interface FlowableOperator at src/main/java/io/reactivex/FlowableOperator.java:20})",
+          "RENAME\t{Interface ShapeRenderer at MPChartLib/src/main/java/com/github/mikephil/charting/renderer/scatter/ShapeRenderer.java:11}\t{Interface IShapeRenderer at MPChartLib/src/main/java/com/github/mikephil/charting/renderer/scatter/IShapeRenderer.java:11})",
+          "RENAME\t{Interface ObservableConsumable at src/main/java/io/reactivex/ObservableConsumable.java:15}\t{Interface ObservableSource at src/main/java/io/reactivex/ObservableSource.java:15})",
+          "RENAME\t{Interface ConfigurableEmbeddedServletContainerFactory at spring-boot/src/main/java/org/springframework/boot/context/embedded/ConfigurableEmbeddedServletContainerFactory.java:25}\t{Interface ConfigurableEmbeddedServletContainer at spring-boot/src/main/java/org/springframework/boot/context/embedded/ConfigurableEmbeddedServletContainer.java:25})"
+        ]
+      },
+      {
+        "name": "Action",
+        "type": "string",
+        "sample_values": [
+          "RENAME",
+          "MOVE_RENAME",
+          "RENAME",
+          "RENAME",
+          "RENAME"
+        ]
+      },
+      {
+        "name": "New Declaration",
+        "type": "string",
+        "sample_values": [
+          "spring-boot-tools/spring-boot-maven-plugin/src/it/start-stop/src/main/java/org/test/SampleApplication.java:1600:1693:1600:1693 InterfaceDeclaration SpringApplicationAdminMXBean",
+          "src/main/java/io/reactivex/FlowableOperator.java:690:1024:690:1024 InterfaceDeclaration FlowableOperator",
+          "MPChartLib/src/main/java/com/github/mikephil/charting/renderer/scatter/IShapeRenderer.java:368:1123:368:1123 InterfaceDeclaration IShapeRenderer",
+          "src/main/java/io/reactivex/ObservableSource.java:611:1025:611:1025 InterfaceDeclaration ObservableSource",
+          "spring-boot/src/main/java/org/springframework/boot/context/embedded/ConfigurableEmbeddedServletContainer.java:803:5037:803:5037 InterfaceDeclaration ConfigurableEmbeddedServletContainer"
+        ]
+      },
+      {
+        "name": "Index",
+        "type": "string",
+        "sample_values": [
+          "69",
+          "34",
+          "3",
+          "31",
+          "74"
+        ]
+      },
+      {
+        "name": "Commit Hash",
+        "type": "string",
+        "sample_values": [
+          "105039cdb206718ff020ffc9a52f60395ff223a9",
+          "20373999c6ef718878e40769b27bb787f70c5938",
+          "99379d7bcffd3247bde40fbe06bab8ec58066586",
+          "2de974aa65a226fe10190fa0881f576814459d42",
+          "99350a221658e2c446d0f5636d751f00747e8b88"
+        ]
+      },
+      {
+        "name": "Description",
+        "type": "string",
+        "sample_values": [
+          "Rename SpringApplicationLifecycle => Admin",
+          "2.x: Rename Flowable Base Interface Types for consistency (#4299)",
+          "Renamed `ShapeRenderer` -> `IShapeRenderer`",
+          "2.x: Rename Observable Base Interface Types for consistency (#4300)",
+          "Tidy ConfigurableEmbeddedServletContainerFactory"
+        ]
+      },
+      {
+        "name": "Original Declaration",
+        "type": "string",
+        "sample_values": [
+          "spring-boot-tools/spring-boot-maven-plugin/src/it/start-stop/src/main/java/org/test/SampleApplication.java:1599:1696:1599:1696 InterfaceDeclaration SpringApplicationLifecycleMXBean",
+          "src/main/java/io/reactivex/Flowable.java:1841:2195:1841:2195 InterfaceDeclaration Operator",
+          "MPChartLib/src/main/java/com/github/mikephil/charting/renderer/scatter/ShapeRenderer.java:368:1122:368:1122 InterfaceDeclaration ShapeRenderer",
+          "src/main/java/io/reactivex/ObservableConsumable.java:611:1033:611:1033 InterfaceDeclaration ObservableConsumable",
+          "spring-boot/src/main/java/org/springframework/boot/context/embedded/ConfigurableEmbeddedServletContainerFactory.java:803:5044:803:5044 InterfaceDeclaration ConfigurableEmbeddedServletContainerFactory"
+        ]
+      }
+    ],
+    "row_count": 32,
+    "metadata": {
+      "page_title": "",
+      "second_title": "",
+      "has_header": true
+    }
+  },
+  {
+    "name": "dl_table_67_j1_3_1",
+    "columns": [
+      {
+        "name": "Index",
+        "type": "numeric",
+        "sample_values": [
+          "207",
+          "168",
+          "7",
+          "157",
+          "2"
+        ]
+      },
+      {
+        "name": "Metric 2",
+        "type": "string",
+        "sample_values": [
+          "3",
+          "2",
+          "1",
+          "1",
+          "2"
+        ]
+      },
+      {
+        "name": "Metric 10",
+        "type": "string",
+        "sample_values": [
+          "1.25",
+          "0.75",
+          "0.5",
+          "1.0909090909999999",
+          "0.8214285709999999"
+        ]
+      },
+      {
+        "name": "Metric 13",
+        "type": "string",
+        "sample_values": [
+          "0",
+          "0",
+          "2",
+          "0",
+          "4"
+        ]
+      },
+      {
+        "name": "Metric 1",
+        "type": "numeric",
+        "sample_values": [
+          "5",
+          "15",
+          "6",
+          "12",
+          "8"
+        ]
+      },
+      {
+        "name": "Metric 11",
+        "type": "numeric",
+        "sample_values": [
+          "26",
+          "369",
+          "107",
+          "494",
+          "267"
+        ]
+      },
+      {
+        "name": "Metric 7",
+        "type": "numeric",
+        "sample_values": [
+          "2",
+          "3",
+          "2",
+          "15",
+          "2"
+        ]
+      },
+      {
+        "name": "Metric 12",
+        "type": "numeric",
+        "sample_values": [
+          "0.0",
+          "0.5",
+          "1.0",
+          "1.0",
+          "1.0"
+        ]
+      },
+      {
+        "name": "Metric 21",
+        "type": "numeric",
+        "sample_values": [
+          "1",
+          "1",
+          "0",
+          "1",
+          "0"
+        ]
+      },
+      {
+        "name": "Metric 14",
+        "type": "numeric",
+        "sample_values": [
+          "0.923076923",
+          "0.47826087",
+          "0.0",
+          "0.0",
+          "0.41666666700000005"
+        ]
+      },
+      {
+        "name": "Metric 16",
+        "type": "numeric",
+        "sample_values": [
+          "1",
+          "1",
+          "0",
+          "0",
+          "1"
+        ]
+      },
+      {
+        "name": "Metric 18",
+        "type": "numeric",
+        "sample_values": [
+          "4.0",
+          "23.46666667",
+          "16.5",
+          "40.08333333",
+          "31.875"
+        ]
+      },
+      {
+        "name": "Metric 17",
+        "type": "numeric",
+        "sample_values": [
+          "2",
+          "6",
+          "0",
+          "0",
+          "1"
+        ]
+      },
+      {
+        "name": "Metric 9",
+        "type": "numeric",
+        "sample_values": [
+          "4",
+          "13",
+          "4",
+          "10",
+          "4"
+        ]
+      },
+      {
+        "name": "Metric 15",
+        "type": "numeric",
+        "sample_values": [
+          "0.5",
+          "0.5166666670000001",
+          "0.45833333299999995",
+          "0.27380952399999997",
+          "0.666666667"
+        ]
+      },
+      {
+        "name": "Metric 20",
+        "type": "numeric",
+        "sample_values": [
+          "0.4",
+          "1.2667",
+          "1.1667",
+          "2.5833",
+          "0.875"
+        ]
+      }
+    ],
+    "row_count": 112,
+    "metadata": {
+      "page_title": "",
+      "second_title": "",
+      "has_header": true
+    }
+  },
+  {
+    "name": "dl_table_50_j1_1_3",
+    "columns": [
+      {
+        "name": "Title",
+        "type": "string",
+        "sample_values": [
+          "Flipper",
+          "Frogger Returns",
+          "Hearts Spades Euchre",
+          "Equilibrio",
+          "Ghosts 'n Goblins"
+        ]
+      },
+      {
+        "name": "EU Date",
+        "type": "string",
+        "sample_values": [
+          "23 Apr 10",
+          "12 Feb 10",
+          "11 Aug 11",
+          "10 Apr 09",
+          "30 May 13"
+        ]
+      },
+      {
+        "name": "System",
+        "type": "string",
+        "sample_values": [
+          "DSiWare",
+          "WiiWare",
+          "DSiWare",
+          "WiiWare",
+          "NES"
+        ]
+      }
+    ],
+    "row_count": 62,
+    "metadata": {
+      "page_title": "",
+      "second_title": "",
+      "has_header": true
+    }
+  },
+  {
+    "name": "dl_table_39_j2_1_3",
+    "columns": [
+      {
+        "name": "Pos",
+        "type": "numeric",
+        "sample_values": [
+          "40",
+          "38",
+          "24",
+          "9",
+          "2"
+        ]
+      },
+      {
+        "name": "First Name",
+        "type": "string",
+        "sample_values": [
+          "Russell",
+          "Thierry",
+          "Karl",
+          "Stewart",
+          "Matt"
+        ]
+      },
+      {
+        "name": "Country",
+        "type": "string",
+        "sample_values": [
+          "GBR",
+          "CAN",
+          "GBR",
+          "GBR",
+          "GBR"
+        ]
+      },
+      {
+        "name": "T1",
+        "type": "string",
+        "sample_values": [
+          "00:01:43",
+          "00:01:28",
+          "00:01:14",
+          "00:01:28",
+          "00:01:16"
+        ]
+      },
+      {
+        "name": "Last Name",
+        "type": "date",
+        "sample_values": [
+          "Cox",
+          "Asselin",
+          "Free",
+          "Guynan",
+          "Moorhouse"
+        ]
+      },
+      {
+        "name": "Run",
+        "type": "date",
+        "sample_values": [
+          "00:18:11",
+          "00:19:17",
+          "00:17:45",
+          "00:16:15",
+          "00:15:13"
+        ]
+      },
+      {
+        "name": "Bike",
+        "type": "date",
+        "sample_values": [
+          "01:00:24",
+          "01:00:28",
+          "00:55:49",
+          "00:54:53",
+          "00:52:58"
+        ]
+      }
+    ],
+    "row_count": 22,
+    "metadata": {
+      "page_title": "",
+      "second_title": "",
+      "has_header": true
+    }
+  },
+  {
+    "name": "dl_table_39_j2_1_2",
+    "columns": [
+      {
+        "name": "Pos",
+        "type": "numeric",
+        "sample_values": [
+          "15",
+          "37",
+          "50",
+          "29",
+          "5"
+        ]
+      },
+      {
+        "name": "First Name",
+        "type": "string",
+        "sample_values": [
+          "Frederic",
+          "Michael",
+          "Kevin",
+          "Sylvain",
+          "Tobias"
+        ]
+      },
+      {
+        "name": "Country",
+        "type": "string",
+        "sample_values": [
+          "CAN",
+          "USA",
+          "USA",
+          "CAN",
+          "GER"
+        ]
+      },
+      {
+        "name": "T1",
+        "type": "string",
+        "sample_values": [
+          "00:01:16",
+          "00:01:30",
+          "00:01:36",
+          "00:01:14",
+          "00:01:21"
+        ]
+      },
+      {
+        "name": "Last Name",
+        "type": "date",
+        "sample_values": [
+          "Chenard",
+          "Saviano",
+          "Glodava",
+          "Rioux",
+          "Hegmann"
+        ]
+      },
+      {
+        "name": "Run",
+        "type": "date",
+        "sample_values": [
+          "00:17:30",
+          "00:19:27",
+          "00:22:40",
+          "00:18:40",
+          "00:16:00"
+        ]
+      },
+      {
+        "name": "T2",
+        "type": "date",
+        "sample_values": [
+          "00:01:09",
+          "00:01:39",
+          "00:01:37",
+          "00:01:26",
+          "00:01:16"
+        ]
+      }
+    ],
+    "row_count": 22,
+    "metadata": {
+      "page_title": "",
+      "second_title": "",
+      "has_header": true
+    }
+  },
+  {
+    "name": "dl_table_39_j2_1_1",
+    "columns": [
+      {
+        "name": "Pos",
+        "type": "numeric",
+        "sample_values": [
+          "2",
+          "21",
+          "46",
+          "50",
+          "9"
+        ]
+      },
+      {
+        "name": "First Name",
+        "type": "string",
+        "sample_values": [
+          "Matt",
+          "Lee",
+          "Viktor",
+          "Kevin",
+          "Stewart"
+        ]
+      },
+      {
+        "name": "Country",
+        "type": "string",
+        "sample_values": [
+          "GBR",
+          "GBR",
+          "HUN",
+          "USA",
+          "GBR"
+        ]
+      },
+      {
+        "name": "T1",
+        "type": "string",
+        "sample_values": [
+          "00:01:16",
+          "00:01:21",
+          "00:02:04",
+          "00:01:36",
+          "00:01:28"
+        ]
+      },
+      {
+        "name": "Last Name",
+        "type": "date",
+        "sample_values": [
+          "Moorhouse",
+          "Wingate",
+          "Szász",
+          "Glodava",
+          "Guynan"
+        ]
+      },
+      {
+        "name": "Run",
+        "type": "date",
+        "sample_values": [
+          "00:15:13",
+          "00:18:18",
+          "00:20:34",
+          "00:22:40",
+          "00:16:15"
+        ]
+      },
+      {
+        "name": "Bike",
+        "type": "date",
+        "sample_values": [
+          "00:52:58",
+          "00:53:37",
+          "00:59:18",
+          "01:00:55",
+          "00:54:53"
+        ]
+      }
+    ],
+    "row_count": 22,
+    "metadata": {
+      "page_title": "",
+      "second_title": "",
+      "has_header": true
+    }
+  },
+  {
+    "name": "dl_table_67_j1_3_3",
+    "columns": [
+      {
+        "name": "Index",
+        "type": "numeric",
+        "sample_values": [
+          "207",
+          "143",
+          "240",
+          "236",
+          "12"
+        ]
+      },
+      {
+        "name": "Metric 2",
+        "type": "string",
+        "sample_values": [
+          "3",
+          "2",
+          "2",
+          "2",
+          "1"
+        ]
+      },
+      {
+        "name": "Metric 10",
+        "type": "string",
+        "sample_values": [
+          "1.25",
+          "0.846153846",
+          "0.818181818",
+          "1.1",
+          "0.222222222"
+        ]
+      },
+      {
+        "name": "Metric 13",
+        "type": "string",
+        "sample_values": [
+          "0",
+          "3",
+          "0",
+          "0",
+          "1"
+        ]
+      },
+      {
+        "name": "Metric 1",
+        "type": "numeric",
+        "sample_values": [
+          "5",
+          "27",
+          "12",
+          "11",
+          "4"
+        ]
+      },
+      {
+        "name": "Metric 11",
+        "type": "numeric",
+        "sample_values": [
+          "26",
+          "372",
+          "128",
+          "96",
+          "129"
+        ]
+      },
+      {
+        "name": "Metric 7",
+        "type": "numeric",
+        "sample_values": [
+          "2",
+          "3",
+          "2",
+          "2",
+          "1"
+        ]
+      },
+      {
+        "name": "Metric 12",
+        "type": "numeric",
+        "sample_values": [
+          "0.0",
+          "0.9",
+          "0.0",
+          "0.333333333",
+          "1.0"
+        ]
+      },
+      {
+        "name": "Metric 21",
+        "type": "numeric",
+        "sample_values": [
+          "1",
+          "1",
+          "2",
+          "2",
+          "0"
+        ]
+      },
+      {
+        "name": "Metric 14",
+        "type": "numeric",
+        "sample_values": [
+          "0.923076923",
+          "0.323529412",
+          "0.55",
+          "0.25",
+          "0.0"
+        ]
+      },
+      {
+        "name": "Metric 9",
+        "type": "numeric",
+        "sample_values": [
+          "4",
+          "24",
+          "10",
+          "11",
+          "4"
+        ]
+      },
+      {
+        "name": "Metric 16",
+        "type": "numeric",
+        "sample_values": [
+          "1",
+          "1",
+          "1",
+          "0",
+          "1"
+        ]
+      },
+      {
+        "name": "Metric 18",
+        "type": "numeric",
+        "sample_values": [
+          "4.0",
+          "12.40740741",
+          "9.5",
+          "7.454545455",
+          "30.5"
+        ]
+      },
+      {
+        "name": "Metric 15",
+        "type": "numeric",
+        "sample_values": [
+          "0.5",
+          "0.346153846",
+          "0.4",
+          "0.272727273",
+          "0.4375"
+        ]
+      },
+      {
+        "name": "Metric 19",
+        "type": "numeric",
+        "sample_values": [
+          "1",
+          "2",
+          "2",
+          "1",
+          "6"
+        ]
+      },
+      {
+        "name": "Metric 17",
+        "type": "numeric",
+        "sample_values": [
+          "2",
+          "6",
+          "6",
+          "0",
+          "1"
+        ]
+      }
+    ],
+    "row_count": 112,
+    "metadata": {
+      "page_title": "",
+      "second_title": "",
+      "has_header": true
+    }
+  },
+  {
+    "name": "dl_table_37_j3_2",
+    "columns": [
+      {
+        "name": "Function",
+        "type": "numeric",
+        "sample_values": [
+          "Parse",
+          "OnWarning",
+          "OnResourceIndexEntryChanged",
+          "OnSalesQuotaChanged",
+          "WriteInt32"
+        ]
+      },
+      {
+        "name": "Function Count",
+        "type": "string",
+        "sample_values": [
+          "10",
+          "11",
+          "1",
+          "0",
+          "1"
+        ]
+      },
+      {
+        "name": "Class",
+        "type": "string",
+        "sample_values": [
+          "TGIBlock",
+          "WkHtmlToPdfConverter",
+          "AResourceIndexEntry",
+          "SalesPerson",
+          "IntList"
+        ]
+      },
+      {
+        "name": "Parameter Count",
+        "type": "string",
+        "sample_values": [
+          "4",
+          "1",
+          "2",
+          "1",
+          "1"
+        ]
+      },
+      {
+        "name": "Return Count",
+        "type": "numeric",
+        "sample_values": [
+          "1",
+          "2",
+          "2",
+          "0",
+          "2"
+        ]
+      }
+    ],
+    "row_count": 196,
+    "metadata": {
+      "page_title": "",
+      "second_title": "",
+      "has_header": true
+    }
+  },
+  {
+    "name": "dl_table_24_j3_2",
+    "columns": [
+      {
+        "name": "Player",
+        "type": "string",
+        "sample_values": [
+          "G Kirsten (SA)",
+          "Imran Farhat (Pak)",
+          "Qasim Umar (Pak)",
+          "Mohsin Khan (Pak)",
+          "Saleem Malik (Pak)"
+        ]
+      },
+      {
+        "name": "0",
+        "type": "string",
+        "sample_values": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "1"
+        ]
+      },
+      {
+        "name": "Mat",
+        "type": "numeric",
+        "sample_values": [
+          "2",
+          "2",
+          "4",
+          "6",
+          "13"
+        ]
+      },
+      {
+        "name": "Ave",
+        "type": "numeric",
+        "sample_values": [
+          "92.0",
+          "50.0",
+          "83.33",
+          "33.0",
+          "53.68"
+        ]
+      },
+      {
+        "name": "Inns",
+        "type": "numeric",
+        "sample_values": [
+          "4",
+          "4",
+          "6",
+          "10",
+          "20"
+        ]
+      },
+      {
+        "name": "NO",
+        "type": "numeric",
+        "sample_values": [
+          "1",
+          "0",
+          "0",
+          "1",
+          "4"
+        ]
+      },
+      {
+        "name": "Runs",
+        "type": "numeric",
+        "sample_values": [
+          "276",
+          "200",
+          "500",
+          "297",
+          "859"
+        ]
+      },
+      {
+        "name": "HS",
+        "type": "numeric",
+        "sample_values": [
+          "118",
+          "128",
+          "210",
+          "76",
+          "116"
+        ]
+      },
+      {
+        "name": "100",
+        "type": "numeric",
+        "sample_values": [
+          "2",
+          "1",
+          "2",
+          "0",
+          "3"
+        ]
+      },
+      {
+        "name": "50",
+        "type": "numeric",
+        "sample_values": [
+          "1",
+          "1",
+          "0",
+          "3",
+          "6"
+        ]
+      }
+    ],
+    "row_count": 20,
+    "metadata": {
+      "page_title": "",
+      "second_title": "",
+      "has_header": true
+    }
+  },
+  {
+    "name": "dl_table_50_j1_1_2",
+    "columns": [
+      {
+        "name": "Title",
+        "type": "string",
+        "sample_values": [
+          "Fantasy Zone",
+          "Kid Icarus",
+          "Excave",
+          "Flipper 2: Flush the Goldfish",
+          "Driift Mania"
+        ]
+      },
+      {
+        "name": "EU Date",
+        "type": "string",
+        "sample_values": [
+          "11 Apr 08",
+          "11 Jul 13",
+          "26 Mar 15",
+          "29 Dec 11",
+          "31 Jul 09"
+        ]
+      },
+      {
+        "name": "System",
+        "type": "string",
+        "sample_values": [
+          "SMS",
+          "NES",
+          "3DS eShop",
+          "DSiWare",
+          "WiiWare"
+        ]
+      },
+      {
+        "name": "Players",
+        "type": "string",
+        "sample_values": [
+          "1",
+          "1",
+          "1",
+          "1",
+          "8"
+        ]
+      }
+    ],
+    "row_count": 62,
+    "metadata": {
+      "page_title": "",
+      "second_title": "",
+      "has_header": true
+    }
+  },
+  {
+    "name": "dl_table_50_j1_1_1",
+    "columns": [
+      {
+        "name": "Title",
+        "type": "string",
+        "sample_values": [
+          "Kirby Squeak Squad aka Kirby: Mouse Attack (Europe)",
+          "Kirby's Dream Land 3",
+          "Excave",
+          "Jam City Rollergirls",
+          "Galaga"
+        ]
+      },
+      {
+        "name": "EU Date",
+        "type": "string",
+        "sample_values": [
+          "25 Jun 15",
+          "24 Jul 09",
+          "26 Mar 15",
+          "17 Nov 11",
+          "01 May 14"
+        ]
+      },
+      {
+        "name": "System",
+        "type": "string",
+        "sample_values": [
+          "DS",
+          "SNES",
+          "3DS eShop",
+          "WiiWare",
+          "NES"
+        ]
+      },
+      {
+        "name": "Genre",
+        "type": "string",
+        "sample_values": [
+          "Platformer",
+          "Action",
+          "RPG",
+          "Sports",
+          "Shooter"
+        ]
+      },
+      {
+        "name": "Players",
+        "type": "numeric",
+        "sample_values": [
+          "4",
+          "2",
+          "1",
+          "2",
+          "1"
+        ]
+      }
+    ],
+    "row_count": 62,
+    "metadata": {
+      "page_title": "",
+      "second_title": "",
+      "has_header": true
+    }
+  },
+  {
+    "name": "dl_table_155_j1_3_3",
+    "columns": [
+      {
+        "name": "Last Name",
+        "type": "string",
+        "sample_values": [
+          "Pryor",
+          "Bell",
+          "Anthony",
+          "Sievens",
+          "Martin"
+        ]
+      },
+      {
+        "name": "Rank",
+        "type": "string",
+        "sample_values": [
+          "assistant professor",
+          "assistant professor",
+          "PhD candidate",
+          "PhD candidate",
+          "PhD candidate"
+        ]
+      },
+      {
+        "name": "First Name",
+        "type": "date",
+        "sample_values": [
+          "Elizabeth",
+          "Richard",
+          "David",
+          "Mary Beth",
+          "Peter"
+        ]
+      },
+      {
+        "name": "Date",
+        "type": "string",
+        "sample_values": [
+          "2010-11",
+          "2012-13",
+          "1996-97",
+          "1995-96",
+          "1995-96"
+        ]
+      },
+      {
+        "name": "Title of Project",
+        "type": "string",
+        "sample_values": [
+          "The United States Itinerancy of Mrs. Zilpha Elaw, 1812-1840",
+          "The Blackest Market: Patty Cannon, Kidnapping, and the Domestic Slave Trade",
+          "Scandalous Aesthetics: Masculine Emotion and the Birth of the Public Sphere in Antebellum America",
+          "Stray Wives: Marital Expectations and Conflict in Vermont 1790-1830",
+          "Forgotten Immigrant Church: The French-Canadian Religious Identity in New England"
+        ]
+      }
+    ],
+    "row_count": 20,
+    "metadata": {
+      "page_title": "",
+      "second_title": "",
+      "has_header": true
+    }
+  },
+  {
+    "name": "dl_table_16_j2_1_1",
+    "columns": [
+      {
+        "name": "Index",
+        "type": "numeric",
+        "sample_values": [
+          "16",
+          "13",
+          "43",
+          "21",
+          "58"
+        ]
+      },
+      {
+        "name": "Component Detail1",
+        "type": "string",
+        "sample_values": [
+          "Canon.Eos.Framework.Interfaces.IEosAssertable",
+          "Canon.Eos.Framework.Eventing.EosImageEventArgs",
+          "Canon.Eos.Framework.EosBatteryQuality' Canon.Eos.Framework.SaveLocation' Canon.Eos.Framework.EosImageQuality' Canon.Eos.Framework.EosLiveViewAutoFocus' Canon.Eos.Framework.EosLiveViewDevice' Canon.Eos.Framework.EosObject' Canon.Eos.Framework.EosPropertyAttribute' Canon.Eos.Framework.EosPropertyException' Canon.Eos.Framework.EosWhiteBalance' Canon.Eos.Framework.Eventing.EosExceptionEventArgs' Canon.Eos.Framework.Eventing.EosImageEventArgs' Canon.Eos.Framework.Eventing.EosLiveImageEventArgs' Canon.Eos.Framework.Eventing.EosPropertyEventArgs' Canon.Eos.Framework.Eventing.EosVolumeInfoEventArgs' Canon.Eos.Framework.Helper.Util' Canon.Eos.Framework.Internal.SDK.Edsdk' Canon.Eos.Framework.Internal.SDK.EdsDataType' Canon.Eos.Framework.Internal.SDK.EdsShutterButton' Canon.Eos.Framework.Internal.SDK.EdsTime' Canon.Eos.Framework.Internal.SDK.EdsDeviceInfo' Canon.Eos.Framework.Internal.SDK.EdsCapacity",
+          "Canon.Eos.Framework.Eventing.EosMemoryImageEventArgs"
+        ]
+      },
+      {
+        "name": "Value1",
+        "type": "string",
+        "sample_values": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "2"
+        ]
+      },
+      {
+        "name": "Value2",
+        "type": "numeric",
+        "sample_values": [
+          "5",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "name": "col9",
+        "type": "numeric",
+        "sample_values": [
+          "3",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "name": "Value3",
+        "type": "numeric",
+        "sample_values": [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "name": "col10",
+        "type": "numeric",
+        "sample_values": [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "name": "Value7",
+        "type": "numeric",
+        "sample_values": [
+          "8",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "name": "col12",
+        "type": "numeric",
+        "sample_values": [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "name": "col11",
+        "type": "numeric",
+        "sample_values": [
+          "-1.0",
+          "-1.0",
+          "-1.0",
+          "-1.0",
+          "-1.0"
+        ]
+      },
+      {
+        "name": "Value5",
+        "type": "numeric",
+        "sample_values": [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "name": "Component Detail2",
+        "type": "numeric",
+        "sample_values": [
+          "Canon.Eos.Framework.EosFramework' Canon.Eos.Framework.EosCameraCollection' Canon.Eos.Framework.EosObject",
+          "Canon.Eos.Framework.EosCameraCollection' Canon.Eos.Framework.EosException",
+          "Canon.Eos.Framework.Internal.SDK.Edsdk",
+          "Canon.Eos.Framework.EosObject' Canon.Eos.Framework.EosCamera",
+          "Canon.Eos.Framework.Eventing.EosVolumeInfoEventArgs"
+        ]
+      }
+    ],
+    "row_count": 28,
+    "metadata": {
+      "page_title": "",
+      "second_title": "",
+      "has_header": true
+    }
+  },
+  {
+    "name": "dl_table_155_j1_3_1",
+    "columns": [
+      {
+        "name": "Last Name",
+        "type": "string",
+        "sample_values": [
+          "Pryor",
+          "Forbes",
+          "Nathans",
+          "Schoolman",
+          "Sievens"
+        ]
+      },
+      {
+        "name": "Rank",
+        "type": "string",
+        "sample_values": [
+          "assistant professor",
+          "PhD candidate",
+          "PhD candidate",
+          "assistant professor",
+          "PhD candidate"
+        ]
+      },
+      {
+        "name": "First Name",
+        "type": "date",
+        "sample_values": [
+          "Elizabeth",
+          "Erin",
+          "Heather",
+          "Martha",
+          "Mary Beth"
+        ]
+      },
+      {
+        "name": "Date",
+        "type": "string",
+        "sample_values": [
+          "2010-11",
+          "2008-9",
+          "1998-99",
+          "2006-7",
+          "1995-96"
+        ]
+      },
+      {
+        "name": "Title of Project",
+        "type": "string",
+        "sample_values": [
+          "The United States Itinerancy of Mrs. Zilpha Elaw, 1812-1840",
+          "\"Popular Crime Writing and the Publications of David Walker and Edgar Allan Poe.\"",
+          "Avoiding Party Matters: The Boston Theatre Rivalriesof the 1790's",
+          "American Abolitionist Geographies",
+          "Stray Wives: Marital Expectations and Conflict in Vermont 1790-1830"
+        ]
+      }
+    ],
+    "row_count": 20,
+    "metadata": {
+      "page_title": "",
+      "second_title": "",
+      "has_header": true
+    }
+  },
+  {
+    "name": "dl_table_16_j2_1_3",
+    "columns": [
+      {
+        "name": "Index",
+        "type": "numeric",
+        "sample_values": [
+          "3",
+          "23",
+          "69",
+          "26",
+          "12"
+        ]
+      },
+      {
+        "name": "Component Detail1",
+        "type": "string",
+        "sample_values": [
+          "Canon.Eos.Framework.EosCamera' Canon.Eos.Framework.EosErrorCode' Canon.Eos.Framework.EosException' Canon.Eos.Framework.EosDisposable' Canon.Eos.Framework.Helper.Util' Canon.Eos.Framework.Internal.SDK.Edsdk",
+          "Canon.Eos.Framework.Eventing.EosImageEventArgs",
+          "Canon.Eos.Framework.EosFocus' Canon.Eos.Framework.EosDisposable' Canon.Eos.Framework.EosPropertyAttribute' Canon.Eos.Framework.EosWhiteBalance' Canon.Eos.Framework.Helper.Util' Canon.Eos.Framework.Internal.SDK.Edsdk' Canon.Eos.Framework.Internal.SDK.EdsDataType' Canon.Eos.Framework.Internal.SDK.EdsPoint' Canon.Eos.Framework.Internal.SDK.EdsRect' Canon.Eos.Framework.Internal.SDK.EdsSize' Canon.Eos.Framework.Internal.SDK.EdsPropertyDesc' Canon.Eos.Framework.Internal.SDK.EdsFocusInfo"
+        ]
+      },
+      {
+        "name": "Value1",
+        "type": "string",
+        "sample_values": [
+          "2",
+          "0",
+          "3",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "name": "Value2",
+        "type": "numeric",
+        "sample_values": [
+          "4",
+          "2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "name": "col9",
+        "type": "numeric",
+        "sample_values": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "name": "Value3",
+        "type": "numeric",
+        "sample_values": [
+          "1",
+          "1",
+          "0",
+          "1",
+          "0"
+        ]
+      },
+      {
+        "name": "col10",
+        "type": "numeric",
+        "sample_values": [
+          "1",
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "name": "Value7",
+        "type": "numeric",
+        "sample_values": [
+          "7",
+          "2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "name": "col13",
+        "type": "numeric",
+        "sample_values": [
+          "1",
+          "1",
+          "2",
+          "1",
+          "1"
+        ]
+      },
+      {
+        "name": "Component Detail2",
+        "type": "numeric",
+        "sample_values": [
+          "Canon.Eos.Framework.EosFramework",
+          "Canon.Eos.Framework.Internal.EosImageTransporter",
+          "Canon.Eos.Framework.EosCamera' Canon.Eos.Framework.Internal.SDK.Edsdk",
+          "Canon.Eos.Framework.EosCamera",
+          "Canon.Eos.Framework.EosCamera"
+        ]
+      },
+      {
+        "name": "col12",
+        "type": "numeric",
+        "sample_values": [
+          "6",
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "name": "Value5",
+        "type": "numeric",
+        "sample_values": [
+          "1",
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      }
+    ],
+    "row_count": 28,
+    "metadata": {
+      "page_title": "",
+      "second_title": "",
+      "has_header": true
+    }
+  },
+  {
+    "name": "dl_table_16_j2_1_2",
+    "columns": [
+      {
+        "name": "Index",
+        "type": "numeric",
+        "sample_values": [
+          "66",
+          "26",
+          "57",
+          "19",
+          "56"
+        ]
+      },
+      {
+        "name": "Component Detail1",
+        "type": "string",
+        "sample_values": [
+          "Canon.Eos.Framework.EosException",
+          "Canon.Eos.Framework.Eventing.EosMemoryImageEventArgs",
+          "Canon.Eos.Framework.EosBatteryQuality' Canon.Eos.Framework.SaveLocation' Canon.Eos.Framework.EosImageQuality' Canon.Eos.Framework.EosLiveViewAutoFocus' Canon.Eos.Framework.EosLiveViewDevice' Canon.Eos.Framework.EosObject' Canon.Eos.Framework.EosPropertyAttribute' Canon.Eos.Framework.EosPropertyException' Canon.Eos.Framework.EosWhiteBalance' Canon.Eos.Framework.Eventing.EosExceptionEventArgs' Canon.Eos.Framework.Eventing.EosImageEventArgs' Canon.Eos.Framework.Eventing.EosLiveImageEventArgs' Canon.Eos.Framework.Eventing.EosPropertyEventArgs' Canon.Eos.Framework.Eventing.EosVolumeInfoEventArgs' Canon.Eos.Framework.Helper.Util' Canon.Eos.Framework.Internal.SDK.Edsdk' Canon.Eos.Framework.Internal.SDK.EdsDataType' Canon.Eos.Framework.Internal.SDK.EdsShutterButton' Canon.Eos.Framework.Internal.SDK.EdsTime' Canon.Eos.Framework.Internal.SDK.EdsDeviceInfo' Canon.Eos.Framework.Internal.SDK.EdsCapacity"
+        ]
+      },
+      {
+        "name": "Value1",
+        "type": "string",
+        "sample_values": [
+          "8",
+          "0",
+          "2",
+          "0",
+          "4"
+        ]
+      },
+      {
+        "name": "Value2",
+        "type": "numeric",
+        "sample_values": [
+          "0",
+          "0",
+          "0",
+          "3",
+          "0"
+        ]
+      },
+      {
+        "name": "col9",
+        "type": "numeric",
+        "sample_values": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "name": "Value3",
+        "type": "numeric",
+        "sample_values": [
+          "0",
+          "1",
+          "0",
+          "2",
+          "0"
+        ]
+      },
+      {
+        "name": "col10",
+        "type": "numeric",
+        "sample_values": [
+          "0",
+          "0",
+          "0",
+          "1",
+          "0"
+        ]
+      },
+      {
+        "name": "Value7",
+        "type": "numeric",
+        "sample_values": [
+          "0",
+          "0",
+          "0",
+          "3",
+          "0"
+        ]
+      },
+      {
+        "name": "col13",
+        "type": "numeric",
+        "sample_values": [
+          "0",
+          "1",
+          "2",
+          "2",
+          "2"
+        ]
+      },
+      {
+        "name": "col12",
+        "type": "numeric",
+        "sample_values": [
+          "0",
+          "0",
+          "0",
+          "1",
+          "0"
+        ]
+      },
+      {
+        "name": "Value6",
+        "type": "numeric",
+        "sample_values": [
+          "12",
+          "4",
+          "6",
+          "21",
+          "8"
+        ]
+      },
+      {
+        "name": "col11",
+        "type": "numeric",
+        "sample_values": [
+          "-1.0",
+          "-1.0",
+          "-1.0",
+          "-1.0",
+          "-1.0"
+        ]
+      }
+    ],
+    "row_count": 28,
+    "metadata": {
+      "page_title": "",
+      "second_title": "",
+      "has_header": true
+    }
+  },
+  {
+    "name": "dl_table_155_j1_3_2",
+    "columns": [
+      {
+        "name": "Last Name",
+        "type": "string",
+        "sample_values": [
+          "Pryor",
+          "Hinsley",
+          "Martin",
+          "Manion",
+          "Anthony"
+        ]
+      },
+      {
+        "name": "Rank",
+        "type": "string",
+        "sample_values": [
+          "assistant professor",
+          "associate professor",
+          "PhD candidate",
+          "PhD. Candidate",
+          "PhD candidate"
+        ]
+      },
+      {
+        "name": "First Name",
+        "type": "date",
+        "sample_values": [
+          "Elizabeth",
+          "Curtis",
+          "Russell",
+          "Jennifer",
+          "David"
+        ]
+      },
+      {
+        "name": "Date",
+        "type": "string",
+        "sample_values": [
+          "2010-11",
+          "1986-87",
+          "1992-93",
+          "2005-6",
+          "1996-97"
+        ]
+      },
+      {
+        "name": "Title of Project",
+        "type": "string",
+        "sample_values": [
+          "The United States Itinerancy of Mrs. Zilpha Elaw, 1812-1840",
+          "Anthropology in Boston, 1860-20",
+          "Almanacs of the Southern States, 1732-1860",
+          "Women's Crime and Penal Reform in Early Pennsylvania, 1776-1835",
+          "Scandalous Aesthetics: Masculine Emotion and the Birth of the Public Sphere in Antebellum America"
+        ]
+      }
+    ],
+    "row_count": 20,
+    "metadata": {
+      "page_title": "",
+      "second_title": "",
+      "has_header": true
+    }
+  },
+  {
+    "name": "dl_table_13_j3_3_1",
+    "columns": [
+      {
+        "name": "Purpose of trip",
+        "type": "string",
+        "sample_values": [
+          "Internal meeting",
+          "Senior Sponsor Visit",
+          "Internal meeting",
+          "Internal meeting",
+          "Team and supplier visit"
+        ]
+      },
+      {
+        "name": "Unnamed: 11",
+        "type": "date",
+        "sample_values": []
+      },
+      {
+        "name": "Total cost, including all visas, accommodation, travel, meals etc. (£)",
+        "type": "numeric",
+        "sample_values": [
+          " £302.69 ",
+          " £73.72 ",
+          " £449.32 ",
+          " £503.67 ",
+          " £195.50 "
+        ]
+      },
+      {
+        "name": "Other (including hospitality given)",
+        "type": "string",
+        "sample_values": [
+          "Nil Return",
+          " Nil Return ",
+          "Nil Return",
+          "Nil Return",
+          " Nil Return "
+        ]
+      },
+      {
+        "name": "Start date of trip",
+        "type": "string",
+        "sample_values": [
+          "2020-01-09",
+          "2020-03-02",
+          "2020-01-15",
+          "2020-01-22",
+          "2020-02-17"
+        ]
+      },
+      {
+        "name": "Mode of transport",
+        "type": "string",
+        "sample_values": [
+          "Rail / Taxi",
+          "Rail / Taxi",
+          "Rail / Taxi",
+          "Rail / Taxi",
+          "Rail / Taxi"
+        ]
+      },
+      {
+        "name": "Accommodation/Meals (£)",
+        "type": "string",
+        "sample_values": [
+          " £3.69 ",
+          " £29.70 ",
+          " £150.32 ",
+          " £204.67 ",
+          " £24.50 "
+        ]
+      },
+      {
+        "name": "Destination",
+        "type": "string",
+        "sample_values": [
+          "London, UK",
+          "Liverpool, UK",
+          "London, UK",
+          "London, UK",
+          "Telford, UK"
+        ]
+      },
+      {
+        "name": "Total Cost of Use of Official Secure Car",
+        "type": "string",
+        "sample_values": [
+          "Nil Return",
+          " Nil Return ",
+          "Nil Return",
+          "Nil Return",
+          " Nil Return "
+        ]
+      },
+      {
+        "name": "Unnamed: 12",
+        "type": "string",
+        "sample_values": []
+      }
+    ],
+    "row_count": 187,
+    "metadata": {
+      "page_title": "",
+      "second_title": "",
+      "has_header": true
+    }
+  },
+  {
+    "name": "dl_table_13_j3_2",
+    "columns": [
+      {
+        "name": "Purpose of trip",
+        "type": "string",
+        "sample_values": [
+          "Internal meeting",
+          "Brexit walkthrough; Meetings with external suppliers to HMRC; EU Portfolio Exit Board Workshop / Data Analytics Workshop",
+          "Chief Digital & Information Officer Group & Customer Compliance Group meetings",
+          "Operational Delivery Meeting",
+          "Operational Business / Personal Development"
+        ]
+      },
+      {
+        "name": "Other (including hospitality given)",
+        "type": "date",
+        "sample_values": [
+          "Nil Return",
+          " Nil Return ",
+          " Nil Return ",
+          " Nil Return ",
+          " Nil Return "
+        ]
+      },
+      {
+        "name": "Unnamed: 12",
+        "type": "numeric",
+        "sample_values": []
+      },
+      {
+        "name": "Total cost, including all visas, accommodation, travel, meals etc. (£)",
+        "type": "string",
+        "sample_values": [
+          " £604.64 ",
+          " £786.87 ",
+          " £152.63 ",
+          " £343.50 ",
+          " £40.75 "
+        ]
+      },
+      {
+        "name": "Accommodation/Meals (£)",
+        "type": "string",
+        "sample_values": [
+          " £305.64 ",
+          " £243.00 ",
+          " £111.18 ",
+          " Nil Return ",
+          " Nil Return "
+        ]
+      },
+      {
+        "name": "Class of travel",
+        "type": "string",
+        "sample_values": [
+          "Standard",
+          "Standard",
+          "Standard",
+          "Standard",
+          "Standard"
+        ]
+      },
+      {
+        "name": "Duration of Visit (Days)",
+        "type": "string",
+        "sample_values": [
+          "3.0",
+          "3.0",
+          "2.0",
+          "1.0",
+          "1.0"
+        ]
+      },
+      {
+        "name": "Destination",
+        "type": "string",
+        "sample_values": [
+          "London, UK",
+          "Manchester and London, UK",
+          "Liverpool, UK",
+          "London, UK",
+          "London, UK"
+        ]
+      },
+      {
+        "name": "Mode of transport",
+        "type": "string",
+        "sample_values": [
+          "Rail / Taxi",
+          "Air / Rail",
+          "Rail",
+          "Rail",
+          "Rail"
+        ]
+      },
+      {
+        "name": "Total Cost of Use of Official Secure Car",
+        "type": "string",
+        "sample_values": [
+          "Nil Return",
+          " Nil Return ",
+          " Nil Return ",
+          " Nil Return ",
+          " Nil Return "
+        ]
+      },
+      {
+        "name": "Unnamed: 11",
+        "type": "string",
+        "sample_values": []
+      }
+    ],
+    "row_count": 198,
+    "metadata": {
+      "page_title": "",
+      "second_title": "",
+      "has_header": true
+    }
+  },
+  {
+    "name": "dl_table_13_j3_3_2",
+    "columns": [
+      {
+        "name": "Purpose of trip",
+        "type": "string",
+        "sample_values": [
+          "Internal meeting",
+          "Senior Sponsor Visit",
+          "Internal meeting",
+          "Internal meeting",
+          "Team and supplier visit"
+        ]
+      },
+      {
+        "name": "Unnamed: 11",
+        "type": "date",
+        "sample_values": []
+      },
+      {
+        "name": "Total cost, including all visas, accommodation, travel, meals etc. (£)",
+        "type": "numeric",
+        "sample_values": [
+          " £302.69 ",
+          " £73.72 ",
+          " £449.32 ",
+          " £503.67 ",
+          " £195.50 "
+        ]
+      },
+      {
+        "name": "Other (including hospitality given)",
+        "type": "string",
+        "sample_values": [
+          "Nil Return",
+          " Nil Return ",
+          "Nil Return",
+          "Nil Return",
+          " Nil Return "
+        ]
+      },
+      {
+        "name": "Start date of trip",
+        "type": "string",
+        "sample_values": [
+          "2020-01-09",
+          "2020-03-02",
+          "2020-01-15",
+          "2020-01-22",
+          "2020-02-17"
+        ]
+      },
+      {
+        "name": "Mode of transport",
+        "type": "string",
+        "sample_values": [
+          "Rail / Taxi",
+          "Rail / Taxi",
+          "Rail / Taxi",
+          "Rail / Taxi",
+          "Rail / Taxi"
+        ]
+      },
+      {
+        "name": "Class of travel",
+        "type": "string",
+        "sample_values": [
+          "Standard",
+          "Standard",
+          "Standard",
+          "Standard",
+          "Standard"
+        ]
+      },
+      {
+        "name": "Total Cost of Use of Official Secure Car",
+        "type": "string",
+        "sample_values": [
+          "Nil Return",
+          " Nil Return ",
+          "Nil Return",
+          "Nil Return",
+          " Nil Return "
+        ]
+      },
+      {
+        "name": "Unnamed: 12",
+        "type": "string",
+        "sample_values": []
+      },
+      {
+        "name": "Accommodation/Meals (£)",
+        "type": "string",
+        "sample_values": [
+          " £3.69 ",
+          " £29.70 ",
+          " £150.32 ",
+          " £204.67 ",
+          " £24.50 "
+        ]
+      }
+    ],
+    "row_count": 187,
+    "metadata": {
+      "page_title": "",
+      "second_title": "",
+      "has_header": true
+    }
+  },
+  {
+    "name": "dl_table_142_j1_2_1",
+    "columns": [
+      {
+        "name": "Word",
+        "type": "numeric",
+        "sample_values": [
+          "monkey",
+          "tornado",
+          "jizz",
+          "accident",
+          "wax"
+        ]
+      },
+      {
+        "name": "Index",
+        "type": "string",
+        "sample_values": [
+          "24",
+          "93",
+          "84",
+          "110",
+          "330"
+        ]
+      },
+      {
+        "name": "Derivative4",
+        "type": "string",
+        "sample_values": []
+      },
+      {
+        "name": "Usage2",
+        "type": "string",
+        "sample_values": []
+      },
+      {
+        "name": "Usage7",
+        "type": "string",
+        "sample_values": [
+          "x",
+          "x",
+          "x",
+          "x",
+          "x"
+        ]
+      },
+      {
+        "name": "Usage4",
+        "type": "string",
+        "sample_values": [
+          "x"
+        ]
+      },
+      {
+        "name": "Usage8",
+        "type": "string",
+        "sample_values": [
+          "x",
+          "x",
+          "x",
+          "x",
+          "x"
+        ]
+      },
+      {
+        "name": "Derivative3",
+        "type": "string",
+        "sample_values": []
+      },
+      {
+        "name": "Usage1",
+        "type": "string",
+        "sample_values": [
+          "x",
+          "x",
+          "x",
+          "x",
+          "true"
+        ]
+      },
+      {
+        "name": "Usage3",
+        "type": "string",
+        "sample_values": [
+          "x"
+        ]
+      },
+      {
+        "name": "Usage5",
+        "type": "string",
+        "sample_values": []
+      },
+      {
+        "name": "Usage6",
+        "type": "string",
+        "sample_values": []
+      },
+      {
+        "name": "Usage9",
+        "type": "string",
+        "sample_values": []
+      },
+      {
+        "name": "Frequency",
+        "type": "string",
+        "sample_values": [
+          "6.0",
+          "4.0",
+          "1.0",
+          "1.0",
+          "6.0"
+        ]
+      }
+    ],
+    "row_count": 81,
+    "metadata": {
+      "page_title": "",
+      "second_title": "",
+      "has_header": true
+    }
+  },
+  {
+    "name": "dl_table_142_j1_2_2",
+    "columns": [
+      {
+        "name": "Word",
+        "type": "numeric",
+        "sample_values": [
+          "cum",
+          "stain",
+          "butt",
+          "cannon",
+          "weed"
+        ]
+      },
+      {
+        "name": "Index",
+        "type": "string",
+        "sample_values": [
+          "83",
+          "168",
+          "0",
+          "294",
+          "44"
+        ]
+      },
+      {
+        "name": "Derivative4",
+        "type": "string",
+        "sample_values": []
+      },
+      {
+        "name": "Usage2",
+        "type": "string",
+        "sample_values": []
+      },
+      {
+        "name": "Usage7",
+        "type": "string",
+        "sample_values": [
+          "x",
+          "x"
+        ]
+      },
+      {
+        "name": "Usage4",
+        "type": "string",
+        "sample_values": [
+          "x",
+          "x"
+        ]
+      },
+      {
+        "name": "Usage8",
+        "type": "string",
+        "sample_values": [
+          "x",
+          "x",
+          "x",
+          "x",
+          "x"
+        ]
+      },
+      {
+        "name": "Derivative3",
+        "type": "string",
+        "sample_values": []
+      },
+      {
+        "name": "Usage1",
+        "type": "string",
+        "sample_values": [
+          "x",
+          "x",
+          "x",
+          "x"
+        ]
+      },
+      {
+        "name": "Usage3",
+        "type": "string",
+        "sample_values": [
+          "x",
+          "x",
+          "x"
+        ]
+      },
+      {
+        "name": "Usage5",
+        "type": "string",
+        "sample_values": []
+      },
+      {
+        "name": "Usage6",
+        "type": "string",
+        "sample_values": []
+      },
+      {
+        "name": "Usage9",
+        "type": "string",
+        "sample_values": []
+      },
+      {
+        "name": "Frequency",
+        "type": "string",
+        "sample_values": [
+          "1.0",
+          "1.0",
+          "1.0",
+          "1.0",
+          "1.0"
+        ]
+      }
+    ],
+    "row_count": 81,
+    "metadata": {
+      "page_title": "",
+      "second_title": "",
+      "has_header": true
+    }
+  },
+  {
+    "name": "dl_table_68_j2_1_1",
+    "columns": [
+      {
+        "name": "Function",
+        "type": "numeric",
+        "sample_values": [
+          "PersistAsXml",
+          "InitXml",
+          "GetHashCode",
+          "Cleanup",
+          "PersistAsXml"
+        ]
+      },
+      {
+        "name": "Index",
+        "type": "string",
+        "sample_values": [
+          "185",
+          "330",
+          "288",
+          "309",
+          "18"
+        ]
+      },
+      {
+        "name": "Class",
+        "type": "string",
+        "sample_values": [
+          "StringFinderBase",
+          "IntStringComparer",
+          "AndSorterComparer",
+          "StringFinderCompare",
+          "DateTimeMatcher"
+        ]
+      },
+      {
+        "name": "Count3",
+        "type": "string",
+        "sample_values": [
+          "1",
+          "1",
+          "0",
+          "0",
+          "1"
+        ]
+      },
+      {
+        "name": "Count2",
+        "type": "numeric",
+        "sample_values": [
+          "1",
+          "1",
+          "3",
+          "4",
+          "2"
+        ]
+      }
+    ],
+    "row_count": 172,
+    "metadata": {
+      "page_title": "",
+      "second_title": "",
+      "has_header": true
+    }
+  },
+  {
+    "name": "dl_table_68_j2_1_3",
+    "columns": [
+      {
+        "name": "Function",
+        "type": "numeric",
+        "sample_values": [
+          "CompatibleSorter",
+          "CurrentResultDoesMatch",
+          "Cleanup",
+          "Matches",
+          "PersistAsXml"
+        ]
+      },
+      {
+        "name": "Index",
+        "type": "string",
+        "sample_values": [
+          "257",
+          "156",
+          "309",
+          "23",
+          "189"
+        ]
+      },
+      {
+        "name": "Class",
+        "type": "string",
+        "sample_values": [
+          "RecordSorter",
+          "RegExpMatcher",
+          "StringFinderCompare",
+          "ExactLiteralMatcher",
+          "OwnMlPropFinder"
+        ]
+      },
+      {
+        "name": "Count3",
+        "type": "string",
+        "sample_values": [
+          "1",
+          "1",
+          "0",
+          "1",
+          "1"
+        ]
+      },
+      {
+        "name": "Count1",
+        "type": "numeric",
+        "sample_values": [
+          "3",
+          "3",
+          "13",
+          "3",
+          "4"
+        ]
+      }
+    ],
+    "row_count": 172,
+    "metadata": {
+      "page_title": "",
+      "second_title": "",
+      "has_header": true
+    }
+  },
+  {
+    "name": "dl_table_12_j2_1_2",
+    "columns": [
+      {
+        "name": "Enrollment",
+        "type": "string",
+        "sample_values": [
+          "2,650",
+          "3,127",
+          "4,490",
+          "3,010",
+          "4,941"
+        ]
+      },
+      {
+        "name": "Benefits and other",
+        "type": "numeric",
+        "sample_values": [
+          "$178,477",
+          "$868,605",
+          "$92,015",
+          "$1,247,047",
+          "$1,209,559"
+        ]
+      },
+      {
+        "name": "Administrator salaries",
+        "type": "numeric",
+        "sample_values": [
+          "$3,591,994",
+          "$3,017,654",
+          "$2,349,348",
+          "$4,261,051",
+          "$3,793,340"
+        ]
+      },
+      {
+        "name": "Cost per pupil",
+        "type": "numeric",
+        "sample_values": [
+          "$1,423",
+          "$1,243",
+          "$544",
+          "$1,830",
+          "$1,013"
+        ]
+      },
+      {
+        "name": "Per pupil rank",
+        "type": "numeric",
+        "sample_values": [
+          "9",
+          "15",
+          "101",
+          "4",
+          "36"
+        ]
+      }
+    ],
+    "row_count": 40,
+    "metadata": {
+      "page_title": "",
+      "second_title": "",
+      "has_header": true
+    }
+  },
+  {
+    "name": "dl_table_12_j2_1_3",
+    "columns": [
+      {
+        "name": "Enrollment",
+        "type": "string",
+        "sample_values": [
+          "4,490",
+          "6,437",
+          "5,300",
+          "10,739",
+          "7,442"
+        ]
+      },
+      {
+        "name": "Benefits and other",
+        "type": "numeric",
+        "sample_values": [
+          "$92,015",
+          "$233,250",
+          "$120,914",
+          "$184,167",
+          "$202,567"
+        ]
+      },
+      {
+        "name": "Administrator salaries",
+        "type": "numeric",
+        "sample_values": [
+          "$2,349,348",
+          "$4,966,660",
+          "$4,756,493",
+          "$5,606,318",
+          "$3,973,642"
+        ]
+      },
+      {
+        "name": "Cost per pupil",
+        "type": "numeric",
+        "sample_values": [
+          "$544",
+          "$808",
+          "$920",
+          "$539",
+          "$561"
+        ]
+      },
+      {
+        "name": "Per pupil rank",
+        "type": "numeric",
+        "sample_values": [
+          "101",
+          "63",
+          "51",
+          "102",
+          "98"
+        ]
+      }
+    ],
+    "row_count": 40,
+    "metadata": {
+      "page_title": "",
+      "second_title": "",
+      "has_header": true
+    }
+  },
+  {
+    "name": "dl_table_12_j2_1_1",
+    "columns": [
+      {
+        "name": "Enrollment",
+        "type": "string",
+        "sample_values": [
+          "4,591",
+          "2,169",
+          "3,446",
+          "6,000",
+          "4,490"
+        ]
+      },
+      {
+        "name": "Benefits and other",
+        "type": "numeric",
+        "sample_values": [
+          "$237,601",
+          "$147,187",
+          "$137,946",
+          "$173,413",
+          "$92,015"
+        ]
+      },
+      {
+        "name": "Administrator salaries",
+        "type": "numeric",
+        "sample_values": [
+          "$4,109,858",
+          "$1,611,877",
+          "$2,450,044",
+          "$5,421,448",
+          "$2,349,348"
+        ]
+      },
+      {
+        "name": "Cost per pupil",
+        "type": "numeric",
+        "sample_values": [
+          "$947",
+          "$811",
+          "$751",
+          "$932",
+          "$544"
+        ]
+      },
+      {
+        "name": "Total (salaries + benefits and other)",
+        "type": "numeric",
+        "sample_values": [
+          "$4,347,459",
+          "$1,759,064",
+          "$2,587,990",
+          "$5,594,861",
+          "$2,441,363"
+        ]
+      }
+    ],
+    "row_count": 40,
+    "metadata": {
+      "page_title": "",
+      "second_title": "",
+      "has_header": true
+    }
+  },
+  {
+    "name": "dl_table_110_j1_1_1",
+    "columns": [
+      {
+        "name": "Postcode",
+        "type": "string",
+        "sample_values": [
+          "SK5 7BB",
+          "YO1 6HZ",
+          "WD25 9XX",
+          "M12 6JH",
+          "M11 2WH "
+        ]
+      },
+      {
+        "name": "Contract Term (Months)",
+        "type": "string",
+        "sample_values": [
+          "36",
+          "48",
+          "24",
+          "48",
+          "12"
+        ]
+      },
+      {
+        "name": "Review Date",
+        "type": "string",
+        "sample_values": [
+          "01/09/2017",
+          "01/04/2019",
+          "30/09/2020",
+          "24/10/2020",
+          "01/03/2018"
+        ]
+      },
+      {
+        "name": "Estimated Annual Value",
+        "type": "string",
+        "sample_values": [
+          "Included above",
+          "Â£158,000.00",
+          "Â£10,837.00",
+          "Included above",
+          "Included above"
+        ]
+      },
+      {
+        "name": "Estimated Total Value",
+        "type": "string",
+        "sample_values": [
+          "Included above",
+          "Â£632,000.00",
+          "Â£32,511.00",
+          "Included above",
+          "Included above"
+        ]
+      },
+      {
+        "name": "Maximum Extend Date",
+        "type": "string",
+        "sample_values": [
+          "31/03/2018",
+          "09/08/2020",
+          "31/12/2020",
+          "24/10/2021",
+          "31/08/2018"
+        ]
+      },
+      {
+        "name": "Maximum Duration of Contract (Months)",
+        "type": "date",
+        "sample_values": [
+          "60",
+          "48",
+          "24",
+          "48",
+          "19"
+        ]
+      },
+      {
+        "name": "Registered Number",
+        "type": "numeric",
+        "sample_values": [
+          "8766697",
+          "04619954",
+          "03548352",
+          "07690416",
+          "10139143\n "
+        ]
+      },
+      {
+        "name": "Ext. Applied to Contract",
+        "type": "numeric",
+        "sample_values": [
+          "Yes",
+          "No",
+          "No",
+          "No",
+          "Yes"
+        ]
+      },
+      {
+        "name": "Agreement Type",
+        "type": "date",
+        "sample_values": [
+          "Contract",
+          "Contract",
+          "Contract",
+          "DPS (Dynamic Purchasing System)",
+          "Framework Agreement"
+        ]
+      },
+      {
+        "name": "Supplier Name",
+        "type": "string",
+        "sample_values": [
+          "Abacus Homecare",
+          "Northern Rail",
+          "BRE (Building Research Establishment)",
+          "One Education Limited",
+          "The Manchester College"
+        ]
+      },
+      {
+        "name": "Contract Start Date",
+        "type": "date",
+        "sample_values": [
+          "01/04/2013",
+          "10/08/2016",
+          "01/01/2018",
+          "25/10/2017",
+          "01/03/2016"
+        ]
+      },
+      {
+        "name": "Contract End Date",
+        "type": "date",
+        "sample_values": [
+          "31/03/2018",
+          "09/08/2020",
+          "31/12/2020",
+          "24/10/2021",
+          "31/08/2018"
+        ]
+      },
+      {
+        "name": "Council Directorate",
+        "type": "string",
+        "sample_values": [
+          "Stockport- Services to People",
+          "Stockport- Corporate & Support Services",
+          "Stockport- Services to Place",
+          "Stockport- Services to People",
+          "Stockport- Services to People"
+        ]
+      }
+    ],
+    "row_count": 247,
+    "metadata": {
+      "page_title": "",
+      "second_title": "",
+      "has_header": true
+    }
+  },
+  {
+    "name": "dl_table_118_j1_3_2",
+    "columns": [
+      {
+        "name": "Opponent",
+        "type": "string",
+        "sample_values": [
+          "Rider",
+          "North Carolina A&T",
+          "Cornell",
+          "Virginia",
+          "St. Peter's"
+        ]
+      },
+      {
+        "name": "OWP",
+        "type": "numeric",
+        "sample_values": [
+          "0.484",
+          "0.406",
+          "0.451",
+          "0.557",
+          "0.458"
+        ]
+      },
+      {
+        "name": "L",
+        "type": "numeric",
+        "sample_values": [
+          "17",
+          "32",
+          "25",
+          "15",
+          "24"
+        ]
+      },
+      {
+        "name": "Contribution",
+        "type": "numeric",
+        "sample_values": [
+          "0.363",
+          "0.202",
+          "0.256",
+          "0.461",
+          "0.228"
+        ]
+      },
+      {
+        "name": "WP",
+        "type": "numeric",
+        "sample_values": [
+          "0.485",
+          "0.2",
+          "0.286",
+          "0.643",
+          "0.226"
+        ]
+      }
+    ],
+    "row_count": 21,
+    "metadata": {
+      "page_title": "",
+      "second_title": "",
+      "has_header": true
+    }
+  },
+  {
+    "name": "dl_table_13_j3_3_3",
+    "columns": [
+      {
+        "name": "Purpose of trip",
+        "type": "string",
+        "sample_values": [
+          "Internal meeting",
+          "Senior Sponsor Visit",
+          "Internal meeting",
+          "Internal meeting",
+          "Team and supplier visit"
+        ]
+      },
+      {
+        "name": "Unnamed: 11",
+        "type": "date",
+        "sample_values": []
+      },
+      {
+        "name": "Total cost, including all visas, accommodation, travel, meals etc. (£)",
+        "type": "numeric",
+        "sample_values": [
+          " £302.69 ",
+          " £73.72 ",
+          " £449.32 ",
+          " £503.67 ",
+          " £195.50 "
+        ]
+      },
+      {
+        "name": "Other (including hospitality given)",
+        "type": "string",
+        "sample_values": [
+          "Nil Return",
+          " Nil Return ",
+          "Nil Return",
+          "Nil Return",
+          " Nil Return "
+        ]
+      },
+      {
+        "name": "Start date of trip",
+        "type": "string",
+        "sample_values": [
+          "2020-01-09",
+          "2020-03-02",
+          "2020-01-15",
+          "2020-01-22",
+          "2020-02-17"
+        ]
+      },
+      {
+        "name": "Mode of transport",
+        "type": "string",
+        "sample_values": [
+          "Rail / Taxi",
+          "Rail / Taxi",
+          "Rail / Taxi",
+          "Rail / Taxi",
+          "Rail / Taxi"
+        ]
+      },
+      {
+        "name": "Unnamed: 12",
+        "type": "string",
+        "sample_values": []
+      },
+      {
+        "name": "Class of travel",
+        "type": "string",
+        "sample_values": [
+          "Standard",
+          "Standard",
+          "Standard",
+          "Standard",
+          "Standard"
+        ]
+      },
+      {
+        "name": "Accommodation/Meals (£)",
+        "type": "string",
+        "sample_values": [
+          " £3.69 ",
+          " £29.70 ",
+          " £150.32 ",
+          " £204.67 ",
+          " £24.50 "
+        ]
+      },
+      {
+        "name": "Total Cost of Use of Official Secure Car",
+        "type": "string",
+        "sample_values": [
+          "Nil Return",
+          " Nil Return ",
+          "Nil Return",
+          "Nil Return",
+          " Nil Return "
+        ]
+      }
+    ],
+    "row_count": 187,
+    "metadata": {
+      "page_title": "",
+      "second_title": "",
+      "has_header": true
+    }
+  },
+  {
+    "name": "dl_table_110_j1_1_3",
+    "columns": [
+      {
+        "name": "Postcode",
+        "type": "string",
+        "sample_values": [
+          "B5 6RJ",
+          "PR2 2YL",
+          "SL9 7PZ",
+          "OL1 1PF",
+          "IG1 4NE"
+        ]
+      },
+      {
+        "name": "Contract Term (Months)",
+        "type": "string",
+        "sample_values": [
+          "48",
+          "24",
+          "48",
+          "60",
+          "24"
+        ]
+      },
+      {
+        "name": "Review Date",
+        "type": "string",
+        "sample_values": [
+          "29/08/2018",
+          "01/10/2018",
+          "30/11/2018",
+          "08/08/2017",
+          "01/12/2017"
+        ]
+      },
+      {
+        "name": "Estimated Annual Value",
+        "type": "string",
+        "sample_values": [
+          "Â£105,809.53",
+          "Included above",
+          "Â£0.00",
+          "Â£932,013.00",
+          "Included above"
+        ]
+      },
+      {
+        "name": "Estimated Total Value",
+        "type": "string",
+        "sample_values": [
+          "Â£423,238.12",
+          "Included above",
+          "Â£0.00",
+          "Â£5,592,078.00",
+          "Included above"
+        ]
+      },
+      {
+        "name": "Maximum Extend Date",
+        "type": "string",
+        "sample_values": [
+          "31/05/2019",
+          "31/07/2021",
+          "07/12/2019",
+          "31/03/2018",
+          "31/03/2018"
+        ]
+      },
+      {
+        "name": "Registered Number",
+        "type": "date",
+        "sample_values": [
+          "2452340",
+          "207315",
+          "3744053",
+          "8436885",
+          "3985713"
+        ]
+      },
+      {
+        "name": "Maximum Duration of Contract (Months)",
+        "type": "numeric",
+        "sample_values": [
+          "48",
+          "48",
+          "48",
+          "72",
+          "48"
+        ]
+      },
+      {
+        "name": "Contract Start Date",
+        "type": "numeric",
+        "sample_values": [
+          "01/06/2015",
+          "01/08/2017",
+          "08/12/2015",
+          "01/04/2012",
+          "01/04/2014"
+        ]
+      },
+      {
+        "name": "Contract End Date",
+        "type": "date",
+        "sample_values": [
+          "31/05/2019",
+          "31/07/2019",
+          "07/12/2019",
+          "31/03/2018",
+          "31/03/2018"
+        ]
+      }
+    ],
+    "row_count": 247,
+    "metadata": {
+      "page_title": "",
+      "second_title": "",
+      "has_header": true
+    }
+  },
+  {
+    "name": "dl_table_118_j1_3_3",
+    "columns": [
+      {
+        "name": "Opponent",
+        "type": "string",
+        "sample_values": [
+          "Rider",
+          "Penn State",
+          "North Carolina A&T",
+          "Bucknell",
+          "Sacred Heart"
+        ]
+      },
+      {
+        "name": "OWP",
+        "type": "numeric",
+        "sample_values": [
+          "0.484",
+          "0.56",
+          "0.406",
+          "0.413",
+          "0.446"
+        ]
+      },
+      {
+        "name": "L",
+        "type": "numeric",
+        "sample_values": [
+          "17",
+          "24",
+          "32",
+          "21",
+          "19"
+        ]
+      },
+      {
+        "name": "Contribution",
+        "type": "numeric",
+        "sample_values": [
+          "0.363",
+          "0.316",
+          "0.202",
+          "0.353",
+          "0.324"
+        ]
+      },
+      {
+        "name": "W",
+        "type": "numeric",
+        "sample_values": [
+          "16",
+          "13",
+          "8",
+          "21",
+          "14"
+        ]
+      }
+    ],
+    "row_count": 21,
+    "metadata": {
+      "page_title": "",
+      "second_title": "",
+      "has_header": true
+    }
+  },
+  {
+    "name": "dl_table_118_j1_3_1",
+    "columns": [
+      {
+        "name": "Opponent",
+        "type": "string",
+        "sample_values": [
+          "Rider",
+          "Longwood",
+          "Cornell",
+          "Penn State",
+          "Lafayette"
+        ]
+      },
+      {
+        "name": "OWP",
+        "type": "numeric",
+        "sample_values": [
+          "0.484",
+          "0.507",
+          "0.451",
+          "0.56",
+          "0.519"
+        ]
+      },
+      {
+        "name": "L",
+        "type": "numeric",
+        "sample_values": [
+          "17",
+          "23",
+          "25",
+          "24",
+          "19"
+        ]
+      },
+      {
+        "name": "Contribution",
+        "type": "numeric",
+        "sample_values": [
+          "0.363",
+          "0.346",
+          "0.256",
+          "0.316",
+          "0.302"
+        ]
+      },
+      {
+        "name": "W",
+        "type": "numeric",
+        "sample_values": [
+          "16",
+          "18",
+          "10",
+          "13",
+          "10"
+        ]
+      }
+    ],
+    "row_count": 21,
+    "metadata": {
+      "page_title": "",
+      "second_title": "",
+      "has_header": true
+    }
+  },
+  {
+    "name": "dl_table_110_j1_1_2",
+    "columns": [
+      {
+        "name": "Postcode",
+        "type": "string",
+        "sample_values": [
+          "OL11 4HQ",
+          "B5 6RJ",
+          "OL16 4RP",
+          "Sk2 6QS",
+          "NW5 1RZ"
+        ]
+      },
+      {
+        "name": "Contract Term (Months)",
+        "type": "string",
+        "sample_values": [
+          "48",
+          "48",
+          "24",
+          "36",
+          "48"
+        ]
+      },
+      {
+        "name": "Review Date",
+        "type": "string",
+        "sample_values": [
+          "01/01/2018",
+          "29/08/2018",
+          "01/01/2019",
+          "01/09/2017",
+          "24/10/2020"
+        ]
+      },
+      {
+        "name": "Estimated Annual Value",
+        "type": "string",
+        "sample_values": [
+          "Included above",
+          "Â£105,809.53",
+          "Included above",
+          "Included above",
+          "Included above"
+        ]
+      },
+      {
+        "name": "Estimated Total Value",
+        "type": "string",
+        "sample_values": [
+          "Included above",
+          "Â£423,238.12",
+          "Included above",
+          "Included above",
+          "Included above"
+        ]
+      },
+      {
+        "name": "Maximum Extend Date",
+        "type": "string",
+        "sample_values": [
+          "31/07/2019",
+          "31/05/2019",
+          "31/07/2021",
+          "31/03/2018",
+          "24/10/2021"
+        ]
+      },
+      {
+        "name": "Registered Number",
+        "type": "date",
+        "sample_values": [
+          "Supplier does not have company number",
+          "2452340",
+          "5058262",
+          "2040322",
+          "1111252"
+        ]
+      },
+      {
+        "name": "Maximum Duration of Contract (Months)",
+        "type": "numeric",
+        "sample_values": [
+          "48",
+          "48",
+          "48",
+          "60",
+          "48"
+        ]
+      },
+      {
+        "name": "Contract End Date",
+        "type": "numeric",
+        "sample_values": [
+          "31/07/2019",
+          "31/05/2019",
+          "31/07/2019",
+          "31/03/2018",
+          "24/10/2021"
+        ]
+      },
+      {
+        "name": "Supplier Name",
+        "type": "date",
+        "sample_values": [
+          "danistravels",
+          "Peters Bookselling Service",
+          "J C Mills & Sons Ltd",
+          "Quality Care of Cheadle",
+          "PAC-UK Limited (Post Adoption Centre)"
+        ]
+      },
+      {
+        "name": "Agreement Type",
+        "type": "string",
+        "sample_values": [
+          "DPS (Dynamic Purchasing System)",
+          "Contract",
+          "Framework Agreement",
+          "Contract",
+          "DPS (Dynamic Purchasing System)"
+        ]
+      },
+      {
+        "name": "Contract Start Date",
+        "type": "date",
+        "sample_values": [
+          "01/08/2015",
+          "01/06/2015",
+          "01/08/2017",
+          "01/04/2013",
+          "25/10/2017"
+        ]
+      }
+    ],
+    "row_count": 247,
+    "metadata": {
+      "page_title": "",
+      "second_title": "",
+      "has_header": true
+    }
+  },
+  {
+    "name": "dl_table_142_j1_2_3",
+    "columns": [
+      {
+        "name": "Word",
+        "type": "numeric",
+        "sample_values": [
+          "messiah",
+          "lion",
+          "salami",
+          "douche",
+          "knob"
+        ]
+      },
+      {
+        "name": "Index",
+        "type": "string",
+        "sample_values": [
+          "391",
+          "397",
+          "57",
+          "47",
+          "201"
+        ]
+      },
+      {
+        "name": "Derivative4",
+        "type": "string",
+        "sample_values": []
+      },
+      {
+        "name": "Usage2",
+        "type": "string",
+        "sample_values": []
+      },
+      {
+        "name": "Usage7",
+        "type": "string",
+        "sample_values": [
+          "x",
+          "x"
+        ]
+      },
+      {
+        "name": "Usage4",
+        "type": "string",
+        "sample_values": []
+      },
+      {
+        "name": "Usage8",
+        "type": "string",
+        "sample_values": [
+          "x",
+          "x",
+          "x",
+          "x",
+          "x"
+        ]
+      },
+      {
+        "name": "Derivative3",
+        "type": "string",
+        "sample_values": []
+      },
+      {
+        "name": "Usage1",
+        "type": "string",
+        "sample_values": [
+          "x",
+          "x"
+        ]
+      },
+      {
+        "name": "Usage3",
+        "type": "string",
+        "sample_values": [
+          "x"
+        ]
+      },
+      {
+        "name": "Usage5",
+        "type": "string",
+        "sample_values": []
+      },
+      {
+        "name": "Usage6",
+        "type": "string",
+        "sample_values": [
+          "x"
+        ]
+      },
+      {
+        "name": "Usage9",
+        "type": "string",
+        "sample_values": []
+      },
+      {
+        "name": "Frequency",
+        "type": "string",
+        "sample_values": [
+          "2.0",
+          "1.0",
+          "1.0"
+        ]
+      }
+    ],
+    "row_count": 81,
+    "metadata": {
+      "page_title": "",
+      "second_title": "",
+      "has_header": true
+    }
+  },
+  {
+    "name": "dl_table_6_j2_1_2",
+    "columns": [
+      {
+        "name": "Date",
+        "type": "numeric",
+        "sample_values": [
+          "13,178006,Benjamin,Sullivan,Missoula,MT,,Montana",
+          "11,7926,John,Coulthard,Butte,MT,,Highlands",
+          "3,145669,David,Nigh,Billings,MT,,Yellowstone",
+          "1,0,Blake,Weidenheft,,,,GAS/Heritage",
+          "14,194951,William,Snider,Helena,MT,,Great"
+        ]
+      },
+      {
+        "name": "Category_Detail",
+        "type": "date",
+        "sample_values": []
+      },
+      {
+        "name": "Men",
+        "type": "string",
+        "sample_values": []
+      },
+      {
+        "name": "Race",
+        "type": "string",
+        "sample_values": [
+          "Velo",
+          "Velo"
+        ]
+      },
+      {
+        "name": "",
+        "type": "string",
+        "sample_values": []
+      },
+      {
+        "name": "Event_Type",
+        "type": "string",
+        "sample_values": [
+          "Velo",
+          "Valley",
+          "Homes",
+          "Divide",
+          "Valley"
+        ]
+      }
+    ],
+    "row_count": 27,
+    "metadata": {
+      "page_title": "",
+      "second_title": "",
+      "has_header": true
+    }
+  },
+  {
+    "name": "dl_table_67_j1_3_2",
+    "columns": [
+      {
+        "name": "Index",
+        "type": "numeric",
+        "sample_values": [
+          "207",
+          "197",
+          "37",
+          "275",
+          "41"
+        ]
+      },
+      {
+        "name": "Metric 2",
+        "type": "string",
+        "sample_values": [
+          "3",
+          "3",
+          "2",
+          "2",
+          "3"
+        ]
+      },
+      {
+        "name": "Metric 10",
+        "type": "string",
+        "sample_values": [
+          "1.25",
+          "1.066666667",
+          "0.822916667",
+          "0.981818182",
+          "2.0"
+        ]
+      },
+      {
+        "name": "Metric 13",
+        "type": "string",
+        "sample_values": [
+          "0",
+          "0",
+          "1",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "name": "Metric 1",
+        "type": "numeric",
+        "sample_values": [
+          "5",
+          "16",
+          "17",
+          "12",
+          "5"
+        ]
+      },
+      {
+        "name": "Metric 11",
+        "type": "numeric",
+        "sample_values": [
+          "26",
+          "104",
+          "419",
+          "144",
+          "37"
+        ]
+      },
+      {
+        "name": "Metric 7",
+        "type": "numeric",
+        "sample_values": [
+          "2",
+          "1",
+          "3",
+          "1",
+          "3"
+        ]
+      },
+      {
+        "name": "Metric 12",
+        "type": "numeric",
+        "sample_values": [
+          "0.0",
+          "0.0",
+          "0.666666667",
+          "0.2",
+          "0.0"
+        ]
+      },
+      {
+        "name": "Metric 21",
+        "type": "numeric",
+        "sample_values": [
+          "1",
+          "1",
+          "0",
+          "2",
+          "0"
+        ]
+      },
+      {
+        "name": "Metric 14",
+        "type": "numeric",
+        "sample_values": [
+          "0.923076923",
+          "0.625",
+          "0.542857143",
+          "0.55",
+          "0.7777777779999999"
+        ]
+      },
+      {
+        "name": "Metric 18",
+        "type": "numeric",
+        "sample_values": [
+          "4.0",
+          "5.4375",
+          "23.29411765",
+          "10.58333333",
+          "6.4"
+        ]
+      },
+      {
+        "name": "Metric 15",
+        "type": "numeric",
+        "sample_values": [
+          "0.5",
+          "0.53125",
+          "0.27450980399999997",
+          "0.5",
+          "0.46666666700000003"
+        ]
+      },
+      {
+        "name": "Metric 17",
+        "type": "numeric",
+        "sample_values": [
+          "2",
+          "0",
+          "5",
+          "6",
+          "0"
+        ]
+      },
+      {
+        "name": "Metric 9",
+        "type": "numeric",
+        "sample_values": [
+          "4",
+          "16",
+          "17",
+          "10",
+          "5"
+        ]
+      },
+      {
+        "name": "Metric 19",
+        "type": "numeric",
+        "sample_values": [
+          "1",
+          "1",
+          "3",
+          "2",
+          "1"
+        ]
+      },
+      {
+        "name": "Metric 8",
+        "type": "numeric",
+        "sample_values": [
+          "1",
+          "3",
+          "8",
+          "4",
+          "1"
+        ]
+      }
+    ],
+    "row_count": 112,
+    "metadata": {
+      "page_title": "",
+      "second_title": "",
+      "has_header": true
+    }
+  },
+  {
+    "name": "dl_table_100_j3_2",
+    "columns": [
+      {
+        "name": "Key",
+        "type": "string",
+        "sample_values": [
+          "CLJ-1358",
+          "CLJ-1566",
+          "CLJ-1625",
+          "CLJ-1364",
+          "CLJ-1668"
+        ]
+      },
+      {
+        "name": "Assignee",
+        "type": "string",
+        "sample_values": [
+          "Unassigned",
+          "Unassigned",
+          "Unassigned",
+          "Unassigned",
+          "Unassigned"
+        ]
+      },
+      {
+        "name": "Updated",
+        "type": "string",
+        "sample_values": [
+          "17/Feb/14",
+          "02/Jul/15",
+          "23/Dec/14",
+          "19/Feb/14",
+          "02/Mar/15"
+        ]
+      },
+      {
+        "name": "Summary",
+        "type": "string",
+        "sample_values": [
+          "doc macro does not expand special cases properly",
+          "Documentation for clojure.core/require does not document :rename",
+          "Cannot implement protocol methods of the same name inline",
+          "Primitive VecSeq does not implement equals or hashing methods",
+          "ns macro throws NPE if empty reference is specified"
+        ]
+      },
+      {
+        "name": "Status",
+        "type": "string",
+        "sample_values": [
+          "Open",
+          "Open",
+          "Open",
+          "Open",
+          "Open"
+        ]
+      },
+      {
+        "name": "Resolution",
+        "type": "string",
+        "sample_values": [
+          "Unresolved",
+          "Unresolved",
+          "Unresolved",
+          "Unresolved",
+          "Unresolved"
+        ]
+      },
+      {
+        "name": "Created",
+        "type": "date",
+        "sample_values": [
+          "17/Feb/14",
+          "16/Oct/14",
+          "23/Dec/14",
+          "19/Feb/14",
+          "02/Mar/15"
+        ]
+      }
+    ],
+    "row_count": 20,
+    "metadata": {
+      "page_title": "",
+      "second_title": "",
+      "has_header": true
+    }
+  },
+  {
+    "name": "dl_table_6_j2_1_1",
+    "columns": [
+      {
+        "name": "Date",
+        "type": "numeric",
+        "sample_values": [
+          "4,210982,Jason,Keister,Whitefish,MT,,Flathead",
+          "4,58454,Russell,Schneider,Whitefish,MT,,Flathead",
+          "2,209124,Brad,Morgan,Belgrade,MT,,GAS/Heritage",
+          "2,226208,Jace,Meng,Missoula,MT,,MJCF",
+          "7,202497,Robert,Presta,Missoula,MT,,Five"
+        ]
+      },
+      {
+        "name": "Category_Detail",
+        "type": "date",
+        "sample_values": []
+      },
+      {
+        "name": "Men",
+        "type": "string",
+        "sample_values": []
+      },
+      {
+        "name": "Race",
+        "type": "string",
+        "sample_values": [
+          "Velo",
+          "Velo",
+          "Velo"
+        ]
+      },
+      {
+        "name": "",
+        "type": "string",
+        "sample_values": []
+      },
+      {
+        "name": "Category",
+        "type": "string",
+        "sample_values": []
+      }
+    ],
+    "row_count": 27,
+    "metadata": {
+      "page_title": "",
+      "second_title": "",
+      "has_header": true
+    }
+  },
+  {
+    "name": "dl_table_6_j2_1_3",
+    "columns": [
+      {
+        "name": "Date",
+        "type": "numeric",
+        "sample_values": [
+          "5,37860,John,Weyhrich,Missoula,MT,,Five",
+          "6,162742,Daniel,Barry,Columbia,SC,,GAS/Heritage",
+          "11,7926,John,Coulthard,Butte,MT,,Highlands",
+          "4,58454,Russell,Schneider,Whitefish,MT,,Flathead",
+          "13,178006,Benjamin,Sullivan,Missoula,MT,,Montana"
+        ]
+      },
+      {
+        "name": "Category_Detail",
+        "type": "date",
+        "sample_values": []
+      },
+      {
+        "name": "Men",
+        "type": "string",
+        "sample_values": []
+      },
+      {
+        "name": "Race",
+        "type": "string",
+        "sample_values": [
+          "Velo",
+          "Cycling"
+        ]
+      },
+      {
+        "name": "",
+        "type": "string",
+        "sample_values": []
+      },
+      {
+        "name": "Category",
+        "type": "string",
+        "sample_values": []
+      }
+    ],
+    "row_count": 27,
+    "metadata": {
+      "page_title": "",
+      "second_title": "",
+      "has_header": true
+    }
+  },
+  {
+    "name": "dl_table_68_j2_1_2",
+    "columns": [
+      {
+        "name": "Function",
+        "type": "numeric",
+        "sample_values": [
+          "PersistAsXml",
+          "IcuComparer",
+          "getComparer",
+          "MultiIndirectMlPropFinder",
+          "MultiIndirectMlPropFinder"
+        ]
+      },
+      {
+        "name": "Index",
+        "type": "string",
+        "sample_values": [
+          "56",
+          "333",
+          "291",
+          "206",
+          "207"
+        ]
+      },
+      {
+        "name": "Class",
+        "type": "string",
+        "sample_values": [
+          "NotEqualIntMatcher",
+          "IcuComparer",
+          "GenRecordSorter",
+          "MultiIndirectMlPropFinder",
+          "MultiIndirectMlPropFinder"
+        ]
+      },
+      {
+        "name": "Count3",
+        "type": "string",
+        "sample_values": [
+          "1",
+          "1",
+          "0",
+          "4",
+          "0"
+        ]
+      },
+      {
+        "name": "Count1",
+        "type": "numeric",
+        "sample_values": [
+          "4",
+          "3",
+          "3",
+          "5",
+          "2"
+        ]
+      }
+    ],
+    "row_count": 172,
+    "metadata": {
+      "page_title": "",
+      "second_title": "",
+      "has_header": true
+    }
+  }
+]

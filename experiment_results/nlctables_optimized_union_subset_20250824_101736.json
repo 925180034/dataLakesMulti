@@ -1,0 +1,32 @@
+{
+  "L1": {
+    "metrics": {
+      "precision@5": 0.0,
+      "recall@5": 0.0,
+      "ndcg@10": 0.0,
+      "valid_queries": 5
+    },
+    "time": 0.050768375396728516,
+    "avg_time": 0.010153675079345703
+  },
+  "L1_L2": {
+    "metrics": {
+      "precision@5": 0.0,
+      "recall@5": 0.0,
+      "ndcg@10": 0.0,
+      "valid_queries": 5
+    },
+    "time": 0.3751993179321289,
+    "avg_time": 0.07503986358642578
+  },
+  "L1_L2_L3": {
+    "metrics": {
+      "precision@5": 0.0,
+      "recall@5": 0.0,
+      "ndcg@10": 0.0,
+      "valid_queries": 5
+    },
+    "time": 0.41466736793518066,
+    "avg_time": 0.08293347358703614
+  }
+}
