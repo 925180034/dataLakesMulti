@@ -93,19 +93,19 @@ class IntraBatchOptimizer:
         """初始化批次，设置初始参数"""
         state = self.states[task_type]
         
-        # ⭐ 更新：使用基于config.yml和分析结果的优化初始参数
+        # ⭐ 更新：基于实验结果优化 - L3不应该过滤而应该重排序
         if task_type == 'join':
-            # JOIN: 关系推理优化 - 低阈值捕获弱关系
-            state.llm_confidence_threshold = 0.40  # 从0.15改为0.40（基于分析）
-            state.aggregator_min_score = 0.08      # 从0.02改为0.08
-            state.aggregator_max_results = 200     # 从400改为200（更合理）
-            state.vector_top_k = 120               # 从500改为120（基于分析）
+            # JOIN: 关系推理优化 - 极低阈值，让LLM重排序而非过滤
+            state.llm_confidence_threshold = 0.10  # 降低到0.10，避免过度过滤
+            state.aggregator_min_score = 0.01      # 极低阈值，最大化召回
+            state.aggregator_max_results = 500     # 增加候选数量
+            state.vector_top_k = 600               # 增加向量搜索候选
         else:  # union
-            # UNION: 模式匹配优化 - 高阈值确保精确
-            state.llm_confidence_threshold = 0.60  # 从0.20改为0.60（基于分析）
-            state.aggregator_min_score = 0.12      # 从0.05改为0.12
-            state.aggregator_max_results = 80      # 从200改为80（更精确）
-            state.vector_top_k = 40                # 从300改为40（基于分析）
+            # UNION: 模式匹配优化 - 适中阈值平衡精度和召回
+            state.llm_confidence_threshold = 0.15  # 降低到0.15，提高召回率
+            state.aggregator_min_score = 0.03      # 降低阈值
+            state.aggregator_max_results = 200     # 增加候选数量
+            state.vector_top_k = 350                # 增加向量搜索候选
             
         # 重置统计
         state.queries_processed = 0

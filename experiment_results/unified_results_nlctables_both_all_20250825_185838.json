@@ -1,0 +1,3033 @@
+{
+  "dataset": "nlctables",
+  "dataset_type": "subset",
+  "task": "both",
+  "layer": "all",
+  "workers": 4,
+  "max_queries": 2,
+  "challenging": true,
+  "experiments": {
+    "join_L1": {
+      "results": [
+        {
+          "query_table": "q_table_118_j1_3",
+          "predictions": [
+            "dl_table_118_j1_3_3",
+            "dl_table_118_j1_3_1",
+            "dl_table_118_j1_3_2",
+            "q_table_68_j2_1",
+            "dl_table_50_j1_1_2"
+          ]
+        },
+        {
+          "query_table": "q_table_16_j2_1",
+          "predictions": [
+            "dl_table_16_j2_1_1",
+            "dl_table_16_j2_1_3",
+            "dl_table_16_j2_1_2",
+            "q_table_142_j1_2",
+            "q_table_110_j1_1"
+          ]
+        }
+      ],
+      "elapsed_time": 0.025360822677612305,
+      "task": "join",
+      "layer": "L1",
+      "ground_truth": [
+        {
+          "query_table": "q_table_118_j1_3",
+          "ground_truth": [
+            "dl_table_118_j1_3_1",
+            "dl_table_118_j1_3_2",
+            "dl_table_118_j1_3_3"
+          ]
+        },
+        {
+          "query_table": "q_table_16_j2_1",
+          "ground_truth": [
+            "dl_table_16_j2_1_1",
+            "dl_table_16_j2_1_2",
+            "dl_table_16_j2_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_60_j3_2",
+          "ground_truth": [
+            "dl_table_60_j3_2"
+          ]
+        },
+        {
+          "query_table": "q_table_110_j1_1",
+          "ground_truth": [
+            "dl_table_110_j1_1_1",
+            "dl_table_110_j1_1_2",
+            "dl_table_110_j1_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_110_j3_1",
+          "ground_truth": [
+            "dl_table_110_j3_1"
+          ]
+        },
+        {
+          "query_table": "q_table_12_j2_1",
+          "ground_truth": [
+            "dl_table_12_j2_1_1",
+            "dl_table_12_j2_1_2",
+            "dl_table_12_j2_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_24_j3_2",
+          "ground_truth": [
+            "dl_table_24_j3_2"
+          ]
+        },
+        {
+          "query_table": "q_table_142_j1_2",
+          "ground_truth": [
+            "dl_table_142_j1_2_1",
+            "dl_table_142_j1_2_2",
+            "dl_table_142_j1_2_3"
+          ]
+        },
+        {
+          "query_table": "q_table_6_j2_1",
+          "ground_truth": [
+            "dl_table_6_j2_1_1",
+            "dl_table_6_j2_1_2",
+            "dl_table_6_j2_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_13_j3_2",
+          "ground_truth": [
+            "dl_table_13_j3_2"
+          ]
+        },
+        {
+          "query_table": "q_table_13_j3_3",
+          "ground_truth": [
+            "dl_table_13_j3_3_1",
+            "dl_table_13_j3_3_2",
+            "dl_table_13_j3_3_3"
+          ]
+        },
+        {
+          "query_table": "q_table_50_j1_1",
+          "ground_truth": [
+            "dl_table_50_j1_1_1",
+            "dl_table_50_j1_1_2",
+            "dl_table_50_j1_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_68_j2_1",
+          "ground_truth": [
+            "dl_table_68_j2_1_1",
+            "dl_table_68_j2_1_2",
+            "dl_table_68_j2_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_100_j3_2",
+          "ground_truth": [
+            "dl_table_100_j3_2"
+          ]
+        },
+        {
+          "query_table": "q_table_155_j1_3",
+          "ground_truth": [
+            "dl_table_155_j1_3_1",
+            "dl_table_155_j1_3_2",
+            "dl_table_155_j1_3_3"
+          ]
+        },
+        {
+          "query_table": "q_table_39_j2_1",
+          "ground_truth": [
+            "dl_table_39_j2_1_1",
+            "dl_table_39_j2_1_2",
+            "dl_table_39_j2_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_37_j3_2",
+          "ground_truth": [
+            "dl_table_37_j3_2"
+          ]
+        },
+        {
+          "query_table": "q_table_67_j1_3",
+          "ground_truth": [
+            "dl_table_67_j1_3_1",
+            "dl_table_67_j1_3_2",
+            "dl_table_67_j1_3_3"
+          ]
+        }
+      ]
+    },
+    "join_L1+L2": {
+      "results": [
+        {
+          "query_table": "q_table_118_j1_3",
+          "predictions": [
+            "dl_table_118_j1_3_3",
+            "dl_table_118_j1_3_1",
+            "dl_table_118_j1_3_2",
+            "q_table_24_j3_2",
+            "q_table_155_j1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_16_j2_1",
+          "predictions": [
+            "dl_table_16_j2_1_3",
+            "dl_table_16_j2_1_1",
+            "dl_table_16_j2_1_2",
+            "q_table_37_j3_2",
+            "q_table_67_j1_3"
+          ]
+        }
+      ],
+      "elapsed_time": 0.0235440731048584,
+      "task": "join",
+      "layer": "L1+L2",
+      "ground_truth": [
+        {
+          "query_table": "q_table_118_j1_3",
+          "ground_truth": [
+            "dl_table_118_j1_3_1",
+            "dl_table_118_j1_3_2",
+            "dl_table_118_j1_3_3"
+          ]
+        },
+        {
+          "query_table": "q_table_16_j2_1",
+          "ground_truth": [
+            "dl_table_16_j2_1_1",
+            "dl_table_16_j2_1_2",
+            "dl_table_16_j2_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_60_j3_2",
+          "ground_truth": [
+            "dl_table_60_j3_2"
+          ]
+        },
+        {
+          "query_table": "q_table_110_j1_1",
+          "ground_truth": [
+            "dl_table_110_j1_1_1",
+            "dl_table_110_j1_1_2",
+            "dl_table_110_j1_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_110_j3_1",
+          "ground_truth": [
+            "dl_table_110_j3_1"
+          ]
+        },
+        {
+          "query_table": "q_table_12_j2_1",
+          "ground_truth": [
+            "dl_table_12_j2_1_1",
+            "dl_table_12_j2_1_2",
+            "dl_table_12_j2_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_24_j3_2",
+          "ground_truth": [
+            "dl_table_24_j3_2"
+          ]
+        },
+        {
+          "query_table": "q_table_142_j1_2",
+          "ground_truth": [
+            "dl_table_142_j1_2_1",
+            "dl_table_142_j1_2_2",
+            "dl_table_142_j1_2_3"
+          ]
+        },
+        {
+          "query_table": "q_table_6_j2_1",
+          "ground_truth": [
+            "dl_table_6_j2_1_1",
+            "dl_table_6_j2_1_2",
+            "dl_table_6_j2_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_13_j3_2",
+          "ground_truth": [
+            "dl_table_13_j3_2"
+          ]
+        },
+        {
+          "query_table": "q_table_13_j3_3",
+          "ground_truth": [
+            "dl_table_13_j3_3_1",
+            "dl_table_13_j3_3_2",
+            "dl_table_13_j3_3_3"
+          ]
+        },
+        {
+          "query_table": "q_table_50_j1_1",
+          "ground_truth": [
+            "dl_table_50_j1_1_1",
+            "dl_table_50_j1_1_2",
+            "dl_table_50_j1_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_68_j2_1",
+          "ground_truth": [
+            "dl_table_68_j2_1_1",
+            "dl_table_68_j2_1_2",
+            "dl_table_68_j2_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_100_j3_2",
+          "ground_truth": [
+            "dl_table_100_j3_2"
+          ]
+        },
+        {
+          "query_table": "q_table_155_j1_3",
+          "ground_truth": [
+            "dl_table_155_j1_3_1",
+            "dl_table_155_j1_3_2",
+            "dl_table_155_j1_3_3"
+          ]
+        },
+        {
+          "query_table": "q_table_39_j2_1",
+          "ground_truth": [
+            "dl_table_39_j2_1_1",
+            "dl_table_39_j2_1_2",
+            "dl_table_39_j2_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_37_j3_2",
+          "ground_truth": [
+            "dl_table_37_j3_2"
+          ]
+        },
+        {
+          "query_table": "q_table_67_j1_3",
+          "ground_truth": [
+            "dl_table_67_j1_3_1",
+            "dl_table_67_j1_3_2",
+            "dl_table_67_j1_3_3"
+          ]
+        }
+      ]
+    },
+    "join_L1+L2+L3": {
+      "results": [
+        {
+          "query_table": "q_table_118_j1_3",
+          "predictions": [
+            "dl_table_118_j1_3_3",
+            "dl_table_118_j1_3_1"
+          ]
+        },
+        {
+          "query_table": "q_table_16_j2_1",
+          "predictions": [
+            "dl_table_16_j2_1_3",
+            "dl_table_16_j2_1_1",
+            "dl_table_16_j2_1_2",
+            "q_table_67_j1_3"
+          ]
+        }
+      ],
+      "elapsed_time": 0.032051801681518555,
+      "task": "join",
+      "layer": "L1+L2+L3",
+      "ground_truth": [
+        {
+          "query_table": "q_table_118_j1_3",
+          "ground_truth": [
+            "dl_table_118_j1_3_1",
+            "dl_table_118_j1_3_2",
+            "dl_table_118_j1_3_3"
+          ]
+        },
+        {
+          "query_table": "q_table_16_j2_1",
+          "ground_truth": [
+            "dl_table_16_j2_1_1",
+            "dl_table_16_j2_1_2",
+            "dl_table_16_j2_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_60_j3_2",
+          "ground_truth": [
+            "dl_table_60_j3_2"
+          ]
+        },
+        {
+          "query_table": "q_table_110_j1_1",
+          "ground_truth": [
+            "dl_table_110_j1_1_1",
+            "dl_table_110_j1_1_2",
+            "dl_table_110_j1_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_110_j3_1",
+          "ground_truth": [
+            "dl_table_110_j3_1"
+          ]
+        },
+        {
+          "query_table": "q_table_12_j2_1",
+          "ground_truth": [
+            "dl_table_12_j2_1_1",
+            "dl_table_12_j2_1_2",
+            "dl_table_12_j2_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_24_j3_2",
+          "ground_truth": [
+            "dl_table_24_j3_2"
+          ]
+        },
+        {
+          "query_table": "q_table_142_j1_2",
+          "ground_truth": [
+            "dl_table_142_j1_2_1",
+            "dl_table_142_j1_2_2",
+            "dl_table_142_j1_2_3"
+          ]
+        },
+        {
+          "query_table": "q_table_6_j2_1",
+          "ground_truth": [
+            "dl_table_6_j2_1_1",
+            "dl_table_6_j2_1_2",
+            "dl_table_6_j2_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_13_j3_2",
+          "ground_truth": [
+            "dl_table_13_j3_2"
+          ]
+        },
+        {
+          "query_table": "q_table_13_j3_3",
+          "ground_truth": [
+            "dl_table_13_j3_3_1",
+            "dl_table_13_j3_3_2",
+            "dl_table_13_j3_3_3"
+          ]
+        },
+        {
+          "query_table": "q_table_50_j1_1",
+          "ground_truth": [
+            "dl_table_50_j1_1_1",
+            "dl_table_50_j1_1_2",
+            "dl_table_50_j1_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_68_j2_1",
+          "ground_truth": [
+            "dl_table_68_j2_1_1",
+            "dl_table_68_j2_1_2",
+            "dl_table_68_j2_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_100_j3_2",
+          "ground_truth": [
+            "dl_table_100_j3_2"
+          ]
+        },
+        {
+          "query_table": "q_table_155_j1_3",
+          "ground_truth": [
+            "dl_table_155_j1_3_1",
+            "dl_table_155_j1_3_2",
+            "dl_table_155_j1_3_3"
+          ]
+        },
+        {
+          "query_table": "q_table_39_j2_1",
+          "ground_truth": [
+            "dl_table_39_j2_1_1",
+            "dl_table_39_j2_1_2",
+            "dl_table_39_j2_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_37_j3_2",
+          "ground_truth": [
+            "dl_table_37_j3_2"
+          ]
+        },
+        {
+          "query_table": "q_table_67_j1_3",
+          "ground_truth": [
+            "dl_table_67_j1_3_1",
+            "dl_table_67_j1_3_2",
+            "dl_table_67_j1_3_3"
+          ]
+        }
+      ]
+    },
+    "union_L1": {
+      "results": [
+        {
+          "query_table": "q_table_145_3_4_1",
+          "predictions": [
+            "q_table_145_3_4_2",
+            "q_table_145_3_6_2",
+            "q_table_145_3_6_1",
+            "dl_table_145_3_4_1",
+            "dl_table_145_3_6_1"
+          ]
+        },
+        {
+          "query_table": "q_table_145_3_4_2",
+          "predictions": [
+            "q_table_145_3_6_2",
+            "q_table_145_3_4_1",
+            "q_table_145_3_6_1",
+            "dl_table_145_3_4_1",
+            "dl_table_145_3_6_1"
+          ]
+        }
+      ],
+      "elapsed_time": 0.09209394454956055,
+      "task": "union",
+      "layer": "L1",
+      "ground_truth": [
+        {
+          "query_table": "q_table_145_3_4_1",
+          "ground_truth": [
+            "dl_table_145_3_4_1"
+          ]
+        },
+        {
+          "query_table": "q_table_145_3_4_2",
+          "ground_truth": [
+            "dl_table_145_3_4_2"
+          ]
+        },
+        {
+          "query_table": "q_table_145_1_3",
+          "ground_truth": [
+            "dl_table_145_1_3_1",
+            "dl_table_145_1_3_2",
+            "dl_table_145_1_3_3",
+            "dl_table_145_1_3_4",
+            "dl_table_145_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_145_3_6_1",
+          "ground_truth": [
+            "dl_table_145_3_6_1"
+          ]
+        },
+        {
+          "query_table": "q_table_145_3_6_2",
+          "ground_truth": [
+            "dl_table_145_3_6_2"
+          ]
+        },
+        {
+          "query_table": "q_table_155_3_4_1",
+          "ground_truth": [
+            "dl_table_155_3_4_1"
+          ]
+        },
+        {
+          "query_table": "q_table_155_1_1",
+          "ground_truth": [
+            "dl_table_155_1_1_1",
+            "dl_table_155_1_1_2",
+            "dl_table_155_1_1_3",
+            "dl_table_155_1_1_4",
+            "dl_table_155_1_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_38_4_1",
+          "ground_truth": [
+            "dl_table_38_4_1_1_cv_1_3_1",
+            "dl_table_38_4_1_1_cv_1_3_2",
+            "dl_table_38_4_1_1_cv_1_3_3",
+            "dl_table_38_4_1_1_cv_1_3_4",
+            "dl_table_38_4_1_1_cv_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_38_1_2",
+          "ground_truth": [
+            "dl_table_38_1_2_1",
+            "dl_table_38_1_2_2",
+            "dl_table_38_1_2_3",
+            "dl_table_38_1_2_4",
+            "dl_table_38_1_2_5"
+          ]
+        },
+        {
+          "query_table": "q_table_72_3_4_1",
+          "ground_truth": [
+            "dl_table_72_3_4_1"
+          ]
+        },
+        {
+          "query_table": "q_table_72_1_1",
+          "ground_truth": [
+            "dl_table_72_1_1_1",
+            "dl_table_72_1_1_2",
+            "dl_table_72_1_1_3",
+            "dl_table_72_1_1_4",
+            "dl_table_72_1_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_139_3_4_1",
+          "ground_truth": [
+            "dl_table_139_3_4_1"
+          ]
+        },
+        {
+          "query_table": "q_table_139_1_1",
+          "ground_truth": [
+            "dl_table_139_1_1_1",
+            "dl_table_139_1_1_2",
+            "dl_table_139_1_1_3",
+            "dl_table_139_1_1_4",
+            "dl_table_139_1_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_1_2_3_1",
+          "ground_truth": [
+            "dl_table_1_2_3_1_1",
+            "dl_table_1_2_3_1_2",
+            "dl_table_1_2_3_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_1_2_3_2",
+          "ground_truth": [
+            "dl_table_1_2_3_2_1",
+            "dl_table_1_2_3_2_2",
+            "dl_table_1_2_3_2_3"
+          ]
+        },
+        {
+          "query_table": "q_table_1_2_3_3",
+          "ground_truth": [
+            "dl_table_1_2_3_3_1",
+            "dl_table_1_2_3_3_2",
+            "dl_table_1_2_3_3_3"
+          ]
+        },
+        {
+          "query_table": "q_table_1_2_3_4",
+          "ground_truth": [
+            "dl_table_1_2_3_4_1",
+            "dl_table_1_2_3_4_2",
+            "dl_table_1_2_3_4_3"
+          ]
+        },
+        {
+          "query_table": "q_table_1_2_3_5",
+          "ground_truth": [
+            "dl_table_1_2_3_5_1",
+            "dl_table_1_2_3_5_2",
+            "dl_table_1_2_3_5_3"
+          ]
+        },
+        {
+          "query_table": "q_table_1_2_3_6",
+          "ground_truth": [
+            "dl_table_1_2_3_6_1",
+            "dl_table_1_2_3_6_2",
+            "dl_table_1_2_3_6_3"
+          ]
+        },
+        {
+          "query_table": "q_table_1_2_3_7",
+          "ground_truth": [
+            "dl_table_1_2_3_7_1",
+            "dl_table_1_2_3_7_2",
+            "dl_table_1_2_3_7_3"
+          ]
+        },
+        {
+          "query_table": "q_table_1_3_6_1",
+          "ground_truth": [
+            "dl_table_1_3_6_1"
+          ]
+        },
+        {
+          "query_table": "q_table_1_3_6_2",
+          "ground_truth": [
+            "dl_table_1_3_6_2"
+          ]
+        },
+        {
+          "query_table": "q_table_1_3_6_3",
+          "ground_truth": [
+            "dl_table_1_3_6_3"
+          ]
+        },
+        {
+          "query_table": "q_table_1_3_6_4",
+          "ground_truth": [
+            "dl_table_1_3_6_4"
+          ]
+        },
+        {
+          "query_table": "q_table_1_3_6_5",
+          "ground_truth": [
+            "dl_table_1_3_6_5"
+          ]
+        },
+        {
+          "query_table": "q_table_1_3_6_6",
+          "ground_truth": [
+            "dl_table_1_3_6_6"
+          ]
+        },
+        {
+          "query_table": "q_table_1_3_6_7",
+          "ground_truth": [
+            "dl_table_1_3_6_7"
+          ]
+        },
+        {
+          "query_table": "q_table_35_2_3_1",
+          "ground_truth": [
+            "dl_table_35_2_3_1_1",
+            "dl_table_35_2_3_1_2",
+            "dl_table_35_2_3_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_27_3_4_1",
+          "ground_truth": [
+            "dl_table_27_3_4_1"
+          ]
+        },
+        {
+          "query_table": "q_table_27_3_4_2",
+          "ground_truth": [
+            "dl_table_27_3_4_2"
+          ]
+        },
+        {
+          "query_table": "q_table_27_1_3",
+          "ground_truth": [
+            "dl_table_27_1_3_1",
+            "dl_table_27_1_3_2",
+            "dl_table_27_1_3_3",
+            "dl_table_27_1_3_4",
+            "dl_table_27_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_125_2_1_1",
+          "ground_truth": [
+            "dl_table_125_2_1_1_1",
+            "dl_table_125_2_1_1_2",
+            "dl_table_125_2_1_1_3",
+            "dl_table_125_2_1_1_4",
+            "dl_table_125_2_1_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_125_3_1_1",
+          "ground_truth": [
+            "dl_table_125_3_1_1"
+          ]
+        },
+        {
+          "query_table": "q_table_125_1_2",
+          "ground_truth": [
+            "dl_table_125_1_2_1",
+            "dl_table_125_1_2_2",
+            "dl_table_125_1_2_3",
+            "dl_table_125_1_2_4",
+            "dl_table_125_1_2_5"
+          ]
+        },
+        {
+          "query_table": "q_table_23_1_3",
+          "ground_truth": [
+            "dl_table_23_1_3_1",
+            "dl_table_23_1_3_2",
+            "dl_table_23_1_3_3",
+            "dl_table_23_1_3_4",
+            "dl_table_23_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_23_1_2",
+          "ground_truth": [
+            "dl_table_23_1_2_1",
+            "dl_table_23_1_2_2",
+            "dl_table_23_1_2_3",
+            "dl_table_23_1_2_4",
+            "dl_table_23_1_2_5"
+          ]
+        },
+        {
+          "query_table": "q_table_104_3_3_1",
+          "ground_truth": [
+            "dl_table_104_3_3_1"
+          ]
+        },
+        {
+          "query_table": "q_table_104_2_3_1",
+          "ground_truth": [
+            "dl_table_104_2_3_1_1",
+            "dl_table_104_2_3_1_2",
+            "dl_table_104_2_3_1_3",
+            "dl_table_104_4_1_1_cv_1_3_1",
+            "dl_table_104_4_1_1_cv_1_3_2",
+            "dl_table_104_4_1_1_cv_1_3_3",
+            "dl_table_104_4_1_1_cv_1_3_4",
+            "dl_table_104_4_1_1_cv_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_104_1_2",
+          "ground_truth": [
+            "dl_table_104_1_2_1",
+            "dl_table_104_1_2_2",
+            "dl_table_104_1_2_3",
+            "dl_table_104_1_2_4",
+            "dl_table_104_1_2_5"
+          ]
+        },
+        {
+          "query_table": "q_table_28_2_2_1",
+          "ground_truth": [
+            "dl_table_28_2_2_1_1",
+            "dl_table_28_2_2_1_2",
+            "dl_table_28_2_2_1_3",
+            "dl_table_28_2_2_1_4",
+            "dl_table_28_2_2_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_54_2_2_1",
+          "ground_truth": [
+            "dl_table_54_2_2_1_1",
+            "dl_table_54_2_2_1_2",
+            "dl_table_54_2_2_1_3",
+            "dl_table_54_2_2_1_4",
+            "dl_table_54_2_2_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_62_2_2_1",
+          "ground_truth": [
+            "dl_table_62_2_2_1_1",
+            "dl_table_62_2_2_1_2",
+            "dl_table_62_2_2_1_3",
+            "dl_table_62_2_2_1_4",
+            "dl_table_62_2_2_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_62_3_2_1",
+          "ground_truth": [
+            "dl_table_62_3_2_1"
+          ]
+        },
+        {
+          "query_table": "q_table_62_3_2_2",
+          "ground_truth": [
+            "dl_table_62_3_2_2"
+          ]
+        },
+        {
+          "query_table": "q_table_62_3_2_3",
+          "ground_truth": [
+            "dl_table_62_3_2_3"
+          ]
+        },
+        {
+          "query_table": "q_table_62_3_2_4",
+          "ground_truth": [
+            "dl_table_62_3_2_4"
+          ]
+        },
+        {
+          "query_table": "q_table_62_3_2_5",
+          "ground_truth": [
+            "dl_table_62_3_2_5"
+          ]
+        },
+        {
+          "query_table": "q_table_62_3_2_6",
+          "ground_truth": [
+            "dl_table_62_3_2_6"
+          ]
+        },
+        {
+          "query_table": "q_table_24_1_3",
+          "ground_truth": [
+            "dl_table_24_1_3_1",
+            "dl_table_24_1_3_2",
+            "dl_table_24_1_3_3",
+            "dl_table_24_1_3_4",
+            "dl_table_24_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_64_2_2_1",
+          "ground_truth": [
+            "dl_table_64_2_2_1_1",
+            "dl_table_64_2_2_1_2",
+            "dl_table_64_2_2_1_3",
+            "dl_table_64_2_2_1_4",
+            "dl_table_64_2_2_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_66_3_4_1",
+          "ground_truth": [
+            "dl_table_66_3_4_1"
+          ]
+        },
+        {
+          "query_table": "q_table_66_1_3",
+          "ground_truth": [
+            "dl_table_66_1_3_1",
+            "dl_table_66_1_3_2",
+            "dl_table_66_1_3_3",
+            "dl_table_66_1_3_4",
+            "dl_table_66_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_46_2_2_1",
+          "ground_truth": [
+            "dl_table_46_2_2_1_1",
+            "dl_table_46_2_2_1_2",
+            "dl_table_46_2_2_1_3",
+            "dl_table_46_2_2_1_4",
+            "dl_table_46_2_2_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_25_4_1",
+          "ground_truth": [
+            "dl_table_25_4_1_1_cv_1_3_1",
+            "dl_table_25_4_1_1_cv_1_3_2",
+            "dl_table_25_4_1_1_cv_1_3_3",
+            "dl_table_25_4_1_1_cv_1_3_4",
+            "dl_table_25_4_1_1_cv_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_25_1_2",
+          "ground_truth": [
+            "dl_table_25_1_2_1",
+            "dl_table_25_1_2_2",
+            "dl_table_25_1_2_3",
+            "dl_table_25_1_2_4",
+            "dl_table_25_1_2_5"
+          ]
+        },
+        {
+          "query_table": "q_table_79_3_4_1",
+          "ground_truth": [
+            "dl_table_79_3_4_1"
+          ]
+        },
+        {
+          "query_table": "q_table_79_1_3",
+          "ground_truth": [
+            "dl_table_79_1_3_1",
+            "dl_table_79_1_3_2",
+            "dl_table_79_1_3_3",
+            "dl_table_79_1_3_4",
+            "dl_table_79_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_36_2_2_1",
+          "ground_truth": [
+            "dl_table_36_2_2_1_1",
+            "dl_table_36_2_2_1_2",
+            "dl_table_36_2_2_1_3",
+            "dl_table_36_2_2_1_4",
+            "dl_table_36_2_2_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_103_3_4_1",
+          "ground_truth": [
+            "dl_table_103_3_4_1"
+          ]
+        },
+        {
+          "query_table": "q_table_103_3_4_2",
+          "ground_truth": [
+            "dl_table_103_3_4_2"
+          ]
+        },
+        {
+          "query_table": "q_table_103_3_4_3",
+          "ground_truth": [
+            "dl_table_103_3_4_3"
+          ]
+        },
+        {
+          "query_table": "q_table_103_1_3",
+          "ground_truth": [
+            "dl_table_103_1_3_1",
+            "dl_table_103_1_3_2",
+            "dl_table_103_1_3_3",
+            "dl_table_103_1_3_4",
+            "dl_table_103_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_103_3_1_1",
+          "ground_truth": [
+            "dl_table_103_3_1_1"
+          ]
+        },
+        {
+          "query_table": "q_table_103_3_1_2",
+          "ground_truth": [
+            "dl_table_103_3_1_2"
+          ]
+        },
+        {
+          "query_table": "q_table_103_3_1_3",
+          "ground_truth": [
+            "dl_table_103_3_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_149_4_3_1",
+          "ground_truth": [
+            "dl_table_149_4_3_1_1_cate_2_1_1_1",
+            "dl_table_149_4_3_1_1_cate_2_1_1_2",
+            "dl_table_149_4_3_1_1_cate_2_1_1_3",
+            "dl_table_149_4_3_1_1_cate_2_1_1_4",
+            "dl_table_149_4_3_1_1_cate_2_1_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_140_4_3_1",
+          "ground_truth": [
+            "dl_table_140_4_3_1_1_cate_2_1_1_1",
+            "dl_table_140_4_3_1_1_cate_2_1_1_2",
+            "dl_table_140_4_3_1_1_cate_2_1_1_3",
+            "dl_table_140_4_3_1_1_cate_2_1_1_4",
+            "dl_table_140_4_3_1_1_cate_2_1_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_45_2_2_1",
+          "ground_truth": [
+            "dl_table_45_2_2_1_1",
+            "dl_table_45_2_2_1_2",
+            "dl_table_45_2_2_1_3",
+            "dl_table_45_2_2_1_4",
+            "dl_table_45_2_2_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_111_1_3",
+          "ground_truth": [
+            "dl_table_111_1_3_1",
+            "dl_table_111_1_3_2",
+            "dl_table_111_1_3_3",
+            "dl_table_111_1_3_4",
+            "dl_table_111_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_74_2_2_1",
+          "ground_truth": [
+            "dl_table_74_2_2_1_1",
+            "dl_table_74_2_2_1_2",
+            "dl_table_74_2_2_1_3",
+            "dl_table_74_2_2_1_4",
+            "dl_table_74_2_2_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_74_2_3_1",
+          "ground_truth": [
+            "dl_table_74_2_3_1_1",
+            "dl_table_74_2_3_1_2",
+            "dl_table_74_2_3_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_74_3_6_1",
+          "ground_truth": [
+            "dl_table_74_3_6_1"
+          ]
+        },
+        {
+          "query_table": "q_table_11_1_3",
+          "ground_truth": [
+            "dl_table_11_1_3_1",
+            "dl_table_11_1_3_2",
+            "dl_table_11_1_3_3",
+            "dl_table_11_1_3_4",
+            "dl_table_11_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_109_1_3",
+          "ground_truth": [
+            "dl_table_109_1_3_1",
+            "dl_table_109_1_3_2",
+            "dl_table_109_1_3_3",
+            "dl_table_109_1_3_4",
+            "dl_table_109_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_109_3_6_1",
+          "ground_truth": [
+            "dl_table_109_3_6_1"
+          ]
+        },
+        {
+          "query_table": "q_table_109_3_6_2",
+          "ground_truth": [
+            "dl_table_109_3_6_2"
+          ]
+        },
+        {
+          "query_table": "q_table_109_2_3_1",
+          "ground_truth": [
+            "dl_table_109_2_3_1_1",
+            "dl_table_109_2_3_1_2",
+            "dl_table_109_2_3_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_109_2_3_2",
+          "ground_truth": [
+            "dl_table_109_2_3_2_1",
+            "dl_table_109_2_3_2_2",
+            "dl_table_109_2_3_2_3"
+          ]
+        },
+        {
+          "query_table": "q_table_109_1_2",
+          "ground_truth": [
+            "dl_table_109_1_2_1",
+            "dl_table_109_1_2_2",
+            "dl_table_109_1_2_3",
+            "dl_table_109_1_2_4",
+            "dl_table_109_1_2_5"
+          ]
+        },
+        {
+          "query_table": "q_table_109_3_3_1",
+          "ground_truth": [
+            "dl_table_109_3_3_1"
+          ]
+        },
+        {
+          "query_table": "q_table_109_3_3_2",
+          "ground_truth": [
+            "dl_table_109_3_3_2"
+          ]
+        },
+        {
+          "query_table": "q_table_20_2_2_1",
+          "ground_truth": [
+            "dl_table_20_2_2_1_1",
+            "dl_table_20_2_2_1_2",
+            "dl_table_20_2_2_1_3",
+            "dl_table_20_2_2_1_4",
+            "dl_table_20_2_2_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_141_4_2_1",
+          "ground_truth": [
+            "dl_table_141_4_2_1_1_cate_2_1_1_1",
+            "dl_table_141_4_2_1_1_cate_2_1_1_2",
+            "dl_table_141_4_2_1_1_cate_2_1_1_3",
+            "dl_table_141_4_2_1_1_cate_2_1_1_4",
+            "dl_table_141_4_2_1_1_cate_2_1_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_141_1_3",
+          "ground_truth": [
+            "dl_table_141_1_3_1",
+            "dl_table_141_1_3_2",
+            "dl_table_141_1_3_3",
+            "dl_table_141_1_3_4",
+            "dl_table_141_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_99_2_1_1",
+          "ground_truth": [
+            "dl_table_99_2_1_1_1",
+            "dl_table_99_2_1_1_2",
+            "dl_table_99_2_1_1_3",
+            "dl_table_99_2_1_1_4",
+            "dl_table_99_2_1_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_116_2_3_1",
+          "ground_truth": [
+            "dl_table_116_2_3_1_1",
+            "dl_table_116_2_3_1_2",
+            "dl_table_116_2_3_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_155_2_1_1",
+          "ground_truth": [
+            "dl_table_155_2_1_1_1",
+            "dl_table_155_2_1_1_2",
+            "dl_table_155_2_1_1_3",
+            "dl_table_155_2_1_1_4",
+            "dl_table_155_2_1_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_21_1_3",
+          "ground_truth": [
+            "dl_table_21_1_3_1",
+            "dl_table_21_1_3_2",
+            "dl_table_21_1_3_3",
+            "dl_table_21_1_3_4",
+            "dl_table_21_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_152_3_5_1",
+          "ground_truth": [
+            "dl_table_152_3_5_1"
+          ]
+        },
+        {
+          "query_table": "q_table_152_1_3",
+          "ground_truth": [
+            "dl_table_152_1_3_1",
+            "dl_table_152_1_3_2",
+            "dl_table_152_1_3_3",
+            "dl_table_152_1_3_4",
+            "dl_table_152_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_152_3_6_1",
+          "ground_truth": [
+            "dl_table_152_3_6_1"
+          ]
+        },
+        {
+          "query_table": "q_table_152_3_1_1",
+          "ground_truth": [
+            "dl_table_152_3_1_1"
+          ]
+        },
+        {
+          "query_table": "q_table_152_1_2",
+          "ground_truth": [
+            "dl_table_152_1_2_1",
+            "dl_table_152_1_2_2",
+            "dl_table_152_1_2_3",
+            "dl_table_152_1_2_4",
+            "dl_table_152_1_2_5"
+          ]
+        },
+        {
+          "query_table": "q_table_96_4_2_1",
+          "ground_truth": [
+            "dl_table_96_4_2_1_1_cate_2_1_1_1",
+            "dl_table_96_4_2_1_1_cate_2_1_1_2",
+            "dl_table_96_4_2_1_1_cate_2_1_1_3",
+            "dl_table_96_4_2_1_1_cate_2_1_1_4",
+            "dl_table_96_4_2_1_1_cate_2_1_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_96_1_3",
+          "ground_truth": [
+            "dl_table_96_1_3_1",
+            "dl_table_96_1_3_2",
+            "dl_table_96_1_3_3",
+            "dl_table_96_1_3_4",
+            "dl_table_96_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_33_3_6_1",
+          "ground_truth": [
+            "dl_table_33_3_6_1"
+          ]
+        },
+        {
+          "query_table": "q_table_33_2_3_1",
+          "ground_truth": [
+            "dl_table_33_2_3_1_1",
+            "dl_table_33_2_3_1_2",
+            "dl_table_33_2_3_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_26_1_3",
+          "ground_truth": [
+            "dl_table_26_1_3_1",
+            "dl_table_26_1_3_2",
+            "dl_table_26_1_3_3",
+            "dl_table_26_1_3_4",
+            "dl_table_26_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_78_2_2_1",
+          "ground_truth": [
+            "dl_table_78_2_2_1_1",
+            "dl_table_78_2_2_1_2",
+            "dl_table_78_2_2_1_3",
+            "dl_table_78_2_2_1_4",
+            "dl_table_78_2_2_1_5"
+          ]
+        }
+      ]
+    },
+    "union_L1+L2": {
+      "results": [
+        {
+          "query_table": "q_table_145_3_4_1",
+          "predictions": [
+            "dl_table_145_3_4_1",
+            "dl_table_145_3_4_2",
+            "dl_table_145_3_6_2",
+            "dl_table_145_3_6_1",
+            "q_table_145_3_6_1"
+          ]
+        },
+        {
+          "query_table": "q_table_145_3_4_2",
+          "predictions": [
+            "q_table_145_3_6_2",
+            "dl_table_145_1_3_1",
+            "dl_table_145_1_3_4",
+            "q_table_145_1_3",
+            "dl_table_145_1_3_3"
+          ]
+        }
+      ],
+      "elapsed_time": 0.08476805686950684,
+      "task": "union",
+      "layer": "L1+L2",
+      "ground_truth": [
+        {
+          "query_table": "q_table_145_3_4_1",
+          "ground_truth": [
+            "dl_table_145_3_4_1"
+          ]
+        },
+        {
+          "query_table": "q_table_145_3_4_2",
+          "ground_truth": [
+            "dl_table_145_3_4_2"
+          ]
+        },
+        {
+          "query_table": "q_table_145_1_3",
+          "ground_truth": [
+            "dl_table_145_1_3_1",
+            "dl_table_145_1_3_2",
+            "dl_table_145_1_3_3",
+            "dl_table_145_1_3_4",
+            "dl_table_145_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_145_3_6_1",
+          "ground_truth": [
+            "dl_table_145_3_6_1"
+          ]
+        },
+        {
+          "query_table": "q_table_145_3_6_2",
+          "ground_truth": [
+            "dl_table_145_3_6_2"
+          ]
+        },
+        {
+          "query_table": "q_table_155_3_4_1",
+          "ground_truth": [
+            "dl_table_155_3_4_1"
+          ]
+        },
+        {
+          "query_table": "q_table_155_1_1",
+          "ground_truth": [
+            "dl_table_155_1_1_1",
+            "dl_table_155_1_1_2",
+            "dl_table_155_1_1_3",
+            "dl_table_155_1_1_4",
+            "dl_table_155_1_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_38_4_1",
+          "ground_truth": [
+            "dl_table_38_4_1_1_cv_1_3_1",
+            "dl_table_38_4_1_1_cv_1_3_2",
+            "dl_table_38_4_1_1_cv_1_3_3",
+            "dl_table_38_4_1_1_cv_1_3_4",
+            "dl_table_38_4_1_1_cv_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_38_1_2",
+          "ground_truth": [
+            "dl_table_38_1_2_1",
+            "dl_table_38_1_2_2",
+            "dl_table_38_1_2_3",
+            "dl_table_38_1_2_4",
+            "dl_table_38_1_2_5"
+          ]
+        },
+        {
+          "query_table": "q_table_72_3_4_1",
+          "ground_truth": [
+            "dl_table_72_3_4_1"
+          ]
+        },
+        {
+          "query_table": "q_table_72_1_1",
+          "ground_truth": [
+            "dl_table_72_1_1_1",
+            "dl_table_72_1_1_2",
+            "dl_table_72_1_1_3",
+            "dl_table_72_1_1_4",
+            "dl_table_72_1_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_139_3_4_1",
+          "ground_truth": [
+            "dl_table_139_3_4_1"
+          ]
+        },
+        {
+          "query_table": "q_table_139_1_1",
+          "ground_truth": [
+            "dl_table_139_1_1_1",
+            "dl_table_139_1_1_2",
+            "dl_table_139_1_1_3",
+            "dl_table_139_1_1_4",
+            "dl_table_139_1_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_1_2_3_1",
+          "ground_truth": [
+            "dl_table_1_2_3_1_1",
+            "dl_table_1_2_3_1_2",
+            "dl_table_1_2_3_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_1_2_3_2",
+          "ground_truth": [
+            "dl_table_1_2_3_2_1",
+            "dl_table_1_2_3_2_2",
+            "dl_table_1_2_3_2_3"
+          ]
+        },
+        {
+          "query_table": "q_table_1_2_3_3",
+          "ground_truth": [
+            "dl_table_1_2_3_3_1",
+            "dl_table_1_2_3_3_2",
+            "dl_table_1_2_3_3_3"
+          ]
+        },
+        {
+          "query_table": "q_table_1_2_3_4",
+          "ground_truth": [
+            "dl_table_1_2_3_4_1",
+            "dl_table_1_2_3_4_2",
+            "dl_table_1_2_3_4_3"
+          ]
+        },
+        {
+          "query_table": "q_table_1_2_3_5",
+          "ground_truth": [
+            "dl_table_1_2_3_5_1",
+            "dl_table_1_2_3_5_2",
+            "dl_table_1_2_3_5_3"
+          ]
+        },
+        {
+          "query_table": "q_table_1_2_3_6",
+          "ground_truth": [
+            "dl_table_1_2_3_6_1",
+            "dl_table_1_2_3_6_2",
+            "dl_table_1_2_3_6_3"
+          ]
+        },
+        {
+          "query_table": "q_table_1_2_3_7",
+          "ground_truth": [
+            "dl_table_1_2_3_7_1",
+            "dl_table_1_2_3_7_2",
+            "dl_table_1_2_3_7_3"
+          ]
+        },
+        {
+          "query_table": "q_table_1_3_6_1",
+          "ground_truth": [
+            "dl_table_1_3_6_1"
+          ]
+        },
+        {
+          "query_table": "q_table_1_3_6_2",
+          "ground_truth": [
+            "dl_table_1_3_6_2"
+          ]
+        },
+        {
+          "query_table": "q_table_1_3_6_3",
+          "ground_truth": [
+            "dl_table_1_3_6_3"
+          ]
+        },
+        {
+          "query_table": "q_table_1_3_6_4",
+          "ground_truth": [
+            "dl_table_1_3_6_4"
+          ]
+        },
+        {
+          "query_table": "q_table_1_3_6_5",
+          "ground_truth": [
+            "dl_table_1_3_6_5"
+          ]
+        },
+        {
+          "query_table": "q_table_1_3_6_6",
+          "ground_truth": [
+            "dl_table_1_3_6_6"
+          ]
+        },
+        {
+          "query_table": "q_table_1_3_6_7",
+          "ground_truth": [
+            "dl_table_1_3_6_7"
+          ]
+        },
+        {
+          "query_table": "q_table_35_2_3_1",
+          "ground_truth": [
+            "dl_table_35_2_3_1_1",
+            "dl_table_35_2_3_1_2",
+            "dl_table_35_2_3_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_27_3_4_1",
+          "ground_truth": [
+            "dl_table_27_3_4_1"
+          ]
+        },
+        {
+          "query_table": "q_table_27_3_4_2",
+          "ground_truth": [
+            "dl_table_27_3_4_2"
+          ]
+        },
+        {
+          "query_table": "q_table_27_1_3",
+          "ground_truth": [
+            "dl_table_27_1_3_1",
+            "dl_table_27_1_3_2",
+            "dl_table_27_1_3_3",
+            "dl_table_27_1_3_4",
+            "dl_table_27_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_125_2_1_1",
+          "ground_truth": [
+            "dl_table_125_2_1_1_1",
+            "dl_table_125_2_1_1_2",
+            "dl_table_125_2_1_1_3",
+            "dl_table_125_2_1_1_4",
+            "dl_table_125_2_1_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_125_3_1_1",
+          "ground_truth": [
+            "dl_table_125_3_1_1"
+          ]
+        },
+        {
+          "query_table": "q_table_125_1_2",
+          "ground_truth": [
+            "dl_table_125_1_2_1",
+            "dl_table_125_1_2_2",
+            "dl_table_125_1_2_3",
+            "dl_table_125_1_2_4",
+            "dl_table_125_1_2_5"
+          ]
+        },
+        {
+          "query_table": "q_table_23_1_3",
+          "ground_truth": [
+            "dl_table_23_1_3_1",
+            "dl_table_23_1_3_2",
+            "dl_table_23_1_3_3",
+            "dl_table_23_1_3_4",
+            "dl_table_23_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_23_1_2",
+          "ground_truth": [
+            "dl_table_23_1_2_1",
+            "dl_table_23_1_2_2",
+            "dl_table_23_1_2_3",
+            "dl_table_23_1_2_4",
+            "dl_table_23_1_2_5"
+          ]
+        },
+        {
+          "query_table": "q_table_104_3_3_1",
+          "ground_truth": [
+            "dl_table_104_3_3_1"
+          ]
+        },
+        {
+          "query_table": "q_table_104_2_3_1",
+          "ground_truth": [
+            "dl_table_104_2_3_1_1",
+            "dl_table_104_2_3_1_2",
+            "dl_table_104_2_3_1_3",
+            "dl_table_104_4_1_1_cv_1_3_1",
+            "dl_table_104_4_1_1_cv_1_3_2",
+            "dl_table_104_4_1_1_cv_1_3_3",
+            "dl_table_104_4_1_1_cv_1_3_4",
+            "dl_table_104_4_1_1_cv_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_104_1_2",
+          "ground_truth": [
+            "dl_table_104_1_2_1",
+            "dl_table_104_1_2_2",
+            "dl_table_104_1_2_3",
+            "dl_table_104_1_2_4",
+            "dl_table_104_1_2_5"
+          ]
+        },
+        {
+          "query_table": "q_table_28_2_2_1",
+          "ground_truth": [
+            "dl_table_28_2_2_1_1",
+            "dl_table_28_2_2_1_2",
+            "dl_table_28_2_2_1_3",
+            "dl_table_28_2_2_1_4",
+            "dl_table_28_2_2_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_54_2_2_1",
+          "ground_truth": [
+            "dl_table_54_2_2_1_1",
+            "dl_table_54_2_2_1_2",
+            "dl_table_54_2_2_1_3",
+            "dl_table_54_2_2_1_4",
+            "dl_table_54_2_2_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_62_2_2_1",
+          "ground_truth": [
+            "dl_table_62_2_2_1_1",
+            "dl_table_62_2_2_1_2",
+            "dl_table_62_2_2_1_3",
+            "dl_table_62_2_2_1_4",
+            "dl_table_62_2_2_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_62_3_2_1",
+          "ground_truth": [
+            "dl_table_62_3_2_1"
+          ]
+        },
+        {
+          "query_table": "q_table_62_3_2_2",
+          "ground_truth": [
+            "dl_table_62_3_2_2"
+          ]
+        },
+        {
+          "query_table": "q_table_62_3_2_3",
+          "ground_truth": [
+            "dl_table_62_3_2_3"
+          ]
+        },
+        {
+          "query_table": "q_table_62_3_2_4",
+          "ground_truth": [
+            "dl_table_62_3_2_4"
+          ]
+        },
+        {
+          "query_table": "q_table_62_3_2_5",
+          "ground_truth": [
+            "dl_table_62_3_2_5"
+          ]
+        },
+        {
+          "query_table": "q_table_62_3_2_6",
+          "ground_truth": [
+            "dl_table_62_3_2_6"
+          ]
+        },
+        {
+          "query_table": "q_table_24_1_3",
+          "ground_truth": [
+            "dl_table_24_1_3_1",
+            "dl_table_24_1_3_2",
+            "dl_table_24_1_3_3",
+            "dl_table_24_1_3_4",
+            "dl_table_24_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_64_2_2_1",
+          "ground_truth": [
+            "dl_table_64_2_2_1_1",
+            "dl_table_64_2_2_1_2",
+            "dl_table_64_2_2_1_3",
+            "dl_table_64_2_2_1_4",
+            "dl_table_64_2_2_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_66_3_4_1",
+          "ground_truth": [
+            "dl_table_66_3_4_1"
+          ]
+        },
+        {
+          "query_table": "q_table_66_1_3",
+          "ground_truth": [
+            "dl_table_66_1_3_1",
+            "dl_table_66_1_3_2",
+            "dl_table_66_1_3_3",
+            "dl_table_66_1_3_4",
+            "dl_table_66_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_46_2_2_1",
+          "ground_truth": [
+            "dl_table_46_2_2_1_1",
+            "dl_table_46_2_2_1_2",
+            "dl_table_46_2_2_1_3",
+            "dl_table_46_2_2_1_4",
+            "dl_table_46_2_2_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_25_4_1",
+          "ground_truth": [
+            "dl_table_25_4_1_1_cv_1_3_1",
+            "dl_table_25_4_1_1_cv_1_3_2",
+            "dl_table_25_4_1_1_cv_1_3_3",
+            "dl_table_25_4_1_1_cv_1_3_4",
+            "dl_table_25_4_1_1_cv_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_25_1_2",
+          "ground_truth": [
+            "dl_table_25_1_2_1",
+            "dl_table_25_1_2_2",
+            "dl_table_25_1_2_3",
+            "dl_table_25_1_2_4",
+            "dl_table_25_1_2_5"
+          ]
+        },
+        {
+          "query_table": "q_table_79_3_4_1",
+          "ground_truth": [
+            "dl_table_79_3_4_1"
+          ]
+        },
+        {
+          "query_table": "q_table_79_1_3",
+          "ground_truth": [
+            "dl_table_79_1_3_1",
+            "dl_table_79_1_3_2",
+            "dl_table_79_1_3_3",
+            "dl_table_79_1_3_4",
+            "dl_table_79_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_36_2_2_1",
+          "ground_truth": [
+            "dl_table_36_2_2_1_1",
+            "dl_table_36_2_2_1_2",
+            "dl_table_36_2_2_1_3",
+            "dl_table_36_2_2_1_4",
+            "dl_table_36_2_2_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_103_3_4_1",
+          "ground_truth": [
+            "dl_table_103_3_4_1"
+          ]
+        },
+        {
+          "query_table": "q_table_103_3_4_2",
+          "ground_truth": [
+            "dl_table_103_3_4_2"
+          ]
+        },
+        {
+          "query_table": "q_table_103_3_4_3",
+          "ground_truth": [
+            "dl_table_103_3_4_3"
+          ]
+        },
+        {
+          "query_table": "q_table_103_1_3",
+          "ground_truth": [
+            "dl_table_103_1_3_1",
+            "dl_table_103_1_3_2",
+            "dl_table_103_1_3_3",
+            "dl_table_103_1_3_4",
+            "dl_table_103_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_103_3_1_1",
+          "ground_truth": [
+            "dl_table_103_3_1_1"
+          ]
+        },
+        {
+          "query_table": "q_table_103_3_1_2",
+          "ground_truth": [
+            "dl_table_103_3_1_2"
+          ]
+        },
+        {
+          "query_table": "q_table_103_3_1_3",
+          "ground_truth": [
+            "dl_table_103_3_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_149_4_3_1",
+          "ground_truth": [
+            "dl_table_149_4_3_1_1_cate_2_1_1_1",
+            "dl_table_149_4_3_1_1_cate_2_1_1_2",
+            "dl_table_149_4_3_1_1_cate_2_1_1_3",
+            "dl_table_149_4_3_1_1_cate_2_1_1_4",
+            "dl_table_149_4_3_1_1_cate_2_1_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_140_4_3_1",
+          "ground_truth": [
+            "dl_table_140_4_3_1_1_cate_2_1_1_1",
+            "dl_table_140_4_3_1_1_cate_2_1_1_2",
+            "dl_table_140_4_3_1_1_cate_2_1_1_3",
+            "dl_table_140_4_3_1_1_cate_2_1_1_4",
+            "dl_table_140_4_3_1_1_cate_2_1_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_45_2_2_1",
+          "ground_truth": [
+            "dl_table_45_2_2_1_1",
+            "dl_table_45_2_2_1_2",
+            "dl_table_45_2_2_1_3",
+            "dl_table_45_2_2_1_4",
+            "dl_table_45_2_2_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_111_1_3",
+          "ground_truth": [
+            "dl_table_111_1_3_1",
+            "dl_table_111_1_3_2",
+            "dl_table_111_1_3_3",
+            "dl_table_111_1_3_4",
+            "dl_table_111_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_74_2_2_1",
+          "ground_truth": [
+            "dl_table_74_2_2_1_1",
+            "dl_table_74_2_2_1_2",
+            "dl_table_74_2_2_1_3",
+            "dl_table_74_2_2_1_4",
+            "dl_table_74_2_2_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_74_2_3_1",
+          "ground_truth": [
+            "dl_table_74_2_3_1_1",
+            "dl_table_74_2_3_1_2",
+            "dl_table_74_2_3_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_74_3_6_1",
+          "ground_truth": [
+            "dl_table_74_3_6_1"
+          ]
+        },
+        {
+          "query_table": "q_table_11_1_3",
+          "ground_truth": [
+            "dl_table_11_1_3_1",
+            "dl_table_11_1_3_2",
+            "dl_table_11_1_3_3",
+            "dl_table_11_1_3_4",
+            "dl_table_11_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_109_1_3",
+          "ground_truth": [
+            "dl_table_109_1_3_1",
+            "dl_table_109_1_3_2",
+            "dl_table_109_1_3_3",
+            "dl_table_109_1_3_4",
+            "dl_table_109_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_109_3_6_1",
+          "ground_truth": [
+            "dl_table_109_3_6_1"
+          ]
+        },
+        {
+          "query_table": "q_table_109_3_6_2",
+          "ground_truth": [
+            "dl_table_109_3_6_2"
+          ]
+        },
+        {
+          "query_table": "q_table_109_2_3_1",
+          "ground_truth": [
+            "dl_table_109_2_3_1_1",
+            "dl_table_109_2_3_1_2",
+            "dl_table_109_2_3_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_109_2_3_2",
+          "ground_truth": [
+            "dl_table_109_2_3_2_1",
+            "dl_table_109_2_3_2_2",
+            "dl_table_109_2_3_2_3"
+          ]
+        },
+        {
+          "query_table": "q_table_109_1_2",
+          "ground_truth": [
+            "dl_table_109_1_2_1",
+            "dl_table_109_1_2_2",
+            "dl_table_109_1_2_3",
+            "dl_table_109_1_2_4",
+            "dl_table_109_1_2_5"
+          ]
+        },
+        {
+          "query_table": "q_table_109_3_3_1",
+          "ground_truth": [
+            "dl_table_109_3_3_1"
+          ]
+        },
+        {
+          "query_table": "q_table_109_3_3_2",
+          "ground_truth": [
+            "dl_table_109_3_3_2"
+          ]
+        },
+        {
+          "query_table": "q_table_20_2_2_1",
+          "ground_truth": [
+            "dl_table_20_2_2_1_1",
+            "dl_table_20_2_2_1_2",
+            "dl_table_20_2_2_1_3",
+            "dl_table_20_2_2_1_4",
+            "dl_table_20_2_2_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_141_4_2_1",
+          "ground_truth": [
+            "dl_table_141_4_2_1_1_cate_2_1_1_1",
+            "dl_table_141_4_2_1_1_cate_2_1_1_2",
+            "dl_table_141_4_2_1_1_cate_2_1_1_3",
+            "dl_table_141_4_2_1_1_cate_2_1_1_4",
+            "dl_table_141_4_2_1_1_cate_2_1_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_141_1_3",
+          "ground_truth": [
+            "dl_table_141_1_3_1",
+            "dl_table_141_1_3_2",
+            "dl_table_141_1_3_3",
+            "dl_table_141_1_3_4",
+            "dl_table_141_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_99_2_1_1",
+          "ground_truth": [
+            "dl_table_99_2_1_1_1",
+            "dl_table_99_2_1_1_2",
+            "dl_table_99_2_1_1_3",
+            "dl_table_99_2_1_1_4",
+            "dl_table_99_2_1_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_116_2_3_1",
+          "ground_truth": [
+            "dl_table_116_2_3_1_1",
+            "dl_table_116_2_3_1_2",
+            "dl_table_116_2_3_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_155_2_1_1",
+          "ground_truth": [
+            "dl_table_155_2_1_1_1",
+            "dl_table_155_2_1_1_2",
+            "dl_table_155_2_1_1_3",
+            "dl_table_155_2_1_1_4",
+            "dl_table_155_2_1_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_21_1_3",
+          "ground_truth": [
+            "dl_table_21_1_3_1",
+            "dl_table_21_1_3_2",
+            "dl_table_21_1_3_3",
+            "dl_table_21_1_3_4",
+            "dl_table_21_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_152_3_5_1",
+          "ground_truth": [
+            "dl_table_152_3_5_1"
+          ]
+        },
+        {
+          "query_table": "q_table_152_1_3",
+          "ground_truth": [
+            "dl_table_152_1_3_1",
+            "dl_table_152_1_3_2",
+            "dl_table_152_1_3_3",
+            "dl_table_152_1_3_4",
+            "dl_table_152_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_152_3_6_1",
+          "ground_truth": [
+            "dl_table_152_3_6_1"
+          ]
+        },
+        {
+          "query_table": "q_table_152_3_1_1",
+          "ground_truth": [
+            "dl_table_152_3_1_1"
+          ]
+        },
+        {
+          "query_table": "q_table_152_1_2",
+          "ground_truth": [
+            "dl_table_152_1_2_1",
+            "dl_table_152_1_2_2",
+            "dl_table_152_1_2_3",
+            "dl_table_152_1_2_4",
+            "dl_table_152_1_2_5"
+          ]
+        },
+        {
+          "query_table": "q_table_96_4_2_1",
+          "ground_truth": [
+            "dl_table_96_4_2_1_1_cate_2_1_1_1",
+            "dl_table_96_4_2_1_1_cate_2_1_1_2",
+            "dl_table_96_4_2_1_1_cate_2_1_1_3",
+            "dl_table_96_4_2_1_1_cate_2_1_1_4",
+            "dl_table_96_4_2_1_1_cate_2_1_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_96_1_3",
+          "ground_truth": [
+            "dl_table_96_1_3_1",
+            "dl_table_96_1_3_2",
+            "dl_table_96_1_3_3",
+            "dl_table_96_1_3_4",
+            "dl_table_96_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_33_3_6_1",
+          "ground_truth": [
+            "dl_table_33_3_6_1"
+          ]
+        },
+        {
+          "query_table": "q_table_33_2_3_1",
+          "ground_truth": [
+            "dl_table_33_2_3_1_1",
+            "dl_table_33_2_3_1_2",
+            "dl_table_33_2_3_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_26_1_3",
+          "ground_truth": [
+            "dl_table_26_1_3_1",
+            "dl_table_26_1_3_2",
+            "dl_table_26_1_3_3",
+            "dl_table_26_1_3_4",
+            "dl_table_26_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_78_2_2_1",
+          "ground_truth": [
+            "dl_table_78_2_2_1_1",
+            "dl_table_78_2_2_1_2",
+            "dl_table_78_2_2_1_3",
+            "dl_table_78_2_2_1_4",
+            "dl_table_78_2_2_1_5"
+          ]
+        }
+      ]
+    },
+    "union_L1+L2+L3": {
+      "results": [
+        {
+          "query_table": "q_table_145_3_4_1",
+          "predictions": [
+            "dl_table_145_3_4_1",
+            "dl_table_145_3_4_2"
+          ]
+        },
+        {
+          "query_table": "q_table_145_3_4_2",
+          "predictions": [
+            "q_table_145_3_6_2",
+            "dl_table_145_1_3_1",
+            "dl_table_145_1_3_4",
+            "q_table_145_1_3",
+            "dl_table_145_1_3_3"
+          ]
+        }
+      ],
+      "elapsed_time": 0.09378266334533691,
+      "task": "union",
+      "layer": "L1+L2+L3",
+      "ground_truth": [
+        {
+          "query_table": "q_table_145_3_4_1",
+          "ground_truth": [
+            "dl_table_145_3_4_1"
+          ]
+        },
+        {
+          "query_table": "q_table_145_3_4_2",
+          "ground_truth": [
+            "dl_table_145_3_4_2"
+          ]
+        },
+        {
+          "query_table": "q_table_145_1_3",
+          "ground_truth": [
+            "dl_table_145_1_3_1",
+            "dl_table_145_1_3_2",
+            "dl_table_145_1_3_3",
+            "dl_table_145_1_3_4",
+            "dl_table_145_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_145_3_6_1",
+          "ground_truth": [
+            "dl_table_145_3_6_1"
+          ]
+        },
+        {
+          "query_table": "q_table_145_3_6_2",
+          "ground_truth": [
+            "dl_table_145_3_6_2"
+          ]
+        },
+        {
+          "query_table": "q_table_155_3_4_1",
+          "ground_truth": [
+            "dl_table_155_3_4_1"
+          ]
+        },
+        {
+          "query_table": "q_table_155_1_1",
+          "ground_truth": [
+            "dl_table_155_1_1_1",
+            "dl_table_155_1_1_2",
+            "dl_table_155_1_1_3",
+            "dl_table_155_1_1_4",
+            "dl_table_155_1_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_38_4_1",
+          "ground_truth": [
+            "dl_table_38_4_1_1_cv_1_3_1",
+            "dl_table_38_4_1_1_cv_1_3_2",
+            "dl_table_38_4_1_1_cv_1_3_3",
+            "dl_table_38_4_1_1_cv_1_3_4",
+            "dl_table_38_4_1_1_cv_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_38_1_2",
+          "ground_truth": [
+            "dl_table_38_1_2_1",
+            "dl_table_38_1_2_2",
+            "dl_table_38_1_2_3",
+            "dl_table_38_1_2_4",
+            "dl_table_38_1_2_5"
+          ]
+        },
+        {
+          "query_table": "q_table_72_3_4_1",
+          "ground_truth": [
+            "dl_table_72_3_4_1"
+          ]
+        },
+        {
+          "query_table": "q_table_72_1_1",
+          "ground_truth": [
+            "dl_table_72_1_1_1",
+            "dl_table_72_1_1_2",
+            "dl_table_72_1_1_3",
+            "dl_table_72_1_1_4",
+            "dl_table_72_1_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_139_3_4_1",
+          "ground_truth": [
+            "dl_table_139_3_4_1"
+          ]
+        },
+        {
+          "query_table": "q_table_139_1_1",
+          "ground_truth": [
+            "dl_table_139_1_1_1",
+            "dl_table_139_1_1_2",
+            "dl_table_139_1_1_3",
+            "dl_table_139_1_1_4",
+            "dl_table_139_1_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_1_2_3_1",
+          "ground_truth": [
+            "dl_table_1_2_3_1_1",
+            "dl_table_1_2_3_1_2",
+            "dl_table_1_2_3_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_1_2_3_2",
+          "ground_truth": [
+            "dl_table_1_2_3_2_1",
+            "dl_table_1_2_3_2_2",
+            "dl_table_1_2_3_2_3"
+          ]
+        },
+        {
+          "query_table": "q_table_1_2_3_3",
+          "ground_truth": [
+            "dl_table_1_2_3_3_1",
+            "dl_table_1_2_3_3_2",
+            "dl_table_1_2_3_3_3"
+          ]
+        },
+        {
+          "query_table": "q_table_1_2_3_4",
+          "ground_truth": [
+            "dl_table_1_2_3_4_1",
+            "dl_table_1_2_3_4_2",
+            "dl_table_1_2_3_4_3"
+          ]
+        },
+        {
+          "query_table": "q_table_1_2_3_5",
+          "ground_truth": [
+            "dl_table_1_2_3_5_1",
+            "dl_table_1_2_3_5_2",
+            "dl_table_1_2_3_5_3"
+          ]
+        },
+        {
+          "query_table": "q_table_1_2_3_6",
+          "ground_truth": [
+            "dl_table_1_2_3_6_1",
+            "dl_table_1_2_3_6_2",
+            "dl_table_1_2_3_6_3"
+          ]
+        },
+        {
+          "query_table": "q_table_1_2_3_7",
+          "ground_truth": [
+            "dl_table_1_2_3_7_1",
+            "dl_table_1_2_3_7_2",
+            "dl_table_1_2_3_7_3"
+          ]
+        },
+        {
+          "query_table": "q_table_1_3_6_1",
+          "ground_truth": [
+            "dl_table_1_3_6_1"
+          ]
+        },
+        {
+          "query_table": "q_table_1_3_6_2",
+          "ground_truth": [
+            "dl_table_1_3_6_2"
+          ]
+        },
+        {
+          "query_table": "q_table_1_3_6_3",
+          "ground_truth": [
+            "dl_table_1_3_6_3"
+          ]
+        },
+        {
+          "query_table": "q_table_1_3_6_4",
+          "ground_truth": [
+            "dl_table_1_3_6_4"
+          ]
+        },
+        {
+          "query_table": "q_table_1_3_6_5",
+          "ground_truth": [
+            "dl_table_1_3_6_5"
+          ]
+        },
+        {
+          "query_table": "q_table_1_3_6_6",
+          "ground_truth": [
+            "dl_table_1_3_6_6"
+          ]
+        },
+        {
+          "query_table": "q_table_1_3_6_7",
+          "ground_truth": [
+            "dl_table_1_3_6_7"
+          ]
+        },
+        {
+          "query_table": "q_table_35_2_3_1",
+          "ground_truth": [
+            "dl_table_35_2_3_1_1",
+            "dl_table_35_2_3_1_2",
+            "dl_table_35_2_3_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_27_3_4_1",
+          "ground_truth": [
+            "dl_table_27_3_4_1"
+          ]
+        },
+        {
+          "query_table": "q_table_27_3_4_2",
+          "ground_truth": [
+            "dl_table_27_3_4_2"
+          ]
+        },
+        {
+          "query_table": "q_table_27_1_3",
+          "ground_truth": [
+            "dl_table_27_1_3_1",
+            "dl_table_27_1_3_2",
+            "dl_table_27_1_3_3",
+            "dl_table_27_1_3_4",
+            "dl_table_27_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_125_2_1_1",
+          "ground_truth": [
+            "dl_table_125_2_1_1_1",
+            "dl_table_125_2_1_1_2",
+            "dl_table_125_2_1_1_3",
+            "dl_table_125_2_1_1_4",
+            "dl_table_125_2_1_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_125_3_1_1",
+          "ground_truth": [
+            "dl_table_125_3_1_1"
+          ]
+        },
+        {
+          "query_table": "q_table_125_1_2",
+          "ground_truth": [
+            "dl_table_125_1_2_1",
+            "dl_table_125_1_2_2",
+            "dl_table_125_1_2_3",
+            "dl_table_125_1_2_4",
+            "dl_table_125_1_2_5"
+          ]
+        },
+        {
+          "query_table": "q_table_23_1_3",
+          "ground_truth": [
+            "dl_table_23_1_3_1",
+            "dl_table_23_1_3_2",
+            "dl_table_23_1_3_3",
+            "dl_table_23_1_3_4",
+            "dl_table_23_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_23_1_2",
+          "ground_truth": [
+            "dl_table_23_1_2_1",
+            "dl_table_23_1_2_2",
+            "dl_table_23_1_2_3",
+            "dl_table_23_1_2_4",
+            "dl_table_23_1_2_5"
+          ]
+        },
+        {
+          "query_table": "q_table_104_3_3_1",
+          "ground_truth": [
+            "dl_table_104_3_3_1"
+          ]
+        },
+        {
+          "query_table": "q_table_104_2_3_1",
+          "ground_truth": [
+            "dl_table_104_2_3_1_1",
+            "dl_table_104_2_3_1_2",
+            "dl_table_104_2_3_1_3",
+            "dl_table_104_4_1_1_cv_1_3_1",
+            "dl_table_104_4_1_1_cv_1_3_2",
+            "dl_table_104_4_1_1_cv_1_3_3",
+            "dl_table_104_4_1_1_cv_1_3_4",
+            "dl_table_104_4_1_1_cv_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_104_1_2",
+          "ground_truth": [
+            "dl_table_104_1_2_1",
+            "dl_table_104_1_2_2",
+            "dl_table_104_1_2_3",
+            "dl_table_104_1_2_4",
+            "dl_table_104_1_2_5"
+          ]
+        },
+        {
+          "query_table": "q_table_28_2_2_1",
+          "ground_truth": [
+            "dl_table_28_2_2_1_1",
+            "dl_table_28_2_2_1_2",
+            "dl_table_28_2_2_1_3",
+            "dl_table_28_2_2_1_4",
+            "dl_table_28_2_2_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_54_2_2_1",
+          "ground_truth": [
+            "dl_table_54_2_2_1_1",
+            "dl_table_54_2_2_1_2",
+            "dl_table_54_2_2_1_3",
+            "dl_table_54_2_2_1_4",
+            "dl_table_54_2_2_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_62_2_2_1",
+          "ground_truth": [
+            "dl_table_62_2_2_1_1",
+            "dl_table_62_2_2_1_2",
+            "dl_table_62_2_2_1_3",
+            "dl_table_62_2_2_1_4",
+            "dl_table_62_2_2_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_62_3_2_1",
+          "ground_truth": [
+            "dl_table_62_3_2_1"
+          ]
+        },
+        {
+          "query_table": "q_table_62_3_2_2",
+          "ground_truth": [
+            "dl_table_62_3_2_2"
+          ]
+        },
+        {
+          "query_table": "q_table_62_3_2_3",
+          "ground_truth": [
+            "dl_table_62_3_2_3"
+          ]
+        },
+        {
+          "query_table": "q_table_62_3_2_4",
+          "ground_truth": [
+            "dl_table_62_3_2_4"
+          ]
+        },
+        {
+          "query_table": "q_table_62_3_2_5",
+          "ground_truth": [
+            "dl_table_62_3_2_5"
+          ]
+        },
+        {
+          "query_table": "q_table_62_3_2_6",
+          "ground_truth": [
+            "dl_table_62_3_2_6"
+          ]
+        },
+        {
+          "query_table": "q_table_24_1_3",
+          "ground_truth": [
+            "dl_table_24_1_3_1",
+            "dl_table_24_1_3_2",
+            "dl_table_24_1_3_3",
+            "dl_table_24_1_3_4",
+            "dl_table_24_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_64_2_2_1",
+          "ground_truth": [
+            "dl_table_64_2_2_1_1",
+            "dl_table_64_2_2_1_2",
+            "dl_table_64_2_2_1_3",
+            "dl_table_64_2_2_1_4",
+            "dl_table_64_2_2_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_66_3_4_1",
+          "ground_truth": [
+            "dl_table_66_3_4_1"
+          ]
+        },
+        {
+          "query_table": "q_table_66_1_3",
+          "ground_truth": [
+            "dl_table_66_1_3_1",
+            "dl_table_66_1_3_2",
+            "dl_table_66_1_3_3",
+            "dl_table_66_1_3_4",
+            "dl_table_66_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_46_2_2_1",
+          "ground_truth": [
+            "dl_table_46_2_2_1_1",
+            "dl_table_46_2_2_1_2",
+            "dl_table_46_2_2_1_3",
+            "dl_table_46_2_2_1_4",
+            "dl_table_46_2_2_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_25_4_1",
+          "ground_truth": [
+            "dl_table_25_4_1_1_cv_1_3_1",
+            "dl_table_25_4_1_1_cv_1_3_2",
+            "dl_table_25_4_1_1_cv_1_3_3",
+            "dl_table_25_4_1_1_cv_1_3_4",
+            "dl_table_25_4_1_1_cv_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_25_1_2",
+          "ground_truth": [
+            "dl_table_25_1_2_1",
+            "dl_table_25_1_2_2",
+            "dl_table_25_1_2_3",
+            "dl_table_25_1_2_4",
+            "dl_table_25_1_2_5"
+          ]
+        },
+        {
+          "query_table": "q_table_79_3_4_1",
+          "ground_truth": [
+            "dl_table_79_3_4_1"
+          ]
+        },
+        {
+          "query_table": "q_table_79_1_3",
+          "ground_truth": [
+            "dl_table_79_1_3_1",
+            "dl_table_79_1_3_2",
+            "dl_table_79_1_3_3",
+            "dl_table_79_1_3_4",
+            "dl_table_79_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_36_2_2_1",
+          "ground_truth": [
+            "dl_table_36_2_2_1_1",
+            "dl_table_36_2_2_1_2",
+            "dl_table_36_2_2_1_3",
+            "dl_table_36_2_2_1_4",
+            "dl_table_36_2_2_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_103_3_4_1",
+          "ground_truth": [
+            "dl_table_103_3_4_1"
+          ]
+        },
+        {
+          "query_table": "q_table_103_3_4_2",
+          "ground_truth": [
+            "dl_table_103_3_4_2"
+          ]
+        },
+        {
+          "query_table": "q_table_103_3_4_3",
+          "ground_truth": [
+            "dl_table_103_3_4_3"
+          ]
+        },
+        {
+          "query_table": "q_table_103_1_3",
+          "ground_truth": [
+            "dl_table_103_1_3_1",
+            "dl_table_103_1_3_2",
+            "dl_table_103_1_3_3",
+            "dl_table_103_1_3_4",
+            "dl_table_103_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_103_3_1_1",
+          "ground_truth": [
+            "dl_table_103_3_1_1"
+          ]
+        },
+        {
+          "query_table": "q_table_103_3_1_2",
+          "ground_truth": [
+            "dl_table_103_3_1_2"
+          ]
+        },
+        {
+          "query_table": "q_table_103_3_1_3",
+          "ground_truth": [
+            "dl_table_103_3_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_149_4_3_1",
+          "ground_truth": [
+            "dl_table_149_4_3_1_1_cate_2_1_1_1",
+            "dl_table_149_4_3_1_1_cate_2_1_1_2",
+            "dl_table_149_4_3_1_1_cate_2_1_1_3",
+            "dl_table_149_4_3_1_1_cate_2_1_1_4",
+            "dl_table_149_4_3_1_1_cate_2_1_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_140_4_3_1",
+          "ground_truth": [
+            "dl_table_140_4_3_1_1_cate_2_1_1_1",
+            "dl_table_140_4_3_1_1_cate_2_1_1_2",
+            "dl_table_140_4_3_1_1_cate_2_1_1_3",
+            "dl_table_140_4_3_1_1_cate_2_1_1_4",
+            "dl_table_140_4_3_1_1_cate_2_1_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_45_2_2_1",
+          "ground_truth": [
+            "dl_table_45_2_2_1_1",
+            "dl_table_45_2_2_1_2",
+            "dl_table_45_2_2_1_3",
+            "dl_table_45_2_2_1_4",
+            "dl_table_45_2_2_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_111_1_3",
+          "ground_truth": [
+            "dl_table_111_1_3_1",
+            "dl_table_111_1_3_2",
+            "dl_table_111_1_3_3",
+            "dl_table_111_1_3_4",
+            "dl_table_111_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_74_2_2_1",
+          "ground_truth": [
+            "dl_table_74_2_2_1_1",
+            "dl_table_74_2_2_1_2",
+            "dl_table_74_2_2_1_3",
+            "dl_table_74_2_2_1_4",
+            "dl_table_74_2_2_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_74_2_3_1",
+          "ground_truth": [
+            "dl_table_74_2_3_1_1",
+            "dl_table_74_2_3_1_2",
+            "dl_table_74_2_3_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_74_3_6_1",
+          "ground_truth": [
+            "dl_table_74_3_6_1"
+          ]
+        },
+        {
+          "query_table": "q_table_11_1_3",
+          "ground_truth": [
+            "dl_table_11_1_3_1",
+            "dl_table_11_1_3_2",
+            "dl_table_11_1_3_3",
+            "dl_table_11_1_3_4",
+            "dl_table_11_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_109_1_3",
+          "ground_truth": [
+            "dl_table_109_1_3_1",
+            "dl_table_109_1_3_2",
+            "dl_table_109_1_3_3",
+            "dl_table_109_1_3_4",
+            "dl_table_109_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_109_3_6_1",
+          "ground_truth": [
+            "dl_table_109_3_6_1"
+          ]
+        },
+        {
+          "query_table": "q_table_109_3_6_2",
+          "ground_truth": [
+            "dl_table_109_3_6_2"
+          ]
+        },
+        {
+          "query_table": "q_table_109_2_3_1",
+          "ground_truth": [
+            "dl_table_109_2_3_1_1",
+            "dl_table_109_2_3_1_2",
+            "dl_table_109_2_3_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_109_2_3_2",
+          "ground_truth": [
+            "dl_table_109_2_3_2_1",
+            "dl_table_109_2_3_2_2",
+            "dl_table_109_2_3_2_3"
+          ]
+        },
+        {
+          "query_table": "q_table_109_1_2",
+          "ground_truth": [
+            "dl_table_109_1_2_1",
+            "dl_table_109_1_2_2",
+            "dl_table_109_1_2_3",
+            "dl_table_109_1_2_4",
+            "dl_table_109_1_2_5"
+          ]
+        },
+        {
+          "query_table": "q_table_109_3_3_1",
+          "ground_truth": [
+            "dl_table_109_3_3_1"
+          ]
+        },
+        {
+          "query_table": "q_table_109_3_3_2",
+          "ground_truth": [
+            "dl_table_109_3_3_2"
+          ]
+        },
+        {
+          "query_table": "q_table_20_2_2_1",
+          "ground_truth": [
+            "dl_table_20_2_2_1_1",
+            "dl_table_20_2_2_1_2",
+            "dl_table_20_2_2_1_3",
+            "dl_table_20_2_2_1_4",
+            "dl_table_20_2_2_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_141_4_2_1",
+          "ground_truth": [
+            "dl_table_141_4_2_1_1_cate_2_1_1_1",
+            "dl_table_141_4_2_1_1_cate_2_1_1_2",
+            "dl_table_141_4_2_1_1_cate_2_1_1_3",
+            "dl_table_141_4_2_1_1_cate_2_1_1_4",
+            "dl_table_141_4_2_1_1_cate_2_1_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_141_1_3",
+          "ground_truth": [
+            "dl_table_141_1_3_1",
+            "dl_table_141_1_3_2",
+            "dl_table_141_1_3_3",
+            "dl_table_141_1_3_4",
+            "dl_table_141_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_99_2_1_1",
+          "ground_truth": [
+            "dl_table_99_2_1_1_1",
+            "dl_table_99_2_1_1_2",
+            "dl_table_99_2_1_1_3",
+            "dl_table_99_2_1_1_4",
+            "dl_table_99_2_1_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_116_2_3_1",
+          "ground_truth": [
+            "dl_table_116_2_3_1_1",
+            "dl_table_116_2_3_1_2",
+            "dl_table_116_2_3_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_155_2_1_1",
+          "ground_truth": [
+            "dl_table_155_2_1_1_1",
+            "dl_table_155_2_1_1_2",
+            "dl_table_155_2_1_1_3",
+            "dl_table_155_2_1_1_4",
+            "dl_table_155_2_1_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_21_1_3",
+          "ground_truth": [
+            "dl_table_21_1_3_1",
+            "dl_table_21_1_3_2",
+            "dl_table_21_1_3_3",
+            "dl_table_21_1_3_4",
+            "dl_table_21_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_152_3_5_1",
+          "ground_truth": [
+            "dl_table_152_3_5_1"
+          ]
+        },
+        {
+          "query_table": "q_table_152_1_3",
+          "ground_truth": [
+            "dl_table_152_1_3_1",
+            "dl_table_152_1_3_2",
+            "dl_table_152_1_3_3",
+            "dl_table_152_1_3_4",
+            "dl_table_152_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_152_3_6_1",
+          "ground_truth": [
+            "dl_table_152_3_6_1"
+          ]
+        },
+        {
+          "query_table": "q_table_152_3_1_1",
+          "ground_truth": [
+            "dl_table_152_3_1_1"
+          ]
+        },
+        {
+          "query_table": "q_table_152_1_2",
+          "ground_truth": [
+            "dl_table_152_1_2_1",
+            "dl_table_152_1_2_2",
+            "dl_table_152_1_2_3",
+            "dl_table_152_1_2_4",
+            "dl_table_152_1_2_5"
+          ]
+        },
+        {
+          "query_table": "q_table_96_4_2_1",
+          "ground_truth": [
+            "dl_table_96_4_2_1_1_cate_2_1_1_1",
+            "dl_table_96_4_2_1_1_cate_2_1_1_2",
+            "dl_table_96_4_2_1_1_cate_2_1_1_3",
+            "dl_table_96_4_2_1_1_cate_2_1_1_4",
+            "dl_table_96_4_2_1_1_cate_2_1_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_96_1_3",
+          "ground_truth": [
+            "dl_table_96_1_3_1",
+            "dl_table_96_1_3_2",
+            "dl_table_96_1_3_3",
+            "dl_table_96_1_3_4",
+            "dl_table_96_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_33_3_6_1",
+          "ground_truth": [
+            "dl_table_33_3_6_1"
+          ]
+        },
+        {
+          "query_table": "q_table_33_2_3_1",
+          "ground_truth": [
+            "dl_table_33_2_3_1_1",
+            "dl_table_33_2_3_1_2",
+            "dl_table_33_2_3_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_26_1_3",
+          "ground_truth": [
+            "dl_table_26_1_3_1",
+            "dl_table_26_1_3_2",
+            "dl_table_26_1_3_3",
+            "dl_table_26_1_3_4",
+            "dl_table_26_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_78_2_2_1",
+          "ground_truth": [
+            "dl_table_78_2_2_1_1",
+            "dl_table_78_2_2_1_2",
+            "dl_table_78_2_2_1_3",
+            "dl_table_78_2_2_1_4",
+            "dl_table_78_2_2_1_5"
+          ]
+        }
+      ]
+    }
+  },
+  "metrics": {
+    "join_L1": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "precision": 0.6,
+      "recall": 1.0,
+      "f1": 0.7499999999999999
+    },
+    "join_L1+L2": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "precision": 0.6,
+      "recall": 1.0,
+      "f1": 0.7499999999999999
+    },
+    "join_L1+L2+L3": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "precision": 0.8333333333333334,
+      "recall": 0.8333333333333334,
+      "f1": 0.8333333333333334
+    },
+    "union_L1": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "hit@5": 0.5,
+      "precision": 0.1,
+      "recall": 0.5,
+      "f1": 0.16666666666666669
+    },
+    "union_L1+L2": {
+      "hit@1": 0.5,
+      "hit@3": 0.5,
+      "hit@5": 0.5,
+      "precision": 0.1,
+      "recall": 0.5,
+      "f1": 0.16666666666666669
+    },
+    "union_L1+L2+L3": {
+      "hit@1": 0.5,
+      "hit@3": 0.5,
+      "hit@5": 0.5,
+      "precision": 0.14285714285714285,
+      "recall": 0.5,
+      "f1": 0.22222222222222224
+    }
+  }
+}

@@ -49,6 +49,13 @@ class SearcherAgent(BaseAgent):
         Returns:
             Updated state with candidate tables
         """
+        # Check if this is an NLCTables query
+        query_type = state.get('query_type', 'webtables')
+        
+        if query_type == 'nlctables':
+            return self._process_nlctables(state)
+        
+        # Original WebTables processing
         self.logger.info("Starting multi-layer candidate search")
         
         # Get required inputs
@@ -229,3 +236,161 @@ class SearcherAgent(BaseAgent):
             state['all_tables'] = []
         
         return True
+    
+    def _process_nlctables(self, state: WorkflowState) -> WorkflowState:
+        """
+        Process NLCTables queries with semantic search
+        
+        Args:
+            state: Current workflow state
+            
+        Returns:
+            Updated state with semantically matched candidates
+        """
+        self.logger.info("Starting semantic search for NLCTables query")
+        
+        # Get required inputs
+        query_text = state.get('query_text', '')
+        nl_features = state.get('nl_features', {})
+        all_tables = state.get('all_tables', [])
+        strategy = state.get('strategy')
+        analysis = state.get('analysis')
+        
+        if not query_text and not nl_features:
+            self.logger.error("No NL query information found")
+            return state
+        
+        # Initialize candidates list
+        candidates = []
+        candidate_scores = {}
+        
+        # For NLCTables, prioritize semantic search
+        self.logger.info("Performing semantic search for NL query")
+        
+        # Layer 1: Keyword-based metadata filtering (if keywords available)
+        keywords = nl_features.get('keywords', [])
+        column_mentions = nl_features.get('column_mentions', [])
+        
+        if keywords or column_mentions:
+            self.logger.info(f"Layer 1: Keyword/column filtering with {len(keywords)} keywords, {len(column_mentions)} columns")
+            
+            # Filter tables that contain mentioned columns or keywords
+            for table in all_tables:
+                table_name = table.get('table_name', '')
+                columns = table.get('columns', [])
+                column_names = [col.get('column_name', col.get('name', '')).lower() for col in columns]
+                
+                score = 0.0
+                
+                # Check column mentions
+                for col_mention in column_mentions:
+                    if any(col_mention.lower() in col_name for col_name in column_names):
+                        score += 0.5
+                
+                # Check keywords in table name and columns
+                for keyword in keywords:
+                    keyword_lower = keyword.lower()
+                    if keyword_lower in table_name.lower():
+                        score += 0.3
+                    if any(keyword_lower in col_name for col_name in column_names):
+                        score += 0.2
+                
+                if score > 0:
+                    candidate_scores[table_name] = {'keyword': score, 'semantic': 0}
+            
+            self.logger.info(f"  - Found {len(candidate_scores)} candidates from keyword matching")
+        
+        # Layer 2: Semantic vector search
+        self.logger.info("Layer 2: Semantic similarity search")
+        
+        # Create a pseudo query table from NL features for vector search
+        pseudo_query = {
+            'table_name': query_text[:50],  # Use first 50 chars as table name
+            'columns': []
+        }
+        
+        # Add mentioned columns to pseudo query
+        for col in column_mentions:
+            pseudo_query['columns'].append({
+                'column_name': col,
+                'data_type': 'text',  # Default type for NL queries
+                'sample_values': keywords[:3]  # Use keywords as sample values
+            })
+        
+        # If no columns mentioned, create columns from keywords
+        if not pseudo_query['columns'] and keywords:
+            for keyword in keywords[:5]:  # Limit to 5 keywords
+                pseudo_query['columns'].append({
+                    'column_name': keyword,
+                    'data_type': 'text',
+                    'sample_values': [keyword]
+                })
+        
+        # Perform vector search with pseudo query
+        try:
+            vector_candidates = self.vector_search.search(
+                pseudo_query,
+                all_tables,
+                top_k=strategy.top_k if strategy else 150  # More candidates for semantic search
+            )
+            
+            for table_name, score in vector_candidates:
+                if table_name not in candidate_scores:
+                    candidate_scores[table_name] = {'keyword': 0, 'semantic': 0}
+                candidate_scores[table_name]['semantic'] = score
+            
+            self.logger.info(f"  - Found {len(vector_candidates)} candidates from semantic search")
+        except Exception as e:
+            self.logger.error(f"Semantic vector search failed: {e}")
+        
+        # Combine and rank candidates with semantic weighting
+        self.logger.info("Combining semantic search results")
+        
+        for table_name, scores in candidate_scores.items():
+            # For NLCTables, weight semantic similarity higher
+            keyword_weight = 0.3
+            semantic_weight = 0.7
+            
+            combined_score = (
+                scores['keyword'] * keyword_weight + 
+                scores['semantic'] * semantic_weight
+            )
+            
+            # Create candidate
+            candidate = CandidateTable(
+                table_name=table_name,
+                score=combined_score,
+                source='semantic_search',
+                evidence={
+                    'keyword_score': scores['keyword'],
+                    'semantic_score': scores['semantic'],
+                    'query_text': query_text[:100]
+                }
+            )
+            candidates.append(candidate)
+        
+        # Sort by score
+        candidates.sort(key=lambda x: x.score, reverse=True)
+        
+        # Apply top-k limit
+        if strategy and strategy.top_k:
+            candidates = candidates[:strategy.top_k]
+        else:
+            candidates = candidates[:150]  # Default higher limit for NL queries
+        
+        self.logger.info(f"Final NL candidate list: {len(candidates)} tables")
+        if candidates:
+            self.logger.info(f"  - Top candidate: {candidates[0].table_name} (score: {candidates[0].score:.3f})")
+            # Log top 5 for debugging
+            for i, cand in enumerate(candidates[:5]):
+                self.logger.debug(f"    {i+1}. {cand.table_name}: {cand.score:.3f}")
+        
+        # Update state
+        state['candidates'] = candidates
+        state['semantic_search'] = True  # Flag to indicate semantic search was used
+        
+        # Update metrics
+        if state.get('metrics'):
+            state['metrics'].candidates_generated = len(candidates)
+        
+        return state

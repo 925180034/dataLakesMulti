@@ -34,6 +34,13 @@ class AnalyzerAgent(BaseAgent):
         Returns:
             Updated state with table analysis
         """
+        # Check if this is an NLCTables query
+        query_type = state.get('query_type', 'webtables')
+        
+        if query_type == 'nlctables':
+            return self._process_nlctables(state)
+        
+        # Original WebTables processing
         self.logger.info("Analyzing query table structure")
         
         # Get query table
@@ -44,6 +51,120 @@ class AnalyzerAgent(BaseAgent):
                 state['errors'] = []
             state['errors'].append("AnalyzerAgent: No query table to analyze")
             return state
+    
+    def _process_nlctables(self, state: WorkflowState) -> WorkflowState:
+        """
+        Process NLCTables queries with natural language understanding
+        
+        Args:
+            state: Current workflow state
+            
+        Returns:
+            Updated state with NL analysis
+        """
+        self.logger.info("Analyzing NLCTables natural language query")
+        
+        # Get NL features from state
+        query_text = state.get('query_text', '')
+        nl_features = state.get('nl_features', {})
+        
+        # Initialize NL-specific analysis
+        analysis = TableAnalysis(
+            column_count=0,
+            column_types={},
+            key_columns=[],
+            table_type='nl_query',
+            column_names=[],
+            patterns={}
+        )
+        
+        # Extract keywords and topics
+        keywords = nl_features.get('keywords', [])
+        topics = nl_features.get('topics', [])
+        column_mentions = nl_features.get('column_mentions', [])
+        
+        # Store NL-specific patterns
+        analysis.patterns = {
+            'query_text': query_text,
+            'keywords': keywords,
+            'topics': topics,
+            'column_mentions': column_mentions,
+            'semantic_intent': 'natural_language_search'
+        }
+        
+        # Use LLM to understand the query intent if available
+        if self.use_llm:
+            llm_analysis = self._get_nl_llm_analysis(query_text, nl_features)
+            if llm_analysis:
+                analysis.patterns.update({
+                    'intent': llm_analysis.get('intent', 'unknown'),
+                    'required_columns': llm_analysis.get('required_columns', []),
+                    'data_domain': llm_analysis.get('data_domain', 'unknown'),
+                    'semantic_requirements': llm_analysis.get('requirements', [])
+                })
+                
+                self.logger.info(f"NL LLM Analysis:")
+                self.logger.info(f"  Intent: {llm_analysis.get('intent')}")
+                self.logger.info(f"  Domain: {llm_analysis.get('data_domain')}")
+                self.logger.info(f"  Requirements: {llm_analysis.get('requirements')}")
+        
+        # Identify mentioned columns as key columns
+        if column_mentions:
+            analysis.key_columns = column_mentions
+            analysis.column_names = column_mentions
+            analysis.column_count = len(column_mentions)
+            self.logger.info(f"Identified mentioned columns: {column_mentions}")
+        
+        # Log NL analysis results
+        self.logger.info(f"NL query analysis complete:")
+        self.logger.info(f"  - Query: {query_text[:100]}..." if len(query_text) > 100 else f"  - Query: {query_text}")
+        self.logger.info(f"  - Keywords: {keywords}")
+        self.logger.info(f"  - Topics: {topics}")
+        self.logger.info(f"  - Column mentions: {column_mentions}")
+        
+        # Update state
+        state['analysis'] = analysis
+        state['nl_analysis'] = True  # Flag to indicate NL analysis was performed
+        
+        return state
+    
+    def _get_nl_llm_analysis(self, query_text: str, nl_features: Dict[str, Any]) -> dict:
+        """
+        Use LLM to analyze natural language query intent
+        """
+        # Format prompt for NL understanding
+        prompt = f"""
+        Analyze this natural language query about tables:
+        
+        Query: {query_text}
+        Keywords: {nl_features.get('keywords', [])}
+        Topics: {nl_features.get('topics', [])}
+        Column Mentions: {nl_features.get('column_mentions', [])}
+        
+        Provide analysis in JSON format:
+        {{
+            "intent": "what the user is looking for",
+            "data_domain": "the domain of data (e.g., financial, customer, product)",
+            "required_columns": ["list of columns that would be needed"],
+            "requirements": ["specific requirements or conditions"]
+        }}
+        """
+        
+        try:
+            # Handle async call
+            try:
+                loop = asyncio.get_running_loop()
+                import concurrent.futures
+                with concurrent.futures.ThreadPoolExecutor() as executor:
+                    future = executor.submit(asyncio.run, self.call_llm_json(prompt, self.system_prompt))
+                    response = future.result(timeout=10)
+            except RuntimeError:
+                response = asyncio.run(self.call_llm_json(prompt, self.system_prompt))
+            
+            return response
+        except Exception as e:
+            self.logger.warning(f"NL LLM analysis failed: {e}")
+            return {}
         
         # Try LLM-based analysis first
         llm_analysis = self._get_llm_analysis(query_table)

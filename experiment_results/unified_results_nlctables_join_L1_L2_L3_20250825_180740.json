@@ -1,0 +1,50 @@
+{
+  "dataset": "nlctables",
+  "dataset_type": "subset",
+  "task": "join",
+  "layer": "L1+L2+L3",
+  "workers": 4,
+  "max_queries": 3,
+  "challenging": true,
+  "experiments": {
+    "join_L1+L2+L3": {
+      "results": [
+        {
+          "query_table": "q_table_118_j1_3",
+          "predictions": [
+            "dl_table_118_j1_3_3",
+            "dl_table_118_j1_3_1"
+          ]
+        },
+        {
+          "query_table": "q_table_16_j2_1",
+          "predictions": [
+            "dl_table_16_j2_1_3",
+            "dl_table_16_j2_1_1",
+            "dl_table_16_j2_1_2",
+            "q_table_67_j1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_60_j3_2",
+          "predictions": [
+            "dl_table_60_j3_2"
+          ]
+        }
+      ],
+      "elapsed_time": 0.03192138671875,
+      "task": "join",
+      "layer": "L1+L2+L3"
+    }
+  },
+  "metrics": {
+    "join_L1+L2+L3": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "precision": 0.8571428571428571,
+      "recall": 0.8571428571428571,
+      "f1": 0.8571428571428571
+    }
+  }
+}

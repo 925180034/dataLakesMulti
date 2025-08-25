@@ -8,13 +8,16 @@ import time
 
 @dataclass
 class QueryTask:
-    """Query task definition"""
-    query: str
-    task_type: str  # 'join' or 'union'
-    table_name: str = ""
+    """Query task definition - supports both WebTables and NLCTables"""
+    query: str = ""  # General query field
+    task_type: str = "join"  # 'join' or 'union'
+    table_name: str = ""  # For WebTables
     query_id: Optional[str] = None
     ground_truth: List[str] = field(default_factory=list)
     timestamp: float = field(default_factory=time.time)
+    # NLCTables specific fields
+    query_text: Optional[str] = None  # Natural language query
+    features: Optional[Dict[str, Any]] = None  # NL features (keywords, topics, etc.)
 
 
 @dataclass

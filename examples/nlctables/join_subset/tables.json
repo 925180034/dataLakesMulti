@@ -149,22 +149,22 @@
         "name": "Estimated Annual Value",
         "type": "string",
         "sample_values": [
-          "Â£12,990.00",
-          "Â£1,100,000.00",
+          "\u00c2\u00a312,990.00",
+          "\u00c2\u00a31,100,000.00",
           "Included above",
           "Included above",
-          "Â£600,000.00"
+          "\u00c2\u00a3600,000.00"
         ]
       },
       {
         "name": "Estimated Total Value",
         "type": "string",
         "sample_values": [
-          "Â£45,000.00",
-          "Â£4,400,000.00",
+          "\u00c2\u00a345,000.00",
+          "\u00c2\u00a34,400,000.00",
           "Included above",
           "Included above",
-          "Â£1,800,000.00"
+          "\u00c2\u00a31,800,000.00"
         ]
       },
       {
@@ -756,7 +756,7 @@
         "sample_values": [
           "Moorhouse",
           "Wingate",
-          "Szász",
+          "Sz\u00e1sz",
           "Glodava",
           "Guynan"
         ]
@@ -1928,14 +1928,14 @@
         "sample_values": []
       },
       {
-        "name": "Total cost, including all visas, accommodation, travel, meals etc. (£)",
+        "name": "Total cost, including all visas, accommodation, travel, meals etc. (\u00a3)",
         "type": "numeric",
         "sample_values": [
-          " £302.69 ",
-          " £73.72 ",
-          " £449.32 ",
-          " £503.67 ",
-          " £195.50 "
+          " \u00a3302.69 ",
+          " \u00a373.72 ",
+          " \u00a3449.32 ",
+          " \u00a3503.67 ",
+          " \u00a3195.50 "
         ]
       },
       {
@@ -1972,14 +1972,14 @@
         ]
       },
       {
-        "name": "Accommodation/Meals (£)",
+        "name": "Accommodation/Meals (\u00a3)",
         "type": "string",
         "sample_values": [
-          " £3.69 ",
-          " £29.70 ",
-          " £150.32 ",
-          " £204.67 ",
-          " £24.50 "
+          " \u00a33.69 ",
+          " \u00a329.70 ",
+          " \u00a3150.32 ",
+          " \u00a3204.67 ",
+          " \u00a324.50 "
         ]
       },
       {
@@ -2048,23 +2048,23 @@
         "sample_values": []
       },
       {
-        "name": "Total cost, including all visas, accommodation, travel, meals etc. (£)",
+        "name": "Total cost, including all visas, accommodation, travel, meals etc. (\u00a3)",
         "type": "string",
         "sample_values": [
-          " £604.64 ",
-          " £786.87 ",
-          " £152.63 ",
-          " £343.50 ",
-          " £40.75 "
+          " \u00a3604.64 ",
+          " \u00a3786.87 ",
+          " \u00a3152.63 ",
+          " \u00a3343.50 ",
+          " \u00a340.75 "
         ]
       },
       {
-        "name": "Accommodation/Meals (£)",
+        "name": "Accommodation/Meals (\u00a3)",
         "type": "string",
         "sample_values": [
-          " £305.64 ",
-          " £243.00 ",
-          " £111.18 ",
+          " \u00a3305.64 ",
+          " \u00a3243.00 ",
+          " \u00a3111.18 ",
           " Nil Return ",
           " Nil Return "
         ]
@@ -2157,14 +2157,14 @@
         "sample_values": []
       },
       {
-        "name": "Total cost, including all visas, accommodation, travel, meals etc. (£)",
+        "name": "Total cost, including all visas, accommodation, travel, meals etc. (\u00a3)",
         "type": "numeric",
         "sample_values": [
-          " £302.69 ",
-          " £73.72 ",
-          " £449.32 ",
-          " £503.67 ",
-          " £195.50 "
+          " \u00a3302.69 ",
+          " \u00a373.72 ",
+          " \u00a3449.32 ",
+          " \u00a3503.67 ",
+          " \u00a3195.50 "
         ]
       },
       {
@@ -2228,14 +2228,14 @@
         "sample_values": []
       },
       {
-        "name": "Accommodation/Meals (£)",
+        "name": "Accommodation/Meals (\u00a3)",
         "type": "string",
         "sample_values": [
-          " £3.69 ",
-          " £29.70 ",
-          " £150.32 ",
-          " £204.67 ",
-          " £24.50 "
+          " \u00a33.69 ",
+          " \u00a329.70 ",
+          " \u00a3150.32 ",
+          " \u00a3204.67 ",
+          " \u00a324.50 "
         ]
       }
     ],
@@ -2858,8 +2858,8 @@
         "type": "string",
         "sample_values": [
           "Included above",
-          "Â£158,000.00",
-          "Â£10,837.00",
+          "\u00c2\u00a3158,000.00",
+          "\u00c2\u00a310,837.00",
           "Included above",
           "Included above"
         ]
@@ -2869,8 +2869,8 @@
         "type": "string",
         "sample_values": [
           "Included above",
-          "Â£632,000.00",
-          "Â£32,511.00",
+          "\u00c2\u00a3632,000.00",
+          "\u00c2\u00a332,511.00",
           "Included above",
           "Included above"
         ]
@@ -3068,14 +3068,14 @@
         "sample_values": []
       },
       {
-        "name": "Total cost, including all visas, accommodation, travel, meals etc. (£)",
+        "name": "Total cost, including all visas, accommodation, travel, meals etc. (\u00a3)",
         "type": "numeric",
         "sample_values": [
-          " £302.69 ",
-          " £73.72 ",
-          " £449.32 ",
-          " £503.67 ",
-          " £195.50 "
+          " \u00a3302.69 ",
+          " \u00a373.72 ",
+          " \u00a3449.32 ",
+          " \u00a3503.67 ",
+          " \u00a3195.50 "
         ]
       },
       {
@@ -3128,14 +3128,14 @@
         ]
       },
       {
-        "name": "Accommodation/Meals (£)",
+        "name": "Accommodation/Meals (\u00a3)",
         "type": "string",
         "sample_values": [
-          " £3.69 ",
-          " £29.70 ",
-          " £150.32 ",
-          " £204.67 ",
-          " £24.50 "
+          " \u00a33.69 ",
+          " \u00a329.70 ",
+          " \u00a3150.32 ",
+          " \u00a3204.67 ",
+          " \u00a324.50 "
         ]
       },
       {
@@ -3197,10 +3197,10 @@
         "name": "Estimated Annual Value",
         "type": "string",
         "sample_values": [
-          "Â£105,809.53",
+          "\u00c2\u00a3105,809.53",
           "Included above",
-          "Â£0.00",
-          "Â£932,013.00",
+          "\u00c2\u00a30.00",
+          "\u00c2\u00a3932,013.00",
           "Included above"
         ]
       },
@@ -3208,10 +3208,10 @@
         "name": "Estimated Total Value",
         "type": "string",
         "sample_values": [
-          "Â£423,238.12",
+          "\u00c2\u00a3423,238.12",
           "Included above",
-          "Â£0.00",
-          "Â£5,592,078.00",
+          "\u00c2\u00a30.00",
+          "\u00c2\u00a35,592,078.00",
           "Included above"
         ]
       },
@@ -3451,7 +3451,7 @@
         "type": "string",
         "sample_values": [
           "Included above",
-          "Â£105,809.53",
+          "\u00c2\u00a3105,809.53",
           "Included above",
           "Included above",
           "Included above"
@@ -3462,7 +3462,7 @@
         "type": "string",
         "sample_values": [
           "Included above",
-          "Â£423,238.12",
+          "\u00c2\u00a3423,238.12",
           "Included above",
           "Included above",
           "Included above"
@@ -4163,5 +4163,95 @@
       "second_title": "",
       "has_header": true
     }
+  },
+  {
+    "name": "q_table_67_j1_3",
+    "table_name": "q_table_67_j1_3",
+    "columns": []
+  },
+  {
+    "name": "q_table_16_j2_1",
+    "table_name": "q_table_16_j2_1",
+    "columns": []
+  },
+  {
+    "name": "q_table_39_j2_1",
+    "table_name": "q_table_39_j2_1",
+    "columns": []
+  },
+  {
+    "name": "q_table_12_j2_1",
+    "table_name": "q_table_12_j2_1",
+    "columns": []
+  },
+  {
+    "name": "q_table_6_j2_1",
+    "table_name": "q_table_6_j2_1",
+    "columns": []
+  },
+  {
+    "name": "q_table_50_j1_1",
+    "table_name": "q_table_50_j1_1",
+    "columns": []
+  },
+  {
+    "name": "q_table_68_j2_1",
+    "table_name": "q_table_68_j2_1",
+    "columns": []
+  },
+  {
+    "name": "q_table_37_j3_2",
+    "table_name": "q_table_37_j3_2",
+    "columns": []
+  },
+  {
+    "name": "q_table_142_j1_2",
+    "table_name": "q_table_142_j1_2",
+    "columns": []
+  },
+  {
+    "name": "q_table_155_j1_3",
+    "table_name": "q_table_155_j1_3",
+    "columns": []
+  },
+  {
+    "name": "q_table_110_j3_1",
+    "table_name": "q_table_110_j3_1",
+    "columns": []
+  },
+  {
+    "name": "q_table_118_j1_3",
+    "table_name": "q_table_118_j1_3",
+    "columns": []
+  },
+  {
+    "name": "q_table_13_j3_3",
+    "table_name": "q_table_13_j3_3",
+    "columns": []
+  },
+  {
+    "name": "q_table_24_j3_2",
+    "table_name": "q_table_24_j3_2",
+    "columns": []
+  },
+  {
+    "name": "q_table_110_j1_1",
+    "table_name": "q_table_110_j1_1",
+    "columns": []
+  },
+  {
+    "name": "q_table_60_j3_2",
+    "table_name": "q_table_60_j3_2",
+    "columns": []
+  },
+  {
+    "name": "q_table_100_j3_2",
+    "table_name": "q_table_100_j3_2",
+    "columns": []
+  },
+  {
+    "name": "q_table_13_j3_2",
+    "table_name": "q_table_13_j3_2",
+    "columns": []
   }
 ]

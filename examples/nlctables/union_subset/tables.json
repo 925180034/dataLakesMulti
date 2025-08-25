@@ -2,7 +2,7 @@
   {
     "columns": [
       {
-        "name": "Key-Clé",
+        "name": "Key-Cl\u00e9",
         "type": "numeric",
         "sample_values": [
           "939744",
@@ -72,10 +72,10 @@
         "type": "string",
         "sample_values": [
           "University of Calgary",
-          "Université de Sherbrooke",
+          "Universit\u00e9 de Sherbrooke",
           "University of Alberta",
-          "University of Ottawa/Université d'Ottawa",
-          "Université de Montréal"
+          "University of Ottawa/Universit\u00e9 d'Ottawa",
+          "Universit\u00e9 de Montr\u00e9al"
         ]
       },
       {
@@ -83,10 +83,10 @@
         "type": "string",
         "sample_values": [
           "Alberta",
-          "Québec",
+          "Qu\u00e9bec",
           "Alberta",
           "Ontario",
-          "Québec"
+          "Qu\u00e9bec"
         ]
       },
       {
@@ -94,10 +94,10 @@
         "type": "string",
         "sample_values": [
           "Alberta",
-          "Québec",
+          "Qu\u00e9bec",
           "Alberta",
           "Ontario",
-          "Québec"
+          "Qu\u00e9bec"
         ]
       },
       {
@@ -123,7 +123,7 @@
         ]
       },
       {
-        "name": "FiscalYear-AnnéeFinancière",
+        "name": "FiscalYear-Ann\u00e9eFinanci\u00e8re",
         "type": "numeric",
         "sample_values": [
           "200001",
@@ -406,13 +406,13 @@
         ]
       },
       {
-        "name": "Local Discount (£)",
+        "name": "Local Discount (\u00a3)",
         "type": "string",
         "sample_values": [
-          "£0.00",
-          "£0.00",
-          "£0.00",
-          "£0.00"
+          "\u00a30.00",
+          "\u00a30.00",
+          "\u00a30.00",
+          "\u00a30.00"
         ]
       }
     ],
@@ -556,14 +556,14 @@
         "name": "Is Exported",
         "type": "numeric",
         "sample_values": [
-          "¿"
+          "\u00bf"
         ]
       },
       {
         "name": "Value",
         "type": "string",
         "sample_values": [
-          "¿"
+          "\u00bf"
         ]
       },
       {
@@ -575,42 +575,42 @@
         "name": "Property",
         "type": "string",
         "sample_values": [
-          "¿"
+          "\u00bf"
         ]
       },
       {
         "name": "Parent",
         "type": "string",
         "sample_values": [
-          "¿"
+          "\u00bf"
         ]
       },
       {
         "name": "Range",
         "type": "string",
         "sample_values": [
-          "{start:{line:39,column:11},end:{line:39,column:30}}¿"
+          "{start:{line:39,column:11},end:{line:39,column:30}}\u00bf"
         ]
       },
       {
         "name": "Type",
         "type": "string",
         "sample_values": [
-          "MemberExpression¿"
+          "MemberExpression\u00bf"
         ]
       },
       {
         "name": "ID",
         "type": "string",
         "sample_values": [
-          "138¿"
+          "138\u00bf"
         ]
       },
       {
         "name": "Position",
         "type": "string",
         "sample_values": [
-          "[935,954]¿"
+          "[935,954]\u00bf"
         ]
       },
       {
@@ -624,7 +624,7 @@
         "name": "Is Static",
         "type": "string",
         "sample_values": [
-          "¿"
+          "\u00bf"
         ]
       }
     ],
@@ -1043,7 +1043,7 @@
         ]
       },
       {
-        "name": "Actual Cost (Â£)",
+        "name": "Actual Cost (\u00c2\u00a3)",
         "type": "numeric",
         "sample_values": [
           "164.06",
@@ -1203,11 +1203,11 @@
         "name": "Chinese",
         "type": "string",
         "sample_values": [
-          "太尉",
-          "議郎",
-          "大夫",
-          "司隸校尉",
-          "侍御史"
+          "\u592a\u5c09",
+          "\u8b70\u90ce",
+          "\u5927\u592b",
+          "\u53f8\u96b8\u6821\u5c09",
+          "\u4f8d\u5fa1\u53f2"
         ]
       },
       {
@@ -1649,7 +1649,7 @@
         "type": "string",
         "sample_values": [
           "Included above",
-          "Â£600,000.00",
+          "\u00c2\u00a3600,000.00",
           "Included above"
         ]
       },
@@ -3268,11 +3268,11 @@
         "name": "Estimated Total Value",
         "type": "string",
         "sample_values": [
-          "Â£980,964.45",
+          "\u00c2\u00a3980,964.45",
           "Included above",
-          "Â£70,000.00",
-          "Â£16,506,517.97",
-          "Â£1,200,000.00"
+          "\u00c2\u00a370,000.00",
+          "\u00c2\u00a316,506,517.97",
+          "\u00c2\u00a31,200,000.00"
         ]
       },
       {
@@ -3301,11 +3301,11 @@
         "name": "Estimated Annual Value",
         "type": "date",
         "sample_values": [
-          "Â£108,996.05",
+          "\u00c2\u00a3108,996.05",
           "Included above",
-          "Â£14,000.00",
-          "Â£1,650,651.80",
-          "Â£240,000.00"
+          "\u00c2\u00a314,000.00",
+          "\u00c2\u00a31,650,651.80",
+          "\u00c2\u00a3240,000.00"
         ]
       }
     ],
@@ -4605,14 +4605,14 @@
         ]
       },
       {
-        "name": "Local Discount (£)",
+        "name": "Local Discount (\u00a3)",
         "type": "numeric",
         "sample_values": [
-          "£0.00",
-          "£0.00",
-          "£0.00",
-          "£0.00",
-          "£0.00"
+          "\u00a30.00",
+          "\u00a30.00",
+          "\u00a30.00",
+          "\u00a30.00",
+          "\u00a30.00"
         ]
       },
       {
@@ -4933,7 +4933,7 @@
         "type": "numeric",
         "sample_values": [
           "Ragnarok",
-          "Dragon�s Hair",
+          "Dragon\ufffds Hair",
           "Flame Sabre",
           "Zorlin Shape",
           "Excalibur"
@@ -5354,7 +5354,7 @@
         "name": "Estimated Annual Value",
         "type": "string",
         "sample_values": [
-          "Â£5,670.00",
+          "\u00c2\u00a35,670.00",
           "Included above",
           "Included above",
           "Included above",
@@ -5365,7 +5365,7 @@
         "name": "Estimated Total Value",
         "type": "string",
         "sample_values": [
-          "Â£5,670.00",
+          "\u00c2\u00a35,670.00",
           "Included above",
           "Included above",
           "Included above",
@@ -5451,14 +5451,14 @@
   {
     "columns": [
       {
-        "name": "Total cost, including all visas, accommodation, travel, meals etc. (£)",
+        "name": "Total cost, including all visas, accommodation, travel, meals etc. (\u00a3)",
         "type": "string",
         "sample_values": [
-          "£148.00",
-          "£104.89",
-          "£943.54",
-          "£68.00",
-          "£56.05"
+          "\u00a3148.00",
+          "\u00a3104.89",
+          "\u00a3943.54",
+          "\u00a368.00",
+          "\u00a356.05"
         ]
       },
       {
@@ -5696,7 +5696,7 @@
         ]
       },
       {
-        "name": "Gross Cost (Â£)",
+        "name": "Gross Cost (\u00c2\u00a3)",
         "type": "string",
         "sample_values": [
           "47.25",
@@ -6591,9 +6591,9 @@
         "name": "Score",
         "type": "numeric",
         "sample_values": [
-          "281 (−7)",
-          "279 (−9)",
-          "275 (−13)",
+          "281 (\u22127)",
+          "279 (\u22129)",
+          "275 (\u221213)",
           "Colgate PGA Championship",
           "BMW Championship"
         ]
@@ -7715,7 +7715,7 @@
         "name": "distributor",
         "type": "string",
         "sample_values": [
-          "Pathé",
+          "Path\u00e9",
           "GFD",
           "GFD",
           "British Lion",
@@ -7864,8 +7864,8 @@
     "caption": "NGC objects",
     "nl_description": "NGC objects",
     "metadata": {
-      "page_title": "List of NGC objects (1–1000)",
-      "second_title": "1–100",
+      "page_title": "List of NGC objects (1\u20131000)",
+      "second_title": "1\u2013100",
       "has_header": true,
       "numeric_columns": [
         6
@@ -8195,35 +8195,35 @@
         "name": "Position",
         "type": "numeric",
         "sample_values": [
-          "[1737,1751]¿"
+          "[1737,1751]\u00bf"
         ]
       },
       {
         "name": "Comment",
         "type": "string",
         "sample_values": [
-          "¿"
+          "\u00bf"
         ]
       },
       {
         "name": "Range",
         "type": "string",
         "sample_values": [
-          "{start:{line:65,column:29},end:{line:65,column:43}}¿"
+          "{start:{line:65,column:29},end:{line:65,column:43}}\u00bf"
         ]
       },
       {
         "name": "Parent",
         "type": "string",
         "sample_values": [
-          "¿"
+          "\u00bf"
         ]
       },
       {
         "name": "Is Exported",
         "type": "string",
         "sample_values": [
-          "¿"
+          "\u00bf"
         ]
       }
     ],
@@ -8402,10 +8402,10 @@
         "name": "Score",
         "type": "string",
         "sample_values": [
-          "274 (−14)",
+          "274 (\u221214)",
           "283",
-          "275 (−13)",
-          "270 (−18)",
+          "275 (\u221213)",
+          "270 (\u221218)",
           "Volvo PGA Championship"
         ]
       },
@@ -8805,11 +8805,11 @@
         "name": "Dew Point",
         "type": "numeric",
         "sample_values": [
-          "15.8 °F",
-          "17.6 °F",
-          "15.8 °F",
-          "15.8 °F",
-          "17.6 °F"
+          "15.8 \u00b0F",
+          "17.6 \u00b0F",
+          "15.8 \u00b0F",
+          "15.8 \u00b0F",
+          "17.6 \u00b0F"
         ]
       },
       {
@@ -8838,11 +8838,11 @@
         "name": "Temp.",
         "type": "numeric",
         "sample_values": [
-          "17.6 °F",
-          "33.8 °F",
-          "17.6 °F",
-          "17.6 °F",
-          "33.8 °F"
+          "17.6 \u00b0F",
+          "33.8 \u00b0F",
+          "17.6 \u00b0F",
+          "17.6 \u00b0F",
+          "33.8 \u00b0F"
         ]
       },
       {
@@ -9034,7 +9034,7 @@
         ]
       },
       {
-        "name": "ï»¿FSCL_YR",
+        "name": "\u00ef\u00bb\u00bfFSCL_YR",
         "type": "numeric",
         "sample_values": [
           "2007/2008",
@@ -9045,7 +9045,7 @@
         ]
       },
       {
-        "name": "DepartmentNumber-NumÃ©ro-de-MinistÃ¨re",
+        "name": "DepartmentNumber-Num\u00c3\u00a9ro-de-Minist\u00c3\u00a8re",
         "type": "string",
         "sample_values": [
           "53",
@@ -9451,9 +9451,9 @@
         "name": "Chinese",
         "type": "string",
         "sample_values": [
-          "縣長",
-          "中尉",
-          "司馬"
+          "\u7e23\u9577",
+          "\u4e2d\u5c09",
+          "\u53f8\u99ac"
         ]
       },
       {
@@ -9915,88 +9915,88 @@
         "name": "Type",
         "type": "numeric",
         "sample_values": [
-          "BinaryExpression¿",
-          "VariableDeclaration¿",
-          "Identifier¿",
-          "Identifier¿",
-          "BinaryExpression¿"
+          "BinaryExpression\u00bf",
+          "VariableDeclaration\u00bf",
+          "Identifier\u00bf",
+          "Identifier\u00bf",
+          "BinaryExpression\u00bf"
         ]
       },
       {
         "name": "Parent",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿",
-          "¿",
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       },
       {
         "name": "Range",
         "type": "string",
         "sample_values": [
-          "{start:{line:68,column:14},end:{line:69,column:82}}¿",
-          "{start:{line:64,column:4},end:{line:64,column:83}}¿",
-          "{start:{line:39,column:19},end:{line:39,column:30}}¿",
-          "{start:{line:44,column:7},end:{line:44,column:10}}¿",
-          "{start:{line:68,column:14},end:{line:68,column:45}}¿"
+          "{start:{line:68,column:14},end:{line:69,column:82}}\u00bf",
+          "{start:{line:64,column:4},end:{line:64,column:83}}\u00bf",
+          "{start:{line:39,column:19},end:{line:39,column:30}}\u00bf",
+          "{start:{line:44,column:7},end:{line:44,column:10}}\u00bf",
+          "{start:{line:68,column:14},end:{line:68,column:45}}\u00bf"
         ]
       },
       {
         "name": "Comment",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿",
-          "¿",
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       },
       {
         "name": "Is Exported",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿",
-          "¿",
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       },
       {
         "name": "Position",
         "type": "string",
         "sample_values": [
-          "[1867,1983]¿",
-          "[1628,1707]¿",
-          "[943,954]¿",
-          "[1050,1053]¿",
-          "[1867,1898]¿"
+          "[1867,1983]\u00bf",
+          "[1628,1707]\u00bf",
+          "[943,954]\u00bf",
+          "[1050,1053]\u00bf",
+          "[1867,1898]\u00bf"
         ]
       },
       {
         "name": "ID",
         "type": "string",
         "sample_values": [
-          "325¿",
-          "271¿",
-          "140¿",
-          "164¿",
-          "326¿"
+          "325\u00bf",
+          "271\u00bf",
+          "140\u00bf",
+          "164\u00bf",
+          "326\u00bf"
         ]
       },
       {
         "name": "Child",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿",
-          "¿",
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       }
     ],
@@ -10705,7 +10705,7 @@
   {
     "columns": [
       {
-        "name": "Key-Clé",
+        "name": "Key-Cl\u00e9",
         "type": "numeric",
         "sample_values": [
           "615562",
@@ -10723,7 +10723,7 @@
           "Franco, Eduardo L",
           "Doyle, Lex W",
           "Snutch, Terrance P",
-          "Sauvé, Rémy"
+          "Sauv\u00e9, R\u00e9my"
         ]
       },
       {
@@ -10775,10 +10775,10 @@
         "type": "string",
         "sample_values": [
           "Duke University (North Carolina)",
-          "McGill University/Université McGill",
+          "McGill University/Universit\u00e9 McGill",
           "University of Melbourne (Australia)",
           "University of British Columbia",
-          "Université de Montréal"
+          "Universit\u00e9 de Montr\u00e9al"
         ]
       },
       {
@@ -10786,10 +10786,10 @@
         "type": "string",
         "sample_values": [
           "North Carolina",
-          "Québec",
+          "Qu\u00e9bec",
           "Victoria",
           "British Columbia",
-          "Québec"
+          "Qu\u00e9bec"
         ]
       },
       {
@@ -10797,10 +10797,10 @@
         "type": "string",
         "sample_values": [
           "Caroline du Nord",
-          "Québec",
+          "Qu\u00e9bec",
           "Victoria",
           "Colombie-Britannique",
-          "Québec"
+          "Qu\u00e9bec"
         ]
       },
       {
@@ -10818,7 +10818,7 @@
         "name": "PaysFR",
         "type": "string",
         "sample_values": [
-          "États-Unis",
+          "\u00c9tats-Unis",
           "Canada",
           "l'Australie",
           "Canada",
@@ -10826,7 +10826,7 @@
         ]
       },
       {
-        "name": "FiscalYear-AnnéeFinancière",
+        "name": "FiscalYear-Ann\u00e9eFinanci\u00e8re",
         "type": "numeric",
         "sample_values": [
           "200001",
@@ -11626,14 +11626,14 @@
   {
     "columns": [
       {
-        "name": "Total cost, including all visas, accommodation, travel, meals etc. (£)",
+        "name": "Total cost, including all visas, accommodation, travel, meals etc. (\u00a3)",
         "type": "string",
         "sample_values": [
-          "£141.89",
-          "£218.00",
-          "£343.50",
-          "£190.00",
-          "£320.00"
+          "\u00a3141.89",
+          "\u00a3218.00",
+          "\u00a3343.50",
+          "\u00a3190.00",
+          "\u00a3320.00"
         ]
       },
       {
@@ -11811,9 +11811,9 @@
         "sample_values": [
           "Included above",
           "Included above",
-          "Â£2,670,000.00",
+          "\u00c2\u00a32,670,000.00",
           "Included above",
-          "Â£600,000.00"
+          "\u00c2\u00a3600,000.00"
         ]
       },
       {
@@ -12679,7 +12679,7 @@
         "type": "string",
         "sample_values": [
           "Welebny Software",
-          "Яндекс",
+          "\u042f\u043d\u0434\u0435\u043a\u0441",
           "OpenXcell Technolabs Pvt. Ltd."
         ]
       }
@@ -13604,7 +13604,7 @@
           "Piccadilly PGA Close Championship",
           "282",
           "277",
-          "278 (−10)",
+          "278 (\u221210)",
           "288 (E)"
         ]
       },
@@ -13625,7 +13625,7 @@
           "Piccadilly PGA Close Championship",
           "[Eric_Brown_(golfer)|Eric Brown]",
           "[Simon_Khan|Simon Khan]",
-          "[Baldovino_Dassù|Baldovino Dassù]"
+          "[Baldovino_Dass\u00f9|Baldovino Dass\u00f9]"
         ]
       }
     ],
@@ -13673,7 +13673,7 @@
         "sample_values": [
           "See piu fung wan (Black Ransom)",
           "Confucius",
-          "Cinco d�as sin Nora (Five Days Without Nora)",
+          "Cinco d\ufffdas sin Nora (Five Days Without Nora)",
           "Kandagar",
           "My Name is Khan"
         ]
@@ -14295,9 +14295,9 @@
         "type": "numeric",
         "sample_values": [
           "Viyella PGA Championship",
-          "278 (−10)",
+          "278 (\u221210)",
           "247",
-          "272 (−16)",
+          "272 (\u221216)",
           "Whyte & Mackay PGA Championship"
         ]
       },
@@ -14717,11 +14717,11 @@
         "name": "Name",
         "type": "string",
         "sample_values": [
-          "Peter Bistrický",
-          "Natacha Porté",
+          "Peter Bistrick\u00fd",
+          "Natacha Port\u00e9",
           "Francesco Crippa",
           "Adrian Joian",
-          "Abdel Martínez"
+          "Abdel Mart\u00ednez"
         ]
       }
     ],
@@ -15002,7 +15002,7 @@
         "name": "Province",
         "type": "string",
         "sample_values": [
-          "Ravenna, Forlì",
+          "Ravenna, Forl\u00ec",
           "Piacenza",
           "Naples, Salerno",
           "Enna, Catania",
@@ -15041,22 +15041,22 @@
         "name": "Windchill",
         "type": "date",
         "sample_values": [
-          "23.2 °F",
-          "23.2 °F",
-          "8.6 °F",
+          "23.2 \u00b0F",
+          "23.2 \u00b0F",
+          "8.6 \u00b0F",
           "-",
-          "24.8 °F"
+          "24.8 \u00b0F"
         ]
       },
       {
         "name": "Dew Point",
         "type": "numeric",
         "sample_values": [
-          "30.2 °F",
-          "30.2 °F",
-          "15.8 °F",
-          "15.8 °F",
-          "15.8 °F"
+          "30.2 \u00b0F",
+          "30.2 \u00b0F",
+          "15.8 \u00b0F",
+          "15.8 \u00b0F",
+          "15.8 \u00b0F"
         ]
       },
       {
@@ -15410,11 +15410,11 @@
         "name": "Estimated Annual Value",
         "type": "string",
         "sample_values": [
-          "Â£46,000,000.00",
-          "Â£589,442.21",
+          "\u00c2\u00a346,000,000.00",
+          "\u00c2\u00a3589,442.21",
           "Included above",
           "Included above",
-          "Â£10,000.00"
+          "\u00c2\u00a310,000.00"
         ]
       },
       {
@@ -15443,11 +15443,11 @@
         "name": "Estimated Total Value",
         "type": "string",
         "sample_values": [
-          "Â£695,000,000.00",
-          "Â£2,947,211.05",
+          "\u00c2\u00a3695,000,000.00",
+          "\u00c2\u00a32,947,211.05",
           "Included above",
           "Included above",
-          "Â£10,000.00"
+          "\u00c2\u00a310,000.00"
         ]
       },
       {
@@ -16494,7 +16494,7 @@
   {
     "columns": [
       {
-        "name": "FiscalYear-AnnéeFinancière",
+        "name": "FiscalYear-Ann\u00e9eFinanci\u00e8re",
         "type": "numeric",
         "sample_values": [
           "200001",
@@ -16519,15 +16519,15 @@
         "name": "CoAppOrgNm",
         "type": "string",
         "sample_values": [
-          "Université de Montréal",
+          "Universit\u00e9 de Montr\u00e9al",
           "Ontario Institute for Cancer Research (Toronto, Ontario)/Institut ontarien de recherche sur le cancer",
-          "McGill University/Université McGill",
-          "Unspecified/Non Spécifié",
+          "McGill University/Universit\u00e9 McGill",
+          "Unspecified/Non Sp\u00e9cifi\u00e9",
           "University of British Columbia"
         ]
       },
       {
-        "name": "Key-Clé",
+        "name": "Key-Cl\u00e9",
         "type": "string",
         "sample_values": [
           "439649",
@@ -16719,9 +16719,9 @@
         "type": "string",
         "sample_values": [
           "Surrogates",
-          "G�nter Wallraff: Schwarz auf Weiss",
+          "G\ufffdnter Wallraff: Schwarz auf Weiss",
           "Nine",
-          "Diario de una ninf�mana",
+          "Diario de una ninf\ufffdmana",
           "Tell-Tale"
         ]
       },
@@ -16994,8 +16994,8 @@
     "caption": "NGC objects",
     "nl_description": "NGC objects",
     "metadata": {
-      "page_title": "List of NGC objects (1–1000)",
-      "second_title": "1–100",
+      "page_title": "List of NGC objects (1\u20131000)",
+      "second_title": "1\u2013100",
       "has_header": true,
       "numeric_columns": [
         6
@@ -17744,11 +17744,11 @@
         "name": "[Declination|Declination]",
         "type": "string",
         "sample_values": [
-          "°14′4″",
-          "°24′28″",
-          "°06′26″",
-          "°28′44″",
-          "°04′46″"
+          "\u00b014\u20324\u2033",
+          "\u00b024\u203228\u2033",
+          "\u00b006\u203226\u2033",
+          "\u00b028\u203244\u2033",
+          "\u00b004\u203246\u2033"
         ]
       },
       {
@@ -17767,8 +17767,8 @@
     "caption": "NGC objects",
     "nl_description": "NGC objects",
     "metadata": {
-      "page_title": "List of NGC objects (1–1000)",
-      "second_title": "1–100",
+      "page_title": "List of NGC objects (1\u20131000)",
+      "second_title": "1\u2013100",
       "has_header": true,
       "numeric_columns": [
         6
@@ -18360,7 +18360,7 @@
         ]
       },
       {
-        "name": "Gross Cost (Â£)",
+        "name": "Gross Cost (\u00c2\u00a3)",
         "type": "string",
         "sample_values": [
           "288.91",
@@ -18796,7 +18796,7 @@
         ]
       },
       {
-        "name": "Gross Cost (Â£)",
+        "name": "Gross Cost (\u00c2\u00a3)",
         "type": "string",
         "sample_values": [
           "288.91",
@@ -18861,66 +18861,66 @@
         "name": "Range",
         "type": "numeric",
         "sample_values": [
-          "{start:{line:68,column:14},end:{line:68,column:24}}¿",
-          "{start:{line:25,column:4},end:{line:25,column:10}}¿",
-          "{start:{line:48,column:15},end:{line:48,column:20}}¿",
-          "{start:{line:21,column:4},end:{line:21,column:14}}¿",
-          "{start:{line:51,column:8},end:{line:51,column:12}}¿"
+          "{start:{line:68,column:14},end:{line:68,column:24}}\u00bf",
+          "{start:{line:25,column:4},end:{line:25,column:10}}\u00bf",
+          "{start:{line:48,column:15},end:{line:48,column:20}}\u00bf",
+          "{start:{line:21,column:4},end:{line:21,column:14}}\u00bf",
+          "{start:{line:51,column:8},end:{line:51,column:12}}\u00bf"
         ]
       },
       {
         "name": "Type",
         "type": "string",
         "sample_values": [
-          "MemberExpression¿",
-          "Identifier¿",
-          "Identifier¿",
-          "Identifier¿",
-          "VariableDeclarator¿"
+          "MemberExpression\u00bf",
+          "Identifier\u00bf",
+          "Identifier\u00bf",
+          "Identifier\u00bf",
+          "VariableDeclarator\u00bf"
         ]
       },
       {
         "name": "Value",
         "type": "string",
         "sample_values": [
-          "¿",
-          "decode¿",
-          "parts¿",
-          "autoencode¿",
-          "=¿"
+          "\u00bf",
+          "decode\u00bf",
+          "parts\u00bf",
+          "autoencode\u00bf",
+          "=\u00bf"
         ]
       },
       {
         "name": "Property",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿",
-          "¿",
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       },
       {
         "name": "ID",
         "type": "string",
         "sample_values": [
-          "329¿",
-          "86¿",
-          "209¿",
-          "74¿",
-          "220¿"
+          "329\u00bf",
+          "86\u00bf",
+          "209\u00bf",
+          "74\u00bf",
+          "220\u00bf"
         ]
       },
       {
         "name": "Comment",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿",
-          "¿",
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       },
       {
@@ -18938,33 +18938,33 @@
         "name": "Child",
         "type": "string",
         "sample_values": [
-          "false¿",
-          "¿",
-          "¿",
-          "¿",
-          "¿"
+          "false\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       },
       {
         "name": "Is Exported",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿",
-          "¿",
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       },
       {
         "name": "Is Static",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿",
-          "¿",
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       }
     ],
@@ -19340,11 +19340,11 @@
         "name": "Dew Point",
         "type": "date",
         "sample_values": [
-          "37.9 °F",
-          "37.4 °F",
-          "37.9 °F",
-          "35.6 °F",
-          "37.0 °F"
+          "37.9 \u00b0F",
+          "37.4 \u00b0F",
+          "37.9 \u00b0F",
+          "35.6 \u00b0F",
+          "37.0 \u00b0F"
         ]
       },
       {
@@ -20053,7 +20053,7 @@
         ]
       },
       {
-        "name": "Actual Cost (Â£)",
+        "name": "Actual Cost (\u00c2\u00a3)",
         "type": "numeric",
         "sample_values": [
           "164.06",
@@ -20481,11 +20481,11 @@
         "name": "Range",
         "type": "numeric",
         "sample_values": [
-          "{start:{line:2,column:4},end:{line:77,column:1}}¿",
-          "{start:{line:64,column:69},end:{line:64,column:81}}¿",
-          "{start:{line:68,column:14},end:{line:68,column:24}}¿",
-          "{start:{line:71,column:21},end:{line:71,column:44}}¿",
-          "{start:{line:31,column:2},end:{line:31,column:31}}¿"
+          "{start:{line:2,column:4},end:{line:77,column:1}}\u00bf",
+          "{start:{line:64,column:69},end:{line:64,column:81}}\u00bf",
+          "{start:{line:68,column:14},end:{line:68,column:24}}\u00bf",
+          "{start:{line:71,column:21},end:{line:71,column:44}}\u00bf",
+          "{start:{line:31,column:2},end:{line:31,column:31}}\u00bf"
         ]
       },
       {
@@ -20508,66 +20508,66 @@
         "name": "Child",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿",
-          "false¿",
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf",
+          "false\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       },
       {
         "name": "Type",
         "type": "string",
         "sample_values": [
-          "VariableDeclarator¿",
-          "BinaryExpression¿",
-          "MemberExpression¿",
-          "BinaryExpression¿",
-          "ExpressionStatement¿"
+          "VariableDeclarator\u00bf",
+          "BinaryExpression\u00bf",
+          "MemberExpression\u00bf",
+          "BinaryExpression\u00bf",
+          "ExpressionStatement\u00bf"
         ]
       },
       {
         "name": "Property",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿",
-          "¿",
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       },
       {
         "name": "Position",
         "type": "string",
         "sample_values": [
-          "[116,2188]¿",
-          "[1693,1705]¿",
-          "[1867,1877]¿",
-          "[2035,2058]¿",
-          "[711,740]¿"
+          "[116,2188]\u00bf",
+          "[1693,1705]\u00bf",
+          "[1867,1877]\u00bf",
+          "[2035,2058]\u00bf",
+          "[711,740]\u00bf"
         ]
       },
       {
         "name": "Is Static",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿",
-          "¿",
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       },
       {
         "name": "Parent",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿",
-          "¿",
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       }
     ],
@@ -21123,7 +21123,7 @@
   {
     "columns": [
       {
-        "name": "Key-Clé",
+        "name": "Key-Cl\u00e9",
         "type": "numeric",
         "sample_values": [
           "863794",
@@ -21193,8 +21193,8 @@
         "type": "string",
         "sample_values": [
           "University of Alberta",
-          "Université de Montréal",
-          "Université de Montréal",
+          "Universit\u00e9 de Montr\u00e9al",
+          "Universit\u00e9 de Montr\u00e9al",
           "University of Saskatchewan",
           "University of Toronto"
         ]
@@ -21204,8 +21204,8 @@
         "type": "string",
         "sample_values": [
           "Alberta",
-          "Québec",
-          "Québec",
+          "Qu\u00e9bec",
+          "Qu\u00e9bec",
           "Saskatchewan",
           "Ontario"
         ]
@@ -21215,8 +21215,8 @@
         "type": "string",
         "sample_values": [
           "Alberta",
-          "Québec",
-          "Québec",
+          "Qu\u00e9bec",
+          "Qu\u00e9bec",
           "Saskatchewan",
           "Ontario"
         ]
@@ -21244,7 +21244,7 @@
         ]
       },
       {
-        "name": "FiscalYear-AnnéeFinancière",
+        "name": "FiscalYear-Ann\u00e9eFinanci\u00e8re",
         "type": "numeric",
         "sample_values": [
           "200001",
@@ -21986,28 +21986,28 @@
         "name": "Property",
         "type": "numeric",
         "sample_values": [
-          "¿"
+          "\u00bf"
         ]
       },
       {
         "name": "Position",
         "type": "string",
         "sample_values": [
-          "[412,427]¿"
+          "[412,427]\u00bf"
         ]
       },
       {
         "name": "Type",
         "type": "string",
         "sample_values": [
-          "MemberExpression¿"
+          "MemberExpression\u00bf"
         ]
       },
       {
         "name": "Is Exported",
         "type": "string",
         "sample_values": [
-          "¿"
+          "\u00bf"
         ]
       }
     ],
@@ -22329,7 +22329,7 @@
         "sample_values": [
           "Awlad Al Aam",
           "My Name is Khan",
-          "Serge Gainsbourg, vie h�ro�que",
+          "Serge Gainsbourg, vie h\ufffdro\ufffdque",
           "I Hate Valentine's Day",
           "Zombieland"
         ]
@@ -23132,22 +23132,22 @@
         "name": "Estimated Annual Value",
         "type": "string",
         "sample_values": [
-          "Â£1,652,313.00",
-          "Â£214,766.76",
+          "\u00c2\u00a31,652,313.00",
+          "\u00c2\u00a3214,766.76",
           "Included above",
-          "Â£120,000.00",
-          "Â£280,000.00"
+          "\u00c2\u00a3120,000.00",
+          "\u00c2\u00a3280,000.00"
         ]
       },
       {
         "name": "Estimated Total Value",
         "type": "string",
         "sample_values": [
-          "Â£7,435,408.50",
-          "Â£859,067.04",
+          "\u00c2\u00a37,435,408.50",
+          "\u00c2\u00a3859,067.04",
           "Included above",
-          "Â£600,000.00",
-          "Â£1,400,000.00"
+          "\u00c2\u00a3600,000.00",
+          "\u00c2\u00a31,400,000.00"
         ]
       },
       {
@@ -24414,11 +24414,11 @@
         "name": "Range",
         "type": "numeric",
         "sample_values": [
-          "{start:{line:2,column:4},end:{line:77,column:1}}¿",
-          "{start:{line:64,column:69},end:{line:64,column:81}}¿",
-          "{start:{line:68,column:14},end:{line:68,column:24}}¿",
-          "{start:{line:71,column:21},end:{line:71,column:44}}¿",
-          "{start:{line:31,column:2},end:{line:31,column:31}}¿"
+          "{start:{line:2,column:4},end:{line:77,column:1}}\u00bf",
+          "{start:{line:64,column:69},end:{line:64,column:81}}\u00bf",
+          "{start:{line:68,column:14},end:{line:68,column:24}}\u00bf",
+          "{start:{line:71,column:21},end:{line:71,column:44}}\u00bf",
+          "{start:{line:31,column:2},end:{line:31,column:31}}\u00bf"
         ]
       },
       {
@@ -24441,44 +24441,44 @@
         "name": "Child",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿",
-          "false¿",
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf",
+          "false\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       },
       {
         "name": "Type",
         "type": "string",
         "sample_values": [
-          "VariableDeclarator¿",
-          "BinaryExpression¿",
-          "MemberExpression¿",
-          "BinaryExpression¿",
-          "ExpressionStatement¿"
+          "VariableDeclarator\u00bf",
+          "BinaryExpression\u00bf",
+          "MemberExpression\u00bf",
+          "BinaryExpression\u00bf",
+          "ExpressionStatement\u00bf"
         ]
       },
       {
         "name": "Property",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿",
-          "¿",
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       },
       {
         "name": "Position",
         "type": "string",
         "sample_values": [
-          "[116,2188]¿",
-          "[1693,1705]¿",
-          "[1867,1877]¿",
-          "[2035,2058]¿",
-          "[711,740]¿"
+          "[116,2188]\u00bf",
+          "[1693,1705]\u00bf",
+          "[1867,1877]\u00bf",
+          "[2035,2058]\u00bf",
+          "[711,740]\u00bf"
         ]
       }
     ],
@@ -25237,14 +25237,14 @@
         ]
       },
       {
-        "name": "Local Discount (£)",
+        "name": "Local Discount (\u00a3)",
         "type": "string",
         "sample_values": [
-          "£0.00",
-          "£0.00",
-          "£0.00",
-          "£0.00",
-          "£0.00"
+          "\u00a30.00",
+          "\u00a30.00",
+          "\u00a30.00",
+          "\u00a30.00",
+          "\u00a30.00"
         ]
       },
       {
@@ -25409,7 +25409,7 @@
   {
     "columns": [
       {
-        "name": "Density (g/cm³)",
+        "name": "Density (g/cm\u00b3)",
         "type": "numeric",
         "sample_values": [
           "0.03",
@@ -26006,14 +26006,14 @@
         ]
       },
       {
-        "name": "Local Discount (£)",
+        "name": "Local Discount (\u00a3)",
         "type": "numeric",
         "sample_values": [
-          "£0.00",
-          "£0.00",
-          "£0.00",
-          "£0.00",
-          "£0.00"
+          "\u00a30.00",
+          "\u00a30.00",
+          "\u00a30.00",
+          "\u00a30.00",
+          "\u00a30.00"
         ]
       },
       {
@@ -27192,10 +27192,10 @@
         "type": "string",
         "sample_values": [
           "Included above",
-          "Â£220,000.00",
+          "\u00c2\u00a3220,000.00",
           "Included above",
-          "Â£2,523,822.00",
-          "Â£123,364.49"
+          "\u00c2\u00a32,523,822.00",
+          "\u00c2\u00a3123,364.49"
         ]
       },
       {
@@ -27203,10 +27203,10 @@
         "type": "string",
         "sample_values": [
           "Included above",
-          "Â£1,100,000.00",
+          "\u00c2\u00a31,100,000.00",
           "Included above",
-          "Â£15,142,932.00",
-          "Â£1,357,009.35"
+          "\u00c2\u00a315,142,932.00",
+          "\u00c2\u00a31,357,009.35"
         ]
       },
       {
@@ -27294,7 +27294,7 @@
           "Included above",
           "Included above",
           "Included above",
-          "Â£122,222.22",
+          "\u00c2\u00a3122,222.22",
           "Included above"
         ]
       },
@@ -27327,7 +27327,7 @@
           "Included above",
           "Included above",
           "Included above",
-          "Â£1,344,444.44",
+          "\u00c2\u00a31,344,444.44",
           "Included above"
         ]
       },
@@ -27569,7 +27569,7 @@
         "name": "Comment",
         "type": "numeric",
         "sample_values": [
-          "Kain�s Lance",
+          "Kain\ufffds Lance",
           "Flame Sabre",
           "Excalibur II",
           "Bistro Fork",
@@ -27644,11 +27644,11 @@
         "name": "[Declination|Declination]",
         "type": "string",
         "sample_values": [
-          "°24′00″",
-          "°25′58″",
-          "°37′27″",
-          "°27′37″",
-          "°14′47″"
+          "\u00b024\u203200\u2033",
+          "\u00b025\u203258\u2033",
+          "\u00b037\u203227\u2033",
+          "\u00b027\u203237\u2033",
+          "\u00b014\u203247\u2033"
         ]
       }
     ],
@@ -27656,8 +27656,8 @@
     "caption": "NGC objects",
     "nl_description": "NGC objects",
     "metadata": {
-      "page_title": "List of NGC objects (1–1000)",
-      "second_title": "1–100",
+      "page_title": "List of NGC objects (1\u20131000)",
+      "second_title": "1\u2013100",
       "has_header": true,
       "numeric_columns": [
         6
@@ -27685,11 +27685,11 @@
         "name": "Author",
         "type": "numeric",
         "sample_values": [
-          "前橋 和弥",
-          "米田 聡",
-          "野村 弘明",
-          "シーズ",
-          "岩谷 宏"
+          "\u524d\u6a4b \u548c\u5f25",
+          "\u7c73\u7530 \u8061",
+          "\u91ce\u6751 \u5f18\u660e",
+          "\u30b7\u30fc\u30ba",
+          "\u5ca9\u8c37 \u5b8f"
         ]
       },
       {
@@ -27707,11 +27707,11 @@
         "name": "Publisher",
         "type": "string",
         "sample_values": [
-          "技術評論社",
-          "ソフトバンク クリエイティブ",
-          "ピーワーク",
-          "技術評論社",
-          "技術評論社"
+          "\u6280\u8853\u8a55\u8ad6\u793e",
+          "\u30bd\u30d5\u30c8\u30d0\u30f3\u30af \u30af\u30ea\u30a8\u30a4\u30c6\u30a3\u30d6",
+          "\u30d4\u30fc\u30ef\u30fc\u30af",
+          "\u6280\u8853\u8a55\u8ad6\u793e",
+          "\u6280\u8853\u8a55\u8ad6\u793e"
         ]
       }
     ],
@@ -28256,11 +28256,11 @@
         "name": "Chinese",
         "type": "string",
         "sample_values": [
-          "相[國]",
-          "尹",
-          "中書",
-          "虎賁",
-          "中尉"
+          "\u76f8[\u570b]",
+          "\u5c39",
+          "\u4e2d\u66f8",
+          "\u864e\u8cc1",
+          "\u4e2d\u5c09"
         ]
       },
       {
@@ -28732,10 +28732,10 @@
         "name": "Score",
         "type": "string",
         "sample_values": [
-          "274 (−14)",
+          "274 (\u221214)",
           "283",
-          "275 (−13)",
-          "280 (−8)",
+          "275 (\u221213)",
+          "280 (\u22128)",
           "Whyte & Mackay PGA Championship"
         ]
       },
@@ -29558,7 +29558,7 @@
         ]
       },
       {
-        "name": "Actual Cost (Â£)",
+        "name": "Actual Cost (\u00c2\u00a3)",
         "type": "numeric",
         "sample_values": [
           "16.1",
@@ -29950,22 +29950,22 @@
         "name": "Estimated Annual Value",
         "type": "date",
         "sample_values": [
-          "Â£55,000.00",
+          "\u00c2\u00a355,000.00",
           "Included above",
           "Included above",
           "Included above",
-          "Â£1,622,185.94"
+          "\u00c2\u00a31,622,185.94"
         ]
       },
       {
         "name": "Estimated Total Value",
         "type": "numeric",
         "sample_values": [
-          "Â£220,000.00",
+          "\u00c2\u00a3220,000.00",
           "Included above",
           "Included above",
           "Included above",
-          "Â£1,622,185.94"
+          "\u00c2\u00a31,622,185.94"
         ]
       },
       {
@@ -30160,11 +30160,11 @@
         "name": "Estimated Annual Value",
         "type": "date",
         "sample_values": [
-          "Â£10,837.00",
+          "\u00c2\u00a310,837.00",
           "Included above",
-          "Â£1,500,000.00",
+          "\u00c2\u00a31,500,000.00",
           "Included above",
-          "Â£12,500.00"
+          "\u00c2\u00a312,500.00"
         ]
       }
     ],
@@ -30362,7 +30362,7 @@
         ]
       },
       {
-        "name": "Payscale Minimum (Â£)",
+        "name": "Payscale Minimum (\u00c2\u00a3)",
         "type": "numeric",
         "sample_values": [
           "18906",
@@ -30373,7 +30373,7 @@
         ]
       },
       {
-        "name": "Payscale Maximum (Â£)",
+        "name": "Payscale Maximum (\u00c2\u00a3)",
         "type": "numeric",
         "sample_values": [
           "25272",
@@ -30486,11 +30486,11 @@
         "name": "[Declination|Declination]",
         "type": "string",
         "sample_values": [
-          "°24′00″",
-          "°25′58″",
-          "°37′27″",
-          "°27′37″",
-          "°14′47″"
+          "\u00b024\u203200\u2033",
+          "\u00b025\u203258\u2033",
+          "\u00b037\u203227\u2033",
+          "\u00b027\u203237\u2033",
+          "\u00b014\u203247\u2033"
         ]
       },
       {
@@ -30509,8 +30509,8 @@
     "caption": "NGC objects",
     "nl_description": "NGC objects",
     "metadata": {
-      "page_title": "List of NGC objects (1–1000)",
-      "second_title": "1–100",
+      "page_title": "List of NGC objects (1\u20131000)",
+      "second_title": "1\u2013100",
       "has_header": true,
       "numeric_columns": [
         6
@@ -30861,11 +30861,11 @@
         "name": "Abstract",
         "type": "string",
         "sample_values": [
-          "Two central criteria for data quality are consistency and accuracy. Inconsistencies and errors in a database often emerge as violations of integrity constraints. Given a dirty database D, one needs automated methods to make it consistent, ie, find a repair D′ that satisfies the …",
-          "Database technology is one of the cornerstones for the new millennium's IT landscape. However, database systems as a unit of code packaging and deployment are at a crossroad: commercial systems have been adding features for a long time and have now reached …",
-          "Relational database systems have traditionally optimzed for I/O performance and organized records sequentially on disk pages using the N-ary Storage Model (NSM)(aka, slotted pages). Recent research, however, indicates that cache utilization and performance is …",
-          "This paper investigates the problem of incremental joins of multiple ranked data sets when the join condition is a list of arbitrary user-defined predicates on the input tuples. This problem arises in many important applications dealing with ordered inputs and multiple …",
-          "Spatial data mining, ie, discovery of interesting characteristics and patterns that may implicitly exist in spatial databases, is a challenging task due to the huge amounts of spatial data and to the new conceptual nature of the problems which must account for spatial …"
+          "Two central criteria for data quality are consistency and accuracy. Inconsistencies and errors in a database often emerge as violations of integrity constraints. Given a dirty database D, one needs automated methods to make it consistent, ie, find a repair D\u2032 that satisfies the\u00a0\u2026",
+          "Database technology is one of the cornerstones for the new millennium's IT landscape. However, database systems as a unit of code packaging and deployment are at a crossroad: commercial systems have been adding features for a long time and have now reached\u00a0\u2026",
+          "Relational database systems have traditionally optimzed for I/O performance and organized records sequentially on disk pages using the N-ary Storage Model (NSM)(aka, slotted pages). Recent research, however, indicates that cache utilization and performance is\u00a0\u2026",
+          "This paper investigates the problem of incremental joins of multiple ranked data sets when the join condition is a list of arbitrary user-defined predicates on the input tuples. This problem arises in many important applications dealing with ordered inputs and multiple\u00a0\u2026",
+          "Spatial data mining, ie, discovery of interesting characteristics and patterns that may implicitly exist in spatial databases, is a challenging task due to the huge amounts of spatial data and to the new conceptual nature of the problems which must account for spatial\u00a0\u2026"
         ]
       },
       {
@@ -31024,7 +31024,7 @@
           "Fruit, vegetables and cereals fresh or processed",
           "Oils",
           "Fruit, vegetables and cereals fresh or processed",
-          "Bread, pastry, cakes, confectionery, biscuits and other baker’s wares"
+          "Bread, pastry, cakes, confectionery, biscuits and other baker\u2019s wares"
         ]
       },
       {
@@ -31064,7 +31064,7 @@
         "name": "Province",
         "type": "string",
         "sample_values": [
-          "Forlì - Cesena, Rimini",
+          "Forl\u00ec - Cesena, Rimini",
           "Catania",
           "Teramo",
           "Alessandria, Asti, Cuneo, Novara, Turin, Vercelli",
@@ -31487,11 +31487,11 @@
         "name": "Dew Point",
         "type": "date",
         "sample_values": [
-          "37.4 °F",
-          "35.6 °F",
-          "37.0 °F",
-          "35.6 °F",
-          "35.1 °F"
+          "37.4 \u00b0F",
+          "35.6 \u00b0F",
+          "37.0 \u00b0F",
+          "35.6 \u00b0F",
+          "35.1 \u00b0F"
         ]
       },
       {
@@ -31606,7 +31606,7 @@
         ]
       },
       {
-        "name": "DepartmentNumber-NumÃ©ro-de-MinistÃ¨re",
+        "name": "DepartmentNumber-Num\u00c3\u00a9ro-de-Minist\u00c3\u00a8re",
         "type": "string",
         "sample_values": [
           "22",
@@ -34435,13 +34435,13 @@
         ]
       },
       {
-        "name": "Accommodation/Meals (£)",
+        "name": "Accommodation/Meals (\u00a3)",
         "type": "date",
         "sample_values": [
           "Nil Return",
-          "£98.45",
-          "£65.12",
-          "£129.00"
+          "\u00a398.45",
+          "\u00a365.12",
+          "\u00a3129.00"
         ]
       },
       {
@@ -34455,13 +34455,13 @@
         ]
       },
       {
-        "name": "Total cost, including all visas, accommodation, travel, meals etc. (£)",
+        "name": "Total cost, including all visas, accommodation, travel, meals etc. (\u00a3)",
         "type": "string",
         "sample_values": [
-          "£58.95",
-          "£146.24",
-          "£305.78",
-          "£265.75"
+          "\u00a358.95",
+          "\u00a3146.24",
+          "\u00a3305.78",
+          "\u00a3265.75"
         ]
       },
       {
@@ -34519,44 +34519,44 @@
         "name": "Parent",
         "type": "numeric",
         "sample_values": [
-          "¿",
-          "¿",
-          "¿",
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       },
       {
         "name": "Value",
         "type": "string",
         "sample_values": [
-          "¿",
-          "nulltoremove¿",
-          "¿",
-          "¿",
-          "defs¿"
+          "\u00bf",
+          "nulltoremove\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "defs\u00bf"
         ]
       },
       {
         "name": "Range",
         "type": "string",
         "sample_values": [
-          "{start:{line:43,column:16},end:{line:43,column:37}}¿",
-          "{start:{line:19,column:4},end:{line:19,column:16}}¿",
-          "{start:{line:43,column:16},end:{line:49,column:12}}¿",
-          "{start:{line:6,column:10},end:{line:6,column:18}}¿",
-          "{start:{line:7,column:19},end:{line:7,column:23}}¿"
+          "{start:{line:43,column:16},end:{line:43,column:37}}\u00bf",
+          "{start:{line:19,column:4},end:{line:19,column:16}}\u00bf",
+          "{start:{line:43,column:16},end:{line:49,column:12}}\u00bf",
+          "{start:{line:6,column:10},end:{line:6,column:18}}\u00bf",
+          "{start:{line:7,column:19},end:{line:7,column:23}}\u00bf"
         ]
       },
       {
         "name": "Type",
         "type": "string",
         "sample_values": [
-          "MemberExpression¿",
-          "Identifier¿",
-          "CallExpression¿",
-          "MemberExpression¿",
-          "Identifier¿"
+          "MemberExpression\u00bf",
+          "Identifier\u00bf",
+          "CallExpression\u00bf",
+          "MemberExpression\u00bf",
+          "Identifier\u00bf"
         ]
       },
       {
@@ -34574,55 +34574,55 @@
         "name": "Is Exported",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿",
-          "¿",
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       },
       {
         "name": "Position",
         "type": "string",
         "sample_values": [
-          "[1013,1034]¿",
-          "[472,484]¿",
-          "[1013,1292]¿",
-          "[242,250]¿",
-          "[287,291]¿"
+          "[1013,1034]\u00bf",
+          "[472,484]\u00bf",
+          "[1013,1292]\u00bf",
+          "[242,250]\u00bf",
+          "[287,291]\u00bf"
         ]
       },
       {
         "name": "Property",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿",
-          "¿",
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       },
       {
         "name": "ID",
         "type": "string",
         "sample_values": [
-          "158¿",
-          "68¿",
-          "151¿",
-          "28¿",
-          "39¿"
+          "158\u00bf",
+          "68\u00bf",
+          "151\u00bf",
+          "28\u00bf",
+          "39\u00bf"
         ]
       },
       {
         "name": "Is Static",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿",
-          "¿",
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       },
       {
@@ -34838,7 +34838,7 @@
         "sample_values": [
           "Ontario",
           "Ontario",
-          "Québec",
+          "Qu\u00e9bec",
           "Ontario",
           "Ontario"
         ]
@@ -34860,13 +34860,13 @@
         "sample_values": [
           "University of Toronto",
           "University of Toronto",
-          "Université Laval",
+          "Universit\u00e9 Laval",
           "McMaster University",
           "Robarts Research Institute - U.W.O. (London, Ont.)"
         ]
       },
       {
-        "name": "Key-Clé",
+        "name": "Key-Cl\u00e9",
         "type": "string",
         "sample_values": [
           "195926",
@@ -35055,8 +35055,8 @@
     "caption": "NGC objects",
     "nl_description": "NGC objects",
     "metadata": {
-      "page_title": "List of NGC objects (1–1000)",
-      "second_title": "1–100",
+      "page_title": "List of NGC objects (1\u20131000)",
+      "second_title": "1\u2013100",
       "has_header": true,
       "numeric_columns": [
         6
@@ -35125,7 +35125,7 @@
         ]
       },
       {
-        "name": "ï»¿FSCL_YR",
+        "name": "\u00ef\u00bb\u00bfFSCL_YR",
         "type": "numeric",
         "sample_values": [
           "2007/2008",
@@ -35763,14 +35763,14 @@
         ]
       },
       {
-        "name": "Local Discount (£)",
+        "name": "Local Discount (\u00a3)",
         "type": "string",
         "sample_values": [
-          "£0.00",
-          "£0.00",
-          "£0.00",
-          "£0.00",
-          "£0.00"
+          "\u00a30.00",
+          "\u00a30.00",
+          "\u00a30.00",
+          "\u00a30.00",
+          "\u00a30.00"
         ]
       },
       {
@@ -35983,7 +35983,7 @@
           "Included above",
           "Included above",
           "Included above",
-          "Â£47,044,700.00",
+          "\u00c2\u00a347,044,700.00",
           "Included above"
         ]
       },
@@ -36520,10 +36520,10 @@
         "name": "Score",
         "type": "string",
         "sample_values": [
-          "274 (−14)",
+          "274 (\u221214)",
           "283",
-          "275 (−13)",
-          "269 (−19)",
+          "275 (\u221213)",
+          "269 (\u221219)",
           "Schweppes Open"
         ]
       },
@@ -36591,11 +36591,11 @@
         "name": "Temp.",
         "type": "numeric",
         "sample_values": [
-          "39.0 °F",
-          "39.2 °F",
-          "37.9 °F",
-          "48.0 °F",
-          "37.4 °F"
+          "39.0 \u00b0F",
+          "39.2 \u00b0F",
+          "37.9 \u00b0F",
+          "48.0 \u00b0F",
+          "37.4 \u00b0F"
         ]
       }
     ],
@@ -37607,33 +37607,33 @@
         "name": "Author",
         "type": "string",
         "sample_values": [
-          "ニール コブリッツ",
-          "古籏 一浩",
+          "\u30cb\u30fc\u30eb \u30b3\u30d6\u30ea\u30c3\u30c4",
+          "\u53e4\u7c4f \u4e00\u6d69",
           "Ben Fry",
           "Ronen Feldman",
-          "粂井 康孝"
+          "\u7c82\u4e95 \u5eb7\u5b5d"
         ]
       },
       {
         "name": "Title",
         "type": "string",
         "sample_values": [
-          "数論アルゴリズムと楕円暗号理論入門 (シュプリンガー数学クラブ)",
-          "改訂第3版 JavaScriptポケットリファレンス Pocket reference",
-          "ビジュアライジング・データ ―Processingによる情報視覚化手法",
+          "\u6570\u8ad6\u30a2\u30eb\u30b4\u30ea\u30ba\u30e0\u3068\u6955\u5186\u6697\u53f7\u7406\u8ad6\u5165\u9580 (\u30b7\u30e5\u30d7\u30ea\u30f3\u30ac\u30fc\u6570\u5b66\u30af\u30e9\u30d6)",
+          "\u6539\u8a02\u7b2c3\u7248 JavaScript\u30dd\u30b1\u30c3\u30c8\u30ea\u30d5\u30a1\u30ec\u30f3\u30b9 Pocket reference",
+          "\u30d3\u30b8\u30e5\u30a2\u30e9\u30a4\u30b8\u30f3\u30b0\u30fb\u30c7\u30fc\u30bf \u2015Processing\u306b\u3088\u308b\u60c5\u5831\u8996\u899a\u5316\u624b\u6cd5",
           "The Text Mining Handbook: Advanced Approaches in Analyzing Unstructured Data",
-          "猫でもわかるWindowsプログラミング 第2版 (Neko series)"
+          "\u732b\u3067\u3082\u308f\u304b\u308bWindows\u30d7\u30ed\u30b0\u30e9\u30df\u30f3\u30b0 \u7b2c2\u7248 (Neko series)"
         ]
       },
       {
         "name": "Publisher",
         "type": "string",
         "sample_values": [
-          "シュプリンガー・フェアラーク東京",
-          "技術評論社",
-          "オライリージャパン",
+          "\u30b7\u30e5\u30d7\u30ea\u30f3\u30ac\u30fc\u30fb\u30d5\u30a7\u30a2\u30e9\u30fc\u30af\u6771\u4eac",
+          "\u6280\u8853\u8a55\u8ad6\u793e",
+          "\u30aa\u30e9\u30a4\u30ea\u30fc\u30b8\u30e3\u30d1\u30f3",
           "Cambridge University Press",
-          "ソフトバンククリエイティブ"
+          "\u30bd\u30d5\u30c8\u30d0\u30f3\u30af\u30af\u30ea\u30a8\u30a4\u30c6\u30a3\u30d6"
         ]
       },
       {
@@ -38233,7 +38233,7 @@
   {
     "columns": [
       {
-        "name": "Density (g/cm³)",
+        "name": "Density (g/cm\u00b3)",
         "type": "numeric",
         "sample_values": [
           "0.03",
@@ -39261,14 +39261,14 @@
         ]
       },
       {
-        "name": "Local Discount (£)",
+        "name": "Local Discount (\u00a3)",
         "type": "numeric",
         "sample_values": [
-          "£0.00",
-          "£0.00",
-          "£0.00",
-          "£0.00",
-          "£0.00"
+          "\u00a30.00",
+          "\u00a30.00",
+          "\u00a30.00",
+          "\u00a30.00",
+          "\u00a30.00"
         ]
       },
       {
@@ -41419,44 +41419,44 @@
         "name": "ID",
         "type": "numeric",
         "sample_values": [
-          "345¿",
-          "120¿",
-          "161¿",
-          "197¿",
-          "355¿"
+          "345\u00bf",
+          "120\u00bf",
+          "161\u00bf",
+          "197\u00bf",
+          "355\u00bf"
         ]
       },
       {
         "name": "Parent",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿",
-          "¿",
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       },
       {
         "name": "Comment",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿",
-          "¿",
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       },
       {
         "name": "Child",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿",
-          "¿",
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       },
       {
@@ -41474,11 +41474,11 @@
         "name": "Type",
         "type": "string",
         "sample_values": [
-          "UnaryExpression¿",
-          "Identifier¿",
-          "Identifier¿",
-          "Identifier¿",
-          "ConditionalExpression¿"
+          "UnaryExpression\u00bf",
+          "Identifier\u00bf",
+          "Identifier\u00bf",
+          "Identifier\u00bf",
+          "ConditionalExpression\u00bf"
         ]
       }
     ],
@@ -41729,11 +41729,11 @@
         "name": "Is Static",
         "type": "numeric",
         "sample_values": [
-          "¿",
-          "¿",
-          "¿",
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       },
       {
@@ -41751,55 +41751,55 @@
         "name": "Position",
         "type": "string",
         "sample_values": [
-          "[255,264]¿",
-          "[1417,1429]¿",
-          "[112,2189]¿",
-          "[2171,2186]¿",
-          "[882,897]¿"
+          "[255,264]\u00bf",
+          "[1417,1429]\u00bf",
+          "[112,2189]\u00bf",
+          "[2171,2186]\u00bf",
+          "[882,897]\u00bf"
         ]
       },
       {
         "name": "Parent",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿",
-          "¿",
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       },
       {
         "name": "Is Exported",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿",
-          "¿",
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       },
       {
         "name": "Type",
         "type": "string",
         "sample_values": [
-          "Identifier¿",
-          "AssignmentExpression¿",
-          "VariableDeclaration¿",
-          "ReturnStatement¿",
-          "MemberExpression¿"
+          "Identifier\u00bf",
+          "AssignmentExpression\u00bf",
+          "VariableDeclaration\u00bf",
+          "ReturnStatement\u00bf",
+          "MemberExpression\u00bf"
         ]
       },
       {
         "name": "Child",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿",
-          "¿",
-          "¿",
-          "false¿"
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "false\u00bf"
         ]
       }
     ],
@@ -41824,7 +41824,7 @@
         "name": "Property",
         "type": "numeric",
         "sample_values": [
-          "var¿"
+          "var\u00bf"
         ]
       },
       {
@@ -42092,7 +42092,7 @@
         ]
       },
       {
-        "name": "DepartmentNumber-NumÃ©ro-de-MinistÃ¨re",
+        "name": "DepartmentNumber-Num\u00c3\u00a9ro-de-Minist\u00c3\u00a8re",
         "type": "numeric",
         "sample_values": [
           "53",
@@ -42743,7 +42743,7 @@
           "[Veneto|Veneto]",
           "[Abruzzo|Abruzzo]",
           "[Abruzzo|Abruzzo]",
-          "[Trentino-Alto_Adige/Südtirol|Trentino-Alto Adige/Südtirol]",
+          "[Trentino-Alto_Adige/S\u00fcdtirol|Trentino-Alto Adige/S\u00fcdtirol]",
           "[Veneto|Veneto]"
         ]
       }
@@ -44019,7 +44019,7 @@
         ]
       },
       {
-        "name": "Key-Clé",
+        "name": "Key-Cl\u00e9",
         "type": "string",
         "sample_values": [
           "373686",
@@ -44034,10 +44034,10 @@
         "type": "string",
         "sample_values": [
           "Ontario",
-          "Québec",
+          "Qu\u00e9bec",
           "Manitoba",
           "Inconnu",
-          "Québec"
+          "Qu\u00e9bec"
         ]
       },
       {
@@ -44052,7 +44052,7 @@
         ]
       },
       {
-        "name": "FiscalYear-AnnéeFinancière",
+        "name": "FiscalYear-Ann\u00e9eFinanci\u00e8re",
         "type": "string",
         "sample_values": [
           "200001",
@@ -44067,10 +44067,10 @@
         "type": "string",
         "sample_values": [
           "Ontario",
-          "Québec",
+          "Qu\u00e9bec",
           "Manitoba",
           "Unknown",
-          "Québec"
+          "Qu\u00e9bec"
         ]
       }
     ],
@@ -44486,7 +44486,7 @@
         ]
       },
       {
-        "name": "Actual Cost (Â£)",
+        "name": "Actual Cost (\u00c2\u00a3)",
         "type": "string",
         "sample_values": [
           "42.84",
@@ -45670,7 +45670,7 @@
         "type": "date",
         "sample_values": [
           "Included above",
-          "Â£7,133.00",
+          "\u00c2\u00a37,133.00",
           "Included above",
           "Included above",
           "Included above"
@@ -45681,7 +45681,7 @@
         "type": "numeric",
         "sample_values": [
           "Included above",
-          "Â£14,266.00",
+          "\u00c2\u00a314,266.00",
           "Included above",
           "Included above",
           "Included above"
@@ -46303,11 +46303,11 @@
         "name": "[Declination|Declination]",
         "type": "string",
         "sample_values": [
-          "°14′4″",
-          "°24′28″",
-          "°06′26″",
-          "°28′44″",
-          "°04′46″"
+          "\u00b014\u20324\u2033",
+          "\u00b024\u203228\u2033",
+          "\u00b006\u203226\u2033",
+          "\u00b028\u203244\u2033",
+          "\u00b004\u203246\u2033"
         ]
       },
       {
@@ -46326,8 +46326,8 @@
     "caption": "NGC objects",
     "nl_description": "NGC objects",
     "metadata": {
-      "page_title": "List of NGC objects (1–1000)",
-      "second_title": "1–100",
+      "page_title": "List of NGC objects (1\u20131000)",
+      "second_title": "1\u2013100",
       "has_header": true,
       "numeric_columns": [
         6
@@ -46385,11 +46385,11 @@
         "name": "Range",
         "type": "numeric",
         "sample_values": [
-          "{start:{line:2,column:4},end:{line:77,column:1}}¿",
-          "{start:{line:64,column:69},end:{line:64,column:81}}¿",
-          "{start:{line:68,column:14},end:{line:68,column:24}}¿",
-          "{start:{line:71,column:21},end:{line:71,column:44}}¿",
-          "{start:{line:31,column:2},end:{line:31,column:31}}¿"
+          "{start:{line:2,column:4},end:{line:77,column:1}}\u00bf",
+          "{start:{line:64,column:69},end:{line:64,column:81}}\u00bf",
+          "{start:{line:68,column:14},end:{line:68,column:24}}\u00bf",
+          "{start:{line:71,column:21},end:{line:71,column:44}}\u00bf",
+          "{start:{line:31,column:2},end:{line:31,column:31}}\u00bf"
         ]
       },
       {
@@ -46412,55 +46412,55 @@
         "name": "Child",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿",
-          "false¿",
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf",
+          "false\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       },
       {
         "name": "Type",
         "type": "string",
         "sample_values": [
-          "VariableDeclarator¿",
-          "BinaryExpression¿",
-          "MemberExpression¿",
-          "BinaryExpression¿",
-          "ExpressionStatement¿"
+          "VariableDeclarator\u00bf",
+          "BinaryExpression\u00bf",
+          "MemberExpression\u00bf",
+          "BinaryExpression\u00bf",
+          "ExpressionStatement\u00bf"
         ]
       },
       {
         "name": "Property",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿",
-          "¿",
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       },
       {
         "name": "Position",
         "type": "string",
         "sample_values": [
-          "[116,2188]¿",
-          "[1693,1705]¿",
-          "[1867,1877]¿",
-          "[2035,2058]¿",
-          "[711,740]¿"
+          "[116,2188]\u00bf",
+          "[1693,1705]\u00bf",
+          "[1867,1877]\u00bf",
+          "[2035,2058]\u00bf",
+          "[711,740]\u00bf"
         ]
       },
       {
         "name": "Is Static",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿",
-          "¿",
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       }
     ],
@@ -46663,7 +46663,7 @@
         "type": "string",
         "sample_values": [
           "Pramati Technologies",
-          "Яндекс"
+          "\u042f\u043d\u0434\u0435\u043a\u0441"
         ]
       },
       {
@@ -48566,7 +48566,7 @@
         ]
       },
       {
-        "name": "Payscale Maximum (Â£)",
+        "name": "Payscale Maximum (\u00c2\u00a3)",
         "type": "string",
         "sample_values": [
           "28524",
@@ -48966,7 +48966,7 @@
   {
     "columns": [
       {
-        "name": "ï»¿FSCL_YR",
+        "name": "\u00ef\u00bb\u00bfFSCL_YR",
         "type": "string",
         "sample_values": [
           "2007/2008",
@@ -48988,7 +48988,7 @@
         ]
       },
       {
-        "name": "DepartmentNumber-NumÃ©ro-de-MinistÃ¨re",
+        "name": "DepartmentNumber-Num\u00c3\u00a9ro-de-Minist\u00c3\u00a8re",
         "type": "string",
         "sample_values": [
           "42",
@@ -51031,9 +51031,9 @@
         "type": "numeric",
         "sample_values": [
           "Whyte & Mackay PGA Championship",
-          "271 (−17)",
-          "274 (−14)",
-          "274 (−14)"
+          "271 (\u221217)",
+          "274 (\u221214)",
+          "274 (\u221214)"
         ]
       },
       {
@@ -51744,33 +51744,33 @@
         "name": "Value",
         "type": "string",
         "sample_values": [
-          "setTime¿",
-          "fallback¿",
-          "¿",
-          "&&¿",
-          "¿"
+          "setTime\u00bf",
+          "fallback\u00bf",
+          "\u00bf",
+          "&&\u00bf",
+          "\u00bf"
         ]
       },
       {
         "name": "Parent",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿",
-          "¿",
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       },
       {
         "name": "Position",
         "type": "string",
         "sample_values": [
-          "[874,881]¿",
-          "[686,694]¿",
-          "[686,701]¿",
-          "[1673,1705]¿",
-          "[1799,1809]¿"
+          "[874,881]\u00bf",
+          "[686,694]\u00bf",
+          "[686,701]\u00bf",
+          "[1673,1705]\u00bf",
+          "[1799,1809]\u00bf"
         ]
       },
       {
@@ -51782,66 +51782,66 @@
         "name": "Range",
         "type": "string",
         "sample_values": [
-          "{start:{line:37,column:14},end:{line:37,column:21}}¿",
-          "{start:{line:28,column:4},end:{line:28,column:12}}¿",
-          "{start:{line:28,column:4},end:{line:28,column:19}}¿",
-          "{start:{line:64,column:49},end:{line:64,column:81}}¿",
-          "{start:{line:66,column:35},end:{line:66,column:45}}¿"
+          "{start:{line:37,column:14},end:{line:37,column:21}}\u00bf",
+          "{start:{line:28,column:4},end:{line:28,column:12}}\u00bf",
+          "{start:{line:28,column:4},end:{line:28,column:19}}\u00bf",
+          "{start:{line:64,column:49},end:{line:64,column:81}}\u00bf",
+          "{start:{line:66,column:35},end:{line:66,column:45}}\u00bf"
         ]
       },
       {
         "name": "Comment",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿",
-          "¿",
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       },
       {
         "name": "ID",
         "type": "string",
         "sample_values": [
-          "127¿",
-          "95¿",
-          "94¿",
-          "279¿",
-          "307¿"
+          "127\u00bf",
+          "95\u00bf",
+          "94\u00bf",
+          "279\u00bf",
+          "307\u00bf"
         ]
       },
       {
         "name": "Property",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿",
-          "init¿",
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf",
+          "init\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       },
       {
         "name": "Type",
         "type": "string",
         "sample_values": [
-          "Identifier¿",
-          "Identifier¿",
-          "Property¿",
-          "LogicalExpression¿",
-          "MemberExpression¿"
+          "Identifier\u00bf",
+          "Identifier\u00bf",
+          "Property\u00bf",
+          "LogicalExpression\u00bf",
+          "MemberExpression\u00bf"
         ]
       },
       {
         "name": "Is Exported",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿",
-          "¿",
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       }
     ],
@@ -52131,10 +52131,10 @@
         "type": "string",
         "sample_values": [
           "Included above",
-          "Â£1,048,598.13",
+          "\u00c2\u00a31,048,598.13",
           "Included above",
           "Included above",
-          "Â£19,466.50"
+          "\u00c2\u00a319,466.50"
         ]
       },
       {
@@ -52319,7 +52319,7 @@
         ]
       },
       {
-        "name": "Payscale Minimum (Â£)",
+        "name": "Payscale Minimum (\u00c2\u00a3)",
         "type": "numeric",
         "sample_values": [
           "38532",
@@ -52330,7 +52330,7 @@
         ]
       },
       {
-        "name": "Payscale Maximum (Â£)",
+        "name": "Payscale Maximum (\u00c2\u00a3)",
         "type": "numeric",
         "sample_values": [
           "55044",
@@ -52432,7 +52432,7 @@
           "Rune Blade",
           "Wing Edge",
           "Heavy Lance",
-          "Kain�s Lance",
+          "Kain\ufffds Lance",
           "Tiger Racket"
         ]
       },
@@ -52518,8 +52518,8 @@
           "E Tutto Qua Restaurant (270 Columbus St.)",
           "2100 Pacific Ave at Laguna St",
           "883 42nd Ave.",
-          "New Taraval CafÃ© (1054 Taraval St.)",
-          "Europa CafÃ© (4318 California St. and 5th Ave.)"
+          "New Taraval Caf\u00c3\u00a9 (1054 Taraval St.)",
+          "Europa Caf\u00c3\u00a9 (4318 California St. and 5th Ave.)"
         ]
       }
     ],
@@ -53119,11 +53119,11 @@
         "name": "Estimated Total Value",
         "type": "string",
         "sample_values": [
-          "Â£980,964.45",
+          "\u00c2\u00a3980,964.45",
           "Included above",
-          "Â£70,000.00",
-          "Â£16,506,517.97",
-          "Â£1,200,000.00"
+          "\u00c2\u00a370,000.00",
+          "\u00c2\u00a316,506,517.97",
+          "\u00c2\u00a31,200,000.00"
         ]
       },
       {
@@ -53777,8 +53777,8 @@
         "name": "Chinese",
         "type": "string",
         "sample_values": [
-          "牧",
-          "典客"
+          "\u7267",
+          "\u5178\u5ba2"
         ]
       },
       {
@@ -54435,7 +54435,7 @@
         ]
       },
       {
-        "name": "Payscale Maximum (Â£)",
+        "name": "Payscale Maximum (\u00c2\u00a3)",
         "type": "string",
         "sample_values": [
           "28524",
@@ -54509,7 +54509,7 @@
         ]
       },
       {
-        "name": "ï»¿FSCL_YR",
+        "name": "\u00ef\u00bb\u00bfFSCL_YR",
         "type": "string",
         "sample_values": [
           "2007/2008",
@@ -54551,7 +54551,7 @@
   {
     "columns": [
       {
-        "name": "Density (g/cm³)",
+        "name": "Density (g/cm\u00b3)",
         "type": "numeric",
         "sample_values": [
           "0.09",
@@ -55075,7 +55075,7 @@
         ]
       },
       {
-        "name": "Key-Clé",
+        "name": "Key-Cl\u00e9",
         "type": "string",
         "sample_values": [
           "235467",
@@ -55101,10 +55101,10 @@
         "type": "string",
         "sample_values": [
           "Colombie-Britannique",
-          "Québec",
+          "Qu\u00e9bec",
           "Colombie-Britannique",
           "Ontario",
-          "Québec"
+          "Qu\u00e9bec"
         ]
       },
       {
@@ -55112,10 +55112,10 @@
         "type": "string",
         "sample_values": [
           "University of British Columbia",
-          "McGill University/Université McGill",
+          "McGill University/Universit\u00e9 McGill",
           "University of British Columbia",
           "York University (Toronto, Ontario)",
-          "McGill University/Université McGill"
+          "McGill University/Universit\u00e9 McGill"
         ]
       },
       {
@@ -55223,10 +55223,10 @@
         "name": "Score",
         "type": "string",
         "sample_values": [
-          "274 (−14)",
+          "274 (\u221214)",
           "283",
-          "275 (−13)",
-          "280 (−8)",
+          "275 (\u221213)",
+          "280 (\u22128)",
           "Whyte & Mackay PGA Championship"
         ]
       },
@@ -55303,7 +55303,7 @@
         ]
       },
       {
-        "name": "FiscalYear-AnnéeFinancière",
+        "name": "FiscalYear-Ann\u00e9eFinanci\u00e8re",
         "type": "string",
         "sample_values": [
           "200001",
@@ -55336,7 +55336,7 @@
         ]
       },
       {
-        "name": "Key-Clé",
+        "name": "Key-Cl\u00e9",
         "type": "string",
         "sample_values": [
           "514719",
@@ -56006,8 +56006,8 @@
           "E Tutto Qua Restaurant (270 Columbus St.)",
           "2100 Pacific Ave at Laguna St",
           "883 42nd Ave.",
-          "New Taraval CafÃ© (1054 Taraval St.)",
-          "Europa CafÃ© (4318 California St. and 5th Ave.)"
+          "New Taraval Caf\u00c3\u00a9 (1054 Taraval St.)",
+          "Europa Caf\u00c3\u00a9 (4318 California St. and 5th Ave.)"
         ]
       }
     ],
@@ -56701,9 +56701,9 @@
         "name": "Chinese",
         "type": "string",
         "sample_values": [
-          "九卿",
-          "中書",
-          "太子少傅"
+          "\u4e5d\u537f",
+          "\u4e2d\u66f8",
+          "\u592a\u5b50\u5c11\u5085"
         ]
       }
     ],
@@ -57355,7 +57355,7 @@
         "type": "string",
         "sample_values": [
           "Hirschy",
-          "HiseyÂ",
+          "Hisey\u00c2",
           "Hossman",
           "Huffman",
           "Hawkins"
@@ -57490,7 +57490,7 @@
   {
     "columns": [
       {
-        "name": "Density (g/cm³)",
+        "name": "Density (g/cm\u00b3)",
         "type": "numeric",
         "sample_values": [
           "0.015",
@@ -58710,22 +58710,22 @@
         "name": "Estimated Total Value",
         "type": "string",
         "sample_values": [
-          "Â£2,800,000.00",
+          "\u00c2\u00a32,800,000.00",
           "Included above",
           "Included above",
           "Included above",
-          "Â£200,600.00"
+          "\u00c2\u00a3200,600.00"
         ]
       },
       {
         "name": "Estimated Annual Value",
         "type": "string",
         "sample_values": [
-          "Â£400,000.00",
+          "\u00c2\u00a3400,000.00",
           "Included above",
           "Included above",
           "Included above",
-          "Â£50,150.00"
+          "\u00c2\u00a350,150.00"
         ]
       },
       {
@@ -59713,14 +59713,14 @@
         ]
       },
       {
-        "name": "Local Discount (£)",
+        "name": "Local Discount (\u00a3)",
         "type": "numeric",
         "sample_values": [
-          "£0.00",
-          "£0.00",
-          "£0.00",
-          "£0.00",
-          "£0.00"
+          "\u00a30.00",
+          "\u00a30.00",
+          "\u00a30.00",
+          "\u00a30.00",
+          "\u00a30.00"
         ]
       },
       {
@@ -60307,13 +60307,13 @@
         ]
       },
       {
-        "name": "Total cost, including all visas, accommodation, travel, meals etc. (£)",
+        "name": "Total cost, including all visas, accommodation, travel, meals etc. (\u00a3)",
         "type": "date",
         "sample_values": [
-          "£67.40",
-          "£79.00",
-          "£375.00",
-          "£116.00"
+          "\u00a367.40",
+          "\u00a379.00",
+          "\u00a3375.00",
+          "\u00a3116.00"
         ]
       },
       {
@@ -60342,7 +60342,7 @@
         "sample_values": []
       },
       {
-        "name": "Accommodation/Meals (£)",
+        "name": "Accommodation/Meals (\u00a3)",
         "type": "string",
         "sample_values": [
           "Nil Return",
@@ -60624,7 +60624,7 @@
   {
     "columns": [
       {
-        "name": "Key-Clé",
+        "name": "Key-Cl\u00e9",
         "type": "numeric",
         "sample_values": [
           "747859",
@@ -60637,7 +60637,7 @@
         "name": "CoAppNm",
         "type": "string",
         "sample_values": [
-          "Pérusse, Louis",
+          "P\u00e9russe, Louis",
           "Wang, Yu Tian",
           "Yau, Terrence M",
           "Jorgensen, Annelise O"
@@ -60687,7 +60687,7 @@
         "name": "CoAppOrgNm",
         "type": "string",
         "sample_values": [
-          "Université Laval",
+          "Universit\u00e9 Laval",
           "University of British Columbia",
           "Toronto General Hospital",
           "University of Toronto"
@@ -60697,7 +60697,7 @@
         "name": "ProvinceEN",
         "type": "string",
         "sample_values": [
-          "Québec",
+          "Qu\u00e9bec",
           "British Columbia",
           "Ontario",
           "Ontario"
@@ -60707,7 +60707,7 @@
         "name": "ProvinceFR",
         "type": "string",
         "sample_values": [
-          "Québec",
+          "Qu\u00e9bec",
           "Colombie-Britannique",
           "Ontario",
           "Ontario"
@@ -60734,7 +60734,7 @@
         ]
       },
       {
-        "name": "FiscalYear-AnnéeFinancière",
+        "name": "FiscalYear-Ann\u00e9eFinanci\u00e8re",
         "type": "numeric",
         "sample_values": [
           "200001",
@@ -61217,11 +61217,11 @@
         "name": "Temp.",
         "type": "numeric",
         "sample_values": [
-          "15.8 °F",
-          "17.6 °F",
-          "12.2 °F",
-          "17.6 °F",
-          "14.0 °F"
+          "15.8 \u00b0F",
+          "17.6 \u00b0F",
+          "12.2 \u00b0F",
+          "17.6 \u00b0F",
+          "14.0 \u00b0F"
         ]
       },
       {
@@ -61261,8 +61261,8 @@
         "name": "Windchill",
         "type": "numeric",
         "sample_values": [
-          "8.6 °F",
-          "12.3 °F",
+          "8.6 \u00b0F",
+          "12.3 \u00b0F",
           "-",
           "-",
           "-"
@@ -61664,8 +61664,8 @@
     "caption": "NGC objects",
     "nl_description": "NGC objects",
     "metadata": {
-      "page_title": "List of NGC objects (1–1000)",
-      "second_title": "1–100",
+      "page_title": "List of NGC objects (1\u20131000)",
+      "second_title": "1\u2013100",
       "has_header": true,
       "numeric_columns": [
         6
@@ -61682,10 +61682,10 @@
         "name": "Score",
         "type": "string",
         "sample_values": [
-          "274 (−14)",
+          "274 (\u221214)",
           "283",
-          "275 (−13)",
-          "271 (−17)",
+          "275 (\u221213)",
+          "271 (\u221217)",
           "287"
         ]
       },
@@ -62511,55 +62511,55 @@
         "name": "Type",
         "type": "numeric",
         "sample_values": [
-          "Identifier¿",
-          "Identifier¿",
-          "MemberExpression¿",
-          "CallExpression¿",
-          "ExpressionStatement¿"
+          "Identifier\u00bf",
+          "Identifier\u00bf",
+          "MemberExpression\u00bf",
+          "CallExpression\u00bf",
+          "ExpressionStatement\u00bf"
         ]
       },
       {
         "name": "Child",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿",
-          "false¿",
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf",
+          "false\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       },
       {
         "name": "Is Static",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿",
-          "¿",
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       },
       {
         "name": "Position",
         "type": "string",
         "sample_values": [
-          "[1424,1429]¿",
-          "[2003,2006]¿",
-          "[412,436]¿",
-          "[1737,1756]¿",
-          "[1215,1257]¿"
+          "[1424,1429]\u00bf",
+          "[2003,2006]\u00bf",
+          "[412,436]\u00bf",
+          "[1737,1756]\u00bf",
+          "[1215,1257]\u00bf"
         ]
       },
       {
         "name": "Range",
         "type": "string",
         "sample_values": [
-          "{start:{line:55,column:13},end:{line:55,column:18}}¿",
-          "{start:{line:70,column:17},end:{line:70,column:20}}¿",
-          "{start:{line:16,column:12},end:{line:16,column:36}}¿",
-          "{start:{line:65,column:29},end:{line:65,column:48}}¿",
-          "{start:{line:47,column:8},end:{line:47,column:50}}¿"
+          "{start:{line:55,column:13},end:{line:55,column:18}}\u00bf",
+          "{start:{line:70,column:17},end:{line:70,column:20}}\u00bf",
+          "{start:{line:16,column:12},end:{line:16,column:36}}\u00bf",
+          "{start:{line:65,column:29},end:{line:65,column:48}}\u00bf",
+          "{start:{line:47,column:8},end:{line:47,column:50}}\u00bf"
         ]
       },
       {
@@ -62571,44 +62571,44 @@
         "name": "ID",
         "type": "string",
         "sample_values": [
-          "238¿",
-          "353¿",
-          "61¿",
-          "293¿",
-          "192¿"
+          "238\u00bf",
+          "353\u00bf",
+          "61\u00bf",
+          "293\u00bf",
+          "192\u00bf"
         ]
       },
       {
         "name": "Property",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿",
-          "¿",
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       },
       {
         "name": "Parent",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿",
-          "¿",
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       },
       {
         "name": "Value",
         "type": "string",
         "sample_values": [
-          "value¿",
-          "opt¿",
-          "¿",
-          "¿",
-          "¿"
+          "value\u00bf",
+          "opt\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       },
       {
@@ -62626,11 +62626,11 @@
         "name": "Is Exported",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿",
-          "¿",
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       }
     ],
@@ -63993,90 +63993,90 @@
         "name": "Position",
         "type": "numeric",
         "sample_values": [
-          "[1923,1976]¿",
-          "[1737,1751]¿",
-          "[2113,2116]¿",
-          "[2151,2157]¿"
+          "[1923,1976]\u00bf",
+          "[1737,1751]\u00bf",
+          "[2113,2116]\u00bf",
+          "[2151,2157]\u00bf"
         ]
       },
       {
         "name": "Is Static",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿",
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       },
       {
         "name": "Child",
         "type": "string",
         "sample_values": [
-          "¿",
-          "false¿",
-          "¿",
-          "¿"
+          "\u00bf",
+          "false\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       },
       {
         "name": "Comment",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿",
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       },
       {
         "name": "ID",
         "type": "string",
         "sample_values": [
-          "339¿",
-          "294¿",
-          "373¿",
-          "385¿"
+          "339\u00bf",
+          "294\u00bf",
+          "373\u00bf",
+          "385\u00bf"
         ]
       },
       {
         "name": "Is Exported",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿",
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       },
       {
         "name": "Property",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿",
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       },
       {
         "name": "Value",
         "type": "string",
         "sample_values": [
-          "+¿",
-          "¿",
-          "opt¿",
-          "cookie¿"
+          "+\u00bf",
+          "\u00bf",
+          "opt\u00bf",
+          "cookie\u00bf"
         ]
       },
       {
         "name": "Range",
         "type": "string",
         "sample_values": [
-          "{start:{line:69,column:22},end:{line:69,column:75}}¿",
-          "{start:{line:65,column:29},end:{line:65,column:43}}¿",
-          "{start:{line:73,column:8},end:{line:73,column:11}}¿",
-          "{start:{line:74,column:13},end:{line:74,column:19}}¿"
+          "{start:{line:69,column:22},end:{line:69,column:75}}\u00bf",
+          "{start:{line:65,column:29},end:{line:65,column:43}}\u00bf",
+          "{start:{line:73,column:8},end:{line:73,column:11}}\u00bf",
+          "{start:{line:74,column:13},end:{line:74,column:19}}\u00bf"
         ]
       },
       {
@@ -64402,8 +64402,8 @@
         "type": "string",
         "sample_values": [
           "Fruit, vegetables and cereals fresh or processed",
-          "Bread, pastry, cakes, confectionery, biscuits and other baker’s wares",
-          "Bread, pastry, cakes, confectionery, biscuits and other baker’s wares",
+          "Bread, pastry, cakes, confectionery, biscuits and other baker\u2019s wares",
+          "Bread, pastry, cakes, confectionery, biscuits and other baker\u2019s wares",
           "Meat products (cooked, salted, smoked, etc.)",
           "Oils"
         ]
@@ -64796,7 +64796,7 @@
         "name": "distributor",
         "type": "string",
         "sample_values": [
-          "Pathé",
+          "Path\u00e9",
           "British Lion",
           "GFD",
           "GFD",
@@ -65029,11 +65029,11 @@
         "name": "Dew Point",
         "type": "date",
         "sample_values": [
-          "43.0 °F",
-          "30.9 °F",
-          "33.1 °F",
-          "32.0 °F",
-          "36.0 °F"
+          "43.0 \u00b0F",
+          "30.9 \u00b0F",
+          "33.1 \u00b0F",
+          "32.0 \u00b0F",
+          "36.0 \u00b0F"
         ]
       }
     ],
@@ -65074,11 +65074,11 @@
         "name": "Latitude",
         "type": "string",
         "sample_values": [
-          "33.99°N",
-          "34.17°N",
-          "33.89°N",
-          "34.11°N",
-          "33.80°N"
+          "33.99\u00b0N",
+          "34.17\u00b0N",
+          "33.89\u00b0N",
+          "34.11\u00b0N",
+          "33.80\u00b0N"
         ]
       },
       {
@@ -65472,7 +65472,7 @@
         "name": "Province",
         "type": "string",
         "sample_values": [
-          "Ferrara, Bologna, Forlì - Cesena, Ravenna",
+          "Ferrara, Bologna, Forl\u00ec - Cesena, Ravenna",
           "Potenza",
           "Bologna",
           "Pavia",
@@ -65938,13 +65938,13 @@
         ]
       },
       {
-        "name": "Accommodation/Meals (£)",
+        "name": "Accommodation/Meals (\u00a3)",
         "type": "date",
         "sample_values": [
           "Nil Return",
-          "£98.45",
-          "£65.12",
-          "£129.00"
+          "\u00a398.45",
+          "\u00a365.12",
+          "\u00a3129.00"
         ]
       },
       {
@@ -65958,13 +65958,13 @@
         ]
       },
       {
-        "name": "Total cost, including all visas, accommodation, travel, meals etc. (£)",
+        "name": "Total cost, including all visas, accommodation, travel, meals etc. (\u00a3)",
         "type": "string",
         "sample_values": [
-          "£58.95",
-          "£146.24",
-          "£305.78",
-          "£265.75"
+          "\u00a358.95",
+          "\u00a3146.24",
+          "\u00a3305.78",
+          "\u00a3265.75"
         ]
       },
       {
@@ -66199,14 +66199,14 @@
         ]
       },
       {
-        "name": "Local Discount (£)",
+        "name": "Local Discount (\u00a3)",
         "type": "string",
         "sample_values": [
-          "£0.00",
-          "£0.00",
-          "£0.00",
-          "£0.00",
-          "£0.00"
+          "\u00a30.00",
+          "\u00a30.00",
+          "\u00a30.00",
+          "\u00a30.00",
+          "\u00a30.00"
         ]
       },
       {
@@ -66457,12 +66457,12 @@
         ]
       },
       {
-        "name": "Local Discount (£)",
+        "name": "Local Discount (\u00a3)",
         "type": "string",
         "sample_values": [
-          "£0.00",
-          "£0.00",
-          "£0.00"
+          "\u00a30.00",
+          "\u00a30.00",
+          "\u00a30.00"
         ]
       },
       {
@@ -66736,7 +66736,7 @@
         ]
       },
       {
-        "name": "Gross Cost (Â£)",
+        "name": "Gross Cost (\u00c2\u00a3)",
         "type": "string",
         "sample_values": [
           "18",
@@ -66879,10 +66879,10 @@
         "name": "Author",
         "type": "numeric",
         "sample_values": [
-          "BJ・アレン=コン",
-          "上平 哲",
-          "ガー・レイノルズ",
-          "米田 友洋",
+          "BJ\u30fb\u30a2\u30ec\u30f3=\u30b3\u30f3",
+          "\u4e0a\u5e73 \u54f2",
+          "\u30ac\u30fc\u30fb\u30ec\u30a4\u30ce\u30eb\u30ba",
+          "\u7c73\u7530 \u53cb\u6d0b",
           "Peter Cripps, Peter Eeles"
         ]
       },
@@ -67431,11 +67431,11 @@
         "name": "Dew Point",
         "type": "date",
         "sample_values": [
-          "35.6 °F",
-          "37.4 °F",
-          "35.6 °F",
-          "37.4 °F",
-          "37.0 °F"
+          "35.6 \u00b0F",
+          "37.4 \u00b0F",
+          "35.6 \u00b0F",
+          "37.4 \u00b0F",
+          "37.0 \u00b0F"
         ]
       },
       {
@@ -67497,11 +67497,11 @@
         "name": "Temp.",
         "type": "numeric",
         "sample_values": [
-          "37.4 °F",
-          "37.4 °F",
-          "37.4 °F",
-          "39.2 °F",
-          "39.0 °F"
+          "37.4 \u00b0F",
+          "37.4 \u00b0F",
+          "37.4 \u00b0F",
+          "39.2 \u00b0F",
+          "39.0 \u00b0F"
         ]
       },
       {
@@ -67775,14 +67775,14 @@
         ]
       },
       {
-        "name": "Local Discount (£)",
+        "name": "Local Discount (\u00a3)",
         "type": "date",
         "sample_values": [
-          "£0.00",
-          "£0.00",
-          "£0.00",
-          "£0.00",
-          "£0.00"
+          "\u00a30.00",
+          "\u00a30.00",
+          "\u00a30.00",
+          "\u00a30.00",
+          "\u00a30.00"
         ]
       },
       {
@@ -67927,13 +67927,13 @@
   {
     "columns": [
       {
-        "name": "Total cost, including all visas, accommodation, travel, meals etc. (£)",
+        "name": "Total cost, including all visas, accommodation, travel, meals etc. (\u00a3)",
         "type": "string",
         "sample_values": [
-          "£891.47",
-          "£334.00",
-          "£148.00",
-          "£57.00"
+          "\u00a3891.47",
+          "\u00a3334.00",
+          "\u00a3148.00",
+          "\u00a357.00"
         ]
       },
       {
@@ -67972,10 +67972,10 @@
         ]
       },
       {
-        "name": "Accommodation/Meals (£)",
+        "name": "Accommodation/Meals (\u00a3)",
         "type": "string",
         "sample_values": [
-          "£508.72",
+          "\u00a3508.72",
           "Nil Return",
           "Nil Return",
           "Nil Return"
@@ -68429,9 +68429,9 @@
         "name": "Parent",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       }
     ],
@@ -68655,8 +68655,8 @@
           "E Tutto Qua Restaurant (270 Columbus St.)",
           "2100 Pacific Ave at Laguna St",
           "883 42nd Ave.",
-          "New Taraval CafÃ© (1054 Taraval St.)",
-          "Europa CafÃ© (4318 California St. and 5th Ave.)"
+          "New Taraval Caf\u00c3\u00a9 (1054 Taraval St.)",
+          "Europa Caf\u00c3\u00a9 (4318 California St. and 5th Ave.)"
         ]
       }
     ],
@@ -69107,7 +69107,7 @@
         "name": "distributor",
         "type": "string",
         "sample_values": [
-          "Pathé",
+          "Path\u00e9",
           "GFD",
           "Butchers",
           "GFD",
@@ -69216,22 +69216,22 @@
         "name": "Range",
         "type": "numeric",
         "sample_values": [
-          "{start:{line:21,column:4},end:{line:21,column:20}}¿",
-          "{start:{line:22,column:12},end:{line:24,column:5}}¿",
-          "{start:{line:48,column:15},end:{line:48,column:20}}¿",
-          "{start:{line:57,column:43},end:{line:57,column:51}}¿",
-          "{start:{line:37,column:6},end:{line:37,column:21}}¿"
+          "{start:{line:21,column:4},end:{line:21,column:20}}\u00bf",
+          "{start:{line:22,column:12},end:{line:24,column:5}}\u00bf",
+          "{start:{line:48,column:15},end:{line:48,column:20}}\u00bf",
+          "{start:{line:57,column:43},end:{line:57,column:51}}\u00bf",
+          "{start:{line:37,column:6},end:{line:37,column:21}}\u00bf"
         ]
       },
       {
         "name": "Type",
         "type": "string",
         "sample_values": [
-          "Property¿",
-          "FunctionExpression¿",
-          "Identifier¿",
-          "Identifier¿",
-          "MemberExpression¿"
+          "Property\u00bf",
+          "FunctionExpression\u00bf",
+          "Identifier\u00bf",
+          "Identifier\u00bf",
+          "MemberExpression\u00bf"
         ]
       },
       {
@@ -69243,11 +69243,11 @@
         "name": "Is Exported",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿",
-          "¿",
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       },
       {
@@ -69265,55 +69265,55 @@
         "name": "Value",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿",
-          "parts¿",
-          "fallback¿",
-          "¿"
+          "\u00bf",
+          "\u00bf",
+          "parts\u00bf",
+          "fallback\u00bf",
+          "\u00bf"
         ]
       },
       {
         "name": "Comment",
         "type": "string",
         "sample_values": [
-          "¿",
-          "false¿",
-          "¿",
-          "¿",
-          "¿"
+          "\u00bf",
+          "false\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       },
       {
         "name": "Child",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿",
-          "¿",
-          "¿",
-          "false¿"
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "false\u00bf"
         ]
       },
       {
         "name": "Is Static",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿",
-          "¿",
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       },
       {
         "name": "ID",
         "type": "string",
         "sample_values": [
-          "73¿",
-          "78¿",
-          "209¿",
-          "247¿",
-          "125¿"
+          "73\u00bf",
+          "78\u00bf",
+          "209\u00bf",
+          "247\u00bf",
+          "125\u00bf"
         ]
       }
     ],
@@ -70262,22 +70262,22 @@
         "name": "Estimated Total Value",
         "type": "string",
         "sample_values": [
-          "Â£48,000.00",
-          "Â£1,223,880.00",
-          "Â£500,895.25",
-          "Â£16,800,000.00",
-          "Â£859,067.04"
+          "\u00c2\u00a348,000.00",
+          "\u00c2\u00a31,223,880.00",
+          "\u00c2\u00a3500,895.25",
+          "\u00c2\u00a316,800,000.00",
+          "\u00c2\u00a3859,067.04"
         ]
       },
       {
         "name": "Estimated Annual Value",
         "type": "string",
         "sample_values": [
-          "Â£12,000.00",
-          "Â£305,970.00",
-          "Â£69,973.94",
-          "Â£4,200,000.00",
-          "Â£214,766.76"
+          "\u00c2\u00a312,000.00",
+          "\u00c2\u00a3305,970.00",
+          "\u00c2\u00a369,973.94",
+          "\u00c2\u00a34,200,000.00",
+          "\u00c2\u00a3214,766.76"
         ]
       },
       {
@@ -70553,14 +70553,14 @@
         ]
       },
       {
-        "name": "Local Discount (£)",
+        "name": "Local Discount (\u00a3)",
         "type": "string",
         "sample_values": [
-          "£0.00",
-          "£0.00",
-          "£0.00",
-          "£0.00",
-          "£0.00"
+          "\u00a30.00",
+          "\u00a30.00",
+          "\u00a30.00",
+          "\u00a30.00",
+          "\u00a30.00"
         ]
       },
       {
@@ -72389,11 +72389,11 @@
         "name": "Comment",
         "type": "numeric",
         "sample_values": [
-          "¿",
-          "¿",
-          "¿",
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       },
       {
@@ -72411,33 +72411,33 @@
         "name": "Type",
         "type": "string",
         "sample_values": [
-          "BinaryExpression¿",
-          "Identifier¿",
-          "Identifier¿",
-          "Identifier¿",
-          "exit¿"
+          "BinaryExpression\u00bf",
+          "Identifier\u00bf",
+          "Identifier\u00bf",
+          "Identifier\u00bf",
+          "exit\u00bf"
         ]
       },
       {
         "name": "Property",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿",
-          "¿",
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       },
       {
         "name": "Child",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿",
-          "¿",
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf",
+          "\u00bf"
         ]
       }
     ],
@@ -72685,7 +72685,7 @@
   {
     "columns": [
       {
-        "name": "Density (g/cm³)",
+        "name": "Density (g/cm\u00b3)",
         "type": "numeric",
         "sample_values": [
           "0.040999999999999995",
@@ -73124,7 +73124,7 @@
   {
     "columns": [
       {
-        "name": "Density (g/cm³)",
+        "name": "Density (g/cm\u00b3)",
         "type": "numeric",
         "sample_values": [
           "0.023",
@@ -73321,11 +73321,11 @@
   {
     "columns": [
       {
-        "name": "Accommodation/Meals (£)",
+        "name": "Accommodation/Meals (\u00a3)",
         "type": "string",
         "sample_values": [
           "Nil Return",
-          "£105.00"
+          "\u00a3105.00"
         ]
       },
       {
@@ -74347,72 +74347,72 @@
         "name": "Range",
         "type": "numeric",
         "sample_values": [
-          "{start:{line:5,column:13},end:{line:5,column:16}}¿",
-          "{start:{line:73,column:18},end:{line:73,column:31}}¿"
+          "{start:{line:5,column:13},end:{line:5,column:16}}\u00bf",
+          "{start:{line:73,column:18},end:{line:73,column:31}}\u00bf"
         ]
       },
       {
         "name": "Parent",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf"
         ]
       },
       {
         "name": "Is Static",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf"
         ]
       },
       {
         "name": "Comment",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf"
         ]
       },
       {
         "name": "Type",
         "type": "string",
         "sample_values": [
-          "VariableDeclarator¿",
-          "CallExpression¿"
+          "VariableDeclarator\u00bf",
+          "CallExpression\u00bf"
         ]
       },
       {
         "name": "Position",
         "type": "string",
         "sample_values": [
-          "[217,220]¿",
-          "[2123,2136]¿"
+          "[217,220]\u00bf",
+          "[2123,2136]\u00bf"
         ]
       },
       {
         "name": "Property",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf"
         ]
       },
       {
         "name": "ID",
         "type": "string",
         "sample_values": [
-          "22¿",
-          "376¿"
+          "22\u00bf",
+          "376\u00bf"
         ]
       },
       {
         "name": "Is Exported",
         "type": "string",
         "sample_values": [
-          "¿",
-          "¿"
+          "\u00bf",
+          "\u00bf"
         ]
       },
       {
@@ -75734,7 +75734,7 @@
           "DroidAhead",
           "AnderWeb",
           "NeoMTel Co.,Ltd.",
-          "Яндекс"
+          "\u042f\u043d\u0434\u0435\u043a\u0441"
         ]
       },
       {
@@ -75863,7 +75863,7 @@
           "Wm J",
           "Nettie",
           "Chr",
-          "NellieÂ",
+          "Nellie\u00c2",
           "Mary"
         ]
       },
@@ -76682,11 +76682,11 @@
         "name": "Chinese",
         "type": "string",
         "sample_values": [
-          "督郵",
-          "相[國]",
-          "侍中",
-          "司空",
-          "侍御史"
+          "\u7763\u90f5",
+          "\u76f8[\u570b]",
+          "\u4f8d\u4e2d",
+          "\u53f8\u7a7a",
+          "\u4f8d\u5fa1\u53f2"
         ]
       },
       {
@@ -77068,7 +77068,7 @@
         ]
       },
       {
-        "name": "DepartmentNumber-NumÃ©ro-de-MinistÃ¨re",
+        "name": "DepartmentNumber-Num\u00c3\u00a9ro-de-Minist\u00c3\u00a8re",
         "type": "string",
         "sample_values": [
           "53",
@@ -77271,7 +77271,7 @@
   {
     "columns": [
       {
-        "name": "Gross Cost (Â£)",
+        "name": "Gross Cost (\u00c2\u00a3)",
         "type": "numeric",
         "sample_values": [
           "3.61",
@@ -77638,10 +77638,10 @@
         "type": "string",
         "sample_values": [
           "British Columbia",
-          "Unspecified/Non Spécifié",
+          "Unspecified/Non Sp\u00e9cifi\u00e9",
           "Ontario",
           "Manitoba",
-          "Québec"
+          "Qu\u00e9bec"
         ]
       },
       {
@@ -77656,7 +77656,7 @@
         ]
       },
       {
-        "name": "Key-Clé",
+        "name": "Key-Cl\u00e9",
         "type": "string",
         "sample_values": [
           "364115",
@@ -77682,7 +77682,7 @@
         "type": "string",
         "sample_values": [
           "Canada",
-          "Unspecified/Non Spécifié",
+          "Unspecified/Non Sp\u00e9cifi\u00e9",
           "Canada",
           "Canada",
           "Canada"
@@ -77704,10 +77704,10 @@
         "type": "string",
         "sample_values": [
           "University of British Columbia",
-          "Unspecified/Non Spécifié",
+          "Unspecified/Non Sp\u00e9cifi\u00e9",
           "Sinai Health System (Toronto)",
           "University of Manitoba",
-          "McGill University/Université McGill"
+          "McGill University/Universit\u00e9 McGill"
         ]
       },
       {
@@ -77715,10 +77715,10 @@
         "type": "string",
         "sample_values": [
           "Colombie-Britannique",
-          "Unspecified/Non Spécifié",
+          "Unspecified/Non Sp\u00e9cifi\u00e9",
           "Ontario",
           "Manitoba",
-          "Québec"
+          "Qu\u00e9bec"
         ]
       },
       {
@@ -77726,14 +77726,14 @@
         "type": "string",
         "sample_values": [
           "CAAA",
-          "Unspecified/Non Spécifié",
+          "Unspecified/Non Sp\u00e9cifi\u00e9",
           "CEAD",
           "CDAA",
           "CFAA"
         ]
       },
       {
-        "name": "FiscalYear-AnnéeFinancière",
+        "name": "FiscalYear-Ann\u00e9eFinanci\u00e8re",
         "type": "string",
         "sample_values": [
           "200001",
@@ -78755,11 +78755,11 @@
         "name": "Temp.",
         "type": "numeric",
         "sample_values": [
-          "12.2 °F",
-          "14.0 °F",
-          "17.6 °F",
-          "14.0 °F",
-          "12.2 °F"
+          "12.2 \u00b0F",
+          "14.0 \u00b0F",
+          "17.6 \u00b0F",
+          "14.0 \u00b0F",
+          "12.2 \u00b0F"
         ]
       }
     ],
@@ -78866,11 +78866,11 @@
         "name": "Chinese",
         "type": "string",
         "sample_values": [
-          "大將軍",
-          "少府",
-          "太常",
-          "五官中郎將",
-          "中散大夫"
+          "\u5927\u5c07\u8ecd",
+          "\u5c11\u5e9c",
+          "\u592a\u5e38",
+          "\u4e94\u5b98\u4e2d\u90ce\u5c07",
+          "\u4e2d\u6563\u5927\u592b"
         ]
       },
       {
@@ -79760,8 +79760,8 @@
     "caption": "NGC objects",
     "nl_description": "NGC objects",
     "metadata": {
-      "page_title": "List of NGC objects (1–1000)",
-      "second_title": "1–100",
+      "page_title": "List of NGC objects (1\u20131000)",
+      "second_title": "1\u2013100",
       "has_header": true,
       "numeric_columns": [
         6
@@ -80771,7 +80771,7 @@
         ]
       },
       {
-        "name": "Gross Cost (Â£)",
+        "name": "Gross Cost (\u00c2\u00a3)",
         "type": "string",
         "sample_values": [
           "79.2",
@@ -81147,11 +81147,11 @@
         "name": "Dew Point",
         "type": "date",
         "sample_values": [
-          "35.6 °F",
-          "32.0 °F",
-          "35.6 °F",
-          "37.4 °F",
-          "39.0 °F"
+          "35.6 \u00b0F",
+          "32.0 \u00b0F",
+          "35.6 \u00b0F",
+          "37.4 \u00b0F",
+          "39.0 \u00b0F"
         ]
       },
       {
@@ -81192,7 +81192,7 @@
         "type": "numeric",
         "sample_values": [
           "-",
-          "40.2 °F",
+          "40.2 \u00b0F",
           "-",
           "-",
           "-"
@@ -81290,11 +81290,11 @@
         "name": "IPA",
         "type": "string",
         "sample_values": [
-          "/oʊ/",
-          "/ɜː/",
-          "/uː/",
-          "/ɔː/",
-          "/uː/"
+          "/o\u028a/",
+          "/\u025c\u02d0/",
+          "/u\u02d0/",
+          "/\u0254\u02d0/",
+          "/u\u02d0/"
         ]
       },
       {
@@ -81303,9 +81303,9 @@
         "sample_values": [
           "before single consonant before cons + (-le or r+vowel) word-final before heterosyllabic vowel (inc. unstressed)",
           "after w, before r",
-          "above after /r/ , /ʃ/ , /ʒ/ , /j/ , cons. + /l/",
+          "above after /r/ , /\u0283/ , /\u0292/ , /j/ , cons. + /l/",
           "au, aw",
-          "after /r/ , /ʃ/ , /ʒ/ , /j/ , cons. + /l/"
+          "after /r/ , /\u0283/ , /\u0292/ , /j/ , cons. + /l/"
         ]
       },
       {
@@ -81323,8 +81323,8 @@
         "name": "IPA",
         "type": "string",
         "sample_values": [
-          "/ɒ/ /uː/ /ʌ/ /ə/",
-          "/ɒ/ /ɑː/"
+          "/\u0252/ /u\u02d0/ /\u028c/ /\u0259/",
+          "/\u0252/ /\u0251\u02d0/"
         ]
       },
       {
@@ -81650,7 +81650,7 @@
   {
     "columns": [
       {
-        "name": "Actual Cost (Â£)",
+        "name": "Actual Cost (\u00c2\u00a3)",
         "type": "numeric",
         "sample_values": [
           "19.96",
@@ -81803,7 +81803,7 @@
         ]
       },
       {
-        "name": "Gross Cost (Â£)",
+        "name": "Gross Cost (\u00c2\u00a3)",
         "type": "numeric",
         "sample_values": [
           "22.18",
@@ -82067,7 +82067,7 @@
         "name": "Estimated Annual Value",
         "type": "string",
         "sample_values": [
-          "Â£123,364.49",
+          "\u00c2\u00a3123,364.49",
           "Included above",
           "Included above",
           "Included above",
@@ -82078,7 +82078,7 @@
         "name": "Estimated Total Value",
         "type": "string",
         "sample_values": [
-          "Â£1,357,009.35",
+          "\u00c2\u00a31,357,009.35",
           "Included above",
           "Included above",
           "Included above",
@@ -82189,11 +82189,11 @@
         "name": "Temp.",
         "type": "numeric",
         "sample_values": [
-          "33.8 °F",
-          "37.4 °F",
-          "12.2 °F",
-          "35.6 °F",
-          "15.8 °F"
+          "33.8 \u00b0F",
+          "37.4 \u00b0F",
+          "12.2 \u00b0F",
+          "35.6 \u00b0F",
+          "15.8 \u00b0F"
         ]
       }
     ],
@@ -82648,10 +82648,10 @@
         "type": "string",
         "sample_values": [
           "288 (E)",
-          "271 (−17)",
+          "271 (\u221217)",
           "278",
-          "277 (−11)",
-          "266 (−10)"
+          "277 (\u221211)",
+          "266 (\u221210)"
         ]
       },
       {
@@ -84388,15 +84388,15 @@
         "name": "CoAppOrgNm",
         "type": "string",
         "sample_values": [
-          "McGill University/Université McGill",
+          "McGill University/Universit\u00e9 McGill",
           "University College London (UK)",
-          "McGill University/Université McGill",
+          "McGill University/Universit\u00e9 McGill",
           "University Health Network (Toronto)",
           "McMaster University"
         ]
       },
       {
-        "name": "Key-Clé",
+        "name": "Key-Cl\u00e9",
         "type": "string",
         "sample_values": [
           "62474",
@@ -84418,7 +84418,7 @@
         ]
       },
       {
-        "name": "FiscalYear-AnnéeFinancière",
+        "name": "FiscalYear-Ann\u00e9eFinanci\u00e8re",
         "type": "string",
         "sample_values": [
           "200001",
@@ -84443,9 +84443,9 @@
         "name": "ProvinceEN",
         "type": "string",
         "sample_values": [
-          "Québec",
+          "Qu\u00e9bec",
           "Unknown/Inconnu",
-          "Québec",
+          "Qu\u00e9bec",
           "Ontario",
           "Ontario"
         ]
@@ -84454,9 +84454,9 @@
         "name": "ProvinceFR",
         "type": "string",
         "sample_values": [
-          "Québec",
+          "Qu\u00e9bec",
           "Unknown/Inconnu",
-          "Québec",
+          "Qu\u00e9bec",
           "Ontario",
           "Ontario"
         ]
@@ -84663,7 +84663,7 @@
   {
     "columns": [
       {
-        "name": "Key-Clé",
+        "name": "Key-Cl\u00e9",
         "type": "numeric",
         "sample_values": [
           "258007",
@@ -84734,7 +84734,7 @@
         "sample_values": [
           "McMaster University",
           "University of Victoria (British Columbia)",
-          "Centre for Addiction and Mental Health (Toronto)/Centre de toxicomanie et de santé mentale",
+          "Centre for Addiction and Mental Health (Toronto)/Centre de toxicomanie et de sant\u00e9 mentale",
           "University of Manitoba",
           "University of Western Ontario"
         ]
@@ -84784,7 +84784,7 @@
         ]
       },
       {
-        "name": "FiscalYear-AnnéeFinancière",
+        "name": "FiscalYear-Ann\u00e9eFinanci\u00e8re",
         "type": "numeric",
         "sample_values": [
           "200001",

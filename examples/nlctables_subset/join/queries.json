@@ -1,0 +1,1304 @@
+[
+  {
+    "query_id": "nlc_join_1",
+    "query_text": "Find tables that can be joined with tables containing season(s), csvdata22293691 related to Demographics and Sales with columns like Shots, IPP",
+    "seed_table": "csvData22293691.csv",
+    "query_table": "csvData22293691.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "season(s)",
+        "csvdata22293691",
+        "first"
+      ],
+      "topics": [
+        "Demographics",
+        "Sales"
+      ],
+      "column_mentions": [
+        "Shots",
+        "IPP",
+        "iFenwick/60"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_2",
+    "query_text": "Find tables that can be joined with tables containing activity, csvdata10917663 related to Education and Customer_Data with columns like Status, Dates",
+    "seed_table": "csvData10917663.csv",
+    "query_table": "csvData10917663.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "activity",
+        "csvdata10917663",
+        "cart",
+        "time",
+        "description"
+      ],
+      "topics": [
+        "Education",
+        "Customer_Data"
+      ],
+      "column_mentions": [
+        "Status",
+        "Dates",
+        "Location Icon"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_3",
+    "query_text": "Find tables that can be joined with tables containing strength, rank related to Education and Customer_Data with columns like Company Name, Market Cap (Mil)",
+    "seed_table": "csvData11632972.csv",
+    "query_table": "csvData11632972.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "strength",
+        "rank",
+        "csvdata11632972",
+        "profitability",
+        "(mil)"
+      ],
+      "topics": [
+        "Education",
+        "Customer_Data"
+      ],
+      "column_mentions": [
+        "Company Name",
+        "Market Cap (Mil)",
+        "Financial Strength"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_4",
+    "query_text": "Find tables that can be joined with tables containing csvdata19687925, strength related to Technology and Healthcare with columns like Company Name, Debt-to-Rev.",
+    "seed_table": "csvData19687925.csv",
+    "query_table": "csvData19687925.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "csvdata19687925",
+        "strength",
+        "rank",
+        "profitability",
+        "(mil)"
+      ],
+      "topics": [
+        "Technology",
+        "Healthcare"
+      ],
+      "column_mentions": [
+        "Company Name",
+        "Debt-to-Rev.",
+        "Profitability Rank"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_5",
+    "query_text": "Find tables that can be joined with tables containing strength, rank related to Statistics and Product_Information with columns like Current Ratio, Profitability Rank",
+    "seed_table": "csvData16681302.csv",
+    "query_table": "csvData16681302.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "strength",
+        "rank",
+        "profitability",
+        "csvdata16681302",
+        "(mil)"
+      ],
+      "topics": [
+        "Statistics",
+        "Product_Information"
+      ],
+      "column_mentions": [
+        "Current Ratio",
+        "Profitability Rank",
+        "P/E (NRI)"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_6",
+    "query_text": "Find tables that can be joined with tables containing csvdata22980923, season(s) related to Statistics and Customer_Data with columns like iCorsi, iFenwick",
+    "seed_table": "csvData22980923.csv",
+    "query_table": "csvData22980923.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "csvdata22980923",
+        "season(s)",
+        "first"
+      ],
+      "topics": [
+        "Statistics",
+        "Customer_Data"
+      ],
+      "column_mentions": [
+        "iCorsi",
+        "iFenwick",
+        "First A"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_7",
+    "query_text": "Find tables that can be joined with tables containing strength, csvdata18409343 related to Education and Sports_Statistics with columns like Profitability Rank, Debt-to-Rev.",
+    "seed_table": "csvData18409343.csv",
+    "query_table": "csvData18409343.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "strength",
+        "csvdata18409343",
+        "profitability",
+        "rank",
+        "(mil)"
+      ],
+      "topics": [
+        "Education",
+        "Sports_Statistics"
+      ],
+      "column_mentions": [
+        "Profitability Rank",
+        "Debt-to-Rev.",
+        "Company Name"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_8",
+    "query_text": "Find tables that can be joined with tables containing season(s), first related to Product_Information and Finance with columns like iCorsi/60, G/60",
+    "seed_table": "csvData24643235.csv",
+    "query_table": "csvData24643235.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "season(s)",
+        "first",
+        "csvdata24643235"
+      ],
+      "topics": [
+        "Product_Information",
+        "Finance"
+      ],
+      "column_mentions": [
+        "iCorsi/60",
+        "G/60",
+        "Season(s)"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_9",
+    "query_text": "Find tables that can be joined with tables containing strength, rank related to Customer_Data and Healthcare with columns like Debt-to-Rev., P/E (NRI)",
+    "seed_table": "csvData12116743.csv",
+    "query_table": "csvData12116743.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "strength",
+        "rank",
+        "profitability",
+        "(mil)",
+        "csvdata12116743"
+      ],
+      "topics": [
+        "Customer_Data",
+        "Healthcare"
+      ],
+      "column_mentions": [
+        "Debt-to-Rev.",
+        "P/E (NRI)",
+        "Financial Strength"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_10",
+    "query_text": "Find tables that can be joined with tables containing player, sort related to Customer_Data and Education with columns like Player Sort, Pct",
+    "seed_table": "csvData24515113.csv",
+    "query_table": "csvData24515113.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "player",
+        "sort",
+        "csvdata24515113",
+        "salary"
+      ],
+      "topics": [
+        "Customer_Data",
+        "Education"
+      ],
+      "column_mentions": [
+        "Player Sort",
+        "Pct",
+        "$/WARP Sort"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_11",
+    "query_text": "Find tables that can be joined with tables containing strength, rank related to Healthcare and Product_Information with columns like P/S Ratio, Oper. Margin (%)",
+    "seed_table": "csvData22226385.csv",
+    "query_table": "csvData22226385.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "strength",
+        "rank",
+        "profitability",
+        "csvdata22226385",
+        "(mil)"
+      ],
+      "topics": [
+        "Healthcare",
+        "Product_Information"
+      ],
+      "column_mentions": [
+        "P/S Ratio",
+        "Oper. Margin (%)",
+        "P/E (NRI)"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_12",
+    "query_text": "Find tables that can be joined with tables containing rbaser, rbat related to Technology and Healthcare with columns like oWAR, Rbat",
+    "seed_table": "csvData2852713__13.csv",
+    "query_table": "csvData2852713__13.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "rbaser",
+        "rbat",
+        "csvdata2852713"
+      ],
+      "topics": [
+        "Technology",
+        "Healthcare"
+      ],
+      "column_mentions": [
+        "oWAR",
+        "Rbat",
+        "WAA"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_13",
+    "query_text": "Find tables that can be joined with tables containing csvdata12745314, team related to Technology and Customer_Data with columns like TAv, BVORP",
+    "seed_table": "csvData12745314.csv",
+    "query_table": "csvData12745314.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "csvdata12745314",
+        "team",
+        "year"
+      ],
+      "topics": [
+        "Technology",
+        "Customer_Data"
+      ],
+      "column_mentions": [
+        "TAv",
+        "BVORP",
+        "VORP"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_14",
+    "query_text": "Find tables that can be joined with tables containing player, sort related to Finance and Demographics with columns like WARP/$M Sort, Salary",
+    "seed_table": "csvData6718043.csv",
+    "query_table": "csvData6718043.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "player",
+        "sort",
+        "csvdata6718043",
+        "salary"
+      ],
+      "topics": [
+        "Finance",
+        "Demographics"
+      ],
+      "column_mentions": [
+        "WARP/$M Sort",
+        "Salary",
+        "Pos"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_15",
+    "query_text": "Find tables that can be joined with tables containing country, tour related to Education and Customer_Data with columns like round, tr",
+    "seed_table": "csvData14919643.csv",
+    "query_table": "csvData14919643.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "country",
+        "tour",
+        "name",
+        "csvdata14919643"
+      ],
+      "topics": [
+        "Education",
+        "Customer_Data"
+      ],
+      "column_mentions": [
+        "round",
+        "tr",
+        "place"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_16",
+    "query_text": "Find tables that can be joined with tables containing country, tour related to Technology and Education with columns like site id, round",
+    "seed_table": "csvData15196643.csv",
+    "query_table": "csvData15196643.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "country",
+        "tour",
+        "csvdata15196643",
+        "name"
+      ],
+      "topics": [
+        "Technology",
+        "Education"
+      ],
+      "column_mentions": [
+        "site id",
+        "round",
+        "speed"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_17",
+    "query_text": "Find tables that can be joined with tables containing section, course related to Demographics and Education with columns like Call Number, Years",
+    "seed_table": "csvData12520151.csv",
+    "query_table": "csvData12520151.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "section",
+        "course",
+        "call",
+        "instructor",
+        "title"
+      ],
+      "topics": [
+        "Demographics",
+        "Education"
+      ],
+      "column_mentions": [
+        "Call Number",
+        "Years",
+        "Course Title"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_18",
+    "query_text": "Find tables that can be joined with tables containing strength, rank related to Sales and Product_Information with columns like P/S Ratio, ROE (%)",
+    "seed_table": "csvData23195006.csv",
+    "query_table": "csvData23195006.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "strength",
+        "rank",
+        "profitability",
+        "(mil)",
+        "csvdata23195006"
+      ],
+      "topics": [
+        "Sales",
+        "Product_Information"
+      ],
+      "column_mentions": [
+        "P/S Ratio",
+        "ROE (%)",
+        "Financial Strength"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_19",
+    "query_text": "Find tables that can be joined with tables containing location, csvdata2952024 related to Education and Demographics with columns like Pos, Pos Rank",
+    "seed_table": "csvData2952024.csv",
+    "query_table": "csvData2952024.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "location",
+        "csvdata2952024",
+        "name"
+      ],
+      "topics": [
+        "Education",
+        "Demographics"
+      ],
+      "column_mentions": [
+        "Pos",
+        "Pos Rank",
+        "Rivals Rating"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_20",
+    "query_text": "Find tables that can be joined with tables containing gmsc, csvdata17093328 related to Statistics and Demographics with columns like DRB%, TOV%",
+    "seed_table": "csvData17093328__0.csv",
+    "query_table": "csvData17093328__0.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "gmsc",
+        "csvdata17093328",
+        "usg%",
+        "efg%",
+        "date"
+      ],
+      "topics": [
+        "Statistics",
+        "Demographics"
+      ],
+      "column_mentions": [
+        "DRB%",
+        "TOV%",
+        "TRB%"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_21",
+    "query_text": "Find tables that can be joined with tables containing csvdata23722712, northbridge related to Sales and Technology with columns like Vendor, Super I/O",
+    "seed_table": "csvData23722712.csv",
+    "query_table": "csvData23722712.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "csvdata23722712",
+        "northbridge",
+        "mainboard",
+        "vendor",
+        "southbridge"
+      ],
+      "topics": [
+        "Sales",
+        "Technology"
+      ],
+      "column_mentions": [
+        "Vendor",
+        "Super I/O",
+        "ROM 1"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_22",
+    "query_text": "Find tables that can be joined with tables containing stl%, ortg related to Sports_Statistics and Healthcare with columns like AST%, TRB%",
+    "seed_table": "csvData12739105__3.csv",
+    "query_table": "csvData12739105__3.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "stl%",
+        "ortg",
+        "csvdata12739105",
+        "efg%",
+        "trb%"
+      ],
+      "topics": [
+        "Sports_Statistics",
+        "Healthcare"
+      ],
+      "column_mentions": [
+        "AST%",
+        "TRB%",
+        "STL%"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_23",
+    "query_text": "Find tables that can be joined with tables containing team, year related to Sports_Statistics and Demographics with columns like PA, BRR",
+    "seed_table": "csvData18254710.csv",
+    "query_table": "csvData18254710.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "team",
+        "year",
+        "csvdata18254710"
+      ],
+      "topics": [
+        "Sports_Statistics",
+        "Demographics"
+      ],
+      "column_mentions": [
+        "PA",
+        "BRR",
+        "G"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_24",
+    "query_text": "Find tables that can be joined with tables containing start, tries related to Sports_Statistics and Sales with columns like Sub, Pens",
+    "seed_table": "csvData19238849.csv",
+    "query_table": "csvData19238849.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "start",
+        "tries",
+        "csvdata19238849"
+      ],
+      "topics": [
+        "Sports_Statistics",
+        "Sales"
+      ],
+      "column_mentions": [
+        "Sub",
+        "Pens",
+        "Start"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_25",
+    "query_text": "Find tables that can be joined with tables containing stl%, drb% related to Statistics and Healthcare with columns like DRB%, AST%",
+    "seed_table": "csvData13245391__1.csv",
+    "query_table": "csvData13245391__1.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "stl%",
+        "drb%",
+        "tov%",
+        "csvdata13245391",
+        "ast%"
+      ],
+      "topics": [
+        "Statistics",
+        "Healthcare"
+      ],
+      "column_mentions": [
+        "DRB%",
+        "AST%",
+        "MP"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_26",
+    "query_text": "Find tables that can be joined with tables containing yards, rush related to Finance and Healthcare with columns like Opp, Player",
+    "seed_table": "csvData25166301.csv",
+    "query_table": "csvData25166301.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "yards",
+        "rush",
+        "player",
+        "csvdata25166301",
+        "team"
+      ],
+      "topics": [
+        "Finance",
+        "Healthcare"
+      ],
+      "column_mentions": [
+        "Opp",
+        "Player",
+        "Catches"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_27",
+    "query_text": "Find tables that can be joined with tables containing tov%, csvdata1549285 related to Technology and Demographics with columns like TRB%, Tm",
+    "seed_table": "csvData1549285__2.csv",
+    "query_table": "csvData1549285__2.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "tov%",
+        "csvdata1549285",
+        "blk%",
+        "ast%"
+      ],
+      "topics": [
+        "Technology",
+        "Demographics"
+      ],
+      "column_mentions": [
+        "TRB%",
+        "Tm",
+        "DRtg"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_28",
+    "query_text": "Find tables that can be joined with tables containing arch-deck, girder related to Sports_Statistics and Education with columns like Movable-Swing, Arch-Deck",
+    "seed_table": "csvData16825359__0.csv",
+    "query_table": "csvData16825359__0.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "arch-deck",
+        "girder",
+        "floorbeam",
+        "system",
+        "state"
+      ],
+      "topics": [
+        "Sports_Statistics",
+        "Education"
+      ],
+      "column_mentions": [
+        "Movable-Swing",
+        "Arch-Deck",
+        "Girder & Floorbeam System"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_29",
+    "query_text": "Find tables that can be joined with tables containing date, csvdata1786628 related to Education and Customer_Data with columns like Age, Date",
+    "seed_table": "csvData1786628__6.csv",
+    "query_table": "csvData1786628__6.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "date",
+        "csvdata1786628",
+        "efg%",
+        "trb%"
+      ],
+      "topics": [
+        "Education",
+        "Customer_Data"
+      ],
+      "column_mentions": [
+        "Age",
+        "Date",
+        "eFG%"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_30",
+    "query_text": "Find tables that can be joined with tables containing csvdata1800845, rbat related to Technology and Healthcare with columns like Rrep, 162WL%",
+    "seed_table": "csvData1800845.csv",
+    "query_table": "csvData1800845.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "csvdata1800845",
+        "rbat",
+        "name"
+      ],
+      "topics": [
+        "Technology",
+        "Healthcare"
+      ],
+      "column_mentions": [
+        "Rrep",
+        "162WL%",
+        "Age"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_31",
+    "query_text": "Find tables that can be joined with tables containing csvdata18798221, stl% related to Education and Healthcare with columns like DRB%, ORB%",
+    "seed_table": "csvData18798221__1.csv",
+    "query_table": "csvData18798221__1.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "csvdata18798221",
+        "stl%",
+        "drb%",
+        "ortg",
+        "tov%"
+      ],
+      "topics": [
+        "Education",
+        "Healthcare"
+      ],
+      "column_mentions": [
+        "DRB%",
+        "ORB%",
+        "Age"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_32",
+    "query_text": "Find tables that can be joined with tables containing country, tour related to Statistics and Sports_Statistics with columns like class, round",
+    "seed_table": "csvData12722558.csv",
+    "query_table": "csvData12722558.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "country",
+        "tour",
+        "csvdata12722558",
+        "name"
+      ],
+      "topics": [
+        "Statistics",
+        "Sports_Statistics"
+      ],
+      "column_mentions": [
+        "class",
+        "round",
+        "line/ramp"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_33",
+    "query_text": "Find tables that can be joined with tables containing player, sort related to Sports_Statistics and Technology with columns like Player Sort, WARP/$M Sort",
+    "seed_table": "csvData13282370.csv",
+    "query_table": "csvData13282370.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "player",
+        "sort",
+        "salary",
+        "csvdata13282370"
+      ],
+      "topics": [
+        "Sports_Statistics",
+        "Technology"
+      ],
+      "column_mentions": [
+        "Player Sort",
+        "WARP/$M Sort",
+        "WARP Sort"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_34",
+    "query_text": "Find tables that can be joined with tables containing tov%, csvdata1549285 related to Product_Information and Customer_Data with columns like TOV%, TRB%",
+    "seed_table": "csvData1549285__0.csv",
+    "query_table": "csvData1549285__0.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "tov%",
+        "csvdata1549285",
+        "blk%",
+        "ast%"
+      ],
+      "topics": [
+        "Product_Information",
+        "Customer_Data"
+      ],
+      "column_mentions": [
+        "TOV%",
+        "TRB%",
+        "BLK%"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_35",
+    "query_text": "Find tables that can be joined with tables containing csvdata15894443, year related to Statistics and Finance with columns like AGE, YEAR",
+    "seed_table": "csvData15894443__6.csv",
+    "query_table": "csvData15894443__6.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "csvdata15894443",
+        "year",
+        "opptav"
+      ],
+      "topics": [
+        "Statistics",
+        "Finance"
+      ],
+      "column_mentions": [
+        "AGE",
+        "YEAR",
+        "oppOBP"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_36",
+    "query_text": "Find tables that can be joined with tables containing csvdata27008272 related to Finance and Technology with columns like Team, PPG",
+    "seed_table": "csvData27008272__5.csv",
+    "query_table": "csvData27008272__5.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "csvdata27008272"
+      ],
+      "topics": [
+        "Finance",
+        "Technology"
+      ],
+      "column_mentions": [
+        "Team",
+        "PPG",
+        "FGA"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_37",
+    "query_text": "Find tables that can be joined with tables containing orb%, tov% related to Statistics and Education with columns like TOV%, DRtg",
+    "seed_table": "csvData23141915__1.csv",
+    "query_table": "csvData23141915__1.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "orb%",
+        "tov%",
+        "csvdata23141915",
+        "blk%",
+        "ast%"
+      ],
+      "topics": [
+        "Statistics",
+        "Education"
+      ],
+      "column_mentions": [
+        "TOV%",
+        "DRtg",
+        "Age"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_38",
+    "query_text": "Find tables that can be joined with tables containing csvdata26817631, drb% related to Healthcare and Product_Information with columns like BLK%, eFG%",
+    "seed_table": "csvData26817631__5.csv",
+    "query_table": "csvData26817631__5.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "csvdata26817631",
+        "drb%",
+        "ast%",
+        "efg%"
+      ],
+      "topics": [
+        "Healthcare",
+        "Product_Information"
+      ],
+      "column_mentions": [
+        "BLK%",
+        "eFG%",
+        "DRB%"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_39",
+    "query_text": "Find tables that can be joined with tables containing score, pit(cnt)sequence related to Healthcare and Sports_Statistics with columns like @Bat, wWPA",
+    "seed_table": "csvData12463329.csv",
+    "query_table": "csvData12463329.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "score",
+        "pit(cnt)sequence",
+        "csvdata12463329"
+      ],
+      "topics": [
+        "Healthcare",
+        "Sports_Statistics"
+      ],
+      "column_mentions": [
+        "@Bat",
+        "wWPA",
+        "Out"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_40",
+    "query_text": "Find tables that can be joined with tables containing date, csvdata1786628 related to Education and Sales with columns like Tm, TRB%",
+    "seed_table": "csvData1786628__8.csv",
+    "query_table": "csvData1786628__8.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "date",
+        "csvdata1786628",
+        "efg%",
+        "trb%"
+      ],
+      "topics": [
+        "Education",
+        "Sales"
+      ],
+      "column_mentions": [
+        "Tm",
+        "TRB%",
+        "Opp"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_41",
+    "query_text": "Find tables that can be joined with tables containing stl%, drb% related to Sales and Technology with columns like MP, Opp",
+    "seed_table": "csvData11957850__2.csv",
+    "query_table": "csvData11957850__2.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "stl%",
+        "drb%",
+        "gmsc",
+        "usg%",
+        "csvdata11957850"
+      ],
+      "topics": [
+        "Sales",
+        "Technology"
+      ],
+      "column_mentions": [
+        "MP",
+        "Opp",
+        "STL%"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_42",
+    "query_text": "Find tables that can be joined with tables containing csvdata12357349, country related to Statistics and Product_Information with columns like tour, place",
+    "seed_table": "csvData12357349.csv",
+    "query_table": "csvData12357349.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "csvdata12357349",
+        "country",
+        "tour",
+        "name"
+      ],
+      "topics": [
+        "Statistics",
+        "Product_Information"
+      ],
+      "column_mentions": [
+        "tour",
+        "place",
+        "yob"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_43",
+    "query_text": "Find tables that can be joined with tables containing orb%, drb% related to Finance and Sports_Statistics with columns like Tm, Date",
+    "seed_table": "csvData13051044__2.csv",
+    "query_table": "csvData13051044__2.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "orb%",
+        "drb%",
+        "gmsc",
+        "tov%",
+        "csvdata13051044"
+      ],
+      "topics": [
+        "Finance",
+        "Sports_Statistics"
+      ],
+      "column_mentions": [
+        "Tm",
+        "Date",
+        "DRtg"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_44",
+    "query_text": "Find tables that can be joined with tables containing orb%, tov% related to Customer_Data and Healthcare with columns like DRB%, BLK%",
+    "seed_table": "csvData23141915__0.csv",
+    "query_table": "csvData23141915__0.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "orb%",
+        "tov%",
+        "csvdata23141915",
+        "blk%",
+        "ast%"
+      ],
+      "topics": [
+        "Customer_Data",
+        "Healthcare"
+      ],
+      "column_mentions": [
+        "DRB%",
+        "BLK%",
+        "TOV%"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_45",
+    "query_text": "Find tables that can be joined with tables containing team, year related to Product_Information and Sales with columns like Team, IP",
+    "seed_table": "csvData26294380.csv",
+    "query_table": "csvData26294380.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "team",
+        "year",
+        "csvdata26294380"
+      ],
+      "topics": [
+        "Product_Information",
+        "Sales"
+      ],
+      "column_mentions": [
+        "Team",
+        "IP",
+        "VORP"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_46",
+    "query_text": "Find tables that can be joined with tables containing date, csvdata13344862 related to Education and Sales with columns like Score Before, Rk",
+    "seed_table": "csvData13344862.csv",
+    "query_table": "csvData13344862.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "date",
+        "csvdata13344862"
+      ],
+      "topics": [
+        "Education",
+        "Sales"
+      ],
+      "column_mentions": [
+        "Score Before",
+        "Rk",
+        "G#"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_47",
+    "query_text": "Find tables that can be joined with tables containing csvdata11585188, orb% related to Sales and Technology with columns like Tm, GmSc",
+    "seed_table": "csvData11585188__1.csv",
+    "query_table": "csvData11585188__1.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "csvdata11585188",
+        "orb%",
+        "ast%",
+        "gmsc"
+      ],
+      "topics": [
+        "Sales",
+        "Technology"
+      ],
+      "column_mentions": [
+        "Tm",
+        "GmSc",
+        "BLK%"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_48",
+    "query_text": "Find tables that can be joined with tables containing csvdata16736013 related to Finance and Sports_Statistics with columns like GP, FGM",
+    "seed_table": "csvData16736013__0.csv",
+    "query_table": "csvData16736013__0.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "csvdata16736013"
+      ],
+      "topics": [
+        "Finance",
+        "Sports_Statistics"
+      ],
+      "column_mentions": [
+        "GP",
+        "FGM",
+        "Team"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_49",
+    "query_text": "Find tables that can be joined with tables containing culvert, channel related to Healthcare and Product_Information with columns like Box Beam or Girders (Multiple), Arch-Thru",
+    "seed_table": "csvData14297814__2.csv",
+    "query_table": "csvData14297814__2.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "culvert",
+        "channel",
+        "csvdata14297814",
+        "frame",
+        "arch-thru"
+      ],
+      "topics": [
+        "Healthcare",
+        "Product_Information"
+      ],
+      "column_mentions": [
+        "Box Beam or Girders (Multiple)",
+        "Arch-Thru",
+        "Frame (Except Culverts)"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  },
+  {
+    "query_id": "nlc_join_50",
+    "query_text": "Find tables that can be joined with tables containing orar, rpos related to Demographics and Education with columns like oWAR, Pos Summary",
+    "seed_table": "csvData2852713__15.csv",
+    "query_table": "csvData2852713__15.csv",
+    "task_type": "join",
+    "features": {
+      "keywords": [
+        "orar",
+        "rpos",
+        "owar",
+        "rbaser",
+        "csvdata2852713"
+      ],
+      "topics": [
+        "Demographics",
+        "Education"
+      ],
+      "column_mentions": [
+        "oWAR",
+        "Pos Summary",
+        "Rk"
+      ],
+      "value_mentions": [],
+      "constraints": {}
+    }
+  }
+]

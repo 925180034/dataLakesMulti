@@ -1,0 +1,1436 @@
+[
+  {
+    "query_table": "csvData22293691.csv",
+    "candidate_table": "csvData9205349__16.csv",
+    "query_column": "iFenwick/60",
+    "candidate_column": "iFenwick/60"
+  },
+  {
+    "query_table": "csvData22293691.csv",
+    "candidate_table": "csvData9205349__16.csv",
+    "query_column": "iFenwick",
+    "candidate_column": "iFenwick"
+  },
+  {
+    "query_table": "csvData10917663.csv",
+    "candidate_table": "csvData2182929.csv",
+    "query_column": "Time",
+    "candidate_column": "Time"
+  },
+  {
+    "query_table": "csvData10917663.csv",
+    "candidate_table": "csvData15784667.csv",
+    "query_column": "Time",
+    "candidate_column": "Time"
+  },
+  {
+    "query_table": "csvData10917663.csv",
+    "candidate_table": "csvData2182929.csv",
+    "query_column": "Location",
+    "candidate_column": "Location"
+  },
+  {
+    "query_table": "csvData11632972.csv",
+    "candidate_table": "csvData15352261.csv",
+    "query_column": "Current Ratio",
+    "candidate_column": "Current Ratio"
+  },
+  {
+    "query_table": "csvData11632972.csv",
+    "candidate_table": "csvData15352261.csv",
+    "query_column": "Debt-to-Rev.",
+    "candidate_column": "Debt-to-Rev."
+  },
+  {
+    "query_table": "csvData11632972.csv",
+    "candidate_table": "csvData15352261.csv",
+    "query_column": "P/E (NRI)",
+    "candidate_column": "P/E (NRI)"
+  },
+  {
+    "query_table": "csvData11632972.csv",
+    "candidate_table": "csvData15352261.csv",
+    "query_column": "Market Cap (Mil)",
+    "candidate_column": "Market Cap (Mil)"
+  },
+  {
+    "query_table": "csvData11632972.csv",
+    "candidate_table": "csvData15352261.csv",
+    "query_column": "Financial Strength",
+    "candidate_column": "Financial Strength"
+  },
+  {
+    "query_table": "csvData11632972.csv",
+    "candidate_table": "csvData15352261.csv",
+    "query_column": "Oper. Margin (%)",
+    "candidate_column": "Oper. Margin (%)"
+  },
+  {
+    "query_table": "csvData19687925.csv",
+    "candidate_table": "csvData15352261.csv",
+    "query_column": "Current Ratio",
+    "candidate_column": "Current Ratio"
+  },
+  {
+    "query_table": "csvData19687925.csv",
+    "candidate_table": "csvData15352261.csv",
+    "query_column": "P/S Ratio",
+    "candidate_column": "P/S Ratio"
+  },
+  {
+    "query_table": "csvData19687925.csv",
+    "candidate_table": "csvData15352261.csv",
+    "query_column": "P/E (NRI)",
+    "candidate_column": "P/E (NRI)"
+  },
+  {
+    "query_table": "csvData19687925.csv",
+    "candidate_table": "csvData15352261.csv",
+    "query_column": "Market Cap (Mil)",
+    "candidate_column": "Market Cap (Mil)"
+  },
+  {
+    "query_table": "csvData19687925.csv",
+    "candidate_table": "csvData15352261.csv",
+    "query_column": "Financial Strength",
+    "candidate_column": "Financial Strength"
+  },
+  {
+    "query_table": "csvData19687925.csv",
+    "candidate_table": "csvData15352261.csv",
+    "query_column": "Profitability Rank",
+    "candidate_column": "Profitability Rank"
+  },
+  {
+    "query_table": "csvData19687925.csv",
+    "candidate_table": "csvData15352261.csv",
+    "query_column": "ROE (%)",
+    "candidate_column": "ROE (%)"
+  },
+  {
+    "query_table": "csvData19687925.csv",
+    "candidate_table": "csvData15352261.csv",
+    "query_column": "ROA (%)",
+    "candidate_column": "ROA (%)"
+  },
+  {
+    "query_table": "csvData16681302.csv",
+    "candidate_table": "csvData15352261.csv",
+    "query_column": "P/S Ratio",
+    "candidate_column": "P/S Ratio"
+  },
+  {
+    "query_table": "csvData16681302.csv",
+    "candidate_table": "csvData15352261.csv",
+    "query_column": "Market Cap (Mil)",
+    "candidate_column": "Market Cap (Mil)"
+  },
+  {
+    "query_table": "csvData16681302.csv",
+    "candidate_table": "csvData15352261.csv",
+    "query_column": "Financial Strength",
+    "candidate_column": "Financial Strength"
+  },
+  {
+    "query_table": "csvData16681302.csv",
+    "candidate_table": "csvData15352261.csv",
+    "query_column": "Profitability Rank",
+    "candidate_column": "Profitability Rank"
+  },
+  {
+    "query_table": "csvData16681302.csv",
+    "candidate_table": "csvData15352261.csv",
+    "query_column": "ROA (%)",
+    "candidate_column": "ROA (%)"
+  },
+  {
+    "query_table": "csvData22980923.csv",
+    "candidate_table": "csvData9205349__16.csv",
+    "query_column": "iFenwick",
+    "candidate_column": "iFenwick"
+  },
+  {
+    "query_table": "csvData22980923.csv",
+    "candidate_table": "csvData9205349__18.csv",
+    "query_column": "iFenwick",
+    "candidate_column": "iFenwick"
+  },
+  {
+    "query_table": "csvData18409343.csv",
+    "candidate_table": "csvData15352261.csv",
+    "query_column": "Debt-to-Rev.",
+    "candidate_column": "Debt-to-Rev."
+  },
+  {
+    "query_table": "csvData18409343.csv",
+    "candidate_table": "csvData15352261.csv",
+    "query_column": "Financial Strength",
+    "candidate_column": "Financial Strength"
+  },
+  {
+    "query_table": "csvData24643235.csv",
+    "candidate_table": "csvData9205349__16.csv",
+    "query_column": "iFenwick/60",
+    "candidate_column": "iFenwick/60"
+  },
+  {
+    "query_table": "csvData24643235.csv",
+    "candidate_table": "csvData9205349__16.csv",
+    "query_column": "iFenwick",
+    "candidate_column": "iFenwick"
+  },
+  {
+    "query_table": "csvData24643235.csv",
+    "candidate_table": "csvData9205349__18.csv",
+    "query_column": "iFenwick",
+    "candidate_column": "iFenwick"
+  },
+  {
+    "query_table": "csvData12116743.csv",
+    "candidate_table": "csvData15352261.csv",
+    "query_column": "P/E (NRI)",
+    "candidate_column": "P/E (NRI)"
+  },
+  {
+    "query_table": "csvData12116743.csv",
+    "candidate_table": "csvData15352261.csv",
+    "query_column": "Market Cap (Mil)",
+    "candidate_column": "Market Cap (Mil)"
+  },
+  {
+    "query_table": "csvData12116743.csv",
+    "candidate_table": "csvData15352261.csv",
+    "query_column": "Profitability Rank",
+    "candidate_column": "Profitability Rank"
+  },
+  {
+    "query_table": "csvData12116743.csv",
+    "candidate_table": "csvData15352261.csv",
+    "query_column": "Company Name",
+    "candidate_column": "Company Name"
+  },
+  {
+    "query_table": "csvData24515113.csv",
+    "candidate_table": "csvData20535739__15.csv",
+    "query_column": "Player",
+    "candidate_column": "Player"
+  },
+  {
+    "query_table": "csvData24515113.csv",
+    "candidate_table": "csvData29346752__7.csv",
+    "query_column": "Player",
+    "candidate_column": "Player"
+  },
+  {
+    "query_table": "csvData24515113.csv",
+    "candidate_table": "csvData17302070__4.csv",
+    "query_column": "Player",
+    "candidate_column": "Player"
+  },
+  {
+    "query_table": "csvData24515113.csv",
+    "candidate_table": "csvData783968.csv",
+    "query_column": "Pos",
+    "candidate_column": "Pos"
+  },
+  {
+    "query_table": "csvData22226385.csv",
+    "candidate_table": "csvData15352261.csv",
+    "query_column": "Current Ratio",
+    "candidate_column": "Current Ratio"
+  },
+  {
+    "query_table": "csvData22226385.csv",
+    "candidate_table": "csvData15352261.csv",
+    "query_column": "P/S Ratio",
+    "candidate_column": "P/S Ratio"
+  },
+  {
+    "query_table": "csvData22226385.csv",
+    "candidate_table": "csvData15352261.csv",
+    "query_column": "P/E (NRI)",
+    "candidate_column": "P/E (NRI)"
+  },
+  {
+    "query_table": "csvData22226385.csv",
+    "candidate_table": "csvData15352261.csv",
+    "query_column": "Market Cap (Mil)",
+    "candidate_column": "Market Cap (Mil)"
+  },
+  {
+    "query_table": "csvData22226385.csv",
+    "candidate_table": "csvData15352261.csv",
+    "query_column": "Oper. Margin (%)",
+    "candidate_column": "Oper. Margin (%)"
+  },
+  {
+    "query_table": "csvData2852713__13.csv",
+    "candidate_table": "csvData2852713__10.csv",
+    "query_column": "oWAR",
+    "candidate_column": "oWAR"
+  },
+  {
+    "query_table": "csvData2852713__13.csv",
+    "candidate_table": "csvData2852713__10.csv",
+    "query_column": "Rbat",
+    "candidate_column": "Rbat"
+  },
+  {
+    "query_table": "csvData2852713__13.csv",
+    "candidate_table": "csvData2852713__10.csv",
+    "query_column": "Acquired",
+    "candidate_column": "Acquired"
+  },
+  {
+    "query_table": "csvData2852713__13.csv",
+    "candidate_table": "csvData2852713__10.csv",
+    "query_column": "RAR",
+    "candidate_column": "RAR"
+  },
+  {
+    "query_table": "csvData2852713__13.csv",
+    "candidate_table": "csvData2852713__12.csv",
+    "query_column": "oWAR",
+    "candidate_column": "oWAR"
+  },
+  {
+    "query_table": "csvData2852713__13.csv",
+    "candidate_table": "csvData2852713__12.csv",
+    "query_column": "Rbat",
+    "candidate_column": "Rbat"
+  },
+  {
+    "query_table": "csvData2852713__13.csv",
+    "candidate_table": "csvData2852713__12.csv",
+    "query_column": "Acquired",
+    "candidate_column": "Acquired"
+  },
+  {
+    "query_table": "csvData2852713__13.csv",
+    "candidate_table": "csvData2852713__12.csv",
+    "query_column": "RAR",
+    "candidate_column": "RAR"
+  },
+  {
+    "query_table": "csvData2852713__13.csv",
+    "candidate_table": "csvData2852713__12.csv",
+    "query_column": "Rpos",
+    "candidate_column": "Rpos"
+  },
+  {
+    "query_table": "csvData2852713__13.csv",
+    "candidate_table": "csvData2852713__12.csv",
+    "query_column": "WAR",
+    "candidate_column": "WAR"
+  },
+  {
+    "query_table": "csvData2852713__13.csv",
+    "candidate_table": "csvData2852713__12.csv",
+    "query_column": "Rdp",
+    "candidate_column": "Rdp"
+  },
+  {
+    "query_table": "csvData2852713__13.csv",
+    "candidate_table": "csvData2852713__12.csv",
+    "query_column": "Rbaser",
+    "candidate_column": "Rbaser"
+  },
+  {
+    "query_table": "csvData2852713__13.csv",
+    "candidate_table": "csvData2852713__12.csv",
+    "query_column": "WAA",
+    "candidate_column": "WAA"
+  },
+  {
+    "query_table": "csvData2852713__13.csv",
+    "candidate_table": "csvData2852713__12.csv",
+    "query_column": "dWAR",
+    "candidate_column": "dWAR"
+  },
+  {
+    "query_table": "csvData12745314.csv",
+    "candidate_table": "csvData15497713__0.csv",
+    "query_column": "YEAR",
+    "candidate_column": "YEAR"
+  },
+  {
+    "query_table": "csvData12745314.csv",
+    "candidate_table": "csvData29230622__16.csv",
+    "query_column": "oppAVG",
+    "candidate_column": "oppAVG"
+  },
+  {
+    "query_table": "csvData6718043.csv",
+    "candidate_table": "csvData20535739__15.csv",
+    "query_column": "Player",
+    "candidate_column": "Player"
+  },
+  {
+    "query_table": "csvData6718043.csv",
+    "candidate_table": "csvData29346752__7.csv",
+    "query_column": "Player",
+    "candidate_column": "Player"
+  },
+  {
+    "query_table": "csvData14919643.csv",
+    "candidate_table": "csvData7778755.csv",
+    "query_column": "speed",
+    "candidate_column": "speed"
+  },
+  {
+    "query_table": "csvData14919643.csv",
+    "candidate_table": "csvData7778755.csv",
+    "query_column": "line/ramp",
+    "candidate_column": "line/ramp"
+  },
+  {
+    "query_table": "csvData15196643.csv",
+    "candidate_table": "csvData7778755.csv",
+    "query_column": "speed",
+    "candidate_column": "speed"
+  },
+  {
+    "query_table": "csvData15196643.csv",
+    "candidate_table": "csvData7778755.csv",
+    "query_column": "line/ramp",
+    "candidate_column": "line/ramp"
+  },
+  {
+    "query_table": "csvData12520151.csv",
+    "candidate_table": "csvData2182929.csv",
+    "query_column": "Location",
+    "candidate_column": "Location"
+  },
+  {
+    "query_table": "csvData12520151.csv",
+    "candidate_table": "csvData15784667.csv",
+    "query_column": "Location",
+    "candidate_column": "Location"
+  },
+  {
+    "query_table": "csvData23195006.csv",
+    "candidate_table": "csvData15352261.csv",
+    "query_column": "Current Ratio",
+    "candidate_column": "Current Ratio"
+  },
+  {
+    "query_table": "csvData23195006.csv",
+    "candidate_table": "csvData15352261.csv",
+    "query_column": "Market Cap (Mil)",
+    "candidate_column": "Market Cap (Mil)"
+  },
+  {
+    "query_table": "csvData23195006.csv",
+    "candidate_table": "csvData15352261.csv",
+    "query_column": "Financial Strength",
+    "candidate_column": "Financial Strength"
+  },
+  {
+    "query_table": "csvData23195006.csv",
+    "candidate_table": "csvData15352261.csv",
+    "query_column": "ROA (%)",
+    "candidate_column": "ROA (%)"
+  },
+  {
+    "query_table": "csvData23195006.csv",
+    "candidate_table": "csvData15352261.csv",
+    "query_column": "Oper. Margin (%)",
+    "candidate_column": "Oper. Margin (%)"
+  },
+  {
+    "query_table": "csvData2952024.csv",
+    "candidate_table": "csvData2182929.csv",
+    "query_column": "Location",
+    "candidate_column": "Location"
+  },
+  {
+    "query_table": "csvData2952024.csv",
+    "candidate_table": "csvData783968.csv",
+    "query_column": "Pos",
+    "candidate_column": "Pos"
+  },
+  {
+    "query_table": "csvData17093328__0.csv",
+    "candidate_table": "csvData27587184__4.csv",
+    "query_column": "USG%",
+    "candidate_column": "USG%"
+  },
+  {
+    "query_table": "csvData17093328__0.csv",
+    "candidate_table": "csvData12739105__4.csv",
+    "query_column": "DRtg",
+    "candidate_column": "DRtg"
+  },
+  {
+    "query_table": "csvData17093328__0.csv",
+    "candidate_table": "csvData22418917__5.csv",
+    "query_column": "eFG%",
+    "candidate_column": "eFG%"
+  },
+  {
+    "query_table": "csvData17093328__0.csv",
+    "candidate_table": "csvData26655046__0.csv",
+    "query_column": "TRB%",
+    "candidate_column": "TRB%"
+  },
+  {
+    "query_table": "csvData17093328__0.csv",
+    "candidate_table": "csvData26655046__0.csv",
+    "query_column": "ORtg",
+    "candidate_column": "ORtg"
+  },
+  {
+    "query_table": "csvData17093328__0.csv",
+    "candidate_table": "csvData22418917__5.csv",
+    "query_column": "DRB%",
+    "candidate_column": "DRB%"
+  },
+  {
+    "query_table": "csvData17093328__0.csv",
+    "candidate_table": "csvData26655046__0.csv",
+    "query_column": "USG%",
+    "candidate_column": "USG%"
+  },
+  {
+    "query_table": "csvData23722712.csv",
+    "candidate_table": "csvData11217568.csv",
+    "query_column": "VCS5",
+    "candidate_column": "VCS5"
+  },
+  {
+    "query_table": "csvData23722712.csv",
+    "candidate_table": "csvData11217568.csv",
+    "query_column": "Mainboard",
+    "candidate_column": "Mainboard"
+  },
+  {
+    "query_table": "csvData23722712.csv",
+    "candidate_table": "csvData11217568.csv",
+    "query_column": "v3 only 7",
+    "candidate_column": "v3 only 7"
+  },
+  {
+    "query_table": "csvData23722712.csv",
+    "candidate_table": "csvData11217568.csv",
+    "query_column": "Northbridge",
+    "candidate_column": "Northbridge"
+  },
+  {
+    "query_table": "csvData12739105__3.csv",
+    "candidate_table": "csvData12739105__4.csv",
+    "query_column": "ORB%",
+    "candidate_column": "ORB%"
+  },
+  {
+    "query_table": "csvData12739105__3.csv",
+    "candidate_table": "csvData12739105__4.csv",
+    "query_column": "TRB%",
+    "candidate_column": "TRB%"
+  },
+  {
+    "query_table": "csvData12739105__3.csv",
+    "candidate_table": "csvData12739105__4.csv",
+    "query_column": "DRtg",
+    "candidate_column": "DRtg"
+  },
+  {
+    "query_table": "csvData12739105__3.csv",
+    "candidate_table": "csvData26655046__0.csv",
+    "query_column": "ORB%",
+    "candidate_column": "ORB%"
+  },
+  {
+    "query_table": "csvData12739105__3.csv",
+    "candidate_table": "csvData26655046__0.csv",
+    "query_column": "TRB%",
+    "candidate_column": "TRB%"
+  },
+  {
+    "query_table": "csvData12739105__3.csv",
+    "candidate_table": "csvData26655046__0.csv",
+    "query_column": "ORtg",
+    "candidate_column": "ORtg"
+  },
+  {
+    "query_table": "csvData12739105__3.csv",
+    "candidate_table": "csvData22418917__5.csv",
+    "query_column": "ORtg",
+    "candidate_column": "ORtg"
+  },
+  {
+    "query_table": "csvData12739105__3.csv",
+    "candidate_table": "csvData26655046__0.csv",
+    "query_column": "TS%",
+    "candidate_column": "TS%"
+  },
+  {
+    "query_table": "csvData12739105__3.csv",
+    "candidate_table": "csvData22418917__5.csv",
+    "query_column": "eFG%",
+    "candidate_column": "eFG%"
+  },
+  {
+    "query_table": "csvData18254710.csv",
+    "candidate_table": "csvData24341501__13.csv",
+    "query_column": "VORP",
+    "candidate_column": "VORP"
+  },
+  {
+    "query_table": "csvData18254710.csv",
+    "candidate_table": "csvData8549891__2.csv",
+    "query_column": "VORP",
+    "candidate_column": "VORP"
+  },
+  {
+    "query_table": "csvData18254710.csv",
+    "candidate_table": "csvData15497713__0.csv",
+    "query_column": "YEAR",
+    "candidate_column": "YEAR"
+  },
+  {
+    "query_table": "csvData19238849.csv",
+    "candidate_table": "csvData1283739.csv",
+    "query_column": "Won",
+    "candidate_column": "Won"
+  },
+  {
+    "query_table": "csvData19238849.csv",
+    "candidate_table": "csvData1283739.csv",
+    "query_column": "Pens",
+    "candidate_column": "Pens"
+  },
+  {
+    "query_table": "csvData19238849.csv",
+    "candidate_table": "csvData1283739.csv",
+    "query_column": "Sub",
+    "candidate_column": "Sub"
+  },
+  {
+    "query_table": "csvData19238849.csv",
+    "candidate_table": "csvData1283739.csv",
+    "query_column": "Tries",
+    "candidate_column": "Tries"
+  },
+  {
+    "query_table": "csvData19238849.csv",
+    "candidate_table": "csvData1283739.csv",
+    "query_column": "Draw",
+    "candidate_column": "Draw"
+  },
+  {
+    "query_table": "csvData19238849.csv",
+    "candidate_table": "csvData1283739.csv",
+    "query_column": "Conv",
+    "candidate_column": "Conv"
+  },
+  {
+    "query_table": "csvData13245391__1.csv",
+    "candidate_table": "csvData26655046__0.csv",
+    "query_column": "ORtg",
+    "candidate_column": "ORtg"
+  },
+  {
+    "query_table": "csvData13245391__1.csv",
+    "candidate_table": "csvData22418917__5.csv",
+    "query_column": "ORtg",
+    "candidate_column": "ORtg"
+  },
+  {
+    "query_table": "csvData25166301.csv",
+    "candidate_table": "csvData20535739__15.csv",
+    "query_column": "Player",
+    "candidate_column": "Player"
+  },
+  {
+    "query_table": "csvData25166301.csv",
+    "candidate_table": "csvData29346752__7.csv",
+    "query_column": "Player",
+    "candidate_column": "Player"
+  },
+  {
+    "query_table": "csvData25166301.csv",
+    "candidate_table": "csvData17302070__4.csv",
+    "query_column": "Player",
+    "candidate_column": "Player"
+  },
+  {
+    "query_table": "csvData1549285__2.csv",
+    "candidate_table": "csvData20409520__4.csv",
+    "query_column": "DRtg",
+    "candidate_column": "DRtg"
+  },
+  {
+    "query_table": "csvData1549285__2.csv",
+    "candidate_table": "csvData8963593__3.csv",
+    "query_column": "AST%",
+    "candidate_column": "AST%"
+  },
+  {
+    "query_table": "csvData1549285__2.csv",
+    "candidate_table": "csvData8963593__3.csv",
+    "query_column": "GmSc",
+    "candidate_column": "GmSc"
+  },
+  {
+    "query_table": "csvData1549285__2.csv",
+    "candidate_table": "csvData2660625__0.csv",
+    "query_column": "Opp",
+    "candidate_column": "Opp"
+  },
+  {
+    "query_table": "csvData1549285__2.csv",
+    "candidate_table": "csvData22418917__5.csv",
+    "query_column": "BLK%",
+    "candidate_column": "BLK%"
+  },
+  {
+    "query_table": "csvData1549285__2.csv",
+    "candidate_table": "csvData26655046__0.csv",
+    "query_column": "ORtg",
+    "candidate_column": "ORtg"
+  },
+  {
+    "query_table": "csvData1549285__2.csv",
+    "candidate_table": "csvData22418917__5.csv",
+    "query_column": "ORtg",
+    "candidate_column": "ORtg"
+  },
+  {
+    "query_table": "csvData1549285__2.csv",
+    "candidate_table": "csvData26655046__0.csv",
+    "query_column": "TRB%",
+    "candidate_column": "TRB%"
+  },
+  {
+    "query_table": "csvData16825359__0.csv",
+    "candidate_table": "csvData22069876__2.csv",
+    "query_column": "Arch-Deck",
+    "candidate_column": "Arch-Deck"
+  },
+  {
+    "query_table": "csvData16825359__0.csv",
+    "candidate_table": "csvData22069876__2.csv",
+    "query_column": "Movable-Swing",
+    "candidate_column": "Movable-Swing"
+  },
+  {
+    "query_table": "csvData16825359__0.csv",
+    "candidate_table": "csvData22069876__2.csv",
+    "query_column": "Box Beam or Girders (Multiple)",
+    "candidate_column": "Box Beam or Girders (Multiple)"
+  },
+  {
+    "query_table": "csvData16825359__0.csv",
+    "candidate_table": "csvData14297814__2.csv",
+    "query_column": "Box Beam or Girders (Multiple)",
+    "candidate_column": "Box Beam or Girders (Multiple)"
+  },
+  {
+    "query_table": "csvData16825359__0.csv",
+    "candidate_table": "csvData14297814__0.csv",
+    "query_column": "Frame (Except Culverts)",
+    "candidate_column": "Frame (Except Culverts)"
+  },
+  {
+    "query_table": "csvData16825359__0.csv",
+    "candidate_table": "csvData14297814__1.csv",
+    "query_column": "Frame (Except Culverts)",
+    "candidate_column": "Frame (Except Culverts)"
+  },
+  {
+    "query_table": "csvData16825359__0.csv",
+    "candidate_table": "csvData14297814__2.csv",
+    "query_column": "Frame (Except Culverts)",
+    "candidate_column": "Frame (Except Culverts)"
+  },
+  {
+    "query_table": "csvData16825359__0.csv",
+    "candidate_table": "csvData14297814__2.csv",
+    "query_column": "Arch-Thru",
+    "candidate_column": "Arch-Thru"
+  },
+  {
+    "query_table": "csvData16825359__0.csv",
+    "candidate_table": "csvData14297814__0.csv",
+    "query_column": "Arch-Thru",
+    "candidate_column": "Arch-Thru"
+  },
+  {
+    "query_table": "csvData16825359__0.csv",
+    "candidate_table": "csvData22069876__2.csv",
+    "query_column": "Slab",
+    "candidate_column": "Slab"
+  },
+  {
+    "query_table": "csvData16825359__0.csv",
+    "candidate_table": "csvData10777645.csv",
+    "query_column": "State",
+    "candidate_column": "State"
+  },
+  {
+    "query_table": "csvData1786628__6.csv",
+    "candidate_table": "csvData26655046__0.csv",
+    "query_column": "ORtg",
+    "candidate_column": "ORtg"
+  },
+  {
+    "query_table": "csvData1786628__6.csv",
+    "candidate_table": "csvData22418917__5.csv",
+    "query_column": "eFG%",
+    "candidate_column": "eFG%"
+  },
+  {
+    "query_table": "csvData1786628__6.csv",
+    "candidate_table": "csvData26655046__0.csv",
+    "query_column": "USG%",
+    "candidate_column": "USG%"
+  },
+  {
+    "query_table": "csvData1786628__6.csv",
+    "candidate_table": "csvData26655046__0.csv",
+    "query_column": "TRB%",
+    "candidate_column": "TRB%"
+  },
+  {
+    "query_table": "csvData1800845.csv",
+    "candidate_table": "csvData2852713__12.csv",
+    "query_column": "Rbat",
+    "candidate_column": "Rbat"
+  },
+  {
+    "query_table": "csvData1800845.csv",
+    "candidate_table": "csvData2852713__12.csv",
+    "query_column": "Rpos",
+    "candidate_column": "Rpos"
+  },
+  {
+    "query_table": "csvData1800845.csv",
+    "candidate_table": "csvData2852713__12.csv",
+    "query_column": "Rbaser",
+    "candidate_column": "Rbaser"
+  },
+  {
+    "query_table": "csvData18798221__1.csv",
+    "candidate_table": "csvData1549285__2.csv",
+    "query_column": "GmSc",
+    "candidate_column": "GmSc"
+  },
+  {
+    "query_table": "csvData18798221__1.csv",
+    "candidate_table": "csvData1549285__2.csv",
+    "query_column": "DRtg",
+    "candidate_column": "DRtg"
+  },
+  {
+    "query_table": "csvData18798221__1.csv",
+    "candidate_table": "csvData26655046__0.csv",
+    "query_column": "ORB%",
+    "candidate_column": "ORB%"
+  },
+  {
+    "query_table": "csvData18798221__1.csv",
+    "candidate_table": "csvData26655046__0.csv",
+    "query_column": "ORtg",
+    "candidate_column": "ORtg"
+  },
+  {
+    "query_table": "csvData18798221__1.csv",
+    "candidate_table": "csvData22418917__5.csv",
+    "query_column": "ORtg",
+    "candidate_column": "ORtg"
+  },
+  {
+    "query_table": "csvData12722558.csv",
+    "candidate_table": "csvData7778755.csv",
+    "query_column": "speed",
+    "candidate_column": "speed"
+  },
+  {
+    "query_table": "csvData12722558.csv",
+    "candidate_table": "csvData7778755.csv",
+    "query_column": "line/ramp",
+    "candidate_column": "line/ramp"
+  },
+  {
+    "query_table": "csvData13282370.csv",
+    "candidate_table": "csvData20535739__15.csv",
+    "query_column": "Player",
+    "candidate_column": "Player"
+  },
+  {
+    "query_table": "csvData13282370.csv",
+    "candidate_table": "csvData29346752__7.csv",
+    "query_column": "Player",
+    "candidate_column": "Player"
+  },
+  {
+    "query_table": "csvData1549285__0.csv",
+    "candidate_table": "csvData1549285__2.csv",
+    "query_column": "DRtg",
+    "candidate_column": "DRtg"
+  },
+  {
+    "query_table": "csvData1549285__0.csv",
+    "candidate_table": "csvData26655046__0.csv",
+    "query_column": "TRB%",
+    "candidate_column": "TRB%"
+  },
+  {
+    "query_table": "csvData1549285__0.csv",
+    "candidate_table": "csvData26655046__0.csv",
+    "query_column": "ORtg",
+    "candidate_column": "ORtg"
+  },
+  {
+    "query_table": "csvData15894443__6.csv",
+    "candidate_table": "csvData15894443__4.csv",
+    "query_column": "oppOBP",
+    "candidate_column": "oppOBP"
+  },
+  {
+    "query_table": "csvData15894443__6.csv",
+    "candidate_table": "csvData15894443__4.csv",
+    "query_column": "YEAR",
+    "candidate_column": "YEAR"
+  },
+  {
+    "query_table": "csvData15894443__6.csv",
+    "candidate_table": "csvData15894443__4.csv",
+    "query_column": "oppTAv",
+    "candidate_column": "oppTAv"
+  },
+  {
+    "query_table": "csvData15894443__6.csv",
+    "candidate_table": "csvData15497713__0.csv",
+    "query_column": "oppOBP",
+    "candidate_column": "oppOBP"
+  },
+  {
+    "query_table": "csvData15894443__6.csv",
+    "candidate_table": "csvData15497713__0.csv",
+    "query_column": "YEAR",
+    "candidate_column": "YEAR"
+  },
+  {
+    "query_table": "csvData15894443__6.csv",
+    "candidate_table": "csvData29230622__16.csv",
+    "query_column": "oppAVG",
+    "candidate_column": "oppAVG"
+  },
+  {
+    "query_table": "csvData15894443__6.csv",
+    "candidate_table": "csvData19553885__1.csv",
+    "query_column": "AVG",
+    "candidate_column": "AVG"
+  },
+  {
+    "query_table": "csvData15894443__6.csv",
+    "candidate_table": "csvData24341501__0.csv",
+    "query_column": "PPF",
+    "candidate_column": "PPF"
+  },
+  {
+    "query_table": "csvData15894443__6.csv",
+    "candidate_table": "csvData12906779__1.csv",
+    "query_column": "AGE",
+    "candidate_column": "AGE"
+  },
+  {
+    "query_table": "csvData15894443__6.csv",
+    "candidate_table": "csvData24341501__13.csv",
+    "query_column": "AGE",
+    "candidate_column": "AGE"
+  },
+  {
+    "query_table": "csvData27008272__5.csv",
+    "candidate_table": "csvData16773977__0.csv",
+    "query_column": "FGA",
+    "candidate_column": "FGA"
+  },
+  {
+    "query_table": "csvData27008272__5.csv",
+    "candidate_table": "csvData27008272__4.csv",
+    "query_column": "FT%",
+    "candidate_column": "FT%"
+  },
+  {
+    "query_table": "csvData27008272__5.csv",
+    "candidate_table": "csvData9925714__1.csv",
+    "query_column": "FGM",
+    "candidate_column": "FGM"
+  },
+  {
+    "query_table": "csvData27008272__5.csv",
+    "candidate_table": "csvData6468042__3.csv",
+    "query_column": "3P%",
+    "candidate_column": "3P%"
+  },
+  {
+    "query_table": "csvData27008272__5.csv",
+    "candidate_table": "csvData11839331__4.csv",
+    "query_column": "TOV",
+    "candidate_column": "TOV"
+  },
+  {
+    "query_table": "csvData27008272__5.csv",
+    "candidate_table": "csvData6468042__3.csv",
+    "query_column": "FGA",
+    "candidate_column": "FGA"
+  },
+  {
+    "query_table": "csvData27008272__5.csv",
+    "candidate_table": "csvData9739809__1.csv",
+    "query_column": "Team",
+    "candidate_column": "Team"
+  },
+  {
+    "query_table": "csvData27008272__5.csv",
+    "candidate_table": "csvData20535739__15.csv",
+    "query_column": "Team",
+    "candidate_column": "Team"
+  },
+  {
+    "query_table": "csvData27008272__5.csv",
+    "candidate_table": "csvData7434868__2.csv",
+    "query_column": "RPG",
+    "candidate_column": "RPG"
+  },
+  {
+    "query_table": "csvData27008272__5.csv",
+    "candidate_table": "csvData26724876__5.csv",
+    "query_column": "RPG",
+    "candidate_column": "RPG"
+  },
+  {
+    "query_table": "csvData27008272__5.csv",
+    "candidate_table": "csvData6468042__7.csv",
+    "query_column": "FGM",
+    "candidate_column": "FGM"
+  },
+  {
+    "query_table": "csvData23141915__1.csv",
+    "candidate_table": "csvData11585188__1.csv",
+    "query_column": "Age",
+    "candidate_column": "Age"
+  },
+  {
+    "query_table": "csvData23141915__1.csv",
+    "candidate_table": "csvData11585188__1.csv",
+    "query_column": "ORB%",
+    "candidate_column": "ORB%"
+  },
+  {
+    "query_table": "csvData23141915__1.csv",
+    "candidate_table": "csvData26655046__0.csv",
+    "query_column": "ORtg",
+    "candidate_column": "ORtg"
+  },
+  {
+    "query_table": "csvData23141915__1.csv",
+    "candidate_table": "csvData26655046__0.csv",
+    "query_column": "ORB%",
+    "candidate_column": "ORB%"
+  },
+  {
+    "query_table": "csvData26817631__5.csv",
+    "candidate_table": "csvData26761314__4.csv",
+    "query_column": "USG%",
+    "candidate_column": "USG%"
+  },
+  {
+    "query_table": "csvData26817631__5.csv",
+    "candidate_table": "csvData26655046__0.csv",
+    "query_column": "USG%",
+    "candidate_column": "USG%"
+  },
+  {
+    "query_table": "csvData26817631__5.csv",
+    "candidate_table": "csvData22418917__5.csv",
+    "query_column": "USG%",
+    "candidate_column": "USG%"
+  },
+  {
+    "query_table": "csvData26817631__5.csv",
+    "candidate_table": "csvData26655046__0.csv",
+    "query_column": "ORB%",
+    "candidate_column": "ORB%"
+  },
+  {
+    "query_table": "csvData12463329.csv",
+    "candidate_table": "csvData11247855.csv",
+    "query_column": "wWPA",
+    "candidate_column": "wWPA"
+  },
+  {
+    "query_table": "csvData12463329.csv",
+    "candidate_table": "csvData11247855.csv",
+    "query_column": "Play Description",
+    "candidate_column": "Play Description"
+  },
+  {
+    "query_table": "csvData12463329.csv",
+    "candidate_table": "csvData11247855.csv",
+    "query_column": "Pit(cnt)Sequence",
+    "candidate_column": "Pit(cnt)Sequence"
+  },
+  {
+    "query_table": "csvData12463329.csv",
+    "candidate_table": "csvData11247855.csv",
+    "query_column": "@Bat",
+    "candidate_column": "@Bat"
+  },
+  {
+    "query_table": "csvData12463329.csv",
+    "candidate_table": "csvData11247855.csv",
+    "query_column": "wWE",
+    "candidate_column": "wWE"
+  },
+  {
+    "query_table": "csvData1786628__8.csv",
+    "candidate_table": "csvData26655046__0.csv",
+    "query_column": "ORtg",
+    "candidate_column": "ORtg"
+  },
+  {
+    "query_table": "csvData1786628__8.csv",
+    "candidate_table": "csvData22418917__5.csv",
+    "query_column": "ORtg",
+    "candidate_column": "ORtg"
+  },
+  {
+    "query_table": "csvData1786628__8.csv",
+    "candidate_table": "csvData22418917__5.csv",
+    "query_column": "eFG%",
+    "candidate_column": "eFG%"
+  },
+  {
+    "query_table": "csvData1786628__8.csv",
+    "candidate_table": "csvData26655046__0.csv",
+    "query_column": "TRB%",
+    "candidate_column": "TRB%"
+  },
+  {
+    "query_table": "csvData1786628__8.csv",
+    "candidate_table": "csvData26655046__0.csv",
+    "query_column": "USG%",
+    "candidate_column": "USG%"
+  },
+  {
+    "query_table": "csvData11957850__2.csv",
+    "candidate_table": "csvData22418917__0.csv",
+    "query_column": "USG%",
+    "candidate_column": "USG%"
+  },
+  {
+    "query_table": "csvData11957850__2.csv",
+    "candidate_table": "csvData22418917__0.csv",
+    "query_column": "Opp",
+    "candidate_column": "Opp"
+  },
+  {
+    "query_table": "csvData11957850__2.csv",
+    "candidate_table": "csvData22418917__5.csv",
+    "query_column": "BLK%",
+    "candidate_column": "BLK%"
+  },
+  {
+    "query_table": "csvData11957850__2.csv",
+    "candidate_table": "csvData26655046__0.csv",
+    "query_column": "USG%",
+    "candidate_column": "USG%"
+  },
+  {
+    "query_table": "csvData11957850__2.csv",
+    "candidate_table": "csvData22418917__5.csv",
+    "query_column": "DRB%",
+    "candidate_column": "DRB%"
+  },
+  {
+    "query_table": "csvData12357349.csv",
+    "candidate_table": "csvData7778755.csv",
+    "query_column": "speed",
+    "candidate_column": "speed"
+  },
+  {
+    "query_table": "csvData12357349.csv",
+    "candidate_table": "csvData7778755.csv",
+    "query_column": "line/ramp",
+    "candidate_column": "line/ramp"
+  },
+  {
+    "query_table": "csvData13051044__2.csv",
+    "candidate_table": "csvData26655046__0.csv",
+    "query_column": "ORB%",
+    "candidate_column": "ORB%"
+  },
+  {
+    "query_table": "csvData13051044__2.csv",
+    "candidate_table": "csvData22418917__5.csv",
+    "query_column": "DRB%",
+    "candidate_column": "DRB%"
+  },
+  {
+    "query_table": "csvData23141915__0.csv",
+    "candidate_table": "csvData13051044__0.csv",
+    "query_column": "DRB%",
+    "candidate_column": "DRB%"
+  },
+  {
+    "query_table": "csvData23141915__0.csv",
+    "candidate_table": "csvData13051044__0.csv",
+    "query_column": "ORB%",
+    "candidate_column": "ORB%"
+  },
+  {
+    "query_table": "csvData23141915__0.csv",
+    "candidate_table": "csvData1549285__2.csv",
+    "query_column": "DRtg",
+    "candidate_column": "DRtg"
+  },
+  {
+    "query_table": "csvData23141915__0.csv",
+    "candidate_table": "csvData10163568__3.csv",
+    "query_column": "BLK%",
+    "candidate_column": "BLK%"
+  },
+  {
+    "query_table": "csvData23141915__0.csv",
+    "candidate_table": "csvData10163568__3.csv",
+    "query_column": "TOV%",
+    "candidate_column": "TOV%"
+  },
+  {
+    "query_table": "csvData23141915__0.csv",
+    "candidate_table": "csvData26655046__0.csv",
+    "query_column": "ORB%",
+    "candidate_column": "ORB%"
+  },
+  {
+    "query_table": "csvData23141915__0.csv",
+    "candidate_table": "csvData26655046__0.csv",
+    "query_column": "ORtg",
+    "candidate_column": "ORtg"
+  },
+  {
+    "query_table": "csvData23141915__0.csv",
+    "candidate_table": "csvData22418917__5.csv",
+    "query_column": "BLK%",
+    "candidate_column": "BLK%"
+  },
+  {
+    "query_table": "csvData26294380.csv",
+    "candidate_table": "csvData15936069__14.csv",
+    "query_column": "oppTAv",
+    "candidate_column": "oppTAv"
+  },
+  {
+    "query_table": "csvData26294380.csv",
+    "candidate_table": "csvData15497713__0.csv",
+    "query_column": "YEAR",
+    "candidate_column": "YEAR"
+  },
+  {
+    "query_table": "csvData26294380.csv",
+    "candidate_table": "csvData15497713__0.csv",
+    "query_column": "oppOBP",
+    "candidate_column": "oppOBP"
+  },
+  {
+    "query_table": "csvData26294380.csv",
+    "candidate_table": "csvData29230622__16.csv",
+    "query_column": "oppAVG",
+    "candidate_column": "oppAVG"
+  },
+  {
+    "query_table": "csvData26294380.csv",
+    "candidate_table": "csvData15936069__14.csv",
+    "query_column": "oppAVG",
+    "candidate_column": "oppAVG"
+  },
+  {
+    "query_table": "csvData13344862.csv",
+    "candidate_table": "csvData783968.csv",
+    "query_column": "Dist",
+    "candidate_column": "Dist"
+  },
+  {
+    "query_table": "csvData13344862.csv",
+    "candidate_table": "csvData2182929.csv",
+    "query_column": "Type",
+    "candidate_column": "Type"
+  },
+  {
+    "query_table": "csvData13344862.csv",
+    "candidate_table": "csvData15784667.csv",
+    "query_column": "Type",
+    "candidate_column": "Type"
+  },
+  {
+    "query_table": "csvData11585188__1.csv",
+    "candidate_table": "csvData26655046__0.csv",
+    "query_column": "ORB%",
+    "candidate_column": "ORB%"
+  },
+  {
+    "query_table": "csvData11585188__1.csv",
+    "candidate_table": "csvData26655046__0.csv",
+    "query_column": "TS%",
+    "candidate_column": "TS%"
+  },
+  {
+    "query_table": "csvData11585188__1.csv",
+    "candidate_table": "csvData22418917__5.csv",
+    "query_column": "BLK%",
+    "candidate_column": "BLK%"
+  },
+  {
+    "query_table": "csvData16736013__0.csv",
+    "candidate_table": "csvData9925714__0.csv",
+    "query_column": "FGM",
+    "candidate_column": "FGM"
+  },
+  {
+    "query_table": "csvData16736013__0.csv",
+    "candidate_table": "csvData9739809__1.csv",
+    "query_column": "Team",
+    "candidate_column": "Team"
+  },
+  {
+    "query_table": "csvData16736013__0.csv",
+    "candidate_table": "csvData20535739__15.csv",
+    "query_column": "Team",
+    "candidate_column": "Team"
+  },
+  {
+    "query_table": "csvData16736013__0.csv",
+    "candidate_table": "csvData20075499__5.csv",
+    "query_column": "Team",
+    "candidate_column": "Team"
+  },
+  {
+    "query_table": "csvData16736013__0.csv",
+    "candidate_table": "csvData7434868__2.csv",
+    "query_column": "MPG",
+    "candidate_column": "MPG"
+  },
+  {
+    "query_table": "csvData16736013__0.csv",
+    "candidate_table": "csvData6468042__3.csv",
+    "query_column": "ORB",
+    "candidate_column": "ORB"
+  },
+  {
+    "query_table": "csvData16736013__0.csv",
+    "candidate_table": "csvData27008272__5.csv",
+    "query_column": "FGM",
+    "candidate_column": "FGM"
+  },
+  {
+    "query_table": "csvData16736013__0.csv",
+    "candidate_table": "csvData6468042__7.csv",
+    "query_column": "FGM",
+    "candidate_column": "FGM"
+  },
+  {
+    "query_table": "csvData16736013__0.csv",
+    "candidate_table": "csvData7434868__2.csv",
+    "query_column": "APG",
+    "candidate_column": "APG"
+  },
+  {
+    "query_table": "csvData14297814__2.csv",
+    "candidate_table": "csvData22069876__2.csv",
+    "query_column": "Box Beam or Girders (Multiple)",
+    "candidate_column": "Box Beam or Girders (Multiple)"
+  },
+  {
+    "query_table": "csvData14297814__2.csv",
+    "candidate_table": "csvData16825359__0.csv",
+    "query_column": "Box Beam or Girders (Multiple)",
+    "candidate_column": "Box Beam or Girders (Multiple)"
+  },
+  {
+    "query_table": "csvData14297814__2.csv",
+    "candidate_table": "csvData14297814__0.csv",
+    "query_column": "Frame (Except Culverts)",
+    "candidate_column": "Frame (Except Culverts)"
+  },
+  {
+    "query_table": "csvData14297814__2.csv",
+    "candidate_table": "csvData14297814__1.csv",
+    "query_column": "Frame (Except Culverts)",
+    "candidate_column": "Frame (Except Culverts)"
+  },
+  {
+    "query_table": "csvData14297814__2.csv",
+    "candidate_table": "csvData14297814__0.csv",
+    "query_column": "Truss-Deck",
+    "candidate_column": "Truss-Deck"
+  },
+  {
+    "query_table": "csvData14297814__2.csv",
+    "candidate_table": "csvData14297814__1.csv",
+    "query_column": "Truss-Deck",
+    "candidate_column": "Truss-Deck"
+  },
+  {
+    "query_table": "csvData2852713__15.csv",
+    "candidate_table": "csvData14518660__14.csv",
+    "query_column": "Rbaser",
+    "candidate_column": "Rbaser"
+  },
+  {
+    "query_table": "csvData2852713__15.csv",
+    "candidate_table": "csvData2852713__18.csv",
+    "query_column": "Rpos",
+    "candidate_column": "Rpos"
+  },
+  {
+    "query_table": "csvData2852713__15.csv",
+    "candidate_table": "csvData2852713__18.csv",
+    "query_column": "oWAR",
+    "candidate_column": "oWAR"
+  },
+  {
+    "query_table": "csvData2852713__15.csv",
+    "candidate_table": "csvData2852713__18.csv",
+    "query_column": "Pos Summary",
+    "candidate_column": "Pos Summary"
+  },
+  {
+    "query_table": "csvData2852713__15.csv",
+    "candidate_table": "csvData2852713__18.csv",
+    "query_column": "Salary",
+    "candidate_column": "Salary"
+  },
+  {
+    "query_table": "csvData2852713__15.csv",
+    "candidate_table": "csvData2852713__17.csv",
+    "query_column": "oRAR",
+    "candidate_column": "oRAR"
+  },
+  {
+    "query_table": "csvData2852713__15.csv",
+    "candidate_table": "csvData2852713__17.csv",
+    "query_column": "Name",
+    "candidate_column": "Name"
+  },
+  {
+    "query_table": "csvData2852713__15.csv",
+    "candidate_table": "csvData2852713__12.csv",
+    "query_column": "Rbaser",
+    "candidate_column": "Rbaser"
+  },
+  {
+    "query_table": "csvData2852713__15.csv",
+    "candidate_table": "csvData2852713__12.csv",
+    "query_column": "Rpos",
+    "candidate_column": "Rpos"
+  },
+  {
+    "query_table": "csvData2852713__15.csv",
+    "candidate_table": "csvData2852713__12.csv",
+    "query_column": "oWAR",
+    "candidate_column": "oWAR"
+  }
+]

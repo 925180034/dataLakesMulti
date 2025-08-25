@@ -165,7 +165,7 @@ class DataLakeDiscoveryWorkflow:
             state = self.analyzer.process(state)
             
             # 保存到缓存
-            if table_name and 'table_analysis' in state:
+            if table_name and state and 'table_analysis' in state:
                 self.analysis_cache[table_name] = state['table_analysis']
                 self.logger.info(f"💾 Cached analysis for table {table_name}")
         else:
@@ -309,6 +309,130 @@ class DataLakeDiscoveryWorkflow:
             
         except Exception as e:
             self.logger.error(f"Workflow failed: {e}", exc_info=True)
+            return {
+                'success': False,
+                'error': str(e),
+                'results': [],
+                'total_time': time.time() - start_time
+            }
+
+    def run_nlctables(self, nlc_query: Dict[str, Any], tables: List[Dict[str, Any]], 
+                     task_type: str = 'join') -> Dict[str, Any]:
+        """
+        Run the workflow for NLCTables queries
+        
+        Args:
+            nlc_query: NLCTables query with query_text and features
+            tables: List of all tables
+            task_type: 'join' or 'union'
+            
+        Returns:
+            Workflow results
+        """
+        start_time = time.time()
+        query_id = nlc_query.get('query_id', '')
+        query_text = nlc_query.get('query_text', '')
+        features = nlc_query.get('features', {})
+        seed_table = nlc_query.get('seed_table', '')
+        
+        self.logger.info(f"Starting NLCTables workflow for query: {query_id}")
+        self.logger.debug(f"Query text: {query_text}")
+        self.logger.debug(f"Features: {features}")
+        
+        # Find seed table if it exists
+        query_table = None
+        if seed_table:
+            for table in tables:
+                if table.get('table_name') == seed_table or table.get('name') == seed_table:
+                    query_table = table
+                    break
+        
+        # If no seed table found, create a pseudo table from features
+        if not query_table and features:
+            column_mentions = features.get('column_mentions', [])
+            keywords = features.get('keywords', [])
+            
+            # Create pseudo table for NLCTables
+            query_table = {
+                'table_name': f'nlc_query_{query_id}',
+                'name': f'nlc_query_{query_id}',
+                'columns': [{'name': col, 'column_name': col} for col in column_mentions],
+                'description': query_text,
+                'keywords': keywords,
+                'is_nlc_query': True
+            }
+            self.logger.info(f"Created pseudo table for NLCTables query: {query_table['name']}")
+        
+        # Initialize state with NLCTables information
+        initial_state: WorkflowState = {
+            'query_task': QueryTask(
+                query=query_text,
+                task_type=task_type,
+                table_name=query_table.get('table_name', '') if query_table else '',
+                query_text=query_text,  # NLCTables specific
+                features=features,  # NLCTables specific
+                query_id=query_id  # NLCTables specific
+            ),
+            'query_table': query_table,
+            'all_tables': tables,
+            'is_nlctables': True,  # Flag to indicate NLCTables query
+            'nl_features': features,  # Natural language features
+            'query_text': query_text,  # Natural language query
+            'metrics': PerformanceMetrics(
+                total_time=0,
+                agent_times={},
+                candidates_generated=0,
+                llm_calls_made=0
+            ),
+            'errors': []
+        }
+        
+        try:
+            # Run workflow
+            self.logger.info("Executing NLCTables workflow...")
+            result_state = self.workflow.invoke(initial_state)
+            
+            # Extract results
+            final_results = result_state.get('final_results', [])
+            metrics = result_state.get('metrics')
+            errors = result_state.get('errors', [])
+            
+            # Calculate total time
+            total_time = time.time() - start_time
+            if metrics:
+                metrics.total_time = total_time
+            
+            # Format results
+            formatted_results = []
+            for match in final_results:
+                formatted_results.append({
+                    'table_name': match.matched_table,
+                    'score': match.score,
+                    'confidence': match.confidence,
+                    'match_type': match.match_type,
+                    'agent': match.agent_used,
+                    'evidence': match.evidence
+                })
+            
+            self.logger.info(f"NLCTables workflow completed in {total_time:.2f}s")
+            self.logger.info(f"Found {len(formatted_results)} matches")
+            
+            return {
+                'success': True,
+                'query_id': query_id,
+                'task_type': task_type,
+                'results': formatted_results,
+                'metrics': {
+                    'total_time': total_time,
+                    'candidates_generated': metrics.candidates_generated if metrics else 0,
+                    'llm_calls_made': metrics.llm_calls_made if metrics else 0,
+                    'agent_times': metrics.agent_times if metrics else {}
+                },
+                'errors': errors
+            }
+            
+        except Exception as e:
+            self.logger.error(f"NLCTables workflow failed: {e}", exc_info=True)
             return {
                 'success': False,
                 'error': str(e),

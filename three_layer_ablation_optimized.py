@@ -146,12 +146,29 @@ def init_cache_manager(dataset_name: str = '', task_type: str = '', dataset_type
 
 
 def load_dataset(task_type: str, dataset_type: str = 'subset') -> tuple:
-    """加载数据集
+    """加载数据集（支持NLCTables）
     
     Args:
         task_type: 'join' 或 'union'
-        dataset_type: 'subset', 'true_subset', 'complete', 'full' 或自定义路径
+        dataset_type: 'subset', 'true_subset', 'complete', 'full', 'nlctables' 或自定义路径
     """
+    # 检查是否是NLCTables数据集
+    if 'nlctables' in dataset_type.lower():
+        from nlctables_adapter import NLCTablesAdapter
+        adapter = NLCTablesAdapter()
+        
+        # 解析subset类型
+        if 'complete' in dataset_type:
+            subset_type = 'complete'
+        else:
+            subset_type = 'subset'
+        
+        # 使用适配器加载数据
+        tables, queries, ground_truth = adapter.load_nlctables_dataset(task_type, subset_type)
+        
+        logger.info(f"📊 Loaded NLCTables dataset: {len(tables)} tables, {len(queries)} queries")
+        return tables, queries, ground_truth
+    
     # 检查是否是自定义路径
     if '/' in dataset_type or dataset_type.startswith('examples'):
         # 直接使用提供的路径
@@ -564,10 +581,23 @@ def process_query_l3(args: Tuple) -> Dict:
             # 从OptimizerAgent配置中获取L3层参数
             optimizer_config = shared_config.get('optimization_config', {})
             
-            # 使用OptimizerAgent优化的参数，如果没有则使用默认值
-            max_candidates = getattr(optimizer_config, 'aggregator_max_results', 50)
-            llm_concurrency = getattr(optimizer_config, 'llm_concurrency', 3)
-            confidence_threshold = getattr(optimizer_config, 'llm_confidence_threshold', 0.45)
+            # 使用OptimizerAgent优化的参数，如果没有则使用任务特定的默认值
+            # 修复BUG：optimizer_config是字典，应该用.get()而不是getattr()
+            # 重要：强制使用任务特定的阈值，忽略OptimizerAgent的建议
+            if task_type == 'join':
+                # JOIN任务：强制使用极低阈值以最大化召回率
+                max_candidates = optimizer_config.get('aggregator_max_results', 500)
+                llm_concurrency = optimizer_config.get('llm_concurrency', 3)
+                # 强制使用0.10，不管OptimizerAgent说什么
+                confidence_threshold = 0.10
+                logger.info(f"强制JOIN使用低阈值: {confidence_threshold}")
+            else:  # union
+                # UNION任务：强制使用适中阈值平衡精度和召回
+                max_candidates = optimizer_config.get('aggregator_max_results', 200)
+                llm_concurrency = optimizer_config.get('llm_concurrency', 3)
+                # 强制使用0.15，不管OptimizerAgent说什么
+                confidence_threshold = 0.15
+                logger.info(f"强制UNION使用适中阈值: {confidence_threshold}")
             
             logger.info(f"L3层使用OptimizerAgent参数: max_candidates={max_candidates}, "
                        f"concurrency={llm_concurrency}, confidence={confidence_threshold}")
@@ -1103,6 +1133,12 @@ def main():
         elif args.dataset == 'true_subset':
             # WebTable的真子集（向后兼容）
             task_dataset = f"examples/separated_datasets/{task}_true_subset"
+        elif 'nlctables' in args.dataset.lower():
+            # NLCTables数据集 - 直接传递给load_dataset
+            if args.dataset_type == 'complete':
+                task_dataset = 'nlctables_complete'
+            else:
+                task_dataset = 'nlctables_subset'
         else:
             # 其他预定义类型（向后兼容）
             if args.dataset_type == 'complete':

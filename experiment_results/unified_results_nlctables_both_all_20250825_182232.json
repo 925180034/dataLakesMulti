@@ -1,0 +1,3535 @@
+{
+  "dataset": "nlctables",
+  "dataset_type": "subset",
+  "task": "both",
+  "layer": "all",
+  "workers": 64,
+  "max_queries": null,
+  "challenging": true,
+  "experiments": {
+    "join_L1": {
+      "results": [
+        {
+          "query_table": "q_table_118_j1_3",
+          "predictions": [
+            "dl_table_118_j1_3_3",
+            "dl_table_118_j1_3_1",
+            "dl_table_118_j1_3_2",
+            "q_table_68_j2_1",
+            "dl_table_50_j1_1_2"
+          ]
+        },
+        {
+          "query_table": "q_table_16_j2_1",
+          "predictions": [
+            "dl_table_16_j2_1_1",
+            "dl_table_16_j2_1_3",
+            "dl_table_16_j2_1_2",
+            "q_table_142_j1_2",
+            "q_table_110_j1_1"
+          ]
+        },
+        {
+          "query_table": "q_table_60_j3_2",
+          "predictions": [
+            "dl_table_60_j3_2",
+            "dl_table_50_j1_1_3",
+            "q_table_68_j2_1",
+            "q_table_155_j1_3",
+            "q_table_37_j3_2"
+          ]
+        },
+        {
+          "query_table": "q_table_110_j1_1",
+          "predictions": [
+            "q_table_110_j3_1",
+            "dl_table_110_j1_1_3",
+            "dl_table_110_j1_1_2",
+            "dl_table_110_j1_1_1",
+            "dl_table_110_j3_1"
+          ]
+        },
+        {
+          "query_table": "q_table_110_j3_1",
+          "predictions": [
+            "q_table_110_j1_1",
+            "dl_table_110_j3_1",
+            "dl_table_110_j1_1_2",
+            "dl_table_110_j1_1_1",
+            "dl_table_110_j1_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_12_j2_1",
+          "predictions": [
+            "dl_table_12_j2_1_1",
+            "dl_table_12_j2_1_2",
+            "dl_table_12_j2_1_3",
+            "q_table_155_j1_3",
+            "q_table_6_j2_1"
+          ]
+        },
+        {
+          "query_table": "q_table_24_j3_2",
+          "predictions": [
+            "q_table_155_j1_3",
+            "q_table_6_j2_1",
+            "q_table_50_j1_1",
+            "q_table_39_j2_1",
+            "dl_table_24_j3_2"
+          ]
+        },
+        {
+          "query_table": "q_table_6_j2_1",
+          "predictions": [
+            "dl_table_6_j2_1_1",
+            "dl_table_6_j2_1_3",
+            "dl_table_6_j2_1_2",
+            "q_table_155_j1_3",
+            "q_table_50_j1_1"
+          ]
+        },
+        {
+          "query_table": "q_table_142_j1_2",
+          "predictions": [
+            "dl_table_142_j1_2_1",
+            "dl_table_142_j1_2_2",
+            "dl_table_142_j1_2_3",
+            "q_table_16_j2_1",
+            "q_table_110_j3_1"
+          ]
+        },
+        {
+          "query_table": "q_table_13_j3_2",
+          "predictions": [
+            "q_table_13_j3_3",
+            "dl_table_13_j3_3_2",
+            "dl_table_13_j3_3_3",
+            "dl_table_13_j3_2",
+            "dl_table_13_j3_3_1"
+          ]
+        },
+        {
+          "query_table": "q_table_13_j3_3",
+          "predictions": [
+            "q_table_13_j3_2",
+            "dl_table_13_j3_3_2",
+            "dl_table_13_j3_3_3",
+            "dl_table_13_j3_3_1",
+            "dl_table_13_j3_2"
+          ]
+        },
+        {
+          "query_table": "q_table_68_j2_1",
+          "predictions": [
+            "q_table_37_j3_2",
+            "dl_table_68_j2_1_3",
+            "dl_table_68_j2_1_2",
+            "dl_table_68_j2_1_1",
+            "q_table_6_j2_1"
+          ]
+        },
+        {
+          "query_table": "q_table_50_j1_1",
+          "predictions": [
+            "dl_table_50_j1_1_3",
+            "dl_table_50_j1_1_2",
+            "dl_table_50_j1_1_1",
+            "q_table_155_j1_3",
+            "dl_table_155_j1_3_3"
+          ]
+        },
+        {
+          "query_table": "q_table_100_j3_2",
+          "predictions": [
+            "dl_table_100_j3_2",
+            "q_table_155_j1_3",
+            "q_table_6_j2_1",
+            "q_table_50_j1_1",
+            "q_table_39_j2_1"
+          ]
+        },
+        {
+          "query_table": "q_table_155_j1_3",
+          "predictions": [
+            "dl_table_155_j1_3_3",
+            "dl_table_155_j1_3_1",
+            "dl_table_155_j1_3_2",
+            "q_table_6_j2_1",
+            "q_table_50_j1_1"
+          ]
+        },
+        {
+          "query_table": "q_table_39_j2_1",
+          "predictions": [
+            "dl_table_39_j2_1_2",
+            "dl_table_39_j2_1_3",
+            "dl_table_39_j2_1_1",
+            "q_table_155_j1_3",
+            "q_table_6_j2_1"
+          ]
+        },
+        {
+          "query_table": "q_table_37_j3_2",
+          "predictions": [
+            "q_table_68_j2_1",
+            "dl_table_37_j3_2",
+            "dl_table_68_j2_1_3",
+            "dl_table_68_j2_1_2",
+            "dl_table_68_j2_1_1"
+          ]
+        },
+        {
+          "query_table": "q_table_67_j1_3",
+          "predictions": [
+            "dl_table_67_j1_3_2",
+            "dl_table_67_j1_3_1",
+            "dl_table_67_j1_3_3",
+            "dl_table_142_j1_2_1",
+            "dl_table_142_j1_2_2"
+          ]
+        }
+      ],
+      "elapsed_time": 0.22979354858398438,
+      "task": "join",
+      "layer": "L1"
+    },
+    "join_L1+L2": {
+      "results": [
+        {
+          "query_table": "q_table_118_j1_3",
+          "predictions": [
+            "dl_table_118_j1_3_3",
+            "dl_table_118_j1_3_1",
+            "dl_table_118_j1_3_2",
+            "q_table_24_j3_2",
+            "q_table_155_j1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_16_j2_1",
+          "predictions": [
+            "dl_table_16_j2_1_3",
+            "dl_table_16_j2_1_1",
+            "dl_table_16_j2_1_2",
+            "q_table_37_j3_2",
+            "q_table_67_j1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_110_j3_1",
+          "predictions": [
+            "q_table_110_j1_1",
+            "dl_table_110_j3_1",
+            "dl_table_110_j1_1_2",
+            "dl_table_110_j1_1_1",
+            "q_table_13_j3_3"
+          ]
+        },
+        {
+          "query_table": "q_table_60_j3_2",
+          "predictions": [
+            "dl_table_60_j3_2",
+            "q_table_37_j3_2",
+            "q_table_68_j2_1",
+            "q_table_100_j3_2"
+          ]
+        },
+        {
+          "query_table": "q_table_110_j1_1",
+          "predictions": [
+            "q_table_110_j3_1",
+            "dl_table_110_j1_1_2",
+            "dl_table_110_j3_1",
+            "dl_table_110_j1_1_1",
+            "dl_table_110_j1_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_12_j2_1",
+          "predictions": [
+            "dl_table_12_j2_1_3",
+            "dl_table_12_j2_1_1",
+            "dl_table_12_j2_1_2",
+            "q_table_13_j3_3",
+            "q_table_13_j3_2"
+          ]
+        },
+        {
+          "query_table": "q_table_24_j3_2",
+          "predictions": [
+            "dl_table_24_j3_2",
+            "q_table_118_j1_3",
+            "q_table_6_j2_1",
+            "q_table_39_j2_1",
+            "q_table_142_j1_2"
+          ]
+        },
+        {
+          "query_table": "q_table_142_j1_2",
+          "predictions": [
+            "dl_table_142_j1_2_2",
+            "dl_table_142_j1_2_1",
+            "dl_table_142_j1_2_3",
+            "q_table_6_j2_1",
+            "q_table_24_j3_2"
+          ]
+        },
+        {
+          "query_table": "q_table_6_j2_1",
+          "predictions": [
+            "dl_table_6_j2_1_1",
+            "dl_table_6_j2_1_3",
+            "dl_table_6_j2_1_2",
+            "q_table_39_j2_1",
+            "dl_table_39_j2_1_1"
+          ]
+        },
+        {
+          "query_table": "q_table_13_j3_2",
+          "predictions": [
+            "dl_table_13_j3_2",
+            "dl_table_13_j3_3_2",
+            "q_table_13_j3_3",
+            "dl_table_13_j3_3_3",
+            "dl_table_13_j3_3_1"
+          ]
+        },
+        {
+          "query_table": "q_table_13_j3_3",
+          "predictions": [
+            "q_table_13_j3_2",
+            "dl_table_13_j3_2",
+            "dl_table_13_j3_3_2",
+            "dl_table_13_j3_3_1",
+            "dl_table_13_j3_3_3"
+          ]
+        },
+        {
+          "query_table": "q_table_50_j1_1",
+          "predictions": [
+            "dl_table_50_j1_1_3",
+            "dl_table_50_j1_1_2",
+            "dl_table_50_j1_1_1",
+            "q_table_6_j2_1",
+            "q_table_24_j3_2"
+          ]
+        },
+        {
+          "query_table": "q_table_68_j2_1",
+          "predictions": [
+            "dl_table_68_j2_1_1",
+            "dl_table_68_j2_1_3",
+            "dl_table_68_j2_1_2",
+            "q_table_37_j3_2",
+            "q_table_16_j2_1"
+          ]
+        },
+        {
+          "query_table": "q_table_100_j3_2",
+          "predictions": [
+            "dl_table_100_j3_2",
+            "q_table_37_j3_2",
+            "q_table_16_j2_1",
+            "q_table_68_j2_1",
+            "q_table_155_j1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_155_j1_3",
+          "predictions": [
+            "dl_table_155_j1_3_2",
+            "q_table_6_j2_1",
+            "q_table_39_j2_1",
+            "q_table_24_j3_2",
+            "dl_table_39_j2_1_2"
+          ]
+        },
+        {
+          "query_table": "q_table_39_j2_1",
+          "predictions": [
+            "dl_table_39_j2_1_1",
+            "dl_table_39_j2_1_3",
+            "dl_table_39_j2_1_2",
+            "q_table_6_j2_1",
+            "q_table_24_j3_2"
+          ]
+        },
+        {
+          "query_table": "q_table_37_j3_2",
+          "predictions": [
+            "dl_table_37_j3_2",
+            "dl_table_68_j2_1_2",
+            "q_table_68_j2_1",
+            "dl_table_142_j1_2_2",
+            "q_table_142_j1_2"
+          ]
+        },
+        {
+          "query_table": "q_table_67_j1_3",
+          "predictions": [
+            "dl_table_67_j1_3_1",
+            "dl_table_67_j1_3_3",
+            "dl_table_67_j1_3_2",
+            "dl_table_142_j1_2_3",
+            "q_table_142_j1_2"
+          ]
+        }
+      ],
+      "elapsed_time": 0.2191634178161621,
+      "task": "join",
+      "layer": "L1+L2"
+    },
+    "join_L1+L2+L3": {
+      "results": [
+        {
+          "query_table": "q_table_118_j1_3",
+          "predictions": [
+            "dl_table_118_j1_3_3",
+            "dl_table_118_j1_3_1"
+          ]
+        },
+        {
+          "query_table": "q_table_16_j2_1",
+          "predictions": [
+            "dl_table_16_j2_1_3",
+            "dl_table_16_j2_1_1",
+            "dl_table_16_j2_1_2",
+            "q_table_67_j1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_60_j3_2",
+          "predictions": [
+            "dl_table_60_j3_2"
+          ]
+        },
+        {
+          "query_table": "q_table_110_j1_1",
+          "predictions": [
+            "q_table_110_j3_1",
+            "dl_table_110_j1_1_2",
+            "dl_table_110_j3_1",
+            "dl_table_110_j1_1_1",
+            "dl_table_110_j1_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_110_j3_1",
+          "predictions": [
+            "q_table_110_j1_1",
+            "dl_table_110_j3_1",
+            "dl_table_110_j1_1_2",
+            "dl_table_110_j1_1_1"
+          ]
+        },
+        {
+          "query_table": "q_table_12_j2_1",
+          "predictions": [
+            "dl_table_12_j2_1_3",
+            "dl_table_12_j2_1_1",
+            "dl_table_12_j2_1_2",
+            "q_table_13_j3_3",
+            "q_table_13_j3_2"
+          ]
+        },
+        {
+          "query_table": "q_table_142_j1_2",
+          "predictions": [
+            "dl_table_142_j1_2_2",
+            "dl_table_142_j1_2_1",
+            "dl_table_142_j1_2_3"
+          ]
+        },
+        {
+          "query_table": "q_table_6_j2_1",
+          "predictions": [
+            "dl_table_6_j2_1_1",
+            "dl_table_6_j2_1_2"
+          ]
+        },
+        {
+          "query_table": "q_table_13_j3_2",
+          "predictions": [
+            "dl_table_13_j3_2",
+            "dl_table_13_j3_3_2",
+            "q_table_13_j3_3",
+            "dl_table_13_j3_3_3",
+            "dl_table_13_j3_3_1"
+          ]
+        },
+        {
+          "query_table": "q_table_24_j3_2",
+          "predictions": [
+            "dl_table_24_j3_2"
+          ]
+        },
+        {
+          "query_table": "q_table_13_j3_3",
+          "predictions": [
+            "q_table_13_j3_2",
+            "dl_table_13_j3_2",
+            "dl_table_13_j3_3_2",
+            "dl_table_13_j3_3_1",
+            "dl_table_13_j3_3_3"
+          ]
+        },
+        {
+          "query_table": "q_table_50_j1_1",
+          "predictions": [
+            "dl_table_50_j1_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_68_j2_1",
+          "predictions": [
+            "dl_table_68_j2_1_1"
+          ]
+        },
+        {
+          "query_table": "q_table_100_j3_2",
+          "predictions": [
+            "dl_table_100_j3_2"
+          ]
+        },
+        {
+          "query_table": "q_table_155_j1_3",
+          "predictions": [
+            "dl_table_155_j1_3_2"
+          ]
+        },
+        {
+          "query_table": "q_table_37_j3_2",
+          "predictions": [
+            "dl_table_37_j3_2"
+          ]
+        },
+        {
+          "query_table": "q_table_67_j1_3",
+          "predictions": [
+            "dl_table_67_j1_3_1",
+            "dl_table_67_j1_3_2",
+            "dl_table_67_j1_3_3"
+          ]
+        },
+        {
+          "query_table": "q_table_39_j2_1",
+          "predictions": [
+            "dl_table_39_j2_1_3",
+            "dl_table_39_j2_1_1",
+            "dl_table_39_j2_1_2"
+          ]
+        }
+      ],
+      "elapsed_time": 0.28011608123779297,
+      "task": "join",
+      "layer": "L1+L2+L3"
+    },
+    "union_L1": {
+      "results": [
+        {
+          "query_table": "q_table_145_3_4_1",
+          "predictions": [
+            "q_table_145_3_4_2",
+            "q_table_145_3_6_2",
+            "q_table_145_3_6_1",
+            "dl_table_145_3_4_1",
+            "dl_table_145_3_6_1"
+          ]
+        },
+        {
+          "query_table": "q_table_145_3_4_2",
+          "predictions": [
+            "q_table_145_3_6_2",
+            "q_table_145_3_4_1",
+            "q_table_145_3_6_1",
+            "dl_table_145_3_4_1",
+            "dl_table_145_3_6_1"
+          ]
+        },
+        {
+          "query_table": "q_table_145_3_6_1",
+          "predictions": [
+            "q_table_145_3_4_2",
+            "q_table_145_3_6_2",
+            "q_table_145_3_4_1",
+            "dl_table_145_3_4_1",
+            "dl_table_145_3_6_1"
+          ]
+        },
+        {
+          "query_table": "q_table_145_1_3",
+          "predictions": [
+            "dl_table_145_1_3_3",
+            "dl_table_145_1_3_4",
+            "dl_table_145_1_3_2",
+            "dl_table_145_1_3_5",
+            "dl_table_145_1_3_1"
+          ]
+        },
+        {
+          "query_table": "q_table_145_3_6_2",
+          "predictions": [
+            "q_table_145_3_4_2",
+            "q_table_145_3_4_1",
+            "q_table_145_3_6_1",
+            "dl_table_145_3_4_1",
+            "dl_table_145_3_6_1"
+          ]
+        },
+        {
+          "query_table": "q_table_155_3_4_1",
+          "predictions": [
+            "dl_table_155_3_4_1",
+            "dl_table_155_3_4_1_n_11",
+            "dl_table_155_1_1_1",
+            "dl_table_155_1_1_2",
+            "q_table_155_1_1"
+          ]
+        },
+        {
+          "query_table": "q_table_38_4_1",
+          "predictions": [
+            "dl_table_121_2_3_1_2_n_10",
+            "dl_table_121_2_3_2_3",
+            "dl_table_155_2_1_1_1",
+            "q_table_38_1_2",
+            "dl_table_38_1_2_5_n_18"
+          ]
+        },
+        {
+          "query_table": "q_table_155_1_1",
+          "predictions": [
+            "dl_table_155_1_1_3",
+            "dl_table_155_3_4_1_n_10",
+            "dl_table_155_1_1_5",
+            "q_table_155_3_4_1",
+            "dl_table_155_1_1_2"
+          ]
+        },
+        {
+          "query_table": "q_table_38_1_2",
+          "predictions": [
+            "dl_table_38_1_2_2",
+            "dl_table_38_1_2_4",
+            "q_table_38_4_1",
+            "dl_table_38_1_2_1",
+            "dl_table_121_2_3_1_2_n_10"
+          ]
+        },
+        {
+          "query_table": "q_table_72_3_4_1",
+          "predictions": [
+            "dl_table_72_3_4_1",
+            "dl_table_72_1_1_2",
+            "dl_table_72_1_1_4",
+            "dl_table_72_1_1_5",
+            "dl_table_72_1_1_1"
+          ]
+        },
+        {
+          "query_table": "q_table_72_1_1",
+          "predictions": [
+            "dl_table_72_1_1_3",
+            "dl_table_72_3_4_1_n_4",
+            "dl_table_132_2_1_2_n_15_3",
+            "dl_table_155_2_1_1_3",
+            "dl_table_72_1_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_139_3_4_1",
+          "predictions": [
+            "dl_table_139_3_4_1",
+            "dl_table_139_1_1_5",
+            "dl_table_139_1_1_2",
+            "dl_table_139_1_1_3",
+            "q_table_139_1_1"
+          ]
+        },
+        {
+          "query_table": "q_table_139_1_1",
+          "predictions": [
+            "dl_table_139_1_1_4",
+            "dl_table_139_1_1_1",
+            "dl_table_139_1_1_2",
+            "dl_table_139_1_1_3",
+            "dl_table_139_1_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_1_2_3_1",
+          "predictions": [
+            "dl_table_1_2_3_2_2",
+            "dl_table_1_2_3_2_3",
+            "dl_table_1_2_3_3_3",
+            "dl_table_1_2_3_3_2",
+            "dl_table_1_2_3_2_1"
+          ]
+        },
+        {
+          "query_table": "q_table_1_2_3_2",
+          "predictions": [
+            "dl_table_1_2_3_4_1_n_7",
+            "dl_table_1_3_6_1_n_4",
+            "q_table_1_2_3_4",
+            "dl_table_1_2_3_3_3",
+            "dl_table_1_2_3_3_2"
+          ]
+        },
+        {
+          "query_table": "q_table_1_2_3_3",
+          "predictions": [
+            "q_table_1_2_3_6",
+            "dl_table_1_2_3_1_3",
+            "dl_table_1_2_3_1_2_n_8",
+            "dl_table_1_2_3_5_3",
+            "dl_table_1_2_3_6_2"
+          ]
+        },
+        {
+          "query_table": "q_table_1_2_3_4",
+          "predictions": [
+            "dl_table_1_3_6_1_n_4",
+            "dl_table_1_2_3_4_1",
+            "q_table_1_2_3_2",
+            "dl_table_1_2_3_3_1",
+            "dl_table_1_2_3_4_2"
+          ]
+        },
+        {
+          "query_table": "q_table_1_2_3_6",
+          "predictions": [
+            "dl_table_1_2_3_5_3",
+            "dl_table_1_2_3_4_2",
+            "dl_table_1_2_3_3_1",
+            "dl_table_1_2_3_1_2_n_8",
+            "dl_table_1_2_3_4_1"
+          ]
+        },
+        {
+          "query_table": "q_table_1_2_3_5",
+          "predictions": [
+            "dl_table_1_2_3_2_2_n_9",
+            "dl_table_1_2_3_7_3_n_9",
+            "dl_table_1_2_3_4_3",
+            "dl_table_1_2_3_5_2",
+            "dl_table_1_2_3_1_1"
+          ]
+        },
+        {
+          "query_table": "q_table_1_2_3_7",
+          "predictions": [
+            "dl_table_1_2_3_5_1",
+            "dl_table_1_2_3_7_1",
+            "dl_table_1_2_3_6_3",
+            "dl_table_1_2_3_7_2",
+            "dl_table_1_2_3_7_3"
+          ]
+        },
+        {
+          "query_table": "q_table_1_3_6_1",
+          "predictions": [
+            "q_table_1_3_6_3",
+            "q_table_1_3_6_6",
+            "q_table_1_3_6_2",
+            "q_table_1_3_6_5",
+            "q_table_1_3_6_4"
+          ]
+        },
+        {
+          "query_table": "q_table_1_3_6_2",
+          "predictions": [
+            "q_table_1_3_6_3",
+            "q_table_1_3_6_6",
+            "q_table_1_3_6_1",
+            "q_table_1_3_6_5",
+            "q_table_1_3_6_4"
+          ]
+        },
+        {
+          "query_table": "q_table_1_3_6_3",
+          "predictions": [
+            "q_table_1_3_6_6",
+            "q_table_1_3_6_2",
+            "q_table_1_3_6_1",
+            "q_table_1_3_6_5",
+            "q_table_1_3_6_4"
+          ]
+        },
+        {
+          "query_table": "q_table_1_3_6_4",
+          "predictions": [
+            "q_table_1_3_6_3",
+            "q_table_1_3_6_6",
+            "q_table_1_3_6_2",
+            "q_table_1_3_6_1",
+            "q_table_1_3_6_5"
+          ]
+        },
+        {
+          "query_table": "q_table_1_3_6_6",
+          "predictions": [
+            "q_table_1_3_6_3",
+            "q_table_1_3_6_2",
+            "q_table_1_3_6_1",
+            "q_table_1_3_6_5",
+            "q_table_1_3_6_4"
+          ]
+        },
+        {
+          "query_table": "q_table_1_3_6_5",
+          "predictions": [
+            "q_table_1_3_6_3",
+            "q_table_1_3_6_6",
+            "q_table_1_3_6_2",
+            "q_table_1_3_6_1",
+            "q_table_1_3_6_4"
+          ]
+        },
+        {
+          "query_table": "q_table_1_3_6_7",
+          "predictions": [
+            "q_table_1_3_6_3",
+            "q_table_1_3_6_6",
+            "q_table_1_3_6_2",
+            "q_table_1_3_6_1",
+            "q_table_1_3_6_5"
+          ]
+        },
+        {
+          "query_table": "q_table_35_2_3_1",
+          "predictions": [
+            "dl_table_35_2_3_1_1",
+            "dl_table_35_2_3_1_3",
+            "dl_table_35_2_3_1_2",
+            "dl_table_138_1_3_n_20",
+            "dl_table_138_1_3_4"
+          ]
+        },
+        {
+          "query_table": "q_table_27_3_4_1",
+          "predictions": [
+            "q_table_27_3_4_2",
+            "dl_table_27_3_4_2",
+            "dl_table_27_3_4_1",
+            "dl_table_27_3_4_2_n_29",
+            "dl_table_27_1_3_4"
+          ]
+        },
+        {
+          "query_table": "q_table_27_3_4_2",
+          "predictions": [
+            "q_table_27_3_4_1",
+            "dl_table_27_3_4_2",
+            "dl_table_27_3_4_1",
+            "dl_table_27_3_4_2_n_29",
+            "dl_table_27_1_3_4"
+          ]
+        },
+        {
+          "query_table": "q_table_27_1_3",
+          "predictions": [
+            "dl_table_27_1_3_5",
+            "dl_table_27_1_3_3",
+            "dl_table_27_1_3_2",
+            "dl_table_27_1_3_4",
+            "dl_table_27_1_3_1"
+          ]
+        },
+        {
+          "query_table": "q_table_125_2_1_1",
+          "predictions": [
+            "dl_table_125_1_2_1",
+            "dl_table_125_2_1_1_5",
+            "dl_table_125_2_1_1_2",
+            "dl_table_125_2_1_1_4",
+            "dl_table_125_1_2_3"
+          ]
+        },
+        {
+          "query_table": "q_table_125_3_1_1",
+          "predictions": [
+            "dl_table_125_3_1_1",
+            "dl_table_125_1_3_n_28",
+            "dl_table_125_1_2_2_n_17",
+            "dl_table_125_1_2_3_n_15",
+            "dl_table_125_1_2_2_n_12"
+          ]
+        },
+        {
+          "query_table": "q_table_125_1_2",
+          "predictions": [
+            "dl_table_125_1_2_4",
+            "dl_table_125_1_2_3_n_13",
+            "dl_table_125_1_2_5",
+            "dl_table_125_2_1_1_5",
+            "dl_table_125_1_2_1_n_13"
+          ]
+        },
+        {
+          "query_table": "q_table_23_1_3",
+          "predictions": [
+            "dl_table_23_1_2_4",
+            "dl_table_23_1_3_4",
+            "dl_table_23_1_3_2",
+            "dl_table_23_1_2_3_n_12",
+            "dl_table_155_2_1_1_4"
+          ]
+        },
+        {
+          "query_table": "q_table_23_1_2",
+          "predictions": [
+            "dl_table_23_1_2_5",
+            "dl_table_23_1_2_1",
+            "dl_table_23_1_2_4",
+            "dl_table_23_1_3_5",
+            "dl_table_23_1_3_1"
+          ]
+        },
+        {
+          "query_table": "q_table_104_3_3_1",
+          "predictions": [
+            "dl_table_104_3_3_1",
+            "dl_table_104_1_2_2_n_17",
+            "dl_table_104_2_3_1_3",
+            "q_table_104_1_2",
+            "q_table_104_4_1"
+          ]
+        },
+        {
+          "query_table": "q_table_104_2_3_1",
+          "predictions": [
+            "dl_table_104_2_3_1_1",
+            "dl_table_104_2_3_1_2",
+            "dl_table_104_1_2_2_n_17",
+            "dl_table_104_2_3_1_3",
+            "q_table_104_3_3_1"
+          ]
+        },
+        {
+          "query_table": "q_table_104_4_1",
+          "predictions": [
+            "dl_table_104_2_3_1_3",
+            "dl_table_104_1_2_2_n_14",
+            "q_table_104_1_2",
+            "dl_table_104_1_2_3",
+            "q_table_104_3_3_1"
+          ]
+        },
+        {
+          "query_table": "q_table_104_1_2",
+          "predictions": [
+            "dl_table_104_2_3_1_3",
+            "q_table_104_4_1",
+            "dl_table_104_1_2_2_n_17",
+            "q_table_104_3_3_1",
+            "dl_table_104_3_3_1"
+          ]
+        },
+        {
+          "query_table": "q_table_28_2_2_1",
+          "predictions": [
+            "dl_table_28_2_2_1_3",
+            "dl_table_28_2_2_1_1",
+            "dl_table_28_2_2_1_2",
+            "dl_table_28_2_2_1_5",
+            "dl_table_28_2_2_1_4"
+          ]
+        },
+        {
+          "query_table": "q_table_54_2_2_1",
+          "predictions": [
+            "dl_table_54_2_2_1_2_n_16",
+            "dl_table_54_2_2_1_3_n_13",
+            "dl_table_54_2_2_1_1",
+            "dl_table_54_2_2_1_4",
+            "dl_table_54_2_2_1_1_n_12"
+          ]
+        },
+        {
+          "query_table": "q_table_62_3_2_1",
+          "predictions": [
+            "q_table_62_3_2_6",
+            "q_table_62_3_2_5",
+            "q_table_62_3_2_3",
+            "q_table_62_3_2_4",
+            "q_table_62_3_2_2"
+          ]
+        },
+        {
+          "query_table": "q_table_62_2_2_1",
+          "predictions": [
+            "dl_table_62_2_2_1_1",
+            "dl_table_62_2_2_1_4",
+            "q_table_62_3_2_6",
+            "q_table_62_3_2_5",
+            "q_table_62_3_2_3"
+          ]
+        },
+        {
+          "query_table": "q_table_62_3_2_2",
+          "predictions": [
+            "q_table_62_3_2_6",
+            "q_table_62_3_2_5",
+            "q_table_62_3_2_3",
+            "q_table_62_3_2_1",
+            "q_table_62_3_2_4"
+          ]
+        },
+        {
+          "query_table": "q_table_62_3_2_4",
+          "predictions": [
+            "q_table_62_3_2_6",
+            "q_table_62_3_2_5",
+            "q_table_62_3_2_3",
+            "q_table_62_3_2_1",
+            "q_table_62_3_2_2"
+          ]
+        },
+        {
+          "query_table": "q_table_62_3_2_3",
+          "predictions": [
+            "q_table_62_3_2_6",
+            "q_table_62_3_2_5",
+            "q_table_62_3_2_1",
+            "q_table_62_3_2_4",
+            "q_table_62_3_2_2"
+          ]
+        },
+        {
+          "query_table": "q_table_62_3_2_5",
+          "predictions": [
+            "q_table_62_3_2_6",
+            "q_table_62_3_2_3",
+            "q_table_62_3_2_1",
+            "q_table_62_3_2_4",
+            "q_table_62_3_2_2"
+          ]
+        },
+        {
+          "query_table": "q_table_62_3_2_6",
+          "predictions": [
+            "q_table_62_3_2_5",
+            "q_table_62_3_2_3",
+            "q_table_62_3_2_1",
+            "q_table_62_3_2_4",
+            "q_table_62_3_2_2"
+          ]
+        },
+        {
+          "query_table": "q_table_24_1_3",
+          "predictions": [
+            "dl_table_24_1_3_4",
+            "dl_table_24_1_3_5",
+            "dl_table_24_1_3_1",
+            "dl_table_24_1_3_2",
+            "dl_table_24_1_3_3"
+          ]
+        },
+        {
+          "query_table": "q_table_64_2_2_1",
+          "predictions": [
+            "dl_table_64_2_2_1_4",
+            "dl_table_64_2_2_1_2",
+            "dl_table_64_2_2_1_3",
+            "dl_table_64_2_2_1_1",
+            "dl_table_64_2_2_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_66_3_4_1",
+          "predictions": [
+            "dl_table_66_3_4_1",
+            "dl_table_66_3_4_1_n_30",
+            "dl_table_66_1_3_n_19",
+            "dl_table_66_1_3_3",
+            "dl_table_66_1_3_4"
+          ]
+        },
+        {
+          "query_table": "q_table_66_1_3",
+          "predictions": [
+            "dl_table_66_1_3_3",
+            "q_table_66_3_4_1",
+            "dl_table_66_1_3_2",
+            "dl_table_66_1_3_5",
+            "dl_table_66_1_3_4"
+          ]
+        },
+        {
+          "query_table": "q_table_46_2_2_1",
+          "predictions": [
+            "dl_table_46_2_2_1_5",
+            "dl_table_46_2_2_1_1",
+            "dl_table_46_2_2_1_3",
+            "dl_table_46_2_2_1_4",
+            "dl_table_46_2_2_1_2"
+          ]
+        },
+        {
+          "query_table": "q_table_25_4_1",
+          "predictions": [
+            "q_table_25_1_2",
+            "dl_table_25_1_2_1_n_11",
+            "dl_table_25_1_2_2_n_18",
+            "dl_table_25_1_2_5",
+            "dl_table_25_1_2_3"
+          ]
+        },
+        {
+          "query_table": "q_table_25_1_2",
+          "predictions": [
+            "q_table_25_4_1",
+            "dl_table_25_1_2_1_n_11",
+            "dl_table_25_1_2_3",
+            "dl_table_25_1_2_2_n_18",
+            "dl_table_25_1_2_2"
+          ]
+        },
+        {
+          "query_table": "q_table_79_3_4_1",
+          "predictions": [
+            "dl_table_79_3_4_1",
+            "dl_table_79_3_4_1_n_28",
+            "dl_table_79_3_4_1_n_18",
+            "dl_table_79_3_4_1_n_14",
+            "dl_table_79_1_3_1"
+          ]
+        },
+        {
+          "query_table": "q_table_79_1_3",
+          "predictions": [
+            "dl_table_79_1_3_5",
+            "dl_table_155_2_1_1_5",
+            "dl_table_79_1_3_3",
+            "dl_table_79_1_3_4",
+            "dl_table_79_1_3_1"
+          ]
+        },
+        {
+          "query_table": "q_table_36_2_2_1",
+          "predictions": [
+            "dl_table_36_2_2_1_3",
+            "dl_table_36_2_2_1_5",
+            "dl_table_36_2_2_1_4",
+            "dl_table_36_2_2_1_2",
+            "dl_table_36_2_2_1_1"
+          ]
+        },
+        {
+          "query_table": "q_table_103_3_4_1",
+          "predictions": [
+            "q_table_103_3_4_2",
+            "q_table_103_3_1_3",
+            "q_table_103_3_1_1",
+            "q_table_103_3_4_3",
+            "q_table_103_3_1_2"
+          ]
+        },
+        {
+          "query_table": "q_table_103_3_4_2",
+          "predictions": [
+            "q_table_103_3_1_3",
+            "q_table_103_3_1_1",
+            "q_table_103_3_4_3",
+            "q_table_103_3_4_1",
+            "q_table_103_3_1_2"
+          ]
+        },
+        {
+          "query_table": "q_table_103_1_3",
+          "predictions": [
+            "dl_table_103_3_4_1_n_3",
+            "q_table_103_3_4_2",
+            "q_table_103_3_1_3",
+            "q_table_103_3_1_1",
+            "q_table_103_3_4_3"
+          ]
+        },
+        {
+          "query_table": "q_table_103_3_4_3",
+          "predictions": [
+            "q_table_103_3_4_2",
+            "q_table_103_3_1_3",
+            "q_table_103_3_1_1",
+            "q_table_103_3_4_1",
+            "q_table_103_3_1_2"
+          ]
+        },
+        {
+          "query_table": "q_table_103_3_1_1",
+          "predictions": [
+            "q_table_103_3_4_2",
+            "q_table_103_3_1_3",
+            "q_table_103_3_4_3",
+            "q_table_103_3_4_1",
+            "q_table_103_3_1_2"
+          ]
+        },
+        {
+          "query_table": "q_table_103_3_1_2",
+          "predictions": [
+            "q_table_103_3_4_2",
+            "q_table_103_3_1_3",
+            "q_table_103_3_1_1",
+            "q_table_103_3_4_3",
+            "q_table_103_3_4_1"
+          ]
+        },
+        {
+          "query_table": "q_table_103_3_1_3",
+          "predictions": [
+            "q_table_103_3_4_2",
+            "q_table_103_3_1_1",
+            "q_table_103_3_4_3",
+            "q_table_103_3_4_1",
+            "q_table_103_3_1_2"
+          ]
+        },
+        {
+          "query_table": "q_table_149_4_3_1",
+          "predictions": [
+            "dl_table_149_4_3_1_1_n_10",
+            "dl_table_149_4_3_1_1_cate_2_1_1_3",
+            "dl_table_71_4_3_1_1_cate_2_1_1_n_13_4",
+            "dl_table_71_4_3_1_1_n_10",
+            "dl_table_149_4_3_1_1_n_8"
+          ]
+        },
+        {
+          "query_table": "q_table_140_4_3_1",
+          "predictions": [
+            "dl_table_140_4_3_1_1_cate_2_1_1_4",
+            "dl_table_140_4_3_1_1_cate_2_1_1_5",
+            "dl_table_140_4_3_1_1_cate_2_1_1_1",
+            "dl_table_140_4_3_1_1_cate_2_1_1_2",
+            "dl_table_140_4_3_1_1_cate_2_1_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_111_1_3",
+          "predictions": [
+            "dl_table_111_1_3_2",
+            "dl_table_111_1_3_1",
+            "dl_table_111_1_3_3",
+            "dl_table_111_1_3_5",
+            "dl_table_111_1_3_4"
+          ]
+        },
+        {
+          "query_table": "q_table_74_2_3_1",
+          "predictions": [
+            "dl_table_74_2_2_1_5",
+            "dl_table_74_2_3_1_2",
+            "dl_table_74_2_3_1_3",
+            "dl_table_74_3_6_1_n_4",
+            "dl_table_74_2_2_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_74_2_2_1",
+          "predictions": [
+            "dl_table_74_2_2_1_1",
+            "dl_table_74_2_2_1_2",
+            "dl_table_74_2_3_1_2",
+            "dl_table_74_2_2_1_4",
+            "dl_table_74_2_2_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_45_2_2_1",
+          "predictions": [
+            "dl_table_45_2_2_1_2",
+            "dl_table_45_2_2_1_4",
+            "dl_table_45_2_2_1_3",
+            "dl_table_45_2_2_1_1",
+            "dl_table_45_2_2_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_74_3_6_1",
+          "predictions": [
+            "dl_table_74_3_6_1",
+            "dl_table_74_3_6_1_n_15",
+            "dl_table_74_2_3_1_1",
+            "dl_table_74_2_2_1_4",
+            "dl_table_74_2_2_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_11_1_3",
+          "predictions": [
+            "dl_table_11_1_3_3",
+            "dl_table_11_1_3_2",
+            "dl_table_59_3_5_1_n_6",
+            "dl_table_86_2_1_2_n_16_3",
+            "dl_table_155_2_1_1_1"
+          ]
+        },
+        {
+          "query_table": "q_table_109_3_6_1",
+          "predictions": [
+            "q_table_109_3_3_1",
+            "q_table_109_3_6_2",
+            "q_table_109_3_3_2",
+            "dl_table_109_3_3_1",
+            "dl_table_109_3_6_1"
+          ]
+        },
+        {
+          "query_table": "q_table_109_1_3",
+          "predictions": [
+            "q_table_109_2_3_2",
+            "dl_table_109_1_2_4",
+            "dl_table_109_2_3_2_1",
+            "dl_table_109_1_2_2",
+            "dl_table_109_2_3_2_2"
+          ]
+        },
+        {
+          "query_table": "q_table_109_3_6_2",
+          "predictions": [
+            "q_table_109_3_3_1",
+            "q_table_109_3_6_1",
+            "q_table_109_3_3_2",
+            "dl_table_109_3_3_1",
+            "dl_table_109_3_6_1"
+          ]
+        },
+        {
+          "query_table": "q_table_109_2_3_1",
+          "predictions": [
+            "q_table_109_1_3",
+            "dl_table_109_1_2_4",
+            "dl_table_109_2_3_2_1",
+            "dl_table_109_1_2_2",
+            "dl_table_109_2_3_1_1"
+          ]
+        },
+        {
+          "query_table": "q_table_109_1_2",
+          "predictions": [
+            "dl_table_109_1_2_2_n_16",
+            "dl_table_109_2_2_1_2_n_7",
+            "dl_table_109_2_3_1_2",
+            "q_table_109_2_3_2",
+            "dl_table_109_2_3_1_1"
+          ]
+        },
+        {
+          "query_table": "q_table_109_2_3_2",
+          "predictions": [
+            "dl_table_109_2_3_2_2",
+            "dl_table_109_1_3_1",
+            "dl_table_109_1_3_4",
+            "dl_table_109_1_3_2",
+            "dl_table_109_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_109_3_3_1",
+          "predictions": [
+            "q_table_109_3_6_1",
+            "q_table_109_3_6_2",
+            "q_table_109_3_3_2",
+            "dl_table_109_3_3_1",
+            "dl_table_109_3_6_1"
+          ]
+        },
+        {
+          "query_table": "q_table_20_2_2_1",
+          "predictions": [
+            "dl_table_20_2_2_1_5",
+            "dl_table_20_2_2_1_3",
+            "dl_table_20_2_2_1_4",
+            "dl_table_20_2_2_1_1",
+            "dl_table_20_2_2_1_2"
+          ]
+        },
+        {
+          "query_table": "q_table_109_3_3_2",
+          "predictions": [
+            "q_table_109_3_3_1",
+            "q_table_109_3_6_1",
+            "q_table_109_3_6_2",
+            "dl_table_109_3_3_1",
+            "dl_table_109_3_6_1"
+          ]
+        },
+        {
+          "query_table": "q_table_141_4_2_1",
+          "predictions": [
+            "q_table_141_1_3",
+            "dl_table_141_4_2_1_1_n_16",
+            "dl_table_141_1_3_1",
+            "dl_table_141_1_3_5",
+            "dl_table_141_1_3_4"
+          ]
+        },
+        {
+          "query_table": "q_table_141_1_3",
+          "predictions": [
+            "q_table_141_4_2_1",
+            "dl_table_141_1_3_1",
+            "dl_table_141_1_3_5",
+            "dl_table_141_1_3_4",
+            "dl_table_141_1_3_2"
+          ]
+        },
+        {
+          "query_table": "q_table_99_2_1_1",
+          "predictions": [
+            "dl_table_99_2_1_1_3",
+            "dl_table_99_2_1_1_4",
+            "dl_table_99_2_1_1_2",
+            "dl_table_99_2_1_1_n_18_2",
+            "dl_table_99_2_1_1_n_19_2"
+          ]
+        },
+        {
+          "query_table": "q_table_116_2_3_1",
+          "predictions": [
+            "dl_table_116_2_3_1_3",
+            "dl_table_116_2_3_1_2",
+            "dl_table_116_2_3_1_1",
+            "dl_table_155_2_1_1_1",
+            "dl_table_53_4_1_1_cv_1_3_n_15"
+          ]
+        },
+        {
+          "query_table": "q_table_155_2_1_1",
+          "predictions": [
+            "dl_table_155_2_1_1_4",
+            "q_table_23_1_3",
+            "q_table_23_1_2",
+            "q_table_152_1_3",
+            "dl_table_155_2_1_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_21_1_3",
+          "predictions": [
+            "dl_table_21_1_3_3",
+            "dl_table_21_1_3_4",
+            "dl_table_21_1_3_2",
+            "dl_table_21_1_3_5",
+            "dl_table_21_1_3_1"
+          ]
+        },
+        {
+          "query_table": "q_table_152_1_3",
+          "predictions": [
+            "dl_table_152_1_2_3",
+            "dl_table_73_2_1_1_3",
+            "dl_table_71_4_3_1_1_cate_2_1_1_n_15_2",
+            "dl_table_155_2_1_1_4",
+            "q_table_155_2_1_1"
+          ]
+        },
+        {
+          "query_table": "q_table_152_3_5_1",
+          "predictions": [
+            "q_table_152_3_1_1",
+            "q_table_152_3_6_1",
+            "dl_table_152_3_1_1",
+            "dl_table_152_3_5_1",
+            "dl_table_152_3_6_1"
+          ]
+        },
+        {
+          "query_table": "q_table_152_3_6_1",
+          "predictions": [
+            "q_table_152_3_5_1",
+            "q_table_152_3_1_1",
+            "dl_table_152_3_1_1",
+            "dl_table_152_3_5_1",
+            "dl_table_152_3_6_1"
+          ]
+        },
+        {
+          "query_table": "q_table_152_3_1_1",
+          "predictions": [
+            "q_table_152_3_5_1",
+            "q_table_152_3_6_1",
+            "dl_table_152_3_1_1",
+            "dl_table_152_3_5_1",
+            "dl_table_152_3_6_1"
+          ]
+        },
+        {
+          "query_table": "q_table_152_1_2",
+          "predictions": [
+            "dl_table_152_1_2_4_n_15",
+            "dl_table_152_1_2_5",
+            "dl_table_152_1_2_4",
+            "dl_table_152_1_2_1",
+            "dl_table_152_1_2_3_n_14"
+          ]
+        },
+        {
+          "query_table": "q_table_96_4_2_1",
+          "predictions": [
+            "q_table_96_1_3",
+            "dl_table_96_1_3_5",
+            "dl_table_96_1_3_1",
+            "dl_table_96_1_3_n_19",
+            "dl_table_96_1_3_2"
+          ]
+        },
+        {
+          "query_table": "q_table_33_3_6_1",
+          "predictions": [
+            "dl_table_33_3_6_1",
+            "dl_table_33_3_6_1_n_10",
+            "dl_table_33_2_3_1_3_n_10",
+            "dl_table_33_2_3_1_1",
+            "dl_table_33_2_3_1_2"
+          ]
+        },
+        {
+          "query_table": "q_table_96_1_3",
+          "predictions": [
+            "dl_table_96_1_3_2",
+            "dl_table_96_1_3_3",
+            "dl_table_96_1_3_4",
+            "q_table_96_4_2_1",
+            "dl_table_96_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_26_1_3",
+          "predictions": [
+            "dl_table_26_1_3_1",
+            "dl_table_26_1_3_4",
+            "dl_table_26_1_3_2",
+            "dl_table_26_1_3_3",
+            "dl_table_26_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_78_2_2_1",
+          "predictions": [
+            "dl_table_78_2_2_1_3",
+            "dl_table_78_2_2_1_5",
+            "dl_table_78_2_2_1_1",
+            "dl_table_78_2_2_1_2",
+            "dl_table_78_2_2_1_4"
+          ]
+        },
+        {
+          "query_table": "q_table_33_2_3_1",
+          "predictions": [
+            "dl_table_33_2_3_1_3",
+            "dl_table_33_2_3_1_2",
+            "dl_table_33_2_3_1_1",
+            "q_table_33_3_6_1",
+            "dl_table_33_3_6_1"
+          ]
+        }
+      ],
+      "elapsed_time": 2.2829091548919678,
+      "task": "union",
+      "layer": "L1"
+    },
+    "union_L1+L2": {
+      "results": [
+        {
+          "query_table": "q_table_145_3_4_1",
+          "predictions": [
+            "dl_table_145_3_4_1",
+            "dl_table_145_3_4_2",
+            "dl_table_145_3_6_2",
+            "dl_table_145_3_6_1",
+            "q_table_145_3_6_1"
+          ]
+        },
+        {
+          "query_table": "q_table_145_3_4_2",
+          "predictions": [
+            "q_table_145_3_6_2",
+            "dl_table_145_1_3_1",
+            "dl_table_145_1_3_4",
+            "q_table_145_1_3",
+            "dl_table_145_1_3_3"
+          ]
+        },
+        {
+          "query_table": "q_table_145_3_6_1",
+          "predictions": [
+            "q_table_145_3_4_1",
+            "dl_table_145_3_4_2",
+            "dl_table_145_3_4_1",
+            "dl_table_145_1_3_3",
+            "q_table_145_3_4_2"
+          ]
+        },
+        {
+          "query_table": "q_table_145_1_3",
+          "predictions": [
+            "dl_table_145_1_3_5",
+            "dl_table_145_1_3_2",
+            "dl_table_145_1_3_1",
+            "dl_table_145_1_3_3",
+            "dl_table_145_3_4_1_n_1"
+          ]
+        },
+        {
+          "query_table": "q_table_145_3_6_2",
+          "predictions": [
+            "q_table_145_3_4_2",
+            "dl_table_145_3_4_2_n_22",
+            "dl_table_145_1_3_4",
+            "dl_table_145_3_4_2_n_17",
+            "dl_table_145_1_3_1"
+          ]
+        },
+        {
+          "query_table": "q_table_155_3_4_1",
+          "predictions": [
+            "dl_table_155_3_4_1_n_11",
+            "dl_table_155_3_4_1",
+            "dl_table_155_1_1_1",
+            "q_table_155_1_1",
+            "dl_table_155_3_4_1_n_10"
+          ]
+        },
+        {
+          "query_table": "q_table_155_1_1",
+          "predictions": [
+            "dl_table_155_3_4_1_n_10",
+            "dl_table_155_1_1_3",
+            "dl_table_155_1_1_5",
+            "dl_table_155_1_1_4",
+            "dl_table_155_1_1_2"
+          ]
+        },
+        {
+          "query_table": "q_table_38_4_1",
+          "predictions": [
+            "q_table_38_1_2",
+            "dl_table_38_1_2_3",
+            "dl_table_38_4_1_1_cv_1_3_3",
+            "dl_table_38_4_1_1_cv_1_3_2",
+            "dl_table_38_4_1_1_cv_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_38_1_2",
+          "predictions": [
+            "dl_table_38_1_2_1",
+            "dl_table_38_1_2_2",
+            "dl_table_38_1_2_4",
+            "q_table_155_2_1_1",
+            "dl_table_155_2_1_1_n_17_1"
+          ]
+        },
+        {
+          "query_table": "q_table_72_3_4_1",
+          "predictions": [
+            "dl_table_72_3_4_1",
+            "dl_table_72_1_1_5",
+            "dl_table_72_1_1_4",
+            "dl_table_121_3_5_1_n_23",
+            "dl_table_121_3_5_1_n_13"
+          ]
+        },
+        {
+          "query_table": "q_table_72_1_1",
+          "predictions": [
+            "dl_table_72_3_4_1_n_4",
+            "q_table_125_1_2",
+            "dl_table_72_1_1_2",
+            "dl_table_72_1_1_1",
+            "dl_table_71_4_3_1_1_cate_2_1_1_n_16_4"
+          ]
+        },
+        {
+          "query_table": "q_table_139_3_4_1",
+          "predictions": [
+            "dl_table_139_3_4_1",
+            "dl_table_139_1_1_3",
+            "dl_table_139_1_1_5",
+            "q_table_139_1_1",
+            "dl_table_139_1_1_2"
+          ]
+        },
+        {
+          "query_table": "q_table_1_2_3_1",
+          "predictions": [
+            "dl_table_1_3_6_7_n_1",
+            "q_table_1_2_3_4",
+            "dl_table_1_2_3_2_2",
+            "dl_table_1_2_3_4_2",
+            "dl_table_1_3_6_1_n_4"
+          ]
+        },
+        {
+          "query_table": "q_table_139_1_1",
+          "predictions": [
+            "dl_table_139_1_1_1",
+            "dl_table_139_1_1_3",
+            "dl_table_139_1_1_4",
+            "dl_table_139_1_1_2",
+            "dl_table_139_1_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_1_2_3_2",
+          "predictions": [
+            "dl_table_1_2_3_4_3_n_7",
+            "q_table_1_2_3_6",
+            "dl_table_1_2_3_3_1_n_8",
+            "q_table_1_2_3_7",
+            "q_table_1_2_3_4"
+          ]
+        },
+        {
+          "query_table": "q_table_1_2_3_3",
+          "predictions": [
+            "q_table_1_2_3_6",
+            "dl_table_1_2_3_1_2_n_8",
+            "q_table_1_2_3_7",
+            "q_table_1_2_3_2",
+            "dl_table_1_2_3_4_2"
+          ]
+        },
+        {
+          "query_table": "q_table_1_2_3_4",
+          "predictions": [
+            "dl_table_1_2_3_4_1",
+            "dl_table_1_2_3_4_2",
+            "dl_table_1_2_3_5_1",
+            "dl_table_1_2_3_4_3",
+            "dl_table_1_2_3_7_3"
+          ]
+        },
+        {
+          "query_table": "q_table_1_2_3_5",
+          "predictions": [
+            "dl_table_1_3_6_1_n_4",
+            "dl_table_1_2_3_5_1",
+            "dl_table_1_2_3_4_3",
+            "dl_table_1_2_3_5_2",
+            "dl_table_1_2_3_4_2"
+          ]
+        },
+        {
+          "query_table": "q_table_1_2_3_7",
+          "predictions": [
+            "dl_table_1_2_3_7_3",
+            "q_table_1_2_3_2",
+            "q_table_1_2_3_5",
+            "q_table_1_2_3_3",
+            "q_table_1_2_3_6"
+          ]
+        },
+        {
+          "query_table": "q_table_1_2_3_6",
+          "predictions": [
+            "q_table_1_2_3_3",
+            "q_table_1_2_3_2",
+            "dl_table_1_2_3_1_2_n_8",
+            "dl_table_1_2_3_7_3_n_8",
+            "dl_table_1_2_3_6_3"
+          ]
+        },
+        {
+          "query_table": "q_table_1_3_6_1",
+          "predictions": [
+            "dl_table_1_3_6_1",
+            "dl_table_1_3_6_2",
+            "q_table_1_3_6_2",
+            "q_table_1_3_6_6",
+            "dl_table_1_3_6_6_n_8"
+          ]
+        },
+        {
+          "query_table": "q_table_1_3_6_2",
+          "predictions": [
+            "q_table_1_3_6_1",
+            "dl_table_1_3_6_2",
+            "dl_table_1_3_6_1",
+            "q_table_1_3_6_6",
+            "dl_table_1_3_6_6_n_8"
+          ]
+        },
+        {
+          "query_table": "q_table_1_3_6_4",
+          "predictions": [
+            "q_table_1_3_6_5",
+            "q_table_1_2_3_5",
+            "q_table_1_3_6_7",
+            "q_table_1_3_6_2",
+            "q_table_1_3_6_6"
+          ]
+        },
+        {
+          "query_table": "q_table_1_3_6_3",
+          "predictions": [
+            "dl_table_1_3_6_1_n_4",
+            "q_table_1_2_3_2",
+            "q_table_1_2_3_7",
+            "q_table_1_3_6_2",
+            "q_table_1_3_6_1"
+          ]
+        },
+        {
+          "query_table": "q_table_1_3_6_5",
+          "predictions": [
+            "q_table_1_3_6_4",
+            "dl_table_1_2_3_7_1",
+            "dl_table_1_3_6_1_n_4",
+            "q_table_1_3_6_6",
+            "q_table_1_3_6_7"
+          ]
+        },
+        {
+          "query_table": "q_table_1_3_6_6",
+          "predictions": [
+            "dl_table_1_3_6_6_n_8",
+            "dl_table_1_3_6_6",
+            "dl_table_1_3_6_7",
+            "q_table_1_3_6_2",
+            "q_table_1_3_6_1"
+          ]
+        },
+        {
+          "query_table": "q_table_1_3_6_7",
+          "predictions": [
+            "dl_table_1_3_6_7",
+            "q_table_1_3_6_6",
+            "dl_table_1_3_6_5_n_10",
+            "dl_table_1_3_6_5",
+            "dl_table_1_3_6_6_n_8"
+          ]
+        },
+        {
+          "query_table": "q_table_35_2_3_1",
+          "predictions": [
+            "dl_table_138_1_3_4",
+            "dl_table_35_2_3_1_1",
+            "dl_table_35_2_3_1_2",
+            "dl_table_138_2_3_1_1",
+            "dl_table_138_1_3_n_20"
+          ]
+        },
+        {
+          "query_table": "q_table_27_3_4_1",
+          "predictions": [
+            "dl_table_27_3_4_2",
+            "dl_table_27_3_4_1",
+            "q_table_27_3_4_2",
+            "dl_table_27_3_4_2_n_29",
+            "dl_table_27_1_3_2"
+          ]
+        },
+        {
+          "query_table": "q_table_27_3_4_2",
+          "predictions": [
+            "dl_table_27_3_4_2_n_29",
+            "dl_table_27_3_4_2",
+            "dl_table_27_3_4_1",
+            "q_table_27_3_4_1",
+            "dl_table_27_1_3_1"
+          ]
+        },
+        {
+          "query_table": "q_table_27_1_3",
+          "predictions": [
+            "q_table_27_3_4_2",
+            "dl_table_27_3_4_2",
+            "q_table_23_1_3",
+            "dl_table_27_3_4_2_n_29",
+            "dl_table_96_4_2_1_1_cate_2_1_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_104_1_2",
+          "predictions": [
+            "dl_table_104_1_2_3",
+            "dl_table_104_1_2_5",
+            "dl_table_104_1_2_4",
+            "dl_table_104_1_2_2",
+            "dl_table_104_1_2_1"
+          ]
+        },
+        {
+          "query_table": "q_table_125_2_1_1",
+          "predictions": [
+            "dl_table_125_1_2_2_n_17",
+            "dl_table_125_1_2_1",
+            "dl_table_125_1_2_2_n_12",
+            "dl_table_125_2_1_1_1",
+            "dl_table_125_1_2_3_n_15"
+          ]
+        },
+        {
+          "query_table": "q_table_125_3_1_1",
+          "predictions": [
+            "dl_table_125_1_2_3_n_15",
+            "dl_table_125_1_2_2_n_12",
+            "dl_table_125_1_3_n_28",
+            "dl_table_125_1_2_3",
+            "dl_table_125_2_1_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_125_1_2",
+          "predictions": [
+            "dl_table_125_2_1_1_1",
+            "dl_table_125_2_1_1_3",
+            "dl_table_125_1_2_4",
+            "dl_table_125_1_2_5",
+            "dl_table_125_1_2_3_n_13"
+          ]
+        },
+        {
+          "query_table": "q_table_23_1_3",
+          "predictions": [
+            "dl_table_23_1_2_1_n_19",
+            "dl_table_23_1_2_2",
+            "dl_table_23_1_2_3_n_12",
+            "q_table_23_1_2",
+            "dl_table_23_1_2_4"
+          ]
+        },
+        {
+          "query_table": "q_table_23_1_2",
+          "predictions": [
+            "dl_table_23_1_2_5",
+            "dl_table_23_1_2_1",
+            "dl_table_23_1_2_4",
+            "dl_table_23_1_2_2",
+            "dl_table_23_1_2_3"
+          ]
+        },
+        {
+          "query_table": "q_table_104_3_3_1",
+          "predictions": [
+            "dl_table_104_1_2_1",
+            "dl_table_104_1_2_3",
+            "dl_table_104_1_2_2",
+            "dl_table_104_1_2_5",
+            "dl_table_104_1_2_4"
+          ]
+        },
+        {
+          "query_table": "q_table_104_2_3_1",
+          "predictions": [
+            "dl_table_104_1_2_3",
+            "dl_table_104_1_2_5",
+            "q_table_104_1_2",
+            "dl_table_104_1_2_4",
+            "dl_table_104_1_2_1"
+          ]
+        },
+        {
+          "query_table": "q_table_28_2_2_1",
+          "predictions": [
+            "dl_table_28_2_2_1_3",
+            "dl_table_28_2_2_1_1",
+            "dl_table_28_2_2_1_2",
+            "dl_table_28_2_2_1_5",
+            "dl_table_28_2_2_1_4"
+          ]
+        },
+        {
+          "query_table": "q_table_104_4_1",
+          "predictions": [
+            "dl_table_104_1_2_3",
+            "dl_table_104_1_2_1",
+            "dl_table_104_1_2_4",
+            "dl_table_104_1_2_2",
+            "dl_table_104_1_2_5"
+          ]
+        },
+        {
+          "query_table": "q_table_54_2_2_1",
+          "predictions": [
+            "dl_table_54_2_2_1_4",
+            "dl_table_54_2_2_1_1_n_12",
+            "dl_table_54_2_2_1_3_n_13",
+            "dl_table_54_2_2_1_1_n_14",
+            "dl_table_54_2_2_1_3_n_19"
+          ]
+        },
+        {
+          "query_table": "q_table_62_2_2_1",
+          "predictions": [
+            "dl_table_62_2_2_1_3",
+            "dl_table_62_2_2_1_2",
+            "dl_table_62_2_2_1_5",
+            "dl_table_62_2_2_1_4",
+            "dl_table_62_3_2_6_n_6"
+          ]
+        },
+        {
+          "query_table": "q_table_62_3_2_1",
+          "predictions": [
+            "q_table_62_3_2_2",
+            "dl_table_62_2_2_1_3",
+            "q_table_62_3_2_6",
+            "q_table_62_3_2_3",
+            "dl_table_62_3_2_3"
+          ]
+        },
+        {
+          "query_table": "q_table_62_3_2_3",
+          "predictions": [
+            "q_table_62_3_2_4",
+            "dl_table_62_2_2_1_3",
+            "q_table_62_3_2_2",
+            "q_table_62_3_2_6",
+            "q_table_62_3_2_1"
+          ]
+        },
+        {
+          "query_table": "q_table_62_3_2_2",
+          "predictions": [
+            "q_table_62_3_2_1",
+            "dl_table_62_2_2_1_3",
+            "q_table_62_3_2_4",
+            "q_table_62_3_2_3",
+            "dl_table_62_3_2_3"
+          ]
+        },
+        {
+          "query_table": "q_table_62_3_2_4",
+          "predictions": [
+            "q_table_62_3_2_3",
+            "q_table_62_3_2_2",
+            "dl_table_62_2_2_1_3",
+            "dl_table_62_3_2_4",
+            "dl_table_62_3_2_5"
+          ]
+        },
+        {
+          "query_table": "q_table_62_3_2_5",
+          "predictions": [
+            "dl_table_62_3_2_2",
+            "dl_table_62_3_2_5",
+            "q_table_62_3_2_1",
+            "dl_table_62_3_2_3",
+            "dl_table_62_3_2_6"
+          ]
+        },
+        {
+          "query_table": "q_table_24_1_3",
+          "predictions": [
+            "dl_table_24_1_3_5",
+            "dl_table_24_1_3_2",
+            "dl_table_24_1_3_3",
+            "dl_table_24_1_3_1",
+            "dl_table_24_1_3_4"
+          ]
+        },
+        {
+          "query_table": "q_table_62_3_2_6",
+          "predictions": [
+            "dl_table_62_2_2_1_3",
+            "q_table_62_3_2_1",
+            "q_table_62_3_2_2",
+            "q_table_62_3_2_3",
+            "q_table_62_3_2_4"
+          ]
+        },
+        {
+          "query_table": "q_table_64_2_2_1",
+          "predictions": [
+            "dl_table_64_2_2_1_4",
+            "dl_table_64_2_2_1_1",
+            "dl_table_64_2_2_1_5",
+            "dl_table_64_2_2_1_2",
+            "dl_table_64_2_2_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_46_2_2_1",
+          "predictions": [
+            "dl_table_46_2_2_1_5",
+            "dl_table_46_2_2_1_2",
+            "dl_table_46_2_2_1_n_15",
+            "dl_table_46_2_2_1_1",
+            "dl_table_46_2_2_1_4"
+          ]
+        },
+        {
+          "query_table": "q_table_66_3_4_1",
+          "predictions": [
+            "dl_table_66_1_3_n_19",
+            "dl_table_66_3_4_1_n_30",
+            "dl_table_66_1_3_1",
+            "dl_table_66_3_4_1",
+            "dl_table_66_1_3_3"
+          ]
+        },
+        {
+          "query_table": "q_table_66_1_3",
+          "predictions": [
+            "dl_table_66_3_4_1_n_30",
+            "q_table_23_1_3",
+            "q_table_23_1_2",
+            "q_table_66_3_4_1",
+            "dl_table_66_3_4_1"
+          ]
+        },
+        {
+          "query_table": "q_table_25_4_1",
+          "predictions": [
+            "dl_table_25_1_2_3",
+            "dl_table_25_1_2_2_n_17",
+            "dl_table_25_1_2_5",
+            "dl_table_25_1_2_1",
+            "dl_table_25_1_2_4"
+          ]
+        },
+        {
+          "query_table": "q_table_25_1_2",
+          "predictions": [
+            "dl_table_25_1_2_3",
+            "dl_table_25_1_2_5",
+            "dl_table_25_1_2_2",
+            "dl_table_25_1_2_4",
+            "dl_table_25_1_2_1"
+          ]
+        },
+        {
+          "query_table": "q_table_79_3_4_1",
+          "predictions": [
+            "dl_table_79_3_4_1_n_14",
+            "dl_table_79_1_3_5",
+            "dl_table_79_3_4_1_n_18",
+            "dl_table_79_1_3_3",
+            "dl_table_79_3_4_1"
+          ]
+        },
+        {
+          "query_table": "q_table_103_3_1_2",
+          "predictions": [
+            "dl_table_103_3_1_2",
+            "dl_table_103_3_4_1_n_28",
+            "dl_table_103_3_4_2_n_28",
+            "dl_table_103_3_1_3",
+            "dl_table_103_3_1_3_n_12"
+          ]
+        },
+        {
+          "query_table": "q_table_103_3_1_3",
+          "predictions": [
+            "q_table_103_3_1_1",
+            "dl_table_103_3_1_3_n_12",
+            "dl_table_103_3_1_2_n_12",
+            "dl_table_103_3_1_1",
+            "dl_table_103_3_4_1"
+          ]
+        },
+        {
+          "query_table": "q_table_79_1_3",
+          "predictions": [
+            "dl_table_79_1_3_4",
+            "dl_table_79_1_3_2",
+            "dl_table_79_1_3_1",
+            "dl_table_79_1_3_5",
+            "dl_table_79_1_3_3"
+          ]
+        },
+        {
+          "query_table": "q_table_149_4_3_1",
+          "predictions": [
+            "dl_table_149_4_3_1_1_cate_2_1_1_3",
+            "dl_table_149_4_3_1_1_cate_2_1_1_n_13_3",
+            "dl_table_149_4_3_1_1_n_10",
+            "dl_table_149_4_3_1_1_cate_2_1_1_n_15_1",
+            "dl_table_71_4_3_1_1_cate_2_1_1_n_13_4"
+          ]
+        },
+        {
+          "query_table": "q_table_36_2_2_1",
+          "predictions": [
+            "dl_table_36_2_2_1_1_n_20",
+            "dl_table_36_2_2_1_4",
+            "dl_table_36_2_2_1_5",
+            "dl_table_36_2_2_1_1",
+            "dl_table_36_2_2_1_2"
+          ]
+        },
+        {
+          "query_table": "q_table_140_4_3_1",
+          "predictions": [
+            "dl_table_140_4_3_1_1_cate_2_1_1_4",
+            "dl_table_140_4_3_1_1_cate_2_1_1_n_13_3",
+            "dl_table_140_4_3_1_1_cate_2_1_1_3",
+            "dl_table_140_4_3_1_1_cate_2_1_1_5",
+            "dl_table_140_4_3_1_1_cate_2_1_1_1"
+          ]
+        },
+        {
+          "query_table": "q_table_103_3_4_1",
+          "predictions": [
+            "dl_table_103_3_1_3_n_12",
+            "q_table_103_3_4_3",
+            "dl_table_103_3_1_3",
+            "dl_table_103_3_4_2",
+            "dl_table_103_3_1_1"
+          ]
+        },
+        {
+          "query_table": "q_table_45_2_2_1",
+          "predictions": [
+            "dl_table_45_2_2_1_2",
+            "dl_table_45_2_2_1_3",
+            "dl_table_45_2_2_1_1",
+            "dl_table_45_2_2_1_5",
+            "dl_table_45_2_2_1_4"
+          ]
+        },
+        {
+          "query_table": "q_table_111_1_3",
+          "predictions": [
+            "dl_table_111_1_3_1",
+            "dl_table_111_1_3_5",
+            "dl_table_111_1_3_4",
+            "dl_table_111_1_3_2",
+            "dl_table_111_1_3_3"
+          ]
+        },
+        {
+          "query_table": "q_table_103_3_4_3",
+          "predictions": [
+            "dl_table_103_3_4_3",
+            "dl_table_103_3_1_1",
+            "dl_table_103_3_1_3_n_12",
+            "dl_table_103_3_4_1",
+            "dl_table_103_3_1_2_n_12"
+          ]
+        },
+        {
+          "query_table": "q_table_103_3_4_2",
+          "predictions": [
+            "dl_table_103_3_4_2",
+            "dl_table_103_3_4_1",
+            "dl_table_103_3_1_3",
+            "dl_table_103_3_1_1",
+            "q_table_103_3_4_3"
+          ]
+        },
+        {
+          "query_table": "q_table_74_2_2_1",
+          "predictions": [
+            "dl_table_74_2_2_1_2",
+            "dl_table_74_2_2_1_4",
+            "dl_table_74_2_2_1_5",
+            "dl_table_74_2_2_1_1",
+            "dl_table_74_2_2_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_74_2_3_1",
+          "predictions": [
+            "dl_table_74_2_3_1_3",
+            "dl_table_74_2_3_1_2",
+            "q_table_74_2_2_1",
+            "dl_table_74_2_2_1_5",
+            "dl_table_74_2_2_1_2"
+          ]
+        },
+        {
+          "query_table": "q_table_103_1_3",
+          "predictions": [
+            "q_table_103_3_4_3",
+            "dl_table_103_3_1_1",
+            "dl_table_103_3_1_2_n_12",
+            "dl_table_103_3_4_1",
+            "dl_table_103_3_1_3_n_12"
+          ]
+        },
+        {
+          "query_table": "q_table_74_3_6_1",
+          "predictions": [
+            "q_table_74_2_2_1",
+            "dl_table_74_2_2_1_3",
+            "dl_table_74_3_6_1",
+            "dl_table_74_2_2_1_5",
+            "dl_table_74_3_6_1_n_15"
+          ]
+        },
+        {
+          "query_table": "q_table_103_3_1_1",
+          "predictions": [
+            "q_table_103_3_1_3",
+            "dl_table_103_3_1_3_n_12",
+            "dl_table_103_3_1_2_n_12",
+            "dl_table_103_3_1_1",
+            "dl_table_103_3_4_1"
+          ]
+        },
+        {
+          "query_table": "q_table_11_1_3",
+          "predictions": [
+            "dl_table_11_1_3_4",
+            "dl_table_11_1_3_5",
+            "dl_table_11_1_3_3",
+            "dl_table_11_1_3_2",
+            "dl_table_11_1_3_1"
+          ]
+        },
+        {
+          "query_table": "q_table_109_1_3",
+          "predictions": [
+            "dl_table_109_1_2_5",
+            "dl_table_109_1_2_1",
+            "dl_table_109_1_2_2",
+            "dl_table_109_2_3_1_2",
+            "q_table_109_2_3_1"
+          ]
+        },
+        {
+          "query_table": "q_table_109_3_6_1",
+          "predictions": [
+            "dl_table_109_2_3_1_3",
+            "dl_table_109_1_2_5",
+            "dl_table_109_1_2_4",
+            "dl_table_109_1_2_2",
+            "dl_table_109_3_6_1"
+          ]
+        },
+        {
+          "query_table": "q_table_109_3_6_2",
+          "predictions": [
+            "dl_table_109_1_2_5",
+            "dl_table_109_1_2_4",
+            "dl_table_109_1_2_2",
+            "dl_table_109_2_3_1_3",
+            "dl_table_109_3_6_2"
+          ]
+        },
+        {
+          "query_table": "q_table_109_2_3_2",
+          "predictions": [
+            "dl_table_109_2_3_1_3",
+            "dl_table_109_1_2_5",
+            "dl_table_109_2_3_1_2",
+            "dl_table_109_1_2_3",
+            "dl_table_109_1_2_1"
+          ]
+        },
+        {
+          "query_table": "q_table_109_2_3_1",
+          "predictions": [
+            "dl_table_109_1_2_3",
+            "dl_table_109_2_3_1_2",
+            "dl_table_109_2_3_1_1",
+            "dl_table_109_1_2_5",
+            "dl_table_109_1_2_1"
+          ]
+        },
+        {
+          "query_table": "q_table_109_1_2",
+          "predictions": [
+            "dl_table_109_1_2_3",
+            "dl_table_109_2_3_1_2",
+            "q_table_109_2_3_1",
+            "dl_table_109_2_3_1_1",
+            "dl_table_109_1_2_2_n_16"
+          ]
+        },
+        {
+          "query_table": "q_table_109_3_3_1",
+          "predictions": [
+            "dl_table_109_1_2_5",
+            "dl_table_109_2_3_1_3",
+            "dl_table_109_1_2_4",
+            "dl_table_109_1_2_2",
+            "dl_table_109_3_6_2_n_6"
+          ]
+        },
+        {
+          "query_table": "q_table_109_3_3_2",
+          "predictions": [
+            "dl_table_109_3_3_1_n_10",
+            "dl_table_109_3_3_1_n_7",
+            "dl_table_109_1_2_4",
+            "dl_table_109_1_2_2",
+            "dl_table_109_3_6_2"
+          ]
+        },
+        {
+          "query_table": "q_table_20_2_2_1",
+          "predictions": [
+            "dl_table_20_2_2_1_5_n_17",
+            "dl_table_20_2_2_1_1",
+            "dl_table_20_2_2_1_5",
+            "dl_table_20_2_2_1_4",
+            "dl_table_20_2_2_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_141_4_2_1",
+          "predictions": [
+            "dl_table_141_1_3_1",
+            "dl_table_141_1_3_2",
+            "dl_table_141_1_3_4",
+            "dl_table_141_1_3_5",
+            "dl_table_141_1_3_3"
+          ]
+        },
+        {
+          "query_table": "q_table_141_1_3",
+          "predictions": [
+            "dl_table_141_4_2_1_1_n_16",
+            "dl_table_141_1_3_1",
+            "dl_table_141_1_3_3",
+            "dl_table_141_1_3_2",
+            "dl_table_141_1_3_4"
+          ]
+        },
+        {
+          "query_table": "q_table_99_2_1_1",
+          "predictions": [
+            "dl_table_99_2_1_1_n_18_2",
+            "dl_table_99_2_1_1_n_19_2",
+            "dl_table_99_2_1_1_4",
+            "dl_table_99_2_1_1_5",
+            "dl_table_99_2_1_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_116_2_3_1",
+          "predictions": [
+            "dl_table_116_2_3_1_2",
+            "dl_table_116_2_3_1_1",
+            "dl_table_116_2_3_1_3",
+            "dl_table_155_2_1_1_n_18_3",
+            "dl_table_79_1_3_1"
+          ]
+        },
+        {
+          "query_table": "q_table_155_2_1_1",
+          "predictions": [
+            "dl_table_155_2_1_1_4",
+            "dl_table_155_2_1_1_3",
+            "dl_table_155_2_1_1_1",
+            "dl_table_155_2_1_1_5",
+            "dl_table_155_2_1_1_n_17_1"
+          ]
+        },
+        {
+          "query_table": "q_table_21_1_3",
+          "predictions": [
+            "dl_table_21_1_3_3",
+            "dl_table_21_1_3_5",
+            "dl_table_21_1_3_4",
+            "dl_table_21_1_3_2",
+            "dl_table_21_1_3_1"
+          ]
+        },
+        {
+          "query_table": "q_table_152_3_5_1",
+          "predictions": [
+            "q_table_152_3_6_1",
+            "dl_table_152_1_2_2",
+            "dl_table_152_1_3_4",
+            "dl_table_152_3_5_1",
+            "dl_table_152_1_2_4_n_15"
+          ]
+        },
+        {
+          "query_table": "q_table_152_1_3",
+          "predictions": [
+            "dl_table_152_1_2_4",
+            "dl_table_152_1_2_5",
+            "dl_table_152_1_2_3",
+            "dl_table_152_1_2_2",
+            "q_table_23_1_2"
+          ]
+        },
+        {
+          "query_table": "q_table_152_3_6_1",
+          "predictions": [
+            "q_table_152_1_2",
+            "q_table_152_3_5_1",
+            "dl_table_152_1_3_4",
+            "dl_table_152_1_2_2",
+            "q_table_152_3_1_1"
+          ]
+        },
+        {
+          "query_table": "q_table_152_3_1_1",
+          "predictions": [
+            "q_table_152_3_6_1",
+            "q_table_152_1_2",
+            "q_table_152_3_5_1",
+            "dl_table_152_1_3_4",
+            "dl_table_152_3_1_1"
+          ]
+        },
+        {
+          "query_table": "q_table_96_4_2_1",
+          "predictions": [
+            "dl_table_149_4_3_1_1_cate_2_1_1_n_19_5",
+            "dl_table_71_4_3_1_1_cate_2_1_1_n_13_4",
+            "dl_table_96_1_3_1",
+            "dl_table_96_1_3_5",
+            "q_table_96_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_96_1_3",
+          "predictions": [
+            "dl_table_96_1_3_4",
+            "dl_table_96_1_3_3",
+            "dl_table_96_1_3_2",
+            "dl_table_96_1_3_1",
+            "dl_table_96_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_33_3_6_1",
+          "predictions": [
+            "dl_table_33_3_6_1_n_10",
+            "dl_table_33_2_3_1_2",
+            "q_table_33_2_3_1",
+            "dl_table_33_3_6_1",
+            "dl_table_33_2_3_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_33_2_3_1",
+          "predictions": [
+            "dl_table_33_2_3_1_1",
+            "dl_table_33_2_3_1_2",
+            "dl_table_33_2_3_1_3",
+            "dl_table_33_2_3_1_3_n_10",
+            "dl_table_33_3_6_1"
+          ]
+        },
+        {
+          "query_table": "q_table_26_1_3",
+          "predictions": [
+            "dl_table_26_1_3_3",
+            "dl_table_26_1_3_5",
+            "dl_table_26_1_3_4",
+            "dl_table_26_1_3_1",
+            "dl_table_26_1_3_2"
+          ]
+        },
+        {
+          "query_table": "q_table_78_2_2_1",
+          "predictions": [
+            "dl_table_78_2_2_1_1",
+            "dl_table_78_2_2_1_2",
+            "dl_table_78_2_2_1_4",
+            "dl_table_78_2_2_1_3",
+            "dl_table_78_2_2_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_152_1_2",
+          "predictions": [
+            "dl_table_152_1_3_4",
+            "dl_table_152_1_3_3",
+            "dl_table_152_1_2_5",
+            "dl_table_152_1_2_4",
+            "dl_table_152_1_2_1"
+          ]
+        }
+      ],
+      "elapsed_time": 2.3312838077545166,
+      "task": "union",
+      "layer": "L1+L2"
+    },
+    "union_L1+L2+L3": {
+      "results": [
+        {
+          "query_table": "q_table_145_3_4_1",
+          "predictions": [
+            "dl_table_145_3_4_1",
+            "dl_table_145_3_4_2"
+          ]
+        },
+        {
+          "query_table": "q_table_145_3_4_2",
+          "predictions": [
+            "q_table_145_3_6_2",
+            "dl_table_145_1_3_1",
+            "dl_table_145_1_3_4",
+            "q_table_145_1_3",
+            "dl_table_145_1_3_3"
+          ]
+        },
+        {
+          "query_table": "q_table_145_1_3",
+          "predictions": [
+            "dl_table_145_1_3_2",
+            "dl_table_145_1_3_5",
+            "dl_table_145_1_3_1",
+            "dl_table_145_1_3_3",
+            "dl_table_145_3_4_1_n_1"
+          ]
+        },
+        {
+          "query_table": "q_table_145_3_6_1",
+          "predictions": [
+            "q_table_145_3_4_1",
+            "dl_table_145_3_4_2",
+            "dl_table_145_3_4_1",
+            "q_table_145_3_4_2",
+            "dl_table_145_1_3_3"
+          ]
+        },
+        {
+          "query_table": "q_table_145_3_6_2",
+          "predictions": [
+            "q_table_145_3_4_2",
+            "dl_table_145_3_4_2_n_22",
+            "dl_table_145_3_4_2_n_17",
+            "dl_table_145_1_3_4",
+            "dl_table_145_1_3_1"
+          ]
+        },
+        {
+          "query_table": "q_table_155_3_4_1",
+          "predictions": [
+            "q_table_155_1_1",
+            "dl_table_155_3_4_1_n_11",
+            "dl_table_155_3_4_1",
+            "dl_table_155_1_1_1",
+            "dl_table_155_3_4_1_n_10"
+          ]
+        },
+        {
+          "query_table": "q_table_38_4_1",
+          "predictions": [
+            "q_table_38_1_2",
+            "dl_table_38_1_2_3",
+            "dl_table_38_4_1_1_cv_1_3_3",
+            "dl_table_38_4_1_1_cv_1_3_2",
+            "dl_table_38_4_1_1_cv_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_155_1_1",
+          "predictions": [
+            "dl_table_155_1_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_38_1_2",
+          "predictions": [
+            "dl_table_38_1_2_1",
+            "dl_table_38_1_2_2",
+            "dl_table_38_1_2_4",
+            "q_table_155_2_1_1",
+            "dl_table_155_2_1_1_n_17_1"
+          ]
+        },
+        {
+          "query_table": "q_table_72_3_4_1",
+          "predictions": [
+            "dl_table_72_3_4_1"
+          ]
+        },
+        {
+          "query_table": "q_table_139_3_4_1",
+          "predictions": [
+            "dl_table_139_3_4_1",
+            "dl_table_139_1_1_3",
+            "dl_table_139_1_1_5",
+            "q_table_139_1_1",
+            "dl_table_139_1_1_2"
+          ]
+        },
+        {
+          "query_table": "q_table_72_1_1",
+          "predictions": [
+            "dl_table_72_3_4_1_n_4",
+            "q_table_125_1_2",
+            "dl_table_72_1_1_2",
+            "dl_table_72_1_1_1",
+            "dl_table_71_4_3_1_1_cate_2_1_1_n_16_4"
+          ]
+        },
+        {
+          "query_table": "q_table_1_2_3_1",
+          "predictions": [
+            "dl_table_1_3_6_7_n_1",
+            "q_table_1_2_3_4",
+            "dl_table_1_2_3_2_2",
+            "dl_table_1_2_3_4_2",
+            "dl_table_1_3_6_1_n_4"
+          ]
+        },
+        {
+          "query_table": "q_table_139_1_1",
+          "predictions": [
+            "dl_table_139_1_1_1",
+            "dl_table_139_1_1_3",
+            "dl_table_139_1_1_4",
+            "dl_table_139_1_1_2",
+            "dl_table_139_1_1_5"
+          ]
+        },
+        {
+          "query_table": "q_table_1_2_3_2",
+          "predictions": [
+            "dl_table_1_2_3_4_3_n_7",
+            "q_table_1_2_3_6",
+            "dl_table_1_2_3_3_1_n_8",
+            "q_table_1_2_3_7",
+            "q_table_1_2_3_4"
+          ]
+        },
+        {
+          "query_table": "q_table_1_2_3_4",
+          "predictions": [
+            "dl_table_1_2_3_4_1",
+            "dl_table_1_2_3_4_2",
+            "dl_table_1_2_3_4_3",
+            "dl_table_1_2_3_7_3",
+            "dl_table_1_2_3_5_1"
+          ]
+        },
+        {
+          "query_table": "q_table_1_2_3_3",
+          "predictions": [
+            "q_table_1_2_3_6",
+            "dl_table_1_2_3_1_2_n_8",
+            "q_table_1_2_3_7",
+            "q_table_1_2_3_2",
+            "dl_table_1_2_3_4_2"
+          ]
+        },
+        {
+          "query_table": "q_table_1_2_3_5",
+          "predictions": [
+            "dl_table_1_2_3_5_1",
+            "dl_table_1_3_6_1_n_4",
+            "dl_table_1_2_3_4_3",
+            "dl_table_1_2_3_5_2",
+            "dl_table_1_2_3_4_2"
+          ]
+        },
+        {
+          "query_table": "q_table_1_2_3_6",
+          "predictions": [
+            "q_table_1_2_3_2",
+            "q_table_1_2_3_3",
+            "dl_table_1_2_3_1_2_n_8",
+            "dl_table_1_2_3_7_3_n_8",
+            "dl_table_1_2_3_6_3"
+          ]
+        },
+        {
+          "query_table": "q_table_1_3_6_1",
+          "predictions": [
+            "q_table_1_3_6_2",
+            "dl_table_1_3_6_1",
+            "dl_table_1_3_6_2"
+          ]
+        },
+        {
+          "query_table": "q_table_1_2_3_7",
+          "predictions": [
+            "dl_table_1_2_3_7_3",
+            "q_table_1_2_3_2",
+            "q_table_1_2_3_5",
+            "q_table_1_2_3_3",
+            "q_table_1_2_3_6"
+          ]
+        },
+        {
+          "query_table": "q_table_1_3_6_2",
+          "predictions": [
+            "q_table_1_3_6_1",
+            "dl_table_1_3_6_2",
+            "dl_table_1_3_6_1"
+          ]
+        },
+        {
+          "query_table": "q_table_1_3_6_3",
+          "predictions": [
+            "dl_table_1_3_6_1_n_4",
+            "q_table_1_2_3_2",
+            "q_table_1_2_3_7",
+            "q_table_1_3_6_2",
+            "q_table_1_3_6_1"
+          ]
+        },
+        {
+          "query_table": "q_table_1_3_6_5",
+          "predictions": [
+            "dl_table_1_2_3_7_1",
+            "dl_table_1_3_6_1_n_4",
+            "q_table_1_3_6_4",
+            "q_table_1_3_6_6",
+            "q_table_1_3_6_7"
+          ]
+        },
+        {
+          "query_table": "q_table_1_3_6_4",
+          "predictions": [
+            "q_table_1_2_3_5",
+            "q_table_1_3_6_5",
+            "q_table_1_3_6_7",
+            "q_table_1_3_6_2",
+            "q_table_1_3_6_6"
+          ]
+        },
+        {
+          "query_table": "q_table_1_3_6_6",
+          "predictions": [
+            "q_table_1_3_6_2",
+            "dl_table_1_3_6_6_n_8",
+            "dl_table_1_3_6_6",
+            "dl_table_1_3_6_7"
+          ]
+        },
+        {
+          "query_table": "q_table_1_3_6_7",
+          "predictions": [
+            "dl_table_1_3_6_7"
+          ]
+        },
+        {
+          "query_table": "q_table_27_3_4_1",
+          "predictions": [
+            "dl_table_27_3_4_2",
+            "dl_table_27_1_3_2",
+            "dl_table_27_3_4_1",
+            "q_table_27_3_4_2",
+            "dl_table_27_3_4_2_n_29"
+          ]
+        },
+        {
+          "query_table": "q_table_35_2_3_1",
+          "predictions": [
+            "dl_table_35_2_3_1_2",
+            "dl_table_138_1_3_4",
+            "dl_table_35_2_3_1_1",
+            "dl_table_138_2_3_1_1",
+            "dl_table_138_1_3_n_20"
+          ]
+        },
+        {
+          "query_table": "q_table_27_3_4_2",
+          "predictions": [
+            "dl_table_27_3_4_2_n_29",
+            "dl_table_27_1_3_1",
+            "dl_table_27_3_4_2",
+            "dl_table_27_3_4_1",
+            "q_table_27_3_4_1"
+          ]
+        },
+        {
+          "query_table": "q_table_27_1_3",
+          "predictions": [
+            "q_table_27_3_4_2",
+            "dl_table_27_3_4_2",
+            "dl_table_27_3_4_2_n_29",
+            "q_table_23_1_3",
+            "dl_table_96_4_2_1_1_cate_2_1_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_125_2_1_1",
+          "predictions": [
+            "dl_table_125_1_2_2_n_17",
+            "dl_table_125_1_2_1",
+            "dl_table_125_1_2_2_n_12",
+            "dl_table_125_2_1_1_1",
+            "dl_table_125_1_2_3_n_15"
+          ]
+        },
+        {
+          "query_table": "q_table_125_3_1_1",
+          "predictions": [
+            "dl_table_125_1_2_3_n_15",
+            "dl_table_125_1_2_2_n_12",
+            "dl_table_125_1_2_3",
+            "dl_table_125_2_1_1_5",
+            "dl_table_125_1_3_n_28"
+          ]
+        },
+        {
+          "query_table": "q_table_23_1_3",
+          "predictions": [
+            "dl_table_23_1_2_2",
+            "dl_table_23_1_2_3_n_12",
+            "dl_table_23_1_2_1_n_19",
+            "q_table_23_1_2",
+            "dl_table_23_1_2_4"
+          ]
+        },
+        {
+          "query_table": "q_table_125_1_2",
+          "predictions": [
+            "dl_table_125_2_1_1_1",
+            "dl_table_125_2_1_1_3",
+            "dl_table_125_1_2_4",
+            "dl_table_125_1_2_5",
+            "dl_table_125_1_2_3_n_13"
+          ]
+        },
+        {
+          "query_table": "q_table_23_1_2",
+          "predictions": [
+            "dl_table_23_1_2_5",
+            "dl_table_23_1_2_1",
+            "dl_table_23_1_2_4",
+            "dl_table_23_1_2_2",
+            "dl_table_23_1_2_3"
+          ]
+        },
+        {
+          "query_table": "q_table_104_3_3_1",
+          "predictions": [
+            "dl_table_104_1_2_2",
+            "dl_table_104_1_2_5",
+            "dl_table_104_1_2_4",
+            "dl_table_104_1_2_1",
+            "dl_table_104_1_2_3"
+          ]
+        },
+        {
+          "query_table": "q_table_104_2_3_1",
+          "predictions": [
+            "q_table_104_1_2",
+            "dl_table_104_1_2_4",
+            "dl_table_104_1_2_1",
+            "dl_table_104_1_2_3",
+            "dl_table_104_1_2_5"
+          ]
+        },
+        {
+          "query_table": "q_table_104_4_1",
+          "predictions": [
+            "dl_table_104_1_2_5",
+            "dl_table_104_1_2_3",
+            "dl_table_104_1_2_1",
+            "dl_table_104_1_2_4",
+            "dl_table_104_1_2_2"
+          ]
+        },
+        {
+          "query_table": "q_table_104_1_2",
+          "predictions": [
+            "dl_table_104_1_2_3",
+            "dl_table_104_1_2_5",
+            "dl_table_104_1_2_4",
+            "dl_table_104_1_2_2",
+            "dl_table_104_1_2_1"
+          ]
+        },
+        {
+          "query_table": "q_table_28_2_2_1",
+          "predictions": [
+            "dl_table_28_2_2_1_3",
+            "dl_table_28_2_2_1_1",
+            "dl_table_28_2_2_1_2",
+            "dl_table_28_2_2_1_5",
+            "dl_table_28_2_2_1_4"
+          ]
+        },
+        {
+          "query_table": "q_table_54_2_2_1",
+          "predictions": [
+            "dl_table_54_2_2_1_1_n_14",
+            "dl_table_54_2_2_1_4",
+            "dl_table_54_2_2_1_1_n_12",
+            "dl_table_54_2_2_1_3_n_13",
+            "dl_table_54_2_2_1_3_n_19"
+          ]
+        },
+        {
+          "query_table": "q_table_62_3_2_1",
+          "predictions": [
+            "q_table_62_3_2_2"
+          ]
+        },
+        {
+          "query_table": "q_table_62_2_2_1",
+          "predictions": [
+            "dl_table_62_2_2_1_3",
+            "dl_table_62_2_2_1_2",
+            "dl_table_62_2_2_1_5",
+            "dl_table_62_2_2_1_4",
+            "dl_table_62_3_2_6_n_6"
+          ]
+        },
+        {
+          "query_table": "q_table_62_3_2_2",
+          "predictions": [
+            "q_table_62_3_2_1"
+          ]
+        },
+        {
+          "query_table": "q_table_62_3_2_4",
+          "predictions": [
+            "q_table_62_3_2_3",
+            "q_table_62_3_2_2",
+            "dl_table_62_3_2_4",
+            "dl_table_62_3_2_5",
+            "dl_table_62_2_2_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_62_3_2_3",
+          "predictions": [
+            "q_table_62_3_2_4",
+            "dl_table_62_2_2_1_3",
+            "q_table_62_3_2_2",
+            "q_table_62_3_2_6",
+            "q_table_62_3_2_1"
+          ]
+        },
+        {
+          "query_table": "q_table_62_3_2_5",
+          "predictions": [
+            "dl_table_62_3_2_2",
+            "dl_table_62_3_2_5",
+            "q_table_62_3_2_1",
+            "dl_table_62_3_2_3",
+            "dl_table_62_3_2_6"
+          ]
+        },
+        {
+          "query_table": "q_table_24_1_3",
+          "predictions": [
+            "dl_table_24_1_3_5",
+            "dl_table_24_1_3_2",
+            "dl_table_24_1_3_3",
+            "dl_table_24_1_3_1",
+            "dl_table_24_1_3_4"
+          ]
+        },
+        {
+          "query_table": "q_table_62_3_2_6",
+          "predictions": [
+            "dl_table_62_2_2_1_3",
+            "q_table_62_3_2_1",
+            "q_table_62_3_2_2",
+            "q_table_62_3_2_3",
+            "q_table_62_3_2_4"
+          ]
+        },
+        {
+          "query_table": "q_table_66_3_4_1",
+          "predictions": [
+            "dl_table_66_1_3_n_19",
+            "dl_table_66_1_3_1",
+            "dl_table_66_3_4_1_n_30",
+            "dl_table_66_3_4_1",
+            "dl_table_66_1_3_3"
+          ]
+        },
+        {
+          "query_table": "q_table_64_2_2_1",
+          "predictions": [
+            "dl_table_64_2_2_1_2",
+            "dl_table_64_2_2_1_5",
+            "dl_table_64_2_2_1_4",
+            "dl_table_64_2_2_1_1",
+            "dl_table_64_2_2_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_66_1_3",
+          "predictions": [
+            "dl_table_66_3_4_1_n_30",
+            "q_table_66_3_4_1",
+            "dl_table_66_3_4_1",
+            "q_table_23_1_3",
+            "q_table_23_1_2"
+          ]
+        },
+        {
+          "query_table": "q_table_46_2_2_1",
+          "predictions": [
+            "dl_table_46_2_2_1_2",
+            "dl_table_46_2_2_1_5",
+            "dl_table_46_2_2_1_n_15",
+            "dl_table_46_2_2_1_1",
+            "dl_table_46_2_2_1_4"
+          ]
+        },
+        {
+          "query_table": "q_table_25_4_1",
+          "predictions": [
+            "dl_table_25_1_2_2_n_17",
+            "dl_table_25_1_2_3",
+            "dl_table_25_1_2_5",
+            "dl_table_25_1_2_1",
+            "dl_table_25_1_2_4"
+          ]
+        },
+        {
+          "query_table": "q_table_25_1_2",
+          "predictions": [
+            "dl_table_25_1_2_3",
+            "dl_table_25_1_2_5",
+            "dl_table_25_1_2_2",
+            "dl_table_25_1_2_4",
+            "dl_table_25_1_2_1"
+          ]
+        },
+        {
+          "query_table": "q_table_79_3_4_1",
+          "predictions": [
+            "dl_table_79_3_4_1_n_14",
+            "dl_table_79_1_3_5",
+            "dl_table_79_1_3_3",
+            "dl_table_79_3_4_1_n_18",
+            "dl_table_79_3_4_1"
+          ]
+        },
+        {
+          "query_table": "q_table_79_1_3",
+          "predictions": [
+            "dl_table_79_1_3_4",
+            "dl_table_79_1_3_2",
+            "dl_table_79_1_3_1",
+            "dl_table_79_1_3_5",
+            "dl_table_79_1_3_3"
+          ]
+        },
+        {
+          "query_table": "q_table_36_2_2_1",
+          "predictions": [
+            "dl_table_36_2_2_1_4",
+            "dl_table_36_2_2_1_5",
+            "dl_table_36_2_2_1_1",
+            "dl_table_36_2_2_1_2",
+            "dl_table_36_2_2_1_1_n_20"
+          ]
+        },
+        {
+          "query_table": "q_table_103_3_4_1",
+          "predictions": [
+            "dl_table_103_3_1_3_n_12",
+            "dl_table_103_3_1_3",
+            "q_table_103_3_4_3",
+            "dl_table_103_3_4_2",
+            "dl_table_103_3_1_1"
+          ]
+        },
+        {
+          "query_table": "q_table_103_3_4_2",
+          "predictions": [
+            "dl_table_103_3_4_1"
+          ]
+        },
+        {
+          "query_table": "q_table_103_3_4_3",
+          "predictions": [
+            "dl_table_103_3_4_3",
+            "dl_table_103_3_1_1",
+            "dl_table_103_3_1_3_n_12",
+            "dl_table_103_3_1_2_n_12",
+            "dl_table_103_3_4_1"
+          ]
+        },
+        {
+          "query_table": "q_table_103_3_1_1",
+          "predictions": [
+            "q_table_103_3_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_103_1_3",
+          "predictions": [
+            "q_table_103_3_4_3",
+            "dl_table_103_3_1_1",
+            "dl_table_103_3_1_2_n_12",
+            "dl_table_103_3_4_1",
+            "dl_table_103_3_1_3_n_12"
+          ]
+        },
+        {
+          "query_table": "q_table_103_3_1_3",
+          "predictions": [
+            "q_table_103_3_1_1"
+          ]
+        },
+        {
+          "query_table": "q_table_103_3_1_2",
+          "predictions": [
+            "dl_table_103_3_1_2"
+          ]
+        },
+        {
+          "query_table": "q_table_149_4_3_1",
+          "predictions": [
+            "dl_table_149_4_3_1_1_cate_2_1_1_3",
+            "dl_table_149_4_3_1_1_cate_2_1_1_n_13_3",
+            "dl_table_149_4_3_1_1_n_10",
+            "dl_table_149_4_3_1_1_cate_2_1_1_n_15_1",
+            "dl_table_71_4_3_1_1_cate_2_1_1_n_13_4"
+          ]
+        },
+        {
+          "query_table": "q_table_140_4_3_1",
+          "predictions": [
+            "dl_table_140_4_3_1_1_cate_2_1_1_n_13_3",
+            "dl_table_140_4_3_1_1_cate_2_1_1_4",
+            "dl_table_140_4_3_1_1_cate_2_1_1_3",
+            "dl_table_140_4_3_1_1_cate_2_1_1_5",
+            "dl_table_140_4_3_1_1_cate_2_1_1_1"
+          ]
+        },
+        {
+          "query_table": "q_table_45_2_2_1",
+          "predictions": [
+            "dl_table_45_2_2_1_2",
+            "dl_table_45_2_2_1_3",
+            "dl_table_45_2_2_1_1",
+            "dl_table_45_2_2_1_5",
+            "dl_table_45_2_2_1_4"
+          ]
+        },
+        {
+          "query_table": "q_table_111_1_3",
+          "predictions": [
+            "dl_table_111_1_3_1",
+            "dl_table_111_1_3_5",
+            "dl_table_111_1_3_4",
+            "dl_table_111_1_3_2",
+            "dl_table_111_1_3_3"
+          ]
+        },
+        {
+          "query_table": "q_table_74_2_2_1",
+          "predictions": [
+            "dl_table_74_2_2_1_2",
+            "dl_table_74_2_2_1_4",
+            "dl_table_74_2_2_1_5",
+            "dl_table_74_2_2_1_1",
+            "dl_table_74_2_2_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_74_2_3_1",
+          "predictions": [
+            "dl_table_74_2_3_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_74_3_6_1",
+          "predictions": [
+            "q_table_74_2_2_1",
+            "dl_table_74_2_2_1_3",
+            "dl_table_74_2_2_1_5",
+            "dl_table_74_3_6_1",
+            "dl_table_74_3_6_1_n_15"
+          ]
+        },
+        {
+          "query_table": "q_table_11_1_3",
+          "predictions": [
+            "dl_table_11_1_3_4",
+            "dl_table_11_1_3_5",
+            "dl_table_11_1_3_3",
+            "dl_table_11_1_3_2",
+            "dl_table_11_1_3_1"
+          ]
+        },
+        {
+          "query_table": "q_table_109_1_3",
+          "predictions": [
+            "dl_table_109_1_2_5",
+            "dl_table_109_1_2_1",
+            "dl_table_109_1_2_2",
+            "dl_table_109_2_3_1_2",
+            "q_table_109_2_3_1"
+          ]
+        },
+        {
+          "query_table": "q_table_109_3_6_1",
+          "predictions": [
+            "dl_table_109_2_3_1_3",
+            "dl_table_109_1_2_5",
+            "dl_table_109_3_6_1",
+            "dl_table_109_1_2_4",
+            "dl_table_109_1_2_2"
+          ]
+        },
+        {
+          "query_table": "q_table_109_3_6_2",
+          "predictions": [
+            "dl_table_109_1_2_5",
+            "dl_table_109_1_2_2"
+          ]
+        },
+        {
+          "query_table": "q_table_109_2_3_1",
+          "predictions": [
+            "dl_table_109_1_2_3",
+            "dl_table_109_2_3_1_2",
+            "dl_table_109_1_2_5",
+            "dl_table_109_1_2_1",
+            "dl_table_109_2_3_1_1"
+          ]
+        },
+        {
+          "query_table": "q_table_109_2_3_2",
+          "predictions": [
+            "dl_table_109_2_3_1_3",
+            "dl_table_109_1_2_5",
+            "dl_table_109_2_3_1_2",
+            "dl_table_109_1_2_3",
+            "dl_table_109_1_2_1"
+          ]
+        },
+        {
+          "query_table": "q_table_109_1_2",
+          "predictions": [
+            "dl_table_109_1_2_2_n_16"
+          ]
+        },
+        {
+          "query_table": "q_table_109_3_3_1",
+          "predictions": [
+            "dl_table_109_1_2_5",
+            "dl_table_109_1_2_2",
+            "dl_table_109_3_6_2_n_6"
+          ]
+        },
+        {
+          "query_table": "q_table_109_3_3_2",
+          "predictions": [
+            "dl_table_109_3_3_1_n_7",
+            "dl_table_109_3_3_1_n_10",
+            "dl_table_109_1_2_4",
+            "dl_table_109_1_2_2"
+          ]
+        },
+        {
+          "query_table": "q_table_20_2_2_1",
+          "predictions": [
+            "dl_table_20_2_2_1_5_n_17",
+            "dl_table_20_2_2_1_1",
+            "dl_table_20_2_2_1_5",
+            "dl_table_20_2_2_1_4",
+            "dl_table_20_2_2_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_141_4_2_1",
+          "predictions": [
+            "dl_table_141_1_3_1",
+            "dl_table_141_1_3_2",
+            "dl_table_141_1_3_4",
+            "dl_table_141_1_3_5",
+            "dl_table_141_1_3_3"
+          ]
+        },
+        {
+          "query_table": "q_table_141_1_3",
+          "predictions": [
+            "dl_table_141_4_2_1_1_n_16",
+            "dl_table_141_1_3_1",
+            "dl_table_141_1_3_3",
+            "dl_table_141_1_3_2",
+            "dl_table_141_1_3_4"
+          ]
+        },
+        {
+          "query_table": "q_table_99_2_1_1",
+          "predictions": [
+            "dl_table_99_2_1_1_n_18_2",
+            "dl_table_99_2_1_1_n_19_2",
+            "dl_table_99_2_1_1_4",
+            "dl_table_99_2_1_1_5",
+            "dl_table_99_2_1_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_116_2_3_1",
+          "predictions": [
+            "dl_table_116_2_3_1_2",
+            "dl_table_116_2_3_1_1",
+            "dl_table_116_2_3_1_3",
+            "dl_table_155_2_1_1_n_18_3",
+            "dl_table_79_1_3_1"
+          ]
+        },
+        {
+          "query_table": "q_table_155_2_1_1",
+          "predictions": [
+            "dl_table_155_2_1_1_4",
+            "dl_table_155_2_1_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_21_1_3",
+          "predictions": [
+            "dl_table_21_1_3_3",
+            "dl_table_21_1_3_5",
+            "dl_table_21_1_3_4",
+            "dl_table_21_1_3_2",
+            "dl_table_21_1_3_1"
+          ]
+        },
+        {
+          "query_table": "q_table_152_3_5_1",
+          "predictions": [
+            "q_table_152_3_6_1",
+            "dl_table_152_3_5_1",
+            "dl_table_152_1_2_2",
+            "dl_table_152_1_3_4",
+            "dl_table_152_1_2_4_n_15"
+          ]
+        },
+        {
+          "query_table": "q_table_152_1_3",
+          "predictions": [
+            "dl_table_152_1_2_4",
+            "dl_table_152_1_2_5",
+            "dl_table_152_1_2_2",
+            "dl_table_152_1_2_3",
+            "q_table_23_1_2"
+          ]
+        },
+        {
+          "query_table": "q_table_152_3_6_1",
+          "predictions": [
+            "q_table_152_3_5_1",
+            "q_table_152_1_2",
+            "dl_table_152_1_3_4",
+            "dl_table_152_1_2_2",
+            "q_table_152_3_1_1"
+          ]
+        },
+        {
+          "query_table": "q_table_152_3_1_1",
+          "predictions": [
+            "q_table_152_1_2",
+            "dl_table_152_1_3_4",
+            "q_table_152_3_6_1",
+            "dl_table_152_3_1_1",
+            "q_table_152_3_5_1"
+          ]
+        },
+        {
+          "query_table": "q_table_152_1_2",
+          "predictions": [
+            "dl_table_152_1_2_5",
+            "dl_table_152_1_3_4",
+            "dl_table_152_1_3_3",
+            "dl_table_152_1_2_4",
+            "dl_table_152_1_2_1"
+          ]
+        },
+        {
+          "query_table": "q_table_96_4_2_1",
+          "predictions": [
+            "dl_table_149_4_3_1_1_cate_2_1_1_n_19_5",
+            "dl_table_71_4_3_1_1_cate_2_1_1_n_13_4",
+            "dl_table_96_1_3_1",
+            "dl_table_96_1_3_5",
+            "q_table_96_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_96_1_3",
+          "predictions": [
+            "dl_table_96_1_3_4",
+            "dl_table_96_1_3_3",
+            "dl_table_96_1_3_2",
+            "dl_table_96_1_3_1",
+            "dl_table_96_1_3_5"
+          ]
+        },
+        {
+          "query_table": "q_table_33_3_6_1",
+          "predictions": [
+            "dl_table_33_3_6_1_n_10"
+          ]
+        },
+        {
+          "query_table": "q_table_33_2_3_1",
+          "predictions": [
+            "dl_table_33_2_3_1_2",
+            "dl_table_33_2_3_1_3_n_10",
+            "dl_table_33_2_3_1_1",
+            "dl_table_33_2_3_1_3",
+            "dl_table_33_3_6_1"
+          ]
+        },
+        {
+          "query_table": "q_table_26_1_3",
+          "predictions": [
+            "dl_table_26_1_3_3",
+            "dl_table_26_1_3_5",
+            "dl_table_26_1_3_4",
+            "dl_table_26_1_3_1",
+            "dl_table_26_1_3_2"
+          ]
+        },
+        {
+          "query_table": "q_table_78_2_2_1",
+          "predictions": [
+            "dl_table_78_2_2_1_1",
+            "dl_table_78_2_2_1_2",
+            "dl_table_78_2_2_1_4",
+            "dl_table_78_2_2_1_3",
+            "dl_table_78_2_2_1_5"
+          ]
+        }
+      ],
+      "elapsed_time": 1.9752261638641357,
+      "task": "union",
+      "layer": "L1+L2+L3"
+    }
+  },
+  "metrics": {
+    "join_L1": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "hit@5": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "join_L1+L2": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "hit@5": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "join_L1+L2+L3": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "hit@5": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "union_L1": {
+      "hit@1": 0.42424242424242425,
+      "hit@3": 0.5555555555555556,
+      "hit@5": 0.6363636363636364,
+      "precision": 0.34,
+      "recall": 0.551948051948052,
+      "f1": 0.4207920792079208
+    },
+    "union_L1+L2": {
+      "hit@1": 0.3838383838383838,
+      "hit@3": 0.5757575757575758,
+      "hit@5": 0.6868686868686869,
+      "precision": 0.358,
+      "recall": 0.5811688311688312,
+      "f1": 0.4430693069306931
+    },
+    "union_L1+L2+L3": {
+      "hit@1": 0.3838383838383838,
+      "hit@3": 0.5757575757575758,
+      "hit@5": 0.6363636363636364,
+      "precision": 0.38620689655172413,
+      "recall": 0.5454545454545454,
+      "f1": 0.45222072678331093
+    }
+  }
+}

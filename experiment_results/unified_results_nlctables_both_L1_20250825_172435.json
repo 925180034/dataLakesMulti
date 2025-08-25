@@ -1,0 +1,83 @@
+{
+  "dataset": "nlctables",
+  "dataset_type": "subset",
+  "task": "both",
+  "layer": "L1",
+  "workers": 2,
+  "max_queries": 2,
+  "challenging": false,
+  "experiments": {
+    "join_L1": {
+      "results": [
+        {
+          "query_table": "q_table_118_j1_3",
+          "predictions": [
+            "dl_table_118_j1_3_3",
+            "dl_table_118_j1_3_1",
+            "dl_table_118_j1_3_2",
+            "q_table_68_j2_1",
+            "dl_table_50_j1_1_2"
+          ]
+        },
+        {
+          "query_table": "q_table_16_j2_1",
+          "predictions": [
+            "dl_table_16_j2_1_1",
+            "dl_table_16_j2_1_3",
+            "dl_table_16_j2_1_2",
+            "q_table_142_j1_2",
+            "q_table_110_j1_1"
+          ]
+        }
+      ],
+      "elapsed_time": 0.018465518951416016,
+      "task": "join",
+      "layer": "L1"
+    },
+    "union_L1": {
+      "results": [
+        {
+          "query_table": "q_table_145_3_4_1",
+          "predictions": [
+            "q_table_145_3_4_2",
+            "q_table_145_3_6_2",
+            "q_table_145_3_6_1",
+            "dl_table_145_3_4_1",
+            "dl_table_145_3_6_1"
+          ]
+        },
+        {
+          "query_table": "q_table_145_3_4_2",
+          "predictions": [
+            "q_table_145_3_6_2",
+            "q_table_145_3_4_1",
+            "q_table_145_3_6_1",
+            "dl_table_145_3_4_1",
+            "dl_table_145_3_6_1"
+          ]
+        }
+      ],
+      "elapsed_time": 0.14197778701782227,
+      "task": "union",
+      "layer": "L1"
+    }
+  },
+  "metrics": {
+    "join_L1": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "hit@5": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "union_L1": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "hit@5": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    }
+  }
+}

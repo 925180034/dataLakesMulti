@@ -1,0 +1,131 @@
+{
+  "dataset": "nlctables",
+  "dataset_type": "subset",
+  "task": "both",
+  "layer": "L1+L2+L3",
+  "workers": 4,
+  "max_queries": 5,
+  "challenging": true,
+  "experiments": {
+    "join_L1+L2+L3": {
+      "results": [
+        {
+          "query_table": "q_table_118_j1_3",
+          "predictions": [
+            "dl_table_118_j1_3_3",
+            "dl_table_118_j1_3_1"
+          ]
+        },
+        {
+          "query_table": "q_table_16_j2_1",
+          "predictions": [
+            "dl_table_16_j2_1_3",
+            "dl_table_16_j2_1_1",
+            "dl_table_16_j2_1_2",
+            "q_table_67_j1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_60_j3_2",
+          "predictions": [
+            "dl_table_60_j3_2"
+          ]
+        },
+        {
+          "query_table": "q_table_110_j3_1",
+          "predictions": [
+            "q_table_110_j1_1",
+            "dl_table_110_j3_1",
+            "dl_table_110_j1_1_2",
+            "dl_table_110_j1_1_1"
+          ]
+        },
+        {
+          "query_table": "q_table_110_j1_1",
+          "predictions": [
+            "q_table_110_j3_1",
+            "dl_table_110_j1_1_2",
+            "dl_table_110_j3_1",
+            "dl_table_110_j1_1_1",
+            "dl_table_110_j1_1_3"
+          ]
+        }
+      ],
+      "elapsed_time": 0.03079986572265625,
+      "task": "join",
+      "layer": "L1+L2+L3"
+    },
+    "union_L1+L2+L3": {
+      "results": [
+        {
+          "query_table": "q_table_145_3_4_1",
+          "predictions": [
+            "dl_table_145_3_4_1",
+            "dl_table_145_3_4_2"
+          ]
+        },
+        {
+          "query_table": "q_table_145_3_4_2",
+          "predictions": [
+            "q_table_145_3_6_2",
+            "dl_table_145_1_3_1",
+            "dl_table_145_1_3_4",
+            "q_table_145_1_3",
+            "dl_table_145_1_3_3"
+          ]
+        },
+        {
+          "query_table": "q_table_145_1_3",
+          "predictions": [
+            "dl_table_145_1_3_2",
+            "dl_table_145_1_3_5",
+            "dl_table_145_1_3_1",
+            "dl_table_145_1_3_3",
+            "dl_table_145_3_4_1_n_1"
+          ]
+        },
+        {
+          "query_table": "q_table_145_3_6_1",
+          "predictions": [
+            "q_table_145_3_4_1",
+            "dl_table_145_3_4_2",
+            "dl_table_145_3_4_1",
+            "q_table_145_3_4_2",
+            "dl_table_145_1_3_3"
+          ]
+        },
+        {
+          "query_table": "q_table_145_3_6_2",
+          "predictions": [
+            "q_table_145_3_4_2",
+            "dl_table_145_3_4_2_n_22",
+            "dl_table_145_3_4_2_n_17",
+            "dl_table_145_1_3_4",
+            "dl_table_145_1_3_1"
+          ]
+        }
+      ],
+      "elapsed_time": 0.20114946365356445,
+      "task": "union",
+      "layer": "L1+L2+L3"
+    }
+  },
+  "metrics": {
+    "join_L1+L2+L3": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "hit@5": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "union_L1+L2+L3": {
+      "hit@1": 0.4,
+      "hit@3": 0.4,
+      "hit@5": 0.4,
+      "precision": 0.22727272727272727,
+      "recall": 0.5555555555555556,
+      "f1": 0.3225806451612903
+    }
+  }
+}
