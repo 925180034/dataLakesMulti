@@ -96,16 +96,16 @@ class IntraBatchOptimizer:
         # ⭐ 更新：基于实验结果优化 - L3不应该过滤而应该重排序
         if task_type == 'join':
             # JOIN: 关系推理优化 - 极低阈值，让LLM重排序而非过滤
-            state.llm_confidence_threshold = 0.10  # 降低到0.10，避免过度过滤
-            state.aggregator_min_score = 0.01      # 极低阈值，最大化召回
-            state.aggregator_max_results = 500     # 增加候选数量
-            state.vector_top_k = 600               # 增加向量搜索候选
+            state.llm_confidence_threshold = 0.01  # 大幅降低到0.01，最大化召回
+            state.aggregator_min_score = 0.001     # 极低阈值，几乎不过滤
+            state.aggregator_max_results = 1000    # 大幅增加候选数量
+            state.vector_top_k = 1000              # 大幅增加向量搜索候选
         else:  # union
             # UNION: 模式匹配优化 - 适中阈值平衡精度和召回
-            state.llm_confidence_threshold = 0.15  # 降低到0.15，提高召回率
-            state.aggregator_min_score = 0.03      # 降低阈值
-            state.aggregator_max_results = 200     # 增加候选数量
-            state.vector_top_k = 350                # 增加向量搜索候选
+            state.llm_confidence_threshold = 0.05  # 降低到0.05，提高召回率
+            state.aggregator_min_score = 0.01      # 降低阈值
+            state.aggregator_max_results = 500     # 增加候选数量
+            state.vector_top_k = 500               # 增加向量搜索候选
             
         # 重置统计
         state.queries_processed = 0

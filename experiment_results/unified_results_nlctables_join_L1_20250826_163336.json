@@ -1,0 +1,218 @@
+{
+  "dataset": "nlctables",
+  "dataset_type": "subset",
+  "task": "join",
+  "layer": "L1",
+  "workers": 4,
+  "max_queries": 2,
+  "challenging": true,
+  "experiments": {
+    "join_L1": {
+      "results": [
+        {
+          "query_table": "q_table_118_j1_3",
+          "predictions": [
+            "dl_table_118_j1_3_3",
+            "dl_table_118_j1_3_1",
+            "dl_table_118_j1_3_2",
+            "q_table_68_j2_1",
+            "dl_table_50_j1_1_2",
+            "q_table_37_j3_2",
+            "q_table_155_j1_3",
+            "q_table_6_j2_1",
+            "q_table_39_j2_1",
+            "q_table_24_j3_2",
+            "q_table_50_j1_1",
+            "q_table_100_j3_2",
+            "q_table_12_j2_1",
+            "dl_table_155_j1_3_3",
+            "dl_table_155_j1_3_1",
+            "dl_table_155_j1_3_2",
+            "dl_table_50_j1_1_3",
+            "dl_table_50_j1_1_1",
+            "q_table_142_j1_2",
+            "q_table_16_j2_1"
+          ]
+        },
+        {
+          "query_table": "q_table_16_j2_1",
+          "predictions": [
+            "dl_table_16_j2_1_1",
+            "dl_table_16_j2_1_3",
+            "dl_table_16_j2_1_2",
+            "q_table_142_j1_2",
+            "q_table_110_j1_1",
+            "q_table_110_j3_1",
+            "q_table_39_j2_1",
+            "dl_table_142_j1_2_1",
+            "dl_table_142_j1_2_2",
+            "dl_table_142_j1_2_3",
+            "q_table_6_j2_1",
+            "q_table_155_j1_3",
+            "q_table_13_j3_2",
+            "dl_table_100_j3_2",
+            "q_table_68_j2_1",
+            "q_table_50_j1_1",
+            "q_table_24_j3_2",
+            "dl_table_13_j3_3_1",
+            "dl_table_13_j3_2",
+            "dl_table_13_j3_3_2"
+          ]
+        }
+      ],
+      "elapsed_time": 0.021497249603271484,
+      "task": "join",
+      "layer": "L1",
+      "ground_truth": [
+        {
+          "query_table": "q_table_118_j1_3",
+          "ground_truth": [
+            "dl_table_118_j1_3_1",
+            "dl_table_118_j1_3_2",
+            "dl_table_118_j1_3_3"
+          ]
+        },
+        {
+          "query_table": "q_table_16_j2_1",
+          "ground_truth": [
+            "dl_table_16_j2_1_1",
+            "dl_table_16_j2_1_2",
+            "dl_table_16_j2_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_60_j3_2",
+          "ground_truth": [
+            "dl_table_60_j3_2"
+          ]
+        },
+        {
+          "query_table": "q_table_110_j1_1",
+          "ground_truth": [
+            "dl_table_110_j1_1_1",
+            "dl_table_110_j1_1_2",
+            "dl_table_110_j1_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_110_j3_1",
+          "ground_truth": [
+            "dl_table_110_j3_1"
+          ]
+        },
+        {
+          "query_table": "q_table_12_j2_1",
+          "ground_truth": [
+            "dl_table_12_j2_1_1",
+            "dl_table_12_j2_1_2",
+            "dl_table_12_j2_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_24_j3_2",
+          "ground_truth": [
+            "dl_table_24_j3_2"
+          ]
+        },
+        {
+          "query_table": "q_table_142_j1_2",
+          "ground_truth": [
+            "dl_table_142_j1_2_1",
+            "dl_table_142_j1_2_2",
+            "dl_table_142_j1_2_3"
+          ]
+        },
+        {
+          "query_table": "q_table_6_j2_1",
+          "ground_truth": [
+            "dl_table_6_j2_1_1",
+            "dl_table_6_j2_1_2",
+            "dl_table_6_j2_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_13_j3_2",
+          "ground_truth": [
+            "dl_table_13_j3_2"
+          ]
+        },
+        {
+          "query_table": "q_table_13_j3_3",
+          "ground_truth": [
+            "dl_table_13_j3_3_1",
+            "dl_table_13_j3_3_2",
+            "dl_table_13_j3_3_3"
+          ]
+        },
+        {
+          "query_table": "q_table_50_j1_1",
+          "ground_truth": [
+            "dl_table_50_j1_1_1",
+            "dl_table_50_j1_1_2",
+            "dl_table_50_j1_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_68_j2_1",
+          "ground_truth": [
+            "dl_table_68_j2_1_1",
+            "dl_table_68_j2_1_2",
+            "dl_table_68_j2_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_100_j3_2",
+          "ground_truth": [
+            "dl_table_100_j3_2"
+          ]
+        },
+        {
+          "query_table": "q_table_155_j1_3",
+          "ground_truth": [
+            "dl_table_155_j1_3_1",
+            "dl_table_155_j1_3_2",
+            "dl_table_155_j1_3_3"
+          ]
+        },
+        {
+          "query_table": "q_table_39_j2_1",
+          "ground_truth": [
+            "dl_table_39_j2_1_1",
+            "dl_table_39_j2_1_2",
+            "dl_table_39_j2_1_3"
+          ]
+        },
+        {
+          "query_table": "q_table_37_j3_2",
+          "ground_truth": [
+            "dl_table_37_j3_2"
+          ]
+        },
+        {
+          "query_table": "q_table_67_j1_3",
+          "ground_truth": [
+            "dl_table_67_j1_3_1",
+            "dl_table_67_j1_3_2",
+            "dl_table_67_j1_3_3"
+          ]
+        }
+      ]
+    }
+  },
+  "metrics": {
+    "join_L1": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "precision@1": 1.0,
+      "recall@1": 0.3333333333333333,
+      "precision@5": 0.6,
+      "recall@5": 1.0,
+      "precision@10": 0.3,
+      "recall@10": 1.0,
+      "precision": 0.15,
+      "recall": 1.0,
+      "f1": 0.2608695652173913
+    }
+  }
+}

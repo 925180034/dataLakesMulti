@@ -149,3 +149,83 @@ def calculate_precision_recall_f1(results: List[Dict], ground_truth: Dict) -> Di
         'recall': recall,
         'f1': f1
     }
+
+
+def calculate_precision_recall_at_k(results: List[Dict], ground_truth: Dict, k: int) -> Dict[str, float]:
+    """
+    Calculate Precision@K and Recall@K scores
+    
+    Args:
+        results: List of prediction results
+        ground_truth: Ground truth data
+        k: Top-k value for evaluation
+    
+    Returns:
+        Dictionary with precision@k and recall@k scores
+    """
+    if not results:
+        return {'precision': 0.0, 'recall': 0.0}
+    
+    total_true_positives = 0
+    total_predictions = 0
+    total_ground_truths = 0
+    
+    for result in results:
+        query_table = result.get('query_table', '')
+        # Only take top-k predictions
+        predictions = result.get('predictions', [])[:k]
+        
+        # Get ground truth for this query
+        if isinstance(ground_truth, dict):
+            gt = None
+            # Check if it's NLCTables format
+            for gt_item in ground_truth.values():
+                if isinstance(gt_item, list) and len(gt_item) > 0:
+                    if isinstance(gt_item[0], dict) and 'query_table' in gt_item[0]:
+                        for item in gt_item:
+                            if item.get('query_table') == query_table:
+                                gt = item.get('ground_truth', [])
+                                break
+                    break
+            
+            if gt is None and query_table in ground_truth:
+                gt = ground_truth[query_table]
+        elif isinstance(ground_truth, list):
+            gt = None
+            for gt_item in ground_truth:
+                if gt_item.get('query_table') == query_table:
+                    gt = gt_item.get('ground_truth', [])
+                    break
+        else:
+            gt = []
+        
+        if gt is None:
+            gt = []
+        
+        # Convert predictions to table names
+        pred_names = []
+        for pred in predictions:
+            if isinstance(pred, str):
+                pred_names.append(pred)
+            elif isinstance(pred, dict):
+                pred_names.append(pred.get('table_name', ''))
+        
+        # Calculate TP for @K
+        pred_set = set(pred_names)
+        gt_set = set(gt)
+        
+        if gt_set:  # Only count if there are ground truth items
+            true_positives = len(pred_set & gt_set)
+            
+            total_true_positives += true_positives
+            total_predictions += len(pred_set)  # Actual predictions (may be less than k)
+            total_ground_truths += len(gt_set)
+    
+    # Calculate metrics @K
+    precision_at_k = total_true_positives / total_predictions if total_predictions > 0 else 0.0
+    recall_at_k = total_true_positives / total_ground_truths if total_ground_truths > 0 else 0.0
+    
+    return {
+        'precision': precision_at_k,
+        'recall': recall_at_k
+    }

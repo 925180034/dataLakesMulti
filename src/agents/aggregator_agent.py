@@ -1,10 +1,14 @@
 """
 AggregatorAgent - Result aggregation and ranking
 """
+import os
 from typing import List, Dict, Any
 from collections import defaultdict
 from src.agents.base_agent import BaseAgent
 from src.core.state import WorkflowState, MatchResult, CandidateTable
+
+# 可配置的最大预测数量（支持@K计算）
+MAX_PREDICTIONS = int(os.environ.get('MAX_PREDICTIONS', '20'))
 
 
 class AggregatorAgent(BaseAgent):
@@ -49,7 +53,7 @@ class AggregatorAgent(BaseAgent):
         
         # Priority 2: Add candidates from SearcherAgent if not already matched
         # But only if we don't have enough LLM matches
-        max_results = 20  # Maximum results to return
+        max_results = MAX_PREDICTIONS  # Maximum results to return
         
         if len(all_results) < max_results:
             for candidate in candidates:
@@ -84,21 +88,21 @@ class AggregatorAgent(BaseAgent):
         final_results = self._rank_results(final_results)
         
         # Apply Top-K limit
-        top_k = 10  # Default
+        top_k = MAX_PREDICTIONS  # Use configurable max
         if strategy and hasattr(strategy, 'top_k'):
-            top_k = min(10, strategy.top_k // 5)  # Return top 20% of candidates
+            top_k = min(MAX_PREDICTIONS, strategy.top_k // 5)  # Return top 20% of candidates, but not more than MAX_PREDICTIONS
         
         final_results = final_results[:top_k]
         
         # Generate explanations for top results
-        for i, result in enumerate(final_results[:5]):  # Explain top 5
+        for i, result in enumerate(final_results[:min(5, MAX_PREDICTIONS)]):  # Explain top 5 or less
             result.evidence['explanation'] = self._generate_explanation(result, i + 1)
         
         # Log results
         self.logger.info(f"Aggregation complete: {len(final_results)} final results")
         if final_results:
-            self.logger.info("Top 5 results:")
-            for i, result in enumerate(final_results[:5]):
+            self.logger.info(f"Top {min(5, len(final_results))} results:")
+            for i, result in enumerate(final_results[:min(5, len(final_results))]):
                 self.logger.info(
                     f"  {i+1}. {result.matched_table} "
                     f"(score: {result.score:.3f}, confidence: {result.confidence:.3f})"

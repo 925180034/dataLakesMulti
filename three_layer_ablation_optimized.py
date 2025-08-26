@@ -47,6 +47,10 @@ os.environ['PYTHONHASHSEED'] = '0'
 # 禁用tokenizers并行以避免fork警告
 os.environ['TOKENIZERS_PARALLELISM'] = 'false'
 
+# 可配置的最大预测数量（支持@K计算，K最大为10，设置为20留有余量）
+MAX_PREDICTIONS = int(os.environ.get('MAX_PREDICTIONS', '20'))
+logger.info(f"📊 MAX_PREDICTIONS set to {MAX_PREDICTIONS} (supports up to @{MAX_PREDICTIONS//2} evaluation)")
+
 
 # ================== 缓存管理器 ==================
 class CacheManager:
@@ -397,15 +401,18 @@ def process_query_l1(args: Tuple) -> Dict:
         result = {'query_table': query_table_name, 'predictions': []}
     else:
         # L1: 元数据过滤 - 使用预构建的索引
+        # NLCTables需要更低的阈值和更多候选以提高召回率
         candidates = metadata_filter.filter_candidates(
-            query_table, max_candidates=10
+            query_table, 
+            threshold=0.1,  # 降低阈值从0.4到0.1，提高召回率
+            max_candidates=200  # 增加候选从40到200
         )
         
         # 候选格式是[(table_name, score), ...]，提取表名
         predictions = [
             table_name for table_name, score in candidates 
             if table_name != query_table_name
-        ][:5]
+        ][:MAX_PREDICTIONS]
         
         result = {'query_table': query_table_name, 'predictions': predictions}
     
@@ -457,7 +464,7 @@ def process_query_l2(args: Tuple) -> Dict:
         # L1: 元数据过滤（扩大候选集）
         metadata_filter.build_index(tables)
         l1_candidates = metadata_filter.filter_candidates(
-            query_table, max_candidates=40  # 根据任务类型调整候选数
+            query_table, max_candidates=MAX_PREDICTIONS * 3  # 根据任务类型调整候选数
         )
         
         # L2: 向量搜索 + 任务特定的值相似性重排序
@@ -469,11 +476,11 @@ def process_query_l2(args: Tuple) -> Dict:
                 if t.get('name') in candidate_names:
                     candidate_tables.append(t)
             
-            # 使用向量搜索（UNION需要更多候选因为结构匹配更严格）
+            # 使用向量搜索（需要更多候选以提高召回率）
             l2_results = vector_search.search(
                 query_table, 
                 candidate_tables if candidate_tables else tables,
-                top_k=25 if task_type == 'union' else 15  # UNION增加候选数
+                top_k=100  # 增加到100个候选以提高召回率
             )
             
             # 添加任务特定的值相似性重排序（L2增强）
@@ -515,7 +522,7 @@ def process_query_l2(args: Tuple) -> Dict:
             
             # 重新排序
             enhanced_results.sort(key=lambda x: x[1], reverse=True)
-            predictions = [name for name, score in enhanced_results][:5]
+            predictions = [name for name, score in enhanced_results][:MAX_PREDICTIONS]
             
         except Exception as e:
             logger.warning(f"L2处理失败 {query_table_name}: {e}, 回退到L1结果")
@@ -523,7 +530,7 @@ def process_query_l2(args: Tuple) -> Dict:
             predictions = [
                 table_name for table_name, score in l1_candidates
                 if table_name != query_table_name
-            ][:5]
+            ][:MAX_PREDICTIONS]
         
         result = {'query_table': query_table_name, 'predictions': predictions}
     
@@ -697,7 +704,7 @@ def process_query_l3(args: Tuple) -> Dict:
             
             if result and result.get('success') and result.get('results'):
                 l3_predictions = [
-                    r['table_name'] for r in result.get('results', [])[:5]
+                    r['table_name'] for r in result.get('results', [])[:MAX_PREDICTIONS]
                     if r['table_name'] != query_table_name
                 ]
                 final_predictions = l3_predictions if l3_predictions else l2_predictions
@@ -827,9 +834,9 @@ def calculate_metrics(predictions: Dict[str, List[str]],
                 elif k == 5:
                     hit_at_5 += 1
         
-        # Precision, Recall, F1
+        # Precision, Recall, F1 (Use all predictions, not limited)
         if pred_tables:
-            predicted_set = set(pred_tables[:5])
+            predicted_set = set(pred_tables)  # Use all predictions for metrics calculation
             tp = len(predicted_set & true_tables)
             fp = len(predicted_set - true_tables)
             fn = len(true_tables - predicted_set)

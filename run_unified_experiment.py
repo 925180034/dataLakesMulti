@@ -9,15 +9,144 @@ import os
 import sys
 import json
 import time
+import shutil
+import pickle
 import argparse
 import logging
 from pathlib import Path
-from typing import List, Dict, Tuple, Optional
+from typing import List, Dict, Tuple, Optional, Any
 from datetime import datetime
 
 # 设置日志
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
+
+# 可配置的最大预测数量（支持@K计算，K最大为10，设置为20留有余量）
+MAX_PREDICTIONS = int(os.environ.get('MAX_PREDICTIONS', '20'))
+logger.info(f"📊 MAX_PREDICTIONS set to {MAX_PREDICTIONS} (supports up to @{MAX_PREDICTIONS//2} evaluation)")
+
+# 全局缓存存储
+global_unified_cache = {}
+
+def clear_experiment_cache(specific_dataset: str = None):
+    """清理实验缓存
+    
+    Args:
+        specific_dataset: 如果指定，只清理该数据集的缓存
+    """
+    cache_root = Path("cache")
+    
+    if not cache_root.exists():
+        logger.info("📦 缓存目录不存在，无需清理")
+        return 0
+    
+    cleared_count = 0
+    
+    if specific_dataset:
+        # 清理特定数据集的缓存
+        patterns = [
+            f"ablation_{specific_dataset}_*",
+            f"experiment_cache/{specific_dataset}_*",
+            specific_dataset,
+            f"experiment_{specific_dataset}_*",
+            f"unified_{specific_dataset}_*"
+        ]
+        logger.info(f"🧹 清理 {specific_dataset} 数据集的缓存...")
+    else:
+        # 清理所有缓存
+        patterns = ["*"]
+        logger.info("🧹 清理所有实验缓存...")
+    
+    for pattern in patterns:
+        for cache_path in cache_root.glob(pattern):
+            if cache_path.is_dir():
+                try:
+                    shutil.rmtree(cache_path)
+                    cleared_count += 1
+                    logger.debug(f"  ✅ 删除缓存目录: {cache_path}")
+                except Exception as e:
+                    logger.warning(f"  ⚠️ 无法删除 {cache_path}: {e}")
+    
+    if cleared_count > 0:
+        logger.info(f"✅ 清理完成，删除了 {cleared_count} 个缓存目录")
+    else:
+        logger.info("📦 没有找到需要清理的缓存")
+    
+    return cleared_count
+
+
+def prepare_unified_cache(tables: List[Dict], dataset_name: str, task_type: str) -> Dict[str, Any]:
+    """为整个实验准备统一的缓存（向量索引和嵌入）
+    
+    Args:
+        tables: 表列表
+        dataset_name: 数据集名称
+        task_type: 任务类型
+        
+    Returns:
+        包含预计算数据的字典
+    """
+    global global_unified_cache
+    
+    # 如果已经有缓存，直接返回
+    cache_key = f"{dataset_name}_{task_type}_{len(tables)}"
+    if cache_key in global_unified_cache:
+        logger.info("📦 使用已有的统一缓存")
+        return global_unified_cache[cache_key]
+    
+    logger.info("📊 准备统一的实验缓存...")
+    
+    # 创建缓存目录
+    cache_dir = Path("cache") / dataset_name
+    cache_dir.mkdir(parents=True, exist_ok=True)
+    
+    # 向量索引和嵌入文件
+    index_file = cache_dir / f"vector_index_{len(tables)}.pkl"
+    embeddings_file = cache_dir / f"table_embeddings_{len(tables)}.pkl"
+    
+    # 检查是否已存在
+    if index_file.exists() and embeddings_file.exists():
+        logger.info("  📦 加载现有的向量索引和嵌入...")
+        try:
+            with open(index_file, 'rb') as f:
+                vector_index = pickle.load(f)
+            with open(embeddings_file, 'rb') as f:
+                table_embeddings = pickle.load(f)
+        except Exception as e:
+            logger.warning(f"  ⚠️ 加载缓存失败: {e}，重新生成...")
+            vector_index = None
+            table_embeddings = None
+    else:
+        vector_index = None
+        table_embeddings = None
+    
+    # 如果没有缓存，生成新的
+    if vector_index is None or table_embeddings is None:
+        logger.info("  ⚙️ 生成新的向量索引和嵌入...")
+        from precompute_embeddings import precompute_all_embeddings
+        precompute_all_embeddings(tables, dataset_name)
+        
+        # 重新加载生成的文件
+        with open(index_file, 'rb') as f:
+            vector_index = pickle.load(f)
+        with open(embeddings_file, 'rb') as f:
+            table_embeddings = pickle.load(f)
+    
+    logger.info(f"  ✅ 统一缓存准备完成")
+    logger.info(f"  📊 向量索引大小: {index_file.stat().st_size / 1024:.2f}KB")
+    logger.info(f"  📊 表嵌入大小: {embeddings_file.stat().st_size / 1024:.2f}KB")
+    
+    result = {
+        'vector_index': vector_index,
+        'table_embeddings': table_embeddings,
+        'cache_dir': cache_dir,
+        'cache_key': cache_key
+    }
+    
+    # 存储到全局缓存
+    global_unified_cache[cache_key] = result
+    
+    return result
 
 def detect_dataset_type(tables_path: str) -> str:
     """自动检测数据集类型"""
@@ -77,7 +206,7 @@ def run_nlctables_experiment(layer: str, tables: List[Dict], queries: List[Dict]
         for query_table, predictions in results_dict.items():
             results.append({
                 'query_table': query_table,
-                'predictions': predictions[:5] if isinstance(predictions, list) else []
+                'predictions': predictions[:MAX_PREDICTIONS] if isinstance(predictions, list) else []
             })
     else:
         results = results_dict
@@ -121,7 +250,7 @@ def run_webtable_santos_experiment(layer: str, tables: List[Dict], queries: List
         for query_table, predictions in results_dict.items():
             results.append({
                 'query_table': query_table,
-                'predictions': predictions[:5] if isinstance(predictions, list) else []
+                'predictions': predictions[:MAX_PREDICTIONS] if isinstance(predictions, list) else []
             })
     else:
         results = results_dict
@@ -134,7 +263,7 @@ def run_webtable_santos_experiment(layer: str, tables: List[Dict], queries: List
 
 def evaluate_results(results: List[Dict], ground_truth, k_values: List[int] = [1, 3, 5]) -> Dict:
     """评估结果 - ground_truth can be Dict or List"""
-    from src.utils.evaluation import calculate_hit_at_k, calculate_precision_recall_f1
+    from src.utils.evaluation import calculate_hit_at_k, calculate_precision_recall_f1, calculate_precision_recall_at_k
     
     metrics = {}
     
@@ -143,7 +272,13 @@ def evaluate_results(results: List[Dict], ground_truth, k_values: List[int] = [1
         hit_rate = calculate_hit_at_k(results, ground_truth, k)
         metrics[f'hit@{k}'] = hit_rate
     
-    # 计算Precision/Recall/F1
+    # 计算Precision@K和Recall@K for k=1, 5, 10
+    for k in [1, 5, 10]:
+        pr_at_k = calculate_precision_recall_at_k(results, ground_truth, k)
+        metrics[f'precision@{k}'] = pr_at_k['precision']
+        metrics[f'recall@{k}'] = pr_at_k['recall']
+    
+    # 计算全量Precision/Recall/F1（保留，用于兼容性）
     pr_metrics = calculate_precision_recall_f1(results, ground_truth)
     metrics.update(pr_metrics)
     
@@ -166,9 +301,12 @@ def print_results_table(all_results: Dict, all_metrics: Dict):
             'hit@1': metrics.get('hit@1', 0.0),
             'hit@3': metrics.get('hit@3', 0.0),
             'hit@5': metrics.get('hit@5', 0.0),
-            'precision': metrics.get('precision', 0.0),
-            'recall': metrics.get('recall', 0.0),
-            'f1': metrics.get('f1', 0.0),
+            'precision@1': metrics.get('precision@1', 0.0),
+            'precision@5': metrics.get('precision@5', 0.0),
+            'precision@10': metrics.get('precision@10', 0.0),
+            'recall@1': metrics.get('recall@1', 0.0),
+            'recall@5': metrics.get('recall@5', 0.0),
+            'recall@10': metrics.get('recall@10', 0.0),
             'time': elapsed_time
         }
         
@@ -180,34 +318,46 @@ def print_results_table(all_results: Dict, all_metrics: Dict):
     # 打印JOIN结果表格
     if join_results:
         print("\nJOIN Task Results:")
-        print("-" * 116)
-        print(f"{'Layer Config':<15} {'Hit@1':<10} {'Hit@3':<10} {'Hit@5':<10} {'Precision':<12} {'Recall':<10} {'F1-Score':<10} {'Time(s)':<10}")
-        print("-" * 116)
+        print("-" * 150)
+        print(f"{'Layer':<12} {'Hit@1':<8} {'Hit@3':<8} {'Hit@5':<8} "
+              f"{'P@1':<8} {'P@5':<8} {'P@10':<8} "
+              f"{'R@1':<8} {'R@5':<8} {'R@10':<8} {'Time(s)':<8}")
+        print("-" * 150)
         
         # 按L1, L1+L2, L1+L2+L3顺序排序
         layer_order = ['L1', 'L1+L2', 'L1+L2+L3']
         for layer in layer_order:
             if layer in join_results:
                 data = join_results[layer]
-                print(f"{layer:<15} {data['hit@1']:<10.3f} {data['hit@3']:<10.3f} {data['hit@5']:<10.3f} "
-                      f"{data['precision']:<12.3f} {data['recall']:<10.3f} {data['f1']:<10.3f} {data['time']:<10.2f}")
+                print(f"{layer:<12} {data['hit@1']:<8.3f} {data['hit@3']:<8.3f} {data['hit@5']:<8.3f} "
+                      f"{data['precision@1']:<8.3f} {data['precision@5']:<8.3f} {data['precision@10']:<8.3f} "
+                      f"{data['recall@1']:<8.3f} {data['recall@5']:<8.3f} {data['recall@10']:<8.3f} "
+                      f"{data['time']:<8.2f}")
     
     # 打印UNION结果表格
     if union_results:
         print("\nUNION Task Results:")
-        print("-" * 116)
-        print(f"{'Layer Config':<15} {'Hit@1':<10} {'Hit@3':<10} {'Hit@5':<10} {'Precision':<12} {'Recall':<10} {'F1-Score':<10} {'Time(s)':<10}")
-        print("-" * 116)
+        print("-" * 150)
+        print(f"{'Layer':<12} {'Hit@1':<8} {'Hit@3':<8} {'Hit@5':<8} "
+              f"{'P@1':<8} {'P@5':<8} {'P@10':<8} "
+              f"{'R@1':<8} {'R@5':<8} {'R@10':<8} {'Time(s)':<8}")
+        print("-" * 150)
         
         # 按L1, L1+L2, L1+L2+L3顺序排序
         for layer in layer_order:
             if layer in union_results:
                 data = union_results[layer]
-                print(f"{layer:<15} {data['hit@1']:<10.3f} {data['hit@3']:<10.3f} {data['hit@5']:<10.3f} "
-                      f"{data['precision']:<12.3f} {data['recall']:<10.3f} {data['f1']:<10.3f} {data['time']:<10.2f}")
+                print(f"{layer:<12} {data['hit@1']:<8.3f} {data['hit@3']:<8.3f} {data['hit@5']:<8.3f} "
+                      f"{data['precision@1']:<8.3f} {data['precision@5']:<8.3f} {data['precision@10']:<8.3f} "
+                      f"{data['recall@1']:<8.3f} {data['recall@5']:<8.3f} {data['recall@10']:<8.3f} "
+                      f"{data['time']:<8.2f}")
 
 def main():
     parser = argparse.ArgumentParser(description='统一实验运行器')
+    parser.add_argument('--clear-cache', action='store_true',
+                       help='实验前清理缓存（默认不清理）')
+    parser.add_argument('--no-cache', action='store_true',
+                       help='强制重新生成所有缓存')
     parser.add_argument('--dataset', type=str, required=True,
                        help='数据集路径或名称 (webtable/santos/nlctables)')
     parser.add_argument('--task', type=str, choices=['join', 'union', 'both'], default='join',
@@ -256,6 +406,15 @@ def main():
         os.environ['SKIP_LLM'] = 'true'
     else:
         os.environ['SKIP_LLM'] = 'false'
+    
+    # 清理缓存（如果需要）
+    if args.clear_cache:
+        clear_experiment_cache(args.dataset if args.dataset in ['webtable', 'santos', 'nlctables'] else None)
+    
+    # 如果需要强制重新生成缓存
+    if args.no_cache:
+        logger.info("⚠️ 强制重新生成所有缓存")
+        os.environ['FORCE_REBUILD_CACHE'] = 'true'
     
     # 确定数据集路径
     if args.dataset in ['webtable', 'santos', 'nlctables']:
@@ -331,6 +490,13 @@ def main():
         layers_to_run = ['L1', 'L1+L2', 'L1+L2+L3']
     else:
         layers_to_run = [args.layer]
+    
+    # 为整个实验准备统一缓存（所有层和任务共享）
+    if not args.skip_llm and len(layers_to_run) > 1:  # 只有多层时才需要统一缓存
+        unified_cache = prepare_unified_cache(tables, dataset_type, tasks_to_run[0])
+        # 将缓存信息存储到环境变量供子进程使用
+        os.environ['UNIFIED_CACHE_DIR'] = str(unified_cache['cache_dir'])
+        logger.info(f"  📦 所有层将共享统一的向量索引和嵌入")
     
     # 运行所有组合的实验
     all_results = {}
@@ -461,7 +627,8 @@ def main():
             metrics = all_metrics[exp_key]
             print(f"      Hit@1: {metrics.get('hit@1', 0):.3f}")
             print(f"      Hit@3: {metrics.get('hit@3', 0):.3f}")
-            print(f"      F1: {metrics.get('f1', 0):.3f}")
+            print(f"      P@5: {metrics.get('precision@5', 0):.3f}")
+            print(f"      R@5: {metrics.get('recall@5', 0):.3f}")
     
     print("="*60)
     
