@@ -1,0 +1,85 @@
+{
+  "dataset": "opendata",
+  "dataset_type": "subset",
+  "task": "union",
+  "layer": "L1",
+  "workers": 4,
+  "max_queries": 2,
+  "challenging": true,
+  "experiments": {
+    "union_L1": {
+      "results": [
+        {
+          "query_table": "CAN_CSV0000000000000474.csv",
+          "predictions": [
+            "CAN_CSV0000000000004975.csv",
+            "CAN_CSV0000000000027188.csv",
+            "CAN_CSV0000000000000581.csv",
+            "CAN_CSV0000000000027280.csv",
+            "CAN_CSV0000000000000659.csv",
+            "CAN_CSV0000000000000638.csv",
+            "CAN_CSV0000000000027281.csv",
+            "CAN_CSV0000000000001217.csv",
+            "CAN_CSV0000000000027243.csv",
+            "CAN_CSV0000000000005418.csv",
+            "CAN_CSV0000000000027226.csv",
+            "CAN_CSV0000000000014061.csv",
+            "CAN_CSV0000000000006566.csv",
+            "CAN_CSV0000000000000624.csv",
+            "CAN_CSV0000000000000589.csv",
+            "CAN_CSV0000000000013411.csv",
+            "CAN_CSV0000000000015731.csv",
+            "CAN_CSV0000000000006840.csv",
+            "CAN_CSV0000000000000691.csv",
+            "CAN_CSV0000000000006970.csv"
+          ]
+        },
+        {
+          "query_table": "CAN_CSV0000000000000557.csv",
+          "predictions": [
+            "CAN_CSV0000000000000558.csv",
+            "CAN_CSV0000000000005071.csv",
+            "CAN_CSV0000000000027217.csv",
+            "CAN_CSV0000000000005313.csv",
+            "CAN_CSV0000000000000581.csv",
+            "CAN_CSV0000000000013411.csv",
+            "CAN_CSV0000000000027243.csv",
+            "CAN_CSV0000000000005347.csv",
+            "CAN_CSV0000000000006566.csv",
+            "CAN_CSV0000000000027226.csv",
+            "CAN_CSV0000000000000659.csv",
+            "CAN_CSV0000000000014061.csv",
+            "CAN_CSV0000000000000841.csv",
+            "CAN_CSV0000000000005926.csv",
+            "CAN_CSV0000000000012536.csv",
+            "CAN_CSV0000000000013397.csv",
+            "CAN_CSV0000000000000589.csv",
+            "CAN_CSV0000000000001143.csv",
+            "CAN_CSV0000000000015731.csv",
+            "CAN_CSV0000000000027280.csv"
+          ]
+        }
+      ],
+      "elapsed_time": 0.08092999458312988,
+      "task": "union",
+      "layer": "L1",
+      "ground_truth": null
+    }
+  },
+  "metrics": {
+    "union_L1": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "precision@1": 1.0,
+      "recall@1": 0.13333333333333333,
+      "precision@5": 0.3,
+      "recall@5": 0.2,
+      "precision@10": 0.2,
+      "recall@10": 0.26666666666666666,
+      "precision": 0.1,
+      "recall": 0.26666666666666666,
+      "f1": 0.14545454545454545
+    }
+  }
+}

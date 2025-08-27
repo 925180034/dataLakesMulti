@@ -100,7 +100,7 @@ class LLMMatcherTool:
             query_table, candidate_table
         )
         
-        prompt = f"""判断这两个表是否可以进行JOIN操作。
+        prompt = f"""评估这两个表进行JOIN操作的相关性分数。
 
 查询表: {query_table.get('table_name')}
 列数: {len(query_cols)}
@@ -115,28 +115,30 @@ class LLMMatcherTool:
 数据值相似度: {value_similarity:.1%}
 潜在JOIN列: {[f"{q}={c} (置信度:{conf:.1%})" for q, c, conf in best_join_cols] if best_join_cols else '未发现'}
 
-判断标准（必须满足至少一个）:
-1. 存在相同的列名且数据类型兼容（最重要）
-2. 数据样本值有重叠（value_similarity > 0.3）
-3. 有明显的主键-外键关系（如id和xxx_id）
-4. 存在语义相似的列（如user_id和userid）
+评分标准（根据以下特征综合评分）:
+- 列名完全匹配：+0.3分
+- 数据值高度重叠（>50%）：+0.3分  
+- 存在明显外键关系：+0.2分
+- 语义相似列：+0.1分
+- 数据类型兼容：+0.1分
 
-重要：如果数据值相似度>0.5，很可能可以JOIN！
+注意：即使没有明显匹配，也要给出0.0-1.0之间的相关性分数。
+对于NLCTables数据集，列名可能很简短（如j1_3），更多关注数据值匹配。
 
 返回JSON格式：
 {{
-  "is_match": true/false,
-  "confidence": 0.0-1.0,
+  "relevance_score": 0.0-1.0,  // 相关性分数，不是布尔值
+  "confidence": 0.0-1.0,       // 你对这个评分的置信度
   "join_keys": ["可用于JOIN的列对"],
-  "reason": "判断理由（中文）"
+  "reason": "评分理由（中文）"
 }}"""
         return prompt
     
     def _build_union_prompt(self, query_table: Dict, candidate_table: Dict) -> str:
-        """Build prompt for UNION task verification"""
-        # 提取更多细节信息
-        query_cols = query_table.get('columns', [])[:15]
-        candidate_cols = candidate_table.get('columns', [])[:15]
+        """Build prompt for UNION task verification - 改进版：重排序而非过滤"""
+        # 提取列信息
+        query_cols = query_table.get('columns', [])[:10]
+        candidate_cols = candidate_table.get('columns', [])[:10]
         
         # 获取列名列表用于精确比较
         query_col_names = [c.get('column_name', c.get('name', '')) for c in query_cols]
@@ -144,14 +146,14 @@ class LLMMatcherTool:
         
         # 计算列名重叠
         common_cols = set(query_col_names) & set(candidate_col_names)
-        overlap_ratio = len(common_cols) / max(len(set(query_col_names) | set(candidate_col_names)), 1)
+        overlap_ratio = len(common_cols) / max(len(query_col_names), 1)
         
-        # 计算值分布相似性
+        # 计算值相似性
         value_similarity = self.value_similarity_tool.calculate_value_similarity(
             query_table, candidate_table, 'union'
         )
         
-        prompt = f"""判断这两个表是否可以进行UNION操作（是否有相似的模式）。
+        prompt = f"""评估这两个表进行UNION操作的相关性分数。
 
 查询表: {query_table.get('table_name')}
 列数: {len(query_cols)}
@@ -165,20 +167,21 @@ class LLMMatcherTool:
 列名重叠率: {overlap_ratio:.1%}
 数据分布相似度: {value_similarity:.1%}
 
-判断标准（需要同时满足）:
-1. 列数量相近（差异不超过30%）
-2. 至少50%的列名相同或语义相似
-3. 相同列的数据类型必须兼容
-4. 数据分布相似（value_similarity > 0.5）
+评分标准（根据以下特征综合评分）:
+- 列数完全相同：+0.3分
+- 列名高度重叠（>70%）：+0.3分
+- 数据类型兼容：+0.2分
+- 数据分布相似（>50%）：+0.1分
+- 表名模式相似：+0.1分
 
-重要：如果数据分布相似度>0.6，很可能是相同类型的表！
+注意：即使模式不完全匹配，也要给出0.0-1.0之间的相关性分数。
+对于NLCTables数据集，表名可能包含分段编码（如_145_3_4_1），关注实际结构。
 
 返回JSON格式：
 {{
-  "is_match": true/false,
-  "confidence": 0.0-1.0,
-  "column_overlap": {overlap_ratio:.2f},
-  "reason": "判断理由（中文）"
+  "relevance_score": 0.0-1.0,  // 相关性分数，不是布尔值
+  "confidence": 0.0-1.0,       // 你对这个评分的置信度
+  "reason": "评分理由（中文）"
 }}"""
         return prompt
     
@@ -202,7 +205,7 @@ class LLMMatcherTool:
         return '\n  '.join(formatted)  # 换行显示更清晰
     
     def _parse_llm_response(self, response: str, existing_score: float) -> Dict[str, Any]:
-        """Parse LLM response"""
+        """Parse LLM response - 改进版：处理相关性分数"""
         try:
             # Try to parse as JSON
             if isinstance(response, str):
@@ -215,20 +218,31 @@ class LLMMatcherTool:
                 else:
                     # Fallback to simple parsing
                     result = {
-                        'is_match': 'true' in response.lower() or 'yes' in response.lower(),
-                        'confidence': existing_score,
+                        'relevance_score': existing_score,
+                        'confidence': 0.5,
                         'reason': response[:200]
                     }
             else:
                 result = response
                 
-            # Ensure required fields
-            if 'is_match' not in result:
-                result['is_match'] = result.get('confidence', 0) > 0.5
-            if 'confidence' not in result:
-                result['confidence'] = existing_score
+            # 处理新的relevance_score字段
+            if 'relevance_score' in result:
+                # 使用相关性分数作为主要分数
+                final_score = result['relevance_score']
+            elif 'confidence' in result:
+                # 向后兼容：如果没有relevance_score，使用confidence
+                final_score = result['confidence']
+            else:
+                # 默认使用existing_score
+                final_score = existing_score
+                
+            # 为了向后兼容，仍然设置is_match（但不用于过滤）
+            result['is_match'] = final_score > 0.5
+            result['confidence'] = final_score
+            result['relevance_score'] = final_score
+            
             if 'reason' not in result:
-                result['reason'] = 'LLM verification completed'
+                result['reason'] = 'LLM scoring completed'
                 
             return result
             

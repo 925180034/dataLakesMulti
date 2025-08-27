@@ -89,7 +89,7 @@ class SMDEnhancedMetadataFilter:
         query_table: Dict,
         all_tables: Optional[List[Dict]] = None,
         threshold: float = 0.4,
-        max_candidates: int = 100
+        max_candidates: int = 10000  # 设置很高的默认值，让阈值控制
     ) -> List[Tuple[str, float]]:
         """
         过滤候选表
@@ -97,8 +97,8 @@ class SMDEnhancedMetadataFilter:
         Args:
             query_table: 查询表
             all_tables: 所有候选表（如果提供则重建索引）
-            threshold: 相似度阈值
-            max_candidates: 最大候选数
+            threshold: 相似度阈值（主要控制候选数量）
+            max_candidates: 最大候选数（设置很高，实际由阈值控制）
             
         Returns:
             [(table_name, similarity_score), ...] 排序后的候选列表
@@ -147,7 +147,7 @@ class SMDEnhancedMetadataFilter:
             if final_similarity >= threshold:
                 candidates.append((table_name, float(final_similarity)))
         
-        # 排序并返回top-k
+        # 排序并返回（阈值已经过滤，max_candidates只是安全限制）
         candidates.sort(key=lambda x: x[1], reverse=True)
         return candidates[:max_candidates]
     

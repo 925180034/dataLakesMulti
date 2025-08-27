@@ -1,0 +1,91 @@
+# Optimized configuration for JOIN task
+# Based on SOTA performance targets analysis
+# Target: Hit@1 ≥75%, Hit@5 ≥90%, Recall@5 ≥50%
+
+# Task-specific configuration for JOIN operations
+task_configs:
+  join:
+    # Layer 1: Metadata Filtering - Relaxed for better recall
+    metadata_filter:
+      column_similarity_threshold: 0.35  # Lower from 0.40 to get more candidates
+      min_column_overlap: 2              # Reduce from 3 for broader matching
+      use_column_types: true             # Enable type checking for JOIN accuracy
+      use_value_overlap: true            # Check sample value overlaps
+      jaccard_threshold: 0.25            # Column name similarity
+      max_candidates: 100                # Increase candidate pool
+      
+    # Layer 2: Vector Search - More candidates
+    vector_search:
+      similarity_threshold: 0.40         # Lower from 0.45 for more candidates
+      top_k: 50                          # Increase from 20
+      use_column_embeddings: true       # Enable column-level embeddings
+      embedding_model: "all-MiniLM-L6-v2"  # Fast and accurate model
+      use_weighted_similarity: true      # Weight by column importance
+      
+    # Layer 3: LLM Verification - Precise matching
+    llm_matcher:
+      confidence_threshold: 0.08         # Lower from 0.10 for more matches
+      batch_size: 10                     # Optimize API calls
+      use_schema_reasoning: true         # Enable deep schema analysis
+      use_few_shot: true                # Add few-shot examples
+      temperature: 0.0                   # Deterministic matching
+      focus_on_join_keys: true          # Identify potential join columns
+      check_data_types: true             # Strict type compatibility
+      
+    # Aggregation
+    aggregator:
+      max_results: 20                    # Return more candidates
+      ranking_weights:
+        metadata_score: 0.25
+        vector_score: 0.35
+        llm_score: 0.40
+      ensemble_method: "weighted_vote"
+      use_reranking: true                # Re-rank based on join quality
+
+# Performance optimization
+optimization_config:
+  # Caching
+  cache_enabled: true
+  cache_ttl: 3600
+  
+  # Parallelization
+  parallel_processing: true
+  max_workers: 4
+  batch_processing: true
+  
+  # Resource management
+  max_memory_usage: 8192  # MB
+  vector_index_type: "hnsw"
+  hnsw_params:
+    M: 16
+    ef_construction: 200
+    ef_search: 100
+
+# Dataset-specific adjustments
+dataset_configs:
+  nlctables:
+    # NL understanding for JOIN
+    use_query_expansion: true
+    extract_implicit_columns: true
+    keyword_weight: 0.35
+    llm_confidence_threshold: 0.06  # Even lower for NL queries
+    
+  opendata:
+    # Government data patterns
+    handle_abbreviations: true
+    expand_acronyms: true
+    normalize_government_terms: true
+    
+  webtable:
+    # Web table handling
+    filter_low_quality: true
+    min_columns: 2
+    min_rows: 5
+    handle_html_artifacts: true
+
+# Monitoring and debugging
+monitoring:
+  log_level: "INFO"
+  log_performance_metrics: true
+  track_layer_contributions: true
+  save_intermediate_results: true

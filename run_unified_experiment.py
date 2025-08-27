@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """
-统一实验运行器 - 支持WebTable、SANTOS和NLCTables三个数据集
+统一实验运行器 - 支持WebTable、OpenData和NLCTables三个数据集
 可以使用同一个系统运行所有数据集的实验
 支持与three_layer_ablation_optimized.py相同的所有参数
 """
@@ -16,6 +16,9 @@ import logging
 from pathlib import Path
 from typing import List, Dict, Tuple, Optional, Any
 from datetime import datetime
+
+# 从three_layer_ablation_optimized导入需要的函数
+from three_layer_ablation_optimized import convert_ground_truth_format
 
 # 设置日志
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -154,8 +157,8 @@ def detect_dataset_type(tables_path: str) -> str:
     
     if 'nlctables' in path_str:
         return 'nlctables'
-    elif 'santos' in path_str:
-        return 'santos'
+    elif 'opendata' in path_str:
+        return 'opendata'
     elif 'webtable' in path_str or 'final' in path_str:
         return 'webtable'
     else:
@@ -166,8 +169,8 @@ def detect_dataset_type(tables_path: str) -> str:
                 first_table_name = tables[0].get('name', '')
                 if first_table_name.startswith('dl_table_') or first_table_name.startswith('q_table_'):
                     return 'nlctables'
-                elif 'santos' in first_table_name.lower():
-                    return 'santos'
+                elif 'opendata' in first_table_name.lower():
+                    return 'opendata'
         return 'webtable'
 
 def run_nlctables_experiment(layer: str, tables: List[Dict], queries: List[Dict], 
@@ -217,10 +220,10 @@ def run_nlctables_experiment(layer: str, tables: List[Dict], queries: List[Dict]
     
     return results, elapsed_time
 
-def run_webtable_santos_experiment(layer: str, tables: List[Dict], queries: List[Dict],
+def run_webtable_opendata_experiment(layer: str, tables: List[Dict], queries: List[Dict],
                                   task_type: str, dataset_type: str, max_queries: int = None,
                                   max_workers: int = 4, challenging: bool = True) -> Tuple[List[Dict], float]:
-    """运行WebTable/SANTOS实验 - 使用主系统"""
+    """运行WebTable/OpenData实验 - 使用主系统"""
     logger.info(f"🔬 Running {dataset_type.upper()} experiment with layer {layer}")
     
     # 导入主系统
@@ -344,6 +347,7 @@ def print_results_table(all_results: Dict, all_metrics: Dict):
         print("-" * 150)
         
         # 按L1, L1+L2, L1+L2+L3顺序排序
+        layer_order = ['L1', 'L1+L2', 'L1+L2+L3']
         for layer in layer_order:
             if layer in union_results:
                 data = union_results[layer]
@@ -355,11 +359,13 @@ def print_results_table(all_results: Dict, all_metrics: Dict):
 def main():
     parser = argparse.ArgumentParser(description='统一实验运行器')
     parser.add_argument('--clear-cache', action='store_true',
-                       help='实验前清理缓存（默认不清理）')
+                       help='实验前清理缓存（现在默认自动清理）')
+    parser.add_argument('--no-clear-cache', action='store_true',
+                       help='禁用自动缓存清理（用于同一会话内的连续实验）')
     parser.add_argument('--no-cache', action='store_true',
                        help='强制重新生成所有缓存')
     parser.add_argument('--dataset', type=str, required=True,
-                       help='数据集路径或名称 (webtable/santos/nlctables)')
+                       help='数据集路径或名称 (webtable/opendata/nlctables)')
     parser.add_argument('--task', type=str, choices=['join', 'union', 'both'], default='join',
                        help='任务类型 (both会同时运行join和union)')
     parser.add_argument('--layer', type=str, choices=['L1', 'L1+L2', 'L1+L2+L3', 'all'], 
@@ -407,9 +413,12 @@ def main():
     else:
         os.environ['SKIP_LLM'] = 'false'
     
-    # 清理缓存（如果需要）
-    if args.clear_cache:
-        clear_experiment_cache(args.dataset if args.dataset in ['webtable', 'santos', 'nlctables'] else None)
+    # 总是清理缓存以确保实验结果的可重复性
+    # 除非明确指定了--no-clear-cache
+    if not hasattr(args, 'no_clear_cache') or not args.no_clear_cache:
+        if not args.clear_cache:
+            logger.info("🧹 自动清理缓存（使用 --no-clear-cache 禁用）")
+        clear_experiment_cache(args.dataset if args.dataset in ['webtable', 'opendata', 'nlctables'] else None)
     
     # 如果需要强制重新生成缓存
     if args.no_cache:
@@ -417,18 +426,22 @@ def main():
         os.environ['FORCE_REBUILD_CACHE'] = 'true'
     
     # 确定数据集路径
-    if args.dataset in ['webtable', 'santos', 'nlctables']:
+    if args.dataset in ['webtable', 'opendata', 'nlctables']:
         # 使用预定义路径，根据dataset-type选择
         if args.dataset == 'webtable':
-            if args.dataset_type == 'subset' or args.dataset_type == 'true_subset':
-                tables_path = 'examples/final_subset_tables.json'
-            elif args.dataset_type == 'complete':
-                tables_path = 'examples/final_complete_tables.json'
-        elif args.dataset == 'santos':
-            if args.dataset_type == 'subset':
-                tables_path = 'examples/santos_subset/tables.json'
-            elif args.dataset_type == 'complete':
-                tables_path = 'examples/santos_complete/tables.json'  # 如果存在
+            # WebTable路径格式：examples/webtable/{task}_{dataset_type}/ (与OpenData相同)
+            if args.task == 'both':
+                # 对于both任务，先使用join数据集，后面会根据任务动态切换
+                tables_path = f'examples/webtable/join_{args.dataset_type}/tables.json'
+            else:
+                tables_path = f'examples/webtable/{args.task}_{args.dataset_type}/tables.json'
+        elif args.dataset == 'opendata':
+            # OpenData路径格式：examples/opendata/{task}_{dataset_type}/
+            if args.task == 'both':
+                # 对于both任务，先使用join数据集，后面会根据任务动态切换
+                tables_path = f'examples/opendata/join_{args.dataset_type}/tables.json'
+            else:
+                tables_path = f'examples/opendata/{args.task}_{args.dataset_type}/tables.json'
         elif args.dataset == 'nlctables':
             # NLCTables路径格式：examples/nlctables/{task}_{dataset_type}/
             tables_path = f'examples/nlctables/{args.task}_{args.dataset_type}/tables.json'
@@ -462,10 +475,16 @@ def main():
         logger.info(f"Loaded {len(tables)} tables via NLCTables adapter")
         logger.info(f"Loaded {len(queries)} queries")
     else:
-        # 原有的加载逻辑（WebTable/SANTOS）
+        # 原有的加载逻辑（WebTable/OpenData）
         with open(tables_path, 'r') as f:
             tables = json.load(f)
         logger.info(f"Loaded {len(tables)} tables")
+        
+        # 对于OpenData和WebTable，确保表有name字段（兼容性）
+        if dataset_type in ['opendata', 'webtable']:
+            for t in tables:
+                if 'name' not in t and 'table_name' in t:
+                    t['name'] = t['table_name']
         
         # 加载查询
         queries_path = base_dir / 'queries.json'
@@ -476,8 +495,21 @@ def main():
             logger.info(f"Loaded {len(queries)} queries")
         else:
             # 生成默认查询
-            queries = [{'query_table': t['name'], 'task_type': args.task} for t in tables[:10]]
+            queries = [{'query_table': t.get('name', t.get('table_name')), 'task_type': args.task} for t in tables[:10]]
             logger.warning("No queries file found, using first 10 tables as queries")
+        
+        # 加载ground truth
+        ground_truth_path = base_dir / 'ground_truth.json'
+        if ground_truth_path.exists():
+            with open(ground_truth_path, 'r') as f:
+                ground_truth_list = json.load(f)
+            logger.info(f"Loaded {len(ground_truth_list)} ground truth entries")
+            # 转换ground truth格式
+            ground_truth = convert_ground_truth_format(ground_truth_list, task_type=args.task)
+        else:
+            ground_truth_list = []
+            ground_truth = {}
+            logger.warning("No ground truth file found")
     
     # 确定要运行的任务列表
     if args.task == 'both':
@@ -532,10 +564,38 @@ def main():
                 # 使用当前任务的ground truth
                 ground_truth = current_ground_truth
             else:
-                results, elapsed_time = run_webtable_santos_experiment(
+                # OpenData和WebTable需要为不同任务重新加载数据
+                if dataset_type in ['opendata', 'webtable'] and args.task == 'both':
+                    # 为OpenData/WebTable的不同任务加载相应的数据
+                    task_tables_path = f'examples/{dataset_type}/{task}_{args.dataset_type}/tables.json'
+                    task_queries_path = f'examples/{dataset_type}/{task}_{args.dataset_type}/queries.json'
+                    task_ground_truth_path = f'examples/{dataset_type}/{task}_{args.dataset_type}/ground_truth.json'
+                    
+                    with open(task_tables_path, 'r') as f:
+                        current_tables = json.load(f)
+                    with open(task_queries_path, 'r') as f:
+                        current_queries = json.load(f)
+                    with open(task_ground_truth_path, 'r') as f:
+                        current_ground_truth = json.load(f)
+                    
+                    logger.info(f"加载{dataset_type.upper()} {task} 任务数据: {len(current_tables)} 表, {len(current_queries)} 查询")
+                    
+                    # 确保表有name字段
+                    for t in current_tables:
+                        if 'name' not in t and 'table_name' in t:
+                            t['name'] = t['table_name']
+                    
+                    ground_truth = convert_ground_truth_format(current_ground_truth, task_type=task)
+                else:
+                    # 使用已加载的数据
+                    current_tables = tables
+                    current_queries = queries
+                    current_ground_truth = ground_truth_list
+                    
+                results, elapsed_time = run_webtable_opendata_experiment(
                     layer=layer,
-                    tables=tables,
-                    queries=queries,
+                    tables=current_tables,
+                    queries=current_queries,
                     task_type=task,
                     dataset_type=dataset_type,
                     max_queries=max_queries,
@@ -550,7 +610,7 @@ def main():
                 'elapsed_time': elapsed_time,
                 'task': task,
                 'layer': layer,
-                'ground_truth': ground_truth if dataset_type == 'nlctables' else None  # 保存对应的ground truth
+                'ground_truth': ground_truth if dataset_type in ['nlctables', 'opendata', 'webtable'] else None  # 保存对应的ground truth
             }
     
     # 评估所有结果
@@ -559,7 +619,7 @@ def main():
         results = exp_data['results']
         
         # 评估结果（如果有ground truth）
-        if dataset_type == 'nlctables':
+        if dataset_type in ['nlctables', 'opendata', 'webtable']:
             # 使用每个实验保存的对应ground truth
             exp_ground_truth = exp_data.get('ground_truth')
             if exp_ground_truth:
@@ -568,7 +628,14 @@ def main():
         elif ground_truth_path.exists():
             # 其他数据集使用文件中的ground truth
             with open(ground_truth_path, 'r') as f:
-                ground_truth = json.load(f)
+                ground_truth_raw = json.load(f)
+            # 转换ground truth格式（如果是列表格式）
+            if isinstance(ground_truth_raw, list):
+                # 从exp_key中提取任务类型（exp_key格式为"task_layer"）
+                exp_task = exp_key.split('_')[0]  # 提取task部分
+                ground_truth = convert_ground_truth_format(ground_truth_raw, task_type=exp_task)
+            else:
+                ground_truth = ground_truth_raw
             metrics = evaluate_results(results, ground_truth)
             all_metrics[exp_key] = metrics
         

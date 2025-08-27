@@ -1,0 +1,95 @@
+# Universal JOIN Configuration - Works Well Across All Datasets
+# 通用JOIN配置 - 适用于NLCTables, OpenData, WebTable
+
+task_configs:
+  join:
+    # 层组合策略 - weighted_union是折中方案
+    layer_combination: "weighted_union"  # 部分合并，避免过度过滤
+    
+    # L1: 元数据过滤 - 中等严格程度
+    metadata_filter:
+      column_similarity_threshold: 0.25      # 折中值（NLC:0.35, Web:0.15）
+      value_overlap_threshold: 0.10          # 需要一些值重叠
+      type_matching_weight: 0.3              # 类型匹配有一定重要性
+      min_column_overlap: 2                  # 至少2列相似
+      max_candidates_per_table: 50           # 合理的候选数量
+      fuzzy_column_matching: true            # 处理命名变化
+      case_sensitive: false                 
+      
+    # L2: 向量搜索 - 语义匹配
+    vector_search:
+      similarity_threshold: 0.35             # 中等阈值
+      top_k: 60                              # 足够的候选数
+      embedding_model: "all-MiniLM-L6-v2"
+      normalize_embeddings: true
+      use_column_context: true               # 考虑列关系
+      
+    # L3: LLM匹配器 - 智能验证
+    llm_matcher:
+      confidence_threshold: 0.05             # 相对宽松（NLC:0.08, Web:0.02）
+      scoring_mode: "adaptive"               # 根据数据集自适应
+      max_candidates_to_evaluate: 40         
+      batch_size: 10                        
+      temperature: 0.3                      
+      
+      # JOIN特定逻辑
+      focus_on_join_keys: true              # 关注可连接键
+      check_value_overlap: true             # 检查值重叠
+      require_type_compatibility: true       # 类型需要兼容
+      
+    # 聚合器 - 最终排序
+    aggregator:
+      final_combination: "weighted_average"
+      
+      # 权重分配（三层重要性）
+      layer_weights:
+        L1: 0.30  # 结构匹配
+        L2: 0.40  # 语义相似（最重要）
+        L3: 0.30  # LLM验证
+      
+      # 分数权重（不同维度）
+      ranking_weights:
+        metadata_score: 0.30
+        vector_score: 0.40
+        llm_score: 0.30
+        
+      score_normalization: "min_max"        # 归一化方法
+      max_results: 20                       # 返回前20个
+      
+    # 优化配置
+    optimization_config:
+      enable_caching: true
+      cache_ttl: 3600
+      parallel_processing: true
+      max_workers: 8
+      
+      # 数据集自适应（运行时检测）
+      adaptive_adjustment:
+        enable: true
+        factors:
+          # 根据数据特征微调
+          high_quality_data: 1.2      # 提高阈值（如NLCTables）
+          noisy_data: 0.8             # 降低阈值（如WebTable）
+          medium_quality: 1.0         # 保持不变（如OpenData）
+      
+    # 性能目标
+    performance_targets:
+      hit_at_1: 0.60   # 现实目标
+      hit_at_5: 0.80   
+      precision_at_5: 0.25
+      recall_at_5: 0.50
+      
+# 数据质量检测（运行时自动）
+data_quality_detection:
+  enabled: true
+  metrics:
+    - schema_consistency    # 列命名一致性
+    - value_distribution    # 值分布规律性
+    - null_ratio           # 空值比例
+    - type_consistency     # 类型一致性
+    
+# 调试和监控
+logging:
+  level: "INFO"
+  log_performance_metrics: true
+  log_adaptive_adjustments: true

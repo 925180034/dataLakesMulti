@@ -19,7 +19,7 @@ def setup_offline_mode():
     # 设置缓存路径
     os.environ['HF_HOME'] = '/root/.cache/huggingface'
     os.environ['HUGGINGFACE_HUB_CACHE'] = '/root/.cache/huggingface/hub'
-    os.environ['TRANSFORMERS_CACHE'] = '/root/.cache/huggingface/hub'
+    # TRANSFORMERS_CACHE已弃用，使用HF_HOME代替
     
     # 禁用telemetry
     os.environ['HF_HUB_DISABLE_TELEMETRY'] = '1'

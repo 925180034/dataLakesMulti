@@ -1,0 +1,895 @@
+{
+  "dataset": "webtable",
+  "dataset_type": "subset",
+  "task": "join",
+  "layer": "L1+L2",
+  "workers": 4,
+  "max_queries": 2,
+  "challenging": true,
+  "experiments": {
+    "join_L1+L2": {
+      "results": [
+        {
+          "query_table": "csvData15936069__14.csv",
+          "predictions": [
+            "csvData24341501__0.csv",
+            "csvData19132138__7.csv",
+            "csvData29230622__0.csv",
+            "csvData29230622__1.csv",
+            "csvData13523115__11.csv",
+            "csvData23904874__19.csv",
+            "csvData13434912__8.csv",
+            "csvData13891302__10.csv",
+            "csvData24341501__13.csv",
+            "csvData15497713__0.csv",
+            "csvData16382327__4.csv",
+            "csvData16382327__5.csv",
+            "csvData19621512__9.csv",
+            "csvData19621512__8.csv",
+            "csvData21084464__1.csv",
+            "csvData28449023__4.csv",
+            "csvData12906779__1.csv",
+            "csvData7789467__2.csv",
+            "csvData21286196__7.csv",
+            "csvData9469123__11.csv"
+          ]
+        },
+        {
+          "query_table": "csvData1549285__2.csv",
+          "predictions": [
+            "csvData1549285__0.csv",
+            "csvData26162088__2.csv",
+            "csvData26150573__3.csv",
+            "csvData27587184__5.csv",
+            "csvData27587184__4.csv",
+            "csvData27587184__3.csv",
+            "csvData23141915__6.csv",
+            "csvData7470046__2.csv",
+            "csvData10163568__3.csv",
+            "csvData22935665__3.csv",
+            "csvData11957850__0.csv",
+            "csvData28449023__4.csv",
+            "csvData20076526__3.csv",
+            "csvData16382327__5.csv",
+            "csvData14248779__2.csv",
+            "csvData7470046__3.csv",
+            "csvData22418917__5.csv",
+            "csvData25120653__1.csv",
+            "csvData16904536__2.csv",
+            "csvData13245391__1.csv"
+          ]
+        }
+      ],
+      "elapsed_time": 8.961082696914673,
+      "task": "join",
+      "layer": "L1+L2",
+      "ground_truth": {
+        "csvData1549285__2.csv": [
+          "csvData20409520__4.csv",
+          "csvData8963593__3.csv",
+          "csvData8963593__3.csv",
+          "csvData2660625__0.csv",
+          "csvData22418917__5.csv",
+          "csvData26655046__0.csv",
+          "csvData22418917__5.csv",
+          "csvData26655046__0.csv"
+        ],
+        "csvData15936069__14.csv": [
+          "csvData15936069__16.csv",
+          "csvData29230622__16.csv",
+          "csvData24341501__0.csv"
+        ],
+        "csvData917122__2.csv": [
+          "csvData16083137__3.csv",
+          "csvData16083137__3.csv",
+          "csvData16083137__3.csv",
+          "csvData26522418__3.csv",
+          "csvData26655046__0.csv",
+          "csvData26655046__0.csv"
+        ],
+        "csvData12739105__3.csv": [
+          "csvData12739105__4.csv",
+          "csvData12739105__4.csv",
+          "csvData12739105__4.csv",
+          "csvData26655046__0.csv",
+          "csvData26655046__0.csv",
+          "csvData26655046__0.csv",
+          "csvData22418917__5.csv",
+          "csvData26655046__0.csv",
+          "csvData22418917__5.csv"
+        ],
+        "csvData25322806__4.csv": [
+          "csvData8770780__8.csv",
+          "csvData22418917__5.csv",
+          "csvData26655046__0.csv"
+        ],
+        "csvData14518660__14.csv": [
+          "csvData2852713__17.csv",
+          "csvData2852713__17.csv",
+          "csvData2852713__12.csv",
+          "csvData2852713__12.csv",
+          "csvData2852713__12.csv"
+        ],
+        "csvData16382327__5.csv": [
+          "csvData16382327__4.csv",
+          "csvData16382327__4.csv",
+          "csvData26655046__0.csv"
+        ],
+        "csvData1902536__3.csv": [
+          "csvData18661263__13.csv",
+          "csvData1902536__0.csv",
+          "csvData20535739__15.csv",
+          "csvData29346752__7.csv",
+          "csvData21286196__7.csv",
+          "csvData10027553__2.csv",
+          "csvData27987124__1.csv",
+          "csvData9739809__1.csv",
+          "csvData20535739__15.csv",
+          "csvData29346752__7.csv"
+        ],
+        "csvData20535739__7.csv": [
+          "csvData19688700__5.csv",
+          "csvData20535739__15.csv",
+          "csvData29346752__7.csv",
+          "csvData17302070__4.csv",
+          "csvData15745723__5.csv",
+          "csvData10027553__2.csv",
+          "csvData27987124__1.csv",
+          "csvData9739809__1.csv",
+          "csvData20535739__15.csv"
+        ],
+        "csvData13891302__8.csv": [
+          "csvData436368__11.csv",
+          "csvData20535739__13.csv",
+          "csvData6592205__0.csv",
+          "csvData9739809__1.csv",
+          "csvData20535739__15.csv",
+          "csvData20535739__15.csv",
+          "csvData29346752__7.csv",
+          "csvData15745723__5.csv",
+          "csvData21286196__7.csv",
+          "csvData15745723__5.csv",
+          "csvData10027553__2.csv",
+          "csvData27987124__1.csv"
+        ],
+        "csvData4798003__1.csv": [
+          "csvData436368__11.csv",
+          "csvData9739809__1.csv",
+          "csvData20535739__15.csv",
+          "csvData15745723__5.csv",
+          "csvData10027553__2.csv",
+          "csvData27987124__1.csv",
+          "csvData9768769__6.csv",
+          "csvData9739809__1.csv",
+          "csvData20535739__15.csv",
+          "csvData29346752__7.csv",
+          "csvData17302070__4.csv"
+        ],
+        "csvData23033509__4.csv": [
+          "csvData2877720__14.csv",
+          "csvData2877720__14.csv",
+          "csvData3383853__11.csv",
+          "csvData16773669__3.csv",
+          "csvData2404013__6.csv",
+          "csvData20535739__15.csv",
+          "csvData29346752__7.csv",
+          "csvData17302070__4.csv",
+          "csvData15745723__5.csv",
+          "csvData10027553__2.csv",
+          "csvData27987124__1.csv"
+        ],
+        "csvData10025189__3.csv": [
+          "csvData8804961__3.csv",
+          "csvData9739809__1.csv",
+          "csvData20535739__15.csv",
+          "csvData21286196__7.csv",
+          "csvData10027553__2.csv",
+          "csvData27987124__1.csv",
+          "csvData5124506__2.csv"
+        ],
+        "csvData4674540__15.csv": [
+          "csvData29453038__8.csv",
+          "csvData9739809__1.csv",
+          "csvData20535739__15.csv",
+          "csvData20075499__5.csv"
+        ],
+        "csvData7470046__3.csv": [
+          "csvData17093328__0.csv",
+          "csvData17093328__0.csv",
+          "csvData17093328__0.csv",
+          "csvData10001964__3.csv",
+          "csvData10001964__3.csv",
+          "csvData17093328__2.csv",
+          "csvData26655046__0.csv",
+          "csvData22418917__5.csv",
+          "csvData26655046__0.csv"
+        ],
+        "csvData26651945__13.csv": [
+          "csvData2877720__7.csv",
+          "csvData436368__11.csv",
+          "csvData14213420__1.csv",
+          "csvData20535739__15.csv",
+          "csvData29346752__7.csv",
+          "csvData19553885__1.csv",
+          "csvData29346752__7.csv",
+          "csvData16773669__3.csv"
+        ],
+        "csvData23141915__0.csv": [
+          "csvData13051044__0.csv",
+          "csvData13051044__0.csv",
+          "csvData1549285__2.csv",
+          "csvData10163568__3.csv",
+          "csvData10163568__3.csv",
+          "csvData26655046__0.csv",
+          "csvData26655046__0.csv",
+          "csvData22418917__5.csv"
+        ],
+        "csvData7063593__2.csv": [
+          "csvData11585188__5.csv",
+          "csvData26655046__0.csv"
+        ],
+        "csvData26853929__7.csv": [
+          "csvData7320164__8.csv",
+          "csvData26853929__6.csv",
+          "csvData26853929__6.csv",
+          "csvData16773669__3.csv",
+          "csvData2404013__6.csv",
+          "csvData20075499__5.csv",
+          "csvData19553885__1.csv",
+          "csvData29346752__7.csv"
+        ],
+        "csvData13703215__18.csv": [
+          "csvData13434912__2.csv",
+          "csvData29453038__8.csv",
+          "csvData9739809__1.csv",
+          "csvData20535739__15.csv",
+          "csvData16773669__3.csv",
+          "csvData19553885__1.csv"
+        ],
+        "csvData7222492__8.csv": [
+          "csvData7222492__5.csv",
+          "csvData27008272__5.csv",
+          "csvData6468042__3.csv"
+        ],
+        "csvData13891302__10.csv": [
+          "csvData6592205__0.csv",
+          "csvData6592205__0.csv",
+          "csvData20535739__15.csv",
+          "csvData20535739__15.csv",
+          "csvData29346752__7.csv",
+          "csvData17302070__4.csv",
+          "csvData15745723__5.csv",
+          "csvData10027553__2.csv",
+          "csvData27987124__1.csv",
+          "csvData9768769__6.csv",
+          "csvData9739809__1.csv",
+          "csvData9739809__1.csv",
+          "csvData20075499__5.csv",
+          "csvData15745723__5.csv",
+          "csvData21286196__7.csv"
+        ],
+        "csvData25917960__0.csv": [
+          "csvData25120653__1.csv",
+          "csvData8963593__3.csv",
+          "csvData8963593__3.csv",
+          "csvData26655046__0.csv"
+        ],
+        "csvData2761087__12.csv": [
+          "csvData2761087__14.csv",
+          "csvData20535739__15.csv",
+          "csvData29346752__7.csv",
+          "csvData16773669__3.csv",
+          "csvData19553885__1.csv"
+        ],
+        "csvData8479264__2.csv": [
+          "csvData8479264__3.csv",
+          "csvData8479264__3.csv",
+          "csvData8479264__3.csv",
+          "csvData9739809__1.csv",
+          "csvData20535739__15.csv",
+          "csvData19553885__1.csv",
+          "csvData16773669__3.csv",
+          "csvData19553885__1.csv",
+          "csvData16773669__3.csv",
+          "csvData2404013__6.csv",
+          "csvData15745723__5.csv",
+          "csvData21286196__7.csv",
+          "csvData27987124__1.csv"
+        ],
+        "csvData4431378__4.csv": [
+          "csvData4823585__2.csv",
+          "csvData20535739__15.csv",
+          "csvData29346752__7.csv",
+          "csvData9739809__1.csv",
+          "csvData20535739__15.csv",
+          "csvData21286196__7.csv",
+          "csvData10027553__2.csv"
+        ],
+        "csvData22418917__1.csv": [
+          "csvData11585188__0.csv",
+          "csvData11585188__0.csv",
+          "csvData11957850__0.csv",
+          "csvData26655046__0.csv",
+          "csvData26655046__0.csv"
+        ],
+        "csvData23141915__6.csv": [
+          "csvData7470046__3.csv",
+          "csvData7470046__2.csv",
+          "csvData26655046__0.csv",
+          "csvData22418917__5.csv",
+          "csvData26655046__0.csv"
+        ],
+        "csvData4676916__2.csv": [
+          "csvData1444875__15.csv",
+          "csvData4676916__10.csv",
+          "csvData9739809__1.csv",
+          "csvData20535739__15.csv",
+          "csvData20075499__5.csv",
+          "csvData15745723__5.csv",
+          "csvData21286196__7.csv",
+          "csvData27987124__1.csv"
+        ],
+        "csvData1644016__0.csv": [
+          "csvData17054209__1.csv",
+          "csvData28449023__4.csv",
+          "csvData22418917__5.csv",
+          "csvData26655046__0.csv"
+        ],
+        "csvData2590167__15.csv": [
+          "csvData2590167__18.csv",
+          "csvData2590167__18.csv",
+          "csvData20535739__15.csv",
+          "csvData29346752__7.csv",
+          "csvData9739809__1.csv",
+          "csvData20535739__15.csv",
+          "csvData20075499__5.csv",
+          "csvData15745723__5.csv",
+          "csvData21286196__7.csv",
+          "csvData16773669__3.csv",
+          "csvData2404013__6.csv",
+          "csvData15745723__5.csv",
+          "csvData10027553__2.csv",
+          "csvData27987124__1.csv"
+        ],
+        "csvData29230622__0.csv": [
+          "csvData29230622__1.csv",
+          "csvData29230622__1.csv",
+          "csvData29230622__1.csv",
+          "csvData24341501__13.csv",
+          "csvData15497713__0.csv"
+        ],
+        "csvData13336059__12.csv": [
+          "csvData13336059__13.csv",
+          "csvData13336059__13.csv",
+          "csvData16773669__3.csv",
+          "csvData2404013__6.csv"
+        ],
+        "csvData8620997__2.csv": [
+          "csvData14833792__2.csv",
+          "csvData8598250__1.csv",
+          "csvData15745723__5.csv",
+          "csvData10027553__2.csv",
+          "csvData27987124__1.csv",
+          "csvData21286196__7.csv",
+          "csvData10027553__2.csv",
+          "csvData27987124__1.csv"
+        ],
+        "csvData25441565__1.csv": [
+          "csvData1786628__8.csv",
+          "csvData1786628__8.csv",
+          "csvData26655046__0.csv",
+          "csvData22418917__5.csv",
+          "csvData26655046__0.csv",
+          "csvData26655046__0.csv"
+        ],
+        "csvData1549285__0.csv": [
+          "csvData1549285__2.csv",
+          "csvData26655046__0.csv",
+          "csvData26655046__0.csv"
+        ],
+        "csvData9205349__0.csv": [
+          "csvData9205349__3.csv",
+          "csvData9739809__1.csv",
+          "csvData20535739__15.csv"
+        ],
+        "csvData2877720__7.csv": [
+          "csvData2590167__3.csv",
+          "csvData20535739__15.csv",
+          "csvData29346752__7.csv",
+          "csvData17302070__4.csv",
+          "csvData16773669__3.csv",
+          "csvData2404013__6.csv",
+          "csvData20075499__5.csv"
+        ],
+        "csvData29453038__13.csv": [
+          "csvData29453038__14.csv",
+          "csvData4676916__0.csv",
+          "csvData9739809__1.csv",
+          "csvData20535739__15.csv",
+          "csvData20535739__15.csv",
+          "csvData29346752__7.csv",
+          "csvData19553885__1.csv",
+          "csvData29346752__7.csv",
+          "csvData15745723__5.csv",
+          "csvData10027553__2.csv",
+          "csvData27987124__1.csv",
+          "csvData15745723__5.csv",
+          "csvData21286196__7.csv",
+          "csvData9739809__1.csv",
+          "csvData20535739__15.csv"
+        ],
+        "csvData20076526__3.csv": [
+          "csvData20076526__5.csv",
+          "csvData20076526__5.csv",
+          "csvData26655046__0.csv",
+          "csvData26655046__0.csv",
+          "csvData26655046__0.csv"
+        ],
+        "csvData29453038__6.csv": [
+          "csvData436368__3.csv",
+          "csvData8598250__1.csv",
+          "csvData15745723__5.csv",
+          "csvData10027553__2.csv",
+          "csvData27987124__1.csv",
+          "csvData9768769__6.csv",
+          "csvData9739809__1.csv",
+          "csvData21286196__7.csv",
+          "csvData10027553__2.csv",
+          "csvData27987124__1.csv",
+          "csvData9739809__1.csv",
+          "csvData20535739__15.csv",
+          "csvData16773669__3.csv"
+        ],
+        "csvData17093328__0.csv": [
+          "csvData27587184__4.csv",
+          "csvData12739105__4.csv",
+          "csvData22418917__5.csv",
+          "csvData26655046__0.csv",
+          "csvData26655046__0.csv",
+          "csvData22418917__5.csv",
+          "csvData26655046__0.csv"
+        ],
+        "csvData23033509__0.csv": [
+          "csvData23033509__3.csv",
+          "csvData16773669__3.csv",
+          "csvData2404013__6.csv",
+          "csvData20075499__5.csv",
+          "csvData20535739__15.csv",
+          "csvData29346752__7.csv",
+          "csvData17302070__4.csv",
+          "csvData15745723__5.csv",
+          "csvData10027553__2.csv",
+          "csvData27987124__1.csv",
+          "csvData9768769__6.csv",
+          "csvData9739809__1.csv"
+        ],
+        "csvData9469123__10.csv": [
+          "csvData9469123__11.csv",
+          "csvData9469123__11.csv",
+          "csvData15497713__0.csv",
+          "csvData24341501__0.csv",
+          "csvData19621512__9.csv",
+          "csvData15497713__0.csv",
+          "csvData23904874__19.csv",
+          "csvData15497713__0.csv",
+          "csvData13523115__11.csv",
+          "csvData9469123__13.csv",
+          "csvData19553885__1.csv"
+        ],
+        "csvData13434912__2.csv": [
+          "csvData2879490__1.csv",
+          "csvData9739809__1.csv",
+          "csvData20535739__15.csv",
+          "csvData20075499__5.csv",
+          "csvData21286196__7.csv",
+          "csvData10027553__2.csv",
+          "csvData27987124__1.csv",
+          "csvData5124506__2.csv",
+          "csvData16773669__3.csv",
+          "csvData19553885__1.csv"
+        ],
+        "csvData3383853__3.csv": [
+          "csvData3383853__0.csv",
+          "csvData21286196__7.csv",
+          "csvData10027553__2.csv",
+          "csvData9739809__1.csv",
+          "csvData20535739__15.csv"
+        ],
+        "csvData27587184__5.csv": [
+          "csvData27587184__3.csv",
+          "csvData27587184__3.csv",
+          "csvData26655046__0.csv"
+        ],
+        "csvData13336059__5.csv": [
+          "csvData25450714__7.csv",
+          "csvData16773669__3.csv",
+          "csvData16773669__3.csv",
+          "csvData2404013__6.csv",
+          "csvData20075499__5.csv",
+          "csvData9739809__1.csv",
+          "csvData20535739__15.csv"
+        ],
+        "csvData13434912__8.csv": [
+          "csvData2404013__3.csv",
+          "csvData20535739__15.csv",
+          "csvData29346752__7.csv",
+          "csvData9739809__1.csv",
+          "csvData20535739__15.csv",
+          "csvData16773669__3.csv",
+          "csvData15745723__5.csv",
+          "csvData21286196__7.csv",
+          "csvData27987124__1.csv"
+        ],
+        "csvData15936069__16.csv": [
+          "csvData15936069__15.csv",
+          "csvData29230622__16.csv",
+          "csvData15497713__0.csv",
+          "csvData24341501__13.csv"
+        ],
+        "csvData21642271__2.csv": [
+          "csvData21642271__1.csv",
+          "csvData9739809__1.csv",
+          "csvData20535739__15.csv",
+          "csvData9205349__16.csv",
+          "csvData9205349__18.csv",
+          "csvData13703215__1.csv"
+        ],
+        "csvData14248779__2.csv": [
+          "csvData13051044__2.csv",
+          "csvData26655046__0.csv"
+        ],
+        "csvData18661263__12.csv": [
+          "csvData18661263__14.csv",
+          "csvData21286196__7.csv",
+          "csvData10027553__2.csv",
+          "csvData27987124__1.csv",
+          "csvData20535739__15.csv",
+          "csvData29346752__7.csv",
+          "csvData17302070__4.csv",
+          "csvData9739809__1.csv",
+          "csvData20535739__15.csv",
+          "csvData15745723__5.csv",
+          "csvData21286196__7.csv",
+          "csvData27987124__1.csv",
+          "csvData16773669__3.csv",
+          "csvData2404013__6.csv"
+        ],
+        "csvData26959440__0.csv": [
+          "csvData9475480__3.csv",
+          "csvData9475480__3.csv",
+          "csvData15745723__5.csv",
+          "csvData21286196__7.csv",
+          "csvData16773669__3.csv",
+          "csvData2404013__6.csv",
+          "csvData15745723__5.csv",
+          "csvData10027553__2.csv",
+          "csvData27987124__1.csv"
+        ],
+        "csvData13638124__4.csv": [
+          "csvData15745723__5.csv",
+          "csvData10027553__2.csv",
+          "csvData27987124__1.csv",
+          "csvData9768769__6.csv",
+          "csvData9739809__1.csv",
+          "csvData9739809__1.csv",
+          "csvData20535739__15.csv",
+          "csvData20075499__5.csv",
+          "csvData15745723__5.csv",
+          "csvData21286196__7.csv",
+          "csvData9739809__1.csv",
+          "csvData20535739__15.csv",
+          "csvData29346752__7.csv"
+        ],
+        "csvData19387543__3.csv": [
+          "csvData22335715__0.csv",
+          "csvData12168209__2.csv",
+          "csvData22335715__0.csv",
+          "csvData12168209__2.csv"
+        ],
+        "csvData13051044__2.csv": [
+          "csvData26655046__0.csv",
+          "csvData22418917__5.csv"
+        ],
+        "csvData19132138__7.csv": [
+          "csvData15497713__0.csv",
+          "csvData29230622__16.csv",
+          "csvData24341501__0.csv",
+          "csvData15936069__14.csv",
+          "csvData24341501__0.csv",
+          "csvData19553885__1.csv",
+          "csvData29346752__7.csv"
+        ],
+        "csvData13336059__13.csv": [
+          "csvData16773669__3.csv",
+          "csvData2404013__6.csv",
+          "csvData20075499__5.csv",
+          "csvData21286196__7.csv",
+          "csvData10027553__2.csv",
+          "csvData27987124__1.csv",
+          "csvData19553885__1.csv"
+        ],
+        "csvData16904536__2.csv": [
+          "csvData22418917__5.csv",
+          "csvData22418917__5.csv"
+        ],
+        "csvData25450714__14.csv": [
+          "csvData15745723__5.csv",
+          "csvData21286196__7.csv"
+        ],
+        "csvData2590167__12.csv": [
+          "csvData16773669__3.csv",
+          "csvData19553885__1.csv",
+          "csvData15745723__5.csv",
+          "csvData10027553__2.csv",
+          "csvData27987124__1.csv",
+          "csvData9768769__6.csv"
+        ],
+        "csvData19621512__18.csv": [
+          "csvData24341501__13.csv",
+          "csvData12906779__1.csv",
+          "csvData24341501__13.csv",
+          "csvData24341501__0.csv",
+          "csvData23904874__19.csv",
+          "csvData15497713__0.csv",
+          "csvData13523115__11.csv",
+          "csvData9469123__13.csv",
+          "csvData15497713__0.csv",
+          "csvData19553885__1.csv",
+          "csvData29346752__7.csv"
+        ],
+        "csvData24108736__5.csv": [
+          "csvData20535739__15.csv",
+          "csvData29346752__7.csv",
+          "csvData15745723__5.csv",
+          "csvData21286196__7.csv",
+          "csvData16773669__3.csv",
+          "csvData2404013__6.csv",
+          "csvData20075499__5.csv",
+          "csvData15745723__5.csv",
+          "csvData10027553__2.csv",
+          "csvData27987124__1.csv",
+          "csvData9768769__6.csv",
+          "csvData9739809__1.csv"
+        ],
+        "csvData19553885__12.csv": [
+          "csvData15745723__5.csv",
+          "csvData10027553__2.csv",
+          "csvData27987124__1.csv",
+          "csvData16773669__3.csv"
+        ],
+        "csvData22935665__3.csv": [
+          "csvData26655046__0.csv",
+          "csvData22418917__5.csv",
+          "csvData22418917__5.csv"
+        ],
+        "csvData8963593__3.csv": [
+          "csvData26655046__0.csv"
+        ],
+        "csvData9739809__4.csv": [
+          "csvData9739809__1.csv",
+          "csvData20535739__15.csv",
+          "csvData15745723__5.csv",
+          "csvData10027553__2.csv",
+          "csvData27987124__1.csv",
+          "csvData9768769__6.csv",
+          "csvData9739809__1.csv"
+        ],
+        "csvData17054209__2.csv": [
+          "csvData26655046__0.csv",
+          "csvData26655046__0.csv",
+          "csvData26655046__0.csv",
+          "csvData22418917__5.csv"
+        ],
+        "csvData2877720__14.csv": [
+          "csvData20535739__15.csv",
+          "csvData29346752__7.csv",
+          "csvData15745723__5.csv",
+          "csvData10027553__2.csv",
+          "csvData27987124__1.csv",
+          "csvData16773669__3.csv",
+          "csvData2404013__6.csv",
+          "csvData20075499__5.csv"
+        ],
+        "csvData26150573__1.csv": [
+          "csvData26655046__0.csv",
+          "csvData26655046__0.csv"
+        ],
+        "csvData4823585__6.csv": [
+          "csvData15745723__5.csv",
+          "csvData10027553__2.csv",
+          "csvData27987124__1.csv",
+          "csvData9768769__6.csv",
+          "csvData9739809__1.csv",
+          "csvData21286196__7.csv",
+          "csvData10027553__2.csv",
+          "csvData27987124__1.csv",
+          "csvData5124506__2.csv"
+        ],
+        "csvData7789467__2.csv": [
+          "csvData16773669__3.csv",
+          "csvData2404013__6.csv",
+          "csvData24341501__13.csv",
+          "csvData15497713__0.csv",
+          "csvData29230622__16.csv",
+          "csvData24341501__0.csv",
+          "csvData23904874__19.csv",
+          "csvData15497713__0.csv",
+          "csvData13523115__11.csv",
+          "csvData9469123__13.csv"
+        ],
+        "csvData13703215__0.csv": [
+          "csvData9739809__1.csv",
+          "csvData20535739__15.csv",
+          "csvData9739809__1.csv",
+          "csvData20535739__15.csv",
+          "csvData13703215__1.csv",
+          "csvData17517374__7.csv",
+          "csvData26853929__5.csv",
+          "csvData16773669__3.csv",
+          "csvData19553885__1.csv",
+          "csvData15745723__5.csv",
+          "csvData21286196__7.csv",
+          "csvData27987124__1.csv"
+        ],
+        "csvData1786628__8.csv": [
+          "csvData26655046__0.csv",
+          "csvData22418917__5.csv",
+          "csvData22418917__5.csv",
+          "csvData26655046__0.csv",
+          "csvData26655046__0.csv"
+        ],
+        "csvData1902536__12.csv": [
+          "csvData20535739__15.csv",
+          "csvData29346752__7.csv",
+          "csvData17302070__4.csv",
+          "csvData16773669__3.csv",
+          "csvData19553885__1.csv",
+          "csvData9739809__1.csv",
+          "csvData20535739__15.csv"
+        ],
+        "csvData19621512__8.csv": [
+          "csvData16773669__3.csv",
+          "csvData2404013__6.csv",
+          "csvData15497713__0.csv",
+          "csvData29230622__16.csv",
+          "csvData24341501__0.csv",
+          "csvData19621512__9.csv",
+          "csvData24341501__13.csv",
+          "csvData15497713__0.csv",
+          "csvData24341501__0.csv",
+          "csvData19621512__9.csv"
+        ],
+        "csvData25450714__16.csv": [
+          "csvData20535739__15.csv",
+          "csvData29346752__7.csv",
+          "csvData19553885__1.csv",
+          "csvData29346752__7.csv"
+        ],
+        "csvData2688573__2.csv": [
+          "csvData2832935__3.csv",
+          "csvData2688573__1.csv",
+          "csvData2688573__1.csv"
+        ],
+        "csvData13434912__4.csv": [
+          "csvData9739809__1.csv",
+          "csvData20535739__15.csv",
+          "csvData20075499__5.csv"
+        ],
+        "csvData9475480__6.csv": [
+          "csvData19553885__1.csv",
+          "csvData15745723__5.csv",
+          "csvData10027553__2.csv",
+          "csvData27987124__1.csv",
+          "csvData9768769__6.csv",
+          "csvData9739809__1.csv"
+        ],
+        "csvData21084464__1.csv": [
+          "csvData20535739__15.csv",
+          "csvData29346752__7.csv"
+        ],
+        "csvData8804961__3.csv": [
+          "csvData9739809__1.csv",
+          "csvData20535739__15.csv",
+          "csvData9739809__1.csv",
+          "csvData20535739__15.csv",
+          "csvData29346752__7.csv"
+        ],
+        "csvData29453038__9.csv": [
+          "csvData9739809__1.csv",
+          "csvData20535739__15.csv",
+          "csvData20075499__5.csv",
+          "csvData15745723__5.csv",
+          "csvData10027553__2.csv",
+          "csvData27987124__1.csv",
+          "csvData9768769__6.csv",
+          "csvData9739809__1.csv",
+          "csvData21286196__7.csv",
+          "csvData10027553__2.csv",
+          "csvData16773669__3.csv",
+          "csvData19553885__1.csv"
+        ],
+        "csvData7222492__9.csv": [
+          "csvData27008272__5.csv",
+          "csvData6468042__7.csv",
+          "csvData27008272__5.csv",
+          "csvData6468042__7.csv",
+          "csvData27008272__5.csv",
+          "csvData6468042__3.csv"
+        ],
+        "csvData18784108__2.csv": [
+          "csvData15745723__5.csv",
+          "csvData10027553__2.csv",
+          "csvData27987124__1.csv",
+          "csvData21286196__7.csv",
+          "csvData10027553__2.csv",
+          "csvData20535739__15.csv",
+          "csvData29346752__7.csv"
+        ],
+        "csvData26150573__3.csv": [
+          "csvData26655046__0.csv"
+        ],
+        "csvData26672678__2.csv": [
+          "csvData20535739__15.csv",
+          "csvData29346752__7.csv",
+          "csvData16773669__3.csv",
+          "csvData19553885__1.csv"
+        ],
+        "csvData15933779__4.csv": [
+          "csvData26655046__0.csv",
+          "csvData26655046__0.csv",
+          "csvData22418917__5.csv"
+        ],
+        "csvData9475480__8.csv": [
+          "csvData15745723__5.csv",
+          "csvData10027553__2.csv",
+          "csvData27987124__1.csv",
+          "csvData9768769__6.csv",
+          "csvData9739809__1.csv"
+        ],
+        "csvData7470046__2.csv": [
+          "csvData26655046__0.csv"
+        ],
+        "csvData26604328__1.csv": [
+          "csvData26655046__0.csv"
+        ],
+        "csvData13245391__1.csv": [
+          "csvData26655046__0.csv",
+          "csvData22418917__5.csv"
+        ],
+        "csvData26162088__2.csv": [
+          "csvData26655046__0.csv"
+        ],
+        "csvData20967043__0.csv": [
+          "csvData26655046__0.csv"
+        ],
+        "csvData23033509__18.csv": [
+          "csvData9739809__1.csv",
+          "csvData20535739__15.csv",
+          "csvData29346752__7.csv"
+        ],
+        "csvData6605406__2.csv": [
+          "csvData7434868__2.csv",
+          "csvData27008272__5.csv",
+          "csvData27008272__5.csv",
+          "csvData6468042__7.csv"
+        ]
+      }
+    }
+  },
+  "metrics": {
+    "join_L1+L2": {
+      "hit@1": 0.5,
+      "hit@3": 0.5,
+      "hit@5": 0.5,
+      "precision@1": 0.5,
+      "recall@1": 0.125,
+      "precision@5": 0.1,
+      "recall@5": 0.125,
+      "precision@10": 0.05,
+      "recall@10": 0.125,
+      "precision": 0.05,
+      "recall": 0.25,
+      "f1": 0.08333333333333334
+    }
+  }
+}

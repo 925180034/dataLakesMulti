@@ -1,0 +1,125 @@
+# Universal UNION Configuration - Works Well Across All Datasets
+# 通用UNION配置 - 适用于NLCTables, OpenData, WebTable
+
+task_configs:
+  union:
+    # 层组合策略 - UNION任务必须用union策略
+    layer_combination: "union"  # 累加候选，最大化召回
+    
+    # L1: 元数据过滤 - 宽松匹配
+    metadata_filter:
+      column_similarity_threshold: 0.15      # 宽松（允许schema差异）
+      value_overlap_threshold: 0.05          # 很小的重叠即可
+      type_matching_weight: 0.2              # 类型可以有差异
+      min_column_overlap: 1                  # 只需1列相似
+      max_candidates_per_table: 80           # 更多候选
+      
+      # UNION特定设置
+      allow_self_match: true                 # 允许自匹配（OpenData需要）
+      allow_subset_matching: true            # 允许子集匹配
+      allow_type_coercion: true             # 允许类型转换
+      fuzzy_column_matching: true           
+      semantic_similarity: true              # 语义相似更重要
+      
+    # L2: 向量搜索 - 语义为主
+    vector_search:
+      similarity_threshold: 0.25             # 更宽松
+      top_k: 100                            # 更多语义候选
+      embedding_model: "all-MiniLM-L6-v2"
+      
+      # 语义权重配置（UNION更看重语义）
+      column_name_weight: 0.3               # 列名权重较低
+      value_embedding_weight: 0.5           # 值的语义最重要
+      context_weight: 0.2                  # 表上下文
+      
+      use_sentence_transformers: true
+      cross_encoder_reranking: false       # 太慢，不用
+      
+    # L3: LLM匹配器 - 极宽松验证
+    llm_matcher:
+      confidence_threshold: 0.03            # 非常宽松
+      scoring_mode: "semantic_focus"        # 关注语义相似
+      max_candidates_to_evaluate: 60        
+      batch_size: 10
+      temperature: 0.4                      # 稍高温度，更灵活
+      
+      # UNION特定逻辑
+      check_semantic_compatibility: true     # 语义兼容性
+      allow_schema_transformation: true      # 允许schema转换
+      detect_vertical_partitions: true       # 垂直分区检测
+      detect_horizontal_partitions: true     # 水平分区检测
+      allow_partial_matches: true           # 部分匹配也可
+      focus_on_compatibility: true          # 兼容性优先
+      
+      # 值相似性增强
+      value_similarity_weight: 0.6          # UNION更看重值相似
+      
+    # 聚合器 - 最终排序
+    aggregator:
+      final_combination: "weighted_average"
+      
+      # 权重分配（UNION更依赖语义）
+      layer_weights:
+        L1: 0.20  # 结构不太重要
+        L2: 0.50  # 语义最重要
+        L3: 0.30  # LLM验证
+      
+      # 分数权重
+      ranking_weights:
+        metadata_score: 0.20   # 结构权重低
+        vector_score: 0.50     # 语义权重高
+        llm_score: 0.30       
+        
+      score_normalization: "min_max"
+      max_results: 30                       # UNION返回更多结果
+      
+    # UNION特定优化
+    union_optimizations:
+      detect_entity_types: true             # 实体类型检测
+      handle_temporal_data: true            # 时间数据处理
+      geographic_awareness: true            # 地理数据识别
+      domain_clustering: true               # 领域聚类
+      
+      # 相似性扩展
+      use_synonyms: true                    # 同义词扩展
+      use_abbreviations: true              # 缩写识别
+      partial_name_matching: true          # 部分名称匹配
+      
+    # 优化配置
+    optimization_config:
+      enable_caching: true
+      cache_ttl: 3600
+      parallel_processing: true
+      max_workers: 8
+      
+      # 数据集自适应
+      adaptive_adjustment:
+        enable: true
+        factors:
+          # UNION的自适应策略
+          has_self_matches: 0.9      # OpenData类（有自匹配）
+          high_diversity: 0.8        # WebTable类（高多样性）
+          clean_data: 1.1           # NLCTables类（干净数据）
+          
+    # 性能目标
+    performance_targets:
+      hit_at_1: 0.55   # UNION目标稍低
+      hit_at_5: 0.75   
+      precision_at_5: 0.20
+      recall_at_5: 0.60
+      
+# 语义增强配置
+semantic_enhancement:
+  enabled: true
+  techniques:
+    - synonym_expansion      # 同义词扩展
+    - abbreviation_mapping  # 缩写映射
+    - domain_knowledge     # 领域知识
+    - value_pattern_matching # 值模式匹配
+    
+# 调试和监控
+logging:
+  level: "INFO"
+  log_candidates_flow: true
+  log_semantic_matches: true
+  log_adaptive_adjustments: true

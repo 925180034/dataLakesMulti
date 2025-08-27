@@ -1,0 +1,81 @@
+# WebTable JOIN Configuration - Optimized for Web-Scraped Data
+# Core Principle: Progressive refinement, not elimination
+
+task_configs:
+  join:
+    # Layer combination strategy - CRITICAL
+    layer_combination: "union"  # Combine candidates, don't filter
+    
+    # L1: Metadata Filter - Cast Wide Net
+    metadata_filter:
+      column_similarity_threshold: 0.15  # Very relaxed (was 0.35)
+      value_overlap_threshold: 0.05      # Minimal overlap required
+      type_matching_weight: 0.2          # Low weight for type matching
+      max_candidates_per_table: 100      # Keep many candidates
+      fuzzy_column_matching: true        # Handle naming variations
+      case_sensitive: false               # Web data often inconsistent
+      
+    # L2: Vector Search - Add Semantic Matches
+    vector_search:
+      similarity_threshold: 0.25          # Lower threshold (was 0.40)
+      top_k: 50                          # More candidates
+      combine_with_l1: "union"           # ADD to L1, don't filter
+      embedding_model: "all-MiniLM-L6-v2"
+      normalize_embeddings: true
+      use_column_context: true           # Consider surrounding columns
+      
+    # L3: LLM Matcher - Intelligent Validation
+    llm_matcher:
+      confidence_threshold: 0.02         # Almost never reject (was 0.08)
+      scoring_mode: "relative"           # Adaptive to dataset
+      max_candidates_to_evaluate: 50     # Evaluate more candidates
+      batch_size: 10                     # Process in batches
+      temperature: 0.3                   # Some creativity for matching
+      
+      # Prompt configuration (no hardcoding)
+      prompt_template: "adaptive"        # Uses dataset statistics
+      include_examples: true             # Dynamic examples from dataset
+      context_injection: true            # Inject dataset characteristics
+      
+    # Optimization settings
+    optimization_config:
+      enable_caching: true
+      cache_ttl: 3600
+      parallel_processing: true
+      max_workers: 8
+      
+      # WebTable specific optimizations
+      handle_html_artifacts: true        # Clean HTML remnants
+      normalize_whitespace: true         # Fix spacing issues
+      detect_header_rows: true           # Skip non-data rows
+      
+    # Performance targets
+    performance_targets:
+      hit_at_1: 0.50   # Immediate goal
+      hit_at_5: 0.75   # Should achieve
+      precision_at_5: 0.30
+      recall_at_5: 0.60
+      
+# Dataset profiling (computed at runtime)
+dataset_profile:
+  auto_detect: true
+  metrics_to_compute:
+    - schema_consistency_score
+    - average_table_size
+    - column_name_entropy
+    - value_distribution_skew
+    - semantic_coherence
+    
+# Adaptive threshold adjustment
+adaptive_thresholds:
+  enabled: true
+  adjustment_factors:
+    high_schema_variance: 0.7    # Lower thresholds if inconsistent
+    low_semantic_coherence: 0.8  # Lower thresholds if poor naming
+    small_dataset: 1.2           # Higher thresholds if few tables
+    
+# Logging for debugging
+logging:
+  level: "INFO"
+  log_candidates_flow: true      # Track how candidates change
+  log_threshold_adjustments: true

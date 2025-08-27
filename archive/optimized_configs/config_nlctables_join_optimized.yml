@@ -1,0 +1,62 @@
+optimization_config:
+  adaptive_adjustment:
+    enable: true
+    factors:
+      clean_data: 1.1
+      has_self_matches: 0.95
+      high_diversity: 0.9
+      high_quality_data: 1.15
+      medium_quality: 1.0
+      noisy_data: 0.85
+  cache_ttl: 3600
+  enable_caching: true
+  max_workers: 8
+  parallel_processing: true
+performance_targets:
+  hit_at_1: 0.7
+  hit_at_5: 0.85
+  precision_at_5: 0.3
+  recall_at_5: 0.6
+task_configs:
+  join:
+    aggregator:
+      final_combination: weighted_average
+      layer_weights:
+        L1: 0.3
+        L2: 0.4
+        L3: 0.3
+      max_results: 20
+      ranking_weights:
+        llm_score: 0.3
+        metadata_score: 0.3
+        vector_score: 0.4
+      score_normalization: min_max
+    layer_combination: weighted_union
+    llm_matcher:
+      allow_partial_matches: false
+      batch_size: 10
+      check_semantic_compatibility: false
+      confidence_threshold: 0.05
+      focus_on_join_keys: true
+      max_candidates_to_evaluate: 40
+      nlc_prompt_optimization: true
+      scoring_mode: adaptive
+      temperature: 0.3
+      value_similarity_weight: 0.5
+    metadata_filter:
+      allow_self_match: false
+      allow_subset_matching: false
+      allow_type_coercion: false
+      column_similarity_threshold: 0.3
+      fuzzy_column_matching: true
+      max_candidates_per_table: 50
+      min_column_overlap: 2
+      type_matching_weight: 0.3
+      value_overlap_threshold: 0.12
+    vector_search:
+      column_name_weight: 0.3
+      context_weight: 0.2
+      embedding_model: all-MiniLM-L6-v2
+      similarity_threshold: 0.4
+      top_k: 60
+      value_embedding_weight: 0.5

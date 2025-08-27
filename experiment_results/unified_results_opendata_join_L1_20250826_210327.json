@@ -1,0 +1,43 @@
+{
+  "dataset": "opendata",
+  "dataset_type": "subset",
+  "task": "join",
+  "layer": "L1",
+  "workers": 4,
+  "max_queries": 2,
+  "challenging": true,
+  "experiments": {
+    "join_L1": {
+      "results": [
+        {
+          "query_table": "CAN_CSV0000000000001724__13.csv",
+          "predictions": []
+        },
+        {
+          "query_table": "UK_CSV0000000000003896__7.csv",
+          "predictions": []
+        }
+      ],
+      "elapsed_time": 0.05257272720336914,
+      "task": "join",
+      "layer": "L1",
+      "ground_truth": null
+    }
+  },
+  "metrics": {
+    "join_L1": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "hit@5": 0.0,
+      "precision@1": 0.0,
+      "recall@1": 0.0,
+      "precision@5": 0.0,
+      "recall@5": 0.0,
+      "precision@10": 0.0,
+      "recall@10": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    }
+  }
+}

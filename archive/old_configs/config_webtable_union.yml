@@ -1,0 +1,104 @@
+# WebTable UNION Configuration - Optimized for Semantic Similarity
+# Core Principle: Find semantically related tables, even with different schemas
+
+task_configs:
+  union:
+    # Layer combination strategy
+    layer_combination: "weighted_union"  # Smart combination
+    
+    # L1: Metadata Filter - Extremely Permissive
+    metadata_filter:
+      column_similarity_threshold: 0.10  # Very low (was 0.20)
+      value_overlap_threshold: 0.02      # Almost any overlap
+      allow_self_match: true              # Tables can union with themselves
+      consider_subset_matches: true       # Partial schema matches OK
+      max_candidates_per_table: 150      # Keep many candidates
+      
+      # Column matching strategies
+      use_synonyms: true                 # id ≈ identifier
+      use_abbreviations: true            # desc ≈ description  
+      semantic_similarity: true           # price ≈ cost
+      type_flexibility: 0.8              # int ≈ float more acceptable
+      
+    # L2: Vector Search - Semantic Focus
+    vector_search:
+      similarity_threshold: 0.20          # Relaxed (was 0.35)
+      top_k: 75                          # More semantic candidates
+      combine_with_l1: "weighted_union"  # Smart combination
+      
+      # Semantic weights
+      column_name_weight: 0.3            # Less important for UNION
+      value_embedding_weight: 0.5        # Values matter more
+      context_weight: 0.2                # Table context
+      
+      # Advanced semantic options
+      use_sentence_transformers: true
+      cross_encoder_reranking: false     # Too slow for WebTable scale
+      
+    # L3: LLM Matcher - Intelligent Union Detection
+    llm_matcher:
+      confidence_threshold: 0.01         # Extremely permissive (was 0.05)
+      scoring_mode: "adaptive"           # Learns from dataset
+      max_candidates_to_evaluate: 75     # Check more possibilities
+      
+      # Union-specific logic
+      check_semantic_compatibility: true
+      allow_schema_transformation: true   # Different schemas OK
+      detect_vertical_partitions: true    # Same entity, different attributes
+      detect_horizontal_partitions: true  # Same schema, different instances
+      
+      # Prompt strategy
+      emphasis: "semantic_similarity"     # Focus on meaning, not structure
+      include_value_examples: true        # Show actual data
+      reasoning_depth: "shallow"          # Faster decisions
+      
+    # Aggregation strategy
+    aggregator:
+      final_combination: "learned_weights"
+      layer_weights:
+        L1: 0.2  # Structure less important
+        L2: 0.4  # Semantic similarity key
+        L3: 0.4  # LLM validation crucial
+      score_normalization: "relative"
+      
+    # UNION-specific optimizations
+    union_optimizations:
+      detect_entity_types: true          # Customer ≈ Client
+      handle_temporal_data: true         # 2023 data ≈ 2024 data
+      geographic_awareness: true         # US sales ≈ EU sales
+      domain_clustering: true            # Group similar domains
+      
+    # Performance targets
+    performance_targets:
+      hit_at_1: 0.70   # Should achieve
+      hit_at_5: 0.85   # Target
+      precision_at_5: 0.35
+      recall_at_5: 0.75
+      
+# Special handling for WebTable characteristics
+webtable_adaptations:
+  handle_sparse_tables: true            # Many nulls/missing values
+  detect_list_pages: true               # Multiple similar tables from same site
+  normalize_currency: true              # $, €, £ handling
+  date_format_detection: true           # Various date formats
+  number_format_normalization: true     # 1,000 vs 1000
+  
+# Dynamic threshold adjustment for UNION
+adaptive_union_thresholds:
+  enabled: true
+  factors:
+    high_table_count: 0.9              # More permissive with more tables
+    domain_diversity: 0.8              # Lower if many domains
+    sparse_data: 0.85                  # Lower if many nulls
+    
+# Caching strategy
+caching:
+  enabled: true
+  cache_union_candidates: true         # Cache likely union pairs
+  cache_validity: 1800                 # 30 minutes
+  
+# Monitoring
+monitoring:
+  track_layer_contributions: true      # See which layer finds matches
+  log_rejection_reasons: true         # Why candidates are filtered
+  measure_diversity: true             # Track candidate diversity

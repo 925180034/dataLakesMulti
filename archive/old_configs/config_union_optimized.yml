@@ -1,0 +1,96 @@
+# Optimized configuration for UNION task
+# Based on SOTA performance targets analysis
+# Target: Hit@1 ≥70%, Hit@5 ≥85%, Recall@5 ≥40%
+
+# Task-specific configuration for UNION operations
+task_configs:
+  union:
+    # Layer 1: Metadata Filtering - Much more relaxed for UNION
+    metadata_filter:
+      column_similarity_threshold: 0.20  # Much lower for UNION
+      min_column_overlap: 1              # Minimal overlap needed
+      allow_subset_matching: true        # Tables can be subsets
+      use_column_order: false           # Column order doesn't matter for UNION
+      allow_type_coercion: true         # Allow compatible types (int->float, etc.)
+      fuzzy_column_matching: true       # Allow fuzzy name matching
+      max_candidates: 150                # More candidates for UNION
+      
+    # Layer 2: Vector Search - Focus on semantic similarity
+    vector_search:
+      similarity_threshold: 0.35         # Lower threshold for UNION
+      top_k: 60                          # More candidates for UNION
+      use_value_embeddings: true        # Focus on data values, not just schema
+      embedding_aggregation: "mean"      # Average embeddings
+      use_semantic_similarity: true      # Semantic matching over exact matching
+      embedding_model: "all-MiniLM-L6-v2"  # Good for semantic similarity
+      
+    # Layer 3: LLM Verification - Flexible matching
+    llm_matcher:
+      confidence_threshold: 0.05         # Very low threshold for UNION
+      focus_on_compatibility: true       # Check if data can be combined
+      check_semantic_similarity: true    # Verify semantic alignment
+      allow_partial_matches: true        # Partial unions are valid
+      temperature: 0.1                   # Slightly creative for semantic matching
+      allow_self_matches: true           # UNION can match with itself
+      check_value_compatibility: true    # Focus on value-level compatibility
+      
+    # Aggregation
+    aggregator:
+      max_results: 30                    # More results for UNION
+      ranking_weights:
+        metadata_score: 0.20              # Less weight on metadata
+        vector_score: 0.40                # More weight on semantics
+        llm_score: 0.40                  # Equal weight on LLM understanding
+      include_partial_matches: true
+      ensemble_method: "weighted_vote"
+      use_semantic_reranking: true       # Re-rank based on semantic similarity
+
+# Performance optimization
+optimization_config:
+  # Caching - More aggressive for UNION
+  cache_enabled: true
+  cache_ttl: 7200  # Longer cache for UNION
+  cache_semantic_embeddings: true
+  
+  # Parallelization
+  parallel_processing: true
+  max_workers: 4
+  batch_processing: true
+  
+  # Resource management
+  max_memory_usage: 8192  # MB
+  vector_index_type: "hnsw"
+  hnsw_params:
+    M: 16
+    ef_construction: 200
+    ef_search: 150  # Higher search effort for UNION
+
+# Dataset-specific adjustments
+dataset_configs:
+  nlctables:
+    # NL understanding for UNION
+    use_query_expansion: true
+    extract_topic_keywords: true
+    semantic_weight: 0.45
+    llm_confidence_threshold: 0.04  # Very low for NL UNION queries
+    
+  opendata:
+    # Government data patterns
+    use_domain_ontologies: true
+    group_by_topic: true
+    allow_cross_domain_unions: false  # Government data stays domain-specific
+    
+  webtable:
+    # Web table handling
+    detect_list_tables: true
+    group_similar_schemas: true
+    handle_sparse_data: true
+    allow_schema_evolution: true
+
+# Monitoring and debugging
+monitoring:
+  log_level: "INFO"
+  log_performance_metrics: true
+  track_layer_contributions: true
+  save_intermediate_results: true
+  track_self_matches: true  # Important for UNION debugging
