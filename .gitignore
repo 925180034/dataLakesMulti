@@ -90,6 +90,20 @@ temp/
 *.tsv
 *.parquet
 
+# Dataset files (too large for git)
+examples/*/join_complete/tables.json
+examples/*/union_complete/tables.json
+examples/*/join_complete/ground_truth.json  
+examples/*/union_complete/ground_truth.json
+examples/*/join_complete/queries.json
+examples/*/union_complete/queries.json
+examples/nlctables/*/tables_backup.json
+examples/nlctables/*/tables_with_queries.json
+
+# Large subset files (optional, keep for now)
+# examples/*/join_subset/tables.json
+# examples/*/union_subset/tables.json
+
 # Embeddings and indices
 embeddings/
 *.faiss
