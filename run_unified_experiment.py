@@ -32,7 +32,7 @@ logger.info(f"📊 MAX_PREDICTIONS set to {MAX_PREDICTIONS} (supports up to @{MA
 global_unified_cache = {}
 
 def clear_experiment_cache(specific_dataset: str = None):
-    """清理实验缓存
+    """清理实验缓存（但保留嵌入向量缓存）
     
     Args:
         specific_dataset: 如果指定，只清理该数据集的缓存
@@ -46,18 +46,17 @@ def clear_experiment_cache(specific_dataset: str = None):
     cleared_count = 0
     
     if specific_dataset:
-        # 清理特定数据集的缓存
+        # 清理特定数据集的临时缓存（但保留嵌入向量）
         patterns = [
             f"ablation_{specific_dataset}_*",
             f"experiment_cache/{specific_dataset}_*",
-            specific_dataset,
             f"experiment_{specific_dataset}_*",
             f"unified_{specific_dataset}_*"
         ]
         logger.info(f"🧹 清理 {specific_dataset} 数据集的缓存...")
     else:
-        # 清理所有缓存
-        patterns = ["*"]
+        # 清理所有临时缓存（但保留嵌入向量）
+        patterns = ["ablation_*", "experiment_*", "unified_*"]
         logger.info("🧹 清理所有实验缓存...")
     
     for pattern in patterns:
@@ -70,10 +69,14 @@ def clear_experiment_cache(specific_dataset: str = None):
                 except Exception as e:
                     logger.warning(f"  ⚠️ 无法删除 {cache_path}: {e}")
     
+    # 重要：不删除 cache/{dataset}/ 目录本身，因为嵌入向量在那里！
+    # 只删除 ablation_*, experiment_*, unified_* 等临时缓存
+    
     if cleared_count > 0:
-        logger.info(f"✅ 清理完成，删除了 {cleared_count} 个缓存目录")
+        logger.info(f"✅ 清理完成，删除了 {cleared_count} 个临时缓存目录")
+        logger.info(f"📦 保留了嵌入向量缓存在 cache/{specific_dataset or '*'}/ 目录")
     else:
-        logger.info("📦 没有找到需要清理的缓存")
+        logger.info("📦 没有找到需要清理的临时缓存")
     
     return cleared_count
 

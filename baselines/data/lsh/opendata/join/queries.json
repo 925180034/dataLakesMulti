@@ -1,0 +1,402 @@
+[
+  {
+    "query_table": "CAN_CSV0000000000001724__13.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "UK_CSV0000000000003896__7.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "USA_CSV0000000000037101__16.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "USA_CSV0000000000033847__5.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "UK_CSV0000000000003896__0.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001787__12.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001787__35.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "SG_CSV0000000000000925__3.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "USA_CSV0000000000033847__4.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "SG_CSV0000000000000925__4.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "UK_CSV0000000000006676__2.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001787__39.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "UK_CSV0000000000002010__6.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "UK_CSV0000000000006676__34.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001787__40.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001797__6.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "UK_CSV0000000000007396__12.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001487__26.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "SG_CSV0000000000001714__6.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "CAN_CSV0000000000027346__30.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001787__5.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "UK_CSV0000000000007396__10.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "USA_CSV0000000000034882__26.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "UK_CSV0000000000003896__3.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001797__5.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001724__46.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "CAN_CSV0000000000027346__35.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "CAN_CSV0000000000027349__20.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "USA_CSV0000000000033847__12.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "USA_CSV0000000000034882__29.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "UK_CSV0000000000006676__9.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "USA_CSV0000000000034882__13.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "CAN_CSV0000000000027346__32.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001787__6.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "USA_CSV0000000000033847__14.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "UK_CSV0000000000005907__42.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001487__23.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001724__11.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001787__2.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001797__0.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "USA_CSV0000000000035902__16.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "UK_CSV0000000000005854__10.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "UK_CSV0000000000005907__48.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001487__9.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "UK_CSV0000000000005907__43.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "UK_CSV0000000000006255__36.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "CAN_CSV0000000000027349__21.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "USA_CSV0000000000035902__20.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "UK_CSV0000000000002010__9.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "USA_CSV0000000000033847__17.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001487__20.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "UK_CSV0000000000007396__13.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "USA_CSV0000000000033847__3.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001787__4.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "USA_CSV0000000000035902__18.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "USA_CSV0000000000035902__17.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "UK_CSV0000000000002010__31.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001787__8.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001787__1.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "USA_CSV0000000000034882__22.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001724__12.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001724__44.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "USA_CSV0000000000035902__15.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001787__38.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "UK_CSV0000000000006676__5.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001787__0.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001797__1.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001487__6.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "SG_CSV0000000000000925__6.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001487__10.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "UK_CSV0000000000002010__10.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "UK_CSV0000000000002010__8.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001724__43.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "SG_CSV0000000000000925__0.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "UK_CSV0000000000003896__4.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001724__45.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001787__37.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "UK_CSV0000000000005907__46.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "USA_CSV0000000000037101__17.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001787__36.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001487__29.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001787__41.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "USA_CSV0000000000034882__12.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "USA_CSV0000000000034882__9.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001487__28.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001487__25.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001797__26.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "USA_CSV0000000000036154__19.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "SG_CSV0000000000000047__2.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001487__34.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "UK_CSV0000000000002010__13.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001358__23.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "USA_CSV0000000000035412__14.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "USA_CSV0000000000035554__15.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "USA_CSV0000000000035085__13.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "USA_CSV0000000000035509__5.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "USA_CSV0000000000034882__30.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001787__16.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "SG_CSV0000000000000047__8.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "UK_CSV0000000000002183__16.csv",
+    "task_type": "join"
+  }
+]

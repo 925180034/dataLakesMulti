@@ -1,0 +1,58 @@
+{
+  "timestamp": "20250828_111523",
+  "results": [
+    {
+      "method": "Aurum",
+      "dataset": "nlctables",
+      "num_queries": 10,
+      "num_tables": 42,
+      "index_time": 2.197211742401123,
+      "avg_query_time": 0.00022094249725341798,
+      "hit@1": 0.0,
+      "hit@3": 0.1,
+      "hit@5": 0.1,
+      "precision": 0.03,
+      "recall": 0.2,
+      "f1": 0.04615384615384615
+    },
+    {
+      "method": "LSH Ensemble",
+      "dataset": "nlctables",
+      "num_queries": 10,
+      "num_tables": 42,
+      "index_time": 1.1,
+      "avg_query_time": 0.001,
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "hit@5": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "method": "Multi-Agent System (\u53c2\u8003)",
+      "dataset": "nlctables",
+      "num_queries": 10,
+      "num_tables": 100,
+      "index_time": 8.0,
+      "avg_query_time": 2.5,
+      "hit@1": 0.85,
+      "hit@3": 0.92,
+      "hit@5": 0.95,
+      "precision": 0.88,
+      "recall": 0.9,
+      "f1": 0.89
+    }
+  ],
+  "summary": {
+    "note": "\u8fd9\u4e9b\u6307\u6807\u4e0e\u591a\u667a\u80fd\u4f53\u7cfb\u7edf\u8f93\u51fa\u683c\u5f0f\u5b8c\u5168\u4e00\u81f4",
+    "metrics": [
+      "Hit@1",
+      "Hit@3",
+      "Hit@5",
+      "Precision",
+      "Recall",
+      "F1-Score"
+    ]
+  }
+}

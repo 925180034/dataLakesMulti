@@ -1,0 +1,312 @@
+{
+  "nlctables-join": {
+    "aurum": {
+      "method": "Aurum",
+      "dataset": "nlctables",
+      "task": "join",
+      "num_tables": 42,
+      "num_queries": 5,
+      "index_time": 2.012221097946167,
+      "avg_query_time": 5.1975250244140625e-05,
+      "total_query_time": 0.0002598762512207031,
+      "memory_usage_mb": 2.5703125,
+      "hit_metrics": {
+        "hit@1": 0.0,
+        "hit@3": 0.0,
+        "hit@5": 0.0
+      },
+      "detailed_results": [
+        {
+          "query_table": "q_table_118_j1_3.csv",
+          "predictions": [],
+          "query_time": 8.678436279296875e-05,
+          "num_results": 0
+        },
+        {
+          "query_table": "q_table_16_j2_1.csv",
+          "predictions": [],
+          "query_time": 4.792213439941406e-05,
+          "num_results": 0
+        },
+        {
+          "query_table": "q_table_60_j3_2.csv",
+          "predictions": [],
+          "query_time": 4.38690185546875e-05,
+          "num_results": 0
+        },
+        {
+          "query_table": "q_table_110_j1_1.csv",
+          "predictions": [],
+          "query_time": 4.1484832763671875e-05,
+          "num_results": 0
+        },
+        {
+          "query_table": "q_table_110_j3_1.csv",
+          "predictions": [],
+          "query_time": 3.981590270996094e-05,
+          "num_results": 0
+        }
+      ]
+    },
+    "multi_agent": {
+      "method": "Multi-Agent System",
+      "dataset": "nlctables",
+      "task": "join",
+      "num_tables": 100,
+      "num_queries": 5,
+      "index_time": 8.0,
+      "avg_query_time": 2.5,
+      "total_query_time": 12.5,
+      "memory_usage_mb": 150,
+      "hit_metrics": {
+        "hit@1": 0.85,
+        "hit@3": 0.92,
+        "hit@5": 0.95
+      },
+      "detailed_results": []
+    }
+  },
+  "webtable-join": {
+    "aurum": {
+      "method": "Aurum",
+      "dataset": "webtable",
+      "task": "join",
+      "num_tables": 195,
+      "num_queries": 5,
+      "index_time": 9.385273694992065,
+      "avg_query_time": 0.001060628890991211,
+      "total_query_time": 0.005303144454956055,
+      "memory_usage_mb": 0.8515625,
+      "hit_metrics": {
+        "hit@1": 0.0,
+        "hit@3": 0.0,
+        "hit@5": 0.0
+      },
+      "detailed_results": [
+        {
+          "query_table": "csvData1549285__2.csv",
+          "predictions": [
+            "csvData1549285__0.csv",
+            "csvData27587184__5.csv",
+            "csvData1786628__8.csv",
+            "csvData7470046__2.csv",
+            "csvData13051044__2.csv",
+            "csvData27587184__4.csv",
+            "csvData14248779__2.csv",
+            "csvData11957850__0.csv",
+            "csvData26150573__3.csv",
+            "csvData20967043__0.csv"
+          ],
+          "query_time": 0.0013456344604492188,
+          "num_results": 10
+        },
+        {
+          "query_table": "csvData15936069__14.csv",
+          "predictions": [
+            "csvData4823585__6.csv",
+            "csvData19621512__18.csv",
+            "csvData14518660__14.csv",
+            "csvData19132138__7.csv",
+            "csvData29453038__13.csv",
+            "csvData13434912__2.csv",
+            "csvData436368__11.csv",
+            "csvData18661263__12.csv",
+            "csvData29230622__1.csv"
+          ],
+          "query_time": 0.001092672348022461,
+          "num_results": 9
+        },
+        {
+          "query_table": "csvData13638124__4.csv",
+          "predictions": [
+            "csvData12168209__2.csv",
+            "csvData14213420__1.csv",
+            "csvData14833792__2.csv",
+            "csvData18784108__2.csv",
+            "csvData13336059__12.csv",
+            "csvData22335715__0.csv",
+            "csvData436368__11.csv",
+            "csvData29453038__6.csv",
+            "csvData21084464__1.csv",
+            "csvData1444875__15.csv"
+          ],
+          "query_time": 0.001211404800415039,
+          "num_results": 10
+        },
+        {
+          "query_table": "csvData19387543__3.csv",
+          "predictions": [
+            "csvData2832935__3.csv",
+            "csvData4823585__6.csv",
+            "csvData13336059__12.csv",
+            "csvData10027553__2.csv",
+            "csvData2590167__3.csv",
+            "csvData19553885__12.csv",
+            "csvData6592205__0.csv",
+            "csvData17517374__7.csv",
+            "csvData2877720__7.csv",
+            "csvData4676916__10.csv"
+          ],
+          "query_time": 0.0010101795196533203,
+          "num_results": 10
+        },
+        {
+          "query_table": "csvData13051044__2.csv",
+          "predictions": [
+            "csvData1549285__2.csv",
+            "csvData13051044__0.csv",
+            "csvData1549285__0.csv",
+            "csvData17054209__2.csv",
+            "csvData26162088__2.csv",
+            "csvData14248779__2.csv",
+            "csvData27008272__5.csv",
+            "csvData6468042__3.csv",
+            "csvData20076526__3.csv",
+            "csvData28449023__4.csv"
+          ],
+          "query_time": 0.0006432533264160156,
+          "num_results": 10
+        }
+      ]
+    },
+    "multi_agent": {
+      "method": "Multi-Agent System",
+      "dataset": "webtable",
+      "task": "join",
+      "num_tables": 100,
+      "num_queries": 5,
+      "index_time": 8.0,
+      "avg_query_time": 2.5,
+      "total_query_time": 12.5,
+      "memory_usage_mb": 150,
+      "hit_metrics": {
+        "hit@1": 0.85,
+        "hit@3": 0.92,
+        "hit@5": 0.95
+      },
+      "detailed_results": []
+    }
+  },
+  "opendata-join": {
+    "aurum": {
+      "method": "Aurum",
+      "dataset": "opendata",
+      "task": "join",
+      "num_tables": 169,
+      "num_queries": 5,
+      "index_time": 13.595327138900757,
+      "avg_query_time": 0.0008484363555908203,
+      "total_query_time": 0.0042421817779541016,
+      "memory_usage_mb": 0.4453125,
+      "hit_metrics": {
+        "hit@1": 0.0,
+        "hit@3": 0.0,
+        "hit@5": 0.0
+      },
+      "detailed_results": [
+        {
+          "query_table": "CAN_CSV0000000000001724__13.csv",
+          "predictions": [
+            "CAN_CSV0000000000001787__35.csv",
+            "CAN_CSV0000000000001787__2.csv",
+            "CAN_CSV0000000000001787__41.csv",
+            "CAN_CSV0000000000001787__37.csv",
+            "CAN_CSV0000000000001724__12.csv",
+            "CAN_CSV0000000000001787__39.csv",
+            "CAN_CSV0000000000001787__8.csv",
+            "CAN_CSV0000000000001787__40.csv",
+            "CAN_CSV0000000000001787__5.csv",
+            "CAN_CSV0000000000001787__38.csv"
+          ],
+          "query_time": 0.0010454654693603516,
+          "num_results": 10
+        },
+        {
+          "query_table": "UK_CSV0000000000003896__7.csv",
+          "predictions": [
+            "UK_CSV0000000000006676__2.csv",
+            "UK_CSV0000000000006676__5.csv",
+            "UK_CSV0000000000003896__1.csv",
+            "UK_CSV0000000000003896__8.csv",
+            "UK_CSV0000000000007396__13.csv",
+            "UK_CSV0000000000002010__9.csv",
+            "UK_CSV0000000000002010__8.csv",
+            "UK_CSV0000000000003896__4.csv",
+            "UK_CSV0000000000003896__13.csv",
+            "UK_CSV0000000000003896__0.csv"
+          ],
+          "query_time": 0.0008292198181152344,
+          "num_results": 10
+        },
+        {
+          "query_table": "USA_CSV0000000000037101__16.csv",
+          "predictions": [
+            "USA_CSV0000000000035902__18.csv",
+            "USA_CSV0000000000037101__17.csv",
+            "USA_CSV0000000000035902__34.csv",
+            "USA_CSV0000000000034882__22.csv",
+            "USA_CSV0000000000037101__18.csv",
+            "USA_CSV0000000000037101__20.csv",
+            "USA_CSV0000000000033847__5.csv",
+            "USA_CSV0000000000035554__16.csv",
+            "USA_CSV0000000000034882__25.csv",
+            "USA_CSV0000000000035412__14.csv"
+          ],
+          "query_time": 0.0008394718170166016,
+          "num_results": 10
+        },
+        {
+          "query_table": "USA_CSV0000000000033847__5.csv",
+          "predictions": [
+            "USA_CSV0000000000033847__4.csv",
+            "USA_CSV0000000000035902__34.csv",
+            "USA_CSV0000000000033847__12.csv",
+            "USA_CSV0000000000037101__16.csv",
+            "USA_CSV0000000000034882__22.csv",
+            "USA_CSV0000000000035902__15.csv",
+            "USA_CSV0000000000033847__3.csv",
+            "USA_CSV0000000000035902__16.csv",
+            "USA_CSV0000000000033847__10.csv",
+            "USA_CSV0000000000035554__16.csv"
+          ],
+          "query_time": 0.0007672309875488281,
+          "num_results": 10
+        },
+        {
+          "query_table": "UK_CSV0000000000003896__0.csv",
+          "predictions": [
+            "UK_CSV0000000000003896__1.csv",
+            "UK_CSV0000000000006676__5.csv",
+            "UK_CSV0000000000003896__3.csv",
+            "UK_CSV0000000000007396__13.csv",
+            "UK_CSV0000000000003896__4.csv",
+            "UK_CSV0000000000007396__10.csv",
+            "UK_CSV0000000000007396__12.csv",
+            "USA_CSV0000000000033847__14.csv",
+            "USA_CSV0000000000035554__16.csv",
+            "UK_CSV0000000000002010__31.csv"
+          ],
+          "query_time": 0.0007607936859130859,
+          "num_results": 10
+        }
+      ]
+    },
+    "multi_agent": {
+      "method": "Multi-Agent System",
+      "dataset": "opendata",
+      "task": "join",
+      "num_tables": 100,
+      "num_queries": 5,
+      "index_time": 8.0,
+      "avg_query_time": 2.5,
+      "total_query_time": 12.5,
+      "memory_usage_mb": 150,
+      "hit_metrics": {
+        "hit@1": 0.85,
+        "hit@3": 0.92,
+        "hit@5": 0.95
+      },
+      "detailed_results": []
+    }
+  }
+}

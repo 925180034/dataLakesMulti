@@ -1,0 +1,499 @@
+{
+  "queries": [
+    {
+      "query_id": "nlc_join_1",
+      "query_text": "Can you find more joinable tables with keyword 0.363with the topic related to Sports_Team_Statistics",
+      "seed_table": "q_table_118_j1_3",
+      "task_type": "join",
+      "features": {
+        "keywords": [
+          "0.363with"
+        ],
+        "topics": [
+          "Sports_Team_Statistics"
+        ],
+        "column_mentions": [],
+        "value_mentions": [],
+        "constraints": {}
+      }
+    },
+    {
+      "query_id": "nlc_join_3",
+      "query_text": "Can you find more joinable tables with similar content to Value7with the topic related to Canon_EOS_Framework_Data",
+      "seed_table": "q_table_16_j2_1",
+      "task_type": "join",
+      "features": {
+        "keywords": [],
+        "topics": [
+          "Canon_EOS_Framework_Data"
+        ],
+        "column_mentions": [
+          "Value7with"
+        ],
+        "value_mentions": [],
+        "constraints": {}
+      }
+    },
+    {
+      "query_id": "nlc_join_5",
+      "query_text": "Can you find more joinable tables with additonal features related to Original Declaration and better mention keyword Tidy ConfigurableEmbeddedServletContainerFactory",
+      "seed_table": "q_table_60_j3_2",
+      "task_type": "join",
+      "features": {
+        "keywords": [
+          "Tidy"
+        ],
+        "topics": [],
+        "column_mentions": [
+          "Original"
+        ],
+        "value_mentions": [],
+        "constraints": {}
+      }
+    },
+    {
+      "query_id": "nlc_join_7",
+      "query_text": "I want to find more joinable tables, and these tables have topics related to stockport_contracts",
+      "seed_table": "q_table_110_j1_1",
+      "task_type": "join",
+      "features": {
+        "keywords": [],
+        "topics": [
+          "stockport_contracts"
+        ],
+        "column_mentions": [],
+        "value_mentions": [],
+        "constraints": {}
+      }
+    },
+    {
+      "query_id": "nlc_join_8",
+      "query_text": "Can you find more tables with similar content to Ext. Applied to Contract and have more than 10 records",
+      "seed_table": "q_table_110_j3_1",
+      "task_type": "join",
+      "features": {
+        "keywords": [],
+        "topics": [],
+        "column_mentions": [
+          "Ext."
+        ],
+        "value_mentions": [],
+        "constraints": {
+          "min_rows": 10
+        }
+      }
+    },
+    {
+      "query_id": "nlc_join_9",
+      "query_text": "I want to find more joinable tables, and these tables have features related to Cost per pupilwith the topic related to Educational_District_Finances",
+      "seed_table": "q_table_12_j2_1",
+      "task_type": "join",
+      "features": {
+        "keywords": [],
+        "topics": [
+          "Educational_District_Finances"
+        ],
+        "column_mentions": [
+          "Cost"
+        ],
+        "value_mentions": [],
+        "constraints": {}
+      }
+    },
+    {
+      "query_id": "nlc_join_11",
+      "query_text": "Can you find more joinable tables with additonal features related to 50 and better mention keyword 5",
+      "seed_table": "q_table_24_j3_2",
+      "task_type": "join",
+      "features": {
+        "keywords": [
+          "5"
+        ],
+        "topics": [],
+        "column_mentions": [],
+        "value_mentions": [],
+        "constraints": {}
+      }
+    },
+    {
+      "query_id": "nlc_join_14",
+      "query_text": "I need to locate additional joinable tables  with a column count exceeding 10",
+      "seed_table": "q_table_142_j1_2",
+      "task_type": "join",
+      "features": {
+        "keywords": [],
+        "topics": [],
+        "column_mentions": [],
+        "value_mentions": [],
+        "constraints": {}
+      }
+    },
+    {
+      "query_id": "nlc_join_15",
+      "query_text": "Can you find more joinable tables with similar content to with the topic related to Cycling_Race_Results",
+      "seed_table": "q_table_6_j2_1",
+      "task_type": "join",
+      "features": {
+        "keywords": [],
+        "topics": [
+          "Cycling_Race_Results"
+        ],
+        "column_mentions": [],
+        "value_mentions": [],
+        "constraints": {}
+      }
+    },
+    {
+      "query_id": "nlc_join_17",
+      "query_text": "Can you find more joinable tables with additonal features related to Mode of transport and better mention keyword  Nil Return ",
+      "seed_table": "q_table_13_j3_2",
+      "task_type": "join",
+      "features": {
+        "keywords": [
+          "Nil"
+        ],
+        "topics": [],
+        "column_mentions": [
+          "Mode"
+        ],
+        "value_mentions": [],
+        "constraints": {}
+      }
+    },
+    {
+      "query_id": "nlc_join_18",
+      "query_text": "I am looking for additional joinable tables that cover keyword Rail / Taxi and the number of columns are larger than 10with the topic related to senior_officials_expenses",
+      "seed_table": "q_table_13_j3_3",
+      "task_type": "join",
+      "features": {
+        "keywords": [
+          "Rail"
+        ],
+        "topics": [
+          "senior_officials_expenses"
+        ],
+        "column_mentions": [],
+        "value_mentions": [],
+        "constraints": {}
+      }
+    },
+    {
+      "query_id": "nlc_join_19",
+      "query_text": "I want to find more joinable tables, and these tables have topics related to Game_Rating_and_Info",
+      "seed_table": "q_table_50_j1_1",
+      "task_type": "join",
+      "features": {
+        "keywords": [],
+        "topics": [
+          "Game_Rating_and_Info"
+        ],
+        "column_mentions": [],
+        "value_mentions": [],
+        "constraints": {}
+      }
+    },
+    {
+      "query_id": "nlc_join_21",
+      "query_text": "I am looking for additional joinable tables that contain info about Count3",
+      "seed_table": "q_table_68_j2_1",
+      "task_type": "join",
+      "features": {
+        "keywords": [],
+        "topics": [],
+        "column_mentions": [
+          "Count3"
+        ],
+        "value_mentions": [],
+        "constraints": {}
+      }
+    },
+    {
+      "query_id": "nlc_join_23",
+      "query_text": "I want to find more joinable tables that have features related to Status and better contain keyword 19/Feb/14.",
+      "seed_table": "q_table_100_j3_2",
+      "task_type": "join",
+      "features": {
+        "keywords": [
+          "19/Feb/14."
+        ],
+        "topics": [],
+        "column_mentions": [
+          "Status"
+        ],
+        "value_mentions": [],
+        "constraints": {}
+      }
+    },
+    {
+      "query_id": "nlc_join_25",
+      "query_text": "I am looking for additional joinable tables that cover keyword The United States Itinerancy of Mrs. Zilpha Elaw, 1812-1840",
+      "seed_table": "q_table_155_j1_3",
+      "task_type": "join",
+      "features": {
+        "keywords": [
+          "The"
+        ],
+        "topics": [],
+        "column_mentions": [],
+        "value_mentions": [],
+        "constraints": {}
+      }
+    },
+    {
+      "query_id": "nlc_join_27",
+      "query_text": "I want to find more joinable tables, and these tables have features related to Run",
+      "seed_table": "q_table_39_j2_1",
+      "task_type": "join",
+      "features": {
+        "keywords": [],
+        "topics": [],
+        "column_mentions": [
+          "Run"
+        ],
+        "value_mentions": [],
+        "constraints": {}
+      }
+    },
+    {
+      "query_id": "nlc_join_29",
+      "query_text": "Can you find more joinable tables with additonal features related to Parameter Count and better mention keyword IndexList<T>",
+      "seed_table": "q_table_37_j3_2",
+      "task_type": "join",
+      "features": {
+        "keywords": [
+          "IndexList<T>"
+        ],
+        "topics": [],
+        "column_mentions": [
+          "Parameter"
+        ],
+        "value_mentions": [],
+        "constraints": {}
+      }
+    },
+    {
+      "query_id": "nlc_join_31",
+      "query_text": "I want to find more joinable tables, and these tables have keyword 0.923076923",
+      "seed_table": "q_table_67_j1_3",
+      "task_type": "join",
+      "features": {
+        "keywords": [
+          "0.923076923"
+        ],
+        "topics": [],
+        "column_mentions": [],
+        "value_mentions": [],
+        "constraints": {}
+      }
+    }
+  ],
+  "ground_truth": {
+    "1": [
+      {
+        "table_id": "dl_table_118_j1_3_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_118_j1_3_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_118_j1_3_3",
+        "relevance_score": 2
+      }
+    ],
+    "3": [
+      {
+        "table_id": "dl_table_16_j2_1_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_16_j2_1_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_16_j2_1_3",
+        "relevance_score": 2
+      }
+    ],
+    "5": [
+      {
+        "table_id": "dl_table_60_j3_2",
+        "relevance_score": 2
+      }
+    ],
+    "7": [
+      {
+        "table_id": "dl_table_110_j1_1_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_110_j1_1_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_110_j1_1_3",
+        "relevance_score": 2
+      }
+    ],
+    "8": [
+      {
+        "table_id": "dl_table_110_j3_1",
+        "relevance_score": 2
+      }
+    ],
+    "9": [
+      {
+        "table_id": "dl_table_12_j2_1_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_12_j2_1_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_12_j2_1_3",
+        "relevance_score": 2
+      }
+    ],
+    "11": [
+      {
+        "table_id": "dl_table_24_j3_2",
+        "relevance_score": 2
+      }
+    ],
+    "14": [
+      {
+        "table_id": "dl_table_142_j1_2_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_142_j1_2_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_142_j1_2_3",
+        "relevance_score": 2
+      }
+    ],
+    "15": [
+      {
+        "table_id": "dl_table_6_j2_1_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_6_j2_1_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_6_j2_1_3",
+        "relevance_score": 2
+      }
+    ],
+    "17": [
+      {
+        "table_id": "dl_table_13_j3_2",
+        "relevance_score": 2
+      }
+    ],
+    "18": [
+      {
+        "table_id": "dl_table_13_j3_3_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_13_j3_3_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_13_j3_3_3",
+        "relevance_score": 2
+      }
+    ],
+    "19": [
+      {
+        "table_id": "dl_table_50_j1_1_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_50_j1_1_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_50_j1_1_3",
+        "relevance_score": 2
+      }
+    ],
+    "21": [
+      {
+        "table_id": "dl_table_68_j2_1_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_68_j2_1_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_68_j2_1_3",
+        "relevance_score": 2
+      }
+    ],
+    "23": [
+      {
+        "table_id": "dl_table_100_j3_2",
+        "relevance_score": 2
+      }
+    ],
+    "25": [
+      {
+        "table_id": "dl_table_155_j1_3_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_155_j1_3_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_155_j1_3_3",
+        "relevance_score": 2
+      }
+    ],
+    "27": [
+      {
+        "table_id": "dl_table_39_j2_1_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_39_j2_1_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_39_j2_1_3",
+        "relevance_score": 2
+      }
+    ],
+    "29": [
+      {
+        "table_id": "dl_table_37_j3_2",
+        "relevance_score": 2
+      }
+    ],
+    "31": [
+      {
+        "table_id": "dl_table_67_j1_3_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_67_j1_3_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_67_j1_3_3",
+        "relevance_score": 2
+      }
+    ]
+  },
+  "total_tables": 4963,
+  "dataset": "nlctables",
+  "task": "join"
+}

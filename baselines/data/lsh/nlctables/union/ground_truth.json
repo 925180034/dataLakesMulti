@@ -1,0 +1,1432 @@
+{
+  "1": [
+    {
+      "table_id": "dl_table_145_3_4_1",
+      "relevance_score": 2
+    }
+  ],
+  "2": [
+    {
+      "table_id": "dl_table_145_3_4_2",
+      "relevance_score": 2
+    }
+  ],
+  "3": [
+    {
+      "table_id": "dl_table_145_1_3_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_145_1_3_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_145_1_3_3",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_145_1_3_4",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_145_1_3_5",
+      "relevance_score": 2
+    }
+  ],
+  "4": [
+    {
+      "table_id": "dl_table_145_3_6_1",
+      "relevance_score": 2
+    }
+  ],
+  "5": [
+    {
+      "table_id": "dl_table_145_3_6_2",
+      "relevance_score": 2
+    }
+  ],
+  "6": [
+    {
+      "table_id": "dl_table_155_3_4_1",
+      "relevance_score": 2
+    }
+  ],
+  "7": [
+    {
+      "table_id": "dl_table_155_1_1_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_155_1_1_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_155_1_1_3",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_155_1_1_4",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_155_1_1_5",
+      "relevance_score": 2
+    }
+  ],
+  "8": [
+    {
+      "table_id": "dl_table_38_4_1_1_cv_1_3_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_38_4_1_1_cv_1_3_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_38_4_1_1_cv_1_3_3",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_38_4_1_1_cv_1_3_4",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_38_4_1_1_cv_1_3_5",
+      "relevance_score": 2
+    }
+  ],
+  "10": [
+    {
+      "table_id": "dl_table_38_1_2_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_38_1_2_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_38_1_2_3",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_38_1_2_4",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_38_1_2_5",
+      "relevance_score": 2
+    }
+  ],
+  "11": [
+    {
+      "table_id": "dl_table_72_3_4_1",
+      "relevance_score": 2
+    }
+  ],
+  "12": [
+    {
+      "table_id": "dl_table_72_1_1_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_72_1_1_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_72_1_1_3",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_72_1_1_4",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_72_1_1_5",
+      "relevance_score": 2
+    }
+  ],
+  "16": [
+    {
+      "table_id": "dl_table_139_3_4_1",
+      "relevance_score": 2
+    }
+  ],
+  "17": [
+    {
+      "table_id": "dl_table_139_1_1_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_139_1_1_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_139_1_1_3",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_139_1_1_4",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_139_1_1_5",
+      "relevance_score": 2
+    }
+  ],
+  "19": [
+    {
+      "table_id": "dl_table_1_2_3_1_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_1_2_3_1_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_1_2_3_1_3",
+      "relevance_score": 2
+    }
+  ],
+  "20": [
+    {
+      "table_id": "dl_table_1_2_3_2_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_1_2_3_2_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_1_2_3_2_3",
+      "relevance_score": 2
+    }
+  ],
+  "21": [
+    {
+      "table_id": "dl_table_1_2_3_3_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_1_2_3_3_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_1_2_3_3_3",
+      "relevance_score": 2
+    }
+  ],
+  "22": [
+    {
+      "table_id": "dl_table_1_2_3_4_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_1_2_3_4_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_1_2_3_4_3",
+      "relevance_score": 2
+    }
+  ],
+  "23": [
+    {
+      "table_id": "dl_table_1_2_3_5_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_1_2_3_5_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_1_2_3_5_3",
+      "relevance_score": 2
+    }
+  ],
+  "24": [
+    {
+      "table_id": "dl_table_1_2_3_6_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_1_2_3_6_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_1_2_3_6_3",
+      "relevance_score": 2
+    }
+  ],
+  "25": [
+    {
+      "table_id": "dl_table_1_2_3_7_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_1_2_3_7_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_1_2_3_7_3",
+      "relevance_score": 2
+    }
+  ],
+  "26": [
+    {
+      "table_id": "dl_table_1_3_6_1",
+      "relevance_score": 2
+    }
+  ],
+  "27": [
+    {
+      "table_id": "dl_table_1_3_6_2",
+      "relevance_score": 2
+    }
+  ],
+  "28": [
+    {
+      "table_id": "dl_table_1_3_6_3",
+      "relevance_score": 2
+    }
+  ],
+  "29": [
+    {
+      "table_id": "dl_table_1_3_6_4",
+      "relevance_score": 2
+    }
+  ],
+  "30": [
+    {
+      "table_id": "dl_table_1_3_6_5",
+      "relevance_score": 2
+    }
+  ],
+  "31": [
+    {
+      "table_id": "dl_table_1_3_6_6",
+      "relevance_score": 2
+    }
+  ],
+  "32": [
+    {
+      "table_id": "dl_table_1_3_6_7",
+      "relevance_score": 2
+    }
+  ],
+  "34": [
+    {
+      "table_id": "dl_table_35_2_3_1_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_35_2_3_1_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_35_2_3_1_3",
+      "relevance_score": 2
+    }
+  ],
+  "35": [
+    {
+      "table_id": "dl_table_27_3_4_1",
+      "relevance_score": 2
+    }
+  ],
+  "36": [
+    {
+      "table_id": "dl_table_27_3_4_2",
+      "relevance_score": 2
+    }
+  ],
+  "37": [
+    {
+      "table_id": "dl_table_27_1_3_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_27_1_3_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_27_1_3_3",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_27_1_3_4",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_27_1_3_5",
+      "relevance_score": 2
+    }
+  ],
+  "38": [
+    {
+      "table_id": "dl_table_125_2_1_1_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_125_2_1_1_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_125_2_1_1_3",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_125_2_1_1_4",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_125_2_1_1_5",
+      "relevance_score": 2
+    }
+  ],
+  "39": [
+    {
+      "table_id": "dl_table_125_3_1_1",
+      "relevance_score": 2
+    }
+  ],
+  "40": [
+    {
+      "table_id": "dl_table_125_1_2_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_125_1_2_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_125_1_2_3",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_125_1_2_4",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_125_1_2_5",
+      "relevance_score": 2
+    }
+  ],
+  "41": [
+    {
+      "table_id": "dl_table_23_1_3_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_23_1_3_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_23_1_3_3",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_23_1_3_4",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_23_1_3_5",
+      "relevance_score": 2
+    }
+  ],
+  "42": [
+    {
+      "table_id": "dl_table_23_1_2_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_23_1_2_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_23_1_2_3",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_23_1_2_4",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_23_1_2_5",
+      "relevance_score": 2
+    }
+  ],
+  "43": [
+    {
+      "table_id": "dl_table_104_3_3_1",
+      "relevance_score": 2
+    }
+  ],
+  "44": [
+    {
+      "table_id": "dl_table_104_2_3_1_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_104_2_3_1_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_104_2_3_1_3",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_104_4_1_1_cv_1_3_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_104_4_1_1_cv_1_3_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_104_4_1_1_cv_1_3_3",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_104_4_1_1_cv_1_3_4",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_104_4_1_1_cv_1_3_5",
+      "relevance_score": 2
+    }
+  ],
+  "46": [
+    {
+      "table_id": "dl_table_104_1_2_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_104_1_2_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_104_1_2_3",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_104_1_2_4",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_104_1_2_5",
+      "relevance_score": 2
+    }
+  ],
+  "47": [
+    {
+      "table_id": "dl_table_28_2_2_1_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_28_2_2_1_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_28_2_2_1_3",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_28_2_2_1_4",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_28_2_2_1_5",
+      "relevance_score": 2
+    }
+  ],
+  "48": [
+    {
+      "table_id": "dl_table_54_2_2_1_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_54_2_2_1_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_54_2_2_1_3",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_54_2_2_1_4",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_54_2_2_1_5",
+      "relevance_score": 2
+    }
+  ],
+  "49": [
+    {
+      "table_id": "dl_table_62_2_2_1_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_62_2_2_1_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_62_2_2_1_3",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_62_2_2_1_4",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_62_2_2_1_5",
+      "relevance_score": 2
+    }
+  ],
+  "50": [
+    {
+      "table_id": "dl_table_62_3_2_1",
+      "relevance_score": 2
+    }
+  ],
+  "51": [
+    {
+      "table_id": "dl_table_62_3_2_2",
+      "relevance_score": 2
+    }
+  ],
+  "52": [
+    {
+      "table_id": "dl_table_62_3_2_3",
+      "relevance_score": 2
+    }
+  ],
+  "53": [
+    {
+      "table_id": "dl_table_62_3_2_4",
+      "relevance_score": 2
+    }
+  ],
+  "54": [
+    {
+      "table_id": "dl_table_62_3_2_5",
+      "relevance_score": 2
+    }
+  ],
+  "55": [
+    {
+      "table_id": "dl_table_62_3_2_6",
+      "relevance_score": 2
+    }
+  ],
+  "56": [
+    {
+      "table_id": "dl_table_24_1_3_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_24_1_3_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_24_1_3_3",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_24_1_3_4",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_24_1_3_5",
+      "relevance_score": 2
+    }
+  ],
+  "58": [
+    {
+      "table_id": "dl_table_64_2_2_1_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_64_2_2_1_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_64_2_2_1_3",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_64_2_2_1_4",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_64_2_2_1_5",
+      "relevance_score": 2
+    }
+  ],
+  "60": [
+    {
+      "table_id": "dl_table_66_3_4_1",
+      "relevance_score": 2
+    }
+  ],
+  "61": [
+    {
+      "table_id": "dl_table_66_1_3_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_66_1_3_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_66_1_3_3",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_66_1_3_4",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_66_1_3_5",
+      "relevance_score": 2
+    }
+  ],
+  "62": [
+    {
+      "table_id": "dl_table_46_2_2_1_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_46_2_2_1_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_46_2_2_1_3",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_46_2_2_1_4",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_46_2_2_1_5",
+      "relevance_score": 2
+    }
+  ],
+  "63": [
+    {
+      "table_id": "dl_table_25_4_1_1_cv_1_3_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_25_4_1_1_cv_1_3_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_25_4_1_1_cv_1_3_3",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_25_4_1_1_cv_1_3_4",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_25_4_1_1_cv_1_3_5",
+      "relevance_score": 2
+    }
+  ],
+  "65": [
+    {
+      "table_id": "dl_table_25_1_2_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_25_1_2_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_25_1_2_3",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_25_1_2_4",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_25_1_2_5",
+      "relevance_score": 2
+    }
+  ],
+  "66": [
+    {
+      "table_id": "dl_table_79_3_4_1",
+      "relevance_score": 2
+    }
+  ],
+  "67": [
+    {
+      "table_id": "dl_table_79_1_3_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_79_1_3_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_79_1_3_3",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_79_1_3_4",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_79_1_3_5",
+      "relevance_score": 2
+    }
+  ],
+  "68": [
+    {
+      "table_id": "dl_table_36_2_2_1_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_36_2_2_1_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_36_2_2_1_3",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_36_2_2_1_4",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_36_2_2_1_5",
+      "relevance_score": 2
+    }
+  ],
+  "70": [
+    {
+      "table_id": "dl_table_103_3_4_1",
+      "relevance_score": 2
+    }
+  ],
+  "71": [
+    {
+      "table_id": "dl_table_103_3_4_2",
+      "relevance_score": 2
+    }
+  ],
+  "72": [
+    {
+      "table_id": "dl_table_103_3_4_3",
+      "relevance_score": 2
+    }
+  ],
+  "73": [
+    {
+      "table_id": "dl_table_103_1_3_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_103_1_3_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_103_1_3_3",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_103_1_3_4",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_103_1_3_5",
+      "relevance_score": 2
+    }
+  ],
+  "74": [
+    {
+      "table_id": "dl_table_103_3_1_1",
+      "relevance_score": 2
+    }
+  ],
+  "75": [
+    {
+      "table_id": "dl_table_103_3_1_2",
+      "relevance_score": 2
+    }
+  ],
+  "76": [
+    {
+      "table_id": "dl_table_103_3_1_3",
+      "relevance_score": 2
+    }
+  ],
+  "77": [
+    {
+      "table_id": "dl_table_149_4_3_1_1_cate_2_1_1_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_149_4_3_1_1_cate_2_1_1_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_149_4_3_1_1_cate_2_1_1_3",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_149_4_3_1_1_cate_2_1_1_4",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_149_4_3_1_1_cate_2_1_1_5",
+      "relevance_score": 2
+    }
+  ],
+  "78": [
+    {
+      "table_id": "dl_table_140_4_3_1_1_cate_2_1_1_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_140_4_3_1_1_cate_2_1_1_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_140_4_3_1_1_cate_2_1_1_3",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_140_4_3_1_1_cate_2_1_1_4",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_140_4_3_1_1_cate_2_1_1_5",
+      "relevance_score": 2
+    }
+  ],
+  "79": [
+    {
+      "table_id": "dl_table_45_2_2_1_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_45_2_2_1_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_45_2_2_1_3",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_45_2_2_1_4",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_45_2_2_1_5",
+      "relevance_score": 2
+    }
+  ],
+  "80": [
+    {
+      "table_id": "dl_table_111_1_3_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_111_1_3_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_111_1_3_3",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_111_1_3_4",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_111_1_3_5",
+      "relevance_score": 2
+    }
+  ],
+  "82": [
+    {
+      "table_id": "dl_table_74_2_2_1_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_74_2_2_1_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_74_2_2_1_3",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_74_2_2_1_4",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_74_2_2_1_5",
+      "relevance_score": 2
+    }
+  ],
+  "83": [
+    {
+      "table_id": "dl_table_74_2_3_1_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_74_2_3_1_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_74_2_3_1_3",
+      "relevance_score": 2
+    }
+  ],
+  "84": [
+    {
+      "table_id": "dl_table_74_3_6_1",
+      "relevance_score": 2
+    }
+  ],
+  "85": [
+    {
+      "table_id": "dl_table_11_1_3_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_11_1_3_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_11_1_3_3",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_11_1_3_4",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_11_1_3_5",
+      "relevance_score": 2
+    }
+  ],
+  "86": [
+    {
+      "table_id": "dl_table_109_1_3_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_109_1_3_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_109_1_3_3",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_109_1_3_4",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_109_1_3_5",
+      "relevance_score": 2
+    }
+  ],
+  "87": [
+    {
+      "table_id": "dl_table_109_3_6_1",
+      "relevance_score": 2
+    }
+  ],
+  "88": [
+    {
+      "table_id": "dl_table_109_3_6_2",
+      "relevance_score": 2
+    }
+  ],
+  "89": [
+    {
+      "table_id": "dl_table_109_2_3_1_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_109_2_3_1_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_109_2_3_1_3",
+      "relevance_score": 2
+    }
+  ],
+  "90": [
+    {
+      "table_id": "dl_table_109_2_3_2_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_109_2_3_2_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_109_2_3_2_3",
+      "relevance_score": 2
+    }
+  ],
+  "91": [
+    {
+      "table_id": "dl_table_109_1_2_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_109_1_2_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_109_1_2_3",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_109_1_2_4",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_109_1_2_5",
+      "relevance_score": 2
+    }
+  ],
+  "92": [
+    {
+      "table_id": "dl_table_109_3_3_1",
+      "relevance_score": 2
+    }
+  ],
+  "93": [
+    {
+      "table_id": "dl_table_109_3_3_2",
+      "relevance_score": 2
+    }
+  ],
+  "94": [
+    {
+      "table_id": "dl_table_20_2_2_1_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_20_2_2_1_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_20_2_2_1_3",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_20_2_2_1_4",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_20_2_2_1_5",
+      "relevance_score": 2
+    }
+  ],
+  "95": [
+    {
+      "table_id": "dl_table_141_4_2_1_1_cate_2_1_1_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_141_4_2_1_1_cate_2_1_1_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_141_4_2_1_1_cate_2_1_1_3",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_141_4_2_1_1_cate_2_1_1_4",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_141_4_2_1_1_cate_2_1_1_5",
+      "relevance_score": 2
+    }
+  ],
+  "96": [
+    {
+      "table_id": "dl_table_141_1_3_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_141_1_3_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_141_1_3_3",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_141_1_3_4",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_141_1_3_5",
+      "relevance_score": 2
+    }
+  ],
+  "97": [
+    {
+      "table_id": "dl_table_99_2_1_1_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_99_2_1_1_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_99_2_1_1_3",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_99_2_1_1_4",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_99_2_1_1_5",
+      "relevance_score": 2
+    }
+  ],
+  "98": [
+    {
+      "table_id": "dl_table_116_2_3_1_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_116_2_3_1_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_116_2_3_1_3",
+      "relevance_score": 2
+    }
+  ],
+  "99": [
+    {
+      "table_id": "dl_table_155_2_1_1_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_155_2_1_1_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_155_2_1_1_3",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_155_2_1_1_4",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_155_2_1_1_5",
+      "relevance_score": 2
+    }
+  ],
+  "100": [
+    {
+      "table_id": "dl_table_21_1_3_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_21_1_3_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_21_1_3_3",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_21_1_3_4",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_21_1_3_5",
+      "relevance_score": 2
+    }
+  ],
+  "101": [
+    {
+      "table_id": "dl_table_152_3_5_1",
+      "relevance_score": 2
+    }
+  ],
+  "102": [
+    {
+      "table_id": "dl_table_152_1_3_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_152_1_3_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_152_1_3_3",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_152_1_3_4",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_152_1_3_5",
+      "relevance_score": 2
+    }
+  ],
+  "103": [
+    {
+      "table_id": "dl_table_152_3_6_1",
+      "relevance_score": 2
+    }
+  ],
+  "104": [
+    {
+      "table_id": "dl_table_152_3_1_1",
+      "relevance_score": 2
+    }
+  ],
+  "105": [
+    {
+      "table_id": "dl_table_152_1_2_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_152_1_2_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_152_1_2_3",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_152_1_2_4",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_152_1_2_5",
+      "relevance_score": 2
+    }
+  ],
+  "106": [
+    {
+      "table_id": "dl_table_96_4_2_1_1_cate_2_1_1_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_96_4_2_1_1_cate_2_1_1_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_96_4_2_1_1_cate_2_1_1_3",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_96_4_2_1_1_cate_2_1_1_4",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_96_4_2_1_1_cate_2_1_1_5",
+      "relevance_score": 2
+    }
+  ],
+  "107": [
+    {
+      "table_id": "dl_table_96_1_3_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_96_1_3_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_96_1_3_3",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_96_1_3_4",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_96_1_3_5",
+      "relevance_score": 2
+    }
+  ],
+  "108": [
+    {
+      "table_id": "dl_table_33_3_6_1",
+      "relevance_score": 2
+    }
+  ],
+  "109": [
+    {
+      "table_id": "dl_table_33_2_3_1_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_33_2_3_1_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_33_2_3_1_3",
+      "relevance_score": 2
+    }
+  ],
+  "110": [
+    {
+      "table_id": "dl_table_26_1_3_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_26_1_3_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_26_1_3_3",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_26_1_3_4",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_26_1_3_5",
+      "relevance_score": 2
+    }
+  ],
+  "112": [
+    {
+      "table_id": "dl_table_78_2_2_1_1",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_78_2_2_1_2",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_78_2_2_1_3",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_78_2_2_1_4",
+      "relevance_score": 2
+    },
+    {
+      "table_id": "dl_table_78_2_2_1_5",
+      "relevance_score": 2
+    }
+  ]
+}

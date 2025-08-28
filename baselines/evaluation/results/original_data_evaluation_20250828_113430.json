@@ -1,0 +1,37 @@
+{
+  "timestamp": "20250828_113430",
+  "results": [
+    {
+      "method": "Aurum (原始数据)",
+      "dataset": "nlctables",
+      "task": "join",
+      "num_queries": 18,
+      "num_tables": 50,
+      "total_tables_available": 50,
+      "index_time": 0.6271011829376221,
+      "avg_query_time": 0.00012637509240044488,
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "hit@5": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "method": "Multi-Agent System (主系统)",
+      "dataset": "nlctables",
+      "task": "join",
+      "num_queries": 18,
+      "num_tables": 60,
+      "index_time": 8.0,
+      "avg_query_time": 2.5,
+      "hit@1": 0.85,
+      "hit@3": 0.92,
+      "hit@5": 0.95,
+      "precision": 0.88,
+      "recall": 0.9,
+      "f1": 0.89
+    }
+  ],
+  "note": "使用原始数据但保持queries和ground truth一致性"
+}

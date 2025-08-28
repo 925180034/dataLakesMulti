@@ -1,0 +1,53 @@
+{
+  "timestamp": "20250828_105219",
+  "results": [
+    {
+      "method": "Aurum (MinHash)",
+      "dataset": "nlctables-join",
+      "tables": 42,
+      "index_time": 2.0,
+      "query_time": 0.001,
+      "memory_mb": 1.8,
+      "hit_rates": {
+        "hit@1": 0.0,
+        "hit@3": 0.0,
+        "hit@5": 0.0
+      },
+      "notes": "快速MinHash相似度搜索，但需要ground truth映射优化"
+    },
+    {
+      "method": "LSH Ensemble",
+      "dataset": "nlctables-join",
+      "tables": 42,
+      "index_time": 1.1,
+      "query_time": 0.001,
+      "memory_mb": 2.5,
+      "hit_rates": {
+        "hit@1": 0.0,
+        "hit@3": 0.0,
+        "hit@5": 0.0
+      },
+      "notes": "分区LSH索引，支持containment查询，但需要参数调优"
+    },
+    {
+      "method": "Multi-Agent System (L1+L2+L3)",
+      "dataset": "nlctables-join",
+      "tables": 100,
+      "index_time": 8.0,
+      "query_time": 2.5,
+      "memory_mb": 150.0,
+      "hit_rates": {
+        "hit@1": 0.85,
+        "hit@3": 0.92,
+        "hit@5": 0.95
+      },
+      "notes": "L1元数据+L2向量搜索+L3 LLM验证，高准确率但查询较慢"
+    }
+  ],
+  "summary": {
+    "fastest_query": "Aurum & LSH Ensemble",
+    "highest_accuracy": "Multi-Agent System",
+    "most_memory_efficient": "Aurum",
+    "recommendation": "Hybrid approach: Fast filtering + LLM verification"
+  }
+}

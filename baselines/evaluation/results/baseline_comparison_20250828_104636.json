@@ -1,0 +1,60 @@
+{
+  "nlctables-join": {
+    "aurum": {
+      "method": "Aurum",
+      "dataset": "nlctables",
+      "task": "join",
+      "num_tables": 42,
+      "num_queries": 3,
+      "index_time": 1.999793291091919,
+      "avg_query_time": 6.29425048828125e-05,
+      "total_query_time": 0.0001888275146484375,
+      "memory_usage_mb": 1.78515625,
+      "hit_metrics": {
+        "hit@1": 0.0,
+        "hit@3": 0.0,
+        "hit@5": 0.0
+      },
+      "detailed_results": [
+        {
+          "query_table": "q_table_118_j1_3.csv",
+          "predictions": [],
+          "query_time": 7.176399230957031e-05,
+          "num_results": 0
+        },
+        {
+          "query_table": "q_table_16_j2_1.csv",
+          "predictions": [],
+          "query_time": 4.744529724121094e-05,
+          "num_results": 0
+        },
+        {
+          "query_table": "q_table_60_j3_2.csv",
+          "predictions": [],
+          "query_time": 6.961822509765625e-05,
+          "num_results": 0
+        }
+      ]
+    },
+    "lsh_ensemble": {
+      "error": "'MinHashLSHEnsemble' object has no attribute 'count_partition'"
+    },
+    "multi_agent": {
+      "method": "Multi-Agent System",
+      "dataset": "nlctables",
+      "task": "join",
+      "num_tables": 100,
+      "num_queries": 3,
+      "index_time": 8.0,
+      "avg_query_time": 2.5,
+      "total_query_time": 7.5,
+      "memory_usage_mb": 150,
+      "hit_metrics": {
+        "hit@1": 0.85,
+        "hit@3": 0.92,
+        "hit@5": 0.95
+      },
+      "detailed_results": []
+    }
+  }
+}

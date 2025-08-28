@@ -1,0 +1,2906 @@
+[
+  {
+    "query_table": "csvData10001964__0.csv",
+    "candidate_table": "csvData4674540__3.csv"
+  },
+  {
+    "query_table": "csvData10001964__0.csv",
+    "candidate_table": "csvData4674540__10.csv"
+  },
+  {
+    "query_table": "csvData10001964__0.csv",
+    "candidate_table": "csvData4674540__8.csv"
+  },
+  {
+    "query_table": "csvData10001964__0.csv",
+    "candidate_table": "csvData13997791.csv"
+  },
+  {
+    "query_table": "csvData10001964__0.csv",
+    "candidate_table": "csvData4674540__11.csv"
+  },
+  {
+    "query_table": "csvData10001964__0.csv",
+    "candidate_table": "csvData4674540__9.csv"
+  },
+  {
+    "query_table": "csvData10001964__0.csv",
+    "candidate_table": "csvData4674540__0.csv"
+  },
+  {
+    "query_table": "csvData10001964__0.csv",
+    "candidate_table": "csvData4674540__2.csv"
+  },
+  {
+    "query_table": "csvData10001964__0.csv",
+    "candidate_table": "csvData17377633__3.csv"
+  },
+  {
+    "query_table": "csvData10001964__0.csv",
+    "candidate_table": "csvData10001964__1.csv"
+  },
+  {
+    "query_table": "csvData10001964__0.csv",
+    "candidate_table": "csvData17377633__2.csv"
+  },
+  {
+    "query_table": "csvData10001964__0.csv",
+    "candidate_table": "csvData27587184__4.csv"
+  },
+  {
+    "query_table": "csvData10001964__0.csv",
+    "candidate_table": "csvData1635358__3.csv"
+  },
+  {
+    "query_table": "csvData10001964__1.csv",
+    "candidate_table": "csvData4674540__3.csv"
+  },
+  {
+    "query_table": "csvData10001964__1.csv",
+    "candidate_table": "csvData4674540__10.csv"
+  },
+  {
+    "query_table": "csvData10001964__1.csv",
+    "candidate_table": "csvData4674540__8.csv"
+  },
+  {
+    "query_table": "csvData10001964__1.csv",
+    "candidate_table": "csvData13997791.csv"
+  },
+  {
+    "query_table": "csvData10001964__1.csv",
+    "candidate_table": "csvData4674540__11.csv"
+  },
+  {
+    "query_table": "csvData10001964__1.csv",
+    "candidate_table": "csvData4674540__9.csv"
+  },
+  {
+    "query_table": "csvData10001964__1.csv",
+    "candidate_table": "csvData4674540__0.csv"
+  },
+  {
+    "query_table": "csvData10001964__1.csv",
+    "candidate_table": "csvData4674540__2.csv"
+  },
+  {
+    "query_table": "csvData10001964__1.csv",
+    "candidate_table": "csvData10001964__0.csv"
+  },
+  {
+    "query_table": "csvData10001964__1.csv",
+    "candidate_table": "csvData10001964__1.csv"
+  },
+  {
+    "query_table": "csvData10001964__1.csv",
+    "candidate_table": "csvData17377633__3.csv"
+  },
+  {
+    "query_table": "csvData10001964__1.csv",
+    "candidate_table": "csvData1635358__4.csv"
+  },
+  {
+    "query_table": "csvData10001964__1.csv",
+    "candidate_table": "csvData17377633__2.csv"
+  },
+  {
+    "query_table": "csvData10001964__1.csv",
+    "candidate_table": "csvData24016408__3.csv"
+  },
+  {
+    "query_table": "csvData10001964__1.csv",
+    "candidate_table": "csvData19706578__5.csv"
+  },
+  {
+    "query_table": "csvData10001964__2.csv",
+    "candidate_table": "csvData10001964__3.csv"
+  },
+  {
+    "query_table": "csvData10001964__2.csv",
+    "candidate_table": "csvData10001964__2.csv"
+  },
+  {
+    "query_table": "csvData10001964__2.csv",
+    "candidate_table": "csvData28675422__7.csv"
+  },
+  {
+    "query_table": "csvData10001964__2.csv",
+    "candidate_table": "csvData28675422__6.csv"
+  },
+  {
+    "query_table": "csvData10001964__2.csv",
+    "candidate_table": "csvData23141915__6.csv"
+  },
+  {
+    "query_table": "csvData10001964__2.csv",
+    "candidate_table": "csvData28675422__8.csv"
+  },
+  {
+    "query_table": "csvData10001964__2.csv",
+    "candidate_table": "csvData1786628__5.csv"
+  },
+  {
+    "query_table": "csvData10001964__3.csv",
+    "candidate_table": "csvData10001964__3.csv"
+  },
+  {
+    "query_table": "csvData10001964__3.csv",
+    "candidate_table": "csvData10001964__2.csv"
+  },
+  {
+    "query_table": "csvData10001964__3.csv",
+    "candidate_table": "csvData4643292__3.csv"
+  },
+  {
+    "query_table": "csvData10001964__3.csv",
+    "candidate_table": "csvData7984902__1.csv"
+  },
+  {
+    "query_table": "csvData10001964__3.csv",
+    "candidate_table": "csvData22418917__2.csv"
+  },
+  {
+    "query_table": "csvData1000970.csv",
+    "candidate_table": "csvData2761087__14.csv"
+  },
+  {
+    "query_table": "csvData1000970.csv",
+    "candidate_table": "csvData9704445.csv"
+  },
+  {
+    "query_table": "csvData1000970.csv",
+    "candidate_table": "csvData1000970.csv"
+  },
+  {
+    "query_table": "csvData1000970.csv",
+    "candidate_table": "csvData4463897.csv"
+  },
+  {
+    "query_table": "csvData1000970.csv",
+    "candidate_table": "csvData5718071.csv"
+  },
+  {
+    "query_table": "csvData10017699.csv",
+    "candidate_table": "csvData10017699.csv"
+  },
+  {
+    "query_table": "csvData10024254.csv",
+    "candidate_table": "csvData10024254.csv"
+  },
+  {
+    "query_table": "csvData10025189.csv",
+    "candidate_table": "csvData15965777.csv"
+  },
+  {
+    "query_table": "csvData10025189.csv",
+    "candidate_table": "csvData10025189.csv"
+  },
+  {
+    "query_table": "csvData10025189.csv",
+    "candidate_table": "csvData14512292.csv"
+  },
+  {
+    "query_table": "csvData10025189.csv",
+    "candidate_table": "csvData3784141.csv"
+  },
+  {
+    "query_table": "csvData10025189.csv",
+    "candidate_table": "csvData24108736.csv"
+  },
+  {
+    "query_table": "csvData10025189.csv",
+    "candidate_table": "csvData24799406.csv"
+  },
+  {
+    "query_table": "csvData10025189.csv",
+    "candidate_table": "csvData24352768.csv"
+  },
+  {
+    "query_table": "csvData10025189.csv",
+    "candidate_table": "csvData13292203.csv"
+  },
+  {
+    "query_table": "csvData10025189.csv",
+    "candidate_table": "csvData2404013.csv"
+  },
+  {
+    "query_table": "csvData10025189.csv",
+    "candidate_table": "csvData17215729.csv"
+  },
+  {
+    "query_table": "csvData10025189.csv",
+    "candidate_table": "csvData26959440.csv"
+  },
+  {
+    "query_table": "csvData10025189.csv",
+    "candidate_table": "csvData4431378.csv"
+  },
+  {
+    "query_table": "csvData10025189.csv",
+    "candidate_table": "csvData389779.csv"
+  },
+  {
+    "query_table": "csvData10025189.csv",
+    "candidate_table": "csvData12316154.csv"
+  },
+  {
+    "query_table": "csvData10025189__0.csv",
+    "candidate_table": "csvData10025189__2.csv"
+  },
+  {
+    "query_table": "csvData10025189__0.csv",
+    "candidate_table": "csvData10025189__1.csv"
+  },
+  {
+    "query_table": "csvData10025189__0.csv",
+    "candidate_table": "csvData13227194__13.csv"
+  },
+  {
+    "query_table": "csvData10025189__0.csv",
+    "candidate_table": "csvData10025189__0.csv"
+  },
+  {
+    "query_table": "csvData10025189__0.csv",
+    "candidate_table": "csvData8598250__2.csv"
+  },
+  {
+    "query_table": "csvData10025189__0.csv",
+    "candidate_table": "csvData27686060__3.csv"
+  },
+  {
+    "query_table": "csvData10025189__1.csv",
+    "candidate_table": "csvData10025189__2.csv"
+  },
+  {
+    "query_table": "csvData10025189__1.csv",
+    "candidate_table": "csvData5376485__4.csv"
+  },
+  {
+    "query_table": "csvData10025189__1.csv",
+    "candidate_table": "csvData10025189__0.csv"
+  },
+  {
+    "query_table": "csvData10025189__1.csv",
+    "candidate_table": "csvData10025189__1.csv"
+  },
+  {
+    "query_table": "csvData10025189__1.csv",
+    "candidate_table": "csvData21084464__15.csv"
+  },
+  {
+    "query_table": "csvData10025189__1.csv",
+    "candidate_table": "csvData21084464__18.csv"
+  },
+  {
+    "query_table": "csvData10025189__1.csv",
+    "candidate_table": "csvData8598250__2.csv"
+  },
+  {
+    "query_table": "csvData10025189__2.csv",
+    "candidate_table": "csvData10025189__2.csv"
+  },
+  {
+    "query_table": "csvData10025189__2.csv",
+    "candidate_table": "csvData10025189__1.csv"
+  },
+  {
+    "query_table": "csvData10025189__2.csv",
+    "candidate_table": "csvData10025189__0.csv"
+  },
+  {
+    "query_table": "csvData10025189__2.csv",
+    "candidate_table": "csvData21084464__15.csv"
+  },
+  {
+    "query_table": "csvData10025189__3.csv",
+    "candidate_table": "csvData10025189__5.csv"
+  },
+  {
+    "query_table": "csvData10025189__3.csv",
+    "candidate_table": "csvData10025189__3.csv"
+  },
+  {
+    "query_table": "csvData10025189__3.csv",
+    "candidate_table": "csvData19072013__0.csv"
+  },
+  {
+    "query_table": "csvData10025189__3.csv",
+    "candidate_table": "csvData10025189__4.csv"
+  },
+  {
+    "query_table": "csvData10025189__3.csv",
+    "candidate_table": "csvData8066901__8.csv"
+  },
+  {
+    "query_table": "csvData10025189__3.csv",
+    "candidate_table": "csvData6917053.csv"
+  },
+  {
+    "query_table": "csvData10025189__3.csv",
+    "candidate_table": "csvData23145953.csv"
+  },
+  {
+    "query_table": "csvData10025189__3.csv",
+    "candidate_table": "csvData10025189.csv"
+  },
+  {
+    "query_table": "csvData10025189__3.csv",
+    "candidate_table": "csvData13292203__7.csv"
+  },
+  {
+    "query_table": "csvData10025189__3.csv",
+    "candidate_table": "csvData1902536__5.csv"
+  },
+  {
+    "query_table": "csvData10025189__3.csv",
+    "candidate_table": "csvData8804961__3.csv"
+  },
+  {
+    "query_table": "csvData10025189__3.csv",
+    "candidate_table": "csvData8174184.csv"
+  },
+  {
+    "query_table": "csvData10025189__3.csv",
+    "candidate_table": "csvData8804961__2.csv"
+  },
+  {
+    "query_table": "csvData10025189__4.csv",
+    "candidate_table": "csvData8804961__3.csv"
+  },
+  {
+    "query_table": "csvData10025189__4.csv",
+    "candidate_table": "csvData10025189__4.csv"
+  },
+  {
+    "query_table": "csvData10025189__4.csv",
+    "candidate_table": "csvData8066901__8.csv"
+  },
+  {
+    "query_table": "csvData10025189__4.csv",
+    "candidate_table": "csvData10025189__5.csv"
+  },
+  {
+    "query_table": "csvData10025189__4.csv",
+    "candidate_table": "csvData19072013__0.csv"
+  },
+  {
+    "query_table": "csvData10025189__4.csv",
+    "candidate_table": "csvData2404013__7.csv"
+  },
+  {
+    "query_table": "csvData10025189__4.csv",
+    "candidate_table": "csvData2404013__8.csv"
+  },
+  {
+    "query_table": "csvData10025189__5.csv",
+    "candidate_table": "csvData10025189__5.csv"
+  },
+  {
+    "query_table": "csvData10025189__5.csv",
+    "candidate_table": "csvData10025189__4.csv"
+  },
+  {
+    "query_table": "csvData10025189__5.csv",
+    "candidate_table": "csvData10025189__3.csv"
+  },
+  {
+    "query_table": "csvData10027553.csv",
+    "candidate_table": "csvData15965777.csv"
+  },
+  {
+    "query_table": "csvData10027553.csv",
+    "candidate_table": "csvData18661263.csv"
+  },
+  {
+    "query_table": "csvData10027553.csv",
+    "candidate_table": "csvData9768769.csv"
+  },
+  {
+    "query_table": "csvData10027553.csv",
+    "candidate_table": "csvData25437325.csv"
+  },
+  {
+    "query_table": "csvData10027553.csv",
+    "candidate_table": "csvData3383853.csv"
+  },
+  {
+    "query_table": "csvData10027553.csv",
+    "candidate_table": "csvData13997791.csv"
+  },
+  {
+    "query_table": "csvData10027553.csv",
+    "candidate_table": "csvData10547086.csv"
+  },
+  {
+    "query_table": "csvData10027553.csv",
+    "candidate_table": "csvData2590167.csv"
+  },
+  {
+    "query_table": "csvData10027553.csv",
+    "candidate_table": "csvData28193349.csv"
+  },
+  {
+    "query_table": "csvData10027553.csv",
+    "candidate_table": "csvData7104405.csv"
+  },
+  {
+    "query_table": "csvData10027553.csv",
+    "candidate_table": "csvData1444875.csv"
+  },
+  {
+    "query_table": "csvData10027553.csv",
+    "candidate_table": "csvData13227194.csv"
+  },
+  {
+    "query_table": "csvData10027553__0.csv",
+    "candidate_table": "csvData4674540__3.csv"
+  },
+  {
+    "query_table": "csvData10027553__0.csv",
+    "candidate_table": "csvData10027553__3.csv"
+  },
+  {
+    "query_table": "csvData10027553__0.csv",
+    "candidate_table": "csvData10027553__1.csv"
+  },
+  {
+    "query_table": "csvData10027553__0.csv",
+    "candidate_table": "csvData13997791__6.csv"
+  },
+  {
+    "query_table": "csvData10027553__0.csv",
+    "candidate_table": "csvData10027553__2.csv"
+  },
+  {
+    "query_table": "csvData10027553__0.csv",
+    "candidate_table": "csvData10027553__0.csv"
+  },
+  {
+    "query_table": "csvData10027553__0.csv",
+    "candidate_table": "csvData13997791__3.csv"
+  },
+  {
+    "query_table": "csvData10027553__0.csv",
+    "candidate_table": "csvData13997791__7.csv"
+  },
+  {
+    "query_table": "csvData10027553__0.csv",
+    "candidate_table": "csvData29383799__11.csv"
+  },
+  {
+    "query_table": "csvData10027553__0.csv",
+    "candidate_table": "csvData29383799__14.csv"
+  },
+  {
+    "query_table": "csvData10027553__0.csv",
+    "candidate_table": "csvData22658714__0.csv"
+  },
+  {
+    "query_table": "csvData10027553__0.csv",
+    "candidate_table": "csvData29383799__2.csv"
+  },
+  {
+    "query_table": "csvData10027553__1.csv",
+    "candidate_table": "csvData13997791__1.csv"
+  },
+  {
+    "query_table": "csvData10027553__1.csv",
+    "candidate_table": "csvData14213420__1.csv"
+  },
+  {
+    "query_table": "csvData10027553__1.csv",
+    "candidate_table": "csvData29383799__13.csv"
+  },
+  {
+    "query_table": "csvData10027553__1.csv",
+    "candidate_table": "csvData13336059__14.csv"
+  },
+  {
+    "query_table": "csvData10027553__1.csv",
+    "candidate_table": "csvData29383799__11.csv"
+  },
+  {
+    "query_table": "csvData10027553__1.csv",
+    "candidate_table": "csvData10027553__0.csv"
+  },
+  {
+    "query_table": "csvData10027553__1.csv",
+    "candidate_table": "csvData29383799__14.csv"
+  },
+  {
+    "query_table": "csvData10027553__1.csv",
+    "candidate_table": "csvData19130941__1.csv"
+  },
+  {
+    "query_table": "csvData10027553__1.csv",
+    "candidate_table": "csvData14213420__2.csv"
+  },
+  {
+    "query_table": "csvData10027553__1.csv",
+    "candidate_table": "csvData13997791__3.csv"
+  },
+  {
+    "query_table": "csvData10027553__1.csv",
+    "candidate_table": "csvData10027553__2.csv"
+  },
+  {
+    "query_table": "csvData10027553__1.csv",
+    "candidate_table": "csvData22658714__0.csv"
+  },
+  {
+    "query_table": "csvData10027553__1.csv",
+    "candidate_table": "csvData10027553__1.csv"
+  },
+  {
+    "query_table": "csvData10027553__1.csv",
+    "candidate_table": "csvData13997791__6.csv"
+  },
+  {
+    "query_table": "csvData10027553__1.csv",
+    "candidate_table": "csvData29383799__0.csv"
+  },
+  {
+    "query_table": "csvData10027553__1.csv",
+    "candidate_table": "csvData10027553__3.csv"
+  },
+  {
+    "query_table": "csvData10027553__1.csv",
+    "candidate_table": "csvData13997791__7.csv"
+  },
+  {
+    "query_table": "csvData10027553__1.csv",
+    "candidate_table": "csvData29383799__3.csv"
+  },
+  {
+    "query_table": "csvData10027553__1.csv",
+    "candidate_table": "csvData22658714__1.csv"
+  },
+  {
+    "query_table": "csvData10027553__1.csv",
+    "candidate_table": "csvData25450714__0.csv"
+  },
+  {
+    "query_table": "csvData10027553__1.csv",
+    "candidate_table": "csvData7104405__7.csv"
+  },
+  {
+    "query_table": "csvData10027553__1.csv",
+    "candidate_table": "csvData1902536.csv"
+  },
+  {
+    "query_table": "csvData10027553__1.csv",
+    "candidate_table": "csvData25283220.csv"
+  },
+  {
+    "query_table": "csvData10027553__1.csv",
+    "candidate_table": "csvData4674540.csv"
+  },
+  {
+    "query_table": "csvData10027553__1.csv",
+    "candidate_table": "csvData25437325.csv"
+  },
+  {
+    "query_table": "csvData10027553__1.csv",
+    "candidate_table": "csvData10027553.csv"
+  },
+  {
+    "query_table": "csvData10027553__1.csv",
+    "candidate_table": "csvData27987124.csv"
+  },
+  {
+    "query_table": "csvData10027553__1.csv",
+    "candidate_table": "csvData25450714.csv"
+  },
+  {
+    "query_table": "csvData10027553__1.csv",
+    "candidate_table": "csvData14213420__0.csv"
+  },
+  {
+    "query_table": "csvData10027553__12.csv",
+    "candidate_table": "csvData14690251__3.csv"
+  },
+  {
+    "query_table": "csvData10027553__12.csv",
+    "candidate_table": "csvData10027553__12.csv"
+  },
+  {
+    "query_table": "csvData10027553__12.csv",
+    "candidate_table": "csvData10027553__15.csv"
+  },
+  {
+    "query_table": "csvData10027553__12.csv",
+    "candidate_table": "csvData10027553__13.csv"
+  },
+  {
+    "query_table": "csvData10027553__12.csv",
+    "candidate_table": "csvData13227194__3.csv"
+  },
+  {
+    "query_table": "csvData10027553__12.csv",
+    "candidate_table": "csvData10027553__14.csv"
+  },
+  {
+    "query_table": "csvData10027553__12.csv",
+    "candidate_table": "csvData19130941__8.csv"
+  },
+  {
+    "query_table": "csvData10027553__12.csv",
+    "candidate_table": "csvData19130941__6.csv"
+  },
+  {
+    "query_table": "csvData10027553__13.csv",
+    "candidate_table": "csvData10027553__12.csv"
+  },
+  {
+    "query_table": "csvData10027553__13.csv",
+    "candidate_table": "csvData10027553__15.csv"
+  },
+  {
+    "query_table": "csvData10027553__13.csv",
+    "candidate_table": "csvData10027553__13.csv"
+  },
+  {
+    "query_table": "csvData10027553__13.csv",
+    "candidate_table": "csvData10027553__14.csv"
+  },
+  {
+    "query_table": "csvData10027553__13.csv",
+    "candidate_table": "csvData19130941__8.csv"
+  },
+  {
+    "query_table": "csvData10027553__13.csv",
+    "candidate_table": "csvData19130941__6.csv"
+  },
+  {
+    "query_table": "csvData10027553__13.csv",
+    "candidate_table": "csvData13227194__0.csv"
+  },
+  {
+    "query_table": "csvData10027553__13.csv",
+    "candidate_table": "csvData14690251__2.csv"
+  },
+  {
+    "query_table": "csvData10027553__13.csv",
+    "candidate_table": "csvData14690251__3.csv"
+  },
+  {
+    "query_table": "csvData10027553__13.csv",
+    "candidate_table": "csvData13703215__2.csv"
+  },
+  {
+    "query_table": "csvData10027553__13.csv",
+    "candidate_table": "csvData13227194.csv"
+  },
+  {
+    "query_table": "csvData10027553__13.csv",
+    "candidate_table": "csvData1902536.csv"
+  },
+  {
+    "query_table": "csvData10027553__13.csv",
+    "candidate_table": "csvData2879490__15.csv"
+  },
+  {
+    "query_table": "csvData10027553__13.csv",
+    "candidate_table": "csvData2879490__13.csv"
+  },
+  {
+    "query_table": "csvData10027553__13.csv",
+    "candidate_table": "csvData16000106__1.csv"
+  },
+  {
+    "query_table": "csvData10027553__13.csv",
+    "candidate_table": "csvData8728752.csv"
+  },
+  {
+    "query_table": "csvData10027553__13.csv",
+    "candidate_table": "csvData10508770.csv"
+  },
+  {
+    "query_table": "csvData10027553__14.csv",
+    "candidate_table": "csvData10027553__12.csv"
+  },
+  {
+    "query_table": "csvData10027553__14.csv",
+    "candidate_table": "csvData13227194__0.csv"
+  },
+  {
+    "query_table": "csvData10027553__14.csv",
+    "candidate_table": "csvData10027553__13.csv"
+  },
+  {
+    "query_table": "csvData10027553__14.csv",
+    "candidate_table": "csvData10027553__15.csv"
+  },
+  {
+    "query_table": "csvData10027553__14.csv",
+    "candidate_table": "csvData10027553__14.csv"
+  },
+  {
+    "query_table": "csvData10027553__14.csv",
+    "candidate_table": "csvData19130941__6.csv"
+  },
+  {
+    "query_table": "csvData10027553__14.csv",
+    "candidate_table": "csvData19130941__8.csv"
+  },
+  {
+    "query_table": "csvData10027553__14.csv",
+    "candidate_table": "csvData13227194__2.csv"
+  },
+  {
+    "query_table": "csvData10027553__15.csv",
+    "candidate_table": "csvData10027553__12.csv"
+  },
+  {
+    "query_table": "csvData10027553__15.csv",
+    "candidate_table": "csvData10027553__13.csv"
+  },
+  {
+    "query_table": "csvData10027553__15.csv",
+    "candidate_table": "csvData10027553__14.csv"
+  },
+  {
+    "query_table": "csvData10027553__15.csv",
+    "candidate_table": "csvData13227194__2.csv"
+  },
+  {
+    "query_table": "csvData10027553__15.csv",
+    "candidate_table": "csvData10027553__15.csv"
+  },
+  {
+    "query_table": "csvData10027553__15.csv",
+    "candidate_table": "csvData19130941__6.csv"
+  },
+  {
+    "query_table": "csvData10027553__15.csv",
+    "candidate_table": "csvData19130941__8.csv"
+  },
+  {
+    "query_table": "csvData10027553__15.csv",
+    "candidate_table": "csvData18661263__14.csv"
+  },
+  {
+    "query_table": "csvData10027553__15.csv",
+    "candidate_table": "csvData25450714.csv"
+  },
+  {
+    "query_table": "csvData10027553__15.csv",
+    "candidate_table": "csvData13336059.csv"
+  },
+  {
+    "query_table": "csvData10027553__15.csv",
+    "candidate_table": "csvData13997791.csv"
+  },
+  {
+    "query_table": "csvData10027553__15.csv",
+    "candidate_table": "csvData25283220.csv"
+  },
+  {
+    "query_table": "csvData10027553__15.csv",
+    "candidate_table": "csvData5376485.csv"
+  },
+  {
+    "query_table": "csvData10027553__15.csv",
+    "candidate_table": "csvData10027553.csv"
+  },
+  {
+    "query_table": "csvData10027553__15.csv",
+    "candidate_table": "csvData18661263__15.csv"
+  },
+  {
+    "query_table": "csvData10027553__15.csv",
+    "candidate_table": "csvData15965777.csv"
+  },
+  {
+    "query_table": "csvData10027553__2.csv",
+    "candidate_table": "csvData13997791__1.csv"
+  },
+  {
+    "query_table": "csvData10027553__2.csv",
+    "candidate_table": "csvData14213420__1.csv"
+  },
+  {
+    "query_table": "csvData10027553__2.csv",
+    "candidate_table": "csvData29383799__13.csv"
+  },
+  {
+    "query_table": "csvData10027553__2.csv",
+    "candidate_table": "csvData13336059__14.csv"
+  },
+  {
+    "query_table": "csvData10027553__2.csv",
+    "candidate_table": "csvData29383799__11.csv"
+  },
+  {
+    "query_table": "csvData10027553__2.csv",
+    "candidate_table": "csvData10027553__0.csv"
+  },
+  {
+    "query_table": "csvData10027553__2.csv",
+    "candidate_table": "csvData29383799__14.csv"
+  },
+  {
+    "query_table": "csvData10027553__2.csv",
+    "candidate_table": "csvData19130941__1.csv"
+  },
+  {
+    "query_table": "csvData10027553__2.csv",
+    "candidate_table": "csvData29383799__10.csv"
+  },
+  {
+    "query_table": "csvData10027553__2.csv",
+    "candidate_table": "csvData13997791__3.csv"
+  },
+  {
+    "query_table": "csvData10027553__2.csv",
+    "candidate_table": "csvData10027553__2.csv"
+  },
+  {
+    "query_table": "csvData10027553__2.csv",
+    "candidate_table": "csvData22658714__0.csv"
+  },
+  {
+    "query_table": "csvData10027553__2.csv",
+    "candidate_table": "csvData10027553__1.csv"
+  },
+  {
+    "query_table": "csvData10027553__2.csv",
+    "candidate_table": "csvData13997791__6.csv"
+  },
+  {
+    "query_table": "csvData10027553__2.csv",
+    "candidate_table": "csvData10027553__3.csv"
+  },
+  {
+    "query_table": "csvData10027553__2.csv",
+    "candidate_table": "csvData13997791__10.csv"
+  },
+  {
+    "query_table": "csvData10027553__2.csv",
+    "candidate_table": "csvData19130941__0.csv"
+  },
+  {
+    "query_table": "csvData10027553__2.csv",
+    "candidate_table": "csvData13997791__7.csv"
+  },
+  {
+    "query_table": "csvData10027553__2.csv",
+    "candidate_table": "csvData29383799__3.csv"
+  },
+  {
+    "query_table": "csvData10027553__2.csv",
+    "candidate_table": "csvData22658714__1.csv"
+  },
+  {
+    "query_table": "csvData10027553__2.csv",
+    "candidate_table": "csvData29383799__0.csv"
+  },
+  {
+    "query_table": "csvData10027553__2.csv",
+    "candidate_table": "csvData25450714__0.csv"
+  },
+  {
+    "query_table": "csvData10027553__3.csv",
+    "candidate_table": "csvData4674540__3.csv"
+  },
+  {
+    "query_table": "csvData10027553__3.csv",
+    "candidate_table": "csvData22658714__2.csv"
+  },
+  {
+    "query_table": "csvData10027553__3.csv",
+    "candidate_table": "csvData10027553__3.csv"
+  },
+  {
+    "query_table": "csvData10027553__3.csv",
+    "candidate_table": "csvData10027553__2.csv"
+  },
+  {
+    "query_table": "csvData10027553__3.csv",
+    "candidate_table": "csvData10027553__1.csv"
+  },
+  {
+    "query_table": "csvData10027553__3.csv",
+    "candidate_table": "csvData10027553__0.csv"
+  },
+  {
+    "query_table": "csvData10027553__3.csv",
+    "candidate_table": "csvData13997791__6.csv"
+  },
+  {
+    "query_table": "csvData10027553__3.csv",
+    "candidate_table": "csvData13997791__3.csv"
+  },
+  {
+    "query_table": "csvData10027553__3.csv",
+    "candidate_table": "csvData22658714__0.csv"
+  },
+  {
+    "query_table": "csvData10027553__3.csv",
+    "candidate_table": "csvData22658714__1.csv"
+  },
+  {
+    "query_table": "csvData10027553__3.csv",
+    "candidate_table": "csvData13997791__9.csv"
+  },
+  {
+    "query_table": "csvData10027553__3.csv",
+    "candidate_table": "csvData29383799__13.csv"
+  },
+  {
+    "query_table": "csvData10027553__4.csv",
+    "candidate_table": "csvData8598250__1.csv"
+  },
+  {
+    "query_table": "csvData10027553__4.csv",
+    "candidate_table": "csvData10027553__6.csv"
+  },
+  {
+    "query_table": "csvData10027553__4.csv",
+    "candidate_table": "csvData10027553__4.csv"
+  },
+  {
+    "query_table": "csvData10027553__4.csv",
+    "candidate_table": "csvData10027553__5.csv"
+  },
+  {
+    "query_table": "csvData10027553__4.csv",
+    "candidate_table": "csvData10027553__7.csv"
+  },
+  {
+    "query_table": "csvData10027553__4.csv",
+    "candidate_table": "csvData18661263__1.csv"
+  },
+  {
+    "query_table": "csvData10027553__4.csv",
+    "candidate_table": "csvData29453038__0.csv"
+  },
+  {
+    "query_table": "csvData10027553__4.csv",
+    "candidate_table": "csvData29453038__3.csv"
+  },
+  {
+    "query_table": "csvData10027553__4.csv",
+    "candidate_table": "csvData21084464__3.csv"
+  },
+  {
+    "query_table": "csvData10027553__4.csv",
+    "candidate_table": "csvData18661263__2.csv"
+  },
+  {
+    "query_table": "csvData10027553__5.csv",
+    "candidate_table": "csvData8598250__1.csv"
+  },
+  {
+    "query_table": "csvData10027553__5.csv",
+    "candidate_table": "csvData10027553__7.csv"
+  },
+  {
+    "query_table": "csvData10027553__5.csv",
+    "candidate_table": "csvData10027553__5.csv"
+  },
+  {
+    "query_table": "csvData10027553__5.csv",
+    "candidate_table": "csvData10027553__6.csv"
+  },
+  {
+    "query_table": "csvData10027553__5.csv",
+    "candidate_table": "csvData29453038__0.csv"
+  },
+  {
+    "query_table": "csvData10027553__5.csv",
+    "candidate_table": "csvData29453038__3.csv"
+  },
+  {
+    "query_table": "csvData10027553__5.csv",
+    "candidate_table": "csvData1902536__3.csv"
+  },
+  {
+    "query_table": "csvData10027553__6.csv",
+    "candidate_table": "csvData10027553__6.csv"
+  },
+  {
+    "query_table": "csvData10027553__6.csv",
+    "candidate_table": "csvData29453038__0.csv"
+  },
+  {
+    "query_table": "csvData10027553__6.csv",
+    "candidate_table": "csvData29453038__3.csv"
+  },
+  {
+    "query_table": "csvData10027553__6.csv",
+    "candidate_table": "csvData10027553__4.csv"
+  },
+  {
+    "query_table": "csvData10027553__6.csv",
+    "candidate_table": "csvData10027553__7.csv"
+  },
+  {
+    "query_table": "csvData10027553__6.csv",
+    "candidate_table": "csvData8598250__1.csv"
+  },
+  {
+    "query_table": "csvData10027553__6.csv",
+    "candidate_table": "csvData10027553__5.csv"
+  },
+  {
+    "query_table": "csvData10027553__6.csv",
+    "candidate_table": "csvData18661263__2.csv"
+  },
+  {
+    "query_table": "csvData10027553__6.csv",
+    "candidate_table": "csvData18661263__1.csv"
+  },
+  {
+    "query_table": "csvData10027553__6.csv",
+    "candidate_table": "csvData18661263__0.csv"
+  },
+  {
+    "query_table": "csvData10027553__6.csv",
+    "candidate_table": "csvData29453038__2.csv"
+  },
+  {
+    "query_table": "csvData10027553__6.csv",
+    "candidate_table": "csvData22558849__5.csv"
+  },
+  {
+    "query_table": "csvData10027553__7.csv",
+    "candidate_table": "csvData8598250__1.csv"
+  },
+  {
+    "query_table": "csvData10027553__7.csv",
+    "candidate_table": "csvData10027553__5.csv"
+  },
+  {
+    "query_table": "csvData10027553__7.csv",
+    "candidate_table": "csvData10027553__6.csv"
+  },
+  {
+    "query_table": "csvData10027553__7.csv",
+    "candidate_table": "csvData10027553__4.csv"
+  },
+  {
+    "query_table": "csvData10027553__7.csv",
+    "candidate_table": "csvData10027553__7.csv"
+  },
+  {
+    "query_table": "csvData10027553__7.csv",
+    "candidate_table": "csvData13891302__14.csv"
+  },
+  {
+    "query_table": "csvData10027553__7.csv",
+    "candidate_table": "csvData18661263__3.csv"
+  },
+  {
+    "query_table": "csvData10027553__7.csv",
+    "candidate_table": "csvData18661263__2.csv"
+  },
+  {
+    "query_table": "csvData10027553__7.csv",
+    "candidate_table": "csvData18661263__1.csv"
+  },
+  {
+    "query_table": "csvData10027553__7.csv",
+    "candidate_table": "csvData18661263__0.csv"
+  },
+  {
+    "query_table": "csvData10027553__7.csv",
+    "candidate_table": "csvData29453038__0.csv"
+  },
+  {
+    "query_table": "csvData10027553__7.csv",
+    "candidate_table": "csvData29453038__3.csv"
+  },
+  {
+    "query_table": "csvData10027553__7.csv",
+    "candidate_table": "csvData28399335__6.csv"
+  },
+  {
+    "query_table": "csvData10045833.csv",
+    "candidate_table": "csvData2761087__14.csv"
+  },
+  {
+    "query_table": "csvData10045833.csv",
+    "candidate_table": "csvData22714941.csv"
+  },
+  {
+    "query_table": "csvData10045833.csv",
+    "candidate_table": "csvData10045833.csv"
+  },
+  {
+    "query_table": "csvData10045833.csv",
+    "candidate_table": "csvData22713157.csv"
+  },
+  {
+    "query_table": "csvData10045833.csv",
+    "candidate_table": "csvData17586963.csv"
+  },
+  {
+    "query_table": "csvData10045833.csv",
+    "candidate_table": "csvData12187972.csv"
+  },
+  {
+    "query_table": "csvData10045833.csv",
+    "candidate_table": "csvData18275710.csv"
+  },
+  {
+    "query_table": "csvData10051410.csv",
+    "candidate_table": "csvData4355784.csv"
+  },
+  {
+    "query_table": "csvData10056186.csv",
+    "candidate_table": "csvData10056186.csv"
+  },
+  {
+    "query_table": "csvData10074535.csv",
+    "candidate_table": "csvData15965777.csv"
+  },
+  {
+    "query_table": "csvData10074535.csv",
+    "candidate_table": "csvData10074535.csv"
+  },
+  {
+    "query_table": "csvData10074535.csv",
+    "candidate_table": "csvData14213420.csv"
+  },
+  {
+    "query_table": "csvData10074535.csv",
+    "candidate_table": "csvData20535739.csv"
+  },
+  {
+    "query_table": "csvData10074535.csv",
+    "candidate_table": "csvData1303939.csv"
+  },
+  {
+    "query_table": "csvData10074535.csv",
+    "candidate_table": "csvData6592205.csv"
+  },
+  {
+    "query_table": "csvData10074535.csv",
+    "candidate_table": "csvData7401568.csv"
+  },
+  {
+    "query_table": "csvData10074535.csv",
+    "candidate_table": "csvData18493125.csv"
+  },
+  {
+    "query_table": "csvData10074535.csv",
+    "candidate_table": "csvData2879490.csv"
+  },
+  {
+    "query_table": "csvData10074535.csv",
+    "candidate_table": "csvData21873021.csv"
+  },
+  {
+    "query_table": "csvData10074535.csv",
+    "candidate_table": "csvData13434912.csv"
+  },
+  {
+    "query_table": "csvData10074535.csv",
+    "candidate_table": "csvData3726343.csv"
+  },
+  {
+    "query_table": "csvData10074535.csv",
+    "candidate_table": "csvData20085670.csv"
+  },
+  {
+    "query_table": "csvData10074535.csv",
+    "candidate_table": "csvData27987124.csv"
+  },
+  {
+    "query_table": "csvData10074535__0.csv",
+    "candidate_table": "csvData10074535__2.csv"
+  },
+  {
+    "query_table": "csvData10074535__0.csv",
+    "candidate_table": "csvData10074535__0.csv"
+  },
+  {
+    "query_table": "csvData10074535__0.csv",
+    "candidate_table": "csvData10074535__1.csv"
+  },
+  {
+    "query_table": "csvData10074535__0.csv",
+    "candidate_table": "csvData10074535__3.csv"
+  },
+  {
+    "query_table": "csvData10074535__0.csv",
+    "candidate_table": "csvData1902536__9.csv"
+  },
+  {
+    "query_table": "csvData10074535__0.csv",
+    "candidate_table": "csvData27987124.csv"
+  },
+  {
+    "query_table": "csvData10074535__0.csv",
+    "candidate_table": "csvData10749767.csv"
+  },
+  {
+    "query_table": "csvData10074535__0.csv",
+    "candidate_table": "csvData8174184.csv"
+  },
+  {
+    "query_table": "csvData10074535__0.csv",
+    "candidate_table": "csvData5376485.csv"
+  },
+  {
+    "query_table": "csvData10074535__0.csv",
+    "candidate_table": "csvData8479264__14.csv"
+  },
+  {
+    "query_table": "csvData10074535__0.csv",
+    "candidate_table": "csvData23003743.csv"
+  },
+  {
+    "query_table": "csvData10074535__0.csv",
+    "candidate_table": "csvData5124506.csv"
+  },
+  {
+    "query_table": "csvData10074535__1.csv",
+    "candidate_table": "csvData10074535__3.csv"
+  },
+  {
+    "query_table": "csvData10074535__1.csv",
+    "candidate_table": "csvData10074535__1.csv"
+  },
+  {
+    "query_table": "csvData10074535__1.csv",
+    "candidate_table": "csvData10074535__0.csv"
+  },
+  {
+    "query_table": "csvData10074535__1.csv",
+    "candidate_table": "csvData10074535__2.csv"
+  },
+  {
+    "query_table": "csvData10074535__1.csv",
+    "candidate_table": "csvData1303939__5.csv"
+  },
+  {
+    "query_table": "csvData10074535__1.csv",
+    "candidate_table": "csvData23033509__19.csv"
+  },
+  {
+    "query_table": "csvData10074535__1.csv",
+    "candidate_table": "csvData4676916__13.csv"
+  },
+  {
+    "query_table": "csvData10074535__1.csv",
+    "candidate_table": "csvData5376485__0.csv"
+  },
+  {
+    "query_table": "csvData10074535__1.csv",
+    "candidate_table": "csvData4823585__0.csv"
+  },
+  {
+    "query_table": "csvData10074535__1.csv",
+    "candidate_table": "csvData5376485.csv"
+  },
+  {
+    "query_table": "csvData10074535__1.csv",
+    "candidate_table": "csvData21873021__7.csv"
+  },
+  {
+    "query_table": "csvData10074535__1.csv",
+    "candidate_table": "csvData13292203__3.csv"
+  },
+  {
+    "query_table": "csvData10074535__1.csv",
+    "candidate_table": "csvData26447856.csv"
+  },
+  {
+    "query_table": "csvData10074535__1.csv",
+    "candidate_table": "csvData27987124__1.csv"
+  },
+  {
+    "query_table": "csvData10074535__1.csv",
+    "candidate_table": "csvData13771482.csv"
+  },
+  {
+    "query_table": "csvData10074535__1.csv",
+    "candidate_table": "csvData21873021__8.csv"
+  },
+  {
+    "query_table": "csvData10074535__12.csv",
+    "candidate_table": "csvData10074535__15.csv"
+  },
+  {
+    "query_table": "csvData10074535__12.csv",
+    "candidate_table": "csvData10074535__13.csv"
+  },
+  {
+    "query_table": "csvData10074535__12.csv",
+    "candidate_table": "csvData10074535__14.csv"
+  },
+  {
+    "query_table": "csvData10074535__12.csv",
+    "candidate_table": "csvData10074535__12.csv"
+  },
+  {
+    "query_table": "csvData10074535__12.csv",
+    "candidate_table": "csvData1102081__10.csv"
+  },
+  {
+    "query_table": "csvData10074535__12.csv",
+    "candidate_table": "csvData27987124__4.csv"
+  },
+  {
+    "query_table": "csvData10074535__12.csv",
+    "candidate_table": "csvData2879490__5.csv"
+  },
+  {
+    "query_table": "csvData10074535__12.csv",
+    "candidate_table": "csvData27987124__0.csv"
+  },
+  {
+    "query_table": "csvData10074535__12.csv",
+    "candidate_table": "csvData2879490__7.csv"
+  },
+  {
+    "query_table": "csvData10074535__12.csv",
+    "candidate_table": "csvData27987124__3.csv"
+  },
+  {
+    "query_table": "csvData10074535__12.csv",
+    "candidate_table": "csvData2879490__4.csv"
+  },
+  {
+    "query_table": "csvData10074535__12.csv",
+    "candidate_table": "csvData2879490__6.csv"
+  },
+  {
+    "query_table": "csvData10074535__12.csv",
+    "candidate_table": "csvData2590167__1.csv"
+  },
+  {
+    "query_table": "csvData10074535__12.csv",
+    "candidate_table": "csvData26853929__7.csv"
+  },
+  {
+    "query_table": "csvData10074535__12.csv",
+    "candidate_table": "csvData10074535.csv"
+  },
+  {
+    "query_table": "csvData10074535__12.csv",
+    "candidate_table": "csvData2679641__10.csv"
+  },
+  {
+    "query_table": "csvData10074535__12.csv",
+    "candidate_table": "csvData2679641__14.csv"
+  },
+  {
+    "query_table": "csvData10074535__13.csv",
+    "candidate_table": "csvData10074535__15.csv"
+  },
+  {
+    "query_table": "csvData10074535__13.csv",
+    "candidate_table": "csvData10074535__12.csv"
+  },
+  {
+    "query_table": "csvData10074535__13.csv",
+    "candidate_table": "csvData10074535__13.csv"
+  },
+  {
+    "query_table": "csvData10074535__13.csv",
+    "candidate_table": "csvData2879490__5.csv"
+  },
+  {
+    "query_table": "csvData10074535__13.csv",
+    "candidate_table": "csvData17215729__4.csv"
+  },
+  {
+    "query_table": "csvData10074535__13.csv",
+    "candidate_table": "csvData13336059__4.csv"
+  },
+  {
+    "query_table": "csvData10074535__13.csv",
+    "candidate_table": "csvData27987124__4.csv"
+  },
+  {
+    "query_table": "csvData10074535__14.csv",
+    "candidate_table": "csvData3739433.csv"
+  },
+  {
+    "query_table": "csvData10074535__14.csv",
+    "candidate_table": "csvData10074535__15.csv"
+  },
+  {
+    "query_table": "csvData10074535__14.csv",
+    "candidate_table": "csvData10074535__13.csv"
+  },
+  {
+    "query_table": "csvData10074535__14.csv",
+    "candidate_table": "csvData10074535__14.csv"
+  },
+  {
+    "query_table": "csvData10074535__14.csv",
+    "candidate_table": "csvData10074535__12.csv"
+  },
+  {
+    "query_table": "csvData10074535__14.csv",
+    "candidate_table": "csvData24181536.csv"
+  },
+  {
+    "query_table": "csvData10074535__14.csv",
+    "candidate_table": "csvData1102081__10.csv"
+  },
+  {
+    "query_table": "csvData10074535__14.csv",
+    "candidate_table": "csvData4168914.csv"
+  },
+  {
+    "query_table": "csvData10074535__14.csv",
+    "candidate_table": "csvData28193349__8.csv"
+  },
+  {
+    "query_table": "csvData10074535__14.csv",
+    "candidate_table": "csvData2879490__4.csv"
+  },
+  {
+    "query_table": "csvData10074535__14.csv",
+    "candidate_table": "csvData13227194.csv"
+  },
+  {
+    "query_table": "csvData10074535__14.csv",
+    "candidate_table": "csvData5376485__7.csv"
+  },
+  {
+    "query_table": "csvData10074535__14.csv",
+    "candidate_table": "csvData27987124__3.csv"
+  },
+  {
+    "query_table": "csvData10074535__14.csv",
+    "candidate_table": "csvData14833792.csv"
+  },
+  {
+    "query_table": "csvData10074535__14.csv",
+    "candidate_table": "csvData10074535.csv"
+  },
+  {
+    "query_table": "csvData10074535__14.csv",
+    "candidate_table": "csvData20535739__13.csv"
+  },
+  {
+    "query_table": "csvData10074535__14.csv",
+    "candidate_table": "csvData27987124__0.csv"
+  },
+  {
+    "query_table": "csvData10074535__14.csv",
+    "candidate_table": "csvData8479264__3.csv"
+  },
+  {
+    "query_table": "csvData10074535__14.csv",
+    "candidate_table": "csvData2879490.csv"
+  },
+  {
+    "query_table": "csvData10074535__15.csv",
+    "candidate_table": "csvData10074535__12.csv"
+  },
+  {
+    "query_table": "csvData10074535__15.csv",
+    "candidate_table": "csvData10074535__13.csv"
+  },
+  {
+    "query_table": "csvData10074535__15.csv",
+    "candidate_table": "csvData1102081__10.csv"
+  },
+  {
+    "query_table": "csvData10074535__15.csv",
+    "candidate_table": "csvData10074535__14.csv"
+  },
+  {
+    "query_table": "csvData10074535__15.csv",
+    "candidate_table": "csvData10074535__15.csv"
+  },
+  {
+    "query_table": "csvData10074535__15.csv",
+    "candidate_table": "csvData28193349__8.csv"
+  },
+  {
+    "query_table": "csvData10074535__15.csv",
+    "candidate_table": "csvData2879490__7.csv"
+  },
+  {
+    "query_table": "csvData10074535__15.csv",
+    "candidate_table": "csvData2879490__4.csv"
+  },
+  {
+    "query_table": "csvData10074535__15.csv",
+    "candidate_table": "csvData2879490__5.csv"
+  },
+  {
+    "query_table": "csvData10074535__15.csv",
+    "candidate_table": "csvData1102081__11.csv"
+  },
+  {
+    "query_table": "csvData10074535__15.csv",
+    "candidate_table": "csvData2879490__6.csv"
+  },
+  {
+    "query_table": "csvData10074535__2.csv",
+    "candidate_table": "csvData10074535__0.csv"
+  },
+  {
+    "query_table": "csvData10074535__2.csv",
+    "candidate_table": "csvData10074535__1.csv"
+  },
+  {
+    "query_table": "csvData10074535__2.csv",
+    "candidate_table": "csvData10074535__3.csv"
+  },
+  {
+    "query_table": "csvData10074535__2.csv",
+    "candidate_table": "csvData10074535__2.csv"
+  },
+  {
+    "query_table": "csvData10074535__2.csv",
+    "candidate_table": "csvData14833792__5.csv"
+  },
+  {
+    "query_table": "csvData10074535__2.csv",
+    "candidate_table": "csvData9739809__6.csv"
+  },
+  {
+    "query_table": "csvData10074535__2.csv",
+    "candidate_table": "csvData21873021__6.csv"
+  },
+  {
+    "query_table": "csvData10074535__2.csv",
+    "candidate_table": "csvData8479264__7.csv"
+  },
+  {
+    "query_table": "csvData10074535__3.csv",
+    "candidate_table": "csvData10074535__3.csv"
+  },
+  {
+    "query_table": "csvData10074535__3.csv",
+    "candidate_table": "csvData21873021__7.csv"
+  },
+  {
+    "query_table": "csvData10074535__3.csv",
+    "candidate_table": "csvData10074535__1.csv"
+  },
+  {
+    "query_table": "csvData10074535__3.csv",
+    "candidate_table": "csvData10074535__0.csv"
+  },
+  {
+    "query_table": "csvData10074535__3.csv",
+    "candidate_table": "csvData10074535__2.csv"
+  },
+  {
+    "query_table": "csvData10074535__3.csv",
+    "candidate_table": "csvData8479264__4.csv"
+  },
+  {
+    "query_table": "csvData10074535__3.csv",
+    "candidate_table": "csvData14833792__0.csv"
+  },
+  {
+    "query_table": "csvData10074535__3.csv",
+    "candidate_table": "csvData25283220__2.csv"
+  },
+  {
+    "query_table": "csvData10074535__3.csv",
+    "candidate_table": "csvData5376485.csv"
+  },
+  {
+    "query_table": "csvData10074535__3.csv",
+    "candidate_table": "csvData10074535__15.csv"
+  },
+  {
+    "query_table": "csvData10074535__3.csv",
+    "candidate_table": "csvData13292203__3.csv"
+  },
+  {
+    "query_table": "csvData10074535__3.csv",
+    "candidate_table": "csvData13292203__4.csv"
+  },
+  {
+    "query_table": "csvData10074535__3.csv",
+    "candidate_table": "csvData24352768.csv"
+  },
+  {
+    "query_table": "csvData10074535__3.csv",
+    "candidate_table": "csvData10074535.csv"
+  },
+  {
+    "query_table": "csvData10074535__3.csv",
+    "candidate_table": "csvData16482053.csv"
+  },
+  {
+    "query_table": "csvData10074535__3.csv",
+    "candidate_table": "csvData10074535__12.csv"
+  },
+  {
+    "query_table": "csvData10074535__3.csv",
+    "candidate_table": "csvData4823585__1.csv"
+  },
+  {
+    "query_table": "csvData10074535__4.csv",
+    "candidate_table": "csvData10074535__4.csv"
+  },
+  {
+    "query_table": "csvData10074535__4.csv",
+    "candidate_table": "csvData10074535__5.csv"
+  },
+  {
+    "query_table": "csvData10074535__4.csv",
+    "candidate_table": "csvData10074535__7.csv"
+  },
+  {
+    "query_table": "csvData10074535__4.csv",
+    "candidate_table": "csvData10074535__6.csv"
+  },
+  {
+    "query_table": "csvData10074535__4.csv",
+    "candidate_table": "csvData436368__7.csv"
+  },
+  {
+    "query_table": "csvData10074535__4.csv",
+    "candidate_table": "csvData436368__6.csv"
+  },
+  {
+    "query_table": "csvData10074535__4.csv",
+    "candidate_table": "csvData15965777__10.csv"
+  },
+  {
+    "query_table": "csvData10074535__4.csv",
+    "candidate_table": "csvData4676916__5.csv"
+  },
+  {
+    "query_table": "csvData10074535__4.csv",
+    "candidate_table": "csvData13771482__12.csv"
+  },
+  {
+    "query_table": "csvData10074535__4.csv",
+    "candidate_table": "csvData21286196__9.csv"
+  },
+  {
+    "query_table": "csvData10074535__4.csv",
+    "candidate_table": "csvData13193220__3.csv"
+  },
+  {
+    "query_table": "csvData10074535__4.csv",
+    "candidate_table": "csvData13771482__15.csv"
+  },
+  {
+    "query_table": "csvData10074535__4.csv",
+    "candidate_table": "csvData24805223__3.csv"
+  },
+  {
+    "query_table": "csvData10074535__5.csv",
+    "candidate_table": "csvData10074535__5.csv"
+  },
+  {
+    "query_table": "csvData10074535__5.csv",
+    "candidate_table": "csvData10074535__7.csv"
+  },
+  {
+    "query_table": "csvData10074535__5.csv",
+    "candidate_table": "csvData10074535__6.csv"
+  },
+  {
+    "query_table": "csvData10074535__5.csv",
+    "candidate_table": "csvData10074535__4.csv"
+  },
+  {
+    "query_table": "csvData10074535__5.csv",
+    "candidate_table": "csvData436368__6.csv"
+  },
+  {
+    "query_table": "csvData10074535__5.csv",
+    "candidate_table": "csvData15965777__8.csv"
+  },
+  {
+    "query_table": "csvData10074535__5.csv",
+    "candidate_table": "csvData436368__5.csv"
+  },
+  {
+    "query_table": "csvData10074535__5.csv",
+    "candidate_table": "csvData436368__7.csv"
+  },
+  {
+    "query_table": "csvData10074535__5.csv",
+    "candidate_table": "csvData13193220__3.csv"
+  },
+  {
+    "query_table": "csvData10074535__5.csv",
+    "candidate_table": "csvData13771482__12.csv"
+  },
+  {
+    "query_table": "csvData10074535__5.csv",
+    "candidate_table": "csvData24805223__3.csv"
+  },
+  {
+    "query_table": "csvData10074535__5.csv",
+    "candidate_table": "csvData24805223__0.csv"
+  },
+  {
+    "query_table": "csvData10074535__6.csv",
+    "candidate_table": "csvData10074535__5.csv"
+  },
+  {
+    "query_table": "csvData10074535__6.csv",
+    "candidate_table": "csvData10074535__7.csv"
+  },
+  {
+    "query_table": "csvData10074535__6.csv",
+    "candidate_table": "csvData10074535__6.csv"
+  },
+  {
+    "query_table": "csvData10074535__6.csv",
+    "candidate_table": "csvData10074535__4.csv"
+  },
+  {
+    "query_table": "csvData10074535__6.csv",
+    "candidate_table": "csvData436368__6.csv"
+  },
+  {
+    "query_table": "csvData10074535__6.csv",
+    "candidate_table": "csvData436368__7.csv"
+  },
+  {
+    "query_table": "csvData10074535__6.csv",
+    "candidate_table": "csvData436368__5.csv"
+  },
+  {
+    "query_table": "csvData10074535__7.csv",
+    "candidate_table": "csvData10074535__7.csv"
+  },
+  {
+    "query_table": "csvData10074535__7.csv",
+    "candidate_table": "csvData10074535__6.csv"
+  },
+  {
+    "query_table": "csvData10074535__7.csv",
+    "candidate_table": "csvData10074535__5.csv"
+  },
+  {
+    "query_table": "csvData10074535__7.csv",
+    "candidate_table": "csvData10074535__4.csv"
+  },
+  {
+    "query_table": "csvData10074535__7.csv",
+    "candidate_table": "csvData4676916__4.csv"
+  },
+  {
+    "query_table": "csvData10074535__7.csv",
+    "candidate_table": "csvData4676916__7.csv"
+  },
+  {
+    "query_table": "csvData10074535__7.csv",
+    "candidate_table": "csvData436368__7.csv"
+  },
+  {
+    "query_table": "csvData10074535__7.csv",
+    "candidate_table": "csvData13193220__5.csv"
+  },
+  {
+    "query_table": "csvData10088067__0.csv",
+    "candidate_table": "csvData10088067__2.csv"
+  },
+  {
+    "query_table": "csvData10088067__0.csv",
+    "candidate_table": "csvData10088067__4.csv"
+  },
+  {
+    "query_table": "csvData10088067__0.csv",
+    "candidate_table": "csvData10088067__1.csv"
+  },
+  {
+    "query_table": "csvData10088067__0.csv",
+    "candidate_table": "csvData10088067__0.csv"
+  },
+  {
+    "query_table": "csvData10088067__0.csv",
+    "candidate_table": "csvData10088067__3.csv"
+  },
+  {
+    "query_table": "csvData10088067__0.csv",
+    "candidate_table": "csvData22475593__4.csv"
+  },
+  {
+    "query_table": "csvData10088067__0.csv",
+    "candidate_table": "csvData23138641__18.csv"
+  },
+  {
+    "query_table": "csvData10088067__0.csv",
+    "candidate_table": "csvData10088067__15.csv"
+  },
+  {
+    "query_table": "csvData10088067__0.csv",
+    "candidate_table": "csvData10088067__18.csv"
+  },
+  {
+    "query_table": "csvData10088067__0.csv",
+    "candidate_table": "csvData23138641__16.csv"
+  },
+  {
+    "query_table": "csvData10088067__0.csv",
+    "candidate_table": "csvData10088067__16.csv"
+  },
+  {
+    "query_table": "csvData10088067__0.csv",
+    "candidate_table": "csvData23138641__17.csv"
+  },
+  {
+    "query_table": "csvData10088067__0.csv",
+    "candidate_table": "csvData10088067__19.csv"
+  },
+  {
+    "query_table": "csvData10088067__1.csv",
+    "candidate_table": "csvData10088067__2.csv"
+  },
+  {
+    "query_table": "csvData10088067__1.csv",
+    "candidate_table": "csvData10088067__18.csv"
+  },
+  {
+    "query_table": "csvData10088067__1.csv",
+    "candidate_table": "csvData10088067__17.csv"
+  },
+  {
+    "query_table": "csvData10088067__1.csv",
+    "candidate_table": "csvData10088067__16.csv"
+  },
+  {
+    "query_table": "csvData10088067__1.csv",
+    "candidate_table": "csvData10088067__15.csv"
+  },
+  {
+    "query_table": "csvData10088067__1.csv",
+    "candidate_table": "csvData10088067__4.csv"
+  },
+  {
+    "query_table": "csvData10088067__1.csv",
+    "candidate_table": "csvData10088067__1.csv"
+  },
+  {
+    "query_table": "csvData10088067__1.csv",
+    "candidate_table": "csvData10088067__3.csv"
+  },
+  {
+    "query_table": "csvData10088067__1.csv",
+    "candidate_table": "csvData10088067__0.csv"
+  },
+  {
+    "query_table": "csvData10088067__15.csv",
+    "candidate_table": "csvData10088067__17.csv"
+  },
+  {
+    "query_table": "csvData10088067__15.csv",
+    "candidate_table": "csvData10088067__16.csv"
+  },
+  {
+    "query_table": "csvData10088067__15.csv",
+    "candidate_table": "csvData10088067__15.csv"
+  },
+  {
+    "query_table": "csvData10088067__15.csv",
+    "candidate_table": "csvData10088067__19.csv"
+  },
+  {
+    "query_table": "csvData10088067__15.csv",
+    "candidate_table": "csvData10088067__18.csv"
+  },
+  {
+    "query_table": "csvData10088067__15.csv",
+    "candidate_table": "csvData12739105__3.csv"
+  },
+  {
+    "query_table": "csvData10088067__15.csv",
+    "candidate_table": "csvData12739105__4.csv"
+  },
+  {
+    "query_table": "csvData10088067__15.csv",
+    "candidate_table": "csvData19868843__0.csv"
+  },
+  {
+    "query_table": "csvData10088067__16.csv",
+    "candidate_table": "csvData10088067__17.csv"
+  },
+  {
+    "query_table": "csvData10088067__16.csv",
+    "candidate_table": "csvData10088067__16.csv"
+  },
+  {
+    "query_table": "csvData10088067__16.csv",
+    "candidate_table": "csvData12739105__3.csv"
+  },
+  {
+    "query_table": "csvData10088067__16.csv",
+    "candidate_table": "csvData10088067__15.csv"
+  },
+  {
+    "query_table": "csvData10088067__16.csv",
+    "candidate_table": "csvData10088067__19.csv"
+  },
+  {
+    "query_table": "csvData10088067__17.csv",
+    "candidate_table": "csvData10088067__18.csv"
+  },
+  {
+    "query_table": "csvData10088067__17.csv",
+    "candidate_table": "csvData10088067__17.csv"
+  },
+  {
+    "query_table": "csvData10088067__17.csv",
+    "candidate_table": "csvData10088067__19.csv"
+  },
+  {
+    "query_table": "csvData10088067__17.csv",
+    "candidate_table": "csvData10088067__16.csv"
+  },
+  {
+    "query_table": "csvData10088067__17.csv",
+    "candidate_table": "csvData10088067__1.csv"
+  },
+  {
+    "query_table": "csvData10088067__17.csv",
+    "candidate_table": "csvData10088067__0.csv"
+  },
+  {
+    "query_table": "csvData10088067__17.csv",
+    "candidate_table": "csvData10088067__15.csv"
+  },
+  {
+    "query_table": "csvData10088067__17.csv",
+    "candidate_table": "csvData12739105__3.csv"
+  },
+  {
+    "query_table": "csvData10088067__17.csv",
+    "candidate_table": "csvData17377633__3.csv"
+  },
+  {
+    "query_table": "csvData10088067__17.csv",
+    "candidate_table": "csvData10088067__2.csv"
+  },
+  {
+    "query_table": "csvData10088067__17.csv",
+    "candidate_table": "csvData10088067__3.csv"
+  },
+  {
+    "query_table": "csvData10088067__18.csv",
+    "candidate_table": "csvData10088067__17.csv"
+  },
+  {
+    "query_table": "csvData10088067__18.csv",
+    "candidate_table": "csvData10088067__15.csv"
+  },
+  {
+    "query_table": "csvData10088067__18.csv",
+    "candidate_table": "csvData10088067__16.csv"
+  },
+  {
+    "query_table": "csvData10088067__18.csv",
+    "candidate_table": "csvData10088067__19.csv"
+  },
+  {
+    "query_table": "csvData10088067__18.csv",
+    "candidate_table": "csvData12739105__3.csv"
+  },
+  {
+    "query_table": "csvData10088067__18.csv",
+    "candidate_table": "csvData10088067__18.csv"
+  },
+  {
+    "query_table": "csvData10088067__18.csv",
+    "candidate_table": "csvData12739105__4.csv"
+  },
+  {
+    "query_table": "csvData10088067__19.csv",
+    "candidate_table": "csvData10088067__17.csv"
+  },
+  {
+    "query_table": "csvData10088067__19.csv",
+    "candidate_table": "csvData10088067__19.csv"
+  },
+  {
+    "query_table": "csvData10088067__19.csv",
+    "candidate_table": "csvData10088067__16.csv"
+  },
+  {
+    "query_table": "csvData10088067__19.csv",
+    "candidate_table": "csvData10088067__18.csv"
+  },
+  {
+    "query_table": "csvData10088067__19.csv",
+    "candidate_table": "csvData12739105__3.csv"
+  },
+  {
+    "query_table": "csvData10088067__19.csv",
+    "candidate_table": "csvData12739105__4.csv"
+  },
+  {
+    "query_table": "csvData10088067__19.csv",
+    "candidate_table": "csvData10088067__1.csv"
+  },
+  {
+    "query_table": "csvData10088067__2.csv",
+    "candidate_table": "csvData10088067__15.csv"
+  },
+  {
+    "query_table": "csvData10088067__2.csv",
+    "candidate_table": "csvData10088067__1.csv"
+  },
+  {
+    "query_table": "csvData10088067__2.csv",
+    "candidate_table": "csvData10088067__4.csv"
+  },
+  {
+    "query_table": "csvData10088067__2.csv",
+    "candidate_table": "csvData10088067__0.csv"
+  },
+  {
+    "query_table": "csvData10088067__2.csv",
+    "candidate_table": "csvData10088067__2.csv"
+  },
+  {
+    "query_table": "csvData10088067__2.csv",
+    "candidate_table": "csvData22475593__4.csv"
+  },
+  {
+    "query_table": "csvData10088067__3.csv",
+    "candidate_table": "csvData10088067__15.csv"
+  },
+  {
+    "query_table": "csvData10088067__3.csv",
+    "candidate_table": "csvData10088067__1.csv"
+  },
+  {
+    "query_table": "csvData10088067__3.csv",
+    "candidate_table": "csvData10088067__3.csv"
+  },
+  {
+    "query_table": "csvData10088067__3.csv",
+    "candidate_table": "csvData10088067__0.csv"
+  },
+  {
+    "query_table": "csvData10088067__3.csv",
+    "candidate_table": "csvData10088067__2.csv"
+  },
+  {
+    "query_table": "csvData10088067__4.csv",
+    "candidate_table": "csvData10088067__15.csv"
+  },
+  {
+    "query_table": "csvData10088067__4.csv",
+    "candidate_table": "csvData10088067__0.csv"
+  },
+  {
+    "query_table": "csvData10088067__4.csv",
+    "candidate_table": "csvData10088067__4.csv"
+  },
+  {
+    "query_table": "csvData10088067__4.csv",
+    "candidate_table": "csvData10088067__3.csv"
+  },
+  {
+    "query_table": "csvData10088067__4.csv",
+    "candidate_table": "csvData10088067__2.csv"
+  },
+  {
+    "query_table": "csvData10088067__4.csv",
+    "candidate_table": "csvData15641377__0.csv"
+  },
+  {
+    "query_table": "csvData10092826.csv",
+    "candidate_table": "csvData10092826.csv"
+  },
+  {
+    "query_table": "csvData1010199.csv",
+    "candidate_table": "csvData1010199.csv"
+  },
+  {
+    "query_table": "csvData1010199.csv",
+    "candidate_table": "csvData20629248.csv"
+  },
+  {
+    "query_table": "csvData1010199.csv",
+    "candidate_table": "csvData10237155.csv"
+  },
+  {
+    "query_table": "csvData1010199.csv",
+    "candidate_table": "csvData5030435.csv"
+  },
+  {
+    "query_table": "csvData10128613.csv",
+    "candidate_table": "csvData10128613.csv"
+  },
+  {
+    "query_table": "csvData1016273.csv",
+    "candidate_table": "csvData1016273.csv"
+  },
+  {
+    "query_table": "csvData1016273.csv",
+    "candidate_table": "csvData21411958.csv"
+  },
+  {
+    "query_table": "csvData10163568__0.csv",
+    "candidate_table": "csvData4674540__3.csv"
+  },
+  {
+    "query_table": "csvData10163568__0.csv",
+    "candidate_table": "csvData4674540__10.csv"
+  },
+  {
+    "query_table": "csvData10163568__0.csv",
+    "candidate_table": "csvData4674540__8.csv"
+  },
+  {
+    "query_table": "csvData10163568__0.csv",
+    "candidate_table": "csvData13997791.csv"
+  },
+  {
+    "query_table": "csvData10163568__0.csv",
+    "candidate_table": "csvData4674540__11.csv"
+  },
+  {
+    "query_table": "csvData10163568__0.csv",
+    "candidate_table": "csvData4674540__9.csv"
+  },
+  {
+    "query_table": "csvData10163568__0.csv",
+    "candidate_table": "csvData4674540__0.csv"
+  },
+  {
+    "query_table": "csvData10163568__0.csv",
+    "candidate_table": "csvData4674540__2.csv"
+  },
+  {
+    "query_table": "csvData10163568__0.csv",
+    "candidate_table": "csvData10163568__0.csv"
+  },
+  {
+    "query_table": "csvData10163568__0.csv",
+    "candidate_table": "csvData2246302__6.csv"
+  },
+  {
+    "query_table": "csvData10163568__0.csv",
+    "candidate_table": "csvData10163568__1.csv"
+  },
+  {
+    "query_table": "csvData10163568__1.csv",
+    "candidate_table": "csvData4674540__3.csv"
+  },
+  {
+    "query_table": "csvData10163568__1.csv",
+    "candidate_table": "csvData4674540__10.csv"
+  },
+  {
+    "query_table": "csvData10163568__1.csv",
+    "candidate_table": "csvData4674540__8.csv"
+  },
+  {
+    "query_table": "csvData10163568__1.csv",
+    "candidate_table": "csvData13997791.csv"
+  },
+  {
+    "query_table": "csvData10163568__1.csv",
+    "candidate_table": "csvData4674540__11.csv"
+  },
+  {
+    "query_table": "csvData10163568__1.csv",
+    "candidate_table": "csvData4674540__9.csv"
+  },
+  {
+    "query_table": "csvData10163568__1.csv",
+    "candidate_table": "csvData4674540__0.csv"
+  },
+  {
+    "query_table": "csvData10163568__1.csv",
+    "candidate_table": "csvData4674540__2.csv"
+  },
+  {
+    "query_table": "csvData10163568__1.csv",
+    "candidate_table": "csvData10163568__0.csv"
+  },
+  {
+    "query_table": "csvData10163568__1.csv",
+    "candidate_table": "csvData10163568__2.csv"
+  },
+  {
+    "query_table": "csvData10163568__1.csv",
+    "candidate_table": "csvData10163568__1.csv"
+  },
+  {
+    "query_table": "csvData10163568__2.csv",
+    "candidate_table": "csvData4674540__3.csv"
+  },
+  {
+    "query_table": "csvData10163568__2.csv",
+    "candidate_table": "csvData4674540__10.csv"
+  },
+  {
+    "query_table": "csvData10163568__2.csv",
+    "candidate_table": "csvData4674540__8.csv"
+  },
+  {
+    "query_table": "csvData10163568__2.csv",
+    "candidate_table": "csvData13997791.csv"
+  },
+  {
+    "query_table": "csvData10163568__2.csv",
+    "candidate_table": "csvData4674540__11.csv"
+  },
+  {
+    "query_table": "csvData10163568__2.csv",
+    "candidate_table": "csvData4674540__9.csv"
+  },
+  {
+    "query_table": "csvData10163568__2.csv",
+    "candidate_table": "csvData4674540__0.csv"
+  },
+  {
+    "query_table": "csvData10163568__2.csv",
+    "candidate_table": "csvData4674540__2.csv"
+  },
+  {
+    "query_table": "csvData10163568__2.csv",
+    "candidate_table": "csvData10163568__2.csv"
+  },
+  {
+    "query_table": "csvData10163568__2.csv",
+    "candidate_table": "csvData10163568__1.csv"
+  },
+  {
+    "query_table": "csvData10163568__3.csv",
+    "candidate_table": "csvData10163568__3.csv"
+  },
+  {
+    "query_table": "csvData10163568__3.csv",
+    "candidate_table": "csvData26761314__5.csv"
+  },
+  {
+    "query_table": "csvData10163568__3.csv",
+    "candidate_table": "csvData26761314__4.csv"
+  },
+  {
+    "query_table": "csvData10163568__3.csv",
+    "candidate_table": "csvData26761314__3.csv"
+  },
+  {
+    "query_table": "csvData10163568__3.csv",
+    "candidate_table": "csvData10163568__5.csv"
+  },
+  {
+    "query_table": "csvData10163568__3.csv",
+    "candidate_table": "csvData8963593__3.csv"
+  },
+  {
+    "query_table": "csvData10163568__3.csv",
+    "candidate_table": "csvData10163568__4.csv"
+  },
+  {
+    "query_table": "csvData10163568__3.csv",
+    "candidate_table": "csvData11957850__2.csv"
+  },
+  {
+    "query_table": "csvData10163568__3.csv",
+    "candidate_table": "csvData1373507__3.csv"
+  },
+  {
+    "query_table": "csvData10163568__3.csv",
+    "candidate_table": "csvData16984008__4.csv"
+  },
+  {
+    "query_table": "csvData10163568__3.csv",
+    "candidate_table": "csvData14429913__5.csv"
+  },
+  {
+    "query_table": "csvData10163568__3.csv",
+    "candidate_table": "csvData22418917__2.csv"
+  },
+  {
+    "query_table": "csvData10163568__3.csv",
+    "candidate_table": "csvData20967043__5.csv"
+  },
+  {
+    "query_table": "csvData10163568__4.csv",
+    "candidate_table": "csvData10163568__4.csv"
+  },
+  {
+    "query_table": "csvData10163568__4.csv",
+    "candidate_table": "csvData10163568__5.csv"
+  },
+  {
+    "query_table": "csvData10163568__4.csv",
+    "candidate_table": "csvData14248779__0.csv"
+  },
+  {
+    "query_table": "csvData10163568__4.csv",
+    "candidate_table": "csvData10163568__3.csv"
+  },
+  {
+    "query_table": "csvData10163568__4.csv",
+    "candidate_table": "csvData14248779__1.csv"
+  },
+  {
+    "query_table": "csvData10163568__4.csv",
+    "candidate_table": "csvData11957850__0.csv"
+  },
+  {
+    "query_table": "csvData10163568__4.csv",
+    "candidate_table": "csvData11957850__1.csv"
+  },
+  {
+    "query_table": "csvData10163568__4.csv",
+    "candidate_table": "csvData1373507__3.csv"
+  },
+  {
+    "query_table": "csvData10163568__4.csv",
+    "candidate_table": "csvData11957850__2.csv"
+  },
+  {
+    "query_table": "csvData10163568__4.csv",
+    "candidate_table": "csvData1373507__2.csv"
+  },
+  {
+    "query_table": "csvData10163568__4.csv",
+    "candidate_table": "csvData26761314__3.csv"
+  },
+  {
+    "query_table": "csvData10163568__4.csv",
+    "candidate_table": "csvData13726780__0.csv"
+  },
+  {
+    "query_table": "csvData10163568__5.csv",
+    "candidate_table": "csvData10163568__3.csv"
+  },
+  {
+    "query_table": "csvData10163568__5.csv",
+    "candidate_table": "csvData14248779__2.csv"
+  },
+  {
+    "query_table": "csvData10163568__5.csv",
+    "candidate_table": "csvData26817631__5.csv"
+  },
+  {
+    "query_table": "csvData10163568__5.csv",
+    "candidate_table": "csvData7434868__1.csv"
+  },
+  {
+    "query_table": "csvData10163568__5.csv",
+    "candidate_table": "csvData26761314__5.csv"
+  },
+  {
+    "query_table": "csvData10163568__5.csv",
+    "candidate_table": "csvData14248779__1.csv"
+  },
+  {
+    "query_table": "csvData10163568__5.csv",
+    "candidate_table": "csvData26761314__3.csv"
+  },
+  {
+    "query_table": "csvData10163568__5.csv",
+    "candidate_table": "csvData10163568__5.csv"
+  },
+  {
+    "query_table": "csvData10163568__5.csv",
+    "candidate_table": "csvData11957850__2.csv"
+  },
+  {
+    "query_table": "csvData10163568__5.csv",
+    "candidate_table": "csvData10163568__4.csv"
+  },
+  {
+    "query_table": "csvData10163568__5.csv",
+    "candidate_table": "csvData2798756__3.csv"
+  },
+  {
+    "query_table": "csvData10163568__5.csv",
+    "candidate_table": "csvData1373507__3.csv"
+  },
+  {
+    "query_table": "csvData10163568__5.csv",
+    "candidate_table": "csvData1373507__2.csv"
+  },
+  {
+    "query_table": "csvData10163568__5.csv",
+    "candidate_table": "csvData2798756__4.csv"
+  },
+  {
+    "query_table": "csvData10163568__5.csv",
+    "candidate_table": "csvData2798756__5.csv"
+  },
+  {
+    "query_table": "csvData10166596.csv",
+    "candidate_table": "csvData10166596.csv"
+  },
+  {
+    "query_table": "csvData10170487.csv",
+    "candidate_table": "csvData10170487.csv"
+  },
+  {
+    "query_table": "csvData10193130.csv",
+    "candidate_table": "csvData16397159.csv"
+  },
+  {
+    "query_table": "csvData10193130.csv",
+    "candidate_table": "csvData528553.csv"
+  },
+  {
+    "query_table": "csvData10212811.csv",
+    "candidate_table": "csvData15965777.csv"
+  },
+  {
+    "query_table": "csvData10212811.csv",
+    "candidate_table": "csvData10212811.csv"
+  },
+  {
+    "query_table": "csvData10212811.csv",
+    "candidate_table": "csvData18465449.csv"
+  },
+  {
+    "query_table": "csvData10212811.csv",
+    "candidate_table": "csvData14512292.csv"
+  },
+  {
+    "query_table": "csvData10212811.csv",
+    "candidate_table": "csvData18772154.csv"
+  },
+  {
+    "query_table": "csvData10212811.csv",
+    "candidate_table": "csvData5314906.csv"
+  },
+  {
+    "query_table": "csvData10212811.csv",
+    "candidate_table": "csvData6393240.csv"
+  },
+  {
+    "query_table": "csvData10212811.csv",
+    "candidate_table": "csvData24108736.csv"
+  },
+  {
+    "query_table": "csvData10212811.csv",
+    "candidate_table": "csvData398599.csv"
+  },
+  {
+    "query_table": "csvData10212811.csv",
+    "candidate_table": "csvData19688700.csv"
+  },
+  {
+    "query_table": "csvData10212811.csv",
+    "candidate_table": "csvData16482053.csv"
+  },
+  {
+    "query_table": "csvData10212811.csv",
+    "candidate_table": "csvData15587117.csv"
+  },
+  {
+    "query_table": "csvData10212811.csv",
+    "candidate_table": "csvData17861460.csv"
+  },
+  {
+    "query_table": "csvData10212811__0.csv",
+    "candidate_table": "csvData4674540__3.csv"
+  },
+  {
+    "query_table": "csvData10212811__0.csv",
+    "candidate_table": "csvData4674540__10.csv"
+  },
+  {
+    "query_table": "csvData10212811__0.csv",
+    "candidate_table": "csvData4674540__8.csv"
+  },
+  {
+    "query_table": "csvData10212811__0.csv",
+    "candidate_table": "csvData13997791.csv"
+  },
+  {
+    "query_table": "csvData10212811__0.csv",
+    "candidate_table": "csvData4674540__11.csv"
+  },
+  {
+    "query_table": "csvData10212811__0.csv",
+    "candidate_table": "csvData4674540__9.csv"
+  },
+  {
+    "query_table": "csvData10212811__0.csv",
+    "candidate_table": "csvData4674540__0.csv"
+  },
+  {
+    "query_table": "csvData10212811__0.csv",
+    "candidate_table": "csvData4674540__2.csv"
+  },
+  {
+    "query_table": "csvData10212811__0.csv",
+    "candidate_table": "csvData10212811__2.csv"
+  },
+  {
+    "query_table": "csvData10212811__0.csv",
+    "candidate_table": "csvData8066901__5.csv"
+  },
+  {
+    "query_table": "csvData10212811__2.csv",
+    "candidate_table": "csvData4674540__3.csv"
+  },
+  {
+    "query_table": "csvData10212811__2.csv",
+    "candidate_table": "csvData4674540__10.csv"
+  },
+  {
+    "query_table": "csvData10212811__2.csv",
+    "candidate_table": "csvData4674540__8.csv"
+  },
+  {
+    "query_table": "csvData10212811__2.csv",
+    "candidate_table": "csvData13997791.csv"
+  },
+  {
+    "query_table": "csvData10212811__2.csv",
+    "candidate_table": "csvData4674540__11.csv"
+  },
+  {
+    "query_table": "csvData10212811__2.csv",
+    "candidate_table": "csvData4674540__9.csv"
+  },
+  {
+    "query_table": "csvData10212811__2.csv",
+    "candidate_table": "csvData4674540__0.csv"
+  },
+  {
+    "query_table": "csvData10212811__2.csv",
+    "candidate_table": "csvData4674540__2.csv"
+  },
+  {
+    "query_table": "csvData10212811__2.csv",
+    "candidate_table": "csvData2485779__0.csv"
+  },
+  {
+    "query_table": "csvData10212811__3.csv",
+    "candidate_table": "csvData10212811__5.csv"
+  },
+  {
+    "query_table": "csvData10212811__3.csv",
+    "candidate_table": "csvData10212811__3.csv"
+  },
+  {
+    "query_table": "csvData10212811__3.csv",
+    "candidate_table": "csvData20535739__1.csv"
+  },
+  {
+    "query_table": "csvData10212811__3.csv",
+    "candidate_table": "csvData13771482__5.csv"
+  },
+  {
+    "query_table": "csvData10212811__3.csv",
+    "candidate_table": "csvData10212811__4.csv"
+  },
+  {
+    "query_table": "csvData10212811__3.csv",
+    "candidate_table": "csvData20535739__0.csv"
+  },
+  {
+    "query_table": "csvData10212811__3.csv",
+    "candidate_table": "csvData5720226.csv"
+  },
+  {
+    "query_table": "csvData10212811__3.csv",
+    "candidate_table": "csvData10513074.csv"
+  },
+  {
+    "query_table": "csvData10212811__3.csv",
+    "candidate_table": "csvData13434912__1.csv"
+  },
+  {
+    "query_table": "csvData10212811__3.csv",
+    "candidate_table": "csvData29453038.csv"
+  },
+  {
+    "query_table": "csvData10212811__3.csv",
+    "candidate_table": "csvData18068578.csv"
+  },
+  {
+    "query_table": "csvData10212811__3.csv",
+    "candidate_table": "csvData13434912__2.csv"
+  },
+  {
+    "query_table": "csvData10212811__3.csv",
+    "candidate_table": "csvData1095819.csv"
+  },
+  {
+    "query_table": "csvData10212811__3.csv",
+    "candidate_table": "csvData2761087.csv"
+  },
+  {
+    "query_table": "csvData10212811__4.csv",
+    "candidate_table": "csvData13336059__16.csv"
+  },
+  {
+    "query_table": "csvData10212811__4.csv",
+    "candidate_table": "csvData10212811__5.csv"
+  },
+  {
+    "query_table": "csvData10212811__4.csv",
+    "candidate_table": "csvData10212811__4.csv"
+  },
+  {
+    "query_table": "csvData10212811__4.csv",
+    "candidate_table": "csvData26651945__1.csv"
+  },
+  {
+    "query_table": "csvData10212811__4.csv",
+    "candidate_table": "csvData4798003__7.csv"
+  },
+  {
+    "query_table": "csvData10212811__4.csv",
+    "candidate_table": "csvData4798003__6.csv"
+  },
+  {
+    "query_table": "csvData10212811__5.csv",
+    "candidate_table": "csvData26672678__2.csv"
+  },
+  {
+    "query_table": "csvData10212811__5.csv",
+    "candidate_table": "csvData10212811__4.csv"
+  },
+  {
+    "query_table": "csvData10212811__5.csv",
+    "candidate_table": "csvData10212811__5.csv"
+  },
+  {
+    "query_table": "csvData10212811__5.csv",
+    "candidate_table": "csvData26672678__1.csv"
+  },
+  {
+    "query_table": "csvData10212811__5.csv",
+    "candidate_table": "csvData10212811__3.csv"
+  },
+  {
+    "query_table": "csvData10212811__5.csv",
+    "candidate_table": "csvData28399335__7.csv"
+  },
+  {
+    "query_table": "csvData10212811__5.csv",
+    "candidate_table": "csvData28399335__8.csv"
+  },
+  {
+    "query_table": "csvData10212811__5.csv",
+    "candidate_table": "csvData9768769__3.csv"
+  },
+  {
+    "query_table": "csvData10212811__5.csv",
+    "candidate_table": "csvData24661824.csv"
+  },
+  {
+    "query_table": "csvData10212811__5.csv",
+    "candidate_table": "csvData14690251.csv"
+  },
+  {
+    "query_table": "csvData10212811__5.csv",
+    "candidate_table": "csvData1444875__5.csv"
+  },
+  {
+    "query_table": "csvData10212811__5.csv",
+    "candidate_table": "csvData13434912__2.csv"
+  },
+  {
+    "query_table": "csvData10212811__5.csv",
+    "candidate_table": "csvData24108736__0.csv"
+  },
+  {
+    "query_table": "csvData10212811__5.csv",
+    "candidate_table": "csvData13434912__1.csv"
+  },
+  {
+    "query_table": "csvData10212811__5.csv",
+    "candidate_table": "csvData10212811.csv"
+  },
+  {
+    "query_table": "csvData10219632.csv",
+    "candidate_table": "csvData623463.csv"
+  },
+  {
+    "query_table": "csvData1022749.csv",
+    "candidate_table": "csvData1022749.csv"
+  },
+  {
+    "query_table": "csvData10228708.csv",
+    "candidate_table": "csvData10228708.csv"
+  },
+  {
+    "query_table": "csvData10237155.csv",
+    "candidate_table": "csvData10237155.csv"
+  },
+  {
+    "query_table": "csvData10237155.csv",
+    "candidate_table": "csvData20629248.csv"
+  },
+  {
+    "query_table": "csvData10248679.csv",
+    "candidate_table": "csvData2761087__14.csv"
+  },
+  {
+    "query_table": "csvData10248679.csv",
+    "candidate_table": "csvData13860887.csv"
+  },
+  {
+    "query_table": "csvData10248679.csv",
+    "candidate_table": "csvData10248679.csv"
+  },
+  {
+    "query_table": "csvData10248679.csv",
+    "candidate_table": "csvData20967791.csv"
+  },
+  {
+    "query_table": "csvData10248679.csv",
+    "candidate_table": "csvData16541306.csv"
+  },
+  {
+    "query_table": "csvData10248679.csv",
+    "candidate_table": "csvData8868914.csv"
+  },
+  {
+    "query_table": "csvData10289113.csv",
+    "candidate_table": "csvData10289113.csv"
+  },
+  {
+    "query_table": "csvData10289113.csv",
+    "candidate_table": "csvData3836886.csv"
+  },
+  {
+    "query_table": "csvData10299723.csv",
+    "candidate_table": "csvData10299723.csv"
+  },
+  {
+    "query_table": "csvData10308692.csv",
+    "candidate_table": "csvData10308692.csv"
+  },
+  {
+    "query_table": "csvData10327833.csv",
+    "candidate_table": "csvData10327833.csv"
+  },
+  {
+    "query_table": "csvData10406368.csv",
+    "candidate_table": "csvData10406368.csv"
+  },
+  {
+    "query_table": "csvData10444015.csv",
+    "candidate_table": "csvData2761087__14.csv"
+  },
+  {
+    "query_table": "csvData10444015.csv",
+    "candidate_table": "csvData10444015.csv"
+  },
+  {
+    "query_table": "csvData10444015.csv",
+    "candidate_table": "csvData19660418.csv"
+  },
+  {
+    "query_table": "csvData10444015.csv",
+    "candidate_table": "csvData10632456.csv"
+  },
+  {
+    "query_table": "csvData10444015.csv",
+    "candidate_table": "csvData5018557.csv"
+  },
+  {
+    "query_table": "csvData10450354.csv",
+    "candidate_table": "csvData10450354.csv"
+  },
+  {
+    "query_table": "csvData10467901.csv",
+    "candidate_table": "csvData10467901.csv"
+  },
+  {
+    "query_table": "csvData10467901.csv",
+    "candidate_table": "csvData27178168.csv"
+  },
+  {
+    "query_table": "csvData10477563.csv",
+    "candidate_table": "csvData10477563.csv"
+  },
+  {
+    "query_table": "csvData10477563.csv",
+    "candidate_table": "csvData16827568.csv"
+  },
+  {
+    "query_table": "csvData10477563.csv",
+    "candidate_table": "csvData18412849.csv"
+  },
+  {
+    "query_table": "csvData10478463.csv",
+    "candidate_table": "csvData10478463.csv"
+  },
+  {
+    "query_table": "csvData1048267.csv",
+    "candidate_table": "csvData623463.csv"
+  },
+  {
+    "query_table": "csvData10490732.csv",
+    "candidate_table": "csvData10490732.csv"
+  },
+  {
+    "query_table": "csvData10495912.csv",
+    "candidate_table": "csvData2761087__14.csv"
+  },
+  {
+    "query_table": "csvData10495912.csv",
+    "candidate_table": "csvData12237031.csv"
+  },
+  {
+    "query_table": "csvData10495912.csv",
+    "candidate_table": "csvData11227496.csv"
+  },
+  {
+    "query_table": "csvData10495912.csv",
+    "candidate_table": "csvData3393967.csv"
+  },
+  {
+    "query_table": "csvData10495912.csv",
+    "candidate_table": "csvData10834068.csv"
+  },
+  {
+    "query_table": "csvData10502656.csv",
+    "candidate_table": "csvData10502656.csv"
+  },
+  {
+    "query_table": "csvData10503554.csv",
+    "candidate_table": "csvData15965777.csv"
+  },
+  {
+    "query_table": "csvData10503554.csv",
+    "candidate_table": "csvData28529657.csv"
+  },
+  {
+    "query_table": "csvData10503554.csv",
+    "candidate_table": "csvData15651464.csv"
+  },
+  {
+    "query_table": "csvData10503554.csv",
+    "candidate_table": "csvData10503554.csv"
+  },
+  {
+    "query_table": "csvData10503554.csv",
+    "candidate_table": "csvData14724305.csv"
+  },
+  {
+    "query_table": "csvData10503554.csv",
+    "candidate_table": "csvData24799406.csv"
+  },
+  {
+    "query_table": "csvData10503554.csv",
+    "candidate_table": "csvData28285304.csv"
+  },
+  {
+    "query_table": "csvData10503554.csv",
+    "candidate_table": "csvData3784141.csv"
+  },
+  {
+    "query_table": "csvData10503554.csv",
+    "candidate_table": "csvData12080041.csv"
+  },
+  {
+    "query_table": "csvData10503554.csv",
+    "candidate_table": "csvData18465449.csv"
+  },
+  {
+    "query_table": "csvData10503554.csv",
+    "candidate_table": "csvData5018557.csv"
+  },
+  {
+    "query_table": "csvData10503554.csv",
+    "candidate_table": "csvData5314906.csv"
+  }
+]

@@ -331,100 +331,10 @@ def load_task_config(task_type: str, dataset_type: str = None) -> Dict[str, Any]
 
 
 # ================== 缓存管理器 ==================
-class CacheManager:
-    """统一的缓存管理器，提供内存和磁盘双层缓存"""
-    
-    def __init__(self, cache_dir: str = "cache/experiment_cache"):
-        self.cache_dir = Path(cache_dir)
-        self.cache_dir.mkdir(parents=True, exist_ok=True)
-        self.memory_cache = {}  # 内存缓存
-        self.stats = {
-            'hits': 0,
-            'misses': 0,
-            'saves': 0
-        }
-        logger.info(f"✅ 缓存系统初始化: {self.cache_dir}")
-    
-    def _get_cache_key(self, operation: str, query: Dict, params: Dict = None) -> str:
-        """生成缓存键"""
-        key_data = {
-            'op': operation,
-            'query': query.get('query_table', '') if isinstance(query, dict) else str(query),
-            'params': params or {}
-        }
-        key_str = json.dumps(key_data, sort_keys=True)
-        return hashlib.md5(key_str.encode()).hexdigest()
-    
-    def get(self, operation: str, query: Dict, params: Dict = None) -> Optional[Any]:
-        """获取缓存结果"""
-        cache_key = self._get_cache_key(operation, query, params)
-        
-        # 先检查内存缓存
-        if cache_key in self.memory_cache:
-            self.stats['hits'] += 1
-            return self.memory_cache[cache_key]
-        
-        # 检查磁盘缓存
-        cache_file = self.cache_dir / f"{operation}_{cache_key}.pkl"
-        if cache_file.exists():
-            try:
-                with open(cache_file, 'rb') as f:
-                    result = pickle.load(f)
-                    self.memory_cache[cache_key] = result  # 加载到内存
-                    self.stats['hits'] += 1
-                    return result
-            except:
-                pass
-        
-        self.stats['misses'] += 1
-        return None
-    
-    def set(self, operation: str, query: Dict, result: Any, params: Dict = None):
-        """保存缓存结果"""
-        cache_key = self._get_cache_key(operation, query, params)
-        
-        # 保存到内存缓存
-        self.memory_cache[cache_key] = result
-        
-        # 保存到磁盘缓存
-        cache_file = self.cache_dir / f"{operation}_{cache_key}.pkl"
-        try:
-            with open(cache_file, 'wb') as f:
-                pickle.dump(result, f)
-            self.stats['saves'] += 1
-        except Exception as e:
-            logger.warning(f"缓存保存失败: {e}")
-    
-    def get_stats(self) -> Dict:
-        """获取缓存统计"""
-        total = self.stats['hits'] + self.stats['misses']
-        hit_rate = self.stats['hits'] / total if total > 0 else 0
-        return {
-            'hits': self.stats['hits'],
-            'misses': self.stats['misses'],
-            'saves': self.stats['saves'],
-            'hit_rate': f"{hit_rate:.1%}",
-            'memory_items': len(self.memory_cache)
-        }
-    
-    def clear(self):
-        """清空缓存"""
-        self.memory_cache.clear()
-        for cache_file in self.cache_dir.glob("*.pkl"):
-            cache_file.unlink()
-        logger.info("缓存已清空")
+# 查询级别缓存已移除，只保留嵌入向量缓存
+# 原因：查询执行时间很短(几秒)，不需要缓存；真正耗时的嵌入计算已经被缓存
 
-
-# 全局缓存管理器
-cache_manager = None
-
-def init_cache_manager(dataset_name: str = '', task_type: str = '', dataset_type: str = ''):
-    """初始化全局缓存管理器"""
-    global cache_manager
-    if cache_manager is None:
-        cache_dir = f"cache/experiment_cache/{dataset_name}_{task_type}_{dataset_type}".strip('_')
-        cache_manager = CacheManager(cache_dir)
-    return cache_manager
+# init_cache_manager 函数已移除，不再需要查询级别缓存
 
 
 def load_dataset(task_type: str, dataset_type: str = 'subset', dataset_name: str = None) -> tuple:
@@ -766,19 +676,6 @@ def process_query_l1(args: Tuple) -> Dict:
     query, tables, shared_config, cache_file_path = args
     query_table_name = query.get('query_table', '')
     
-    # 初始化或获取缓存管理器（子进程需要）
-    global cache_manager
-    if cache_manager is None and cache_file_path:
-        # cache_file_path现在是缓存目录路径
-        cache_dir = cache_file_path
-        cache_manager = CacheManager(cache_dir)
-    
-    # 使用缓存管理器
-    if cache_manager:
-        cached = cache_manager.get('l1', query)
-        if cached is not None:
-            return cached
-    
     # 使用预构建的SMD索引（通过pickle序列化）
     if 'smd_index' in shared_config:
         # 反序列化SMD索引
@@ -825,10 +722,6 @@ def process_query_l1(args: Tuple) -> Dict:
         logger.debug(f"L1 final predictions: {len(predictions)}")
         result = {'query_table': query_table_name, 'predictions': predictions}
     
-    # 保存到全局缓存
-    if cache_manager:
-        cache_manager.set('l1', query, result)
-    
     return result
 
 
@@ -838,19 +731,6 @@ def process_query_l2(args: Tuple) -> Dict:
     query_table_name = query.get('query_table', '')
     task_type = query.get('task_type', 'join')  # 获取任务类型
     dataset_type = query.get('dataset_type', '')  # 获取数据集类型
-    
-    # 初始化或获取缓存管理器（子进程需要）
-    global cache_manager
-    if cache_manager is None and cache_file_path:
-        # cache_file_path现在是缓存目录路径
-        cache_dir = cache_file_path
-        cache_manager = CacheManager(cache_dir)
-    
-    # 使用缓存管理器
-    if cache_manager:
-        cached = cache_manager.get('l1_l2', query, {'task_type': task_type})
-        if cached is not None:
-            return cached
     
     # 获取配置（包括层组合策略）
     task_config = shared_config.get('optimization_config', {})
@@ -1011,10 +891,6 @@ def process_query_l2(args: Tuple) -> Dict:
         
         result = {'query_table': query_table_name, 'predictions': predictions}
     
-    # 保存到全局缓存
-    if cache_manager:
-        cache_manager.set('l1_l2', query, result, {'task_type': task_type})
-    
     return result
 
 
@@ -1026,19 +902,6 @@ def process_query_l3(args: Tuple) -> Dict:
     
     # 获取动态优化器实例（如果存在）
     dynamic_optimizer = shared_config.get('dynamic_optimizer', None)
-    
-    # 初始化或获取缓存管理器（子进程需要）
-    global cache_manager
-    if cache_manager is None and cache_file_path:
-        # cache_file_path现在是缓存目录路径
-        cache_dir = cache_file_path
-        cache_manager = CacheManager(cache_dir)
-    
-    # 使用缓存管理器
-    if cache_manager:
-        cached = cache_manager.get('l1_l2_l3', query, {'task_type': task_type})
-        if cached is not None:
-            return cached
     
     # 先运行L2层获取基础结果
     l2_cache_file = cache_file_path.replace('L3', 'L2')
@@ -1214,10 +1077,6 @@ def process_query_l3(args: Tuple) -> Dict:
     
     query_result = {'query_table': query_table_name, 'predictions': final_predictions}
     
-    # 保存到全局缓存
-    if cache_manager:
-        cache_manager.set('l1_l2_l3', query, query_result, {'task_type': task_type})
-    
     return query_result
 
 
@@ -1246,13 +1105,8 @@ def run_layer_experiment(layer: str, tables: List[Dict], queries: List[Dict],
         shared_config = initialize_shared_resources_l3(tables, task_type, dataset_type)
         process_func = process_query_l3
     
-    # 使用缓存管理器的目录（如果存在）
-    if cache_manager:
-        cache_dir = cache_manager.cache_dir
-    else:
-        # 降级到默认缓存目录
-        cache_dir = Path(f"cache/ablation_{dataset_type}_{layer.replace('+', '_')}")
-        cache_dir.mkdir(parents=True, exist_ok=True)
+    # 不再使用查询级别缓存，直接使用临时目录名
+    cache_dir = f"cache_temp_{dataset_type}_{layer.replace('+', '_')}"
     
     # 准备进程池参数（每个查询传递缓存目录路径和dataset_type）
     query_args = []
@@ -1467,8 +1321,7 @@ def run_ablation_experiment_optimized(task_type: str, dataset_type: str = 'subse
         logger.info(f"🎯 Using challenging mixed queries to test layer improvements")
     logger.info(f"{'='*80}")
     
-    # 初始化缓存管理器
-    init_cache_manager(dataset_type, task_type, str(max_queries) if max_queries else 'all')
+    # 不再需要初始化查询级别缓存管理器
     
     # 加载数据
     tables, queries, ground_truth = load_dataset(task_type, dataset_type)
@@ -1667,17 +1520,7 @@ def main():
     
     logger.info(f"\n✅ Results saved to: {output_path}")
     
-    # 输出缓存统计
-    if cache_manager:
-        cache_stats = cache_manager.get_stats()
-        print("\n" + "="*100)
-        print("📊 CACHE STATISTICS")
-        print("="*100)
-        print(f"  Cache Hits: {cache_stats['hits']}")
-        print(f"  Cache Misses: {cache_stats['misses']}")
-        print(f"  Cache Saves: {cache_stats['saves']}")
-        print(f"  Hit Rate: {cache_stats['hit_rate']}")
-        print(f"  Memory Items: {cache_stats['memory_items']}")
+    # 缓存统计已移除（不再使用查询级别缓存）
     
     # 优化总结
     print("\n" + "="*100)

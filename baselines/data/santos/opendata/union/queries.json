@@ -1,0 +1,402 @@
+[
+  {
+    "query_table": "CAN_CSV0000000000000474.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000557.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000558.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000581.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000589.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000624.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000629.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000633.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000634.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000638.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000642.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000659.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000680.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000686.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000691.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000695.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000708.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000709.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000710.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000714.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000724.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000732.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000758.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000759.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000772.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000773.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000822.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000831.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000841.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000843.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000848.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000886.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000893.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000903.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000904.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000905.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000909.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000913.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000914.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000915.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000917.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000918.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000940.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000952.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000957.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000958.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000959.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000960.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000961.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000963.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000964.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000965.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000970.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000976.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000977.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000982.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000000997.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001000.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001009.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001018.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001023.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001024.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001025.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001028.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001032.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001046.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001051.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001052.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001058.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001065.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001090.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001119.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001123.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001140.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001142.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001143.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001147.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001148.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001149.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001153.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001157.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001159.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001185.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001198.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001217.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001242.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001286.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__0.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__1.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__2.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__3.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__4.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__5.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__6.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__7.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001294__8.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001301.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001306.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001310.csv",
+    "task_type": "union"
+  },
+  {
+    "query_table": "CAN_CSV0000000000001313__0.csv",
+    "task_type": "union"
+  }
+]

@@ -1,0 +1,402 @@
+[
+  {
+    "query_table": "csvData1549285__2.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData15936069__14.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData13638124__4.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData19387543__3.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData13051044__2.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData19132138__7.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData917122__2.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData12739105__3.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData25322806__4.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData14518660__14.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData16382327__5.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData13336059__13.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData1902536__3.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData16904536__2.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData15936069__16.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData20535739__7.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData13891302__8.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData25441565__1.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData4798003__1.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData25450714__14.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData2590167__12.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData19621512__18.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData7470046__2.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData23033509__0.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData23033509__4.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData9469123__10.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData1549285__0.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData10025189__3.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData14248779__2.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData4674540__15.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData24108736__5.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData19553885__12.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData9205349__3.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData7470046__3.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData3383853__3.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData25322806__5.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData20076526__3.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData22935665__3.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData8963593__3.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData26651945__13.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData2877720__7.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData23141915__0.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData9739809__4.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData17054209__2.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData2877720__14.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData13434912__8.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData26150573__1.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData4823585__6.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData27587184__5.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData7789467__2.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData20967043__0.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData13703215__0.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData1786628__8.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData7063593__2.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData1902536__12.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData26604328__1.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData26853929__7.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData29453038__6.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData19621512__8.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData13703215__18.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData25450714__16.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData13245391__1.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData2688573__2.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData7222492__8.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData13336059__5.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData13891302__10.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData6605406__2.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData18661263__12.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData23033509__18.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData29453038__13.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData13434912__4.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData25917960__0.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData2761087__12.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData2590167__15.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData9475480__6.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData8479264__2.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData4431378__4.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData17093328__0.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData21084464__1.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData8804961__3.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData21642271__2.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData26959440__0.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData29453038__9.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData22418917__1.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData23141915__6.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData7222492__9.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData4676916__2.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData18784108__2.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData26150573__3.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData3284798__5.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData13434912__2.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData1644016__0.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData29230622__0.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData26162088__2.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData9205349__0.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData26672678__2.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData13336059__12.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData15933779__4.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData8620997__2.csv",
+    "task_type": "join"
+  },
+  {
+    "query_table": "csvData9475480__8.csv",
+    "task_type": "join"
+  }
+]

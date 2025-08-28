@@ -1,0 +1,2239 @@
+{
+  "queries": [
+    {
+      "query_table": "q_table_145_3_4_1",
+      "query_id": "nlc_union_1",
+      "query_text": "I am searching for more unionable tables with the value of Given-name being Emma Frances and containing the keyword Henry.",
+      "seed_table": "q_table_145_3_4_1",
+      "task_type": "union",
+      "nl_condition": "I am searching for more unionable tables with the value of Given-name being Emma Frances and containing the keyword Henry."
+    },
+    {
+      "query_table": "q_table_145_3_4_2",
+      "query_id": "nlc_union_2",
+      "query_text": "I need to locate additional unionable tables where the value of Residence is Tossorontio and the tables contain the keyword John.",
+      "seed_table": "q_table_145_3_4_2",
+      "task_type": "union",
+      "nl_condition": "I need to locate additional unionable tables where the value of Residence is Tossorontio and the tables contain the keyword John."
+    },
+    {
+      "query_table": "q_table_145_1_3",
+      "query_id": "nlc_union_3",
+      "query_text": "Can you find more tables that related to keyword: Markham.with the topic related to Baptismal_Records",
+      "seed_table": "q_table_145_1_3",
+      "task_type": "union",
+      "nl_condition": "Can you find more tables that related to keyword: Markham.with the topic related to Baptismal_Records"
+    },
+    {
+      "query_table": "q_table_145_3_6_1",
+      "query_id": "nlc_union_4",
+      "query_text": "I am on the lookout for additional unionable tables where Birthdate is subsequent to 1849-07-20 09:10:04.705072 and the tables feature the keyword Florence Gertrude.",
+      "seed_table": "q_table_145_3_6_1",
+      "task_type": "union",
+      "nl_condition": "I am on the lookout for additional unionable tables where Birthdate is subsequent to 1849-07-20 09:10:04.705072 and the tables feature the keyword Florence Gertrude."
+    },
+    {
+      "query_table": "q_table_145_3_6_2",
+      "query_id": "nlc_union_5",
+      "query_text": "I am on the lookout for additional unionable tables where Bapt-date is subsequent to 1870-08-10 09:30:31.241292 and the tables feature the keyword Duncan.",
+      "seed_table": "q_table_145_3_6_2",
+      "task_type": "union",
+      "nl_condition": "I am on the lookout for additional unionable tables where Bapt-date is subsequent to 1870-08-10 09:30:31.241292 and the tables feature the keyword Duncan."
+    },
+    {
+      "query_table": "q_table_155_3_4_1",
+      "query_id": "nlc_union_6",
+      "query_text": "I am searching for more unionable tables with the value of Title of Project being The United States Itinerancy of Mrs. Zilpha Elaw, 1812-1840 and containing the keyword Ryan.",
+      "seed_table": "q_table_155_3_4_1",
+      "task_type": "union",
+      "nl_condition": "I am searching for more unionable tables with the value of Title of Project being The United States Itinerancy of Mrs. Zilpha Elaw, 1812-1840 and containing the keyword Ryan."
+    },
+    {
+      "query_table": "q_table_155_1_1",
+      "query_id": "nlc_union_7",
+      "query_text": "Can you find more tables with similar content to Fellowship_Awards.",
+      "seed_table": "q_table_155_1_1",
+      "task_type": "union",
+      "nl_condition": "Can you find more tables with similar content to Fellowship_Awards."
+    },
+    {
+      "query_table": "q_table_38_4_1",
+      "query_id": "nlc_union_8",
+      "query_text": "I am looking for additional tables that contain the keyword Carlo Caldana/Marguery Filmsand have over 200 rows.with the topic related to film_locations_in_san_francisco_0",
+      "seed_table": "q_table_38_4_1",
+      "task_type": "union",
+      "nl_condition": "I am looking for additional tables that contain the keyword Carlo Caldana/Marguery Filmsand have over 200 rows.with the topic related to film_locations_in_san_francisco_0"
+    },
+    {
+      "query_table": "q_table_38_1_2",
+      "query_id": "nlc_union_10",
+      "query_text": "Searching for supplementary tables that have more than 200 rows to ensure sufficient data for our study.",
+      "seed_table": "q_table_38_1_2",
+      "task_type": "union",
+      "nl_condition": "Searching for supplementary tables that have more than 200 rows to ensure sufficient data for our study."
+    },
+    {
+      "query_table": "q_table_72_3_4_1",
+      "query_id": "nlc_union_11",
+      "query_text": "I aim to identify further unionable tables that have °10′51″ as the value of [Declination|Declination] and include the keyword [NGC_96|96].",
+      "seed_table": "q_table_72_3_4_1",
+      "task_type": "union",
+      "nl_condition": "I aim to identify further unionable tables that have °10′51″ as the value of [Declination|Declination] and include the keyword [NGC_96|96]."
+    },
+    {
+      "query_table": "q_table_72_1_1",
+      "query_id": "nlc_union_12",
+      "query_text": "I am looking for additional tables that cover the same topic as NGC objects.",
+      "seed_table": "q_table_72_1_1",
+      "task_type": "union",
+      "nl_condition": "I am looking for additional tables that cover the same topic as NGC objects."
+    },
+    {
+      "query_table": "q_table_139_3_4_1",
+      "query_id": "nlc_union_16",
+      "query_text": "I am searching for more unionable tables with the value of Grade being Engine Room Assistant and containing the keyword SM1.",
+      "seed_table": "q_table_139_3_4_1",
+      "task_type": "union",
+      "nl_condition": "I am searching for more unionable tables with the value of Grade being Engine Room Assistant and containing the keyword SM1."
+    },
+    {
+      "query_table": "q_table_139_1_1",
+      "query_id": "nlc_union_17",
+      "query_text": "I am looking for additional tables that cover the same topic as job_pay_scales.",
+      "seed_table": "q_table_139_1_1",
+      "task_type": "union",
+      "nl_condition": "I am looking for additional tables that cover the same topic as job_pay_scales."
+    },
+    {
+      "query_table": "q_table_1_2_3_1",
+      "query_id": "nlc_union_19",
+      "query_text": "I want to find further tables that can be combined through union,  and these tables have Washington St & Broad St later than 1900-01-01 10:00:57.291788.",
+      "seed_table": "q_table_1_2_3_1",
+      "task_type": "union",
+      "nl_condition": "I want to find further tables that can be combined through union,  and these tables have Washington St & Broad St later than 1900-01-01 10:00:57.291788."
+    },
+    {
+      "query_table": "q_table_1_2_3_2",
+      "query_id": "nlc_union_20",
+      "query_text": "I want to find further tables that can be combined through union,  and these tables have Commercial St Opp Brookside Rd later than 1900-01-01 18:03:11.804271.with the topic related to Bus schedule",
+      "seed_table": "q_table_1_2_3_2",
+      "task_type": "union",
+      "nl_condition": "I want to find further tables that can be combined through union,  and these tables have Commercial St Opp Brookside Rd later than 1900-01-01 18:03:11.804271.with the topic related to Bus schedule"
+    },
+    {
+      "query_table": "q_table_1_2_3_3",
+      "query_id": "nlc_union_21",
+      "query_text": "Can you provide additional unionable tables where the Quincy Ave & Hill Ave is after 1900-01-01 08:35:59.603865?",
+      "seed_table": "q_table_1_2_3_3",
+      "task_type": "union",
+      "nl_condition": "Can you provide additional unionable tables where the Quincy Ave & Hill Ave is after 1900-01-01 08:35:59.603865?"
+    },
+    {
+      "query_table": "q_table_1_2_3_4",
+      "query_id": "nlc_union_22",
+      "query_text": "Can you provide additional unionable tables where the Quincy Ave Opp President Plaza is after 1900-01-01 08:20:40.992991?",
+      "seed_table": "q_table_1_2_3_4",
+      "task_type": "union",
+      "nl_condition": "Can you provide additional unionable tables where the Quincy Ave Opp President Plaza is after 1900-01-01 08:20:40.992991?"
+    },
+    {
+      "query_table": "q_table_1_2_3_5",
+      "query_id": "nlc_union_23",
+      "query_text": "I want to find further tables that can be combined through union,  and these tables have Hancock St & Walter J Hannon Pkwy later than 1900-01-01 09:48:27.102693.with the topic related to Bus schedule",
+      "seed_table": "q_table_1_2_3_5",
+      "task_type": "union",
+      "nl_condition": "I want to find further tables that can be combined through union,  and these tables have Hancock St & Walter J Hannon Pkwy later than 1900-01-01 09:48:27.102693.with the topic related to Bus schedule"
+    },
+    {
+      "query_table": "q_table_1_2_3_6",
+      "query_id": "nlc_union_24",
+      "query_text": "I want to find further tables that can be combined through union,  and these tables have Hancock St & Cottage Ave later than 1900-01-01 09:38:02.308386.with the topic related to Bus schedule",
+      "seed_table": "q_table_1_2_3_6",
+      "task_type": "union",
+      "nl_condition": "I want to find further tables that can be combined through union,  and these tables have Hancock St & Cottage Ave later than 1900-01-01 09:38:02.308386.with the topic related to Bus schedule"
+    },
+    {
+      "query_table": "q_table_1_2_3_7",
+      "query_id": "nlc_union_25",
+      "query_text": "Can you provide additional unionable tables where the Quincy Center Bus Station is after 1900-01-01 09:59:09.931247?",
+      "seed_table": "q_table_1_2_3_7",
+      "task_type": "union",
+      "nl_condition": "Can you provide additional unionable tables where the Quincy Center Bus Station is after 1900-01-01 09:59:09.931247?"
+    },
+    {
+      "query_table": "q_table_1_3_6_1",
+      "query_id": "nlc_union_26",
+      "query_text": "I need to track down more unionable tables with Washington St & Broad St preceding 1900-01-01 17:52:46.397971 and containing the keyword 06:03 PM.",
+      "seed_table": "q_table_1_3_6_1",
+      "task_type": "union",
+      "nl_condition": "I need to track down more unionable tables with Washington St & Broad St preceding 1900-01-01 17:52:46.397971 and containing the keyword 06:03 PM."
+    },
+    {
+      "query_table": "q_table_1_3_6_2",
+      "query_id": "nlc_union_27",
+      "query_text": "I am exploring further unionable tables, where Commercial St Opp Brookside Rd is earlier than 1900-01-01 17:52:05.217093 and the tables feature the keyword 08:05 PM.",
+      "seed_table": "q_table_1_3_6_2",
+      "task_type": "union",
+      "nl_condition": "I am exploring further unionable tables, where Commercial St Opp Brookside Rd is earlier than 1900-01-01 17:52:05.217093 and the tables feature the keyword 08:05 PM."
+    },
+    {
+      "query_table": "q_table_1_3_6_3",
+      "query_id": "nlc_union_28",
+      "query_text": "I am exploring further unionable tables, where Quincy Ave & Hill Ave is earlier than 1900-01-01 08:43:28.524441 and the tables feature the keyword 07:53 PM.",
+      "seed_table": "q_table_1_3_6_3",
+      "task_type": "union",
+      "nl_condition": "I am exploring further unionable tables, where Quincy Ave & Hill Ave is earlier than 1900-01-01 08:43:28.524441 and the tables feature the keyword 07:53 PM."
+    },
+    {
+      "query_table": "q_table_1_3_6_4",
+      "query_id": "nlc_union_29",
+      "query_text": "I need to uncover more unionable tables with Quincy Ave Opp President Plaza hovering around 04:26 PM and featuring the keyword 04:48 PM.",
+      "seed_table": "q_table_1_3_6_4",
+      "task_type": "union",
+      "nl_condition": "I need to uncover more unionable tables with Quincy Ave Opp President Plaza hovering around 04:26 PM and featuring the keyword 04:48 PM."
+    },
+    {
+      "query_table": "q_table_1_3_6_5",
+      "query_id": "nlc_union_30",
+      "query_text": "I'm seeking out additional unionable tables where Hancock St & Walter J Hannon Pkwy is roughly 04:55 PM and the tables include the keyword 04:13 PM.",
+      "seed_table": "q_table_1_3_6_5",
+      "task_type": "union",
+      "nl_condition": "I'm seeking out additional unionable tables where Hancock St & Walter J Hannon Pkwy is roughly 04:55 PM and the tables include the keyword 04:13 PM."
+    },
+    {
+      "query_table": "q_table_1_3_6_6",
+      "query_id": "nlc_union_31",
+      "query_text": "I am exploring further unionable tables, where Hancock St & Cottage Ave is earlier than 1900-01-01 17:43:42.464006 and the tables feature the keyword 08:07 PM.",
+      "seed_table": "q_table_1_3_6_6",
+      "task_type": "union",
+      "nl_condition": "I am exploring further unionable tables, where Hancock St & Cottage Ave is earlier than 1900-01-01 17:43:42.464006 and the tables feature the keyword 08:07 PM."
+    },
+    {
+      "query_table": "q_table_1_3_6_7",
+      "query_id": "nlc_union_32",
+      "query_text": "I'm seeking out additional unionable tables where Quincy Center Bus Station is roughly 06:42 PM and the tables include the keyword 03:56 PM.",
+      "seed_table": "q_table_1_3_6_7",
+      "task_type": "union",
+      "nl_condition": "I'm seeking out additional unionable tables where Quincy Center Bus Station is roughly 06:42 PM and the tables include the keyword 03:56 PM."
+    },
+    {
+      "query_table": "q_table_35_2_3_1",
+      "query_id": "nlc_union_34",
+      "query_text": "I am looking for more unionable datasets that include Time (CST) dates before 1900-01-01 06:43:46.775934.with the topic related to Weather_Observations",
+      "seed_table": "q_table_35_2_3_1",
+      "task_type": "union",
+      "nl_condition": "I am looking for more unionable datasets that include Time (CST) dates before 1900-01-01 06:43:46.775934.with the topic related to Weather_Observations"
+    },
+    {
+      "query_table": "q_table_27_3_4_1",
+      "query_id": "nlc_union_35",
+      "query_text": "I aim to identify further unionable tables that have Reg. UE n. 222 del 17.03.10 as the value of Dossier number CEE/CE/UE and include the keyword GUCE L. 148 del 21.06.96.",
+      "seed_table": "q_table_27_3_4_1",
+      "task_type": "union",
+      "nl_condition": "I aim to identify further unionable tables that have Reg. UE n. 222 del 17.03.10 as the value of Dossier number CEE/CE/UE and include the keyword GUCE L. 148 del 21.06.96."
+    },
+    {
+      "query_table": "q_table_27_3_4_2",
+      "query_id": "nlc_union_36",
+      "query_text": "I need to locate additional unionable tables where the value of Date GUCE/GUUE is GUCE L. 214 del 26.08.03 and the tables contain the keyword 84.",
+      "seed_table": "q_table_27_3_4_2",
+      "task_type": "union",
+      "nl_condition": "I need to locate additional unionable tables where the value of Date GUCE/GUUE is GUCE L. 214 del 26.08.03 and the tables contain the keyword 84."
+    },
+    {
+      "query_table": "q_table_27_1_3",
+      "query_id": "nlc_union_37",
+      "query_text": "I want to find more unionable tables, and these tables contain keyword: 102.",
+      "seed_table": "q_table_27_1_3",
+      "task_type": "union",
+      "nl_condition": "I want to find more unionable tables, and these tables contain keyword: 102."
+    },
+    {
+      "query_table": "q_table_125_2_1_1",
+      "query_id": "nlc_union_38",
+      "query_text": "I need to identify more tables that are unionable, with the value of Part No. being 780-32000-1.",
+      "seed_table": "q_table_125_2_1_1",
+      "task_type": "union",
+      "nl_condition": "I need to identify more tables that are unionable, with the value of Part No. being 780-32000-1."
+    },
+    {
+      "query_table": "q_table_125_3_1_1",
+      "query_id": "nlc_union_39",
+      "query_text": "I want to find more large-scale unionable tables having more than 100 rows, and these tables have keyword: 640-12508-1.",
+      "seed_table": "q_table_125_3_1_1",
+      "task_type": "union",
+      "nl_condition": "I want to find more large-scale unionable tables having more than 100 rows, and these tables have keyword: 640-12508-1."
+    },
+    {
+      "query_table": "q_table_125_1_2",
+      "query_id": "nlc_union_40",
+      "query_text": "I need to locate additional tables with a row count exceeding 200.",
+      "seed_table": "q_table_125_1_2",
+      "task_type": "union",
+      "nl_condition": "I need to locate additional tables with a row count exceeding 200."
+    },
+    {
+      "query_table": "q_table_23_1_3",
+      "query_id": "nlc_union_41",
+      "query_text": "I am looking for additional tables that cover keyword: 21.",
+      "seed_table": "q_table_23_1_3",
+      "task_type": "union",
+      "nl_condition": "I am looking for additional tables that cover keyword: 21."
+    },
+    {
+      "query_table": "q_table_23_1_2",
+      "query_id": "nlc_union_42",
+      "query_text": "I want to find more unionable tables with the number of rows larger than 200.",
+      "seed_table": "q_table_23_1_2",
+      "task_type": "union",
+      "nl_condition": "I want to find more unionable tables with the number of rows larger than 200."
+    },
+    {
+      "query_table": "q_table_104_3_3_1",
+      "query_id": "nlc_union_43",
+      "query_text": "I need to identify more unionable tables with Sdate after 2012-09-10 00:28:10.258490 and having over 100 rows.",
+      "seed_table": "q_table_104_3_3_1",
+      "task_type": "union",
+      "nl_condition": "I need to identify more unionable tables with Sdate after 2012-09-10 00:28:10.258490 and having over 100 rows."
+    },
+    {
+      "query_table": "q_table_104_2_3_1",
+      "query_id": "nlc_union_44",
+      "query_text": "Can you provide additional unionable tables where the Sdate is after 2012-04-09 07:08:20.503996?",
+      "seed_table": "q_table_104_2_3_1",
+      "task_type": "union",
+      "nl_condition": "Can you provide additional unionable tables where the Sdate is after 2012-04-09 07:08:20.503996?"
+    },
+    {
+      "query_table": "q_table_104_4_1",
+      "query_id": "nlc_union_45",
+      "query_text": "Can you find more tables that feature the keyword 03/07/2012 15:00and have over 200 rows.with the topic related to lane_description",
+      "seed_table": "q_table_104_4_1",
+      "task_type": "union",
+      "nl_condition": "Can you find more tables that feature the keyword 03/07/2012 15:00and have over 200 rows.with the topic related to lane_description"
+    },
+    {
+      "query_table": "q_table_104_1_2",
+      "query_id": "nlc_union_46",
+      "query_text": "I want to find more unionable tables with the number of rows larger than 200.with the topic related to lane_description",
+      "seed_table": "q_table_104_1_2",
+      "task_type": "union",
+      "nl_condition": "I want to find more unionable tables with the number of rows larger than 200.with the topic related to lane_description"
+    },
+    {
+      "query_table": "q_table_28_2_2_1",
+      "query_id": "nlc_union_47",
+      "query_text": "I want to find more unionable tables, and these tables have Power larger than 41.91294208078055.",
+      "seed_table": "q_table_28_2_2_1",
+      "task_type": "union",
+      "nl_condition": "I want to find more unionable tables, and these tables have Power larger than 41.91294208078055."
+    },
+    {
+      "query_table": "q_table_54_2_2_1",
+      "query_id": "nlc_union_48",
+      "query_text": "I want to find more unionable tables, and these tables have eFG% around 1with the topic related to Basketball_Statistics",
+      "seed_table": "q_table_54_2_2_1",
+      "task_type": "union",
+      "nl_condition": "I want to find more unionable tables, and these tables have eFG% around 1with the topic related to Basketball_Statistics"
+    },
+    {
+      "query_table": "q_table_62_2_2_1",
+      "query_id": "nlc_union_49",
+      "query_text": "I want to find more unionable tables, and these tables have IP around 21.with the topic related to Baseball_Player_Stats",
+      "seed_table": "q_table_62_2_2_1",
+      "task_type": "union",
+      "nl_condition": "I want to find more unionable tables, and these tables have IP around 21.with the topic related to Baseball_Player_Stats"
+    },
+    {
+      "query_table": "q_table_62_3_2_1",
+      "query_id": "nlc_union_50",
+      "query_text": "I am searching for further large-scale unionable tables, where OWNED% is smaller than 31.106152256234793 and the tables include more than 100 rows.",
+      "seed_table": "q_table_62_3_2_1",
+      "task_type": "union",
+      "nl_condition": "I am searching for further large-scale unionable tables, where OWNED% is smaller than 31.106152256234793 and the tables include more than 100 rows."
+    },
+    {
+      "query_table": "q_table_62_3_2_2",
+      "query_id": "nlc_union_51",
+      "query_text": "I need to identify additional large-scale tables that are unionable, with PS close to -5 and having over 100 rows.",
+      "seed_table": "q_table_62_3_2_2",
+      "task_type": "union",
+      "nl_condition": "I need to identify additional large-scale tables that are unionable, with PS close to -5 and having over 100 rows."
+    },
+    {
+      "query_table": "q_table_62_3_2_3",
+      "query_id": "nlc_union_52",
+      "query_text": "I am searching for more large-scale unionable tables where $/G is approximately -4 and the tables contain more than 100 rows.",
+      "seed_table": "q_table_62_3_2_3",
+      "task_type": "union",
+      "nl_condition": "I am searching for more large-scale unionable tables where $/G is approximately -4 and the tables contain more than 100 rows."
+    },
+    {
+      "query_table": "q_table_62_3_2_4",
+      "query_id": "nlc_union_53",
+      "query_text": "I need to identify more large-scale tables that are unionable, with IP smaller than 23.0 and having over 100 rows.",
+      "seed_table": "q_table_62_3_2_4",
+      "task_type": "union",
+      "nl_condition": "I need to identify more large-scale tables that are unionable, with IP smaller than 23.0 and having over 100 rows."
+    },
+    {
+      "query_table": "q_table_62_3_2_5",
+      "query_id": "nlc_union_54",
+      "query_text": "I am searching for further large-scale unionable tables, where $ is smaller than -8.1 and the tables include more than 100 rows.",
+      "seed_table": "q_table_62_3_2_5",
+      "task_type": "union",
+      "nl_condition": "I am searching for further large-scale unionable tables, where $ is smaller than -8.1 and the tables include more than 100 rows."
+    },
+    {
+      "query_table": "q_table_62_3_2_6",
+      "query_id": "nlc_union_55",
+      "query_text": "I am searching for further large-scale unionable tables, where $ERA is smaller than 0.2 and the tables include more than 100 rows.",
+      "seed_table": "q_table_62_3_2_6",
+      "task_type": "union",
+      "nl_condition": "I am searching for further large-scale unionable tables, where $ERA is smaller than 0.2 and the tables include more than 100 rows."
+    },
+    {
+      "query_table": "q_table_24_1_3",
+      "query_id": "nlc_union_56",
+      "query_text": "I am looking for additional tables that cover keyword: 1985-1995.",
+      "seed_table": "q_table_24_1_3",
+      "task_type": "union",
+      "nl_condition": "I am looking for additional tables that cover keyword: 1985-1995."
+    },
+    {
+      "query_table": "q_table_64_2_2_1",
+      "query_id": "nlc_union_58",
+      "query_text": "Can you provide additional unionable tables where the Merchandise Bonus ($) is approximately 0?with the topic related to Fishing_Tournament_Results",
+      "seed_table": "q_table_64_2_2_1",
+      "task_type": "union",
+      "nl_condition": "Can you provide additional unionable tables where the Merchandise Bonus ($) is approximately 0?with the topic related to Fishing_Tournament_Results"
+    },
+    {
+      "query_table": "q_table_66_3_4_1",
+      "query_id": "nlc_union_60",
+      "query_text": "I aim to identify further unionable tables that have Support Services as the value of Specialty Name and include the keyword 251.",
+      "seed_table": "q_table_66_3_4_1",
+      "task_type": "union",
+      "nl_condition": "I aim to identify further unionable tables that have Support Services as the value of Specialty Name and include the keyword 251."
+    },
+    {
+      "query_table": "q_table_66_1_3",
+      "query_id": "nlc_union_61",
+      "query_text": "I am looking for additional tables that cover keyword: 42.with the topic related to Healthcare_Service_Records",
+      "seed_table": "q_table_66_1_3",
+      "task_type": "union",
+      "nl_condition": "I am looking for additional tables that cover keyword: 42.with the topic related to Healthcare_Service_Records"
+    },
+    {
+      "query_table": "q_table_46_2_2_1",
+      "query_id": "nlc_union_62",
+      "query_text": "I want to find more unionable tables, and these tables have 60/90 Rule around 64.",
+      "seed_table": "q_table_46_2_2_1",
+      "task_type": "union",
+      "nl_condition": "I want to find more unionable tables, and these tables have 60/90 Rule around 64."
+    },
+    {
+      "query_table": "q_table_25_4_1",
+      "query_id": "nlc_union_63",
+      "query_text": "I want to find more unionable tables, and these tables include the keyword Whatcomand have over 200 rows.with the topic related to report_card_discipline_for_2015_16_0",
+      "seed_table": "q_table_25_4_1",
+      "task_type": "union",
+      "nl_condition": "I want to find more unionable tables, and these tables include the keyword Whatcomand have over 200 rows.with the topic related to report_card_discipline_for_2015_16_0"
+    },
+    {
+      "query_table": "q_table_25_1_2",
+      "query_id": "nlc_union_65",
+      "query_text": "I need to locate additional tables with a row count exceeding 200.",
+      "seed_table": "q_table_25_1_2",
+      "task_type": "union",
+      "nl_condition": "I need to locate additional tables with a row count exceeding 200."
+    },
+    {
+      "query_table": "q_table_79_3_4_1",
+      "query_id": "nlc_union_66",
+      "query_text": "I am searching for more unionable tables with the value of Runner(s)-up being [Ralph_Moffitt|Ralph Moffitt] and containing the keyword [England|England].",
+      "seed_table": "q_table_79_3_4_1",
+      "task_type": "union",
+      "nl_condition": "I am searching for more unionable tables with the value of Runner(s)-up being [Ralph_Moffitt|Ralph Moffitt] and containing the keyword [England|England]."
+    },
+    {
+      "query_table": "q_table_79_1_3",
+      "query_id": "nlc_union_67",
+      "query_text": "Can you find more tables that related to keyword: [Wales|Wales].",
+      "seed_table": "q_table_79_1_3",
+      "task_type": "union",
+      "nl_condition": "Can you find more tables that related to keyword: [Wales|Wales]."
+    },
+    {
+      "query_table": "q_table_36_2_2_1",
+      "query_id": "nlc_union_68",
+      "query_text": "I want to find more unionable tables, and these tables have Width (cm) larger than 0.812.",
+      "seed_table": "q_table_36_2_2_1",
+      "task_type": "union",
+      "nl_condition": "I want to find more unionable tables, and these tables have Width (cm) larger than 0.812."
+    },
+    {
+      "query_table": "q_table_103_3_4_1",
+      "query_id": "nlc_union_70",
+      "query_text": "I am searching for more unionable tables with the value of CAMIS being 50094090 and containing the keyword SUSHI FUSSION.",
+      "seed_table": "q_table_103_3_4_1",
+      "task_type": "union",
+      "nl_condition": "I am searching for more unionable tables with the value of CAMIS being 50094090 and containing the keyword SUSHI FUSSION."
+    },
+    {
+      "query_table": "q_table_103_3_4_2",
+      "query_id": "nlc_union_71",
+      "query_text": "I need to locate additional unionable tables where the value of CUISINE DESCRIPTION is Barbecue and the tables contain the keyword 133-35.",
+      "seed_table": "q_table_103_3_4_2",
+      "task_type": "union",
+      "nl_condition": "I need to locate additional unionable tables where the value of CUISINE DESCRIPTION is Barbecue and the tables contain the keyword 133-35."
+    },
+    {
+      "query_table": "q_table_103_3_4_3",
+      "query_id": "nlc_union_72",
+      "query_text": "I need to locate additional unionable tables where the value of NTA is BK26 and the tables contain the keyword 41207580.",
+      "seed_table": "q_table_103_3_4_3",
+      "task_type": "union",
+      "nl_condition": "I need to locate additional unionable tables where the value of NTA is BK26 and the tables contain the keyword 41207580."
+    },
+    {
+      "query_table": "q_table_103_1_3",
+      "query_id": "nlc_union_73",
+      "query_text": "Can you find more tables that related to keyword: Pizza.",
+      "seed_table": "q_table_103_1_3",
+      "task_type": "union",
+      "nl_condition": "Can you find more tables that related to keyword: Pizza."
+    },
+    {
+      "query_table": "q_table_103_3_1_1",
+      "query_id": "nlc_union_74",
+      "query_text": "I am looking for further large-scale tables that can be unioned, having more than 100 rows, and containing the keyword: DIDI DUMPLING.",
+      "seed_table": "q_table_103_3_1_1",
+      "task_type": "union",
+      "nl_condition": "I am looking for further large-scale tables that can be unioned, having more than 100 rows, and containing the keyword: DIDI DUMPLING."
+    },
+    {
+      "query_table": "q_table_103_3_1_2",
+      "query_id": "nlc_union_75",
+      "query_text": "I need to identify additional large-scale unionable tables with over 100 rows, which include the keyword: Frozen Desserts.",
+      "seed_table": "q_table_103_3_1_2",
+      "task_type": "union",
+      "nl_condition": "I need to identify additional large-scale unionable tables with over 100 rows, which include the keyword: Frozen Desserts."
+    },
+    {
+      "query_table": "q_table_103_3_1_3",
+      "query_id": "nlc_union_76",
+      "query_text": "I need to identify additional large-scale unionable tables with over 100 rows, which include the keyword: 7187211110.",
+      "seed_table": "q_table_103_3_1_3",
+      "task_type": "union",
+      "nl_condition": "I need to identify additional large-scale unionable tables with over 100 rows, which include the keyword: 7187211110."
+    },
+    {
+      "query_table": "q_table_149_4_3_1",
+      "query_id": "nlc_union_77",
+      "query_text": "I want to find more unionable tables with Born being 1960-08-02and the Born is before 1974-08-02 00:00:00.",
+      "seed_table": "q_table_149_4_3_1",
+      "task_type": "union",
+      "nl_condition": "I want to find more unionable tables with Born being 1960-08-02and the Born is before 1974-08-02 00:00:00."
+    },
+    {
+      "query_table": "q_table_140_4_3_1",
+      "query_id": "nlc_union_78",
+      "query_text": "I need to identify more tables that are unionable, with the value of Procurement (Merchant) Category being Human Resources  and the Purchase Date is before 2017-04-20 00:00:00.",
+      "seed_table": "q_table_140_4_3_1",
+      "task_type": "union",
+      "nl_condition": "I need to identify more tables that are unionable, with the value of Procurement (Merchant) Category being Human Resources  and the Purchase Date is before 2017-04-20 00:00:00."
+    },
+    {
+      "query_table": "q_table_45_2_2_1",
+      "query_id": "nlc_union_79",
+      "query_text": "Can you provide additional unionable tables where the Reception is approximately 542?",
+      "seed_table": "q_table_45_2_2_1",
+      "task_type": "union",
+      "nl_condition": "Can you provide additional unionable tables where the Reception is approximately 542?"
+    },
+    {
+      "query_table": "q_table_111_1_3",
+      "query_id": "nlc_union_80",
+      "query_text": "I want to find more unionable tables, and these tables contain keyword: -1.with the topic related to Hockey_Player_Stats",
+      "seed_table": "q_table_111_1_3",
+      "task_type": "union",
+      "nl_condition": "I want to find more unionable tables, and these tables contain keyword: -1.with the topic related to Hockey_Player_Stats"
+    },
+    {
+      "query_table": "q_table_74_2_2_1",
+      "query_id": "nlc_union_82",
+      "query_text": "I want to find more unionable tables, and these tables have Index Gain around 1.with the topic related to Investment_Performance",
+      "seed_table": "q_table_74_2_2_1",
+      "task_type": "union",
+      "nl_condition": "I want to find more unionable tables, and these tables have Index Gain around 1.with the topic related to Investment_Performance"
+    },
+    {
+      "query_table": "q_table_74_2_3_1",
+      "query_id": "nlc_union_83",
+      "query_text": "I want to find further tables that can be combined through union,  and these tables have Start Date later than 2012-03-22 13:12:36.496297.",
+      "seed_table": "q_table_74_2_3_1",
+      "task_type": "union",
+      "nl_condition": "I want to find further tables that can be combined through union,  and these tables have Start Date later than 2012-03-22 13:12:36.496297."
+    },
+    {
+      "query_table": "q_table_74_3_6_1",
+      "query_id": "nlc_union_84",
+      "query_text": "I'm seeking out additional unionable tables where Start Date is roughly 08/14/2011 and the tables include the keyword +92.66%.",
+      "seed_table": "q_table_74_3_6_1",
+      "task_type": "union",
+      "nl_condition": "I'm seeking out additional unionable tables where Start Date is roughly 08/14/2011 and the tables include the keyword +92.66%."
+    },
+    {
+      "query_table": "q_table_11_1_3",
+      "query_id": "nlc_union_85",
+      "query_text": "I am looking for additional tables that cover keyword: 12.",
+      "seed_table": "q_table_11_1_3",
+      "task_type": "union",
+      "nl_condition": "I am looking for additional tables that cover keyword: 12."
+    },
+    {
+      "query_table": "q_table_109_1_3",
+      "query_id": "nlc_union_86",
+      "query_text": "I am looking for additional tables that cover keyword: LA.with the topic related to calls_historic_data",
+      "seed_table": "q_table_109_1_3",
+      "task_type": "union",
+      "nl_condition": "I am looking for additional tables that cover keyword: LA.with the topic related to calls_historic_data"
+    },
+    {
+      "query_table": "q_table_109_3_6_1",
+      "query_id": "nlc_union_87",
+      "query_text": "I'm investigating further unionable tables, where ticket_created_date_time is in the vicinity of 10/10/2015 07:59:40 AM and the tables have the keyword 101000728539.",
+      "seed_table": "q_table_109_3_6_1",
+      "task_type": "union",
+      "nl_condition": "I'm investigating further unionable tables, where ticket_created_date_time is in the vicinity of 10/10/2015 07:59:40 AM and the tables have the keyword 101000728539."
+    },
+    {
+      "query_table": "q_table_109_3_6_2",
+      "query_id": "nlc_union_88",
+      "query_text": "I am exploring further unionable tables, where ticket_closed_date_time is more recent than 2014-08-22 00:56:57.489592 and the tables incorporate the keyword 11/30/2016 01:33:09 PM.",
+      "seed_table": "q_table_109_3_6_2",
+      "task_type": "union",
+      "nl_condition": "I am exploring further unionable tables, where ticket_closed_date_time is more recent than 2014-08-22 00:56:57.489592 and the tables incorporate the keyword 11/30/2016 01:33:09 PM."
+    },
+    {
+      "query_table": "q_table_109_2_3_1",
+      "query_id": "nlc_union_89",
+      "query_text": "I want to find more unionable tables, and these tables have ticket_created_date_time before 2014-11-13 21:57:14.263499.",
+      "seed_table": "q_table_109_2_3_1",
+      "task_type": "union",
+      "nl_condition": "I want to find more unionable tables, and these tables have ticket_created_date_time before 2014-11-13 21:57:14.263499."
+    },
+    {
+      "query_table": "q_table_109_2_3_2",
+      "query_id": "nlc_union_90",
+      "query_text": "I am looking for more unionable datasets that include ticket_closed_date_time dates before 2014-10-19 14:19:22.363840.with the topic related to calls_historic_data",
+      "seed_table": "q_table_109_2_3_2",
+      "task_type": "union",
+      "nl_condition": "I am looking for more unionable datasets that include ticket_closed_date_time dates before 2014-10-19 14:19:22.363840.with the topic related to calls_historic_data"
+    },
+    {
+      "query_table": "q_table_109_1_2",
+      "query_id": "nlc_union_91",
+      "query_text": "I want to find more unionable tables with the number of rows larger than 200.",
+      "seed_table": "q_table_109_1_2",
+      "task_type": "union",
+      "nl_condition": "I want to find more unionable tables with the number of rows larger than 200."
+    },
+    {
+      "query_table": "q_table_109_3_3_1",
+      "query_id": "nlc_union_92",
+      "query_text": "I am looking for more unionable datasets that include ticket_created_date_time dates following 2017-08-12 02:33:59.855801 and the tables include more than 100 rows.",
+      "seed_table": "q_table_109_3_3_1",
+      "task_type": "union",
+      "nl_condition": "I am looking for more unionable datasets that include ticket_created_date_time dates following 2017-08-12 02:33:59.855801 and the tables include more than 100 rows."
+    },
+    {
+      "query_table": "q_table_109_3_3_2",
+      "query_id": "nlc_union_93",
+      "query_text": "I need to identify more unionable tables with ticket_closed_date_time around 12/11/2015 09:54:32 PM and having over 100 rows.",
+      "seed_table": "q_table_109_3_3_2",
+      "task_type": "union",
+      "nl_condition": "I need to identify more unionable tables with ticket_closed_date_time around 12/11/2015 09:54:32 PM and having over 100 rows."
+    },
+    {
+      "query_table": "q_table_20_2_2_1",
+      "query_id": "nlc_union_94",
+      "query_text": "I want to find more unionable tables, and these tables have Write Speed around 9with the topic related to Storage_Device_Performance",
+      "seed_table": "q_table_20_2_2_1",
+      "task_type": "union",
+      "nl_condition": "I want to find more unionable tables, and these tables have Write Speed around 9with the topic related to Storage_Device_Performance"
+    },
+    {
+      "query_table": "q_table_141_4_2_1",
+      "query_id": "nlc_union_95",
+      "query_text": "I need to locate further tables that can be combined through union, where the value of # is 179and have an average # of 152.",
+      "seed_table": "q_table_141_4_2_1",
+      "task_type": "union",
+      "nl_condition": "I need to locate further tables that can be combined through union, where the value of # is 179and have an average # of 152."
+    },
+    {
+      "query_table": "q_table_141_1_3",
+      "query_id": "nlc_union_96",
+      "query_text": "I want to find more unionable tables, and these tables contain keyword: No.",
+      "seed_table": "q_table_141_1_3",
+      "task_type": "union",
+      "nl_condition": "I want to find more unionable tables, and these tables contain keyword: No."
+    },
+    {
+      "query_table": "q_table_99_2_1_1",
+      "query_id": "nlc_union_97",
+      "query_text": "I want to find more unionable tables with Measurement_26 being 32.0.with the topic related to Experimental_Data",
+      "seed_table": "q_table_99_2_1_1",
+      "task_type": "union",
+      "nl_condition": "I want to find more unionable tables with Measurement_26 being 32.0.with the topic related to Experimental_Data"
+    },
+    {
+      "query_table": "q_table_116_2_3_1",
+      "query_id": "nlc_union_98",
+      "query_text": "Can you provide additional unionable tables where the Previous Year is after 1927-12-22 03:59:26.193820?",
+      "seed_table": "q_table_116_2_3_1",
+      "task_type": "union",
+      "nl_condition": "Can you provide additional unionable tables where the Previous Year is after 1927-12-22 03:59:26.193820?"
+    },
+    {
+      "query_table": "q_table_155_2_1_1",
+      "query_id": "nlc_union_99",
+      "query_text": "I need to identify more tables that are unionable, with the value of Lyricist being [Isobel_Lennart|Isobel Lennart].",
+      "seed_table": "q_table_155_2_1_1",
+      "task_type": "union",
+      "nl_condition": "I need to identify more tables that are unionable, with the value of Lyricist being [Isobel_Lennart|Isobel Lennart]."
+    },
+    {
+      "query_table": "q_table_21_1_3",
+      "query_id": "nlc_union_100",
+      "query_text": "Can you find more tables that related to keyword: 0.with the topic related to Baseball_Player_Statistics",
+      "seed_table": "q_table_21_1_3",
+      "task_type": "union",
+      "nl_condition": "Can you find more tables that related to keyword: 0.with the topic related to Baseball_Player_Statistics"
+    },
+    {
+      "query_table": "q_table_152_3_5_1",
+      "query_id": "nlc_union_101",
+      "query_text": "I am looking for further unionable tables, where Page is around 53 and the tables have the keyword 56.",
+      "seed_table": "q_table_152_3_5_1",
+      "task_type": "union",
+      "nl_condition": "I am looking for further unionable tables, where Page is around 53 and the tables have the keyword 56."
+    },
+    {
+      "query_table": "q_table_152_1_3",
+      "query_id": "nlc_union_102",
+      "query_text": "I am looking for additional tables that cover keyword: 18 Jan 1919.",
+      "seed_table": "q_table_152_1_3",
+      "task_type": "union",
+      "nl_condition": "I am looking for additional tables that cover keyword: 18 Jan 1919."
+    },
+    {
+      "query_table": "q_table_152_3_6_1",
+      "query_id": "nlc_union_103",
+      "query_text": "I'm seeking out additional unionable tables where Date of Death is roughly 24 Jan 1905 and the tables include the keyword Hirschey.",
+      "seed_table": "q_table_152_3_6_1",
+      "task_type": "union",
+      "nl_condition": "I'm seeking out additional unionable tables where Date of Death is roughly 24 Jan 1905 and the tables include the keyword Hirschey."
+    },
+    {
+      "query_table": "q_table_152_3_1_1",
+      "query_id": "nlc_union_104",
+      "query_text": "I need to identify additional large-scale unionable tables with over 100 rows, which include the keyword: Milton M.",
+      "seed_table": "q_table_152_3_1_1",
+      "task_type": "union",
+      "nl_condition": "I need to identify additional large-scale unionable tables with over 100 rows, which include the keyword: Milton M."
+    },
+    {
+      "query_table": "q_table_152_1_2",
+      "query_id": "nlc_union_105",
+      "query_text": "I want to find more unionable tables with the number of rows larger than 200.",
+      "seed_table": "q_table_152_1_2",
+      "task_type": "union",
+      "nl_condition": "I want to find more unionable tables with the number of rows larger than 200."
+    },
+    {
+      "query_table": "q_table_96_4_2_1",
+      "query_id": "nlc_union_106",
+      "query_text": "I want to find more unionable tables with Hometown being Pittsburg, KSand include No values below 27.0.",
+      "seed_table": "q_table_96_4_2_1",
+      "task_type": "union",
+      "nl_condition": "I want to find more unionable tables with Hometown being Pittsburg, KSand include No values below 27.0."
+    },
+    {
+      "query_table": "q_table_96_1_3",
+      "query_id": "nlc_union_107",
+      "query_text": "Can you find more tables that related to keyword: 200.",
+      "seed_table": "q_table_96_1_3",
+      "task_type": "union",
+      "nl_condition": "Can you find more tables that related to keyword: 200."
+    },
+    {
+      "query_table": "q_table_33_3_6_1",
+      "query_id": "nlc_union_108",
+      "query_text": "I am on the lookout for additional unionable tables where Event Date is subsequent to 1842-09-26 07:09:06.435902 and the tables feature the keyword Husbandman.",
+      "seed_table": "q_table_33_3_6_1",
+      "task_type": "union",
+      "nl_condition": "I am on the lookout for additional unionable tables where Event Date is subsequent to 1842-09-26 07:09:06.435902 and the tables feature the keyword Husbandman."
+    },
+    {
+      "query_table": "q_table_33_2_3_1",
+      "query_id": "nlc_union_109",
+      "query_text": "I am looking for more unionable datasets that include Event Date dates following 1844-09-09 09:22:22.664353.with the topic related to Birth_Records",
+      "seed_table": "q_table_33_2_3_1",
+      "task_type": "union",
+      "nl_condition": "I am looking for more unionable datasets that include Event Date dates following 1844-09-09 09:22:22.664353.with the topic related to Birth_Records"
+    },
+    {
+      "query_table": "q_table_26_1_3",
+      "query_id": "nlc_union_110",
+      "query_text": "Can you find more tables that related to keyword: 57.0.",
+      "seed_table": "q_table_26_1_3",
+      "task_type": "union",
+      "nl_condition": "Can you find more tables that related to keyword: 57.0."
+    },
+    {
+      "query_table": "q_table_78_2_2_1",
+      "query_id": "nlc_union_112",
+      "query_text": "I want to find more unionable tables, and these tables have Behind Leader around -500.",
+      "seed_table": "q_table_78_2_2_1",
+      "task_type": "union",
+      "nl_condition": "I want to find more unionable tables, and these tables have Behind Leader around -500."
+    }
+  ],
+  "ground_truth": {
+    "1": [
+      {
+        "table_id": "dl_table_145_3_4_1",
+        "relevance_score": 2
+      }
+    ],
+    "2": [
+      {
+        "table_id": "dl_table_145_3_4_2",
+        "relevance_score": 2
+      }
+    ],
+    "3": [
+      {
+        "table_id": "dl_table_145_1_3_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_145_1_3_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_145_1_3_3",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_145_1_3_4",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_145_1_3_5",
+        "relevance_score": 2
+      }
+    ],
+    "4": [
+      {
+        "table_id": "dl_table_145_3_6_1",
+        "relevance_score": 2
+      }
+    ],
+    "5": [
+      {
+        "table_id": "dl_table_145_3_6_2",
+        "relevance_score": 2
+      }
+    ],
+    "6": [
+      {
+        "table_id": "dl_table_155_3_4_1",
+        "relevance_score": 2
+      }
+    ],
+    "7": [
+      {
+        "table_id": "dl_table_155_1_1_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_155_1_1_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_155_1_1_3",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_155_1_1_4",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_155_1_1_5",
+        "relevance_score": 2
+      }
+    ],
+    "8": [
+      {
+        "table_id": "dl_table_38_4_1_1_cv_1_3_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_38_4_1_1_cv_1_3_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_38_4_1_1_cv_1_3_3",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_38_4_1_1_cv_1_3_4",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_38_4_1_1_cv_1_3_5",
+        "relevance_score": 2
+      }
+    ],
+    "10": [
+      {
+        "table_id": "dl_table_38_1_2_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_38_1_2_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_38_1_2_3",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_38_1_2_4",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_38_1_2_5",
+        "relevance_score": 2
+      }
+    ],
+    "11": [
+      {
+        "table_id": "dl_table_72_3_4_1",
+        "relevance_score": 2
+      }
+    ],
+    "12": [
+      {
+        "table_id": "dl_table_72_1_1_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_72_1_1_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_72_1_1_3",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_72_1_1_4",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_72_1_1_5",
+        "relevance_score": 2
+      }
+    ],
+    "16": [
+      {
+        "table_id": "dl_table_139_3_4_1",
+        "relevance_score": 2
+      }
+    ],
+    "17": [
+      {
+        "table_id": "dl_table_139_1_1_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_139_1_1_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_139_1_1_3",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_139_1_1_4",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_139_1_1_5",
+        "relevance_score": 2
+      }
+    ],
+    "19": [
+      {
+        "table_id": "dl_table_1_2_3_1_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_1_2_3_1_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_1_2_3_1_3",
+        "relevance_score": 2
+      }
+    ],
+    "20": [
+      {
+        "table_id": "dl_table_1_2_3_2_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_1_2_3_2_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_1_2_3_2_3",
+        "relevance_score": 2
+      }
+    ],
+    "21": [
+      {
+        "table_id": "dl_table_1_2_3_3_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_1_2_3_3_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_1_2_3_3_3",
+        "relevance_score": 2
+      }
+    ],
+    "22": [
+      {
+        "table_id": "dl_table_1_2_3_4_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_1_2_3_4_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_1_2_3_4_3",
+        "relevance_score": 2
+      }
+    ],
+    "23": [
+      {
+        "table_id": "dl_table_1_2_3_5_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_1_2_3_5_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_1_2_3_5_3",
+        "relevance_score": 2
+      }
+    ],
+    "24": [
+      {
+        "table_id": "dl_table_1_2_3_6_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_1_2_3_6_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_1_2_3_6_3",
+        "relevance_score": 2
+      }
+    ],
+    "25": [
+      {
+        "table_id": "dl_table_1_2_3_7_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_1_2_3_7_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_1_2_3_7_3",
+        "relevance_score": 2
+      }
+    ],
+    "26": [
+      {
+        "table_id": "dl_table_1_3_6_1",
+        "relevance_score": 2
+      }
+    ],
+    "27": [
+      {
+        "table_id": "dl_table_1_3_6_2",
+        "relevance_score": 2
+      }
+    ],
+    "28": [
+      {
+        "table_id": "dl_table_1_3_6_3",
+        "relevance_score": 2
+      }
+    ],
+    "29": [
+      {
+        "table_id": "dl_table_1_3_6_4",
+        "relevance_score": 2
+      }
+    ],
+    "30": [
+      {
+        "table_id": "dl_table_1_3_6_5",
+        "relevance_score": 2
+      }
+    ],
+    "31": [
+      {
+        "table_id": "dl_table_1_3_6_6",
+        "relevance_score": 2
+      }
+    ],
+    "32": [
+      {
+        "table_id": "dl_table_1_3_6_7",
+        "relevance_score": 2
+      }
+    ],
+    "34": [
+      {
+        "table_id": "dl_table_35_2_3_1_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_35_2_3_1_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_35_2_3_1_3",
+        "relevance_score": 2
+      }
+    ],
+    "35": [
+      {
+        "table_id": "dl_table_27_3_4_1",
+        "relevance_score": 2
+      }
+    ],
+    "36": [
+      {
+        "table_id": "dl_table_27_3_4_2",
+        "relevance_score": 2
+      }
+    ],
+    "37": [
+      {
+        "table_id": "dl_table_27_1_3_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_27_1_3_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_27_1_3_3",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_27_1_3_4",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_27_1_3_5",
+        "relevance_score": 2
+      }
+    ],
+    "38": [
+      {
+        "table_id": "dl_table_125_2_1_1_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_125_2_1_1_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_125_2_1_1_3",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_125_2_1_1_4",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_125_2_1_1_5",
+        "relevance_score": 2
+      }
+    ],
+    "39": [
+      {
+        "table_id": "dl_table_125_3_1_1",
+        "relevance_score": 2
+      }
+    ],
+    "40": [
+      {
+        "table_id": "dl_table_125_1_2_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_125_1_2_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_125_1_2_3",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_125_1_2_4",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_125_1_2_5",
+        "relevance_score": 2
+      }
+    ],
+    "41": [
+      {
+        "table_id": "dl_table_23_1_3_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_23_1_3_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_23_1_3_3",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_23_1_3_4",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_23_1_3_5",
+        "relevance_score": 2
+      }
+    ],
+    "42": [
+      {
+        "table_id": "dl_table_23_1_2_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_23_1_2_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_23_1_2_3",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_23_1_2_4",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_23_1_2_5",
+        "relevance_score": 2
+      }
+    ],
+    "43": [
+      {
+        "table_id": "dl_table_104_3_3_1",
+        "relevance_score": 2
+      }
+    ],
+    "44": [
+      {
+        "table_id": "dl_table_104_2_3_1_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_104_2_3_1_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_104_2_3_1_3",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_104_4_1_1_cv_1_3_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_104_4_1_1_cv_1_3_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_104_4_1_1_cv_1_3_3",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_104_4_1_1_cv_1_3_4",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_104_4_1_1_cv_1_3_5",
+        "relevance_score": 2
+      }
+    ],
+    "46": [
+      {
+        "table_id": "dl_table_104_1_2_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_104_1_2_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_104_1_2_3",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_104_1_2_4",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_104_1_2_5",
+        "relevance_score": 2
+      }
+    ],
+    "47": [
+      {
+        "table_id": "dl_table_28_2_2_1_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_28_2_2_1_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_28_2_2_1_3",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_28_2_2_1_4",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_28_2_2_1_5",
+        "relevance_score": 2
+      }
+    ],
+    "48": [
+      {
+        "table_id": "dl_table_54_2_2_1_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_54_2_2_1_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_54_2_2_1_3",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_54_2_2_1_4",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_54_2_2_1_5",
+        "relevance_score": 2
+      }
+    ],
+    "49": [
+      {
+        "table_id": "dl_table_62_2_2_1_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_62_2_2_1_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_62_2_2_1_3",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_62_2_2_1_4",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_62_2_2_1_5",
+        "relevance_score": 2
+      }
+    ],
+    "50": [
+      {
+        "table_id": "dl_table_62_3_2_1",
+        "relevance_score": 2
+      }
+    ],
+    "51": [
+      {
+        "table_id": "dl_table_62_3_2_2",
+        "relevance_score": 2
+      }
+    ],
+    "52": [
+      {
+        "table_id": "dl_table_62_3_2_3",
+        "relevance_score": 2
+      }
+    ],
+    "53": [
+      {
+        "table_id": "dl_table_62_3_2_4",
+        "relevance_score": 2
+      }
+    ],
+    "54": [
+      {
+        "table_id": "dl_table_62_3_2_5",
+        "relevance_score": 2
+      }
+    ],
+    "55": [
+      {
+        "table_id": "dl_table_62_3_2_6",
+        "relevance_score": 2
+      }
+    ],
+    "56": [
+      {
+        "table_id": "dl_table_24_1_3_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_24_1_3_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_24_1_3_3",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_24_1_3_4",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_24_1_3_5",
+        "relevance_score": 2
+      }
+    ],
+    "58": [
+      {
+        "table_id": "dl_table_64_2_2_1_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_64_2_2_1_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_64_2_2_1_3",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_64_2_2_1_4",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_64_2_2_1_5",
+        "relevance_score": 2
+      }
+    ],
+    "60": [
+      {
+        "table_id": "dl_table_66_3_4_1",
+        "relevance_score": 2
+      }
+    ],
+    "61": [
+      {
+        "table_id": "dl_table_66_1_3_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_66_1_3_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_66_1_3_3",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_66_1_3_4",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_66_1_3_5",
+        "relevance_score": 2
+      }
+    ],
+    "62": [
+      {
+        "table_id": "dl_table_46_2_2_1_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_46_2_2_1_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_46_2_2_1_3",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_46_2_2_1_4",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_46_2_2_1_5",
+        "relevance_score": 2
+      }
+    ],
+    "63": [
+      {
+        "table_id": "dl_table_25_4_1_1_cv_1_3_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_25_4_1_1_cv_1_3_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_25_4_1_1_cv_1_3_3",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_25_4_1_1_cv_1_3_4",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_25_4_1_1_cv_1_3_5",
+        "relevance_score": 2
+      }
+    ],
+    "65": [
+      {
+        "table_id": "dl_table_25_1_2_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_25_1_2_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_25_1_2_3",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_25_1_2_4",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_25_1_2_5",
+        "relevance_score": 2
+      }
+    ],
+    "66": [
+      {
+        "table_id": "dl_table_79_3_4_1",
+        "relevance_score": 2
+      }
+    ],
+    "67": [
+      {
+        "table_id": "dl_table_79_1_3_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_79_1_3_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_79_1_3_3",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_79_1_3_4",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_79_1_3_5",
+        "relevance_score": 2
+      }
+    ],
+    "68": [
+      {
+        "table_id": "dl_table_36_2_2_1_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_36_2_2_1_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_36_2_2_1_3",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_36_2_2_1_4",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_36_2_2_1_5",
+        "relevance_score": 2
+      }
+    ],
+    "70": [
+      {
+        "table_id": "dl_table_103_3_4_1",
+        "relevance_score": 2
+      }
+    ],
+    "71": [
+      {
+        "table_id": "dl_table_103_3_4_2",
+        "relevance_score": 2
+      }
+    ],
+    "72": [
+      {
+        "table_id": "dl_table_103_3_4_3",
+        "relevance_score": 2
+      }
+    ],
+    "73": [
+      {
+        "table_id": "dl_table_103_1_3_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_103_1_3_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_103_1_3_3",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_103_1_3_4",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_103_1_3_5",
+        "relevance_score": 2
+      }
+    ],
+    "74": [
+      {
+        "table_id": "dl_table_103_3_1_1",
+        "relevance_score": 2
+      }
+    ],
+    "75": [
+      {
+        "table_id": "dl_table_103_3_1_2",
+        "relevance_score": 2
+      }
+    ],
+    "76": [
+      {
+        "table_id": "dl_table_103_3_1_3",
+        "relevance_score": 2
+      }
+    ],
+    "77": [
+      {
+        "table_id": "dl_table_149_4_3_1_1_cate_2_1_1_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_149_4_3_1_1_cate_2_1_1_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_149_4_3_1_1_cate_2_1_1_3",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_149_4_3_1_1_cate_2_1_1_4",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_149_4_3_1_1_cate_2_1_1_5",
+        "relevance_score": 2
+      }
+    ],
+    "78": [
+      {
+        "table_id": "dl_table_140_4_3_1_1_cate_2_1_1_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_140_4_3_1_1_cate_2_1_1_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_140_4_3_1_1_cate_2_1_1_3",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_140_4_3_1_1_cate_2_1_1_4",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_140_4_3_1_1_cate_2_1_1_5",
+        "relevance_score": 2
+      }
+    ],
+    "79": [
+      {
+        "table_id": "dl_table_45_2_2_1_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_45_2_2_1_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_45_2_2_1_3",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_45_2_2_1_4",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_45_2_2_1_5",
+        "relevance_score": 2
+      }
+    ],
+    "80": [
+      {
+        "table_id": "dl_table_111_1_3_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_111_1_3_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_111_1_3_3",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_111_1_3_4",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_111_1_3_5",
+        "relevance_score": 2
+      }
+    ],
+    "82": [
+      {
+        "table_id": "dl_table_74_2_2_1_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_74_2_2_1_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_74_2_2_1_3",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_74_2_2_1_4",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_74_2_2_1_5",
+        "relevance_score": 2
+      }
+    ],
+    "83": [
+      {
+        "table_id": "dl_table_74_2_3_1_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_74_2_3_1_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_74_2_3_1_3",
+        "relevance_score": 2
+      }
+    ],
+    "84": [
+      {
+        "table_id": "dl_table_74_3_6_1",
+        "relevance_score": 2
+      }
+    ],
+    "85": [
+      {
+        "table_id": "dl_table_11_1_3_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_11_1_3_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_11_1_3_3",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_11_1_3_4",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_11_1_3_5",
+        "relevance_score": 2
+      }
+    ],
+    "86": [
+      {
+        "table_id": "dl_table_109_1_3_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_109_1_3_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_109_1_3_3",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_109_1_3_4",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_109_1_3_5",
+        "relevance_score": 2
+      }
+    ],
+    "87": [
+      {
+        "table_id": "dl_table_109_3_6_1",
+        "relevance_score": 2
+      }
+    ],
+    "88": [
+      {
+        "table_id": "dl_table_109_3_6_2",
+        "relevance_score": 2
+      }
+    ],
+    "89": [
+      {
+        "table_id": "dl_table_109_2_3_1_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_109_2_3_1_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_109_2_3_1_3",
+        "relevance_score": 2
+      }
+    ],
+    "90": [
+      {
+        "table_id": "dl_table_109_2_3_2_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_109_2_3_2_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_109_2_3_2_3",
+        "relevance_score": 2
+      }
+    ],
+    "91": [
+      {
+        "table_id": "dl_table_109_1_2_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_109_1_2_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_109_1_2_3",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_109_1_2_4",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_109_1_2_5",
+        "relevance_score": 2
+      }
+    ],
+    "92": [
+      {
+        "table_id": "dl_table_109_3_3_1",
+        "relevance_score": 2
+      }
+    ],
+    "93": [
+      {
+        "table_id": "dl_table_109_3_3_2",
+        "relevance_score": 2
+      }
+    ],
+    "94": [
+      {
+        "table_id": "dl_table_20_2_2_1_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_20_2_2_1_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_20_2_2_1_3",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_20_2_2_1_4",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_20_2_2_1_5",
+        "relevance_score": 2
+      }
+    ],
+    "95": [
+      {
+        "table_id": "dl_table_141_4_2_1_1_cate_2_1_1_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_141_4_2_1_1_cate_2_1_1_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_141_4_2_1_1_cate_2_1_1_3",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_141_4_2_1_1_cate_2_1_1_4",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_141_4_2_1_1_cate_2_1_1_5",
+        "relevance_score": 2
+      }
+    ],
+    "96": [
+      {
+        "table_id": "dl_table_141_1_3_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_141_1_3_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_141_1_3_3",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_141_1_3_4",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_141_1_3_5",
+        "relevance_score": 2
+      }
+    ],
+    "97": [
+      {
+        "table_id": "dl_table_99_2_1_1_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_99_2_1_1_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_99_2_1_1_3",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_99_2_1_1_4",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_99_2_1_1_5",
+        "relevance_score": 2
+      }
+    ],
+    "98": [
+      {
+        "table_id": "dl_table_116_2_3_1_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_116_2_3_1_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_116_2_3_1_3",
+        "relevance_score": 2
+      }
+    ],
+    "99": [
+      {
+        "table_id": "dl_table_155_2_1_1_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_155_2_1_1_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_155_2_1_1_3",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_155_2_1_1_4",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_155_2_1_1_5",
+        "relevance_score": 2
+      }
+    ],
+    "100": [
+      {
+        "table_id": "dl_table_21_1_3_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_21_1_3_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_21_1_3_3",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_21_1_3_4",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_21_1_3_5",
+        "relevance_score": 2
+      }
+    ],
+    "101": [
+      {
+        "table_id": "dl_table_152_3_5_1",
+        "relevance_score": 2
+      }
+    ],
+    "102": [
+      {
+        "table_id": "dl_table_152_1_3_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_152_1_3_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_152_1_3_3",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_152_1_3_4",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_152_1_3_5",
+        "relevance_score": 2
+      }
+    ],
+    "103": [
+      {
+        "table_id": "dl_table_152_3_6_1",
+        "relevance_score": 2
+      }
+    ],
+    "104": [
+      {
+        "table_id": "dl_table_152_3_1_1",
+        "relevance_score": 2
+      }
+    ],
+    "105": [
+      {
+        "table_id": "dl_table_152_1_2_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_152_1_2_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_152_1_2_3",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_152_1_2_4",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_152_1_2_5",
+        "relevance_score": 2
+      }
+    ],
+    "106": [
+      {
+        "table_id": "dl_table_96_4_2_1_1_cate_2_1_1_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_96_4_2_1_1_cate_2_1_1_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_96_4_2_1_1_cate_2_1_1_3",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_96_4_2_1_1_cate_2_1_1_4",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_96_4_2_1_1_cate_2_1_1_5",
+        "relevance_score": 2
+      }
+    ],
+    "107": [
+      {
+        "table_id": "dl_table_96_1_3_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_96_1_3_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_96_1_3_3",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_96_1_3_4",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_96_1_3_5",
+        "relevance_score": 2
+      }
+    ],
+    "108": [
+      {
+        "table_id": "dl_table_33_3_6_1",
+        "relevance_score": 2
+      }
+    ],
+    "109": [
+      {
+        "table_id": "dl_table_33_2_3_1_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_33_2_3_1_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_33_2_3_1_3",
+        "relevance_score": 2
+      }
+    ],
+    "110": [
+      {
+        "table_id": "dl_table_26_1_3_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_26_1_3_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_26_1_3_3",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_26_1_3_4",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_26_1_3_5",
+        "relevance_score": 2
+      }
+    ],
+    "112": [
+      {
+        "table_id": "dl_table_78_2_2_1_1",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_78_2_2_1_2",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_78_2_2_1_3",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_78_2_2_1_4",
+        "relevance_score": 2
+      },
+      {
+        "table_id": "dl_table_78_2_2_1_5",
+        "relevance_score": 2
+      }
+    ]
+  },
+  "total_tables": 7822,
+  "dataset": "nlctables",
+  "task": "union"
+}
