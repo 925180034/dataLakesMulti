@@ -2,7 +2,9 @@ from typing import List, Dict, Any, Optional
 import logging
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
-from src.core.workflow import create_workflow, discover_data
+# from src.core.workflow import create_workflow, discover_data  # Old workflow removed
+from src.core.multi_agent_workflow import create_workflow, DataLakeDiscoveryWorkflow
+# Note: discover_data function no longer exists, needs refactoring if API is used
 from src.core.models import AgentState, TableInfo, ColumnInfo
 from src.config.settings import settings
 

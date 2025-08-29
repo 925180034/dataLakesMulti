@@ -24,6 +24,7 @@ from typing import Dict, List, Any, Tuple, Optional
 import multiprocessing as mp
 from concurrent.futures import ProcessPoolExecutor, as_completed
 import numpy as np
+import tempfile
 
 # 添加项目路径
 sys.path.insert(0, str(Path(__file__).parent))
@@ -51,6 +52,9 @@ os.environ['TOKENIZERS_PARALLELISM'] = 'false'
 # 可配置的最大预测数量（支持@K计算，K最大为10，设置为20留有余量）
 MAX_PREDICTIONS = int(os.environ.get('MAX_PREDICTIONS', '20'))
 logger.info(f"📊 MAX_PREDICTIONS set to {MAX_PREDICTIONS} (supports up to @{MAX_PREDICTIONS//2} evaluation)")
+
+# 全局进程级缓存（每个进程独立）
+_process_resource_cache = {}
 
 
 def load_task_config(task_type: str, dataset_type: str = None) -> Dict[str, Any]:
@@ -86,7 +90,7 @@ def load_task_config(task_type: str, dataset_type: str = None) -> Dict[str, Any]
                 
                 # 扁平化配置，提取关键参数
                 flat_config = {
-                    'llm_confidence_threshold': task_config.get('llm_matcher', {}).get('confidence_threshold', 0.05 if task_type == 'join' else 0.03),
+                    'llm_confidence_threshold': task_config.get('llm_matcher', {}).get('confidence_threshold', 0.01 if task_type == 'join' else 0.01),
                     'aggregator_max_results': task_config.get('aggregator', {}).get('max_results', 20 if task_type == 'join' else 30),
                     'llm_concurrency': 3,
                     'metadata_threshold': task_config.get('metadata_filter', {}).get('column_similarity_threshold', 0.25 if task_type == 'join' else 0.15),
@@ -143,7 +147,7 @@ def load_task_config(task_type: str, dataset_type: str = None) -> Dict[str, Any]
                 
                 # 扁平化配置，提取关键参数
                 flat_config = {
-                    'llm_confidence_threshold': task_config.get('llm_matcher', {}).get('confidence_threshold', 0.05 if task_type == 'join' else 0.03),
+                    'llm_confidence_threshold': task_config.get('llm_matcher', {}).get('confidence_threshold', 0.01 if task_type == 'join' else 0.01),
                     'aggregator_max_results': task_config.get('aggregator', {}).get('max_results', 20 if task_type == 'join' else 30),
                     'llm_concurrency': 3,
                     'metadata_threshold': task_config.get('metadata_filter', {}).get('column_similarity_threshold', 0.25 if task_type == 'join' else 0.15),
@@ -223,7 +227,7 @@ def load_task_config(task_type: str, dataset_type: str = None) -> Dict[str, Any]
                     
                     # 扁平化配置
                     flat_config = {
-                        'llm_confidence_threshold': task_config.get('llm_matcher', {}).get('confidence_threshold', 0.10 if task_type == 'join' else 0.05),
+                        'llm_confidence_threshold': task_config.get('llm_matcher', {}).get('confidence_threshold', 0.01 if task_type == 'join' else 0.01),
                         'aggregator_max_results': task_config.get('aggregator', {}).get('max_results', 20 if task_type == 'join' else 30),
                         'llm_concurrency': 3,
                         'metadata_threshold': task_config.get('metadata_filter', {}).get('column_similarity_threshold', 0.35 if task_type == 'join' else 0.20),
@@ -306,7 +310,7 @@ def load_task_config(task_type: str, dataset_type: str = None) -> Dict[str, Any]
     logger.warning(f"所有配置文件不存在，使用默认{task_type}配置")
     if task_type == 'join':
         return {
-            'llm_confidence_threshold': 0.10,
+            'llm_confidence_threshold': 0.01,  # 降低阈值以允许更多匹配通过
             'aggregator_max_results': 500,
             'llm_concurrency': 3,
             'metadata_threshold': 0.40,
@@ -317,7 +321,7 @@ def load_task_config(task_type: str, dataset_type: str = None) -> Dict[str, Any]
         }
     else:  # union
         return {
-            'llm_confidence_threshold': 0.30,
+            'llm_confidence_threshold': 0.01,  # 降低阈值以允许更多匹配通过
             'aggregator_max_results': 200,
             'llm_concurrency': 3,
             'metadata_threshold': 0.25,
@@ -533,6 +537,8 @@ def initialize_shared_resources_l2(tables: List[Dict], dataset_type: str, task_t
     """初始化L1+L2层共享资源（支持任务特定配置）"""
     logger.info("🚀 初始化L1+L2层共享资源...")
     
+    from src.tools.smd_enhanced_metadata_filter import SMDEnhancedMetadataFilter
+    
     # 如果提供了任务类型，加载任务特定配置
     task_config = {}
     if task_type:
@@ -545,6 +551,17 @@ def initialize_shared_resources_l2(tables: List[Dict], dataset_type: str, task_t
         for t in tables:
             if 'name' not in t and 'table_name' in t:
                 t['name'] = t['table_name']
+    
+    # 初始化元数据过滤器并预构建索引（与L1层相同）
+    metadata_filter = SMDEnhancedMetadataFilter()
+    
+    # 预构建SMD索引（只构建一次，所有查询共享）
+    logger.info(f"📊 预构建SMD索引（{len(tables)}个表）...")
+    metadata_filter.build_index(tables)
+    
+    # 序列化索引以便在进程间共享
+    smd_index_serialized = pickle.dumps(metadata_filter)
+    logger.info(f"✅ SMD索引构建完成，大小: {len(smd_index_serialized) / 1024:.1f}KB")
     
     # 预计算向量索引
     cache_dir = Path("cache") / dataset_type
@@ -566,6 +583,7 @@ def initialize_shared_resources_l2(tables: List[Dict], dataset_type: str, task_t
         'embeddings_path': str(embeddings_file),
         'filter_initialized': True,
         'vector_initialized': True,
+        'smd_index': smd_index_serialized,  # 添加序列化的索引（关键！）
         'task_config': task_config,  # 添加任务配置
         'optimization_config': task_config  # 也作为optimization_config传递
     }
@@ -610,7 +628,7 @@ def initialize_shared_resources_l3(tables: List[Dict], task_type: str, dataset_t
     }
     
     # 初始化工作流（获取优化配置）
-    from src.core.langgraph_workflow import DataLakeDiscoveryWorkflow
+    from src.core.multi_agent_workflow import DataLakeDiscoveryWorkflow
     workflow = DataLakeDiscoveryWorkflow()
     
     # 如果需要原始OptimizerAgent的其他功能，仍然调用它
@@ -671,15 +689,27 @@ def initialize_shared_resources_l3(tables: List[Dict], task_type: str, dataset_t
     return config
 
 
+def load_shared_resources_from_disk(resource_file: str) -> Dict:
+    """从磁盘加载共享资源（每个进程只加载一次）"""
+    global _process_resource_cache
+    
+    if resource_file not in _process_resource_cache:
+        with open(resource_file, 'rb') as f:
+            _process_resource_cache[resource_file] = pickle.load(f)
+    
+    return _process_resource_cache[resource_file]
+
 def process_query_l1(args: Tuple) -> Dict:
     """处理单个查询 - L1层"""
     query, tables, shared_config, cache_file_path = args
     query_table_name = query.get('query_table', '')
     
-    # 使用预构建的SMD索引（通过pickle序列化）
-    if 'smd_index' in shared_config:
-        # 反序列化SMD索引
-        import io
+    # 从磁盘加载共享资源（每个进程只加载一次）
+    if 'resource_file' in shared_config:
+        resources = load_shared_resources_from_disk(shared_config['resource_file'])
+        metadata_filter = resources.get('metadata_filter')
+    elif 'smd_index' in shared_config:
+        # 兼容旧版本
         from src.tools.smd_enhanced_metadata_filter import SMDEnhancedMetadataFilter
         metadata_filter = pickle.loads(shared_config['smd_index'])
     else:
@@ -736,14 +766,24 @@ def process_query_l2(args: Tuple) -> Dict:
     task_config = shared_config.get('optimization_config', {})
     layer_combination = task_config.get('layer_combination', 'intersection')
     
-    # 运行L1+L2层
-    from src.tools.smd_enhanced_metadata_filter import SMDEnhancedMetadataFilter
-    from src.tools.vector_search_tool import VectorSearchTool
-    from src.tools.value_similarity_tool import ValueSimilarityTool
-    
-    metadata_filter = SMDEnhancedMetadataFilter()
-    vector_search = VectorSearchTool()
-    value_similarity = ValueSimilarityTool()
+    # 从磁盘加载共享资源（每个进程只加载一次）
+    if 'resource_file' in shared_config:
+        resources = load_shared_resources_from_disk(shared_config['resource_file'])
+        metadata_filter = resources.get('metadata_filter')
+        vector_search = resources.get('vector_search')
+        value_similarity = resources.get('value_similarity')
+        # 更新task_config以防资源中有更新的配置
+        if 'optimization_config' in resources:
+            task_config.update(resources['optimization_config'])
+    else:
+        # 兼容旧版本
+        from src.tools.smd_enhanced_metadata_filter import SMDEnhancedMetadataFilter
+        from src.tools.vector_search_tool import VectorSearchTool
+        from src.tools.value_similarity_tool import ValueSimilarityTool
+        
+        metadata_filter = SMDEnhancedMetadataFilter()
+        vector_search = VectorSearchTool()
+        value_similarity = ValueSimilarityTool()
     
     # 查找查询表 - 兼容不同数据集的字段名
     query_table = None
@@ -758,12 +798,15 @@ def process_query_l2(args: Tuple) -> Dict:
         result = {'query_table': query_table_name, 'predictions': []}
     else:
         # L1: 元数据过滤（扩大候选集）
-        # 对于OpenData，确保表有name字段再构建索引
-        if any('table_name' in t and 'name' not in t for t in tables):
-            for t in tables:
-                if 'name' not in t and 'table_name' in t:
-                    t['name'] = t['table_name']
-        metadata_filter.build_index(tables)
+        # 如果metadata_filter还没有索引，构建它（每个进程只做一次）
+        if not hasattr(metadata_filter, '_index_built'):
+            # 对于OpenData，确保表有name字段再构建索引
+            if any('table_name' in t and 'name' not in t for t in tables):
+                for t in tables:
+                    if 'name' not in t and 'table_name' in t:
+                        t['name'] = t['table_name']
+            metadata_filter.build_index(tables)
+            metadata_filter._index_built = True
         
         # 使用配置中的阈值（WebTable会更低）
         metadata_threshold = task_config.get('metadata_threshold', 0.05)
@@ -894,190 +937,220 @@ def process_query_l2(args: Tuple) -> Dict:
     return result
 
 
-def process_query_l3(args: Tuple) -> Dict:
-    """处理单个查询 - 完整三层（优化版：任务特定优化和boost factors）"""
-    query, tables, shared_config, cache_file_path = args
-    query_table_name = query.get('query_table', '')
-    task_type = query.get('task_type', shared_config.get('task_type', 'join'))
+def process_query_l3(args):
+    """处理单个查询的L3层（L1+L2组合+LLM验证）"""
+    import os  # 确保os在函数开始时导入
     
-    # 获取动态优化器实例（如果存在）
-    dynamic_optimizer = shared_config.get('dynamic_optimizer', None)
+    query, tables, shared_config, cache_dir = args
+    query_table_name = query.get('query_table')
+    optimization_config = shared_config.get('optimization_config', {})
     
-    # 先运行L2层获取基础结果
-    l2_cache_file = cache_file_path.replace('L3', 'L2')
-    l2_result = process_query_l2((query, tables, shared_config, l2_cache_file))
-    l2_predictions = l2_result.get('predictions', [])
+    # 检查是否跳过LLM
+    skip_llm = os.environ.get('SKIP_LLM', 'false').lower() == 'true'
     
-    logger.info(f"L3层接收到L2预测: {len(l2_predictions)} 个候选")
+    logger = logging.getLogger(__name__)
+    logger.info(f"\n{'='*50}")
+    logger.info(f"L3处理查询: {query_table_name}")
+    logger.info(f"优化配置: {optimization_config}")
     
-    # 如果L2预测太少，直接返回L2结果
-    if len(l2_predictions) < 2:
-        logger.warning(f"L2预测太少（{len(l2_predictions)}个），跳过L3层LLM验证")
-        return {'query_table': query_table_name, 'predictions': l2_predictions}
+    # 找到查询表
+    query_table = None
+    for t in tables:
+        table_name = t.get('name') or t.get('table_name')
+        if table_name == query_table_name:
+            query_table = t
+            break
     
-    # L3层：直接使用LLM验证（确保UNION任务正确处理）
+    if not query_table:
+        logger.error(f"未找到查询表: {query_table_name}")
+        return {'query_table': query_table_name, 'predictions': []}
+    
+    # L1: 元数据过滤
+    metadata_filter = shared_config.get('metadata_filter')
+    if metadata_filter is None:
+        from src.tools.smd_enhanced_metadata_filter import SMDEnhancedMetadataFilter
+        metadata_filter = SMDEnhancedMetadataFilter()
+        metadata_filter.build_index(tables)
+    
+    threshold = optimization_config.get('metadata_threshold', 0.01)
+    max_candidates = optimization_config.get('metadata_max_candidates', 300)
+    
     try:
-        # 方案1：直接使用LLMMatcherTool进行验证
-        from src.tools.llm_matcher import LLMMatcherTool
-        import asyncio
+        l1_candidates = metadata_filter.filter_candidates(
+            query_table,
+            threshold=threshold,
+            max_candidates=max_candidates
+        )
+        # 提取名称
+        l1_predictions = [name for name, score in l1_candidates if name != query_table_name]
+        logger.info(f"L1返回 {len(l1_predictions)} 个候选")
+    except Exception as e:
+        logger.error(f"L1失败: {e}")
+        l1_predictions = []
+    
+    # L2: 向量搜索
+    if shared_config.get('vector_index') is not None and shared_config.get('table_embeddings') is not None:
+        import numpy as np
+        import faiss
         
-        # 查找查询表 - 兼容不同数据集的字段名
-        query_table = None
-        for t in tables:
-            # 兼容 'name' (NLCTables) 和 'table_name' (OpenData/WebTable)
-            table_name = t.get('name') or t.get('table_name')
-            if table_name == query_table_name:
-                query_table = t
-                break
+        vector_index = shared_config['vector_index']
+        table_embeddings = shared_config['table_embeddings']
+        table_names = shared_config['table_names']
         
-        if not query_table:
-            logger.warning(f"查询表 {query_table_name} 未找到，使用L2结果")
-            final_predictions = l2_predictions
+        # 获取查询表索引
+        query_idx = table_names.index(query_table_name) if query_table_name in table_names else None
+        
+        if query_idx is not None:
+            query_embedding = table_embeddings[query_idx].reshape(1, -1).astype(np.float32)
+            k = min(optimization_config.get('vector_top_k', 50), len(table_names))
+            distances, indices = vector_index.search(query_embedding, k)
+            
+            # 过滤结果
+            l2_predictions = []
+            threshold = optimization_config.get('vector_threshold', 0.5)
+            for i, (idx, dist) in enumerate(zip(indices[0], distances[0])):
+                if idx < len(table_names):
+                    name = table_names[idx]
+                    if name != query_table_name:
+                        similarity = 1 - dist
+                        if similarity >= threshold:
+                            l2_predictions.append(name)
+            
+            logger.info(f"L2返回 {len(l2_predictions)} 个候选")
         else:
-            # 从配置中获取L3层参数
-            optimizer_config = shared_config.get('optimization_config', {})
+            logger.warning(f"查询表不在索引中: {query_table_name}")
+            l2_predictions = []
+    else:
+        logger.warning("向量索引未初始化")
+        l2_predictions = []
+    
+    # 合并L1和L2结果
+    combined_predictions = []
+    seen = set()
+    
+    # 先添加L1和L2的交集（优先级最高）
+    intersection = set(l1_predictions[:50]) & set(l2_predictions[:50])
+    for name in l1_predictions:
+        if name in intersection and name not in seen:
+            combined_predictions.append(name)
+            seen.add(name)
+    
+    # 再添加L1独有的
+    for name in l1_predictions[:50]:
+        if name not in seen:
+            combined_predictions.append(name)
+            seen.add(name)
+    
+    # 最后添加L2独有的
+    for name in l2_predictions[:50]:
+        if name not in seen:
+            combined_predictions.append(name)
+            seen.add(name)
+    
+    # 限制候选数量
+    max_llm_candidates = optimization_config.get('llm_max_candidates', 30)
+    candidate_table_names = combined_predictions[:max_llm_candidates]
+    
+    logger.info(f"合并后有 {len(candidate_table_names)} 个候选进入LLM验证")
+    
+    # L3: LLM验证
+    final_predictions = []
+    
+    if not skip_llm and candidate_table_names:
+        try:
+            import asyncio
+            from src.tools.llm_matcher import LLMMatcherTool
             
-            # 使用配置文件中的任务特定参数
-            max_candidates = optimizer_config.get('aggregator_max_results', 300)
-            llm_concurrency = optimizer_config.get('llm_concurrency', 3)
-            confidence_threshold = optimizer_config.get('llm_confidence_threshold', 0.20)
-            
-            logger.info(f"L3层使用{task_type.upper()}任务配置: max_candidates={max_candidates}, "
-                       f"concurrency={llm_concurrency}, confidence={confidence_threshold:.2f}")
-            
-            # 初始化LLM matcher
-            llm_matcher = LLMMatcherTool()
-            
-            # L3改进：限制LLM验证数量，避免被低质量候选淹没
-            # 只验证TOP候选，确保LLM看到的都是高质量候选
-            # 从配置中获取最大验证数量
-            max_verify_config = optimizer_config.get('max_llm_verify', 25)
-            max_verify = min(len(l2_predictions), max_verify_config)
-            logger.info(f"L3层准备验证 {max_verify} 个L2候选（配置最大值: {max_verify_config}）")
-            
+            # 准备候选表数据 - 需要保持顺序
             candidate_tables = []
-            for pred_name in l2_predictions[:max_verify]:
+            candidate_names = []  # 保持名称顺序
+            for name in candidate_table_names:
                 for t in tables:
-                    # 兼容不同字段名
-                    t_name = t.get('name') or t.get('table_name')
-                    if t_name == pred_name:
+                    table_name = t.get('name') or t.get('table_name')
+                    if table_name == name:
                         candidate_tables.append(t)
+                        candidate_names.append(name)
                         break
             
-            logger.info(f"L3层找到 {len(candidate_tables)} 个候选表进行LLM验证")
-            
-            if candidate_tables and len(candidate_tables) > 0:
-                # 使用batch_verify进行并行LLM验证
+            if candidate_tables:
+                logger.info(f"使用LLM验证 {len(candidate_tables)} 个候选表")
+                
+                # 调用LLM验证
+                matcher = LLMMatcherTool()
                 loop = asyncio.new_event_loop()
-                asyncio.set_event_loop(loop)
-                
-                # 关键：确保task_type正确传递，使用OptimizerAgent的参数
-                logger.info(f"L3层开始LLM批量验证: {len(candidate_tables)} 个表, 并发数={llm_concurrency}")
-                
                 llm_results = loop.run_until_complete(
-                    llm_matcher.batch_verify(
-                        query_table=query_table,
-                        candidate_tables=candidate_tables,
-                        task_type=task_type,  # 明确传递task_type
-                        max_concurrent=llm_concurrency,  # 使用OptimizerAgent优化的并发数
-                        existing_scores=[0.7] * len(candidate_tables)  # 假设L2给出的都是高分候选
+                    matcher.batch_verify(
+                        query_table,
+                        candidate_tables,
+                        task_type=optimization_config.get('task_type', 'join'),
+                        max_concurrent=5
                     )
                 )
                 loop.close()
                 
-                logger.info(f"L3层LLM验证完成: 返回 {len(llm_results)} 个结果")
+                # 过滤高置信度的结果 - 注意结果顺序与candidate_names对应
+                threshold = optimization_config.get('llm_confidence_threshold', 0.01)
+                verified_tables = []
                 
-                # L3改进：使用重排序而非过滤
-                # 收集所有候选表的相关性分数
-                l3_scored = []
+                # 添加详细日志来分析LLM的返回
+                logger.info(f"LLM验证阈值: {threshold}")
+                logger.info(f"LLM返回了 {len(llm_results)} 个结果")
+                
                 for i, result in enumerate(llm_results):
-                    # 优先使用relevance_score（新的重排序字段），如果没有则使用confidence
-                    relevance_score = result.get('relevance_score', result.get('confidence', 0))
-                    # 兼容不同字段名
-                    candidate_name = candidate_tables[i].get('name') or candidate_tables[i].get('table_name')
-                    
-                    # 应用任务特定的boost factor（如果有优化器）
-                    if dynamic_optimizer:
-                        boosted_score = dynamic_optimizer.apply_boost_factor(
-                            task_type, relevance_score, query_table_name, candidate_name
-                        )
-                    else:
-                        boosted_score = relevance_score
-                    
-                    # 重排序：收集所有候选，不过滤
-                    l3_scored.append((candidate_name, boosted_score))
+                    if i < len(candidate_names):
+                        table_name = candidate_names[i]
+                        is_match = result.get('is_match', False)
+                        confidence = result.get('confidence', 0.0)
+                        relevance = result.get('relevance_score', confidence)
+                        reason = result.get('reason', 'No reason provided')
+                        
+                        # 记录所有结果的详细信息
+                        logger.info(f"  表 {table_name}:")
+                        logger.info(f"    - is_match: {is_match}")
+                        logger.info(f"    - confidence: {confidence:.3f}")
+                        logger.info(f"    - relevance_score: {relevance:.3f}")
+                        logger.info(f"    - reason: {reason[:100]}...")
+                        
+                        # 使用relevance_score或confidence进行判断
+                        score = max(relevance, confidence)
+                        if score >= threshold:
+                            verified_tables.append(table_name)
+                            logger.info(f"    ✓ 通过阈值检查 (score={score:.3f} >= {threshold})")
+                        else:
+                            logger.info(f"    ✗ 未通过阈值检查 (score={score:.3f} < {threshold})")
                 
-                # 按相关性分数降序排序（重排序的核心）
-                l3_scored.sort(key=lambda x: x[1], reverse=True)
-                
-                # 合并L3验证的结果和剩余的L2结果
-                l3_verified_names = {name for name, _ in l3_scored}
-                remaining_l2 = [name for name in l2_predictions if name not in l3_verified_names]
-                
-                # 最终预测：L3重排序的结果 + 剩余的L2结果（确保使用所有L2预测）
-                l3_predictions = [name for name, score in l3_scored]
-                
-                # 确保包含所有L2的预测，不只限于MAX_PREDICTIONS
-                for name in remaining_l2:
-                    if len(l3_predictions) < MAX_PREDICTIONS:
-                        l3_predictions.append(name)
-                
-                logger.info(f"L3层重排序: 对 {len(l3_scored)} 个候选进行了LLM评分重排序")
-                logger.info(f"L3层最终预测数: {len(l3_predictions)} (L3验证: {len(l3_scored)}, L2补充: {len(l3_predictions) - len(l3_scored)})")
-                
-                if l3_scored:
-                    top_scores = [(name, score) for name, score in l3_scored[:5]]
-                    logger.info(f"L3层Top5得分: {top_scores}")
-                
-                final_predictions = l3_predictions[:MAX_PREDICTIONS]  # 确保最终输出不超过MAX_PREDICTIONS
+                if verified_tables:
+                    final_predictions = verified_tables[:MAX_PREDICTIONS]
+                    logger.info(f"LLM验证返回 {len(final_predictions)} 个匹配")
+                else:
+                    logger.info("LLM验证未返回高置信度匹配，返回空结果")
+                    final_predictions = []
             else:
-                logger.warning(f"没有找到L2候选表的详细信息，使用L2结果")
-                final_predictions = l2_predictions
-                
-    except ImportError as e:
-        logger.error(f"无法导入LLMMatcherTool: {e}")
-        # 方案2：如果直接LLM调用失败，尝试使用workflow
-        try:
-            from src.core.langgraph_workflow import DataLakeDiscoveryWorkflow
-            
-            workflow = DataLakeDiscoveryWorkflow()
-            
-            # 确保不跳过LLM
-            import os
-            old_skip_llm = os.environ.get('SKIP_LLM', 'false')
-            os.environ['SKIP_LLM'] = 'false'
-            
-            result = workflow.run(
-                query=f"find {task_type}able tables for {query_table_name}",
-                tables=tables,
-                task_type=task_type,
-                query_table_name=query_table_name
-            )
-            
-            # 恢复原设置
-            os.environ['SKIP_LLM'] = old_skip_llm
-            
-            if result and result.get('success') and result.get('results'):
-                l3_predictions = [
-                    r['table_name'] for r in result.get('results', [])[:MAX_PREDICTIONS]
-                    if r['table_name'] != query_table_name
-                ]
-                final_predictions = l3_predictions if l3_predictions else l2_predictions
-            else:
-                logger.warning(f"L3 工作流返回空结果 {query_table_name}, 使用L2结果")
-                final_predictions = l2_predictions
-                
-        except Exception as e2:
-            logger.warning(f"L3 工作流也失败 {query_table_name}: {e2}, 回退到L2结果")
-            final_predictions = l2_predictions
-            
-    except Exception as e:
-        logger.warning(f"L3 LLM处理失败 {query_table_name}: {e}, 回退到L2结果")
-        final_predictions = l2_predictions
+                logger.warning("没有找到候选表数据")
+                final_predictions = candidate_table_names[:MAX_PREDICTIONS]
+        
+        except Exception as e:
+            logger.error(f"LLM验证失败: {e}")
+            import traceback
+            logger.error(traceback.format_exc())
+            # LLM失败时返回L1+L2的结果
+            final_predictions = candidate_table_names[:MAX_PREDICTIONS]
+    else:
+        if skip_llm:
+            logger.info("跳过LLM验证（SKIP_LLM=true）")
+        else:
+            logger.info("没有候选表进入LLM验证")
+        final_predictions = candidate_table_names[:MAX_PREDICTIONS]
     
-    query_result = {'query_table': query_table_name, 'predictions': final_predictions}
+    result = {
+        'query_table': query_table_name,
+        'predictions': final_predictions
+    }
     
-    return query_result
+    logger.info(f"L3最终返回 {len(final_predictions)} 个预测")
+    logger.info(f"{'='*50}\n")
+    
+    return result
 
 
 def run_layer_experiment(layer: str, tables: List[Dict], queries: List[Dict], 
@@ -1105,14 +1178,50 @@ def run_layer_experiment(layer: str, tables: List[Dict], queries: List[Dict],
         shared_config = initialize_shared_resources_l3(tables, task_type, dataset_type)
         process_func = process_query_l3
     
+    # 序列化共享资源到磁盘（主进程只做一次）
+    resource_hash = hashlib.md5(f"{dataset_type}_{task_type}_{layer}_{len(tables)}".encode()).hexdigest()[:8]
+    resource_file = Path(tempfile.gettempdir()) / f"ablation_resources_{resource_hash}.pkl"
+    
+    if not resource_file.exists():
+        logger.info(f"📦 序列化共享资源到: {resource_file}")
+        
+        # 准备要序列化的资源
+        resources_to_save = {}
+        
+        if layer in ['L1', 'L1+L2', 'L1+L2+L3']:
+            # 反序列化metadata_filter（如果已经序列化）
+            if 'smd_index' in shared_config:
+                from src.tools.smd_enhanced_metadata_filter import SMDEnhancedMetadataFilter
+                resources_to_save['metadata_filter'] = pickle.loads(shared_config['smd_index'])
+            
+        if layer in ['L1+L2', 'L1+L2+L3']:
+            # 初始化向量搜索工具
+            from src.tools.vector_search_tool import VectorSearchTool
+            from src.tools.value_similarity_tool import ValueSimilarityTool
+            resources_to_save['vector_search'] = VectorSearchTool()
+            resources_to_save['value_similarity'] = ValueSimilarityTool()
+        
+        # 保留配置信息
+        resources_to_save['optimization_config'] = shared_config.get('optimization_config', {})
+        resources_to_save['task_config'] = shared_config.get('task_config', {})
+        
+        # 保存到磁盘
+        with open(resource_file, 'wb') as f:
+            pickle.dump(resources_to_save, f, protocol=pickle.HIGHEST_PROTOCOL)
+    else:
+        logger.info(f"📦 使用现有共享资源: {resource_file}")
+    
+    # 更新shared_config以包含资源文件路径
+    shared_config['resource_file'] = str(resource_file)
+    
     # 不再使用查询级别缓存，直接使用临时目录名
     cache_dir = f"cache_temp_{dataset_type}_{layer.replace('+', '_')}"
     
     # 准备进程池参数（每个查询传递缓存目录路径和dataset_type）
     query_args = []
     for query in queries:
-        # 在query中添加dataset_type以供process函数使用
-        query_with_dataset = {**query, 'dataset_type': dataset_type}
+        # 在query中添加dataset_type和task_type以供process函数使用
+        query_with_dataset = {**query, 'dataset_type': dataset_type, 'task_type': task_type}
         query_args.append((query_with_dataset, tables, shared_config, str(cache_dir)))
     
     # 使用进程池处理

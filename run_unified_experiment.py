@@ -3,6 +3,7 @@
 统一实验运行器 - 支持WebTable、OpenData和NLCTables三个数据集
 可以使用同一个系统运行所有数据集的实验
 支持与three_layer_ablation_optimized.py相同的所有参数
+现在内部集成了多智能体架构
 """
 
 import os
@@ -13,6 +14,7 @@ import shutil
 import pickle
 import argparse
 import logging
+import asyncio
 from pathlib import Path
 from typing import List, Dict, Tuple, Optional, Any
 from datetime import datetime
@@ -30,6 +32,128 @@ logger.info(f"📊 MAX_PREDICTIONS set to {MAX_PREDICTIONS} (supports up to @{MA
 
 # 全局缓存存储
 global_unified_cache = {}
+
+def run_multi_agent_experiment(tables: List[Dict], queries: List[Dict], 
+                               task_type: str, max_queries: int = None) -> Tuple[List[Dict], float]:
+    """使用多智能体系统运行实验
+    
+    Args:
+        tables: 表列表
+        queries: 查询列表
+        task_type: 任务类型 (join/union)
+        max_queries: 最大查询数
+        
+    Returns:
+        (results, elapsed_time) 结果和执行时间
+    """
+    logger.info("🤖 Using Multi-Agent System Architecture")
+    logger.info("  Agents: Optimizer→Planner→Analyzer→Searcher→Matcher→Aggregator")
+    
+    # 导入多智能体工作流
+    from src.core.multi_agent_workflow import create_multi_agent_workflow
+    from src.core.state import WorkflowState
+    
+    # 限制查询数量
+    if max_queries is not None and len(queries) > max_queries:
+        queries = queries[:max_queries]
+        logger.info(f"  Limited to {max_queries} queries")
+    
+    # 创建工作流
+    workflow = create_multi_agent_workflow()
+    
+    # 运行批处理（OptimizerAgent和PlannerAgent只执行一次）
+    start_time = time.time()
+    results = []
+    
+    # 准备查询列表，确保包含完整的表信息
+    query_configs = []
+    for query in queries:
+        query_table_name = query.get('query_table') or query.get('seed_table')
+        
+        # 查找完整的查询表信息
+        query_table_info = None
+        for t in tables:
+            if t.get('table_name') == query_table_name or t.get('name') == query_table_name:
+                query_table_info = t
+                break
+        
+        if not query_table_info:
+            # 如果找不到，创建最小信息
+            query_table_info = {
+                'table_name': query_table_name,
+                'columns': []
+            }
+        
+        query_config = {
+            'query_table': query_table_info,  # 传递完整的表信息
+            'task_type': task_type  # 修复: 使用 task_type 而不是 task
+        }
+        query_configs.append(query_config)
+    
+    try:
+        # 运行批处理
+        loop = asyncio.new_event_loop()
+        asyncio.set_event_loop(loop)
+        
+        workflow_results = loop.run_until_complete(
+            workflow.run_batch(query_configs, tables)
+        )
+        
+        loop.close()
+        
+        # 转换结果格式
+        for workflow_state in workflow_results:
+            query_table = workflow_state.get('query_table', {}).get('table_name', 'unknown')
+            
+            # 从最终结果中提取预测
+            final_results = workflow_state.get('final_results', [])
+            predictions = []
+            
+            for result in final_results[:MAX_PREDICTIONS]:  # 限制为MAX_PREDICTIONS
+                if isinstance(result, dict):
+                    predictions.append(result.get('table_name', result.get('matched_table', '')))
+                else:
+                    predictions.append(str(result))
+            
+            results.append({
+                'query_table': query_table,
+                'predictions': predictions
+            })
+        
+        elapsed_time = time.time() - start_time
+        
+        logger.info(f"✅ Multi-Agent System completed in {elapsed_time:.2f}s")
+        logger.info(f"  Processed {len(results)} queries")
+        if results:
+            logger.info(f"  Sample: {results[0]['query_table']} → {len(results[0]['predictions'])} predictions")
+        
+        return results, elapsed_time
+        
+    except Exception as e:
+        logger.error(f"❌ Multi-Agent System failed: {e}")
+        # 降级到直接三层调用
+        logger.info("⚠️ Falling back to direct three-layer system")
+        from three_layer_ablation_optimized import run_layer_experiment
+        
+        results_dict, elapsed_time = run_layer_experiment(
+            layer='L1+L2+L3',
+            tables=tables,
+            queries=queries,
+            task_type=task_type,
+            dataset_type='unified',
+            max_workers=8
+        )
+        
+        # 转换结果格式
+        results = []
+        if isinstance(results_dict, dict):
+            for query_table, predictions in results_dict.items():
+                results.append({
+                    'query_table': query_table,
+                    'predictions': predictions[:MAX_PREDICTIONS] if isinstance(predictions, list) else []
+                })
+        
+        return results, elapsed_time
 
 def clear_experiment_cache(specific_dataset: str = None):
     """清理实验缓存（但保留嵌入向量缓存）
@@ -179,93 +303,104 @@ def detect_dataset_type(tables_path: str) -> str:
 def run_nlctables_experiment(layer: str, tables: List[Dict], queries: List[Dict], 
                             task_type: str, max_queries: int = None, 
                             max_workers: int = 4, challenging: bool = True) -> Tuple[List[Dict], float]:
-    """运行NLCTables实验 - 使用主系统通过适配器"""
+    """运行NLCTables实验 - 使用多智能体系统或三层系统"""
     logger.info(f"🔬 Running NLCTables experiment with layer {layer}")
     logger.info(f"  Task type: {task_type}")
     logger.info(f"  Input queries: {len(queries)}")
     
-    # 使用主系统运行NLCTables
-    from three_layer_ablation_optimized import run_layer_experiment
+    # 检查是否应该使用多智能体系统
+    # 默认为L1+L2+L3层使用多智能体，其他层使用直接三层调用
+    use_multi_agent = (layer == 'L1+L2+L3' or layer == 'all')
     
-    # 处理查询数量 - 只在queries长度大于max_queries时限制
-    if max_queries is not None and len(queries) > max_queries:
-        queries = queries[:max_queries]
-        logger.info(f"  Limited to {max_queries} queries")
-    
-    # TODO: 如果需要挑战性查询，可以在这里处理
-    # if challenging:
-    #     queries = create_challenging_queries(queries, tables)
-    
-    # 运行实验
-    results_dict, elapsed_time = run_layer_experiment(
-        layer=layer,
-        tables=tables,
-        queries=queries,
-        task_type=task_type,
-        dataset_type='nlctables',
-        max_workers=max_workers
-    )
-    
-    # 转换结果格式从字典到列表
-    results = []
-    if isinstance(results_dict, dict):
-        for query_table, predictions in results_dict.items():
-            results.append({
-                'query_table': query_table,
-                'predictions': predictions[:MAX_PREDICTIONS] if isinstance(predictions, list) else []
-            })
+    if use_multi_agent:
+        # 使用多智能体系统
+        logger.info("🤖 Using Multi-Agent System for full pipeline")
+        return run_multi_agent_experiment(tables, queries, task_type, max_queries)
     else:
-        results = results_dict
-    
-    logger.info(f"  Output results: {len(results)} entries")
-    if results and len(results) > 0:
-        logger.info(f"  First result: {results[0]['query_table']} -> {len(results[0].get('predictions', []))} predictions")
-    
-    return results, elapsed_time
+        # 使用原有的三层系统（用于消融实验）
+        logger.info(f"🔬 Using direct three-layer system for {layer}")
+        from three_layer_ablation_optimized import run_layer_experiment
+        
+        # 处理查询数量
+        if max_queries is not None and len(queries) > max_queries:
+            queries = queries[:max_queries]
+            logger.info(f"  Limited to {max_queries} queries")
+        
+        # 运行实验
+        results_dict, elapsed_time = run_layer_experiment(
+            layer=layer,
+            tables=tables,
+            queries=queries,
+            task_type=task_type,
+            dataset_type='nlctables',
+            max_workers=max_workers
+        )
+        
+        # 转换结果格式从字典到列表
+        results = []
+        if isinstance(results_dict, dict):
+            for query_table, predictions in results_dict.items():
+                results.append({
+                    'query_table': query_table,
+                    'predictions': predictions[:MAX_PREDICTIONS] if isinstance(predictions, list) else []
+                })
+        else:
+            results = results_dict
+        
+        logger.info(f"  Output results: {len(results)} entries")
+        if results and len(results) > 0:
+            logger.info(f"  First result: {results[0]['query_table']} -> {len(results[0].get('predictions', []))} predictions")
+        
+        return results, elapsed_time
 
 def run_webtable_opendata_experiment(layer: str, tables: List[Dict], queries: List[Dict],
                                   task_type: str, dataset_type: str, max_queries: int = None,
                                   max_workers: int = 4, challenging: bool = True) -> Tuple[List[Dict], float]:
-    """运行WebTable/OpenData实验 - 使用主系统"""
+    """运行WebTable/OpenData实验 - 使用多智能体系统或三层系统"""
     logger.info(f"🔬 Running {dataset_type.upper()} experiment with layer {layer}")
     
-    # 导入主系统
-    from three_layer_ablation_optimized import run_layer_experiment
+    # 检查是否应该使用多智能体系统
+    use_multi_agent = (layer == 'L1+L2+L3' or layer == 'all')
     
-    # 处理查询数量
-    if max_queries is not None:
-        queries = queries[:max_queries]
-    
-    # TODO: 如果需要挑战性查询，可以在这里处理
-    # if challenging:
-    #     queries = create_challenging_queries(queries, tables)
-    
-    # 运行实验
-    results_dict, elapsed_time = run_layer_experiment(
-        layer=layer,
-        tables=tables,
-        queries=queries,
-        task_type=task_type,
-        dataset_type=dataset_type,
-        max_workers=max_workers
-    )
-    
-    # 转换结果格式从字典到列表
-    results = []
-    if isinstance(results_dict, dict):
-        for query_table, predictions in results_dict.items():
-            results.append({
-                'query_table': query_table,
-                'predictions': predictions[:MAX_PREDICTIONS] if isinstance(predictions, list) else []
-            })
+    if use_multi_agent:
+        # 使用多智能体系统
+        logger.info("🤖 Using Multi-Agent System for full pipeline")
+        return run_multi_agent_experiment(tables, queries, task_type, max_queries)
     else:
-        results = results_dict
-    
-    logger.info(f"  Output results: {len(results)} entries")
-    if results and len(results) > 0:
-        logger.info(f"  First result: {results[0]['query_table']} -> {len(results[0].get('predictions', []))} predictions")
-    
-    return results, elapsed_time
+        # 使用原有的三层系统（用于消融实验）
+        logger.info(f"🔬 Using direct three-layer system for {layer}")
+        from three_layer_ablation_optimized import run_layer_experiment
+        
+        # 处理查询数量
+        if max_queries is not None:
+            queries = queries[:max_queries]
+        
+        # 运行实验
+        results_dict, elapsed_time = run_layer_experiment(
+            layer=layer,
+            tables=tables,
+            queries=queries,
+            task_type=task_type,
+            dataset_type=dataset_type,
+            max_workers=max_workers
+        )
+        
+        # 转换结果格式从字典到列表
+        results = []
+        if isinstance(results_dict, dict):
+            for query_table, predictions in results_dict.items():
+                results.append({
+                    'query_table': query_table,
+                    'predictions': predictions[:MAX_PREDICTIONS] if isinstance(predictions, list) else []
+                })
+        else:
+            results = results_dict
+        
+        logger.info(f"  Output results: {len(results)} entries")
+        if results and len(results) > 0:
+            logger.info(f"  First result: {results[0]['query_table']} -> {len(results[0].get('predictions', []))} predictions")
+        
+        return results, elapsed_time
 
 def evaluate_results(results: List[Dict], ground_truth, k_values: List[int] = [1, 3, 5]) -> Dict:
     """评估结果 - ground_truth can be Dict or List"""
@@ -377,8 +512,8 @@ def main():
                        help='数据集类型: subset(子集), complete(完整), true_subset(WebTable的真子集)')
     parser.add_argument('--max-queries', type=str, default='10',
                        help='最大查询数 (数字或"all"表示使用全部)')
-    parser.add_argument('--workers', type=int, default=4,
-                       help='并行进程数')
+    parser.add_argument('--workers', type=int, default=8,
+                       help='并行进程数（推荐8-16，过高会导致内存问题）')
     parser.add_argument('--challenging', action='store_true', default=True,
                        help='使用挑战性混合查询（默认启用）')
     parser.add_argument('--simple', action='store_true',
@@ -391,6 +526,25 @@ def main():
                        help='跳过LLM层（仅用于测试）')
     
     args = parser.parse_args()
+    
+    # 自动调整进程数，避免内存爆炸
+    if args.workers > 32:
+        logger.warning(f"⚠️ 进程数{args.workers}过高，自动调整为32")
+        args.workers = 32
+    
+    # 对于complete数据集进一步限制
+    if args.dataset_type == 'complete' and args.workers > 16:
+        logger.warning(f"⚠️ Complete数据集建议使用16个进程，自动调整")
+        args.workers = 16
+    
+    # OpenData complete特殊警告
+    if args.dataset == 'opendata' and args.dataset_type == 'complete':
+        total_queries = 3595  # 500 join + 3095 union
+        if args.max_queries == 'all' or (args.max_queries.isdigit() and int(args.max_queries) > 100):
+            logger.warning("⚠️ OpenData complete数据集非常大（3595个查询）！")
+            logger.warning(f"   当前进程数: {args.workers}")
+            logger.warning("   建议：--max-queries 100 --workers 8")
+            logger.warning("   预计运行时间: 数小时")
     
     # 处理max_queries参数
     if args.max_queries.lower() in ['all', '-1', 'none']:

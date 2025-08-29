@@ -16,18 +16,26 @@ logger = logging.getLogger(__name__)
 class GeminiClientWithProxy:
     """支持代理的Gemini客户端"""
     
-    def __init__(self, config: Dict[str, Any]):
-        self.model_name = config.get("model_name", "gemini-1.5-flash") 
+    def __init__(self, config: Optional[Dict[str, Any]] = None):
+        """初始化Gemini客户端"""
+        config = config or {}
         self.api_key = config.get("api_key") or os.getenv("GEMINI_API_KEY")
         
         if not self.api_key:
-            raise ValueError("No Gemini API key found")
-            
-        # 配置代理
-        self.proxies = {
-            'http': os.getenv('http_proxy', 'http://127.0.0.1:7890'),
-            'https': os.getenv('https_proxy', 'http://127.0.0.1:7890')
-        }
+            logger.error("GEMINI_API_KEY not found in environment or config")
+            raise ValueError("GEMINI_API_KEY is required")
+        
+        self.model_name = config.get("model", "gemini-1.5-flash")
+        
+        # 使用服务器现有代理配置，如果没有则不设置代理
+        http_proxy = os.getenv('http_proxy') or os.getenv('HTTP_PROXY')
+        https_proxy = os.getenv('https_proxy') or os.getenv('HTTPS_PROXY')
+        
+        self.proxies = {}
+        if http_proxy:
+            self.proxies['http'] = http_proxy
+        if https_proxy:
+            self.proxies['https'] = https_proxy
         
         self.generation_config = {
             "temperature": config.get("temperature", 0.1),
@@ -37,7 +45,10 @@ class GeminiClientWithProxy:
         # API端点
         self.api_url = f"https://generativelanguage.googleapis.com/v1beta/models/{self.model_name}:generateContent"
         
-        logger.info(f"Initialized Gemini client with proxy: {self.proxies['https']}")
+        if self.proxies:
+            logger.info(f"Initialized Gemini client with proxy: {self.proxies.get('https', self.proxies.get('http'))}")
+        else:
+            logger.info(f"Initialized Gemini client without proxy (direct connection)")
     
     async def generate(self, prompt: str, system_prompt: Optional[str] = None) -> str:
         """通过REST API调用Gemini（支持代理） - 真正的异步版本"""
@@ -48,6 +59,12 @@ class GeminiClientWithProxy:
         logger.info(f"   Prompt length: {len(prompt)} chars")
         if system_prompt:
             logger.info(f"   System prompt length: {len(system_prompt)} chars")
+        
+        # 记录代理配置
+        if self.proxies:
+            logger.info(f"   Using proxy: {self.proxies.get('https', self.proxies.get('http'))}")
+        else:
+            logger.info(f"   Direct connection (no proxy)")
         
         if system_prompt:
             prompt = f"{system_prompt}\n\n{prompt}"
@@ -74,12 +91,18 @@ class GeminiClientWithProxy:
             # 使用aiohttp进行真正的异步请求
             async with aiohttp.ClientSession() as session:
                 logger.info(f"   Sending request to Gemini API...")
-                async with session.post(
-                    url_with_key,
-                    json=data,
-                    proxy=self.proxies.get('https'),  # aiohttp使用单个代理URL
-                    timeout=aiohttp.ClientTimeout(total=30)
-                ) as response:
+                
+                # 构建请求参数
+                request_params = {
+                    "json": data,
+                    "timeout": aiohttp.ClientTimeout(total=30)
+                }
+                
+                # 只有在有代理时才添加proxy参数
+                if self.proxies and self.proxies.get('https'):
+                    request_params["proxy"] = self.proxies.get('https')
+                
+                async with session.post(url_with_key, **request_params) as response:
                     
                     elapsed_time = time.time() - start_time
                     
@@ -137,10 +160,10 @@ class GeminiClientWithProxy:
 
 def get_llm_client():
     """Get LLM client instance"""
-    # Create default config
+    # Create config using environment variables
     config = {
         'api_key': os.getenv('GEMINI_API_KEY'),
         'model': 'gemini-1.5-flash',
-        'proxy': os.getenv('HTTP_PROXY', 'http://127.0.0.1:7890')
+        # Don't set default proxy - use server's existing proxy configuration
     }
     return GeminiClientWithProxy(config)

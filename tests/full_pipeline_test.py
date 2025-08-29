@@ -16,7 +16,8 @@ sys.path.insert(0, str(Path(__file__).parent.absolute()))
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-from src.core.workflow import discover_data
+# from src.core.workflow import discover_data  # Old workflow removed
+# TODO: Update test to use new multi-agent workflow
 from src.utils.llm_client import llm_client
 from src.core.models import ColumnInfo, TableInfo
 

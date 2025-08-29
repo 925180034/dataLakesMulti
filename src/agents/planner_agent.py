@@ -117,8 +117,8 @@ class PlannerAgent(BaseAgent):
                 strategy.top_k = 100  # 固定为100，不使用LLM的建议
                 strategy.confidence_threshold = llm_strategy.get('confidence_threshold', 0.65)
                 strategy.use_metadata = True
-                strategy.use_vector = optimization_config.use_vector_search if optimization_config else True
-                strategy.use_llm = optimization_config.use_llm_verification if optimization_config else True
+                strategy.use_vector = optimization_config.get('use_vector_search', True) if optimization_config else True
+                strategy.use_llm = optimization_config.get('use_llm_verification', True) if optimization_config else True
                 
                 self.logger.info(f"LLM Strategy Selected: {strategy.name}")
                 self.logger.info(f"LLM Reasoning: {llm_strategy.get('reasoning', 'No reasoning provided')}")
@@ -133,9 +133,9 @@ class PlannerAgent(BaseAgent):
                 self.logger.info("Falling back to rule-based strategy selection")
             
             # Enhanced strategy selection with hybrid mode support
-            enable_hybrid = optimization_config.enable_hybrid_search if optimization_config and hasattr(optimization_config, 'enable_hybrid_search') else False
+            enable_hybrid = optimization_config.get('enable_hybrid_search', False) if optimization_config else False
             
-            if query_task and query_task.task_type == 'join':
+            if query_task and query_task.get('task_type') == 'join':
                 # JOIN task - use bottom-up approach
                 if enable_hybrid:
                     # Hybrid mode: combine structure and semantic search
@@ -152,20 +152,20 @@ class PlannerAgent(BaseAgent):
                 else:
                     strategy.name = "bottom-up"
                     strategy.use_metadata = True
-                    strategy.use_vector = optimization_config.use_vector_search if optimization_config else True
-                    strategy.use_llm = optimization_config.use_llm_verification if optimization_config else True
+                    strategy.use_vector = optimization_config.get('use_vector_search', True) if optimization_config else True
+                    strategy.use_llm = optimization_config.get('use_llm_verification', True) if optimization_config else True
                     strategy.top_k = 100  # 增加候选数量
                     strategy.confidence_threshold = 0.7
                     strategy.search_mode = 'structural'  # Traditional structural matching
                     
                     self.logger.info("Selected BOTTOM-UP strategy for JOIN task (rule-based)")
                 
-            elif query_task and query_task.task_type == 'union':
+            elif query_task and query_task.get('task_type') == 'union':
                 # UNION task - use top-down approach
                 strategy.name = "top-down"
                 strategy.use_metadata = True
-                strategy.use_vector = optimization_config.use_vector_search if optimization_config else True
-                strategy.use_llm = optimization_config.use_llm_verification if optimization_config else True
+                strategy.use_vector = optimization_config.get('use_vector_search', True) if optimization_config else True
+                strategy.use_llm = optimization_config.get('use_llm_verification', True) if optimization_config else True
                 strategy.top_k = 100  # 增加候选数量
                 strategy.confidence_threshold = 0.6
                 
@@ -187,7 +187,7 @@ class PlannerAgent(BaseAgent):
             # 始终保持100个候选，不根据batch_size调整
             strategy.top_k = 100  # 固定为100，不调整
             
-            if not optimization_config.use_vector_search:
+            if optimization_config and not optimization_config.get('use_vector_search', True):
                 strategy.use_vector = False
                 self.logger.info("  - Vector search disabled by optimizer")
         
@@ -220,8 +220,8 @@ class PlannerAgent(BaseAgent):
         # Use centralized user prompt template
         prompt = format_user_prompt(
             "PlannerAgent",
-            task_type=query_task.task_type,
-            query_table=getattr(query_task, 'table_name', 'Unknown'),
+            task_type=query_task.get('task_type', 'unknown'),
+            query_table=query_task.get('table_name', 'Unknown'),
             table_structure='Unknown',  # Could extract if needed
             data_size=data_size,
             performance_req='balanced'

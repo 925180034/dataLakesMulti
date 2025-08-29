@@ -1,5 +1,5 @@
 """
-MatcherAgent - LLM-based table matching and verification
+MatcherAgent - Intelligent Layer 3 LLM-based table matching and verification
 """
 import asyncio
 import json
@@ -12,17 +12,18 @@ from src.config.prompts import get_agent_prompt, format_user_prompt
 
 class MatcherAgent(BaseAgent):
     """
-    Matcher Agent responsible for LLM-based verification of table matches
+    Matcher Agent responsible for intelligent Layer 3 verification
+    通过LLM智能协调Layer 3工具进行精确匹配验证
     """
     
     def __init__(self):
         super().__init__(
             name="MatcherAgent",
-            description="Uses LLM to verify and score table matches with intelligent prompts",
+            description="Intelligently verifies table matches using Layer 3 LLM tools",
             use_llm=True  # Enable LLM for matching
         )
         
-        # Initialize LLM matcher tool (for batch processing)
+        # Initialize Layer 3 tool - LLM Matcher
         self.llm_matcher = LLMMatcherTool()
         
         # Use centralized prompt from config
@@ -30,13 +31,14 @@ class MatcherAgent(BaseAgent):
         
     def process(self, state: WorkflowState) -> WorkflowState:
         """
-        Verify candidate tables using LLM with intelligent prompts
+        Execute Layer 3 verification using intelligent LLM coordination
+        通过智能策略使用Layer 3 LLM工具进行精确验证
         
         Args:
             state: Current workflow state
             
         Returns:
-            Updated state with verified matches
+            Updated state with Layer 3 verified matches
         """
         # Check if this is an NLCTables query
         query_type = state.get('query_type', 'webtables')
@@ -44,27 +46,7 @@ class MatcherAgent(BaseAgent):
         if query_type == 'nlctables':
             return self._process_nlctables(state)
         
-        # Original WebTables processing
-        # Check if we should skip LLM matching
-        if state.get('should_use_llm', True) == False:
-            self.logger.info("Skipping LLM matcher as per optimization config")
-            # Pass through top candidates without LLM verification
-            candidates = state.get('candidates', [])
-            state['matches'] = []
-            for c in candidates[:10]:
-                # Create proper MatchResult with required fields
-                state['matches'].append(MatchResult(
-                    query_table=state.get('query_task', {}).table_name if state.get('query_task') else 'unknown',
-                    matched_table=c.table_name,
-                    score=c.score,
-                    match_type='unknown',
-                    confidence=c.score * 0.5,
-                    agent_used='SearcherAgent',
-                    evidence={'reason': 'No LLM verification performed'}
-                ))
-            return state
-        
-        self.logger.info("Starting LLM-based table matching with intelligent prompts")
+        self.logger.info("MatcherAgent: Starting Layer 3 LLM verification")
         
         # Get candidates and query info
         candidates = state.get('candidates', [])
@@ -79,6 +61,7 @@ class MatcherAgent(BaseAgent):
         # Get query table info
         query_table_name = query_task.table_name if query_task else 'unknown'
         query_table_info = state.get('query_table')
+        task_type = query_task.task_type if query_task else 'join'
         
         if not query_table_info:
             # Try to find query table in all_tables
@@ -92,17 +75,30 @@ class MatcherAgent(BaseAgent):
             self.logger.warning("Query table info not found, using minimal info")
             query_table_info = {'table_name': query_table_name}
         
-        # Determine batch size for parallel processing
-        batch_size = optimization_config.llm_concurrency if optimization_config else 3
-        max_candidates = min(len(candidates), 10)  # Limit total candidates
+        # Determine Layer 3 strategy using LLM
+        layer3_strategy = self._determine_layer3_strategy(
+            query_table_info=query_table_info,
+            candidates=candidates,
+            task_type=task_type,
+            optimization_config=optimization_config
+        )
         
-        self.logger.info(f"Processing {max_candidates} candidates with batch size {batch_size}")
+        # Get configuration from strategy
+        batch_size = layer3_strategy.get('batch_size', 3)
+        confidence_threshold = layer3_strategy.get('confidence_threshold', 0.01)  # 低阈值以捕获更多匹配
+        max_candidates = layer3_strategy.get('max_candidates', 10)
         
-        # Use the batch_verify method which exists in LLMMatcherTool
+        # Limit candidates based on strategy
+        candidates_to_verify = candidates[:max_candidates]
+        
+        self.logger.info(f"MatcherAgent Layer 3: Processing {len(candidates_to_verify)} candidates")
+        self.logger.info(f"  Batch size: {batch_size}, Confidence threshold: {confidence_threshold}")
+        
+        # Execute Layer 3 verification using LLM Matcher Tool
         try:
-            # Prepare candidate table info
+            # Prepare candidate table info for Layer 3
             candidate_tables = []
-            for c in candidates[:max_candidates]:
+            for c in candidates_to_verify:
                 # Find full table info for each candidate
                 candidate_info = None
                 for t in state.get('all_tables', []):
@@ -119,48 +115,61 @@ class MatcherAgent(BaseAgent):
                         'columns': []
                     })
             
-            # Run batch LLM verification
+            # Execute Layer 3 - Smart LLM Verification
+            self.logger.info("MatcherAgent: Executing Layer 3 batch verification")
+            
             loop = asyncio.new_event_loop()
             asyncio.set_event_loop(loop)
             
-            llm_results = loop.run_until_complete(
-                self.llm_matcher.batch_verify(
+            # Call Layer 3 tool with intelligent parameters
+            layer3_results = loop.run_until_complete(
+                self._execute_layer3(
                     query_table=query_table_info,
                     candidate_tables=candidate_tables,
-                    task_type=query_task.task_type if query_task else 'join',
-                    max_concurrent=batch_size,  # Fixed parameter name
-                    existing_scores=[c.score for c in candidates[:max_candidates]]  # Pass existing scores
+                    task_type=task_type,
+                    batch_size=batch_size,
+                    existing_scores=[c.score for c in candidates_to_verify],
+                    confidence_threshold=confidence_threshold
                 )
             )
             loop.close()
             
-            # Convert LLM results to MatchResult objects
+            # Convert Layer 3 results to MatchResult objects
             match_results = []
-            for i, result in enumerate(llm_results):
+            for i, result in enumerate(layer3_results):
                 if result.get('is_match', False):
-                    # Create MatchResult with proper structure
-                    match = MatchResult(
-                        query_table=query_table_name,
-                        matched_table=candidates[i].table_name,
-                        score=result.get('confidence', 0.5),
-                        match_type=query_task.task_type if query_task else 'unknown',
-                        confidence=result.get('confidence', 0.5),
-                        agent_used='MatcherAgent',
-                        evidence={'reason': result.get('reason', 'LLM verification successful')}
-                    )
-                    match_results.append(match)
+                    # Check confidence threshold
+                    confidence = result.get('confidence', 0.5)
+                    if confidence >= confidence_threshold:
+                        # Create MatchResult with Layer 3 verification
+                        match = MatchResult(
+                            query_table=query_table_name,
+                            matched_table=candidates_to_verify[i].table_name,
+                            score=confidence,
+                            match_type=task_type,
+                            confidence=confidence,
+                            agent_used='MatcherAgent',
+                            evidence={
+                                'reason': result.get('reason', 'Layer 3 LLM verification successful'),
+                                'layer': 'Layer 3',
+                                'relevance_score': result.get('relevance_score', 0.0)
+                            }
+                        )
+                        match_results.append(match)
+                        self.logger.debug(f"Layer 3 matched: {candidates_to_verify[i].table_name} (confidence: {confidence:.3f})")
                 else:
-                    self.logger.debug(f"Table {candidates[i].table_name} not matched: {result.get('reason')}")
+                    self.logger.debug(f"Layer 3 rejected: {candidates_to_verify[i].table_name} - {result.get('reason')}")
             
             # Sort by score
             match_results.sort(key=lambda x: x.score, reverse=True)
             
             # Store results
             state['matches'] = match_results
+            state['layer3_strategy'] = layer3_strategy  # Store strategy for analysis
             
-            self.logger.info(f"LLM matching complete: {len(match_results)} matches found")
+            self.logger.info(f"MatcherAgent Layer 3 complete: {len(match_results)} matches found")
             if match_results:
-                self.logger.info(f"Top match: {match_results[0].matched_table} (score: {match_results[0].score:.3f})")
+                self.logger.info(f"  Top match: {match_results[0].matched_table} (score: {match_results[0].score:.3f})")
             
         except Exception as e:
             self.logger.error(f"Error in batch LLM matching: {e}")
@@ -374,3 +383,51 @@ class MatcherAgent(BaseAgent):
             self.logger.error(f"NL verification LLM call failed: {e}")
             # Fallback to semantic score
             return semantic_score > 0.5, semantic_score
+    
+    def _determine_layer3_strategy(self, query_table_info: Dict, candidates: List,
+                                   task_type: str, optimization_config: Any) -> Dict:
+        """
+        Determine optimal Layer 3 verification strategy using LLM
+        通过LLM决定Layer 3验证策略
+        """
+        # Default strategy optimized for Layer 3
+        default_strategy = {
+            'batch_size': 3,  # 3-5 parallel LLM calls as per architecture
+            'confidence_threshold': 0.01,  # Low threshold to capture matches
+            'max_candidates': 10,  # Process top 10 candidates
+            'verification_depth': 'detailed',
+            'reasoning': 'Default Layer 3 strategy'
+        }
+        
+        # If optimization config suggests different settings, use them
+        if optimization_config:
+            if hasattr(optimization_config, 'llm_concurrency'):
+                default_strategy['batch_size'] = min(optimization_config.llm_concurrency, 5)
+            if hasattr(optimization_config, 'llm_confidence_threshold'):
+                default_strategy['confidence_threshold'] = optimization_config.llm_confidence_threshold
+        
+        # For JOIN tasks, be more strict
+        if task_type == 'join':
+            default_strategy['verification_depth'] = 'comprehensive'
+            default_strategy['confidence_threshold'] = max(0.01, default_strategy['confidence_threshold'])
+        
+        return default_strategy
+    
+    async def _execute_layer3(self, query_table: Dict, candidate_tables: List[Dict],
+                             task_type: str, batch_size: int, 
+                             existing_scores: List[float],
+                             confidence_threshold: float) -> List[Dict]:
+        """
+        Execute Layer 3 - Smart LLM Verification
+        执行第三层LLM智能验证
+        """
+        # Call the LLM matcher tool's batch_verify method
+        results = await self.llm_matcher.batch_verify(
+            query_table=query_table,
+            candidate_tables=candidate_tables,
+            task_type=task_type,
+            max_concurrent=batch_size,
+            existing_scores=existing_scores
+        )
+        
+        return results

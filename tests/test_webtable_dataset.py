@@ -11,7 +11,8 @@ from pathlib import Path
 # 添加项目根目录到Python路径
 sys.path.insert(0, str(Path(__file__).parent.absolute()))
 
-from src.core.workflow import discover_data
+# from src.core.workflow import discover_data  # Old workflow removed
+# TODO: Update test to use new multi-agent workflow
 from src.core.models import AgentState, TaskStrategy, ColumnInfo, TableInfo
 
 

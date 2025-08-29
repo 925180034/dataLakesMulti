@@ -42,7 +42,7 @@ class OptimizerAgent(BaseAgent):
         
         # Calculate complexity factors
         data_size = len(all_tables)
-        task_type = query_task.task_type if query_task else 'join'
+        task_type = query_task.get('task_type', 'join') if query_task else 'join'
         
         # Initialize optimization config
         config = OptimizationConfig()
@@ -195,7 +195,7 @@ class OptimizerAgent(BaseAgent):
 请为数据湖发现系统优化参数配置。
 
 任务详情:
-- 任务类型: {query_task.task_type}
+- 任务类型: {task_type}
 - 数据规模: {data_size} 个表
 - 复杂度: {complexity}
 - 内存限制: 16GB
